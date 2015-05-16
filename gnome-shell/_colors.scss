@@ -1,0 +1,58 @@
+// When color definition differs for dark and light variant,
+// it gets @if ed depending on $variant
+
+
+$base_color: #ffffff;
+$text_color: #5c616c;
+$bg_color: #f9fafb;
+$fg_color: #5c616c;
+
+$selected_fg_color: #ffffff;
+$selected_bg_color: #5294E2;
+$selected_borders_color: darken($selected_bg_color, 20%);
+$borders_color: darken($bg_color,9%);
+
+$link_color: darken($selected_bg_color,10%);
+$link_visited_color: darken($selected_bg_color,20%);
+
+$selection_mode_bg: rgba(36, 80, 130, 0.95);
+$warning_color: #F27835;
+$error_color: #FC4138;
+$success_color: #73d216;
+$destructive_color: #FA4349;
+$suggested_color: #9EA4B5;
+
+$osd_fg_color: #A8ADB5;
+$osd_bg_color: transparentize(#3c4049, 0.05);
+$osd_button_bg: darken($osd_bg_color, 3%);
+
+$osd_insensitive_bg_color: darken($osd_bg_color, 3%);
+$osd_insensitive_fg_color: mix($osd_fg_color, opacify($osd_bg_color, 1), 30%);
+$osd_borders_color: transparentize(black, 0.3);
+
+
+$tooltip_bg: $osd_bg_color;
+$tooltip_fg: #edf5fb;
+$tooltip_borders_color: transparentize(white, 0.9);
+
+//insensitive state derived colors
+$insensitive_fg_color: transparentize($fg_color, 0.45);
+$insensitive_bg_color: mix($bg_color, $base_color, 40%);
+
+
+$entry_bg: $base_color;
+$entry_border: #cfd6e6;
+$entry_focus_border: $selected_bg_color;
+
+$button_bg: lighten($bg_color, 1%);
+$button_border: $entry_border;
+
+$header_bg: transparentize(#e7e8eb, 0.05);
+$header_fg: saturate(transparentize($fg_color, 0.2), 10%);
+
+$dark_sidebar_bg: $osd_bg_color;
+$dark_sidebar_fg: $osd_fg_color;
+$dark_sidebar_border: $dark_sidebar_bg;
+
+$panel_bg: darken($dark_sidebar_bg, 10%);
+$panel_fg: $dark_sidebar_fg;

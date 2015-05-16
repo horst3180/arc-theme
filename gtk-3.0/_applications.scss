@@ -1,0 +1,672 @@
+//
+// Evolution
+//
+// needed for webkit/GtkStyle/Evolution compatibility
+GtkHTML {
+  background-color: $base_color;
+  color: $text_color;
+
+  &:active {
+    color: $selected_fg_color;
+    background-color: $selected_bg_color;
+  }
+}
+
+//
+// Sushi
+//
+// used by gnome-font-viewer and sushi
+SushiFontWidget {
+  padding: 6px 12px;
+}
+
+//
+// GNOME Terminal
+//
+$terminal_bg: #2A2F36;
+$terminal_fg: white;
+
+TerminalWindow {
+  .background {
+    background-color: transparent;
+  }
+
+  .notebook tab.reorderable-page,
+  .notebook tab.reorderable-page:hover {
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .notebook {
+
+    &.header.top {
+      box-shadow: inset 0  1px darken(opacify($header_bg, 1), 7%),
+                  inset 0 -1px lighten($borders_color, 5%);
+    }
+
+    tab {
+      .active-page GtkLabel {
+        color: $header_fg;
+
+        &:backdrop { color: transparentize($header_fg, 0.3); }
+      }
+
+      &.reorderable-page.top:hover {
+        border-bottom-color: darken(opacify($header_bg, 1), 7%);
+      }
+
+      &.reorderable-page.top:active,
+      &.reorderable-page.top:active:hover {
+        background-color: opacify($header_bg, 1);
+        border-color: darken(opacify($header_bg, 1), 7%);
+
+        &:backdrop { background-color: lighten($header_bg, 3%); }
+      }
+    }
+  }
+
+//  .scrollbars-junction, .scrollbar.trough {
+//    background-color: $terminal_bg;
+//    border-color: $terminal_bg;
+//    border-image: none;
+//  }
+}
+
+//
+// Nautilus
+//
+NautilusCanvasViewContainer.view .entry { border-radius: 3px; }
+
+.nautilus-canvas-item {
+  border-radius: 2px;
+}
+
+.nautilus-desktop.nautilus-canvas-item {
+  color: $selected_fg_color;
+
+  &:active { color: $fg_color; }
+  &:selected { color: $selected_fg_color; }
+}
+
+.nautilus-canvas-item.dim-label,
+.nautilus-list-dim-label {
+  color: mix($fg_color, $bg_color, 50%);
+
+  &:selected, &:selected:focus { color: mix($selected_fg_color, $selected_bg_color, 80%); }
+}
+
+NautilusNotebook.notebook {
+  background-color: $base_color;
+
+  tab {
+    border-width: 0;
+    border-style: solid;
+    border-color: transparent;
+    background-color: transparent;
+  }
+}
+
+NautilusQueryEditor .search-bar.toolbar {
+  padding: 5px;
+  box-shadow: none;
+}
+
+.nautilus-circular-button {
+  border-radius: 50%;
+  outline-radius: 50%;
+}
+
+$disk_space_unknown: transparentize($fg_color, 0.5);
+$disk_space_used: transparentize($selected_bg_color, 0.2);
+$disk_space_free: darken($bg_color, 3%);
+
+.disk-space-display {
+  border-style: solid;
+  border-width: 1px;
+
+  &.unknown {
+    background-color: $disk_space_unknown;
+    border-color: darken($disk_space_unknown, 10%);
+  }
+  &.used {
+    background-color: $disk_space_used;
+    border-color: darken($disk_space_used, 10%);
+  }
+  &.free {
+    background-color: $disk_space_free;
+    border-color: darken($disk_space_free, 10%);
+  }
+}
+
+//
+// Nemo
+//
+NemoIconViewContainer { @extend NautilusCanvasViewContainer.view }
+
+NemoWindow .sidebar .frame {
+	border-width: 0;
+}
+
+NemoWindow GtkSeparator.separator.horizontal {
+	color: $borders_color;
+}
+
+.nemo-desktop.nemo-canvas-item {
+  @extend .nautilus-desktop.nautilus-canvas-item;
+}
+
+NemoPathBar.linked > .button {
+  @include button(header-hover);
+
+  &:hover { border-color: $selected_bg_color; }
+  &:active, &:checked { @include button(header-active); }
+
+  @extend %linked;
+}
+
+//
+// Gedit
+//
+.gedit-headerbar-paned { color: darken($header_bg, 7%); }
+
+.open-document-selector-treeview.view {
+    padding: 3px 6px 3px 6px;
+    border-color: $base_color;  // disable borders, making them transparent doesn't work for some reason
+
+    &:prelight { background-color: transparentize(black, 0.95); }
+}
+
+/* Only normal state is handle */
+.open-document-selector-name-label {
+    color: $fg_color;
+}
+
+/* Only normal state is handle */
+.open-document-selector-path-label {
+    color: mix($fg_color, $base_color, 50%);
+    font-size: smaller;
+
+    &:selected { color: transparentize($selected_fg_color, 0.1); }
+}
+
+.gedit-document-panel {
+
+  .list-row .button {
+    color: transparent;
+    background-image: none;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 4px;
+    & GtkImage { color: inherit; }
+  }
+  .prelight-row .button {
+    color: mix($bg_color, $fg_color, 35%);
+  }
+  .list-row .button:hover,
+  .prelight-row .button:hover {
+    color: lighten(red, 15%);
+  }
+  .prelight-row:selected .button:hover {
+    color: lighten(red, 20%);
+    background-image: none;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    &:active { color: $selected_fg_color; }
+  }
+  .prelight-row .button:active {
+    color: $fg_color;
+  }
+}
+
+.gedit-document-panel-dragged-row {
+  border: 1px solid $borders_color;
+  background-color: darken($bg_color, 10%);
+  color: $fg_color;
+}
+
+//.gedit-document-panel-placeholder-row {
+//}
+
+GeditStatusbar {
+  border-top: 1px solid $borders_color;
+  background-color: $bg_color;
+}
+
+GeditStatusMenuButton.button.flat,
+GeditStatusMenuButton:prelight.button.flat,
+GeditStatusMenuButton:checked.button.flat {
+  border-bottom-style: none;
+  border-radius: 0;
+}
+
+
+GeditViewFrame .gedit-search-slider { @extend %search_slider }
+
+GeditFileBrowserWidget .toolbar {
+  border-bottom: 1px solid $borders_color;
+}
+
+.gedit-search-entry-occurrences-tag {
+  color: transparentize($fg_color, 0.4);
+  margin: 2px;
+  padding: 2px;
+}
+
+%search_slider {
+  background-color: lighten($bg_color, 2%);
+  padding: 6px;
+  border-color: $borders_color;
+  border-radius: 0 0 2px 2px;
+  border-width: 0 1px 1px 1px;
+  border-style: solid;
+}
+
+//
+// Gnome Builder
+//
+
+GbSearchBox.linked {
+  > GtkMenuButton.button:last-child:dir(ltr) {
+    background-color: darken($header_bg, 6%);
+    border-radius: 0 14.5px 14.5px 0;
+    outline-radius: 0 12.5px 12.5px 0;
+  }
+  > GtkMenuButton.button:first-child:dir(rtl) {
+    background-color: darken($header_bg, 6%);
+    border-radius: 14.5px 0 0 14.5px;
+    outline-radius: 12.5px 0 0 12.5px;
+  }
+}
+
+//Search entry that slides down from top of editor
+GbEditorFrame .gb-search-slider { @extend %search_slider; padding: 2px; }
+
+.gb-search-entry-occurrences-tag { @extend .gedit-search-entry-occurrences-tag }
+
+GdTaggedEntry { color: $fg_color; }
+
+// Preferences sidebar style
+.preferences.sidebar {
+
+  GtkViewport { border: none; }
+  GtkListBox { background-color: $bg_color; }
+  GtkListBoxRow { padding: 10px; }
+}
+
+// Preference page language style
+GbPreferencesPageLanguage  {
+
+  GtkSearchEntry {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  GtkScrolledWindow { border-top-width: 0; }
+}
+
+// Command Bar styling
+GtkBox.gb-command-bar-box {
+  //border: none;
+  //border-top: 1px solid nth($_borders_color, 2);
+  //background-image: linear-gradient(to bottom, nth($_base_color, 2));
+  //box-shadow: inset 0px 2px 3px -1px transparentize(black, 0.7);
+
+  //GtkLabel { color: nth($_fg_color, 2); }
+}
+
+GtkEntry.gb-command-bar-entry.entry.flat,
+GtkEntry.gb-command-bar-entry.entry.flat:focus {
+  font-family: Monospace;
+  background-image: none;
+  background-color: transparent;
+  padding: 6px 6px 6px 6px;
+  //color: nth($_fg_color, 2);
+
+  &:selected,
+  &:selected:focus {
+    @extend %selected_items;
+  }
+}
+
+GbSourceStyleSchemeWidget GtkSourceView {
+    font-family: Monospace;
+}
+
+GtkScrolledWindow.gb-linked-scroller {
+    border-top: none;
+}
+
+// Disable various animatinos that are enabled by default and really annoying
+// to the overall flow of Builder.
+GbSearchDisplayGroup GtkListBox .list-row, GbDocumentStack .button {
+    transition: none;
+}
+
+GbViewStack GtkBox.header.notebook,
+GbEditorWorkspace > GtkPaned > GtkBox > GtkBox.header.notebook {
+    border-bottom: 1px solid $borders_color;
+}
+
+GbViewStack.focused GtkBox.header.notebook {
+  background-color: $bg_color;
+
+ .button.dim-label { opacity: 1; }
+}
+
+//
+// Epiphany
+//
+EphyWindow .floating-bar { // Epiphany overrides the floating-bar style, so reset it
+  color: $fg_color;
+}
+
+//
+// Gnome Documents
+//
+.documents-load-more.button {
+  border-width: 1px 0 0;
+  border-radius: 0;
+}
+
+.documents-icon-bg {
+  background-color: $selected_bg_color;
+  color: $selected_fg_color;
+  border-radius: 2px;
+}
+
+.documents-collection-icon {
+  background-color: transparentize($fg_color, 0.7);
+  border-radius: 2px;
+}
+
+.documents-favorite.button:active,
+.documents-favorite.button:active:hover {
+  color: lighten($selected_bg_color, 20%);
+}
+
+.documents-entry-tag {
+  background-color: $selected_bg_color;
+  color: $selected_fg_color;
+  border-radius: 2px;
+  border-width: 0;
+  margin: 2px;
+  padding: 4px;
+
+  &:hover { background-color: lighten($selected_bg_color, 4%) }
+  &:active { background-color: darken($selected_bg_color, 4%) }
+
+  .toolbar .linked &.button {
+    background: none;
+    border: none;
+    box-shadow: none;
+    icon-shadow: none;
+
+    &:hover { color: transparentize($selected_fg_color, 0.3) }
+  }
+}
+
+.content-view.document-page {
+  border-style: solid;
+  border-width: 3px 3px 6px 4px;
+  border-image: url("assets/thumbnail-frame.png") 3 3 6 4;
+}
+
+//
+// Totem
+//
+TotemGrilo.vertical GdMainView.frame {
+  border-width: 0;
+}
+
+//
+// Fallback Mode/Budgie Panel
+//
+.gnome-panel-menu-bar,
+PanelApplet > GtkMenuBar.menubar,
+PanelToplevel,
+PanelWidget,
+PanelAppletFrame,
+PanelApplet {
+  color: $panel_fg;
+  background-image: linear-gradient(to bottom, $panel_bg);
+}
+
+PanelApplet .button, PanelApplet .button:backdrop {
+  padding: 4px;
+  border: 2px solid transparent;
+  border-radius: 0;
+  background-image: none;
+  background-color: transparent;
+  color: $panel_fg;
+}
+
+PanelApplet .button:hover {
+  color: lighten($panel_fg, 10%);
+  background-color: transparentize(black, 0.83);
+  border-color: transparentize(black, 0.83);
+}
+
+PanelApplet .button:active, PanelApplet .button:active:backdrop,
+PanelApplet .button:checked, PanelApplet .button:checked:backdrop {
+  color: $selected_fg_color;
+  background-color: transparentize(black, 0.75);
+  border-radius: 0;
+  border-color: transparentize(black, 0.75);
+  box-shadow: inset 0 -2px $selected_bg_color;
+}
+
+PanelApplet:hover {
+  color: $selected_fg_color;
+}
+
+PanelApplet:active,
+PanelApplet:hover:active {
+  color: $selected_bg_color;
+}
+
+WnckPager {
+  color: mix($panel_fg, black, 50%);
+  &:selected { color: $selected_bg_color }
+}
+
+NaTrayApplet {
+  -NaTrayApplet-icon-padding: 12;
+  -NaTrayApplet-icon-size: 16;
+}
+
+ClockBox {
+  color: $panel_fg;
+}
+
+// Xfce Panel
+.xfce4-panel.panel {
+  background-color: $panel_bg;
+
+  .button.flat {
+    color: $panel_fg;
+    background-color: transparentize($panel_bg, 1);
+    border-radius: 0;
+
+    &:hover {
+      border: none;
+      background-color: lighten($panel_bg, 10%);
+    }
+    &:active, &:checked {
+      color: $selected_bg_color;
+      border: none;
+      background-color: darken($panel_bg, 7%);
+    }
+  }
+}
+
+//
+// Floating Bar
+//
+.floating-bar {
+  background-color: $selected_bg_color;
+  color: $selected_fg_color;
+
+  &.top { border-radius: 0 0 2px 2px; }
+  &.right { border-radius: 2px 0 0 2px; }
+  &.bottom { border-radius: 2px 2px 0 0; }
+  &.left { border-radius: 0 2px 2px 0; }
+
+  .button {
+    -GtkButton-image-spacing: 0;
+    -GtkButton-inner-border: 0;
+
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+  }
+}
+
+// Elementary Apps
+
+//
+// Birdie
+//
+BirdieWidgetsTweetList * {
+  background-image: none;
+  background-color: transparent;
+}
+
+//
+// Marlin / Pantheon Files
+//
+MarlinViewWindow GtkIconView.view:selected,
+MarlinViewWindow GtkIconView.view:selected:focus,
+MarlinViewWindow GtkIconView.view:selected:hover,
+MarlinViewWindow GtkIconView.view:selected:focus:hover {
+  background-color: transparent;
+}
+
+MarlinViewWindow FMListView,
+MarlinViewWindow FMColumnView {
+  outline-color: transparent;
+}
+
+MarlinViewWindow *:selected,
+MarlinViewWindow *:selected:focus {
+	color: $selected_fg_color;
+	background-color: $selected_bg_color;
+  outline-color: transparent;
+}
+
+.marlin-pathbar.pathbar {
+  border-radius: 14.5px;
+  @include entry(header-normal);
+
+  &:focus { @include entry(header-focus) }
+
+  &:insensitive { @include entry(header-insensitive) }
+
+  &:active, &:checked {
+    color: $selected_bg_color;
+  }
+}
+
+//
+// Gala
+//
+.gala-notification {
+    border: 1px solid rgba(0, 0, 0, 0.35);
+    border-radius: 3px;
+	  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(to bottom, $base_color);
+    background-color: transparent;
+
+  .title, .label {
+    color: $fg_color;
+  }
+}
+
+//
+// Wingpanel
+//
+.panel {
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 1px 2px transparentize(black, 0.4);
+  icon-shadow: 0 1px 2px transparentize(black, 0.4);
+}
+
+.panel-shadow {
+  background-image: none;
+  background-color: transparent;
+}
+
+.panel .menu {
+  box-shadow: none;
+}
+
+.panel .menu .menuitem {
+  font-weight: normal;
+  text-shadow: none;
+  icon-shadow: none;
+}
+
+.panel .menubar .menuitem:hover {
+  background-color: transparent;
+}
+
+.panel .window-frame.menu.csd,
+.panel .window-frame.popup.csd {
+  box-shadow: none;
+}
+
+.panel .menu .window-frame.menu.csd,
+.panel .menu .window-frame.popup.csd {
+  box-shadow: 0 0 0 1px transparentize(black, 0.8),
+              0 10px 20px transparentize(black, 0.81),
+              0 6px 6px transparentize(black, 0.77);
+}
+
+.composited-indicator {
+  background-color: transparent;
+  color: white;
+  text-shadow: 0 1px 2px transparentize(black, 0.4);
+  icon-shadow: 0 1px 2px transparentize(black, 0.4);
+}
+
+.composited-indicator > GtkWidget > GtkWidget:first-child {
+  padding: 0 2px;
+}
+
+.panel-app-button > GtkWidget > GtkWidget:first-child {
+  padding: 0 2px 0 4px;
+}
+
+.composited-indicator.menuitem:active,
+.composited-indicator.menuitem:prelight {
+  border-style: none;
+  background-image: none;
+  box-shadow: none;
+}
+
+.composited-indicator > .popup > .menu {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.panel .menu .spinner,
+.menu .spinner { opacity: 1 } // Fixes sound indicator buttons
+
+//
+// Pantheon Terminal
+//
+PantheonTerminalPantheonTerminalWindow.background {
+   background-color: transparent;
+
+   .titlebar { background-color: $header_bg; }
+}
+
+//
+// Switchboard
+//
+SwitchboardCategoryView .view:selected,
+SwitchboardCategoryView .view:selected:focus {
+  color: $fg_color;
+}

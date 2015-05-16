@@ -1,0 +1,143 @@
+// Drawing mixins
+
+// generic drawing of more complex things
+
+// provide font size in rem, with px fallback
+@mixin fontsize($size: 24, $base: 16) {
+  font-size: round($size) + pt;
+  //font-size: ($size / $base) * 1rem;
+}
+
+// Entries
+
+@mixin entry($t, $dark:false) {
+//
+// Entries drawing function
+//
+  //@extend %reset_style;
+    box-shadow: inset 0 0 transparentize($base_color, 1);
+
+  @if $t==normal {
+    color: $text_color;
+    background-color: $entry_bg;
+    border: 1px solid $entry_border;
+  }
+
+  @if $t==focus {
+    color: $fg_color;
+    background-color: $entry_bg;
+    border: 1px solid $selected_bg_color;
+  }
+
+  @if $t==insensitive {
+    color: $insensitive_fg_color;
+    background-color: mix($entry_bg, $bg_color, 55%);
+    border-color: 1px solid mix($entry_border, $bg_color, 55%);
+  }
+}
+
+// Buttons
+
+@mixin button($t) {
+//
+// Button drawing function
+//
+  //@extend %reset_style;
+
+
+  @if $t==normal {
+  //
+  // normal button
+  //
+    color: $fg_color;
+    background-color: $button_bg;
+    box-shadow: inset 0 0 transparentize($base_color, 1);
+    border: 1px solid $button_border;
+  }
+
+  @else if $t==focus {
+  //
+  // focused button
+  //
+    color: $fg_color;
+    background-color: $button_bg;
+    box-shadow: none;
+    border: 1px solid $selected_bg_color;
+  }
+
+  @else if $t==focus-hover {
+  //
+  // focused button
+  //
+    color: $selected_bg_color;
+    background-color: $button_bg;
+    box-shadow: none;
+    border: 1px solid $selected_bg_color;
+  }
+
+  @else if $t==hover {
+  //
+  // hovered button
+  //
+    color: $fg_color;
+    background-color: $button_bg;
+    box-shadow: none;
+    border: 1px solid $selected_bg_color;
+  }
+
+  @else if $t==active {
+  //
+  // pushed button
+  //
+    color: $selected_fg_color;
+    background-color: $selected_bg_color;
+    box-shadow: none;
+    border: 1px solid $selected_bg_color;
+  }
+
+  @else if $t==insensitive {
+  //
+  // insensitive button
+  //
+    color: $insensitive_fg_color;
+    border: 1px solid transparentize($button_border, 0.45);
+    background-color: transparentize($button_bg, 0.45);
+  }
+
+  @else if $t==osd {
+  //
+  // normal osd button
+  //
+    color: $osd_fg_color;
+    outline-color: transparentize($osd_fg_color, 0.7);
+    border-color: transparentize($osd_fg_color, 0.7);
+    background-color: darken($osd_bg_color, 5%);
+  }
+
+  @else if $t==osd-hover {
+  //
+  // active osd button
+  //
+    color: $selected_fg_color;
+    border-color: $selected_bg_color;
+    background-color: darken($osd_bg_color, 5%);
+  }
+
+  @else if $t==osd-active {
+  //
+  // active osd button
+  //
+    color: $selected_fg_color;
+    border-color: $selected_bg_color;
+    background-color: $selected_bg_color;
+  }
+
+  @else if $t==osd-insensitive {
+  //
+  // insensitive osd button
+  //
+    color: $osd_insensitive_fg_color;
+    border-color: transparentize($osd_fg_color, 0.8);
+    background-image: $osd_insensitive_bg_color;
+  }
+}
