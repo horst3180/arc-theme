@@ -1,8 +1,8 @@
 {
-   "description": "flat-theme theme for Chrome/Chromium",
+   "description": "Arc theme for Chrome/Chromium",
    "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC6RY/VX2xN/FFEQQwi4sSHGaMxF6cARCTsKKxmPhbics9qDIkZxxBqeM4TUhHDhgsZrxZsXAplyKnIjTEIdw96XDK34uF5cqLOG5vzFRIOAdFfCyC9HNupQGg3Vd8PKSVmLZz/2Xsu5zmvx+zz3VIDtNK+HaVktMhJnO9utBougQIDAQAB",
    "manifest_version": 2,
-   "name": "flat-theme",
+   "name": "Arc",
    "theme": {
       "colors": {
          "bookmark_text": [ 35, 35, 35 ],
