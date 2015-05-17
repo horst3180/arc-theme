@@ -210,7 +210,7 @@ StScrollBar {
     background-color: opacify($osd_bg_color, 1);
     border: solid 0px rgba(0,0,0,0.3);
     border-top: 1px;
-    border-radius: 0px 0px 2px 2px;
+    border-radius: 0px 0px 1px 1px;
 
     .button {
       @include button(osd);
@@ -570,9 +570,9 @@ StScrollBar {
 
 .candidate-popup-boxpointer {
   -arrow-border-radius: 2px;
-  -arrow-background-color: $base_color;
+  -arrow-background-color: $panel_bg;
   -arrow-border-width: 1px;
-  -arrow-border-color: $borders_color;
+  -arrow-border-color: darken($panel_bg, 7%);
   -arrow-base: 5;
   -arrow-rise: 5;
 }
@@ -1899,16 +1899,18 @@ $legacy_icon_size: 24px;
 .candidate-popup-content {
   padding: 0.5em;
   spacing: 0.3em;
+  color: $osd_fg_color;
 }
 
   .candidate-index {
     padding: 0 0.5em 0 0;
-    color: darken($fg_color,10%);
+    color: lighten($osd_fg_color, 10%);
   }
 
   .candidate-box {
     padding: 0.3em 0.5em 0.3em 0.5em;
     border-radius: 4px;
+    color: $osd_fg_color;
     &:selected,&:hover { background-color: $selected_bg_color; color: $selected_fg_color; }
   }
 
@@ -2133,12 +2135,14 @@ $legacy_icon_size: 24px;
   padding: 8px 8px 10px 8px;
   background-color: transparentize(black, 0.3);
   border: 1px solid black;
-	border-image: url("misc/osd.svg") 10 10 9 11;
+  border-image: url("misc/osd.svg") 10 10 9 11;
   border-radius: 2px;
+  color: $osd_fg_color;
+
   & > #Toolbar {
     padding: 3px;
     border: 1px solid darken($osd_bg_color, 7%);
-    background-color: $osd_bg_color;
+    background-color: transparent;
     border-radius: 0px;
   }
   .labels { spacing: 4px; }
@@ -2166,8 +2170,13 @@ $legacy_icon_size: 24px;
 
   .lg-dialog {
     StEntry {
+      background-color: transparentize(black, 0.7);
+      color: $osd_fg_color;
       selection-background-color: $selected_bg_color;
       selected-color: $selected_fg_color;
+      border-color: transparentize($osd_fg_color, 0.7);
+
+      &:focus { border-color: $selected_bg_color; }
     }
     .shell-link {
       color: $link_color;

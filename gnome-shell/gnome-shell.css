@@ -179,7 +179,7 @@ StScrollBar {
     background-color: #3c4049;
     border: solid 0px rgba(0, 0, 0, 0.3);
     border-top: 1px;
-    border-radius: 0px 0px 2px 2px; }
+    border-radius: 0px 0px 1px 1px; }
     .modal-dialog-button-box .button, .modal-dialog-button-box .notification-banner .notification-button, .notification-banner .modal-dialog-button-box .notification-button {
       text-shadow: 0 1px rgba(255, 255, 255, 0);
       box-shadow: inset 0 0 rgba(255, 255, 255, 0);
@@ -443,9 +443,9 @@ StScrollBar {
 
 .candidate-popup-boxpointer {
   -arrow-border-radius: 2px;
-  -arrow-background-color: #ffffff;
+  -arrow-background-color: rgba(37, 39, 45, 0.95);
   -arrow-border-width: 1px;
-  -arrow-border-color: #dde3e9;
+  -arrow-border-color: rgba(21, 22, 25, 0.95);
   -arrow-base: 5;
   -arrow-rise: 5; }
 
@@ -1525,15 +1525,17 @@ StScrollBar {
 
 .candidate-popup-content {
   padding: 0.5em;
-  spacing: 0.3em; }
+  spacing: 0.3em;
+  color: #A8ADB5; }
 
 .candidate-index {
   padding: 0 0.5em 0 0;
-  color: #454850; }
+  color: #c4c7cc; }
 
 .candidate-box {
   padding: 0.3em 0.5em 0.3em 0.5em;
-  border-radius: 4px; }
+  border-radius: 4px;
+  color: #A8ADB5; }
   .candidate-box:selected, .candidate-box:hover {
     background-color: #5294E2;
     color: #ffffff; }
@@ -1770,11 +1772,12 @@ StScrollBar {
   background-color: rgba(0, 0, 0, 0.7);
   border: 1px solid black;
   border-image: url("misc/osd.svg") 10 10 9 11;
-  border-radius: 2px; }
+  border-radius: 2px;
+  color: #A8ADB5; }
   #LookingGlassDialog > #Toolbar {
     padding: 3px;
     border: 1px solid rgba(44, 47, 53, 0.95);
-    background-color: rgba(60, 64, 73, 0.95);
+    background-color: transparent;
     border-radius: 0px; }
   #LookingGlassDialog .labels {
     spacing: 4px; }
@@ -1800,8 +1803,13 @@ StScrollBar {
     spacing: 4px; }
 
 .lg-dialog StEntry {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #A8ADB5;
   selection-background-color: #5294E2;
-  selected-color: #ffffff; }
+  selected-color: #ffffff;
+  border-color: rgba(168, 173, 181, 0.3); }
+  .lg-dialog StEntry:focus {
+    border-color: #5294E2; }
 .lg-dialog .shell-link {
   color: #2679db; }
   .lg-dialog .shell-link:hover {
