@@ -105,7 +105,7 @@
   //
   // normal osd button
   //
-    color: $osd_fg_color;
+    color: lighten($osd_fg_color, 10%);
     outline-color: transparentize($osd_fg_color, 0.7);
     border-color: transparentize($osd_fg_color, 0.7);
     background-color: darken($osd_bg_color, 5%);

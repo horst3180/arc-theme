@@ -198,7 +198,7 @@ StScrollBar {
   color: $fg_color;
   background-color: transparentize($bg_color, 1);
   border: none;
-  border-image: url("misc/modal2.svg") 10 10 10 10;
+  border-image: url("misc/modal.svg") 10 10 10 10;
   padding: 0 6px 6px 6px;
 
   > * { padding: 14px; }
@@ -643,7 +643,7 @@ StScrollBar {
 .switcher-list {
   background: none;
   border: none;
-  border-image: url("misc/modal.svg") 10 10 35 14;
+  border-image: url("misc/bg.svg") 10 10 35 14;
   border-radius: 3px;
   padding: 20px;
 
@@ -710,7 +710,7 @@ StScrollBar {
   &-group { padding: 12px; }
 
   &-container {
-    border-image: url("misc/modal.svg") 10 10 35 14;
+    border-image: url("misc/bg.svg") 10 10 35 14;
     border-radius: 3px;
     padding: 20px;
     padding-bottom: 24px;
@@ -765,9 +765,11 @@ StScrollBar {
 //
 #panel {
   background-color: $panel_bg;
+  border-color: darken($panel_bg, 9%);
+  border-bottom-width: 1px;
   font-weight: bold;
   height: 2.1em;
-  min-height: 23px;
+  min-height: 26px;
 
   &.unlock-screen,
   &.login-screen,
@@ -775,6 +777,8 @@ StScrollBar {
     background-color: transparent;
     border-image: none;
   }
+
+  &:overview { background-color: transparentize(darken($panel_bg,10%), 0.15); }
 
   #panelLeft, #panelCenter { // spacing between activities<>app menu and such
     spacing: 8px;
@@ -1370,34 +1374,30 @@ StScrollBar {
 //
 #dash {
   font-size: 1em;
-  color: $fg_color;
-  background-color: transparent;
-  padding: 10px 0px 10px 0px;
-  border: none;
+  color: $osd_fg_color;
+  background-color: transparentize($panel_bg, 0.08);
+  padding: 6px 0px 6px 0px;
+  border-color: transparentize(darken($panel_bg, 9%), 0.08);
   border-radius: 0px 3px 3px 0px;
-  border-image: url('dash/dash.svg') 6 11 10 10;
 
   .right &,
   &:rtl {
-    padding: 10px 0px 10px 0px;
+    padding: 6px 0px 6px 0px;
     border-radius: 3px 0 0 3px;
-    border-image: url('dash/dash-right.svg') 11 6 10 10;
   }
 
   .bottom & {
-    padding: 0px 10px 0px 10px;
+    padding: 0px 6px 0px 6px;
     border-radius: 3px 3px 0 0;
-    border-image: url('dash/dash-bottom.svg') 10 10 11 6;
   }
 
   .top & {
-    padding: 0px 10px 0px 10px;
+    padding: 0px 6px 0px 6px;
     border-radius: 0 0 3px 3px;
-    border-image: url('dash/dash-top.svg') 10 10 6 11;
   }
 
   .placeholder {
-    background-image: url("dash/dash-placeholder.svg");
+    background-image: url("misc/dash-placeholder.svg");
     background-size: contain;
     height: 24px;
   }
@@ -1409,11 +1409,11 @@ StScrollBar {
 }
 
 .dash-item-container > StWidget {
-  padding: 0px 10px 0px 3px;
+  padding: 0px 4px 0px 5px;
 
-  .right &, &:rtl { padding: 0px 3px 0px 10px; }
-  .bottom & { padding: 10px 0px 3px 0px; }
-  .top & { padding: 3px 0px 10px 0px; }
+  .right &, &:rtl { padding: 0px 5px 0px 4px; }
+  .bottom & { padding: 4px 0px 5px 0px; }
+  .top & { padding: 5px 0px 4px 0px; }
 }
 
 //osd tooltip
@@ -1435,31 +1435,21 @@ StScrollBar {
 #dash .app-well-app {
 
   .overview-icon,
-  .right & .overview-icon {
-    padding: 10px;
-  }
-
+  .right & .overview-icon,
   .bottom & .overview-icon,
   .top & .overview-icon {
     padding: 10px;
   }
 
   &:hover .overview-icon,
-  .right &:hover .overview-icon {
-    background-color: $selected_bg_color;
-  }
-
+  .right &:hover .overview-icon,
   .bottom &:hover .overview-icon,
   .top &:hover .overview-icon {
     background-color: $selected_bg_color;
   }
 
   &:active .overview-icon,
-  .right &:active .overview-icon {
-    box-shadow: none;
-    background-color: darken($selected_bg_color, 10%);
-  }
-
+  .right &:active .overview-icon,
   .bottom &:active .overview-icon,
   .top &:active .overview-icon {
     box-shadow: none;
@@ -1467,14 +1457,10 @@ StScrollBar {
   }
 
   &-running-dot {
-    width: 20px;
+    width: 11px;
     height: 2px;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
     background-color: $selected_bg_color;
-
-    .bottom &, .top & {
-      margin-bottom: 0px;
-    }
   }
 }
 
@@ -1523,9 +1509,9 @@ StScrollBar {
 .app-view-control {
   padding: 4px 32px;
 
-  color: transparentize($selected_fg_color, 0.4);
+  color: transparentize($selected_fg_color, 0.2);
   background-color: transparentize(darken($panel_bg,10%), 0.15);
-  border-color: transparentize(darken($panel_bg,10%), 0.15);
+  border-color: transparentize($osd_fg_color, 0.7);
 
   &:hover {
     color: $selected_fg_color;
@@ -1557,7 +1543,7 @@ StScrollBar {
   &:active, &:checked { background-color: transparentize(darken($osd_bg_color,10%),.1); }
 
   &:focus, &:selected, &:hover {
-    background-color: transparentize($osd_fg_color,.9);
+    background-color: transparentize($osd_fg_color,.6);
     transition-duration: 200ms;
   }
 }
@@ -1573,13 +1559,13 @@ StScrollBar {
   &:active .overview-icon,
   &:checked .overview-icon {
     background-color: transparentize(darken($osd_bg_color,10%),.1);
-    box-shadow: inset 0 1px 2px $osd_borders_color;
+    box-shadow: inset 0 0 $selected_bg_color;
   }
 
   &:hover .overview-icon,
   &:focus .overview-icon,
   &:selected .overview-icon {
-    background-color: transparentize($osd_fg_color,.9);
+    background-color: transparentize($osd_fg_color,.6);
     transition-duration: 0ms;
     border-image: none;
     background-image: none;
@@ -1608,7 +1594,8 @@ StScrollBar {
 .app-well-app.app-folder {
 
   > .overview-icon {
-    background-color: $panel_bg;
+    background-color: transparentize(darken($panel_bg,10%), 0.15);
+    border: 1px solid transparentize($osd_fg_color, 0.7);
   }
 
   &:hover > .overview-icon {
@@ -1627,12 +1614,11 @@ StScrollBar {
 
 .app-folder-popup { //expanded collection
   -arrow-border-radius: 2px;
-  -arrow-background-color: transparent;
-  -arrow-border-color: transparent;
-  -arrow-border-width: 0px;
-  -arrow-base: 0px;
-  -arrow-rise: 0px;
-  border-image: url("misc/modal.svg") 10 10 35 14;
+  -arrow-background-color: transparentize(darken($panel_bg,10%), 0.15);
+  -arrow-border-color: transparentize($osd_fg_color, 0.7);
+  -arrow-border-width: 1px;
+  -arrow-base: 5;
+  -arrow-rise: 5;
 }
 .app-folder-popup-bin { padding: 5px; }
 .app-folder-icon {
@@ -1670,15 +1656,19 @@ StScrollBar {
 .workspace-thumbnails { //container ala dash
   visible-width: 40px; //amount visible before hover
   spacing: 11px;
-  padding: 18px 9px 18px 18px;
-  background-color: transparent;
-  border-image: url('dash/dash-right.svg') 10 10 10 10;
+  padding: 12px;
+  padding-right: 7px;
+  border-radius: 3px 0 0 3px;
+  background-color: transparentize($panel_bg, 0.08);
+  border-color: transparentize(darken($panel_bg, 9%), 0.08);
 
   &:rtl {
-    padding: 18px 18px 18px 9px;
-    border-image: url('dash/dash.svg') 10 10 10 10;
+    padding: 12px;
+    padding-left: 7px;
+    border-radius: 0 3px 3px 0;
   }
 }
+
 .workspace-thumbnail-indicator {
   border: 4px solid transparentize($selected_bg_color, 0.2);
   border-radius: 1px;
