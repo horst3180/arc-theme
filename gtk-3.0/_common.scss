@@ -1033,7 +1033,6 @@ GtkComboBox {
   }
 
   .title {
-    font-weight: bold;
     padding: 0px 12px;
   }
 
@@ -1669,7 +1668,6 @@ column-header.button.dnd { // for treeview-like derive widgets
     }
     GtkLabel { //tab text
       padding: 0 2px; // needed for a nicer focus ring
-      font-weight: bold;
       color: $insensitive_fg_color;
     }
     .prelight-page GtkLabel, GtkLabel.prelight-page {

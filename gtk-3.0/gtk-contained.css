@@ -784,7 +784,6 @@ GtkComboBox {
     color: rgba(82, 93, 118, 0.5);
     background-color: rgba(239, 240, 242, 0.95); }
   .header-bar .title {
-    font-weight: bold;
     padding: 0px 12px; }
   .header-bar .subtitle {
     font-size: smaller;
@@ -1343,7 +1342,6 @@ column-header .button, column-header .button:hover, column-header .button:active
           background-color: rgba(0, 0, 0, 0.02); }
     .notebook tab GtkLabel {
       padding: 0 2px;
-      font-weight: bold;
       color: rgba(92, 97, 108, 0.55); }
     .notebook tab .prelight-page GtkLabel, .notebook tab GtkLabel.prelight-page {
       color: rgba(92, 97, 108, 0.775); }
