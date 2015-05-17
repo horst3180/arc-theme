@@ -44,6 +44,8 @@
 //
   //@extend %reset_style;
 
+  text-shadow: 0 1px transparentize($base_color, 1);
+  box-shadow: inset 0 0 transparentize($base_color, 1);
 
   @if $t==normal {
   //
@@ -51,7 +53,6 @@
   //
     color: $fg_color;
     background-color: $button_bg;
-    box-shadow: inset 0 0 transparentize($base_color, 1);
     border: 1px solid $button_border;
   }
 
@@ -61,7 +62,6 @@
   //
     color: $fg_color;
     background-color: $button_bg;
-    box-shadow: none;
     border: 1px solid $selected_bg_color;
   }
 
@@ -71,7 +71,6 @@
   //
     color: $selected_bg_color;
     background-color: $button_bg;
-    box-shadow: none;
     border: 1px solid $selected_bg_color;
   }
 
@@ -81,7 +80,6 @@
   //
     color: $fg_color;
     background-color: $button_bg;
-    box-shadow: none;
     border: 1px solid $selected_bg_color;
   }
 
@@ -91,7 +89,6 @@
   //
     color: $selected_fg_color;
     background-color: $selected_bg_color;
-    box-shadow: none;
     border: 1px solid $selected_bg_color;
   }
 

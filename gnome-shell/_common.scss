@@ -75,6 +75,7 @@ StEntry {
   selection-background-color: $selected_bg_color;
   selected-color: $selected_fg_color;
   transition-duration: 300ms;
+  border-radius: 20px;
 
   @include entry(normal);
 
@@ -1712,7 +1713,7 @@ StScrollBar {
   margin: 5px;
   padding: 10px;
   border-radius: 2px;
-  color: $osd_fg_color;
+  color: $fg_color;
   background-color: $bg_color;
   border: 0px solid transparent;
   box-shadow: 0 1px 5px transparentize(black, 0.8);
@@ -1743,7 +1744,7 @@ StScrollBar {
 // Chat Bubbles
 .chat-body { spacing: 5px; }
 .chat-response { margin: 5px; }
-.chat-log-message { color: darken($osd_fg_color,10%); }
+.chat-log-message { color: $fg_color; }
 .chat-new-group { padding-top: 1em; }
 .chat-received {
   padding-left: 4px;
@@ -1753,7 +1754,7 @@ StScrollBar {
 
 .chat-sent {
   padding-left: 18pt;
-  color: darken($osd_fg_color, 15%);
+  color: $selected_bg_color;
 
   &:rtl { padding-left: 0; padding-right: 18pt; }
 }
@@ -1762,7 +1763,7 @@ StScrollBar {
   padding-left: 4px;
   font-size: 9pt;
   font-weight: bold;
-  color: darken($osd_fg_color,20%);
+  color: transparentize($fg_color, 0.4);
 
   &:rtl { padding-left: 0; padding-right: 4px; }
 }
@@ -2136,8 +2137,8 @@ $legacy_icon_size: 24px;
   border-radius: 2px;
   & > #Toolbar {
     padding: 3px;
-    border: 1px solid $borders_color;
-    background-color: $bg_color;
+    border: 1px solid darken($osd_bg_color, 7%);
+    background-color: $osd_bg_color;
     border-radius: 0px;
   }
   .labels { spacing: 4px; }
@@ -2145,17 +2146,17 @@ $legacy_icon_size: 24px;
     -natural-hpadding: 12px;
     -minimum-hpadding: 6px;
     font-weight: bold;
-    color: transparentize($fg_color, 0.5);
+    color: $osd_fg_color;
     transition-duration: 100ms;
     padding-left: .3em;
     padding-right: .3em;
     &:hover {
-      color: $fg_color;
+      color: $selected_fg_color;
       text-shadow: black 0px 2px 2px;
     }
     &:selected {
       border-bottom-width: 0px;
-      color: $selected_fg_color;
+      color: $selected_bg_color;
       text-shadow: black 0px 2px 2px;
     }
   }
