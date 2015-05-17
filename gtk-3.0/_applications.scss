@@ -170,15 +170,22 @@ NemoPathBar.linked > .button {
 .gedit-headerbar-paned { color: darken($header_bg, 7%); }
 
 .open-document-selector-treeview.view {
-    padding: 3px 6px 3px 6px;
-    border-color: $base_color;  // disable borders, making them transparent doesn't work for some reason
+  padding: 3px 6px 3px 6px;
+  border-color: $base_color;  // disable borders, making them transparent doesn't work for some reason
 
-    &:prelight { background-color: transparentize(black, 0.95); }
+  &:prelight {
+    background-color: transparentize(black, 0.95);
+
+    &:selected {
+      color: $selected_fg_color;
+      background-color: $selected_bg_color;
+    }
+  }
 }
 
 /* Only normal state is handle */
 .open-document-selector-name-label {
-    color: $fg_color;
+  color: $fg_color;
 }
 
 /* Only normal state is handle */
@@ -268,15 +275,36 @@ GeditFileBrowserWidget .toolbar {
 //
 
 GbSearchBox.linked {
+
+  > GtkMenuButton.button:last-child:dir(ltr),
+  > GtkMenuButton.button:first-child:dir(rtl) {
+    border-color: transparentize($header_fg, 0.7);
+    background-color: transparentize($button_bg, 0.1);
+
+    &:hover {
+      border-color: $selected_bg_color;
+    }
+    &:active, &:checked {
+      color: $selected_fg_color;
+      background-color: $selected_bg_color;
+      border-color: $selected_bg_color;
+    }
+  }
+
   > GtkMenuButton.button:last-child:dir(ltr) {
-    background-color: darken($header_bg, 6%);
+
+    border-left-style: none;
     border-radius: 0 14.5px 14.5px 0;
     outline-radius: 0 12.5px 12.5px 0;
+
+    &:hover { box-shadow: -1px 0 $selected_bg_color; }
   }
   > GtkMenuButton.button:first-child:dir(rtl) {
-    background-color: darken($header_bg, 6%);
+    border-right-style: none;
     border-radius: 14.5px 0 0 14.5px;
     outline-radius: 12.5px 0 0 12.5px;
+
+    &:hover { box-shadow: 1px 0 $selected_bg_color; }
   }
 }
 
@@ -307,21 +335,20 @@ GbPreferencesPageLanguage  {
 
 // Command Bar styling
 GtkBox.gb-command-bar-box {
-  //border: none;
-  //border-top: 1px solid nth($_borders_color, 2);
-  //background-image: linear-gradient(to bottom, nth($_base_color, 2));
-  //box-shadow: inset 0px 2px 3px -1px transparentize(black, 0.7);
+  border: none;
+  background-color: opacify($osd_bg_color, 1);
 
-  //GtkLabel { color: nth($_fg_color, 2); }
+  GtkLabel { color: $osd_fg_color; }
 }
 
 GtkEntry.gb-command-bar-entry.entry.flat,
 GtkEntry.gb-command-bar-entry.entry.flat:focus {
   font-family: Monospace;
+  color: $osd_fg_color;
   background-image: none;
-  background-color: transparent;
+  background-color: opacify($osd_bg_color, 1);
   padding: 6px 6px 6px 6px;
-  //color: nth($_fg_color, 2);
+  border: none;
 
   &:selected,
   &:selected:focus {

@@ -2,20 +2,20 @@ style "theme-panel" {
 
   ythickness = 0
 
-  bg[NORMAL] = "#20242A"
+  bg[NORMAL] = "#25272d"
   bg[ACTIVE] = @selected_bg_color
   bg[PRELIGHT] = shade(1.1, @selected_bg_color)
   bg[SELECTED] = @selected_bg_color
 
-  fg[NORMAL] = "#edf5fb"
+  fg[NORMAL] = "#A8ADB5"
   fg[PRELIGHT] = @selected_fg_color
   fg[ACTIVE] = @selected_fg_color
   fg[SELECTED] = @selected_fg_color
 
-  text[NORMAL] = "#edf5fb"
-  text[PRELIGHT] = "#edf5fb"
-  text[ACTIVE] = "#edf5fb"
-  text[SELECTED] = "#edf5fb"
+  text[NORMAL] = "#A8ADB5"
+  text[PRELIGHT] = "#A8ADB5"
+  text[ACTIVE] = "#A8ADB5"
+  text[SELECTED] = "#A8ADB5"
 
   engine "murrine" {
     reliefstyle = 0
@@ -26,7 +26,7 @@ style "theme-panel" {
     gradient_shades = {1.0,1.0,1.0,1.0}
     textstyle = 0
     contrast = 0.0
-    textstyle = 1
+    textstyle = 0
   }
 }
 
@@ -48,7 +48,7 @@ style "panelbuttons" {
   ythickness = 0
 
   engine "murrine" {
-    textstyle = 1
+    textstyle = 0
   }
 }
 
@@ -63,7 +63,7 @@ style "theme-panel-text" {
   text[ACTIVE] = "#edf5fb"
 
   engine "murrine" {
-    textstyle = 1
+    textstyle = 0
     text_shade = 0.2
   }
 }

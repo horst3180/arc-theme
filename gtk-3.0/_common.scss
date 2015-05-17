@@ -1164,7 +1164,10 @@ GtkComboBox {
 
     &:backdrop { opacity: 0.85; }
 
-    &:focus { @include entry(header-focus); }
+    &:focus {
+      @include entry(header-focus);
+      background-clip: border-box;
+    }
     &:insensitive { @include entry(header-insensitive); }
 
     &:selected:focus {
@@ -1200,7 +1203,7 @@ GtkComboBox {
       @extend %linked;
     }
 
-  // Suggested and Destructive Action buttons
+  // Header-bar Suggested and Destructive Action buttons
   @each $b_type, $b_color in (suggested-action, $suggested_color),
                              (destructive-action, $destructive_color) {
     .button.#{$b_type} {
@@ -1279,6 +1282,7 @@ GtkComboBox {
     &:backdrop { opacity: 0.75; }
   }
 
+  // Header-bar Scale
   .scale {
 
     &:backdrop { opacity: 0.75; }
@@ -2634,6 +2638,8 @@ GtkVolumeButton.button { padding: 8px; }
   &.ssd {
     border-radius: 4px 4px 0 0;
     box-shadow: 0 0 0 1px $_wm_border;
+
+    &.maximized { border-radius: 0; }
   }
   &.csd {
     &.popup, &.menu {
@@ -2681,7 +2687,6 @@ GtkVolumeButton.button { padding: 8px; }
     &:active, &:checked {
       @include button(header-active);
     }
-    //&:backdrop { color: $wm_unfocused_title; }
 
     &.close, &.maximize, &.minimize {
 
@@ -2712,28 +2717,6 @@ GtkVolumeButton.button { padding: 8px; }
 
 
 // catch all extend :)
-
-%dark_button {
-  color: $header_fg;
-  background-color: lighten($header_bg, 12.5%);
-
-  GtkLabel, GtkImage { color: $header_fg; }
-
-  &:hover {
-    color: $header_fg;
-    background-color: lighten($header_bg, 15%);
-
-    GtkLabel, GtkImage { color: $header_fg; }
-  }
-  &:active, &:checked {
-    color: $selected_bg_color;
-    background-image: none;
-    background-color: transparentize(darken($header_bg, 10%), 0.4);
-    border-color: transparentize(darken($header_bg, 14%), 0.4);
-
-    GtkLabel, GtkImage { color: $selected_bg_color; }
-  }
-}
 
 %selected_items {
   background-image: none;
