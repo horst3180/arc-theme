@@ -1025,11 +1025,15 @@ GtkComboBox {
   border-color: darken($header_bg, 7%);
 
   color: $header_fg;
-  background-color: $header_bg;
+  background-color: opacify($header_bg, 1);
+
+  .csd & { background-color: $header_bg; }  // Transparent header-bars only in csd windows
 
   &:backdrop {
     color: transparentize($header_fg, 0.3);
-    background-color: lighten($header_bg, 3%);
+    background-color: lighten(opacify($header_bg, 1), 3%);
+
+    .csd & { background-color: lighten($header_bg, 3%); }  // Transparent header-bars only in csd windows
   }
 
   .title {

@@ -779,10 +779,14 @@ GtkComboBox {
   border-radius: 0;
   border-color: rgba(212, 213, 219, 0.95);
   color: rgba(82, 93, 118, 0.8);
-  background-color: rgba(231, 232, 235, 0.95); }
+  background-color: #e7e8eb; }
+  .csd .header-bar {
+    background-color: rgba(231, 232, 235, 0.95); }
   .header-bar:backdrop {
     color: rgba(82, 93, 118, 0.5);
-    background-color: rgba(239, 240, 242, 0.95); }
+    background-color: #eff0f2; }
+    .csd .header-bar:backdrop {
+      background-color: rgba(239, 240, 242, 0.95); }
   .header-bar .title {
     padding: 0px 12px; }
   .header-bar .subtitle {
