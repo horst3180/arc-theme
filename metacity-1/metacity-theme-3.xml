@@ -24,12 +24,13 @@
 	<distance name="left_width" value="0" />
 	<distance name="right_width" value="0" />
 	<distance name="bottom_height" value="0" />
-	<distance name="left_titlebar_edge" value="0"/>
-	<distance name="right_titlebar_edge" value="0"/>
+	<distance name="left_titlebar_edge" value="5"/>
+	<distance name="right_titlebar_edge" value="5"/>
 	<distance name="title_vertical_pad" value="3"/>
 	<border name="title_border" left="10" right="10" top="3" bottom="3"/>
-	<border name="button_border" left="4" right="4" top="0" bottom="0"/>
-	<aspect_ratio name="button" value="1.0"/>
+	<border name="button_border" left="0" right="0" top="0" bottom="0"/>
+  <distance name="button_width" value="30"/>
+  <distance name="button_height" value="16"/>
 </frame_geometry>
 
 <frame_geometry name="normal_unfocused" title_scale="medium" rounded_top_left="1" rounded_top_right="1" parent="normal">
@@ -58,7 +59,6 @@
 <frame_geometry name="small" title_scale="small" parent="normal" hide_buttons="true" rounded_top_left="1" rounded_top_right="3">
 	<distance name="title_vertical_pad" value="7"/>
 	<border name="title_border" left="10" right="10" top="0" bottom="1"/>
-	<border name="button_border" left="3" right="3" top="0" bottom="2"/>
 </frame_geometry>
 
 <frame_geometry name="small_unfocused" parent="small">
@@ -71,7 +71,6 @@
 	<distance name="right_width" value="1" />
 	<distance name="bottom_height" value="1" />
 	<border name="title_border" left="10" right="10" top="0" bottom="0" />
-	<border name="button_border" left="3" right="3" top="0" bottom="0"/>
 	<distance name="title_vertical_pad" value="1" />
 </frame_geometry>
 
@@ -81,7 +80,6 @@
 	<distance name="bottom_height" value="0" />
 	<distance name="title_vertical_pad" value="0" />
 	<border name="title_border" left="10" right="10" top="0" bottom="0" />
-	<border name="button_border" left="3" right="3" top="0" bottom="0"/>
 </frame_geometry>
 
 <frame_geometry name="modal" title_scale="small" hide_buttons="true" rounded_top_left="1" rounded_top_right="1" parent="small">
@@ -129,20 +127,20 @@
 
 <draw_ops name="entire_background_focused">
 	<rectangle color="C_wm_bg_focused" x="0" y="0" width="width" height="height" filled="true" />
-	<rectangle color="C_wm_highlight" x="0" y="0" width="width" height="1" filled="true" />
 </draw_ops>
 
 <draw_ops name="entire_background_unfocused">
 	<rectangle color="C_wm_bg_unfocused" x="0" y="0" width="width" height="height" filled="true" />
-	<rectangle color="C_wm_highlight" x="0" y="0" width="width" height="1" filled="true" />
 </draw_ops>
 
 <draw_ops name="titlebar_focused">
-
+	<rectangle color="C_wm_bg_focused" x="0" y="0" width="width" height="height" filled="true" />
+	<rectangle color="C_wm_highlight" x="0" y="0" width="width" height="1" filled="true" />
 </draw_ops>
 
 <draw_ops name="titlebar_unfocused">
-		<include name="titlebar_focused" />
+	<rectangle color="C_wm_bg_unfocused" x="0" y="0" width="width" height="height" filled="true" />
+	<rectangle color="C_wm_highlight" x="0" y="0" width="width" height="1" filled="true" />
 </draw_ops>
 
 <draw_ops name="titlebar_max">
