@@ -1,14 +1,14 @@
 // Decorations
 UnityDecoration {
-  -UnityDecoration-extents: 28px 0 0 0;
+  -UnityDecoration-extents: 28px 1 1 1;
   -UnityDecoration-input-extents: 10px;
 
   -UnityDecoration-shadow-offset-x: 0px;
-  -UnityDecoration-shadow-offset-y: 1px;
-  -UnityDecoration-active-shadow-color: rgba (0, 0, 0, 0.1); // doesn't work
-  -UnityDecoration-active-shadow-radius: 8px;
-  -UnityDecoration-inactive-shadow-color: rgba (0, 0, 0, 0.1);
-  -UnityDecoration-inactive-shadow-radius: 5px;
+  -UnityDecoration-shadow-offset-y: 3px;
+  -UnityDecoration-active-shadow-color: rgba(0, 0, 0, 0.15);
+  -UnityDecoration-active-shadow-radius: 12px;
+  -UnityDecoration-inactive-shadow-color: rgba(0, 0, 0, 0.07);
+  -UnityDecoration-inactive-shadow-radius: 7px;
 
   -UnityDecoration-glow-size: 10px;
   -UnityDecoration-glow-color: $selected_bg_color;
@@ -18,7 +18,7 @@ UnityDecoration {
   -UnityDecoration-title-alignment: 0.0;
 
   &.top {
-    border: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom-width: 0;
     border-radius: 4px 4px 0 0;
     padding: 1px 6px 0 6px;
@@ -36,7 +36,7 @@ UnityDecoration {
   }
   &.left, &.right, &.bottom,
   &.left:backdrop, &.right:backdrop, &.bottom:backdrop {
-    background-image: none;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1));
   }
 }
 
