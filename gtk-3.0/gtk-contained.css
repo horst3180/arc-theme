@@ -3131,7 +3131,7 @@ GtkFileChooserDialog .action-bar.frame {
 @define-color wm_title rgba(82, 93, 118, 0.8);
 @define-color wm_unfocused_title alpha(rgba(82, 93, 118, 0.8), 0.7);
 @define-color wm_bg #e7e8eb;
-@define-color wm_bg_unfocused #e7e8eb;
+@define-color wm_bg_unfocused #eff0f2;
 @define-color wm_highlight #f2f3f4;
 @define-color wm_shadow alpha(black, 0.35);
 @define-color content_view_bg #ffffff;
