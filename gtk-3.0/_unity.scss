@@ -5,9 +5,9 @@ UnityDecoration {
 
   -UnityDecoration-shadow-offset-x: 0px;
   -UnityDecoration-shadow-offset-y: 1px;
-  -UnityDecoration-active-shadow-color: rgba (0, 0, 0, 0.3);
-  -UnityDecoration-active-shadow-radius: 10px;
-  -UnityDecoration-inactive-shadow-color: rgba (0, 0, 0, 0.15);
+  -UnityDecoration-active-shadow-color: rgba (0, 0, 0, 0.1); // doesn't work
+  -UnityDecoration-active-shadow-radius: 8px;
+  -UnityDecoration-inactive-shadow-color: rgba (0, 0, 0, 0.1);
   -UnityDecoration-inactive-shadow-radius: 5px;
 
   -UnityDecoration-glow-size: 10px;
@@ -44,7 +44,7 @@ UnityDecoration {
 UnityPanelWidget,
 .unity-panel {
   background-image: linear-gradient(to bottom, opacify($panel_bg, 1));
-  color: $panel_fg;
+  color: lighten($panel_fg, 20%);
   box-shadow: none;
 }
 

@@ -2443,7 +2443,8 @@ GtkInfoBar {
 .info,
 .question,
 .warning,
-.error {
+.error,
+GtkInfoBar {
   background-color: $selected_bg_color;
   color: $selected_fg_color;
 }
