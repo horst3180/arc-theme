@@ -81,6 +81,8 @@ GeditWindow.background {
   .titlebar .pane-separator { background-color: darken($header_bg, 7%); }
 }
 
+.gedit-bottom-panel-paned { background-color: $base_color; }
+
 .gedit-document-panel {
   background-color: $dark_sidebar_bg;
 
