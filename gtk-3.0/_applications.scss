@@ -635,9 +635,9 @@ MarlinViewWindow *:selected:focus {
   icon-shadow: none;
 }
 
-.panel .menubar .menuitem:hover {
-  background-color: transparent;
-}
+.panel .menubar > .menuitem { padding: 3px 6px; }
+
+.panel .menubar > .menuitem:hover { background-color: transparent; }
 
 .panel .window-frame.menu.csd,
 .panel .window-frame.popup.csd {

@@ -1175,7 +1175,7 @@ column-header .button, column-header .button:hover, column-header .button:active
     .menu .menuitem:insensitive, .popup .menuitem:insensitive {
       color: rgba(92, 97, 108, 0.55); }
     .menu .menuitem.separator, .menu GtkPlacesSidebar.sidebar .menuitem.view.separator, GtkPlacesSidebar.sidebar .menu .menuitem.view.separator, .popup .menuitem.separator, .popup GtkPlacesSidebar.sidebar .menuitem.view.separator, GtkPlacesSidebar.sidebar .popup .menuitem.view.separator {
-      color: #ffffff; }
+      color: rgba(255, 255, 255, 0); }
     .menu .menuitem.arrow, .popup .menuitem.arrow {
       -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
     .menu .menuitem.arrow:dir(rtl), .popup .menuitem.arrow:dir(rtl) {
@@ -1208,7 +1208,7 @@ column-header .button, column-header .button:hover, column-header .button:active
   background-color: #ffffff;
   box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.07); }
   .popover .separator, .popover GtkPlacesSidebar.sidebar .view.separator, GtkPlacesSidebar.sidebar .popover .view.separator {
-    color: transparent; }
+    color: rgba(255, 255, 255, 0); }
   .popover > .list,
   .popover > .view,
   .popover > .toolbar,
@@ -2107,6 +2107,7 @@ GtkVolumeButton.button {
   border-color: transparent;
   background-color: transparent;
   background-image: none;
+  background-color: rgba(231, 232, 235, 0);
   border-width: 0; }
   .header-bar .button.titlebutton:hover,
   .titlebar .button.titlebutton:hover {
@@ -2701,7 +2702,10 @@ MarlinViewWindow *:selected:focus {
   text-shadow: none;
   icon-shadow: none; }
 
-.panel .menubar .menuitem:hover {
+.panel .menubar > .menuitem {
+  padding: 3px 6px; }
+
+.panel .menubar > .menuitem:hover {
   background-color: transparent; }
 
 .panel .window-frame.menu.csd,

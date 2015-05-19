@@ -1501,7 +1501,7 @@ column-header.button.dnd { // for treeview-like derive widgets
       color: $insensitive_fg_color;
     }
 
-    &.separator { color: $base_color; }
+    &.separator { color: transparentize($base_color, 1); }
 
     //submenu indicators
     &.arrow { -gtk-icon-source: -gtk-icontheme('pan-end-symbolic'); }
@@ -1537,7 +1537,7 @@ column-header.button.dnd { // for treeview-like derive widgets
 
   box-shadow: 0 2px 6px 1px transparentize(black, 0.93);
 
-  & .separator { color: transparentize(black, 1); }
+  & .separator { color: transparentize($base_color, 1); }
   .label.separator { @extend .label.separator; } // Noice
 
   > .list,
@@ -2682,6 +2682,7 @@ GtkVolumeButton.button { padding: 8px; }
     padding: 7px 4px;
 
     @include button(undecorated);
+    background-color: transparentize($header_bg, 1);
     border-width: 0;
 
     &:hover {
