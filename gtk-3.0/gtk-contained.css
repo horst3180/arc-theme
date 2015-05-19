@@ -3121,6 +3121,12 @@ GtkFileChooserDialog .action-bar.frame {
 @define-color theme_base_color #ffffff;
 @define-color theme_selected_bg_color #5294E2;
 @define-color theme_selected_fg_color #ffffff;
+@define-color fg_color #5c616c;
+@define-color text_color #5c616c;
+@define-color bg_color #f9fafb;
+@define-color base_color #ffffff;
+@define-color selected_bg_color #5294E2;
+@define-color selected_fg_color #ffffff;
 @define-color insensitive_bg_color #fcfdfd;
 @define-color insensitive_fg_color rgba(92, 97, 108, 0.55);
 @define-color insensitive_base_color #ffffff;
@@ -3128,8 +3134,6 @@ GtkFileChooserDialog .action-bar.frame {
 @define-color theme_unfocused_text_color #5c616c;
 @define-color theme_unfocused_bg_color #f9fafb;
 @define-color theme_unfocused_base_color #ffffff;
-@define-color theme_unfocused_selected_bg_color #5294E2;
-@define-color theme_unfocused_selected_fg_color #ffffff;
 @define-color borders #dde3e9;
 @define-color unfocused_borders #dde3e9;
 @define-color warning_color #F27835;
