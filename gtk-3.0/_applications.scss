@@ -155,7 +155,7 @@ NemoWindow GtkSeparator.separator.horizontal {
   @extend .nautilus-desktop.nautilus-canvas-item;
 }
 
-NemoPathBar.linked > .button {
+NemoWindow .primary-toolbar NemoPathBar.linked > .button {
   @include button(header-hover);
 
   &:hover { border-color: $selected_bg_color; }

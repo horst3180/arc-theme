@@ -4,7 +4,8 @@ gtk-icon-sizes		= "gtk-button=16,16" # This makes button icons smaller.
 gtk-auto-mnemonics = 1
 gtk-primary-button-warps-slider = 1
 
-include "panel.rc"	# This includes the file that handles the panels.
+include "apps.rc"
+include "panel.rc"  # This includes the file that handles the panels.
 
 style "default" {
 

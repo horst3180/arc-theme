@@ -4,18 +4,24 @@
 
 GtkFileChooserDialog .dialog-action-box { background-color: $bg_color }  // fix for non gnome environments
 
+NemoWindow GtkEventBox { background-color: $bg_color; } // fixes nemo statusbar
+
 GtkFileChooserDialog *,
-NautilusWindow * {
+NautilusWindow *,
+NemoWindow {
   -GtkPaned-handle-size: 0;
 }
 
 // Dark transparent sidebars
 GtkFileChooserDialog,
-NautilusWindow {
+NautilusWindow,
+NemoWindow,
+MarlinViewWindow {
 
-  &.background { background-color: transparent; }
+  &.background,
+  .source-list, .source-list.view, .source-list.view:prelight { background-color: transparent; }
 
-  .sidebar {
+  .sidebar, .source-list.sidebar.view {
     background-color: $dark_sidebar_bg;
 
     .view {
