@@ -2293,6 +2293,10 @@ TerminalWindow .notebook tab.reorderable-page.top:active, TerminalWindow .notebo
   border-color: #d4d5db; }
   TerminalWindow .notebook tab.reorderable-page.top:active:backdrop, TerminalWindow .notebook tab.reorderable-page.top:active:hover:backdrop {
     background-color: rgba(239, 240, 242, 0.95); }
+TerminalWindow .scrollbar.vertical .slider {
+  margin-left: 3px; }
+TerminalWindow .scrollbar.trough {
+  border-width: 0; }
 
 NautilusCanvasViewContainer.view .entry, NemoIconViewContainer .entry {
   border-radius: 3px; }
@@ -2758,6 +2762,8 @@ PantheonTerminalPantheonTerminalWindow.background {
   background-color: transparent; }
   PantheonTerminalPantheonTerminalWindow.background .titlebar {
     background-color: rgba(231, 232, 235, 0.95); }
+  PantheonTerminalPantheonTerminalWindow.background .notebook.header.top {
+    box-shadow: inset 0 1px #d4d5db, inset 0 -1px #edf0f3; }
 
 SwitchboardCategoryView .view:selected,
 SwitchboardCategoryView .view:selected:focus {
