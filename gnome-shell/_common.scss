@@ -1040,8 +1040,8 @@ StScrollBar {
   &:hover, &:focus { background-color: transparentize(black, 0.9); }
 
   &:active {
-    color: $selected_fg_color;
-    background-color: lighten($header_bg, 15%);
+    color: $fg_color;
+    background-color: transparentize(black, 0.85);
     border-width: 0; //avoid jumparound due to today
   }
 

@@ -804,8 +804,8 @@ StScrollBar {
   .calendar-day-base:hover, .calendar-day-base:focus {
     background-color: rgba(0, 0, 0, 0.1); }
   .calendar-day-base:active {
-    color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.95);
+    color: #5c616c;
+    background-color: rgba(0, 0, 0, 0.15);
     border-width: 0; }
   .calendar-day-base.calendar-day-heading {
     color: rgba(92, 97, 108, 0.85);
