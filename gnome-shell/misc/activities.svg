@@ -16,7 +16,7 @@
    id="svg11300"
    sodipodi:version="0.32"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="menu-1.svg"
+   sodipodi:docname="activities.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    version="1.0"
    style="display:inline;enable-background:new">
@@ -29,9 +29,9 @@
      borderopacity="1"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="16"
-     inkscape:cx="18.768771"
-     inkscape:cy="9.5710953"
+     inkscape:zoom="45.254834"
+     inkscape:cx="18.117513"
+     inkscape:cy="8.8930078"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:grid-bbox="true"
@@ -136,20 +136,20 @@
     <circle
        style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path4137"
-       cx="5"
-       cy="288"
-       r="2" />
+       cx="5.5"
+       cy="288.5"
+       r="1.5" />
     <circle
        style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new"
        id="path4137-5"
-       cx="19"
-       cy="288"
-       r="2" />
+       cx="19.5"
+       cy="288.5"
+       r="1.5" />
     <circle
        style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new"
        id="path4137-5-7"
-       cx="12"
-       cy="288"
-       r="2" />
+       cx="12.5"
+       cy="288.5"
+       r="1.5" />
   </g>
 </svg>
