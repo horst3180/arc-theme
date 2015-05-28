@@ -1,0 +1,214 @@
+.titlebar .separator {
+  color: darken($header_bg, 7%);  //fixes separator in gnome-tweak-tool
+}
+
+GtkFileChooserDialog .dialog-action-box { background-color: $bg_color }  // fix for non gnome environments
+
+NemoWindow GtkEventBox { background-color: $bg_color; } // fixes nemo statusbar
+
+GtkFileChooserDialog *,
+NautilusWindow *,
+NemoWindow {
+  -GtkPaned-handle-size: 0;
+}
+
+// Dark transparent sidebars
+GtkFileChooserDialog,
+NautilusWindow,
+NemoWindow,
+MarlinViewWindow {
+
+  &.background,
+  .source-list, .source-list.view, .source-list.view:prelight { background-color: transparent; }
+
+  GtkBox.sidebar { background-color: transparent; }
+
+  .sidebar, .source-list.sidebar.view {
+    background-color: $dark_sidebar_bg;
+
+    .view {
+      background-color: transparent;
+      color: $dark_sidebar_fg;
+
+      &.image { color: transparentize($dark_sidebar_fg, 0.4); }
+    }
+
+    .view.cell:selected {
+      background-color: $selected_bg_color;
+      color: $selected_fg_color;
+    }
+
+    &.frame {
+      color: $dark_sidebar_fg;
+    }
+
+    .separator { color: transparent; }
+
+    .scrollbar {
+
+      &.trough { background-color: transparent; border-color: transparent; }
+
+      &.slider {
+        border-radius: 20px;
+        border: 3px solid transparent; //margin :/
+        background-color: transparentize(lighten($dark_sidebar_fg, 15%), 0.3);
+        &:hover {
+          background-color: lighten($dark_sidebar_fg, 20%);
+        }
+        &:prelight:active {
+          background-color: $selected_bg_color;
+        }
+        &.fine-tune {
+          border-width: 4px;
+          &:prelight:active {
+            background-color: $selected_bg_color;
+          }
+        }
+        &:insensitive {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+  &.maximized .sidebar { background-color: opacify($dark_sidebar_bg, 1); }
+
+  .pane-separator { background-color: $dark_sidebar_border; }
+}
+
+// Yeah, this is ugly, but prevents a transparent background in the image preview box
+GtkFileChooserDialog GtkPaned > .vertical > .horizontal { background-color: $bg_color; }
+
+// Gedit sidebar
+GeditWindow.background {
+  background-color: transparent;
+
+  .pane-separator,
+  .pane-separator:hover { background-color: $dark_sidebar_border; }
+
+  .titlebar .pane-separator { background-color: darken($header_bg, 7%); }
+}
+
+.gedit-bottom-panel-paned { background-color: $base_color; }
+
+.gedit-document-panel {
+  background-color: $dark_sidebar_bg;
+
+  .maximized & { background-color: opacify($dark_sidebar_bg, 1); }
+
+  .list-row { color: $dark_sidebar_fg; }
+
+  .list-row {
+    background-color: transparentize($dark_sidebar_fg, 1);
+    border: solid transparentize($dark_sidebar_fg, 1);
+    border-width: 3px 2px 3px 2px;
+  }
+  .list-row:hover {
+    border: solid transparentize($dark_sidebar_fg, 0.85);
+    border-width: 3px 2px 3px 2px;
+    background-color: transparentize($dark_sidebar_fg, 0.85);
+  }
+  .list-row:active {
+    color: $selected_fg_color;
+    background-color: $selected_bg_color;
+    border: solid $selected_bg_color;
+    border-width: 3px 2px 3px 2px;
+
+    .button { color: $selected_fg_color; }
+  }
+  .list-row:selected, .list-row:selected:hover {
+    color: $selected_fg_color;
+    background-color: $selected_bg_color;
+    border: solid $selected_bg_color;
+    border-width: 3px 2px 3px 2px;
+  }
+  .prelight-row .button:active {
+    color: $dark_sidebar_fg;
+  }
+}
+
+GeditFileBrowserWidget {
+  background-color: $dark_sidebar_bg;
+
+  .maximized & { background-color: opacify($dark_sidebar_bg, 1); }
+
+  .scrollbar {
+
+    &.trough { background-color: transparent; border-color: transparent; }
+
+    &.slider {
+      border-radius: 20px;
+      border: 3px solid transparent; //margin :/
+      background-color: transparentize(lighten($dark_sidebar_fg, 15%), 0.3);
+      &:hover {
+        background-color: lighten($dark_sidebar_fg, 20%);
+      }
+      &:prelight:active {
+        background-color: $selected_bg_color;
+      }
+      &.fine-tune {
+        border-width: 4px;
+        &:prelight:active {
+          background-color: $selected_bg_color;
+        }
+      }
+      &:insensitive {
+        background-color: transparent;
+      }
+    }
+  }
+
+  .scrollbars-junction,
+  .scrollbars-junction.frame { // the small square between two scrollbars
+    border-color: transparent;
+    background-color: transparent;
+  }
+
+  .horizontal {
+    background-color: transparent;
+    border-color: darken($dark_sidebar_bg, 7%);
+
+    .button {
+      @include button(undecorated);
+      color: $dark_sidebar_fg;
+      border: 1px solid transparent;
+
+      &:hover { border: 1px solid $selected_bg_color; }
+      &:active, &:checked { @include button(active); }
+      &:insensitive { color: transparentize($dark_sidebar_fg, 0.6); }
+    }
+    GtkComboBox { color: $dark_sidebar_fg; }
+  }
+}
+
+GeditFileBrowserView.view {
+
+  background-color: transparent;
+  color: $dark_sidebar_fg;
+
+  &.expander {
+    color: $dark_sidebar_fg;
+    &:hover { color: $selected_bg_color; }
+  }
+}
+
+// Filechooser bottom bar
+GtkFileChooserDialog .action-bar.frame {
+  background-color: darken($dark_sidebar_bg, 2%);
+  border-color: darken($dark_sidebar_bg, 7%);
+
+  GtkLabel { color: $dark_sidebar_fg; }
+
+  .button {
+    @include button(undecorated);
+
+    &:hover { border: 1px solid $selected_bg_color; }
+    &:active, &:checked {
+      border: 1px solid $selected_bg_color;
+      color: $selected_fg_color;
+      background-color: $selected_bg_color;
+    }
+    &:insensitive { color: transparentize($dark_sidebar_fg, 0.6); }
+  }
+
+  GtkComboBox { color: $dark_sidebar_fg; }
+}

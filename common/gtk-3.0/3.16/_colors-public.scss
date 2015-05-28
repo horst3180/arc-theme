@@ -1,0 +1,49 @@
+//apps rely on some named colors to be exported
+/* GTK NAMED COLORS */
+
+// Sass thinks we're using the colors in the variables as strings and may shoot
+// warning, it's innocuous and can be defeated by using "" + $var
+@define-color theme_fg_color #{"" + $fg_color};
+@define-color theme_text_color #{"" + $text_color};
+@define-color theme_bg_color #{"" + $bg_color};
+@define-color theme_base_color #{"" + $base_color};
+@define-color theme_selected_bg_color #{"" + $selected_bg_color};
+@define-color theme_selected_fg_color #{"" + $selected_fg_color};
+@define-color fg_color #{"" + $fg_color};
+@define-color text_color #{"" + $text_color};
+@define-color bg_color #{"" + $bg_color};
+@define-color base_color #{"" + $base_color};
+@define-color selected_bg_color #{"" + $selected_bg_color};
+@define-color selected_fg_color #{"" + $selected_fg_color};
+@define-color insensitive_bg_color #{"" + $insensitive_bg_color};
+@define-color insensitive_fg_color #{"" + $insensitive_fg_color};
+@define-color insensitive_base_color #{"" + $base_color};
+@define-color theme_unfocused_fg_color #{"" + $fg_color};
+@define-color theme_unfocused_text_color #{"" + $text_color};
+@define-color theme_unfocused_bg_color #{"" + $bg_color};
+@define-color theme_unfocused_base_color #{"" + $base_color};
+@define-color borders #{"" + $borders_color};
+@define-color unfocused_borders #{"" + $borders_color};
+
+@define-color warning_color #{"" + $warning_color};
+@define-color error_color #{"" + $error_color};
+@define-color success_color #{"" + $success_color};
+@define-color placeholder_text_color #A8A8A8;
+
+//WM
+$wm_highlight: lighten(opacify($header_bg, 1), 4%);
+$wm_bg_unfocused: opacify(lighten($header_bg, 3%), 1);
+
+@define-color wm_title #{"" + $header_fg};
+@define-color wm_unfocused_title alpha(#{"" + $header_fg}, 0.7);
+
+@define-color wm_bg #{"" + opacify($header_bg, 1)};
+@define-color wm_bg_unfocused #{"" + $wm_bg_unfocused};
+
+@define-color wm_highlight #{"" + $wm_highlight};
+@define-color wm_shadow alpha(black, 0.35);
+
+//FIXME this is really an API
+
+@define-color content_view_bg #{"" + $base_color};
+
