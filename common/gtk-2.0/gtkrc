@@ -1731,7 +1731,7 @@ style "libreoffice_entry" {
       state = NORMAL
       shadow = IN
       file = "assets/entry.png"
-      border = { 4, 4, 4, 4 }
+      border = { 12, 12, 12, 12 }
       stretch = TRUE
     }
 
@@ -1740,7 +1740,7 @@ style "libreoffice_entry" {
       detail = "entry"
       state = ACTIVE
       file = "assets/entry-focus.png"
-      border = { 4, 4, 4, 4 }
+      border = { 12, 12, 12, 12 }
       stretch = TRUE
     }
   }
@@ -1774,7 +1774,7 @@ style "standalone_entry" {
     state = NORMAL
     shadow = IN
     file = "assets/entry.png"
-    border = { 4, 4, 4, 4 }
+    border = { 12, 12, 12, 12 }
     stretch = TRUE
     }
 
@@ -1783,7 +1783,7 @@ style "standalone_entry" {
     detail = "entry"
     state = ACTIVE
     file = "assets/entry-focus.png"
-    border = { 4, 4, 4, 4 }
+    border = { 12, 12, 12, 12 }
     stretch = TRUE
     }
   }
