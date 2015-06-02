@@ -155,11 +155,11 @@ StScrollBar {
     background-image: url("checkbox/checkbox-unchecked.svg");
   }
 
-  &:focus Stbin { background-image: url("checkbox/checkbox-unchecked-focused.svg"); }
+  &:focus StBin { background-image: url("checkbox/checkbox-unchecked-focused.svg"); }
 
-  &:checked Stbin { background-image: url("checkbox/checkbox-checked.svg"); }
+  &:checked StBin { background-image: url("checkbox/checkbox-checked.svg"); }
 
-  &:focus:checked Stbin { background-image: url("checkbox/checkbox-checked-focused.svg"); }
+  &:focus:checked StBin { background-image: url("checkbox/checkbox-checked-focused.svg"); }
 }
 
 //

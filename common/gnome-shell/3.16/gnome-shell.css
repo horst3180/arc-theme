@@ -133,11 +133,11 @@ StScrollBar {
   width: 16px;
   height: 16px;
   background-image: url("checkbox/checkbox-unchecked.svg"); }
-.check-box:focus Stbin {
+.check-box:focus StBin {
   background-image: url("checkbox/checkbox-unchecked-focused.svg"); }
-.check-box:checked Stbin {
+.check-box:checked StBin {
   background-image: url("checkbox/checkbox-checked.svg"); }
-.check-box:focus:checked Stbin {
+.check-box:focus:checked StBin {
   background-image: url("checkbox/checkbox-checked-focused.svg"); }
 
 .toggle-switch {
