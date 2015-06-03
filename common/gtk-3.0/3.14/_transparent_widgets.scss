@@ -26,17 +26,18 @@ MarlinViewWindow {
   .sidebar, .source-list.sidebar.view {
     background-color: $dark_sidebar_bg;
 
-    .view {
+    .view, row {
       background-color: transparent;
       color: $dark_sidebar_fg;
 
       &.image { color: transparentize($dark_sidebar_fg, 0.4); }
+
+      &.cell:selected {
+        background-color: $selected_bg_color;
+        color: $selected_fg_color;
+      }
     }
 
-    .view.cell:selected {
-      background-color: $selected_bg_color;
-      color: $selected_fg_color;
-    }
 
     &.frame {
       color: $dark_sidebar_fg;
