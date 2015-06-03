@@ -26,6 +26,11 @@ if ENABLE_GTK3
 		*.sh \
 		*.txt \
 		Gemfile*
+
+if !ENABLE_TRANSPARENCY
+	cd $(ithemedir)/gtk-3.0 && mv gtk-contained-solid.css gtk-contained.css
+endif #!ENABLE_TRANSPARENCY
+
 endif # ENABLE_GTK3
 
 

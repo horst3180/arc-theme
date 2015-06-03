@@ -47,10 +47,10 @@ $entry_focus_border: $selected_bg_color;
 $button_bg: lighten($bg_color, 1%);
 $button_border: $entry_border;
 
-$header_bg: transparentize(#e7e8eb, 0.05);
+$header_bg: if($transparency == 'true', transparentize(#e7e8eb, 0.05), #e7e8eb);
 $header_fg: saturate(transparentize($fg_color, 0.2), 10%);
 
-$dark_sidebar_bg: $osd_bg_color;
+$dark_sidebar_bg: if($transparency == 'true', $osd_bg_color, opacify($osd_bg_color, 1));
 $dark_sidebar_fg: $osd_fg_color;
 $dark_sidebar_border: $dark_sidebar_bg;
 
