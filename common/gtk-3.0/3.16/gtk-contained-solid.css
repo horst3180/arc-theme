@@ -3129,12 +3129,12 @@ MarlinViewWindow .pane-separator {
 GtkFileChooserDialog GtkPaned > .vertical > .horizontal {
   background-color: #f9fafb; }
 
-GeditWindow.background.csd GeditWindow.background {
+GeditWindow.background.csd {
   background-color: transparent; }
-  GeditWindow.background.csd GeditWindow.background .pane-separator,
-  GeditWindow.background.csd GeditWindow.background .pane-separator:hover {
+  GeditWindow.background.csd .pane-separator,
+  GeditWindow.background.csd .pane-separator:hover {
     background-color: #3c4049; }
-  GeditWindow.background.csd GeditWindow.background .titlebar .pane-separator {
+  GeditWindow.background.csd .titlebar .pane-separator {
     background-color: #d4d5db; }
 
 .gedit-bottom-panel-paned {
