@@ -18,7 +18,7 @@ NautilusWindow,
 NemoWindow,
 MarlinViewWindow {
 
-  &.background,
+  &.csd.background,
   .source-list, .source-list.view, .source-list.view:prelight { background-color: transparent; }
 
   .sidebar, .source-list.sidebar.view {
@@ -78,7 +78,7 @@ MarlinViewWindow {
 GtkFileChooserDialog GtkPaned > .vertical > .horizontal { background-color: $bg_color; }
 
 // Gedit sidebar
-GeditWindow.background {
+GeditWindow.background.csd GeditWindow.background {
   background-color: transparent;
 
   .pane-separator,
@@ -125,7 +125,7 @@ GeditWindow.background {
   }
 }
 
-GeditFileBrowserWidget {
+GeditWindow.background.csd GeditFileBrowserWidget {
   background-color: $dark_sidebar_bg;
 
   .maximized & { background-color: opacify($dark_sidebar_bg, 1); }
@@ -174,7 +174,7 @@ GeditFileBrowserWidget {
   }
 }
 
-GeditFileBrowserView.view {
+GeditWindow.background.csd GeditFileBrowserView.view {
 
   background-color: transparent;
   color: $dark_sidebar_fg;

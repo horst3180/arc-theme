@@ -2979,17 +2979,17 @@ NautilusWindow *,
 NemoWindow {
   -GtkPaned-handle-size: 0; }
 
-GtkFileChooserDialog.background,
+GtkFileChooserDialog.csd.background,
 GtkFileChooserDialog .source-list, GtkFileChooserDialog .source-list.view, GtkFileChooserDialog .source-list.view:prelight,
-NautilusWindow.background,
+NautilusWindow.csd.background,
 NautilusWindow .source-list,
 NautilusWindow .source-list.view,
 NautilusWindow .source-list.view:prelight,
-NemoWindow.background,
+NemoWindow.csd.background,
 NemoWindow .source-list,
 NemoWindow .source-list.view,
 NemoWindow .source-list.view:prelight,
-MarlinViewWindow.background,
+MarlinViewWindow.csd.background,
 MarlinViewWindow .source-list,
 MarlinViewWindow .source-list.view,
 MarlinViewWindow .source-list.view:prelight {
@@ -3129,12 +3129,12 @@ MarlinViewWindow .pane-separator {
 GtkFileChooserDialog GtkPaned > .vertical > .horizontal {
   background-color: #f9fafb; }
 
-GeditWindow.background {
+GeditWindow.background.csd GeditWindow.background {
   background-color: transparent; }
-  GeditWindow.background .pane-separator,
-  GeditWindow.background .pane-separator:hover {
+  GeditWindow.background.csd GeditWindow.background .pane-separator,
+  GeditWindow.background.csd GeditWindow.background .pane-separator:hover {
     background-color: #3c4049; }
-  GeditWindow.background .titlebar .pane-separator {
+  GeditWindow.background.csd GeditWindow.background .titlebar .pane-separator {
     background-color: #d4d5db; }
 
 .gedit-bottom-panel-paned {
@@ -3169,51 +3169,51 @@ GeditWindow.background {
   .gedit-document-panel .prelight-row .button:active {
     color: #A8ADB5; }
 
-GeditFileBrowserWidget {
+GeditWindow.background.csd GeditFileBrowserWidget {
   background-color: #3c4049; }
-  .maximized GeditFileBrowserWidget {
+  .maximized GeditWindow.background.csd GeditFileBrowserWidget {
     background-color: #3c4049; }
-  GeditFileBrowserWidget .scrollbar.overlay-indicator:not(.dragging):not(.hovering) .slider {
+  GeditWindow.background.csd GeditFileBrowserWidget .scrollbar.overlay-indicator:not(.dragging):not(.hovering) .slider {
     background-color: #d1d4d8;
     border: 1px solid rgba(0, 0, 0, 0.3); }
-  GeditFileBrowserWidget .scrollbar .trough {
+  GeditWindow.background.csd GeditFileBrowserWidget .scrollbar .trough {
     background-color: rgba(0, 0, 0, 0.2);
     border: none; }
-  GeditFileBrowserWidget .scrollbar .slider {
+  GeditWindow.background.csd GeditFileBrowserWidget .scrollbar .slider {
     background-color: rgba(209, 212, 216, 0.7); }
-    GeditFileBrowserWidget .scrollbar .slider:hover {
+    GeditWindow.background.csd GeditFileBrowserWidget .scrollbar .slider:hover {
       background-color: #dfe1e4; }
-    GeditFileBrowserWidget .scrollbar .slider:prelight:active {
+    GeditWindow.background.csd GeditFileBrowserWidget .scrollbar .slider:prelight:active {
       background-color: #5294E2; }
-    GeditFileBrowserWidget .scrollbar .slider:insensitive {
+    GeditWindow.background.csd GeditFileBrowserWidget .scrollbar .slider:insensitive {
       background-color: transparent; }
-  GeditFileBrowserWidget .horizontal {
+  GeditWindow.background.csd GeditFileBrowserWidget .horizontal {
     background-color: transparent;
     border-color: #2c2f35; }
-    GeditFileBrowserWidget .horizontal .button {
+    GeditWindow.background.csd GeditFileBrowserWidget .horizontal .button {
       border-color: transparent;
       background-color: transparent;
       background-image: none;
       color: #A8ADB5;
       border: 1px solid transparent; }
-      GeditFileBrowserWidget .horizontal .button:hover {
+      GeditWindow.background.csd GeditFileBrowserWidget .horizontal .button:hover {
         border: 1px solid #5294E2; }
-      GeditFileBrowserWidget .horizontal .button:active, GeditFileBrowserWidget .horizontal .button:checked {
+      GeditWindow.background.csd GeditFileBrowserWidget .horizontal .button:active, GeditWindow.background.csd GeditFileBrowserWidget .horizontal .button:checked {
         color: #ffffff;
         outline-color: rgba(255, 255, 255, 0.3);
         border-color: #5294E2;
         background-color: #5294E2; }
-      GeditFileBrowserWidget .horizontal .button:insensitive {
+      GeditWindow.background.csd GeditFileBrowserWidget .horizontal .button:insensitive {
         color: rgba(168, 173, 181, 0.4); }
-    GeditFileBrowserWidget .horizontal GtkComboBox {
+    GeditWindow.background.csd GeditFileBrowserWidget .horizontal GtkComboBox {
       color: #A8ADB5; }
 
-GeditFileBrowserView.view {
+GeditWindow.background.csd GeditFileBrowserView.view {
   background-color: transparent;
   color: #A8ADB5; }
-  GeditFileBrowserView.view.expander {
+  GeditWindow.background.csd GeditFileBrowserView.view.expander {
     color: #A8ADB5; }
-    GeditFileBrowserView.view.expander:hover {
+    GeditWindow.background.csd GeditFileBrowserView.view.expander:hover {
       color: #5294E2; }
 
 GtkFileChooserDialog .action-bar.frame {
