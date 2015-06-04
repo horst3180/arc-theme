@@ -3,6 +3,7 @@
 }
 
 $ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$asset_suffix: if($variant=='dark', '-dark', ''); // use dark assets in dark variant
 
 * {
   background-clip: padding-box;
@@ -1880,13 +1881,13 @@ GtkSwitch {
     // load switch troughs from .png files in assets directory
 
     #{$i}GtkSwitch.trough#{$k} {
-      background-image: -gtk-scaled(url("assets/switch#{$l}#{$j}.png"),url("assets/switch#{$l}#{$j}@2.png"));
+      background-image: -gtk-scaled(url("assets/switch#{$l}#{$j}#{$asset_suffix}.png"),url("assets/switch#{$l}#{$j}#{$asset_suffix}@2.png"));
     }
 
     // load switch sliders from .png files in assets directory
 
     //#{$i}GtkSwitch.slider#{$k} {
-    //  background-image: -gtk-scaled(url("assets/switch-slider#{$l}#{$j}.png"),url("assets/switch-slider#{$l}#{$j}@2.png"));
+    //  background-image: -gtk-scaled(url("assets/switch-slider#{$l}#{$j}#{$asset_suffix}.png"),url("assets/switch-slider#{$l}#{$j}#{$asset_suffix}@2.png"));
     //}
   }
 }
@@ -1909,8 +1910,8 @@ GtkSwitch {
                   (':checked', '-checked'),
                   (':checked:insensitive','-checked-insensitive') {
     .#{$w}#{$s} {
-      -gtk-icon-source: -gtk-scaled(url("assets/#{$a}#{$as}.png"),
-                                    url("assets/#{$a}#{$as}@2.png"));
+      -gtk-icon-source: -gtk-scaled(url("assets/#{$a}#{$as}#{$asset_suffix}.png"),
+                                    url("assets/#{$a}#{$as}#{$asset_suffix}@2.png"));
     }
     // the borders of checks and radios are
     // too similar in luminosity to the selected background color, hence
@@ -1928,8 +1929,8 @@ GtkSwitch {
                   (':checked', '-checked-selectionmode') {
   GtkIconView.view.check#{$s},
   GtkFlowBox.view.check#{$s} {
-    -gtk-icon-source: -gtk-scaled(url("assets/checkbox#{$as}.png"),
-                                    url("assets/checkbox#{$as}@2.png"));
+    -gtk-icon-source: -gtk-scaled(url("assets/checkbox#{$as}#{$asset_suffix}.png"),
+                                    url("assets/checkbox#{$as}#{$asset_suffix}@2.png"));
     background-color: transparent;
   }
 }
@@ -2706,20 +2707,20 @@ GtkVolumeButton.button { padding: 8px; }
       &:backdrop { opacity: 1; }
     }
 
-    &.close { background-image: -gtk-scaled(url('assets/titlebutton-close.png'),url('assets/titlebutton-close@2.png')); }
-    &.close:backdrop { background-image: -gtk-scaled(url('assets/titlebutton-close-backdrop.png'),url('assets/titlebutton-close-backdrop@2.png')); }
-    &.close:hover { background-image: -gtk-scaled(url('assets/titlebutton-close-hover.png'),url('assets/titlebutton-close-hover@2.png')); }
-    &.close:active { background-image: -gtk-scaled(url('assets/titlebutton-close-active.png'),url('assets/titlebutton-close-active@2.png')); }
+    &.close { background-image: -gtk-scaled(url('assets/titlebutton-close#{$asset_suffix}.png'),url('assets/titlebutton-close#{$asset_suffix}@2.png')); }
+    &.close:backdrop { background-image: -gtk-scaled(url('assets/titlebutton-close-backdrop#{$asset_suffix}.png'),url('assets/titlebutton-close-backdrop#{$asset_suffix}@2.png')); }
+    &.close:hover { background-image: -gtk-scaled(url('assets/titlebutton-close-hover#{$asset_suffix}.png'),url('assets/titlebutton-close-hover#{$asset_suffix}@2.png')); }
+    &.close:active { background-image: -gtk-scaled(url('assets/titlebutton-close-active#{$asset_suffix}.png'),url('assets/titlebutton-close-active#{$asset_suffix}@2.png')); }
 
-    &.maximize { background-image: -gtk-scaled(url('assets/titlebutton-max.png'),url('assets/titlebutton-max@2.png')); }
-    &.maximize:backdrop { background-image: -gtk-scaled(url('assets/titlebutton-max-backdrop.png'),url('assets/titlebutton-max-backdrop@2.png')); }
-    &.maximize:hover { background-image: -gtk-scaled(url('assets/titlebutton-max-hover.png'),url('assets/titlebutton-max-hover@2.png')); }
-    &.maximize:active { background-image: -gtk-scaled(url('assets/titlebutton-max-active.png'),url('assets/titlebutton-max-active@2.png')); }
+    &.maximize { background-image: -gtk-scaled(url('assets/titlebutton-max#{$asset_suffix}.png'),url('assets/titlebutton-max#{$asset_suffix}@2.png')); }
+    &.maximize:backdrop { background-image: -gtk-scaled(url('assets/titlebutton-max-backdrop#{$asset_suffix}.png'),url('assets/titlebutton-max-backdrop#{$asset_suffix}@2.png')); }
+    &.maximize:hover { background-image: -gtk-scaled(url('assets/titlebutton-max-hover#{$asset_suffix}.png'),url('assets/titlebutton-max-hover#{$asset_suffix}@2.png')); }
+    &.maximize:active { background-image: -gtk-scaled(url('assets/titlebutton-max-active#{$asset_suffix}.png'),url('assets/titlebutton-max-active#{$asset_suffix}@2.png')); }
 
-    &.minimize { background-image: -gtk-scaled(url('assets/titlebutton-min.png'),url('assets/titlebutton-min@2.png')); }
-    &.minimize:backdrop { background-image: -gtk-scaled(url('assets/titlebutton-min-backdrop.png'),url('assets/titlebutton-min-backdrop@2.png')); }
-    &.minimize:hover { background-image: -gtk-scaled(url('assets/titlebutton-min-hover.png'),url('assets/titlebutton-min-hover@2.png')); }
-    &.minimize:active { background-image: -gtk-scaled(url('assets/titlebutton-min-active.png'),url('assets/titlebutton-min-active@2.png')); }
+    &.minimize { background-image: -gtk-scaled(url('assets/titlebutton-min#{$asset_suffix}.png'),url('assets/titlebutton-min#{$asset_suffix}@2.png')); }
+    &.minimize:backdrop { background-image: -gtk-scaled(url('assets/titlebutton-min-backdrop#{$asset_suffix}.png'),url('assets/titlebutton-min-backdrop#{$asset_suffix}@2.png')); }
+    &.minimize:hover { background-image: -gtk-scaled(url('assets/titlebutton-min-hover#{$asset_suffix}.png'),url('assets/titlebutton-min-hover#{$asset_suffix}@2.png')); }
+    &.minimize:active { background-image: -gtk-scaled(url('assets/titlebutton-min-active#{$asset_suffix}.png'),url('assets/titlebutton-min-active#{$asset_suffix}@2.png')); }
   }
 }
 

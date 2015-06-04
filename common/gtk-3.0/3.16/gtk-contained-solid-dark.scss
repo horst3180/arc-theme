@@ -3,8 +3,8 @@
 // - keep the number of defined colors to a minimum, use the color blending functions if
 //   you need a subtle shade
 
-$variant: 'light';
-$transparency: 'true';
+$variant: 'dark';
+$transparency: 'false';
 
 @import 'colors';
 @import 'drawing';
