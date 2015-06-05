@@ -689,7 +689,7 @@ style "menubar" {
 
   bg[NORMAL] = "#e7e8eb"
   fg[NORMAL] = "#70788d"
-  fg[SELECTED] = @selected_fg_color
+  fg[SELECTED] = @fg_color
   fg[INSENSITIVE] = shade(1.3, "#70788d")
 
   xthickness = 0
@@ -710,7 +710,7 @@ style "menubar-borderless" {
 
   bg[NORMAL] = "#e7e8eb"
   fg[NORMAL] = "#70788d"
-  fg[SELECTED] = @selected_fg_color
+  fg[SELECTED] = @fg_color
   fg[INSENSITIVE] = shade(1.3, "#70788d")
 
   xthickness = 0
@@ -770,10 +770,8 @@ style "menu_item"
   # highlight. The price to pay is black text on menus as well,
   # but at least it's readable.
   # See https://bugs.freedesktop.org/show_bug.cgi?id=38038
-  bg[SELECTED] = @fg_color
+  bg[SELECTED] = @selected_fg_color
 
-  bg[PRELIGHT] = @fg_color
-  fg[PRELIGHT] = @fg_color
   text[PRELIGHT] = @fg_color
 
   engine "pixmap" {
