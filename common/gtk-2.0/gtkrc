@@ -694,7 +694,40 @@ style "menubar" {
 
   xthickness = 0
   ythickness = 0
+
+  engine "pixmap" {
+
+    image {
+      function = BOX
+      file  = "assets/menubar.png"
+      stretch  = TRUE
+      border = { 1, 1, 1, 1 }
+    }
+  }
 }
+
+style "menubar-borderless" {
+
+  bg[NORMAL] = "#e7e8eb"
+  fg[NORMAL] = "#70788d"
+  fg[SELECTED] = @selected_fg_color
+  fg[INSENSITIVE] = shade(1.3, "#70788d")
+
+  xthickness = 0
+  ythickness = 0
+
+  engine "pixmap" {
+
+    image {
+      function = BOX
+      file  = "assets/null.png"
+      stretch  = TRUE
+      border = { 1, 1, 1, 1 }
+    }
+  }
+
+}
+
 
 style "menu" {
 
@@ -1046,7 +1079,7 @@ style "entry" {
       detail = "entry"
       state = NORMAL
       shadow = IN
-      file = "assets/entry.png"
+      file = "assets/entry-border-bg.png"
       border = { 12, 12, 12, 12 }
       stretch = TRUE
     }
@@ -1056,7 +1089,7 @@ style "entry" {
       detail = "entry"
       state = INSENSITIVE
       shadow = IN
-      file = "assets/entry-insensitive.png"
+      file = "assets/entry-border-disabled-bg.png"
       border = { 12, 12, 12, 12 }
       stretch = TRUE
     }
@@ -1065,7 +1098,7 @@ style "entry" {
       function = SHADOW
       detail = "entry"
       state = ACTIVE
-      file = "assets/entry-focus.png"
+      file = "assets/entry-border-active-bg.png"
       border = { 12, 12, 12, 12 }
       stretch = TRUE
     }
@@ -1100,7 +1133,7 @@ style "notebook_entry" {
       detail = "entry"
       state = NORMAL
       shadow = IN
-      file = "assets/entry-notebook.png"
+      file = "assets/notebook-entry-border-bg.png"
       border = { 12, 12, 12, 12 }
       stretch = TRUE
     }
@@ -1110,7 +1143,7 @@ style "notebook_entry" {
       detail = "entry"
       state = INSENSITIVE
       shadow = IN
-      file = "assets/entry-insensitive-notebook.png"
+      file = "assets/notebook-entry-border-disabled-bg.png"
       border = { 12, 12, 12, 12 }
       stretch = TRUE
     }
@@ -1119,9 +1152,27 @@ style "notebook_entry" {
       function = SHADOW
       detail = "entry"
       state = ACTIVE
-      file = "assets/entry-focus-notebook.png"
+      file = "assets/notebook-entry-border-active-bg.png"
       border = { 12, 12, 12, 12 }
       stretch = TRUE
+    }
+
+    image {
+      function = FLAT_BOX
+      detail = "entry_bg"
+      state = NORMAL
+      overlay_file = "assets/null.png"
+      overlay_border = { 0, 0, 0, 0 }
+      overlay_stretch = TRUE
+    }
+
+    image {
+      function = FLAT_BOX
+      detail = "entry_bg"
+      state = ACTIVE
+      overlay_file = "assets/null.png"
+      overlay_border = { 0, 0, 0, 0 }
+      overlay_stretch = TRUE
     }
   }
 }
@@ -1136,7 +1187,7 @@ style "toolbar_entry" {
       detail = "entry"
       state = NORMAL
       shadow = IN
-      file = "assets/entry-toolbar.png"
+      file = "assets/toolbar-entry-border-bg.png"
       border = { 12, 12, 12, 12 }
       stretch = TRUE
     }
@@ -1146,7 +1197,7 @@ style "toolbar_entry" {
       detail = "entry"
       state = INSENSITIVE
       shadow = IN
-      file = "assets/entry-insensitive-toolbar.png"
+      file = "assets/toolbar-entry-border-disabled-bg.png"
       border = { 12, 12, 12, 12 }
       stretch = TRUE
     }
@@ -1155,9 +1206,27 @@ style "toolbar_entry" {
       function = SHADOW
       detail = "entry"
       state = ACTIVE
-      file = "assets/entry-focus-toolbar.png"
+      file = "assets/toolbar-entry-border-active-bg.png"
       border = { 12, 12, 12, 12 }
       stretch = TRUE
+    }
+
+    image {
+      function = FLAT_BOX
+      detail = "entry_bg"
+      state = NORMAL
+      overlay_file = "assets/null.png"
+      overlay_border = { 0, 0, 0, 0 }
+      overlay_stretch = TRUE
+    }
+
+    image {
+      function = FLAT_BOX
+      detail = "entry_bg"
+      state = ACTIVE
+      overlay_file = "assets/null.png"
+      overlay_border = { 0, 0, 0, 0 }
+      overlay_stretch = TRUE
     }
   }
 }
@@ -1730,7 +1799,7 @@ style "libreoffice_entry" {
       detail = "entry"
       state = NORMAL
       shadow = IN
-      file = "assets/entry.png"
+      file = "assets/entry-border-bg-solid.png"
       border = { 12, 12, 12, 12 }
       stretch = TRUE
     }
@@ -1739,7 +1808,7 @@ style "libreoffice_entry" {
       function = SHADOW
       detail = "entry"
       state = ACTIVE
-      file = "assets/entry-focus.png"
+      file = "assets/entry-border-active-bg-solid.png"
       border = { 12, 12, 12, 12 }
       stretch = TRUE
     }
@@ -1773,7 +1842,7 @@ style "standalone_entry" {
     detail = "entry"
     state = NORMAL
     shadow = IN
-    file = "assets/entry.png"
+    file = "assets/entry-border-bg-solid.png"
     border = { 12, 12, 12, 12 }
     stretch = TRUE
     }
@@ -1782,7 +1851,7 @@ style "standalone_entry" {
     function = SHADOW
     detail = "entry"
     state = ACTIVE
-    file = "assets/entry-focus.png"
+    file = "assets/entry-border-active-bg-solid.png"
     border = { 12, 12, 12, 12 }
     stretch = TRUE
     }
@@ -1964,7 +2033,7 @@ style "combobox_button" {
 }
 
 style "range" {
-	
+
   engine "pixmap" {
 
     image {
@@ -2479,8 +2548,8 @@ widget_class "*<GtkNotebook>*<GtkComboBoxEntry>*<GtkEntry>"                 styl
 widget_class "*<GtkNotebook>*<GtkEventBox>*<GtkComboBoxEntry>*<GtkEntry>"   style "combobox_entry"
 
 # The same thing for toolbars
-widget_class "*<GtkToolbar>*<GtkEntry>"                                    style "toolbar_entry"
-widget_class "*<GtkToolbar>*<GtkEventBox>*<GtkEntry>"                      style "entry"
+#widget_class "*<GtkToolbar>*<GtkEntry>"                                    style "toolbar_entry"
+#widget_class "*<GtkToolbar>*<GtkEventBox>*<GtkEntry>"                      style "entry"
 
 # We also need to avoid changing fg color for the inactive notebook tab labels
 widget_class "*<GtkNotebook>.<GtkLabel>"                            style "notebook_tab_label"
@@ -2523,3 +2592,11 @@ widget "*libreoffice-toplevel*GtkSpinButton"                        style "libre
 widget_class "*XfdesktopIconView*"                                  style "xfdesktop-icon-view"
 widget "xfwm4-tabwin*"                                              style "xfwm-tabwin"
 widget "xfwm4-tabwin*GtkButton*"                                    style "xfwm-tabwin-button"
+
+# Whitelist for dark toolbars
+widget_class "*ThunarWindow*<GtkMenuBar>"                           style "menubar-borderless"
+widget_class "*CajaNavigationWindow*<GtkMenuBar>"                   style "menubar-borderless"
+widget_class "*ThunarWindow*<GtkToolbar>*<GtkEntry>"                style "toolbar_entry"
+widget_class "*CajaNavigationWindow*<GtkToolbar>*<GtkEntry>"        style "toolbar_entry"
+widget_class "*ThunarWindow*<GtkToolbar>"                           style "menubar"
+widget_class "*CajaNavigationWindow*<GtkToolbar>"                   style "menubar"
