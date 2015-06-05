@@ -1125,10 +1125,28 @@ GtkComboBox {
   padding-right: 7px;
   border-radius: 4px 4px 0 0;
   color: $header_fg;
+  background-color: opacify($header_bg, 1);
   box-shadow: inset 0  1px lighten($header_bg, 3%);
 
-  &:backdrop { color: transparentize($header_fg, 0.3); }
+  .csd & { background-color: $header_bg; }
+
+  &:backdrop {
+    color: transparentize($header_fg, 0.3);
+    background-color: opacify($header_bg, 1);
+
+    .csd & { background-color: lighten($header_bg, 3%); }
+  }
+
+  .maximized & {
+    background-color: opacify($header_bg, 1);
+
+    &:backdrop { background-color: opacify(lighten($header_bg, 3%), 1); }
+  }
 }
+
+
+.titlebar .titlebar,
+.titlebar .titlebar:backdrop { background-color: transparent; }
 
 // Only extending .header-bar avoids some problems (Gnome Documents searchbar)
 .header-bar {

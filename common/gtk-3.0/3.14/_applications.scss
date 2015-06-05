@@ -638,8 +638,6 @@ MarlinViewWindow *:selected:focus {
 PantheonTerminalPantheonTerminalWindow.background {
    background-color: transparent;
 
-   .titlebar { background-color: $header_bg; }
-
   .notebook {
 
     &.header.top {
