@@ -2,7 +2,7 @@
 // it gets @if ed depending on $variant
 
 
-$base_color: if($variant =='light', #ffffff, #272A30);
+$base_color: if($variant =='light', #ffffff, #292D33);
 $text_color: if($variant == 'light', #5c616c, #D3DAE3);
 $bg_color: if($variant =='light', #f9fafb, #2F343B);
 $fg_color: if($variant =='light', #5c616c, #D3DAE3);
@@ -38,7 +38,7 @@ $tooltip_fg: #edf5fb;
 $tooltip_borders_color: transparentize(white, 0.9);
 
 //insensitive state derived colors
-$insensitive_fg_color: transparentize($fg_color, 0.45);
+$insensitive_fg_color: if($variant == 'light', transparentize($fg_color, 0.45), transparentize($fg_color, 0.55));
 $insensitive_bg_color: if($variant == 'light', mix($bg_color, $base_color, 40%), lighten($bg_color, 2%));
 
 
@@ -50,10 +50,11 @@ $button_bg: if($variant == 'light', lighten($bg_color, 1%), darken($bg_color, 2%
 $button_border: $entry_border;
 
 $header_bg: if($transparency == 'true' and $variant == 'light', transparentize(#e7e8eb, 0.05), #e7e8eb);
-
 @if $variant==dark { $header_bg: if($transparency == 'true', transparentize(#272A30, 0.04), #272A30); }
 
-$header_fg: saturate(transparentize($fg_color, 0.2), 10%);
+$header_bg_backdrop: if($variant == 'light', lighten($header_bg, 3%), lighten($header_bg, 1.5%));
+
+$header_fg: if($variant == 'light', saturate(transparentize($fg_color, 0.2), 10%), saturate(transparentize($fg_color, 0.3), 10%));
 
 $dark_sidebar_bg: if($transparency == 'true', $osd_bg_color, opacify($osd_bg_color, 1));
 $dark_sidebar_fg: $osd_fg_color;
