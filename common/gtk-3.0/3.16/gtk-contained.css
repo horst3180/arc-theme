@@ -169,7 +169,7 @@ GtkTextView {
     background-color: #5294E2;
     color: #ffffff; }
   .entry.progressbar {
-    margin: 2px;
+    margin: 2px 12px;
     border-radius: 0;
     border-width: 0 0 2px;
     border-color: #5294E2;
@@ -904,6 +904,10 @@ GtkComboBox {
   .primary-toolbar .entry:selected:focus, .header-bar .entry:selected:focus {
     background-color: #ffffff;
     color: #5294E2; }
+  .primary-toolbar .entry.progressbar, .header-bar .entry.progressbar {
+    border-color: #5294E2;
+    background-image: none;
+    background-color: transparent; }
 .primary-toolbar .button, .header-bar .button {
   color: rgba(82, 93, 118, 0.8);
   outline-color: rgba(82, 93, 118, 0.1);

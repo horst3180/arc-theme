@@ -241,7 +241,7 @@ GtkTextView { // This will get overridden by .view, needed by gedit line numbers
   }
 
   &.progressbar {
-    margin: 2px;
+    margin: 2px 12px;
     border-radius: 0;
     border-width: 0 0 2px;
     border-color: $selected_bg_color;
@@ -1193,6 +1193,12 @@ GtkComboBox {
     &:selected:focus {
       background-color: $selected_fg_color;
       color: $selected_bg_color;
+    }
+
+    &.progressbar {
+      border-color: $selected_bg_color;
+      background-image: none;
+      background-color: transparent;
     }
   }
 
