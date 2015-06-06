@@ -35,6 +35,17 @@ If your distribution is not listed, please check the requirements yourself.
     rm -rf ~/.local/share/themes/Arc
     rm -rf ~/.themes/Arc
 
+**Packages**
+
+Prebuilt packages for Ubuntu, Debian, Fedora and openSUSE are available at 
+
+http://software.opensuse.org/download.html?project=home%3AHorst3180&package=arc-theme  
+**Note:** elementary OS Freya users can install the package for Ubuntu 15.04
+
+Arch Linux users can install the theme from the AUR
+
+https://aur.archlinux.org/packages/gtk-theme-arc-git/
+
 **Manual Installation**
 
 To build the theme you need 
@@ -53,14 +64,6 @@ Install the theme with the following commands
 If you want to install the latest version from git, clone the repository with
 
     git clone https://github.com/horst3180/arc-theme --depth 1 && cd arc-theme
-
-If you want to install the latest stable release, run
-
-    git clone https://github.com/horst3180/arc-theme --depth 1 && cd arc-theme
-    git fetch --tags
-    git checkout $(git describe --tags `git rev-list --tags --max-count=1`)
-
-or download it from https://github.com/horst3180/arc-theme/releases and cd into the extracted archive
 
 **2. Build and install the theme**
 

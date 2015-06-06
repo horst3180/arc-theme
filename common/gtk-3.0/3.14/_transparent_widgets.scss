@@ -23,10 +23,10 @@ MarlinViewWindow {
 
   GtkBox.sidebar { background-color: transparent; }
 
-  .sidebar, .source-list.sidebar.view {
+  .sidebar, MarlinPlacesSidebar {
     background-color: $dark_sidebar_bg;
 
-    .view, row {
+    .view, .source-list.sidebar row {
       background-color: transparent;
       color: $dark_sidebar_fg;
 
@@ -37,7 +37,6 @@ MarlinViewWindow {
         color: $selected_fg_color;
       }
     }
-
 
     &.frame {
       color: $dark_sidebar_fg;
