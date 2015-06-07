@@ -31,8 +31,8 @@
 @define-color placeholder_text_color #A8A8A8;
 
 //WM
-$wm_highlight: lighten(opacify($header_bg, 1), 4%);
-$wm_bg_unfocused: opacify(lighten($header_bg, 3%), 1);
+$wm_highlight: lighten(opacify($header_bg, 1), 3%);
+$wm_bg_unfocused: opacify($header_bg_backdrop, 1);
 
 @define-color wm_title #{"" + $header_fg};
 @define-color wm_unfocused_title alpha(#{"" + $header_fg}, 0.7);

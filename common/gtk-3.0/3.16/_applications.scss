@@ -597,9 +597,9 @@ MarlinViewWindow *:selected:focus {
 // Gala
 //
 .gala-notification {
-    border: 1px solid rgba(0, 0, 0, 0.35);
+    border: 1px solid if($variant=='light', rgba(0, 0, 0, 0.35), $borders_color);
     border-radius: 3px;
-	  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     background-image: linear-gradient(to bottom, $base_color);
     background-color: transparent;
 
@@ -685,7 +685,6 @@ MarlinViewWindow *:selected:focus {
 //
 PantheonTerminalPantheonTerminalWindow.background {
    background-color: transparent;
-
 
   .notebook {
 

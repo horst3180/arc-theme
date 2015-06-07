@@ -601,10 +601,11 @@ $_dot_color: $selected_bg_color;
                                     to(transparent));
     background-size: 6px 6px, 6px 6px;
     background-repeat: no-repeat;
-    background-position: right 3px, right 4px;
-
+    @if $variant == 'light' { background-position: right 3px, right 4px; }
+    @else { background-position: right 3px, right 2px; }
     &:dir(rtl) {
-      background-position: left 3px, left 4px;
+      @if $variant == 'light' { background-position: left 3px, left 4px; }
+      @else { background-position: left 3px, left 2px; }
     }
   }
 
@@ -1188,6 +1189,8 @@ GtkComboBox {
     &:focus {
       @include entry(header-focus);
       background-clip: border-box;
+
+      &.image { color: $selected_fg_color; }
     }
     &:insensitive { @include entry(header-insensitive); }
 
@@ -1465,10 +1468,10 @@ column-header.button.dnd { // for treeview-like derive widgets
   border-style: none solid none none;
   border-radius: 0;
   border-image: linear-gradient(to bottom,
-                                transparentize(black, 1) 20%,
-                                transparentize(black, 0.89) 20%,
-                                transparentize(black, 0.89) 80%,
-                                transparentize(black, 1) 80%) 0 1 0 0 / 0 1px 0 0 stretch;
+                                transparentize(if($variant == 'light', black, white), 1) 20%,
+                                transparentize(if($variant == 'light', black, white), 0.89) 20%,
+                                transparentize(if($variant == 'light', black, white), 0.89) 80%,
+                                transparentize(if($variant == 'light', black, white), 1) 80%) 0 1 0 0 / 0 1px 0 0 stretch;
 
   &:active { background-color: $base_color; }
   &:insensitive {
@@ -2226,7 +2229,7 @@ GtkScrolledWindow {
   border-radius: 0;   // and no rounded corners
   box-shadow: none;   // and no box-shadow
   &:hover {
-    background-color: transparentize(black, 0.95);
+    background-color: if($variant == 'light', transparentize(black, 0.95), transparentize(white, 0.97));
   }
   &:active {
     color: $fg_color;
@@ -2675,8 +2678,8 @@ GtkVolumeButton.button { padding: 8px; }
   &.csd {
     &.popup, &.menu {
       border-radius: 3px;
-      box-shadow: 0 3px 6px $_wm_border,
-                  0 0 0 1px $_wm_border;
+      box-shadow: 0 3px 6px if($variant == 'light', $_wm_border, transparentize($_wm_border, 0.1)),
+                  0 0 0 1px if($variant == 'light', $_wm_border, transparentize($_wm_border, 0.1));
     }
     &.tooltip {
       border-radius: 2px;

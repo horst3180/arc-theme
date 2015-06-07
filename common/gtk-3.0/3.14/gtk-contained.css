@@ -857,7 +857,7 @@ GtkComboBox {
     background-color: rgba(231, 232, 235, 0.95); }
   .titlebar:backdrop {
     color: rgba(82, 93, 118, 0.5);
-    background-color: #e7e8eb; }
+    background-color: #eff0f2; }
     .csd .titlebar:backdrop {
       background-color: rgba(239, 240, 242, 0.95); }
   .maximized .titlebar {
@@ -2401,7 +2401,7 @@ TerminalWindow .notebook tab.reorderable-page.top:active, TerminalWindow .notebo
   background-color: #e7e8eb;
   border-color: #d4d5db; }
   TerminalWindow .notebook tab.reorderable-page.top:active:backdrop, TerminalWindow .notebook tab.reorderable-page.top:active:hover:backdrop {
-    background-color: rgba(239, 240, 242, 0.95); }
+    background-color: #eff0f2; }
 TerminalWindow .scrollbar.vertical .slider {
   margin-left: 3px; }
 TerminalWindow .scrollbar.trough {
@@ -2834,7 +2834,7 @@ MarlinViewWindow *:selected:focus {
 PantheonTerminalPantheonTerminalWindow.background {
   background-color: transparent; }
   PantheonTerminalPantheonTerminalWindow.background .notebook.header.top {
-    box-shadow: inset 0 1px #d4d5db, inset 0 -1px #edf0f3; }
+    box-shadow: inset 0 1px rgba(212, 213, 219, 0.95), inset 0 -1px #edf0f3; }
 
 SwitchboardCategoryView .view:selected,
 SwitchboardCategoryView .view:selected:focus {
@@ -3366,6 +3366,6 @@ GtkFileChooserDialog .action-bar.frame {
 @define-color wm_unfocused_title alpha(rgba(82, 93, 118, 0.8), 0.7);
 @define-color wm_bg #e7e8eb;
 @define-color wm_bg_unfocused #eff0f2;
-@define-color wm_highlight #f2f3f4;
+@define-color wm_highlight #eff0f2;
 @define-color wm_shadow alpha(black, 0.35);
 @define-color content_view_bg #ffffff;

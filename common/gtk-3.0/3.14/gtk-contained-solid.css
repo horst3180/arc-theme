@@ -794,11 +794,11 @@ GtkComboBox {
     padding: 0 12px; }
   .header-bar.selection-mode {
     color: #ffffff;
-    background-color: rgba(82, 148, 226, 0.95);
-    border-color: rgba(65, 137, 223, 0.95);
+    background-color: #5294E2;
+    border-color: #4189df;
     box-shadow: none; }
     .header-bar.selection-mode:backdrop {
-      background-color: rgba(82, 148, 226, 0.95);
+      background-color: #5294E2;
       color: rgba(255, 255, 255, 0.6); }
     .header-bar.selection-mode .button {
       color: #ffffff;
@@ -857,7 +857,7 @@ GtkComboBox {
     background-color: #e7e8eb; }
   .titlebar:backdrop {
     color: rgba(82, 93, 118, 0.5);
-    background-color: #e7e8eb; }
+    background-color: #eff0f2; }
     .csd .titlebar:backdrop {
       background-color: #eff0f2; }
   .maximized .titlebar {
@@ -2651,7 +2651,7 @@ PanelWidget,
 PanelAppletFrame,
 PanelApplet {
   color: #A8ADB5;
-  background-image: linear-gradient(to bottom, #25272d); }
+  background-image: linear-gradient(to bottom, rgba(37, 39, 45, 0.95)); }
 
 PanelApplet .button, PanelApplet .button:backdrop {
   padding: 4px;
@@ -2694,18 +2694,18 @@ ClockBox {
   color: #A8ADB5; }
 
 .xfce4-panel.panel {
-  background-color: #25272d; }
+  background-color: rgba(37, 39, 45, 0.95); }
   .xfce4-panel.panel .button.flat {
     color: #A8ADB5;
     background-color: rgba(37, 39, 45, 0);
     border-radius: 0; }
     .xfce4-panel.panel .button.flat:hover {
       border: none;
-      background-color: #3c4049; }
+      background-color: rgba(60, 64, 73, 0.95); }
     .xfce4-panel.panel .button.flat:active, .xfce4-panel.panel .button.flat:checked {
       color: #5294E2;
       border: none;
-      background-color: #151619; }
+      background-color: rgba(21, 22, 25, 0.95); }
 
 .floating-bar {
   background-color: #5294E2;
@@ -3366,6 +3366,6 @@ GtkFileChooserDialog .action-bar.frame {
 @define-color wm_unfocused_title alpha(rgba(82, 93, 118, 0.8), 0.7);
 @define-color wm_bg #e7e8eb;
 @define-color wm_bg_unfocused #eff0f2;
-@define-color wm_highlight #f2f3f4;
+@define-color wm_highlight #eff0f2;
 @define-color wm_shadow alpha(black, 0.35);
 @define-color content_view_bg #ffffff;

@@ -57,8 +57,8 @@
   // normal header-bar entry
   //
     color: $header_fg;
-    border-color: transparentize($header_fg, 0.7);
-    background-image: linear-gradient(to bottom, transparentize($base_color, 0.1));
+    border-color: if($variant == 'light', transparentize($header_fg, 0.7), darken($borders_color, 4%));
+    background-image: linear-gradient(to bottom, if($variant == 'light', transparentize($base_color, 0.1), transparentize(darken($base_color, 4%), 0.1)));
     background-color: transparent;
 
     &.image, &.image:hover { color: inherit; }
@@ -78,7 +78,7 @@
   // insensitive header-bar entry
   //
     color: transparentize($header_fg, 0.45);
-    background-image: linear-gradient(to bottom, transparentize($base_color, 0.45));
+    background-image: linear-gradient(to bottom, if($variant == 'light', transparentize($base_color, 0.45), transparentize(darken($base_color, 4%), 0.45)));
   }
 
   @if $t==osd {
@@ -192,8 +192,8 @@
   //
     color: $header_fg;
     outline-color: transparentize($header_fg, 0.7);
-    border-color: transparentize($header_fg, 0.7);
-    background-color: transparentize($button_bg, 0.1);
+    border-color: if($variant == 'light', transparentize($header_fg, 0.7), darken($borders_color, 4%));
+    background-color: if($variant == 'light', transparentize($button_bg, 0.1), transparentize(darken($button_bg, 4%), 0.1));
   }
 
   @else if $t==header-active {

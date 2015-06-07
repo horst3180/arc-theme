@@ -1,5 +1,5 @@
 .titlebar .separator {
-  color: darken($header_bg, 7%);  //fixes separator in gnome-tweak-tool
+  color: if($variant == 'light', darken($header_bg, 7%), darken($header_bg, 5%));  //fixes separator in gnome-tweak-tool
 }
 
 GtkFileChooserDialog .dialog-action-box { background-color: $bg_color }  // fix for non gnome environments
@@ -10,6 +10,16 @@ GtkFileChooserDialog *,
 NautilusWindow *,
 NemoWindow {
   -GtkPaned-handle-size: 0;
+}
+
+@if $variant==dark {
+  GtkFileChooserDialog,
+  NautilusWindow ,
+  NemoWindow {
+    .sidebar { box-shadow: inset -1px 0 $dark_sidebar_border; }
+
+    .sidebar:dir(rtl) { box-shadow: inset 1px 0 $dark_sidebar_border; }
+  }
 }
 
 // Dark transparent sidebars
@@ -84,7 +94,7 @@ GeditWindow.background.csd {
   .pane-separator,
   .pane-separator:hover { background-color: $dark_sidebar_border; }
 
-  .titlebar .pane-separator { background-color: darken($header_bg, 7%); }
+  .titlebar .pane-separator { background-color: if($variant == 'light', darken($header_bg, 7%), darken($header_bg, 5%)); }
 }
 
 .gedit-bottom-panel-paned { background-color: $base_color; }

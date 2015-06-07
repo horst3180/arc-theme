@@ -30,13 +30,13 @@ UnityDecoration {
 
     &:backdrop {
       border-bottom-width: 0;
-      background-image: linear-gradient(to bottom, lighten(opacify($header_bg, 1), 3%));
+      background-image: linear-gradient(to bottom, opacify($header_bg_backdrop, 1));
       color: transparentize($header_fg, 0.3);
     }
   }
   &.left, &.right, &.bottom,
   &.left:backdrop, &.right:backdrop, &.bottom:backdrop {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1));
+    background-image: linear-gradient(to bottom, if($variant == 'light', rgba(0, 0, 0, 0.1), rgba(0,0,0,0.25)));
   }
 }
 
