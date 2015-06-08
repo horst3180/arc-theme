@@ -25,8 +25,7 @@ $panel-corner-radius: 0px;
 // Globals
 //
 $font-size: 9;
-//$font-family: Cantarell, Sans-Serif;
-$font-family: Futura Bk bt, Sans-Serif;
+$font-family: Cantarell, Sans-Serif;
 $_bubble_bg_color: opacify($osd_bg_color,0.25);
 $_bubble_fg_color: $osd_fg_color;
 $_bubble_borders_color: transparentize($osd_fg_color,0.8);
