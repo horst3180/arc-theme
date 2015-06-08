@@ -82,6 +82,7 @@ NautilusCanvasViewContainer.view .entry { border-radius: 3px; }
 
 .nautilus-desktop.nautilus-canvas-item {
   color: $selected_fg_color;
+  text-shadow: 1px 1px transparentize(black, 0.4);
 
   &:active { color: $fg_color; }
   &:selected { color: $selected_fg_color; }
