@@ -64,3 +64,31 @@ $dark_sidebar_border: if($variant == 'light', $dark_sidebar_bg, darken($dark_sid
 
 $panel_bg: darken($osd_bg_color, 10%);
 $panel_fg: $dark_sidebar_fg;
+
+
+//WM Buttons
+
+// Close
+$wm_button_close_bg: if($variant == 'light', #f37076, #e45e65);
+$wm_button_close_hover_bg: if($variant == 'light', #f79da1, #f48085);
+$wm_button_close_active_bg: if($variant == 'light', #ef4048, #e6262f);
+
+$wm_icon_close_bg: $selected_fg_color;
+$wm_icon_close_hover_bg: $selected_fg_color;
+$wm_icon_close_active_bg: $selected_fg_color;
+
+// Minimize, Maximize
+$wm_button_bg: if($variant == 'light', #fdfdfd, #212429);
+$wm_button_unfocused_bg: if($variant == 'light', #f6f7f8, #22252b);
+$wm_button_hover_bg: if($variant == 'light', #fdfdfd, #212429);
+$wm_button_active_bg: $selected_bg_color;
+
+$wm_button_border: if($variant == 'light', #d8dae0, #141619);
+$wm_button_unfocused_border: if($variant == 'light', #dddee2, #1a1c20);
+$wm_button_hover_border: $selected_bg_color;
+$wm_button_active_border: $selected_bg_color;
+
+$wm_icon_bg: if($variant == 'light', #a7adb9, #777d86);
+$wm_icon_unfocused_bg: if($variant == 'light', #babec7, #575c63);
+$wm_icon_hover_bg: if($variant == 'light', #757d91, #838993);
+$wm_icon_active_bg: $selected_fg_color;
