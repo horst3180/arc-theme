@@ -565,12 +565,12 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.313708"
-     inkscape:cx="478.52624"
-     inkscape:cy="293.00874"
+     inkscape:zoom="1"
+     inkscape:cx="275.83757"
+     inkscape:cy="331.30343"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
-     showgrid="true"
+     showgrid="false"
      showborder="false"
      inkscape:window-width="1366"
      inkscape:window-height="720"
@@ -5403,5 +5403,14 @@
          id="rect6168-6"
          style="opacity:1;fill:#d7d8dd;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     </g>
+    <rect
+       transform="matrix(0,1,-1,0,0,0)"
+       y="-287.5"
+       x="-205.13783"
+       height="4"
+       width="4.0000124"
+       id="focus-line"
+       style="display:inline;opacity:1;fill:none;fill-opacity:1;stroke:#cfd6e6;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.67346936"
+       inkscape:label="#rect6176-4-2" />
   </g>
 </svg>
