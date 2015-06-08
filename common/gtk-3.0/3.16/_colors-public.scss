@@ -43,6 +43,34 @@ $wm_bg_unfocused: opacify($header_bg_backdrop, 1);
 @define-color wm_highlight #{"" + $wm_highlight};
 @define-color wm_shadow alpha(black, 0.35);
 
+//WM Buttons
+
+// Close
+@define-color wm_button_close_bg #{"" + $wm_button_close_bg};
+@define-color wm_button_close_hover_bg #{"" + $wm_button_close_hover_bg};
+@define-color wm_button_close_active_bg #{"" + $wm_button_close_active_bg};
+
+@define-color wm_icon_close_bg #{"" + $wm_icon_close_bg};
+@define-color wm_icon_close_hover_bg #{"" + $wm_icon_close_hover_bg};
+@define-color wm_icon_close_active_bg #{"" + $wm_icon_close_active_bg};
+
+// Minimize, Maximize
+@define-color wm_button_bg #{"" + $wm_button_bg};
+@define-color wm_button_unfocused_bg #{"" + $wm_button_unfocused_bg};
+@define-color wm_button_hover_bg #{"" + $wm_button_hover_bg};
+@define-color wm_button_active_bg #{"" + $wm_button_active_bg};
+
+@define-color wm_button_border #{"" + $wm_button_border};
+@define-color wm_button_unfocused_border #{"" + $wm_button_unfocused_border};
+@define-color wm_button_hover_border #{"" + $wm_button_hover_border};
+@define-color wm_button_active_border #{"" + $wm_button_active_border};
+
+@define-color wm_icon_bg #{"" + $wm_icon_bg};
+@define-color wm_icon_unfocused_bg #{"" + $wm_icon_unfocused_bg};
+@define-color wm_icon_hover_bg #{"" + $wm_icon_hover_bg};
+@define-color wm_icon_active_bg #{"" + $wm_icon_active_bg};
+
+
 //FIXME this is really an API
 
 @define-color content_view_bg #{"" + $base_color};
