@@ -970,7 +970,6 @@ style "menubar_item" {
       stretch = TRUE
     }
   }
-
 }
 
 style "button" {
@@ -1013,47 +1012,6 @@ style "button" {
     }
   }
 }
-
-#style "button_nohilight" {
-#
-#  xthickness	= 4
-#  ythickness	= 4
-#
-#  engine "pixmap" {
-#
-#    image {
-#      function = BOX
-#      state = NORMAL
-#      file = "Buttons/button-default-nohilight.png"
-#      border = { 4, 4, 4, 4 }
-#      stretch = TRUE
-#    }
-#
-#    image {
-#      function = BOX
-#      state = PRELIGHT
-#      file = "Buttons/button-prelight-nohilight.png"
-#      border = { 4, 4, 4, 4 }
-#      stretch = TRUE
-#    }
-#
-#    image {
-#      function = BOX
-#      state = ACTIVE
-#      file = "Buttons/button-pressed-nohilight.png"
-#      border = { 4, 4, 4, 4 }
-#      stretch = TRUE
-#    }
-#
-#    image {
-#      function = BOX
-#      state = INSENSITIVE
-#      file = "Buttons/button-insensitive-nohilight.png"
-#      border = { 4, 4, 4, 4 }
-#      stretch = TRUE
-#    }
-#  }
-#}
 
 style "checkbutton" {
 
@@ -2531,10 +2489,8 @@ widget_class "*<GtkComboBox>*<GtkSeparator>"                        style "combo
 widget_class "*HandleBox"                                           style "toolbar"
 widget_class "*<GtkTreeView>*<GtkButton>*"                          style "treeview_header"
 widget_class "*<GtkFileChooserDefault>*<GtkToolbar>"                style "inline_toolbar"
-#widget_class "*<GtkFileChooserDefault>*<GtkToolbar>*<GtkButton>"    style "button_nohilight"
 widget_class "*<GtkComboBoxEntry>*<GtkEntry>"                       style "combobox_entry"
 widget_class "*<GtkComboBoxEntry>*<GtkButton>"                      style "combobox_entry_button"
-#widget_class "*<GtkInfoBar>*<GtkButton>"                            style "button_nohilight"
 widget_class "*<GtkNotebook>*<GtkScrolledWindow>*<GtkViewport>"     style "notebook_viewport"
 
 # Entries in notebooks draw with notebook's base color, but not if there's
