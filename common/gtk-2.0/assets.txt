@@ -118,3 +118,4 @@ tab-right-active
 inline-toolbar
 toolbar
 menubar
+focus-line
