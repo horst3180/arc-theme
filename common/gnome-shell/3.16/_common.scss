@@ -1130,11 +1130,22 @@ StScrollBar {
 }
 
 .message {
-  @include button(normal);
   padding: 4px;
+  color: $fg_color;
+  background-color: $button_bg;
+  border: 1px solid $button_border;
 
-  &:hover, &:focus { @include button(hover); }
-  &:active { @include button(active); }
+  &:hover, &:focus {
+    color: $fg_color;
+    background-color: $button_bg;
+    border: 1px solid $selected_bg_color;
+  }
+
+  &:active {
+    color: $selected_fg_color;
+    background-color: $selected_bg_color;
+    border: 1px solid $selected_bg_color;
+  }
 }
 
 .message-icon-bin {
