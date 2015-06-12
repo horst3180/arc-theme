@@ -4,6 +4,7 @@
 
 $ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 $asset_suffix: if($variant=='dark', '-dark', ''); // use dark assets in dark variant
+$darker_asset_suffix: if($darker=='true', '-darker', $asset_suffix);
 
 * {
   background-clip: padding-box;
@@ -1897,7 +1898,7 @@ GtkSwitch {
   }
 }
 
-@each $i,$j in ('',''), ('.header-bar ','-header'), ('.list-row:selected ','-selected') {
+@each $i,$j in ('',''), ('.list-row:selected ','-selected') {
 
   @each $k,$l in ('',''),
                  (':active','-active'),
@@ -1908,6 +1909,11 @@ GtkSwitch {
 
     #{$i}GtkSwitch.trough#{$k} {
       background-image: -gtk-scaled(url("assets/switch#{$l}#{$j}#{$asset_suffix}.png"),url("assets/switch#{$l}#{$j}#{$asset_suffix}@2.png"));
+    }
+
+    .header-bar GtkSwitch.trough#{$k},
+    .primary-toolbar GtkSwitch.trough#{$k} {
+      background-image: -gtk-scaled(url("assets/switch#{$l}-header#{$darker_asset_suffix}.png"),url("assets/switch#{$l}-header#{$darker_asset_suffix}@2.png"));
     }
 
     // load switch sliders from .png files in assets directory
@@ -2655,15 +2661,14 @@ GtkVolumeButton.button { padding: 8px; }
   // this needs to be transparent
   // see bug #722563
   $_wm_border: if($variant=='light', transparentize(black, 0.9), transparentize(black, 0.35));
-  $_wm_border_backdrop: if($variant=='light', transparentize(black, 0.9), transparentize(black, 0.35));
 
-  box-shadow: 0 0 0 1px $_wm_border, 0 4px 8px 1px $_wm_border;
+  box-shadow: 0 0 0 1px if($darker=='true', transparentize(black, 0.4), $_wm_border), 0 4px 8px 1px $_wm_border;
 
   /* this is used for the resize cursor area */
   margin: 10px;
 
   &:backdrop {
-    box-shadow: 0 0 0 1px $_wm_border, 0 4px 5px 2px $_wm_border_backdrop;
+    box-shadow: 0 0 0 1px if($darker=='true', transparentize(black, 0.4), $_wm_border), 0 4px 5px 2px $_wm_border;
   }
   &.tiled {
     border-radius: 0;
@@ -2671,7 +2676,7 @@ GtkVolumeButton.button { padding: 8px; }
   // server-side decorations as used by mutter
   &.ssd {
     border-radius: 4px 4px 0 0;
-    box-shadow: 0 0 0 1px $_wm_border;
+    box-shadow: 0 0 0 1px if($darker=='true', transparentize(black, 0.4), $_wm_border);
 
     &.maximized { border-radius: 0; }
   }
@@ -2733,20 +2738,20 @@ GtkVolumeButton.button { padding: 8px; }
       &:backdrop { opacity: 1; }
     }
 
-    &.close { background-image: -gtk-scaled(url('assets/titlebutton-close#{$asset_suffix}.png'),url('assets/titlebutton-close#{$asset_suffix}@2.png')); }
-    &.close:backdrop { background-image: -gtk-scaled(url('assets/titlebutton-close-backdrop#{$asset_suffix}.png'),url('assets/titlebutton-close-backdrop#{$asset_suffix}@2.png')); }
-    &.close:hover { background-image: -gtk-scaled(url('assets/titlebutton-close-hover#{$asset_suffix}.png'),url('assets/titlebutton-close-hover#{$asset_suffix}@2.png')); }
-    &.close:active { background-image: -gtk-scaled(url('assets/titlebutton-close-active#{$asset_suffix}.png'),url('assets/titlebutton-close-active#{$asset_suffix}@2.png')); }
+    &.close { background-image: -gtk-scaled(url('assets/titlebutton-close#{$darker_asset_suffix}.png'),url('assets/titlebutton-close#{$darker_asset_suffix}@2.png')); }
+    &.close:backdrop { background-image: -gtk-scaled(url('assets/titlebutton-close-backdrop#{$darker_asset_suffix}.png'),url('assets/titlebutton-close-backdrop#{$darker_asset_suffix}@2.png')); }
+    &.close:hover { background-image: -gtk-scaled(url('assets/titlebutton-close-hover#{$darker_asset_suffix}.png'),url('assets/titlebutton-close-hover#{$darker_asset_suffix}@2.png')); }
+    &.close:active { background-image: -gtk-scaled(url('assets/titlebutton-close-active#{$darker_asset_suffix}.png'),url('assets/titlebutton-close-active#{$darker_asset_suffix}@2.png')); }
 
-    &.maximize { background-image: -gtk-scaled(url('assets/titlebutton-max#{$asset_suffix}.png'),url('assets/titlebutton-max#{$asset_suffix}@2.png')); }
-    &.maximize:backdrop { background-image: -gtk-scaled(url('assets/titlebutton-max-backdrop#{$asset_suffix}.png'),url('assets/titlebutton-max-backdrop#{$asset_suffix}@2.png')); }
-    &.maximize:hover { background-image: -gtk-scaled(url('assets/titlebutton-max-hover#{$asset_suffix}.png'),url('assets/titlebutton-max-hover#{$asset_suffix}@2.png')); }
-    &.maximize:active { background-image: -gtk-scaled(url('assets/titlebutton-max-active#{$asset_suffix}.png'),url('assets/titlebutton-max-active#{$asset_suffix}@2.png')); }
+    &.maximize { background-image: -gtk-scaled(url('assets/titlebutton-max#{$darker_asset_suffix}.png'),url('assets/titlebutton-max#{$darker_asset_suffix}@2.png')); }
+    &.maximize:backdrop { background-image: -gtk-scaled(url('assets/titlebutton-max-backdrop#{$darker_asset_suffix}.png'),url('assets/titlebutton-max-backdrop#{$darker_asset_suffix}@2.png')); }
+    &.maximize:hover { background-image: -gtk-scaled(url('assets/titlebutton-max-hover#{$darker_asset_suffix}.png'),url('assets/titlebutton-max-hover#{$darker_asset_suffix}@2.png')); }
+    &.maximize:active { background-image: -gtk-scaled(url('assets/titlebutton-max-active#{$darker_asset_suffix}.png'),url('assets/titlebutton-max-active#{$darker_asset_suffix}@2.png')); }
 
-    &.minimize { background-image: -gtk-scaled(url('assets/titlebutton-min#{$asset_suffix}.png'),url('assets/titlebutton-min#{$asset_suffix}@2.png')); }
-    &.minimize:backdrop { background-image: -gtk-scaled(url('assets/titlebutton-min-backdrop#{$asset_suffix}.png'),url('assets/titlebutton-min-backdrop#{$asset_suffix}@2.png')); }
-    &.minimize:hover { background-image: -gtk-scaled(url('assets/titlebutton-min-hover#{$asset_suffix}.png'),url('assets/titlebutton-min-hover#{$asset_suffix}@2.png')); }
-    &.minimize:active { background-image: -gtk-scaled(url('assets/titlebutton-min-active#{$asset_suffix}.png'),url('assets/titlebutton-min-active#{$asset_suffix}@2.png')); }
+    &.minimize { background-image: -gtk-scaled(url('assets/titlebutton-min#{$darker_asset_suffix}.png'),url('assets/titlebutton-min#{$darker_asset_suffix}@2.png')); }
+    &.minimize:backdrop { background-image: -gtk-scaled(url('assets/titlebutton-min-backdrop#{$darker_asset_suffix}.png'),url('assets/titlebutton-min-backdrop#{$darker_asset_suffix}@2.png')); }
+    &.minimize:hover { background-image: -gtk-scaled(url('assets/titlebutton-min-hover#{$darker_asset_suffix}.png'),url('assets/titlebutton-min-hover#{$darker_asset_suffix}@2.png')); }
+    &.minimize:active { background-image: -gtk-scaled(url('assets/titlebutton-min-active#{$darker_asset_suffix}.png'),url('assets/titlebutton-min-active#{$darker_asset_suffix}@2.png')); }
   }
 }
 

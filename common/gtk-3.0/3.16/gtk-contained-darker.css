@@ -13,8 +13,8 @@
   -GtkTreeView-horizontal-separator: 4;
   -GtkMenu-horizontal-padding: 0;
   -GtkMenu-vertical-padding: 0;
-  -GtkWidget-link-color: #a9caf1;
-  -GtkWidget-visited-link-color: #7eafe9;
+  -GtkWidget-link-color: #2679db;
+  -GtkWidget-visited-link-color: #1e61b0;
   -GtkWidget-focus-padding: 2;
   -GtkWidget-focus-line-width: 1;
   -GtkWidget-text-handle-width: 20;
@@ -22,7 +22,7 @@
   -GtkDialog-button-spacing: 4;
   -GtkDialog-action-area-border: 0;
   -GtkStatusbar-shadow-type: none;
-  outline-color: rgba(211, 218, 227, 0.3);
+  outline-color: rgba(92, 97, 108, 0.3);
   outline-style: dashed;
   outline-offset: -3px;
   outline-width: 1px;
@@ -32,8 +32,8 @@
  * Base States *
  ***************/
 .background {
-  color: #D3DAE3;
-  background-color: rgba(47, 52, 59, 0.999); }
+  color: #5c616c;
+  background-color: rgba(249, 250, 251, 0.999); }
 
 /*
    These wildcard seems unavoidable, need to investigate.
@@ -45,26 +45,26 @@
   -gtk-image-effect: dim; }
 
 .gtkstyle-fallback {
-  background-color: #2F343B;
-  color: #D3DAE3; }
+  background-color: #f9fafb;
+  color: #5c616c; }
   .gtkstyle-fallback:prelight {
-    background-color: #464d57;
-    color: #D3DAE3; }
+    background-color: white;
+    color: #5c616c; }
   .gtkstyle-fallback:active {
-    background-color: #181b1f;
-    color: #D3DAE3; }
+    background-color: #dae1e7;
+    color: #5c616c; }
   .gtkstyle-fallback:insensitive {
-    background-color: #343941;
-    color: rgba(211, 218, 227, 0.45); }
+    background-color: #fcfdfd;
+    color: rgba(92, 97, 108, 0.55); }
   .gtkstyle-fallback:selected {
     background-color: #5294E2;
     color: #ffffff; }
 
 .view {
-  color: #D3DAE3;
-  background-color: #292D33; }
+  color: #5c616c;
+  background-color: #ffffff; }
   .view.dim-label, .view.label.separator, GtkPlacesSidebar.sidebar .view.label.separator, .header-bar .view.subtitle {
-    color: rgba(211, 218, 227, 0.55); }
+    color: rgba(92, 97, 108, 0.55); }
     .view.dim-label:selected, .view.label.separator:selected, .header-bar .view.subtitle:selected, .view.dim-label:selected:focus, .view.label.separator:selected:focus, .header-bar .view.subtitle:selected:focus {
       color: rgba(255, 255, 255, 0.65);
       text-shadow: none; }
@@ -74,20 +74,20 @@
   background-color: rgba(82, 148, 226, 0.2); }
 
 .label.separator, .popover .label.separator, GtkPlacesSidebar.sidebar .label.view.separator {
-  color: #D3DAE3; }
+  color: #5c616c; }
 .label:insensitive {
-  color: rgba(211, 218, 227, 0.45); }
+  color: rgba(92, 97, 108, 0.55); }
 
 .dim-label, .label.separator, .popover .label.separator, GtkPlacesSidebar.sidebar .label.view.separator, .header-bar .subtitle {
   opacity: 0.55; }
 
 GtkAssistant .sidebar {
-  background-color: #292D33;
-  border-top: 1px solid #1d2024; }
+  background-color: #ffffff;
+  border-top: 1px solid #dde3e9; }
   GtkAssistant .sidebar:dir(ltr) {
-    border-right: 1px solid #1d2024; }
+    border-right: 1px solid #dde3e9; }
   GtkAssistant .sidebar:dir(rtl) {
-    border-left: 1px solid #1d2024; }
+    border-left: 1px solid #dde3e9; }
 GtkAssistant.csd .sidebar {
   border-top-style: none; }
 GtkAssistant .sidebar .label {
@@ -97,7 +97,7 @@ GtkAssistant .sidebar .label.highlight {
   color: #ffffff; }
 
 GtkTextView {
-  background-color: #2c3037; }
+  background-color: #fcfcfd; }
 
 .grid-child {
   padding: 3px;
@@ -138,10 +138,10 @@ GtkTextView {
   padding: 5px 8px 6px;
   border-radius: 15px;
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  color: #D3DAE3;
-  border-color: #454a54;
-  background-color: #292D33;
-  background-image: linear-gradient(to bottom, #292D33); }
+  color: #5c616c;
+  border-color: #cfd6e6;
+  background-color: #ffffff;
+  background-image: linear-gradient(to bottom, #ffffff); }
   .header-bar .entry {
     padding: 6px 11px; }
   .entry.image {
@@ -149,22 +149,22 @@ GtkTextView {
     padding-right: 3px; }
   .entry.flat, .entry.flat:focus {
     padding: 2px;
-    color: #D3DAE3;
-    border-color: #454a54;
-    background-color: #292D33;
-    background-image: linear-gradient(to bottom, #292D33);
+    color: #5c616c;
+    border-color: #cfd6e6;
+    background-color: #ffffff;
+    background-image: linear-gradient(to bottom, #ffffff);
     border: none;
     border-radius: 0; }
   .entry:focus {
-    color: #D3DAE3;
+    color: #5c616c;
     border-color: #5294E2;
-    background-color: #292D33;
-    background-image: linear-gradient(to bottom, #292D33); }
+    background-color: #ffffff;
+    background-image: linear-gradient(to bottom, #ffffff); }
   .entry:insensitive {
-    color: rgba(211, 218, 227, 0.45);
-    border-color: rgba(69, 74, 84, 0.55);
-    background-color: rgba(41, 45, 51, 0.55);
-    background-image: linear-gradient(to bottom, rgba(41, 45, 51, 0.55)); }
+    color: rgba(92, 97, 108, 0.55);
+    border-color: rgba(207, 214, 230, 0.55);
+    background-color: rgba(255, 255, 255, 0.55);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.55)); }
   .entry:selected, .entry:selected:focus {
     background-color: #5294E2;
     color: #ffffff; }
@@ -191,7 +191,7 @@ GtkTextView {
   .entry.error {
     color: white;
     border-color: #FC4138;
-    background-image: linear-gradient(to bottom, #d13d37); }
+    background-image: linear-gradient(to bottom, #fc665f); }
     .entry.error:focus {
       background-image: linear-gradient(to bottom, #FC4138);
       color: white; }
@@ -201,7 +201,7 @@ GtkTextView {
   .entry.warning {
     color: white;
     border-color: #F27835;
-    background-image: linear-gradient(to bottom, #c96934); }
+    background-image: linear-gradient(to bottom, #f4935d); }
     .entry.warning:focus {
       background-image: linear-gradient(to bottom, #F27835);
       color: white; }
@@ -209,26 +209,26 @@ GtkTextView {
       background-color: white;
       color: #F27835; }
   .entry.image {
-    color: #b1b7bf; }
+    color: #7c8089; }
     .entry.image:hover {
-      color: #D3DAE3; }
+      color: #5c616c; }
     .entry.image:active {
       color: #5294E2; }
   .linked.vertical > .entry {
-    border-bottom-color: #25292e;
+    border-bottom-color: #f4f6f8;
     box-shadow: none; }
     .linked.vertical > .entry:focus {
       border-color: #5294E2;
       box-shadow: 0 -1px 0 0 #5294E2; }
     .linked.vertical > .entry:insensitive {
-      border-bottom-color: #25292e; }
+      border-bottom-color: #f4f6f8; }
     .linked.vertical > .entry:first-child {
-      border-bottom-color: #25292e; }
+      border-bottom-color: #f4f6f8; }
       .linked.vertical > .entry:first-child:focus {
         border-bottom-color: #5294E2;
         box-shadow: none; }
       .linked.vertical > .entry:first-child:insensitive {
-        border-bottom-color: #25292e; }
+        border-bottom-color: #f4f6f8; }
     .linked.vertical > .entry:last-child {
       border-bottom-color: rgba(0, 0, 0, 0.14); }
       .linked.vertical > .entry:last-child:focus {
@@ -250,17 +250,17 @@ GtkTextView {
   border: 1px solid;
   border-radius: 3px;
   padding: 5px 8px;
-  color: #D3DAE3;
-  outline-color: rgba(211, 218, 227, 0.3);
-  border-color: #454a54;
-  background-color: #2a2f35; }
+  color: #5c616c;
+  outline-color: rgba(92, 97, 108, 0.3);
+  border-color: #cfd6e6;
+  background-color: #fcfdfd; }
   .header-bar .button {
     padding: 6px 11px; }
   .button.flat {
     border-color: transparent;
     background-color: transparent;
     background-image: none;
-    background-color: rgba(47, 52, 59, 0);
+    background-color: rgba(249, 250, 251, 0);
     transition: none; }
     .button.flat:hover {
       transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -268,10 +268,10 @@ GtkTextView {
       .button.flat:hover:active {
         transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
   .button:hover {
-    color: #D3DAE3;
-    outline-color: rgba(211, 218, 227, 0.3);
+    color: #5c616c;
+    outline-color: rgba(92, 97, 108, 0.3);
     border-color: #5294E2;
-    background-color: #2a2f35;
+    background-color: #fcfdfd;
     -gtk-image-effect: highlight; }
   .button:active, .button:checked {
     color: #ffffff;
@@ -284,9 +284,9 @@ GtkTextView {
     background-color: transparent;
     background-image: none; }
   .button:insensitive {
-    color: rgba(211, 218, 227, 0.45);
-    border-color: rgba(69, 74, 84, 0.55);
-    background-color: rgba(42, 47, 53, 0.55); }
+    color: rgba(92, 97, 108, 0.55);
+    border-color: rgba(207, 214, 230, 0.55);
+    background-color: rgba(252, 253, 253, 0.55); }
     .button:insensitive > GtkLabel {
       color: inherit; }
     .button:insensitive:active, .button:insensitive:checked {
@@ -381,25 +381,25 @@ GtkTextView {
         background-image: linear-gradient(to bottom, #5294E2); }
   .button.suggested-action {
     color: #ffffff;
-    border-color: #5B5F69;
-    background-color: #5B5F69; }
+    border-color: #9EA4B5;
+    background-color: #9EA4B5; }
     .button.suggested-action.flat {
       border-color: transparent;
       background-color: transparent;
       background-image: none;
-      color: #5B5F69; }
+      color: #9EA4B5; }
     .button.suggested-action:hover {
       color: #ffffff;
-      border-color: #707582;
-      background-color: #707582; }
+      border-color: #b8bcc9;
+      background-color: #b8bcc9; }
     .button.suggested-action:active, .button.suggested-action:checked {
       color: #ffffff;
-      border-color: #4a4e56;
-      background-color: #4a4e56; }
+      border-color: #8a91a6;
+      background-color: #8a91a6; }
     .button.suggested-action:insensitive {
       color: rgba(255, 255, 255, 0.6);
-      border-color: rgba(91, 95, 105, 0.65);
-      background-color: rgba(91, 95, 105, 0.65); }
+      border-color: rgba(158, 164, 181, 0.65);
+      background-color: rgba(158, 164, 181, 0.65); }
   .button.destructive-action {
     color: #ffffff;
     border-color: #FA4349;
@@ -464,32 +464,32 @@ GtkTextView {
     background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(#5294E2), to(transparent));
     background-size: 6px 6px, 6px 6px;
     background-repeat: no-repeat;
-    background-position: right 3px, right 2px; }
+    background-position: right 3px, right 4px; }
     .stack-switcher > .button.needs-attention > .label:dir(rtl), .stack-switcher > .button.needs-attention > GtkImage:dir(rtl), .button .sidebar-item.needs-attention > GtkLabel:dir(rtl) {
-      background-position: left 3px, left 2px; }
+      background-position: left 3px, left 4px; }
   .inline-toolbar .button, .inline-toolbar .button:backdrop {
     border-radius: 2px;
     border-width: 1px; }
 
 .inline-toolbar GtkToolButton > .button {
-  color: #D3DAE3;
-  outline-color: rgba(211, 218, 227, 0.3);
-  border-color: #454a54;
-  background-color: #2a2f35; }
+  color: #5c616c;
+  outline-color: rgba(92, 97, 108, 0.3);
+  border-color: #cfd6e6;
+  background-color: #fcfdfd; }
   .inline-toolbar GtkToolButton > .button:hover {
-    color: #D3DAE3;
-    outline-color: rgba(211, 218, 227, 0.3);
+    color: #5c616c;
+    outline-color: rgba(92, 97, 108, 0.3);
     border-color: #5294E2;
-    background-color: #2a2f35; }
+    background-color: #fcfdfd; }
   .inline-toolbar GtkToolButton > .button:active, .inline-toolbar GtkToolButton > .button:checked {
     color: #ffffff;
     outline-color: rgba(255, 255, 255, 0.3);
     border-color: #5294E2;
     background-color: #5294E2; }
   .inline-toolbar GtkToolButton > .button:insensitive {
-    color: rgba(211, 218, 227, 0.45);
-    border-color: rgba(69, 74, 84, 0.55);
-    background-color: rgba(42, 47, 53, 0.55); }
+    color: rgba(92, 97, 108, 0.55);
+    border-color: rgba(207, 214, 230, 0.55);
+    background-color: rgba(252, 253, 253, 0.55); }
     .inline-toolbar GtkToolButton > .button:insensitive > GtkLabel {
       color: inherit; }
   .inline-toolbar GtkToolButton > .button:insensitive:active, .inline-toolbar GtkToolButton > .button:insensitive:checked {
@@ -591,23 +591,23 @@ GtkTextView {
   outline-offset: -1px;
   border-radius: 2px; }
   .menuitem.button.flat:hover {
-    background-color: #373c43; }
+    background-color: #f1f2f3; }
 
 /*********
  * Links *
  *********/
 *:link, .button:link, .button:visited {
-  color: #a9caf1; }
+  color: #2679db; }
   *:link:visited, .button:visited {
-    color: #7eafe9; }
+    color: #1e61b0; }
     *:selected *:link:visited, *:selected .button:visited {
       color: #b9d4f3; }
   *:link:hover, .button:hover:link, .button:hover:visited {
-    color: #d5e5f8; }
+    color: #5294e2; }
     *:selected *:link:hover, *:selected .button:hover:link, *:selected .button:hover:visited {
       color: #edf4fc; }
   *:link:active, .button:active:link, .button:active:visited {
-    color: #a9caf1; }
+    color: #2679db; }
     *:selected *:link:active, *:selected .button:active:link, *:selected .button:active:visited {
       color: #dce9f9; }
   *:link:selected, .button:selected:link, .button:selected:visited, .header-bar.selection-mode .subtitle:link, *:selected *:link, *:selected .button:link, *:selected .button:visited {
@@ -620,9 +620,9 @@ GtkTextView {
   border-radius: 3px; }
   .spinbutton .button {
     background-image: none;
-    border: 1px solid rgba(29, 32, 36, 0.6);
+    border: 1px solid rgba(221, 227, 233, 0.6);
     border-style: none none none solid;
-    color: #cad1da;
+    color: #646873;
     border-radius: 0;
     box-shadow: none; }
     .spinbutton .button:dir(rtl) {
@@ -632,50 +632,50 @@ GtkTextView {
     .spinbutton .button:hover {
       color: #5294E2; }
     .spinbutton .button:insensitive {
-      color: rgba(211, 218, 227, 0.45); }
+      color: rgba(92, 97, 108, 0.55); }
     .spinbutton .button:active {
       background-color: #5294E2;
       color: #ffffff; }
   .spinbutton.vertical .button:first-child, .spinbutton.vertical:dir(rtl) .button:first-child {
-    color: #D3DAE3;
-    outline-color: rgba(211, 218, 227, 0.3);
-    border-color: #454a54;
-    background-color: #2a2f35; }
+    color: #5c616c;
+    outline-color: rgba(92, 97, 108, 0.3);
+    border-color: #cfd6e6;
+    background-color: #fcfdfd; }
     .spinbutton.vertical .button:first-child:active, .spinbutton.vertical:dir(rtl) .button:first-child:active {
       color: #ffffff;
       outline-color: rgba(255, 255, 255, 0.3);
       border-color: #5294E2;
       background-color: #5294E2; }
     .spinbutton.vertical .button:first-child:hover, .spinbutton.vertical:dir(rtl) .button:first-child:hover {
-      color: #D3DAE3;
-      outline-color: rgba(211, 218, 227, 0.3);
+      color: #5c616c;
+      outline-color: rgba(92, 97, 108, 0.3);
       border-color: #5294E2;
-      background-color: #2a2f35; }
+      background-color: #fcfdfd; }
     .spinbutton.vertical .button:first-child:insensitive, .spinbutton.vertical:dir(rtl) .button:first-child:insensitive {
-      color: rgba(211, 218, 227, 0.45);
-      border-color: rgba(69, 74, 84, 0.55);
-      background-color: rgba(42, 47, 53, 0.55); }
+      color: rgba(92, 97, 108, 0.55);
+      border-color: rgba(207, 214, 230, 0.55);
+      background-color: rgba(252, 253, 253, 0.55); }
       .spinbutton.vertical .button:first-child:insensitive > GtkLabel, .spinbutton.vertical:dir(rtl) .button:first-child:insensitive > GtkLabel {
         color: inherit; }
   .spinbutton.vertical .button:last-child, .spinbutton.vertical:dir(rtl) .button:last-child {
-    color: #D3DAE3;
-    outline-color: rgba(211, 218, 227, 0.3);
-    border-color: #454a54;
-    background-color: #2a2f35; }
+    color: #5c616c;
+    outline-color: rgba(92, 97, 108, 0.3);
+    border-color: #cfd6e6;
+    background-color: #fcfdfd; }
     .spinbutton.vertical .button:last-child:active, .spinbutton.vertical:dir(rtl) .button:last-child:active {
       color: #ffffff;
       outline-color: rgba(255, 255, 255, 0.3);
       border-color: #5294E2;
       background-color: #5294E2; }
     .spinbutton.vertical .button:last-child:hover, .spinbutton.vertical:dir(rtl) .button:last-child:hover {
-      color: #D3DAE3;
-      outline-color: rgba(211, 218, 227, 0.3);
+      color: #5c616c;
+      outline-color: rgba(92, 97, 108, 0.3);
       border-color: #5294E2;
-      background-color: #2a2f35; }
+      background-color: #fcfdfd; }
     .spinbutton.vertical .button:last-child:insensitive, .spinbutton.vertical:dir(rtl) .button:last-child:insensitive {
-      color: rgba(211, 218, 227, 0.45);
-      border-color: rgba(69, 74, 84, 0.55);
-      background-color: rgba(42, 47, 53, 0.55); }
+      color: rgba(92, 97, 108, 0.55);
+      border-color: rgba(207, 214, 230, 0.55);
+      background-color: rgba(252, 253, 253, 0.55); }
       .spinbutton.vertical .button:last-child:insensitive > GtkLabel, .spinbutton.vertical:dir(rtl) .button:last-child:insensitive > GtkLabel {
         color: inherit; }
   .spinbutton.vertical.entry, .spinbutton.vertical:dir(rtl).entry {
@@ -705,7 +705,7 @@ GtkComboBox {
     padding-top: 3px;
     padding-bottom: 4px; }
   GtkComboBox:insensitive {
-    color: rgba(211, 218, 227, 0.45); }
+    color: rgba(92, 97, 108, 0.55); }
   GtkComboBox .separator.vertical, GtkComboBox GtkPlacesSidebar.sidebar .vertical.view.separator, GtkPlacesSidebar.sidebar GtkComboBox .vertical.view.separator {
     -GtkWidget-wide-separators: true; }
   GtkComboBox.combobox-entry .entry {
@@ -713,11 +713,11 @@ GtkComboBox {
     GtkComboBox.combobox-entry .entry:dir(rtl) {
       border-left-style: none; }
   GtkComboBox.combobox-entry .button {
-    color: rgba(211, 218, 227, 0.6);
-    background-color: #454a54;
-    border-color: #454a54; }
+    color: rgba(92, 97, 108, 0.6);
+    background-color: #cfd6e6;
+    border-color: #cfd6e6; }
     GtkComboBox.combobox-entry .button:hover {
-      background-color: #505662;
+      background-color: #e0e4ef;
       border-color: #5294E2;
       box-shadow: -1px 0 #5294E2; }
     GtkComboBox.combobox-entry .button:active, GtkComboBox.combobox-entry .button:checked {
@@ -734,7 +734,7 @@ GtkComboBox {
 .toolbar, .inline-toolbar {
   -GtkWidget-window-dragging: true;
   padding: 4px;
-  background-color: #2F343B; }
+  background-color: #f9fafb; }
   .osd .toolbar, .osd .inline-toolbar, .toolbar.osd, .osd.inline-toolbar {
     padding: 7px;
     border: none;
@@ -743,31 +743,31 @@ GtkComboBox {
 
 .primary-toolbar {
   color: rgba(207, 218, 231, 0.8);
-  background-color: #25282e;
+  background-color: #2f343b;
   box-shadow: none;
   border-width: 0 0 1px 0;
   border-style: solid;
-  border-image: linear-gradient(to bottom, #25282e, rgba(21, 23, 26, 0.96)) 1 0 1 0; }
+  border-image: linear-gradient(to bottom, #2f343b, rgba(31, 34, 39, 0.95)) 1 0 1 0; }
   .primary-toolbar:backdrop {
-    background-color: #282c32; }
+    background-color: #32383f; }
 
 .inline-toolbar {
-  background-color: #282c32;
+  background-color: #f0f2f5;
   border-style: solid;
-  border-color: #1d2024;
+  border-color: #dde3e9;
   border-width: 0 1px 1px;
   padding: 3px;
   border-radius: 0  0 3px 3px; }
 
 .search-bar {
-  background-color: #2F343B;
+  background-color: #f9fafb;
   border-style: solid;
-  border-color: #1d2024;
+  border-color: #dde3e9;
   border-width: 0 0 1px;
   padding: 3px; }
 
 .action-bar {
-  background-color: #282c32; }
+  background-color: #f0f2f5; }
 
 /***************
  * Header bars *
@@ -777,16 +777,16 @@ GtkComboBox {
   border-width: 0 0 1px;
   border-style: solid;
   border-radius: 0;
-  border-color: rgba(26, 28, 32, 0.96);
+  border-color: rgba(31, 34, 39, 0.95);
   color: rgba(207, 218, 231, 0.8);
-  background-color: #25282e; }
+  background-color: #2f343b; }
   .csd .header-bar {
-    background-color: rgba(37, 40, 46, 0.96); }
+    background-color: rgba(47, 52, 59, 0.95); }
   .header-bar:backdrop {
     color: rgba(207, 218, 231, 0.5);
-    background-color: #282c32; }
+    background-color: #32383f; }
     .csd .header-bar:backdrop {
-      background-color: rgba(40, 44, 50, 0.96); }
+      background-color: rgba(50, 56, 63, 0.95); }
   .header-bar .title {
     padding: 0px 12px; }
   .header-bar .subtitle {
@@ -842,35 +842,35 @@ GtkComboBox {
   .tiled .header-bar, .tiled .header-bar:backdrop, .maximized .header-bar, .maximized .header-bar:backdrop {
     border-radius: 0; }
   .maximized .header-bar {
-    background-color: #25282e; }
+    background-color: #2f343b; }
     .maximized .header-bar:backdrop {
-      background-color: #282c32; }
+      background-color: #32383f; }
   .header-bar.default-decoration {
     padding-top: 5px;
     padding-bottom: 5px;
-    background-color: #25282e;
+    background-color: #2f343b;
     border-bottom-width: 0; }
     .header-bar.default-decoration:backdrop {
-      background-color: #282c32; }
+      background-color: #32383f; }
 
 .titlebar {
   padding-left: 7px;
   padding-right: 7px;
   border-radius: 4px 4px 0 0;
   color: rgba(207, 218, 231, 0.8);
-  background-color: #25282e;
-  box-shadow: inset 0 1px rgba(44, 47, 54, 0.96); }
+  background-color: #2f343b;
+  box-shadow: inset 0 1px rgba(54, 60, 68, 0.95); }
   .csd .titlebar {
-    background-color: rgba(37, 40, 46, 0.96); }
+    background-color: rgba(47, 52, 59, 0.95); }
   .titlebar:backdrop {
     color: rgba(207, 218, 231, 0.5);
-    background-color: #282c32; }
+    background-color: #32383f; }
     .csd .titlebar:backdrop {
-      background-color: rgba(40, 44, 50, 0.96); }
+      background-color: rgba(50, 56, 63, 0.95); }
   .maximized .titlebar {
-    background-color: #25282e; }
+    background-color: #2f343b; }
     .maximized .titlebar:backdrop {
-      background-color: #282c32; }
+      background-color: #32383f; }
 
 .titlebar .titlebar,
 .titlebar .titlebar:backdrop {
@@ -886,8 +886,8 @@ GtkComboBox {
 
 .primary-toolbar .entry, .header-bar .entry {
   color: rgba(207, 218, 231, 0.8);
-  border-color: #141619;
-  background-image: linear-gradient(to bottom, rgba(32, 35, 40, 0.9));
+  border-color: rgba(24, 27, 31, 0.95);
+  background-image: linear-gradient(to bottom, rgba(38, 42, 48, 0.85));
   background-color: transparent; }
   .primary-toolbar .entry.image, .header-bar .entry.image, .primary-toolbar .entry.image:hover, .header-bar .entry.image:hover {
     color: inherit; }
@@ -902,7 +902,7 @@ GtkComboBox {
       color: #ffffff; }
   .primary-toolbar .entry:insensitive, .header-bar .entry:insensitive {
     color: rgba(207, 218, 231, 0.35);
-    background-image: linear-gradient(to bottom, rgba(32, 35, 40, 0.55)); }
+    background-image: linear-gradient(to bottom, rgba(38, 42, 48, 0.5)); }
   .primary-toolbar .entry:selected:focus, .header-bar .entry:selected:focus {
     background-color: #ffffff;
     color: #5294E2; }
@@ -914,15 +914,15 @@ GtkComboBox {
   color: rgba(207, 218, 231, 0.8);
   outline-color: rgba(207, 218, 231, 0.1);
   outline-offset: -3px;
-  background-color: rgba(37, 40, 46, 0);
-  border-color: rgba(37, 40, 46, 0); }
+  background-color: rgba(47, 52, 59, 0);
+  border-color: rgba(47, 52, 59, 0); }
   .primary-toolbar .button:backdrop, .header-bar .button:backdrop {
     opacity: 0.7; }
   .primary-toolbar .button:hover, .header-bar .button:hover {
     color: rgba(207, 218, 231, 0.8);
     outline-color: rgba(207, 218, 231, 0.1);
-    border-color: #141619;
-    background-color: rgba(33, 37, 42, 0.9); }
+    border-color: rgba(29, 32, 36, 0.95);
+    background-color: rgba(40, 44, 50, 0.85); }
   .primary-toolbar .button:active, .header-bar .button:active, .primary-toolbar .button:checked, .header-bar .button:checked {
     color: #ffffff;
     outline-color: rgba(255, 255, 255, 0.3);
@@ -930,8 +930,8 @@ GtkComboBox {
     background-color: #5294E2; }
   .primary-toolbar .button:insensitive, .header-bar .button:insensitive {
     color: rgba(207, 218, 231, 0.35);
-    background-color: rgba(37, 40, 46, 0);
-    border-color: rgba(37, 40, 46, 0); }
+    background-color: rgba(47, 52, 59, 0);
+    border-color: rgba(47, 52, 59, 0); }
     .primary-toolbar .button:insensitive > GtkLabel, .header-bar .button:insensitive > GtkLabel {
       color: inherit; }
   .primary-toolbar .button:insensitive:active, .header-bar .button:insensitive:active, .primary-toolbar .button:insensitive:checked, .header-bar .button:insensitive:checked {
@@ -948,8 +948,8 @@ GtkComboBox {
 .header-bar .linked.path-bar > .button {
   color: rgba(207, 218, 231, 0.8);
   outline-color: rgba(207, 218, 231, 0.1);
-  border-color: #141619;
-  background-color: rgba(33, 37, 42, 0.9); }
+  border-color: rgba(29, 32, 36, 0.95);
+  background-color: rgba(40, 44, 50, 0.85); }
   .primary-toolbar .linked.stack-switcher > .button:hover, .header-bar .linked.stack-switcher > .button:hover,
   .primary-toolbar .linked.path-bar > .button:hover,
   .header-bar .linked.path-bar > .button:hover {
@@ -966,30 +966,30 @@ GtkComboBox {
 .primary-toolbar .button.suggested-action, .header-bar .button.suggested-action {
   color: #ffffff;
   outline-color: rgba(255, 255, 255, 0.3);
-  border-color: #5B5F69;
-  background-color: #5B5F69; }
+  border-color: #9EA4B5;
+  background-color: #9EA4B5; }
   .primary-toolbar .button.suggested-action.flat, .header-bar .button.suggested-action.flat {
     border-color: transparent;
     background-color: transparent;
     background-image: none;
-    color: #5B5F69;
-    outline-color: rgba(91, 95, 105, 0.3); }
+    color: #9EA4B5;
+    outline-color: rgba(158, 164, 181, 0.3); }
   .primary-toolbar .button.suggested-action:hover, .header-bar .button.suggested-action:hover {
     color: #ffffff;
     outline-color: rgba(255, 255, 255, 0.3);
-    border-color: #707582;
-    background-color: #707582; }
+    border-color: #b8bcc9;
+    background-color: #b8bcc9; }
   .primary-toolbar .button.suggested-action:active, .header-bar .button.suggested-action:active, .primary-toolbar .button.suggested-action:checked, .header-bar .button.suggested-action:checked {
     color: #ffffff;
     outline-color: rgba(255, 255, 255, 0.3);
-    border-color: #4a4e56;
-    background-color: #4a4e56; }
+    border-color: #8a91a6;
+    background-color: #8a91a6; }
   .primary-toolbar .button.suggested-action.flat:insensitive, .header-bar .button.suggested-action.flat:insensitive {
-    color: rgba(91, 95, 105, 0.45); }
+    color: rgba(158, 164, 181, 0.45); }
   .primary-toolbar .button.suggested-action:insensitive, .header-bar .button.suggested-action:insensitive {
     color: rgba(255, 255, 255, 0.6);
-    border-color: rgba(91, 95, 105, 0.65);
-    background-color: rgba(91, 95, 105, 0.65); }
+    border-color: rgba(158, 164, 181, 0.65);
+    background-color: rgba(158, 164, 181, 0.65); }
 .primary-toolbar .button.suggested-action:backdrop, .header-bar .button.suggested-action:backdrop,
 .primary-toolbar .button.suggested-action:backdrop,
 .header-bar .button.suggested-action:backdrop {
@@ -1040,8 +1040,8 @@ GtkComboBox {
   color: rgba(207, 218, 231, 0.2); }
 .primary-toolbar GtkComboBox.combobox-entry .button, .header-bar GtkComboBox.combobox-entry .button {
   color: rgba(207, 218, 231, 0.8);
-  border-color: #141619;
-  background-image: linear-gradient(to bottom, rgba(32, 35, 40, 0.9));
+  border-color: rgba(24, 27, 31, 0.95);
+  background-image: linear-gradient(to bottom, rgba(38, 42, 48, 0.85));
   background-color: transparent; }
   .primary-toolbar GtkComboBox.combobox-entry .button.image, .header-bar GtkComboBox.combobox-entry .button.image, .primary-toolbar GtkComboBox.combobox-entry .button.image:hover, .header-bar GtkComboBox.combobox-entry .button.image:hover {
     color: inherit; }
@@ -1051,7 +1051,7 @@ GtkComboBox {
     background-image: linear-gradient(to bottom, #5294E2); }
   .primary-toolbar GtkComboBox.combobox-entry .button:insensitive, .header-bar GtkComboBox.combobox-entry .button:insensitive {
     color: rgba(207, 218, 231, 0.35);
-    background-image: linear-gradient(to bottom, rgba(32, 35, 40, 0.55)); }
+    background-image: linear-gradient(to bottom, rgba(38, 42, 48, 0.5)); }
 .primary-toolbar GtkSwitch:backdrop, .header-bar GtkSwitch:backdrop {
   opacity: 0.75; }
 .primary-toolbar GtkProgressBar.trough, .header-bar GtkProgressBar.trough, .primary-toolbar .level-bar.trough, .header-bar .level-bar.trough {
@@ -1065,9 +1065,9 @@ GtkComboBox {
   .primary-toolbar .scale.trough:insensitive, .header-bar .scale.trough:insensitive {
     background-image: linear-gradient(to bottom, rgba(207, 218, 231, 0.1)); }
 .primary-toolbar .scale.slider, .header-bar .scale.slider {
-  background-image: linear-gradient(to bottom, rgba(40, 44, 50, 0.996)); }
+  background-image: linear-gradient(to bottom, rgba(236, 236, 237, 0.995)); }
   .primary-toolbar .scale.slider:insensitive, .header-bar .scale.slider:insensitive {
-    background-image: linear-gradient(to bottom, rgba(38, 42, 48, 0.976)); }
+    background-image: linear-gradient(to bottom, rgba(135, 138, 142, 0.97)); }
 
 /************
  * Pathbars *
@@ -1096,27 +1096,27 @@ GtkTreeView.view {
   -GtkTreeView-tree-line-width: 1;
   -GtkTreeView-tree-line-pattern: '';
   -GtkTreeView-expander-size: 16;
-  border-left-color: rgba(211, 218, 227, 0.15);
+  border-left-color: rgba(92, 97, 108, 0.15);
   border-top-color: rgba(0, 0, 0, 0.1); }
   GtkTreeView.view:selected {
     border-radius: 0;
     border-left-color: #a8c9f0;
-    border-top-color: rgba(211, 218, 227, 0.1); }
+    border-top-color: rgba(92, 97, 108, 0.1); }
   GtkTreeView.view:insensitive {
-    color: rgba(211, 218, 227, 0.45); }
+    color: rgba(92, 97, 108, 0.55); }
     GtkTreeView.view:insensitive:selected {
       color: #97beed; }
   GtkTreeView.view.dnd {
     border-style: solid none;
     border-width: 1px;
-    border-color: #92b7e2; }
+    border-color: #577aa7; }
   GtkTreeView.view.expander {
     -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
-    color: #7e838b; }
+    color: #adb0b5; }
     GtkTreeView.view.expander:dir(rtl) {
       -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl"); }
     GtkTreeView.view.expander:hover {
-      color: #D3DAE3; }
+      color: #5c616c; }
     GtkTreeView.view.expander:selected {
       color: #cbdef6; }
       GtkTreeView.view.expander:selected:hover {
@@ -1131,19 +1131,19 @@ GtkTreeView.view {
       box-shadow: none;
       background-color: #ffffff; }
   GtkTreeView.view.trough, GtkTreeView.view.trough:selected {
-    background-color: #454a54;
+    background-color: #cfd6e6;
     border-radius: 3px;
     border-width: 0; }
 
 column-header .button {
-  color: #b1b7bf;
-  background-color: #292D33; }
+  color: #7c8089;
+  background-color: #ffffff; }
   column-header .button:hover {
     color: #5294E2;
     box-shadow: none;
     transition: none; }
   column-header .button:active {
-    color: #D3DAE3;
+    color: #5c616c;
     transition: none; }
 column-header:last-child .button, column-header:last-child.button {
   border-right-style: none;
@@ -1152,18 +1152,18 @@ column-header:last-child .button, column-header:last-child.button {
 column-header.button.dnd, column-header .button.dnd, column-header.button.dnd:active, column-header.button.dnd:selected, column-header.button.dnd:hover {
   transition: none;
   color: #5294E2;
-  box-shadow: inset 1px 1px 0 1px #5294E2, inset -1px 0 0 1px #5294E2, inset 1px 1px #292D33, inset -1px 0 #292D33; }
+  box-shadow: inset 1px 1px 0 1px #5294E2, inset -1px 0 0 1px #5294E2, inset 1px 1px #ffffff, inset -1px 0 #ffffff; }
 
 column-header .button, column-header .button:hover, column-header .button:active {
   padding: 3px 6px;
   background-image: none;
   border-style: none solid none none;
   border-radius: 0;
-  border-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0.11) 20%, rgba(255, 255, 255, 0.11) 80%, rgba(255, 255, 255, 0) 80%) 0 1 0 0/0 1px 0 0 stretch; }
+  border-image: linear-gradient(to bottom, transparent 20%, rgba(0, 0, 0, 0.11) 20%, rgba(0, 0, 0, 0.11) 80%, transparent 80%) 0 1 0 0/0 1px 0 0 stretch; }
   column-header .button:active {
-    background-color: #292D33; }
+    background-color: #ffffff; }
   column-header .button:insensitive {
-    border-color: #2F343B;
+    border-color: #f9fafb;
     background-image: none; }
 
 /*********
@@ -1172,10 +1172,10 @@ column-header .button, column-header .button:hover, column-header .button:active
 .menubar {
   -GtkWidget-window-dragging: true;
   padding: 0px;
-  background-color: #25282e;
+  background-color: #2f343b;
   color: rgba(207, 218, 231, 0.8); }
   .menubar:backdrop {
-    background-color: #282c32; }
+    background-color: #32383f; }
   .menubar > .menuitem {
     padding: 6px 8px;
     border: solid transparent;
@@ -1191,8 +1191,8 @@ column-header .button, column-header .button:hover, column-header .button:active
   margin: 4px;
   padding: 0;
   border-radius: 0;
-  background-color: #22262b;
-  border: 1px solid #1d2024; }
+  background-color: #ffffff;
+  border: 1px solid #dde3e9; }
   .csd .menu, .csd .popup {
     padding: 4px 0px;
     border-radius: 3px;
@@ -1200,14 +1200,14 @@ column-header .button, column-header .button:hover, column-header .button:active
   .menu .menuitem, .popup .menuitem {
     padding: 5px; }
     .menu .menuitem:hover, .popup .menuitem:hover {
-      color: #D3DAE3;
-      background-color: rgba(255, 255, 255, 0.05);
-      border: solid rgba(255, 255, 255, 0.07);
+      color: #5c616c;
+      background-color: rgba(0, 0, 0, 0.04);
+      border: solid rgba(0, 0, 0, 0.08);
       border-width: 1px 0 1px 0; }
     .menu .menuitem:insensitive, .popup .menuitem:insensitive {
-      color: rgba(211, 218, 227, 0.45); }
+      color: rgba(92, 97, 108, 0.55); }
     .menu .menuitem.separator, .menu GtkPlacesSidebar.sidebar .menuitem.view.separator, GtkPlacesSidebar.sidebar .menu .menuitem.view.separator, .popup .menuitem.separator, .popup GtkPlacesSidebar.sidebar .menuitem.view.separator, GtkPlacesSidebar.sidebar .popup .menuitem.view.separator {
-      color: rgba(41, 45, 51, 0); }
+      color: rgba(255, 255, 255, 0); }
     .menu .menuitem.arrow, .popup .menuitem.arrow {
       -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
     .menu .menuitem.arrow:dir(rtl), .popup .menuitem.arrow:dir(rtl) {
@@ -1216,11 +1216,11 @@ column-header .button, column-header .button:hover, column-header .button:active
     border-style: none;
     border-radius: 0; }
     .menu.button.top, .popup.button.top {
-      border-bottom: 1px solid #393e44; }
+      border-bottom: 1px solid #eeeff0; }
     .menu.button.bottom, .popup.button.bottom {
-      border-top: 1px solid #393e44; }
+      border-top: 1px solid #eeeff0; }
     .menu.button:hover, .popup.button:hover {
-      background-color: #393e44; }
+      background-color: #eeeff0; }
     .menu.button:insensitive, .popup.button:insensitive {
       color: transparent;
       background-color: transparent;
@@ -1234,13 +1234,13 @@ column-header .button, column-header .button:hover, column-header .button:active
  ************/
 .popover {
   padding: 2px;
-  border: 1px solid #121316;
+  border: 1px solid #ced6de;
   border-radius: 3px;
   background-clip: border-box;
-  background-color: #22262b;
+  background-color: #ffffff;
   box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.07); }
   .popover .separator, .popover GtkPlacesSidebar.sidebar .view.separator, GtkPlacesSidebar.sidebar .popover .view.separator {
-    color: rgba(41, 45, 51, 0); }
+    color: rgba(255, 255, 255, 0); }
   .popover > .list,
   .popover > .view,
   .popover > .toolbar,
@@ -1267,7 +1267,7 @@ column-header .button, column-header .button:hover, column-header .button:active
  *****************/
 .notebook {
   padding: 0;
-  background-color: #282c32;
+  background-color: #fefefe;
   -GtkNotebook-initial-gap: 10;
   -GtkNotebook-arrow-spacing: 5;
   -GtkNotebook-tab-curvature: 0;
@@ -1277,7 +1277,7 @@ column-header .button, column-header .button:hover, column-header .button:active
   -GtkWidget-focus-line-width: 0;
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
   .notebook.frame {
-    border: 1px solid #1d2024; }
+    border: 1px solid #dde3e9; }
     .notebook.frame.top {
       border-top-width: 0; }
     .notebook.frame.bottom {
@@ -1287,9 +1287,9 @@ column-header .button, column-header .button:hover, column-header .button:active
     .notebook.frame.left {
       border-left-width: 0; }
   .notebook.header {
-    background-color: #292D33; }
+    background-color: #ffffff; }
     .notebook.header.frame {
-      border: 1px solid #1d2024; }
+      border: 1px solid #dde3e9; }
       .notebook.header.frame.top {
         border-bottom-width: 0; }
       .notebook.header.frame.bottom {
@@ -1299,13 +1299,13 @@ column-header .button, column-header .button:hover, column-header .button:active
       .notebook.header.frame.left {
         border-right-width: 0; }
     .notebook.header.top {
-      box-shadow: inset 0 -1px #1f2227; }
+      box-shadow: inset 0 -1px #edf0f3; }
     .notebook.header.bottom {
-      box-shadow: inset 0 1px #1f2227; }
+      box-shadow: inset 0 1px #edf0f3; }
     .notebook.header.right {
-      box-shadow: inset 1px 0 #1f2227; }
+      box-shadow: inset 1px 0 #edf0f3; }
     .notebook.header.left {
-      box-shadow: inset -1px 0 #1f2227; }
+      box-shadow: inset -1px 0 #edf0f3; }
   .notebook tab {
     border-width: 0;
     border-style: solid;
@@ -1323,69 +1323,69 @@ column-header .button, column-header .button:hover, column-header .button:active
     .notebook tab.reorderable-page.top, .notebook tab.top {
       border-color: transparent; }
       .notebook tab.reorderable-page.top:hover, .notebook tab.reorderable-page.top.prelight-page, .notebook tab.top:hover, .notebook tab.top.prelight-page {
-        border-color: rgba(29, 32, 36, 0.5);
+        border-color: rgba(221, 227, 233, 0.5);
         border-width: 1px;
         border-top-width: 0;
-        background-color: rgba(47, 52, 59, 0.2); }
+        background-color: rgba(249, 250, 251, 0.2); }
       .notebook tab.reorderable-page.top:active, .notebook tab.reorderable-page.top.active-page, .notebook tab.reorderable-page.top.active-page:hover, .notebook tab.top:active, .notebook tab.top.active-page, .notebook tab.top.active-page:hover {
         border-width: 1px;
         border-top-width: 0;
-        border-color: #1d2024;
-        background-color: rgba(0, 0, 0, 0.1); }
+        border-color: #dde3e9;
+        background-color: rgba(0, 0, 0, 0.02); }
         .notebook tab.reorderable-page.top:active:hover, .notebook tab.reorderable-page.top.active-page:hover, .notebook tab.reorderable-page.top.active-page:hover:hover, .notebook tab.top:active:hover, .notebook tab.top.active-page:hover, .notebook tab.top.active-page:hover:hover {
-          background-color: rgba(0, 0, 0, 0.1); }
+          background-color: rgba(0, 0, 0, 0.02); }
     .notebook tab.reorderable-page.bottom, .notebook tab.bottom {
       border-color: transparent; }
       .notebook tab.reorderable-page.bottom:hover, .notebook tab.reorderable-page.bottom.prelight-page, .notebook tab.bottom:hover, .notebook tab.bottom.prelight-page {
-        border-color: rgba(29, 32, 36, 0.5);
+        border-color: rgba(221, 227, 233, 0.5);
         border-width: 1px;
         border-bottom-width: 0;
-        background-color: rgba(47, 52, 59, 0.2); }
+        background-color: rgba(249, 250, 251, 0.2); }
       .notebook tab.reorderable-page.bottom:active, .notebook tab.reorderable-page.bottom.active-page, .notebook tab.reorderable-page.bottom.active-page:hover, .notebook tab.bottom:active, .notebook tab.bottom.active-page, .notebook tab.bottom.active-page:hover {
         border-width: 1px;
         border-bottom-width: 0;
-        border-color: #1d2024;
-        background-color: rgba(0, 0, 0, 0.1); }
+        border-color: #dde3e9;
+        background-color: rgba(0, 0, 0, 0.02); }
         .notebook tab.reorderable-page.bottom:active:hover, .notebook tab.reorderable-page.bottom.active-page:hover, .notebook tab.reorderable-page.bottom.active-page:hover:hover, .notebook tab.bottom:active:hover, .notebook tab.bottom.active-page:hover, .notebook tab.bottom.active-page:hover:hover {
-          background-color: rgba(0, 0, 0, 0.1); }
+          background-color: rgba(0, 0, 0, 0.02); }
     .notebook tab.reorderable-page.right, .notebook tab.right {
       border-color: transparent; }
       .notebook tab.reorderable-page.right:hover, .notebook tab.reorderable-page.right.prelight-page, .notebook tab.right:hover, .notebook tab.right.prelight-page {
-        border-color: rgba(29, 32, 36, 0.5);
+        border-color: rgba(221, 227, 233, 0.5);
         border-width: 1px;
         border-right-width: 0;
-        background-color: rgba(47, 52, 59, 0.2); }
+        background-color: rgba(249, 250, 251, 0.2); }
       .notebook tab.reorderable-page.right:active, .notebook tab.reorderable-page.right.active-page, .notebook tab.reorderable-page.right.active-page:hover, .notebook tab.right:active, .notebook tab.right.active-page, .notebook tab.right.active-page:hover {
         border-width: 1px;
         border-right-width: 0;
-        border-color: #1d2024;
-        background-color: rgba(0, 0, 0, 0.1); }
+        border-color: #dde3e9;
+        background-color: rgba(0, 0, 0, 0.02); }
         .notebook tab.reorderable-page.right:active:hover, .notebook tab.reorderable-page.right.active-page:hover, .notebook tab.reorderable-page.right.active-page:hover:hover, .notebook tab.right:active:hover, .notebook tab.right.active-page:hover, .notebook tab.right.active-page:hover:hover {
-          background-color: rgba(0, 0, 0, 0.1); }
+          background-color: rgba(0, 0, 0, 0.02); }
     .notebook tab.reorderable-page.left, .notebook tab.left {
       border-color: transparent; }
       .notebook tab.reorderable-page.left:hover, .notebook tab.reorderable-page.left.prelight-page, .notebook tab.left:hover, .notebook tab.left.prelight-page {
-        border-color: rgba(29, 32, 36, 0.5);
+        border-color: rgba(221, 227, 233, 0.5);
         border-width: 1px;
         border-left-width: 0;
-        background-color: rgba(47, 52, 59, 0.2); }
+        background-color: rgba(249, 250, 251, 0.2); }
       .notebook tab.reorderable-page.left:active, .notebook tab.reorderable-page.left.active-page, .notebook tab.reorderable-page.left.active-page:hover, .notebook tab.left:active, .notebook tab.left.active-page, .notebook tab.left.active-page:hover {
         border-width: 1px;
         border-left-width: 0;
-        border-color: #1d2024;
-        background-color: rgba(0, 0, 0, 0.1); }
+        border-color: #dde3e9;
+        background-color: rgba(0, 0, 0, 0.02); }
         .notebook tab.reorderable-page.left:active:hover, .notebook tab.reorderable-page.left.active-page:hover, .notebook tab.reorderable-page.left.active-page:hover:hover, .notebook tab.left:active:hover, .notebook tab.left.active-page:hover, .notebook tab.left.active-page:hover:hover {
-          background-color: rgba(0, 0, 0, 0.1); }
+          background-color: rgba(0, 0, 0, 0.02); }
     .notebook tab GtkLabel {
       padding: 0 2px;
-      color: rgba(211, 218, 227, 0.45); }
+      color: rgba(92, 97, 108, 0.55); }
     .notebook tab .prelight-page GtkLabel, .notebook tab GtkLabel.prelight-page {
-      color: rgba(211, 218, 227, 0.725); }
+      color: rgba(92, 97, 108, 0.775); }
     .notebook tab .active-page GtkLabel, .notebook tab GtkLabel.active-page {
-      color: #D3DAE3; }
+      color: #5c616c; }
     .notebook tab .button {
       padding: 0;
-      color: #999fa8; }
+      color: #92969e; }
       .notebook tab .button:hover {
         color: #ff4d4d; }
       .notebook tab .button:active {
@@ -1393,13 +1393,13 @@ column-header .button, column-header .button:hover, column-header .button:active
       .notebook tab .button > GtkImage {
         padding: 2px; }
   .notebook.arrow {
-    color: rgba(211, 218, 227, 0.45); }
+    color: rgba(92, 97, 108, 0.55); }
     .notebook.arrow:hover {
-      color: rgba(211, 218, 227, 0.725); }
+      color: rgba(92, 97, 108, 0.775); }
     .notebook.arrow:active {
-      color: #D3DAE3; }
+      color: #5c616c; }
     .notebook.arrow:insensitive {
-      color: rgba(211, 218, 227, 0); }
+      color: rgba(92, 97, 108, 0); }
 
 /**************
  * Scrollbars *
@@ -1419,8 +1419,8 @@ column-header .button, column-header .button:hover, column-header .button:active
     -GtkRange-slider-width: 6px; }
     .scrollbar.overlay-indicator:not(.dragging):not(.hovering) .slider {
       margin: 0;
-      background-color: #a1a8b0;
-      border: 1px solid rgba(0, 0, 0, 0.3);
+      background-color: #8b8e96;
+      border: 1px solid rgba(255, 255, 255, 0.6);
       background-clip: padding-box; }
     .scrollbar.overlay-indicator:not(.dragging):not(.hovering) .trough {
       border-style: none;
@@ -1434,12 +1434,12 @@ column-header .button, column-header .button:hover, column-header .button:active
   .scrollbar.overlay-indicator.dragging, .scrollbar.overlay-indicator.hovering {
     opacity: 0.99; }
   .scrollbar .trough {
-    background-color: #272b30;
-    border: 1px none #1d2024; }
+    background-color: #fcfcfc;
+    border: 1px none #dde3e9; }
   .scrollbar .slider {
-    background-color: #70767e; }
+    background-color: #babcc1; }
     .scrollbar .slider:hover {
-      background-color: #60656d; }
+      background-color: #c9ccd0; }
     .scrollbar .slider:prelight:active {
       background-color: #5294E2; }
     .scrollbar .slider:insensitive {
@@ -1474,8 +1474,8 @@ column-header .button, column-header .button:hover, column-header .button:active
 .scrollbars-junction,
 .scrollbars-junction.frame {
   border-color: transparent;
-  border-image: linear-gradient(to bottom, #1d2024 1px, transparent 1px) 0 0 0 1/0 1px stretch;
-  background-color: #272b30; }
+  border-image: linear-gradient(to bottom, #dde3e9 1px, transparent 1px) 0 0 0 1/0 1px stretch;
+  background-color: #fcfcfc; }
   .scrollbars-junction:dir(rtl),
   .scrollbars-junction.frame:dir(rtl) {
     border-image-slice: 0 1 0 0; }
@@ -1499,143 +1499,143 @@ GtkSwitch {
       background-position: left center; }
 
 GtkSwitch.trough {
-  background-image: -gtk-scaled(url("assets/switch-dark.png"), url("assets/switch-dark@2.png")); }
+  background-image: -gtk-scaled(url("assets/switch.png"), url("assets/switch@2.png")); }
 
 .header-bar GtkSwitch.trough,
 .primary-toolbar GtkSwitch.trough {
-  background-image: -gtk-scaled(url("assets/switch-header-dark.png"), url("assets/switch-header-dark@2.png")); }
+  background-image: -gtk-scaled(url("assets/switch-header-darker.png"), url("assets/switch-header-darker@2.png")); }
 
 GtkSwitch.trough:active {
-  background-image: -gtk-scaled(url("assets/switch-active-dark.png"), url("assets/switch-active-dark@2.png")); }
+  background-image: -gtk-scaled(url("assets/switch-active.png"), url("assets/switch-active@2.png")); }
 
 .header-bar GtkSwitch.trough:active,
 .primary-toolbar GtkSwitch.trough:active {
-  background-image: -gtk-scaled(url("assets/switch-active-header-dark.png"), url("assets/switch-active-header-dark@2.png")); }
+  background-image: -gtk-scaled(url("assets/switch-active-header-darker.png"), url("assets/switch-active-header-darker@2.png")); }
 
 GtkSwitch.trough:insensitive {
-  background-image: -gtk-scaled(url("assets/switch-insensitive-dark.png"), url("assets/switch-insensitive-dark@2.png")); }
+  background-image: -gtk-scaled(url("assets/switch-insensitive.png"), url("assets/switch-insensitive@2.png")); }
 
 .header-bar GtkSwitch.trough:insensitive,
 .primary-toolbar GtkSwitch.trough:insensitive {
-  background-image: -gtk-scaled(url("assets/switch-insensitive-header-dark.png"), url("assets/switch-insensitive-header-dark@2.png")); }
+  background-image: -gtk-scaled(url("assets/switch-insensitive-header-darker.png"), url("assets/switch-insensitive-header-darker@2.png")); }
 
 GtkSwitch.trough:active:insensitive {
-  background-image: -gtk-scaled(url("assets/switch-active-insensitive-dark.png"), url("assets/switch-active-insensitive-dark@2.png")); }
+  background-image: -gtk-scaled(url("assets/switch-active-insensitive.png"), url("assets/switch-active-insensitive@2.png")); }
 
 .header-bar GtkSwitch.trough:active:insensitive,
 .primary-toolbar GtkSwitch.trough:active:insensitive {
-  background-image: -gtk-scaled(url("assets/switch-active-insensitive-header-dark.png"), url("assets/switch-active-insensitive-header-dark@2.png")); }
+  background-image: -gtk-scaled(url("assets/switch-active-insensitive-header-darker.png"), url("assets/switch-active-insensitive-header-darker@2.png")); }
 
 .list-row:selected GtkSwitch.trough {
-  background-image: -gtk-scaled(url("assets/switch-selected-dark.png"), url("assets/switch-selected-dark@2.png")); }
+  background-image: -gtk-scaled(url("assets/switch-selected.png"), url("assets/switch-selected@2.png")); }
 
 .header-bar GtkSwitch.trough,
 .primary-toolbar GtkSwitch.trough {
-  background-image: -gtk-scaled(url("assets/switch-header-dark.png"), url("assets/switch-header-dark@2.png")); }
+  background-image: -gtk-scaled(url("assets/switch-header-darker.png"), url("assets/switch-header-darker@2.png")); }
 
 .list-row:selected GtkSwitch.trough:active {
-  background-image: -gtk-scaled(url("assets/switch-active-selected-dark.png"), url("assets/switch-active-selected-dark@2.png")); }
+  background-image: -gtk-scaled(url("assets/switch-active-selected.png"), url("assets/switch-active-selected@2.png")); }
 
 .header-bar GtkSwitch.trough:active,
 .primary-toolbar GtkSwitch.trough:active {
-  background-image: -gtk-scaled(url("assets/switch-active-header-dark.png"), url("assets/switch-active-header-dark@2.png")); }
+  background-image: -gtk-scaled(url("assets/switch-active-header-darker.png"), url("assets/switch-active-header-darker@2.png")); }
 
 .list-row:selected GtkSwitch.trough:insensitive {
-  background-image: -gtk-scaled(url("assets/switch-insensitive-selected-dark.png"), url("assets/switch-insensitive-selected-dark@2.png")); }
+  background-image: -gtk-scaled(url("assets/switch-insensitive-selected.png"), url("assets/switch-insensitive-selected@2.png")); }
 
 .header-bar GtkSwitch.trough:insensitive,
 .primary-toolbar GtkSwitch.trough:insensitive {
-  background-image: -gtk-scaled(url("assets/switch-insensitive-header-dark.png"), url("assets/switch-insensitive-header-dark@2.png")); }
+  background-image: -gtk-scaled(url("assets/switch-insensitive-header-darker.png"), url("assets/switch-insensitive-header-darker@2.png")); }
 
 .list-row:selected GtkSwitch.trough:active:insensitive {
-  background-image: -gtk-scaled(url("assets/switch-active-insensitive-selected-dark.png"), url("assets/switch-active-insensitive-selected-dark@2.png")); }
+  background-image: -gtk-scaled(url("assets/switch-active-insensitive-selected.png"), url("assets/switch-active-insensitive-selected@2.png")); }
 
 .header-bar GtkSwitch.trough:active:insensitive,
 .primary-toolbar GtkSwitch.trough:active:insensitive {
-  background-image: -gtk-scaled(url("assets/switch-active-insensitive-header-dark.png"), url("assets/switch-active-insensitive-header-dark@2.png")); }
+  background-image: -gtk-scaled(url("assets/switch-active-insensitive-header-darker.png"), url("assets/switch-active-insensitive-header-darker@2.png")); }
 
 /*************************
  * Check and Radio items *
  *************************/
 .check {
-  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-dark.png"), url("assets/checkbox-unchecked-dark@2.png")); }
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked.png"), url("assets/checkbox-unchecked@2.png")); }
 
 GtkTreeView.view.check:selected,
 .list-row:selected .check {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-selected.png"), url("assets/checkbox-unchecked-selected@2.png")); }
 
 .check:insensitive {
-  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-insensitive-dark.png"), url("assets/checkbox-unchecked-insensitive-dark@2.png")); }
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-insensitive.png"), url("assets/checkbox-unchecked-insensitive@2.png")); }
 
 GtkTreeView.view.check:insensitive:selected,
 .list-row:selected .check:insensitive {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-insensitive-selected.png"), url("assets/checkbox-unchecked-insensitive-selected@2.png")); }
 
 .check:inconsistent {
-  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-dark.png"), url("assets/checkbox-mixed-dark@2.png")); }
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed.png"), url("assets/checkbox-mixed@2.png")); }
 
 GtkTreeView.view.check:inconsistent:selected,
 .list-row:selected .check:inconsistent {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-selected.png"), url("assets/checkbox-mixed-selected@2.png")); }
 
 .check:inconsistent:insensitive {
-  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-insensitive-dark.png"), url("assets/checkbox-mixed-insensitive-dark@2.png")); }
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-insensitive.png"), url("assets/checkbox-mixed-insensitive@2.png")); }
 
 GtkTreeView.view.check:inconsistent:insensitive:selected,
 .list-row:selected .check:inconsistent:insensitive {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-insensitive-selected.png"), url("assets/checkbox-mixed-insensitive-selected@2.png")); }
 
 .check:checked {
-  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-dark.png"), url("assets/checkbox-checked-dark@2.png")); }
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked.png"), url("assets/checkbox-checked@2.png")); }
 
 GtkTreeView.view.check:checked:selected,
 .list-row:selected .check:checked {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-selected.png"), url("assets/checkbox-checked-selected@2.png")); }
 
 .check:checked:insensitive {
-  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-insensitive-dark.png"), url("assets/checkbox-checked-insensitive-dark@2.png")); }
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-insensitive.png"), url("assets/checkbox-checked-insensitive@2.png")); }
 
 GtkTreeView.view.check:checked:insensitive:selected,
 .list-row:selected .check:checked:insensitive {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-insensitive-selected.png"), url("assets/checkbox-checked-insensitive-selected@2.png")); }
 
 .radio {
-  -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-dark.png"), url("assets/radio-unchecked-dark@2.png")); }
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked.png"), url("assets/radio-unchecked@2.png")); }
 
 GtkTreeView.view.radio:selected,
 .list-row:selected .radio {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-selected.png"), url("assets/radio-unchecked-selected@2.png")); }
 
 .radio:insensitive {
-  -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-insensitive-dark.png"), url("assets/radio-unchecked-insensitive-dark@2.png")); }
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-insensitive.png"), url("assets/radio-unchecked-insensitive@2.png")); }
 
 GtkTreeView.view.radio:insensitive:selected,
 .list-row:selected .radio:insensitive {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-insensitive-selected.png"), url("assets/radio-unchecked-insensitive-selected@2.png")); }
 
 .radio:inconsistent {
-  -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-dark.png"), url("assets/radio-mixed-dark@2.png")); }
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed.png"), url("assets/radio-mixed@2.png")); }
 
 GtkTreeView.view.radio:inconsistent:selected,
 .list-row:selected .radio:inconsistent {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-selected.png"), url("assets/radio-mixed-selected@2.png")); }
 
 .radio:inconsistent:insensitive {
-  -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-insensitive-dark.png"), url("assets/radio-mixed-insensitive-dark@2.png")); }
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-insensitive.png"), url("assets/radio-mixed-insensitive@2.png")); }
 
 GtkTreeView.view.radio:inconsistent:insensitive:selected,
 .list-row:selected .radio:inconsistent:insensitive {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-insensitive-selected.png"), url("assets/radio-mixed-insensitive-selected@2.png")); }
 
 .radio:checked {
-  -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-dark.png"), url("assets/radio-checked-dark@2.png")); }
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-checked.png"), url("assets/radio-checked@2.png")); }
 
 GtkTreeView.view.radio:checked:selected,
 .list-row:selected .radio:checked {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-selected.png"), url("assets/radio-checked-selected@2.png")); }
 
 .radio:checked:insensitive {
-  -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-insensitive-dark.png"), url("assets/radio-checked-insensitive-dark@2.png")); }
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-insensitive.png"), url("assets/radio-checked-insensitive@2.png")); }
 
 GtkTreeView.view.radio:checked:insensitive:selected,
 .list-row:selected .radio:checked:insensitive {
@@ -1643,19 +1643,19 @@ GtkTreeView.view.radio:checked:insensitive:selected,
 
 GtkIconView.view.check,
 GtkFlowBox.view.check {
-  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-selectionmode-dark.png"), url("assets/checkbox-selectionmode-dark@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-selectionmode.png"), url("assets/checkbox-selectionmode@2.png"));
   background-color: transparent; }
 
 GtkIconView.view.check:checked,
 GtkFlowBox.view.check:checked {
-  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-selectionmode-dark.png"), url("assets/checkbox-checked-selectionmode-dark@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-selectionmode.png"), url("assets/checkbox-checked-selectionmode@2.png"));
   background-color: transparent; }
 
 GtkCheckButton.text-button, GtkRadioButton.text-button {
   padding: 1px 2px 4px;
   outline-offset: 0; }
   GtkCheckButton.text-button:insensitive, GtkCheckButton.text-button:insensitive:active, GtkCheckButton.text-button:insensitive:inconsistent, GtkRadioButton.text-button:insensitive, GtkRadioButton.text-button:insensitive:active, GtkRadioButton.text-button:insensitive:inconsistent {
-    color: rgba(211, 218, 227, 0.45); }
+    color: rgba(92, 97, 108, 0.55); }
 
 /************
  * GtkScale *
@@ -1673,7 +1673,7 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
     margin: 3px; }
   .scale.slider {
     background-clip: border-box;
-    background-image: linear-gradient(to bottom, #292D33);
+    background-image: linear-gradient(to bottom, #ffffff);
     border: 1px solid #5294E2;
     border-radius: 50%;
     box-shadow: none; }
@@ -1681,8 +1681,8 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
       background-image: linear-gradient(to bottom, #5294E2);
       border-color: #5294E2; }
     .scale.slider:insensitive {
-      background-image: linear-gradient(to bottom, #2b3036);
-      border-color: #426896; }
+      background-image: linear-gradient(to bottom, #fcfcfd);
+      border-color: #9dc1ed; }
     .scale.slider:active {
       background-image: linear-gradient(to bottom, #2679db);
       border-color: #2679db; }
@@ -1709,13 +1709,13 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
   .scale.trough {
     border: none;
     border-radius: 2.5px;
-    background-image: linear-gradient(to bottom, #454a54); }
+    background-image: linear-gradient(to bottom, #cfd6e6); }
     .scale.trough.highlight {
       background-image: linear-gradient(to bottom, #5294E2); }
       .scale.trough.highlight:insensitive {
         background-image: linear-gradient(to bottom, rgba(82, 148, 226, 0.55)); }
     .scale.trough:insensitive {
-      background-image: linear-gradient(to bottom, rgba(69, 74, 84, 0.55)); }
+      background-image: linear-gradient(to bottom, rgba(207, 214, 230, 0.55)); }
     .osd .scale.trough {
       background-image: linear-gradient(to bottom, rgba(76, 81, 93, 0.95));
       outline-color: rgba(168, 173, 181, 0.2); }
@@ -1737,7 +1737,7 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
 GtkProgressBar {
   padding: 0;
   font-size: smaller;
-  color: rgba(211, 218, 227, 0.7); }
+  color: rgba(92, 97, 108, 0.7); }
   GtkProgressBar.osd {
     -GtkProgressBar-xspacing: 0;
     -GtkProgressBar-yspacing: 0;
@@ -1757,7 +1757,7 @@ GtkProgressBar {
 GtkProgressBar.trough, .level-bar.trough {
   border: none;
   border-radius: 3px;
-  background-color: #454a54; }
+  background-color: #cfd6e6; }
   GtkProgressBar.trough.osd, .osd.level-bar.trough {
     border-style: none;
     background-color: transparent;
@@ -1792,14 +1792,14 @@ GtkLevelBar.vertical {
     border-color: #F27835;
     background-color: #F27835; }
   .level-bar.fill-block.empty-fill-block {
-    background-color: rgba(211, 218, 227, 0.2);
-    border-color: rgba(211, 218, 227, 0.2); }
+    background-color: rgba(92, 97, 108, 0.2);
+    border-color: rgba(92, 97, 108, 0.2); }
 
 /**********
  * Frames *
  **********/
 .frame {
-  border: 1px solid #1d2024;
+  border: 1px solid #dde3e9;
   padding: 0; }
   .frame.flat {
     border-style: none; }
@@ -1819,8 +1819,8 @@ GtkScrolledWindow GtkViewport.frame {
  * Lists *
  *********/
 .list, .list-row {
-  background-color: #292D33;
-  border-color: #1d2024; }
+  background-color: #ffffff;
+  border-color: #dde3e9; }
 
 .list-row,
 .grid-child {
@@ -1832,9 +1832,9 @@ GtkScrolledWindow GtkViewport.frame {
   border-radius: 0;
   box-shadow: none; }
   .list-row.button:hover {
-    background-color: rgba(255, 255, 255, 0.03); }
+    background-color: rgba(0, 0, 0, 0.05); }
   .list-row.button:active {
-    color: #D3DAE3; }
+    color: #5c616c; }
   .list-row.button:selected:active {
     color: #ffffff; }
   .list-row.button:selected:hover {
@@ -1860,7 +1860,7 @@ GtkScrolledWindow GtkViewport.frame {
   border-width: 0 1px 1px;
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.2);
-  background-color: #292D33;
+  background-color: #ffffff;
   background-clip: padding-box; }
 
 /*************
@@ -1871,7 +1871,7 @@ GtkScrolledWindow GtkViewport.frame {
   .expander:dir(rtl) {
     -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl"); }
   .expander:hover {
-    color: white; }
+    color: #aaaeb7; }
   .expander:checked {
     -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
 
@@ -1879,7 +1879,7 @@ GtkScrolledWindow GtkViewport.frame {
  * Calendar *
  ***********/
 GtkCalendar {
-  border: 1px solid #1d2024;
+  border: 1px solid #dde3e9;
   border-radius: 3px;
   padding: 2px; }
   GtkCalendar:selected {
@@ -1887,15 +1887,15 @@ GtkCalendar {
     color: #ffffff;
     border-radius: 1.5px; }
   GtkCalendar.header {
-    color: #D3DAE3;
+    color: #5c616c;
     border: none;
     border-radius: 0; }
   GtkCalendar.button, GtkCalendar.button:focus {
-    color: rgba(211, 218, 227, 0.45);
+    color: rgba(92, 97, 108, 0.45);
     box-shadow: none;
     border: none; }
     GtkCalendar.button:hover, GtkCalendar.button:focus:hover {
-      color: #D3DAE3; }
+      color: #5c616c; }
   GtkCalendar.highlight {
     color: alpha(currentColor,0.55); }
 
@@ -1908,8 +1908,8 @@ GtkCalendar {
 .message-dialog {
   -GtkDialog-button-spacing: 0; }
   .message-dialog .titlebar {
-    background-color: rgba(37, 40, 46, 0.96);
-    border-bottom: 1px solid rgba(21, 23, 26, 0.96); }
+    background-color: rgba(47, 52, 59, 0.95);
+    border-bottom: 1px solid rgba(31, 34, 39, 0.95); }
   .message-dialog.csd.background {
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
@@ -1931,23 +1931,23 @@ GtkCalendar {
     border-bottom-left-radius: 3px; }
 
 GtkFileChooserDialog .search-bar {
-  background-color: #2F343B;
-  border-color: #1d2024;
+  background-color: #f9fafb;
+  border-color: #dde3e9;
   box-shadow: none; }
 GtkFileChooserDialog .dialog-action-box {
-  border-top: 1px solid #1d2024; }
+  border-top: 1px solid #dde3e9; }
 
 /***********
  * Sidebar *
  ***********/
 .sidebar {
   border: none;
-  background-color: #2F343B; }
+  background-color: #f9fafb; }
   .sidebar:selected {
     background-color: #5294E2; }
 
 GtkPlacesSidebar.sidebar .view {
-  color: #D3DAE3;
+  color: #5c616c;
   background-color: transparent; }
   GtkPlacesSidebar.sidebar .view:selected {
     color: #ffffff;
@@ -1969,7 +1969,7 @@ GtkPaned {
     margin-right: 0;
     margin-left: 8px; }
   GtkPaned .pane-separator {
-    background-color: #1d2024; }
+    background-color: #dde3e9; }
 
 GtkPaned.wide {
   -GtkPaned-handle-size: 5;
@@ -1977,7 +1977,7 @@ GtkPaned.wide {
   GtkPaned.wide .pane-separator {
     background-color: transparent;
     border-style: none solid;
-    border-color: #1d2024;
+    border-color: #dde3e9;
     border-width: 1px; }
   GtkPaned.wide.vertical .pane-separator {
     border-style: solid none; }
@@ -2083,15 +2083,15 @@ GtkColorSwatch.overlay, GtkColorSwatch.overlay:selected {
 GtkColorSwatch#add-color-button {
   border-style: solid;
   border-width: 1px;
-  color: #D3DAE3;
-  outline-color: rgba(211, 218, 227, 0.3);
-  border-color: #454a54;
-  background-color: #2a2f35; }
+  color: #5c616c;
+  outline-color: rgba(92, 97, 108, 0.3);
+  border-color: #cfd6e6;
+  background-color: #fcfdfd; }
   GtkColorSwatch#add-color-button:hover {
-    color: #D3DAE3;
-    outline-color: rgba(211, 218, 227, 0.3);
+    color: #5c616c;
+    outline-color: rgba(92, 97, 108, 0.3);
     border-color: #5294E2;
-    background-color: #2a2f35; }
+    background-color: #fcfdfd; }
   GtkColorSwatch#add-color-button .overlay {
     border-color: transparent;
     background-color: transparent;
@@ -2108,10 +2108,10 @@ GtkColorButton.button {
 .scale-popup .button {
   padding: 6px; }
   .scale-popup .button:hover {
-    color: #D3DAE3;
-    outline-color: rgba(211, 218, 227, 0.3);
+    color: #5c616c;
+    outline-color: rgba(92, 97, 108, 0.3);
     border-color: #5294E2;
-    background-color: #2a2f35; }
+    background-color: #fcfdfd; }
 
 GtkVolumeButton.button {
   padding: 8px; }
@@ -2122,31 +2122,31 @@ GtkVolumeButton.button {
 .window-frame {
   border-radius: 4px 4px 0 0;
   border-width: 0px;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.65), 0 4px 8px 1px rgba(0, 0, 0, 0.65);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6), 0 4px 8px 1px rgba(0, 0, 0, 0.1);
   /* this is used for the resize cursor area */
   margin: 10px; }
   .window-frame:backdrop {
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.65), 0 4px 5px 2px rgba(0, 0, 0, 0.65); }
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6), 0 4px 5px 2px rgba(0, 0, 0, 0.1); }
   .window-frame.tiled {
     border-radius: 0; }
   .window-frame.ssd {
     border-radius: 4px 4px 0 0;
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.65); }
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6); }
     .window-frame.ssd.maximized {
       border-radius: 0; }
   .window-frame.csd.popup, .window-frame.csd.menu {
     border-radius: 3px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(0, 0, 0, 0.55); }
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.1); }
   .window-frame.csd.tooltip {
     border-radius: 2px;
-    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.65); }
+    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1); }
   .window-frame.csd.message-dialog {
     border-radius: 3px;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.65); }
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1); }
   .window-frame.solid-csd {
     border-radius: 0;
     margin: 1px;
-    background-color: rgba(37, 40, 46, 0.96);
+    background-color: rgba(47, 52, 59, 0.95);
     box-shadow: none; }
 
 .header-bar.default-decoration .button.titlebutton,
@@ -2159,14 +2159,14 @@ GtkVolumeButton.button {
   border-color: transparent;
   background-color: transparent;
   background-image: none;
-  background-color: rgba(37, 40, 46, 0);
+  background-color: rgba(47, 52, 59, 0);
   border-width: 0; }
   .header-bar .button.titlebutton:hover,
   .titlebar .button.titlebutton:hover {
     color: rgba(207, 218, 231, 0.8);
     outline-color: rgba(207, 218, 231, 0.1);
-    border-color: #141619;
-    background-color: rgba(33, 37, 42, 0.9); }
+    border-color: rgba(29, 32, 36, 0.95);
+    background-color: rgba(40, 44, 50, 0.85); }
   .header-bar .button.titlebutton:active, .header-bar .button.titlebutton:checked,
   .titlebar .button.titlebutton:active,
   .titlebar .button.titlebutton:checked {
@@ -2189,40 +2189,40 @@ GtkVolumeButton.button {
       opacity: 1; }
   .header-bar .button.titlebutton.close,
   .titlebar .button.titlebutton.close {
-    background-image: -gtk-scaled(url("assets/titlebutton-close-dark.png"), url("assets/titlebutton-close-dark@2.png")); }
+    background-image: -gtk-scaled(url("assets/titlebutton-close-darker.png"), url("assets/titlebutton-close-darker@2.png")); }
   .header-bar .button.titlebutton.close:backdrop,
   .titlebar .button.titlebutton.close:backdrop {
-    background-image: -gtk-scaled(url("assets/titlebutton-close-backdrop-dark.png"), url("assets/titlebutton-close-backdrop-dark@2.png")); }
+    background-image: -gtk-scaled(url("assets/titlebutton-close-backdrop-darker.png"), url("assets/titlebutton-close-backdrop-darker@2.png")); }
   .header-bar .button.titlebutton.close:hover,
   .titlebar .button.titlebutton.close:hover {
-    background-image: -gtk-scaled(url("assets/titlebutton-close-hover-dark.png"), url("assets/titlebutton-close-hover-dark@2.png")); }
+    background-image: -gtk-scaled(url("assets/titlebutton-close-hover-darker.png"), url("assets/titlebutton-close-hover-darker@2.png")); }
   .header-bar .button.titlebutton.close:active,
   .titlebar .button.titlebutton.close:active {
-    background-image: -gtk-scaled(url("assets/titlebutton-close-active-dark.png"), url("assets/titlebutton-close-active-dark@2.png")); }
+    background-image: -gtk-scaled(url("assets/titlebutton-close-active-darker.png"), url("assets/titlebutton-close-active-darker@2.png")); }
   .header-bar .button.titlebutton.maximize,
   .titlebar .button.titlebutton.maximize {
-    background-image: -gtk-scaled(url("assets/titlebutton-max-dark.png"), url("assets/titlebutton-max-dark@2.png")); }
+    background-image: -gtk-scaled(url("assets/titlebutton-max-darker.png"), url("assets/titlebutton-max-darker@2.png")); }
   .header-bar .button.titlebutton.maximize:backdrop,
   .titlebar .button.titlebutton.maximize:backdrop {
-    background-image: -gtk-scaled(url("assets/titlebutton-max-backdrop-dark.png"), url("assets/titlebutton-max-backdrop-dark@2.png")); }
+    background-image: -gtk-scaled(url("assets/titlebutton-max-backdrop-darker.png"), url("assets/titlebutton-max-backdrop-darker@2.png")); }
   .header-bar .button.titlebutton.maximize:hover,
   .titlebar .button.titlebutton.maximize:hover {
-    background-image: -gtk-scaled(url("assets/titlebutton-max-hover-dark.png"), url("assets/titlebutton-max-hover-dark@2.png")); }
+    background-image: -gtk-scaled(url("assets/titlebutton-max-hover-darker.png"), url("assets/titlebutton-max-hover-darker@2.png")); }
   .header-bar .button.titlebutton.maximize:active,
   .titlebar .button.titlebutton.maximize:active {
-    background-image: -gtk-scaled(url("assets/titlebutton-max-active-dark.png"), url("assets/titlebutton-max-active-dark@2.png")); }
+    background-image: -gtk-scaled(url("assets/titlebutton-max-active-darker.png"), url("assets/titlebutton-max-active-darker@2.png")); }
   .header-bar .button.titlebutton.minimize,
   .titlebar .button.titlebutton.minimize {
-    background-image: -gtk-scaled(url("assets/titlebutton-min-dark.png"), url("assets/titlebutton-min-dark@2.png")); }
+    background-image: -gtk-scaled(url("assets/titlebutton-min-darker.png"), url("assets/titlebutton-min-darker@2.png")); }
   .header-bar .button.titlebutton.minimize:backdrop,
   .titlebar .button.titlebutton.minimize:backdrop {
-    background-image: -gtk-scaled(url("assets/titlebutton-min-backdrop-dark.png"), url("assets/titlebutton-min-backdrop-dark@2.png")); }
+    background-image: -gtk-scaled(url("assets/titlebutton-min-backdrop-darker.png"), url("assets/titlebutton-min-backdrop-darker@2.png")); }
   .header-bar .button.titlebutton.minimize:hover,
   .titlebar .button.titlebutton.minimize:hover {
-    background-image: -gtk-scaled(url("assets/titlebutton-min-hover-dark.png"), url("assets/titlebutton-min-hover-dark@2.png")); }
+    background-image: -gtk-scaled(url("assets/titlebutton-min-hover-darker.png"), url("assets/titlebutton-min-hover-darker@2.png")); }
   .header-bar .button.titlebutton.minimize:active,
   .titlebar .button.titlebutton.minimize:active {
-    background-image: -gtk-scaled(url("assets/titlebutton-min-active-dark.png"), url("assets/titlebutton-min-active-dark@2.png")); }
+    background-image: -gtk-scaled(url("assets/titlebutton-min-active-darker.png"), url("assets/titlebutton-min-active-darker@2.png")); }
 
 .view:selected, .view:selected:focus, .view:selected:hover, .label:selected, .label:selected:focus, .label:selected:hover, .grid-child:selected, .menuitem.button.flat:selected, .menuitem.button.flat:checked, .menuitem.button.flat:active, .list-row:selected, GtkEntry.gb-command-bar-entry.entry.flat:selected, GtkEntry.gb-command-bar-entry.entry.flat:selected:focus {
   background-image: none;
@@ -2305,8 +2305,8 @@ GtkVolumeButton.button {
   background-position: right center; }
 
 GtkHTML {
-  background-color: #292D33;
-  color: #D3DAE3; }
+  background-color: #ffffff;
+  color: #5c616c; }
   GtkHTML:active {
     color: #ffffff;
     background-color: #5294E2; }
@@ -2321,18 +2321,18 @@ TerminalWindow .notebook tab.reorderable-page:hover {
   padding-top: 4px;
   padding-bottom: 4px; }
 TerminalWindow .notebook.header.top {
-  box-shadow: inset 0 1px #1a1c20, inset 0 -1px #1f2227; }
+  box-shadow: inset 0 1px #1f2227, inset 0 -1px #edf0f3; }
 TerminalWindow .notebook tab .active-page GtkLabel {
   color: rgba(207, 218, 231, 0.8); }
   TerminalWindow .notebook tab .active-page GtkLabel:backdrop {
     color: rgba(207, 218, 231, 0.5); }
 TerminalWindow .notebook tab.reorderable-page.top:hover {
-  border-bottom-color: #1a1c20; }
+  border-bottom-color: #1f2227; }
 TerminalWindow .notebook tab.reorderable-page.top:active, TerminalWindow .notebook tab.reorderable-page.top:active:hover {
-  background-color: #25282e;
-  border-color: #1a1c20; }
+  background-color: #2f343b;
+  border-color: #1f2227; }
   TerminalWindow .notebook tab.reorderable-page.top:active:backdrop, TerminalWindow .notebook tab.reorderable-page.top:active:hover:backdrop {
-    background-color: #282c32; }
+    background-color: #32383f; }
 TerminalWindow .scrollbar.vertical .slider {
   margin-left: 3px; }
 TerminalWindow .scrollbar.trough {
@@ -2348,20 +2348,20 @@ NautilusCanvasViewContainer.view .entry, NemoIconViewContainer .entry {
   color: #ffffff;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.6); }
   .nautilus-desktop.nautilus-canvas-item:active, .nemo-desktop.nemo-canvas-item:active {
-    color: #D3DAE3; }
+    color: #5c616c; }
   .nautilus-desktop.nautilus-canvas-item:selected, .nemo-desktop.nemo-canvas-item:selected {
     color: #ffffff; }
 
 .nautilus-canvas-item.dim-label, .nautilus-canvas-item.label.separator, GtkPlacesSidebar.sidebar .nautilus-canvas-item.label.view.separator, .header-bar .nautilus-canvas-item.subtitle,
 .nautilus-list-dim-label {
-  color: #81878f; }
+  color: #aaadb3; }
   .nautilus-canvas-item.dim-label:selected, .nautilus-canvas-item.label.separator:selected, .header-bar .nautilus-canvas-item.subtitle:selected, .nautilus-canvas-item.dim-label:selected:focus, .nautilus-canvas-item.label.separator:selected:focus, .header-bar .nautilus-canvas-item.subtitle:selected:focus,
   .nautilus-list-dim-label:selected,
   .nautilus-list-dim-label:selected:focus {
     color: #dce9f9; }
 
 NautilusNotebook.notebook {
-  background-color: #292D33; }
+  background-color: #ffffff; }
   NautilusNotebook.notebook tab {
     border-width: 0;
     border-style: solid;
@@ -2380,26 +2380,26 @@ NautilusQueryEditor .search-bar.toolbar, NautilusQueryEditor .search-bar.inline-
   border-style: solid;
   border-width: 1px; }
   .disk-space-display.unknown {
-    background-color: rgba(211, 218, 227, 0.5);
-    border-color: rgba(180, 192, 207, 0.5); }
+    background-color: rgba(92, 97, 108, 0.5);
+    border-color: rgba(69, 72, 80, 0.5); }
   .disk-space-display.used {
     background-color: rgba(82, 148, 226, 0.8);
     border-color: rgba(38, 121, 219, 0.8); }
   .disk-space-display.free {
-    background-color: #282c32;
-    border-color: #121316; }
+    background-color: #f0f2f5;
+    border-color: #d1d9e0; }
 
 NemoWindow .sidebar .frame {
   border-width: 0; }
 
 NemoWindow GtkSeparator.separator.horizontal, NemoWindow GtkPlacesSidebar.sidebar GtkSeparator.horizontal.view.separator, GtkPlacesSidebar.sidebar NemoWindow GtkSeparator.horizontal.view.separator {
-  color: #1d2024; }
+  color: #dde3e9; }
 
 NemoWindow .primary-toolbar NemoPathBar.linked > .button {
   color: rgba(207, 218, 231, 0.8);
   outline-color: rgba(207, 218, 231, 0.1);
-  border-color: #141619;
-  background-color: rgba(33, 37, 42, 0.9); }
+  border-color: rgba(29, 32, 36, 0.95);
+  background-color: rgba(40, 44, 50, 0.85); }
   NemoWindow .primary-toolbar NemoPathBar.linked > .button:hover {
     border-color: #5294E2; }
   NemoWindow .primary-toolbar NemoPathBar.linked > .button:active, NemoWindow .primary-toolbar NemoPathBar.linked > .button:checked {
@@ -2409,11 +2409,11 @@ NemoWindow .primary-toolbar NemoPathBar.linked > .button {
     background-color: #5294E2; }
 
 .gedit-headerbar-paned {
-  color: rgba(26, 28, 32, 0.96); }
+  color: rgba(31, 34, 39, 0.95); }
 
 .open-document-selector-treeview.view {
   padding: 3px 6px 3px 6px;
-  border-color: #292D33; }
+  border-color: #ffffff; }
   .open-document-selector-treeview.view:prelight {
     background-color: rgba(0, 0, 0, 0.05); }
     .open-document-selector-treeview.view:prelight:selected {
@@ -2422,11 +2422,11 @@ NemoWindow .primary-toolbar NemoPathBar.linked > .button {
 
 /* Only normal state is handle */
 .open-document-selector-name-label {
-  color: #D3DAE3; }
+  color: #5c616c; }
 
 /* Only normal state is handle */
 .open-document-selector-path-label {
-  color: #7e838b;
+  color: #adb0b5;
   font-size: smaller; }
   .open-document-selector-path-label:selected {
     color: rgba(255, 255, 255, 0.9); }
@@ -2441,7 +2441,7 @@ NemoWindow .primary-toolbar NemoPathBar.linked > .button {
   .gedit-document-panel .list-row .button GtkImage {
     color: inherit; }
 .gedit-document-panel .prelight-row .button {
-  color: #999fa8; }
+  color: #92969e; }
 .gedit-document-panel .list-row .button:hover,
 .gedit-document-panel .prelight-row .button:hover {
   color: #ff4d4d; }
@@ -2454,16 +2454,16 @@ NemoWindow .primary-toolbar NemoPathBar.linked > .button {
   .gedit-document-panel .prelight-row:selected .button:hover:active {
     color: #ffffff; }
 .gedit-document-panel .prelight-row .button:active {
-  color: #D3DAE3; }
+  color: #5c616c; }
 
 .gedit-document-panel-dragged-row {
-  border: 1px solid #1d2024;
-  background-color: #181b1f;
-  color: #D3DAE3; }
+  border: 1px solid #dde3e9;
+  background-color: #dae1e7;
+  color: #5c616c; }
 
 GeditStatusbar {
-  border-top: 1px solid #1d2024;
-  background-color: #2F343B; }
+  border-top: 1px solid #dde3e9;
+  background-color: #f9fafb; }
 
 GeditStatusMenuButton.button.flat,
 GeditStatusMenuButton:prelight.button.flat,
@@ -2472,17 +2472,17 @@ GeditStatusMenuButton:checked.button.flat {
   border-radius: 0; }
 
 GeditFileBrowserWidget .toolbar, GeditFileBrowserWidget .inline-toolbar {
-  border-bottom: 1px solid #1d2024; }
+  border-bottom: 1px solid #dde3e9; }
 
 .gedit-search-entry-occurrences-tag, .gb-search-entry-occurrences-tag {
-  color: rgba(211, 218, 227, 0.6);
+  color: rgba(92, 97, 108, 0.6);
   margin: 2px;
   padding: 2px; }
 
 GeditViewFrame .gedit-search-slider, GbEditorFrame .gb-search-slider {
-  background-color: #343941;
+  background-color: white;
   padding: 6px;
-  border-color: #1d2024;
+  border-color: #dde3e9;
   border-radius: 0 0 2px 2px;
   border-width: 0 1px 1px 1px;
   border-style: solid; }
@@ -2490,7 +2490,7 @@ GeditViewFrame .gedit-search-slider, GbEditorFrame .gb-search-slider {
 GbSearchBox.linked > GtkMenuButton.button:last-child:dir(ltr),
 GbSearchBox.linked > GtkMenuButton.button:first-child:dir(rtl) {
   border-color: rgba(207, 218, 231, 0.1);
-  background-color: rgba(42, 47, 53, 0.9); }
+  background-color: rgba(252, 253, 253, 0.9); }
   GbSearchBox.linked > GtkMenuButton.button:last-child:dir(ltr):hover,
   GbSearchBox.linked > GtkMenuButton.button:first-child:dir(rtl):hover {
     border-color: #5294E2; }
@@ -2517,12 +2517,12 @@ GbEditorFrame .gb-search-slider {
   padding: 2px; }
 
 GdTaggedEntry {
-  color: #D3DAE3; }
+  color: #5c616c; }
 
 .preferences.sidebar GtkViewport {
   border: none; }
 .preferences.sidebar GtkListBox {
-  background-color: #2F343B; }
+  background-color: #f9fafb; }
 .preferences.sidebar GtkListBoxRow {
   padding: 10px; }
 
@@ -2558,15 +2558,15 @@ GbSearchDisplayGroup GtkListBox .list-row, GbDocumentStack .button {
 
 GbViewStack GtkBox.header.notebook,
 GbEditorWorkspace > GtkPaned > GtkBox > GtkBox.header.notebook {
-  border-bottom: 1px solid #1d2024; }
+  border-bottom: 1px solid #dde3e9; }
 
 GbViewStack.focused GtkBox.header.notebook {
-  background-color: #2F343B; }
+  background-color: #f9fafb; }
   GbViewStack.focused GtkBox.header.notebook .button.dim-label, GbViewStack.focused GtkBox.header.notebook .button.label.separator, GbViewStack.focused GtkBox.header.notebook .header-bar .button.subtitle, .header-bar GbViewStack.focused GtkBox.header.notebook .button.subtitle {
     opacity: 1; }
 
 EphyWindow .floating-bar {
-  color: #D3DAE3; }
+  color: #5c616c; }
 
 .documents-load-more.button {
   border-width: 1px 0 0;
@@ -2578,7 +2578,7 @@ EphyWindow .floating-bar {
   border-radius: 2px; }
 
 .documents-collection-icon {
-  background-color: rgba(211, 218, 227, 0.3);
+  background-color: rgba(92, 97, 108, 0.3);
   border-radius: 2px; }
 
 .documents-favorite.button:active,
@@ -2716,8 +2716,8 @@ MarlinViewWindow *:selected:focus {
 .marlin-pathbar.pathbar {
   border-radius: 14.5px;
   color: rgba(207, 218, 231, 0.8);
-  border-color: #141619;
-  background-image: linear-gradient(to bottom, rgba(32, 35, 40, 0.9));
+  border-color: rgba(24, 27, 31, 0.95);
+  background-image: linear-gradient(to bottom, rgba(38, 42, 48, 0.85));
   background-color: transparent; }
   .marlin-pathbar.pathbar.image, .marlin-pathbar.pathbar.image:hover {
     color: inherit; }
@@ -2727,18 +2727,18 @@ MarlinViewWindow *:selected:focus {
     background-image: linear-gradient(to bottom, #5294E2); }
   .marlin-pathbar.pathbar:insensitive {
     color: rgba(207, 218, 231, 0.35);
-    background-image: linear-gradient(to bottom, rgba(32, 35, 40, 0.55)); }
+    background-image: linear-gradient(to bottom, rgba(38, 42, 48, 0.5)); }
   .marlin-pathbar.pathbar:active, .marlin-pathbar.pathbar:checked {
     color: #5294E2; }
 
 .gala-notification {
-  border: 1px solid #1d2024;
+  border: 1px solid rgba(0, 0, 0, 0.35);
   border-radius: 3px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  background-image: linear-gradient(to bottom, #292D33);
+  background-image: linear-gradient(to bottom, #ffffff);
   background-color: transparent; }
   .gala-notification .title, .gala-notification .label {
-    color: #D3DAE3; }
+    color: #5c616c; }
 
 .panel {
   background-color: transparent;
@@ -2802,11 +2802,11 @@ MarlinViewWindow *:selected:focus {
 PantheonTerminalPantheonTerminalWindow.background {
   background-color: transparent; }
   PantheonTerminalPantheonTerminalWindow.background .notebook.header.top {
-    box-shadow: inset 0 1px rgba(26, 28, 32, 0.96), inset 0 -1px #1f2227; }
+    box-shadow: inset 0 1px rgba(31, 34, 39, 0.95), inset 0 -1px #edf0f3; }
 
 SwitchboardCategoryView .view:selected,
 SwitchboardCategoryView .view:selected:focus {
-  color: #D3DAE3; }
+  color: #5c616c; }
 
 UnityDecoration {
   -UnityDecoration-extents: 28px 1 1 1;
@@ -2827,15 +2827,15 @@ UnityDecoration {
     border-bottom-width: 0;
     border-radius: 4px 4px 0 0;
     padding: 1px 6px 0 6px;
-    background-image: linear-gradient(to bottom, #25282e);
+    background-image: linear-gradient(to bottom, #2f343b);
     color: rgba(207, 218, 231, 0.8);
-    box-shadow: inset 0 1px rgba(44, 47, 54, 0.96); }
+    box-shadow: inset 0 1px rgba(54, 60, 68, 0.95); }
     UnityDecoration.top:backdrop {
       border-bottom-width: 0;
-      background-image: linear-gradient(to bottom, #282c32);
+      background-image: linear-gradient(to bottom, #32383f);
       color: rgba(207, 218, 231, 0.5); }
   UnityDecoration.left, UnityDecoration.right, UnityDecoration.bottom, UnityDecoration.left:backdrop, UnityDecoration.right:backdrop, UnityDecoration.bottom:backdrop {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25)); }
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1)); }
 
 UnityPanelWidget,
 .unity-panel {
@@ -2862,8 +2862,8 @@ GraniteWidgetsThinPaned {
   background-color: transparent;
   background-image: none;
   margin: 0;
-  border-left: 1px solid #1d2024;
-  border-right: 1px solid #1d2024; }
+  border-left: 1px solid #dde3e9;
+  border-right: 1px solid #dde3e9; }
 
 GraniteWidgetsPopOver .frame,
 GraniteWidgetsStaticNotebook .frame {
@@ -2875,7 +2875,7 @@ GraniteWidgetsStaticNotebook .frame {
 
 .secondary-toolbar.toolbar, .secondary-toolbar.inline-toolbar {
   padding: 3px;
-  border-bottom: 1px solid #1d2024; }
+  border-bottom: 1px solid #dde3e9; }
   .secondary-toolbar.toolbar .button, .secondary-toolbar.inline-toolbar .button {
     padding: 0 3px 0 3px; }
 
@@ -2883,8 +2883,8 @@ GraniteWidgetsStaticNotebook .frame {
   padding: 5px;
   border-width: 1px 0 0 0;
   border-style: solid;
-  border-color: #1d2024;
-  background-color: #2F343B; }
+  border-color: #dde3e9;
+  background-color: #f9fafb; }
   .bottom-toolbar.toolbar .button, .bottom-toolbar.inline-toolbar .button {
     padding: 2px 3px 2px 3px; }
 
@@ -2894,15 +2894,15 @@ GraniteWidgetsStaticNotebook .frame {
 
 .source-list,
 .source-list.view {
-  background-color: #2F343B;
-  color: #D3DAE3;
+  background-color: #f9fafb;
+  color: #5c616c;
   -gtk-icon-style: regular; }
 
 .source-list.category-expander {
   color: transparent; }
 
 .source-list.view:prelight {
-  background-color: #3a4149; }
+  background-color: white; }
 
 .source-list.view:selected,
 .source-list.view:prelight:selected,
@@ -2915,7 +2915,7 @@ GraniteWidgetsStaticNotebook .frame {
 .source-list .scrollbars-junction {
   border-image: none;
   border-color: transparent;
-  background-color: #2F343B;
+  background-color: #f9fafb;
   background-image: none; }
 
 .source-list.badge,
@@ -2938,7 +2938,7 @@ GraniteWidgetsStaticNotebook .frame {
   color: #5294E2; }
 
 .source-list.category-expander {
-  color: #D3DAE3;
+  color: #5c616c;
   -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
   -GtkTreeView-expander-size: 16; }
 
@@ -2951,16 +2951,16 @@ GraniteWidgetsStaticNotebook .frame {
   -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
 
 GraniteWidgetsWelcome {
-  background-color: #292D33; }
+  background-color: #ffffff; }
 
 GraniteWidgetsWelcome GtkLabel {
-  color: #81878f;
+  color: #aaadb3;
   font: open sans 11;
   text-shadow: none; }
 
 GraniteWidgetsWelcome .h1,
 GraniteWidgetsWelcome .h3 {
-  color: rgba(211, 218, 227, 0.8); }
+  color: rgba(92, 97, 108, 0.8); }
 
 .help_button {
   border-radius: 0; }
@@ -2975,7 +2975,7 @@ GraniteWidgetsPopOver {
   margin: 0; }
 
 .popover_bg {
-  background-image: linear-gradient(to bottom, #292D33);
+  background-image: linear-gradient(to bottom, #ffffff);
   border: 1px solid rgba(0, 0, 0, 0.3); }
 
 GraniteWidgetsPopOver .sidebar.view,
@@ -2993,7 +2993,7 @@ GraniteWidgetsPopOver * {
 
 .h4,
 .category-label {
-  color: #a1a8b0;
+  color: #8b8e96;
   font-weight: 600;
   text-shadow: 0 1px rgba(255, 255, 255, 0.6); }
 
@@ -3005,27 +3005,18 @@ GtkListBox .h4 {
   padding-left: 6px; }
 
 .titlebar .separator, .titlebar GtkPlacesSidebar.sidebar .view.separator, GtkPlacesSidebar.sidebar .titlebar .view.separator {
-  color: rgba(26, 28, 32, 0.96); }
+  color: rgba(31, 34, 39, 0.95); }
 
 GtkFileChooserDialog .dialog-action-box {
-  background-color: #2F343B; }
+  background-color: #f9fafb; }
 
 NemoWindow GtkEventBox {
-  background-color: #2F343B; }
+  background-color: #f9fafb; }
 
 GtkFileChooserDialog *,
 NautilusWindow *,
 NemoWindow {
   -GtkPaned-handle-size: 0; }
-
-GtkFileChooserDialog .sidebar,
-NautilusWindow .sidebar,
-NemoWindow .sidebar {
-  box-shadow: inset -1px 0 rgba(32, 35, 39, 0.95); }
-GtkFileChooserDialog .sidebar:dir(rtl),
-NautilusWindow .sidebar:dir(rtl),
-NemoWindow .sidebar:dir(rtl) {
-  box-shadow: inset 1px 0 rgba(32, 35, 39, 0.95); }
 
 GtkFileChooserDialog.csd.background,
 GtkFileChooserDialog .source-list, GtkFileChooserDialog .source-list.view, GtkFileChooserDialog .source-list.view:prelight,
@@ -3049,7 +3040,7 @@ NemoWindow .sidebar,
 NemoWindow .source-list.sidebar.view,
 MarlinViewWindow .sidebar,
 MarlinViewWindow .source-list.sidebar.view {
-  background-color: rgba(48, 52, 59, 0.95); }
+  background-color: rgba(60, 64, 73, 0.95); }
   GtkFileChooserDialog .sidebar .view, GtkFileChooserDialog .sidebar row, GtkFileChooserDialog .source-list.sidebar.view .view, GtkFileChooserDialog .source-list.sidebar.view row,
   NautilusWindow .sidebar .view,
   NautilusWindow .sidebar row,
@@ -3167,31 +3158,31 @@ GtkFileChooserDialog.maximized .sidebar,
 NautilusWindow.maximized .sidebar,
 NemoWindow.maximized .sidebar,
 MarlinViewWindow.maximized .sidebar {
-  background-color: #30343b; }
+  background-color: #3c4049; }
 GtkFileChooserDialog .pane-separator,
 NautilusWindow .pane-separator,
 NemoWindow .pane-separator,
 MarlinViewWindow .pane-separator {
-  background-color: rgba(32, 35, 39, 0.95); }
+  background-color: rgba(60, 64, 73, 0.95); }
 
 GtkFileChooserDialog GtkPaned > .vertical > .horizontal {
-  background-color: #2F343B; }
+  background-color: #f9fafb; }
 
 GeditWindow.background.csd {
   background-color: transparent; }
   GeditWindow.background.csd .pane-separator,
   GeditWindow.background.csd .pane-separator:hover {
-    background-color: rgba(32, 35, 39, 0.95); }
+    background-color: rgba(60, 64, 73, 0.95); }
   GeditWindow.background.csd .titlebar .pane-separator {
-    background-color: rgba(26, 28, 32, 0.96); }
+    background-color: rgba(31, 34, 39, 0.95); }
 
 .gedit-bottom-panel-paned {
-  background-color: #292D33; }
+  background-color: #ffffff; }
 
 .gedit-document-panel {
-  background-color: rgba(48, 52, 59, 0.95); }
+  background-color: rgba(60, 64, 73, 0.95); }
   .maximized .gedit-document-panel {
-    background-color: #30343b; }
+    background-color: #3c4049; }
   .gedit-document-panel .list-row {
     color: #A8ADB5; }
   .gedit-document-panel .list-row {
@@ -3218,9 +3209,9 @@ GeditWindow.background.csd {
     color: #A8ADB5; }
 
 GeditWindow.background.csd GeditFileBrowserWidget {
-  background-color: rgba(48, 52, 59, 0.95); }
+  background-color: rgba(60, 64, 73, 0.95); }
   .maximized GeditWindow.background.csd GeditFileBrowserWidget {
-    background-color: #30343b; }
+    background-color: #3c4049; }
   GeditWindow.background.csd GeditFileBrowserWidget .scrollbar.overlay-indicator:not(.dragging):not(.hovering) .slider {
     background-color: #d1d4d8;
     border: 1px solid rgba(0, 0, 0, 0.3); }
@@ -3237,7 +3228,7 @@ GeditWindow.background.csd GeditFileBrowserWidget {
       background-color: transparent; }
   GeditWindow.background.csd GeditFileBrowserWidget .horizontal {
     background-color: transparent;
-    border-color: rgba(32, 35, 39, 0.95); }
+    border-color: rgba(44, 47, 53, 0.95); }
     GeditWindow.background.csd GeditFileBrowserWidget .horizontal .button {
       border-color: transparent;
       background-color: transparent;
@@ -3265,8 +3256,8 @@ GeditWindow.background.csd GeditFileBrowserView.view {
       color: #5294E2; }
 
 GtkFileChooserDialog .action-bar.frame {
-  background-color: rgba(44, 47, 53, 0.95);
-  border-color: rgba(32, 35, 39, 0.95); }
+  background-color: rgba(55, 59, 67, 0.95);
+  border-color: rgba(44, 47, 53, 0.95); }
   GtkFileChooserDialog .action-bar.frame GtkLabel {
     color: #A8ADB5; }
   GtkFileChooserDialog .action-bar.frame .button {
@@ -3285,53 +3276,53 @@ GtkFileChooserDialog .action-bar.frame {
     color: #A8ADB5; }
 
 /* GTK NAMED COLORS */
-@define-color theme_fg_color #D3DAE3;
-@define-color theme_text_color #D3DAE3;
-@define-color theme_bg_color #2F343B;
-@define-color theme_base_color #292D33;
+@define-color theme_fg_color #5c616c;
+@define-color theme_text_color #5c616c;
+@define-color theme_bg_color #f9fafb;
+@define-color theme_base_color #ffffff;
 @define-color theme_selected_bg_color #5294E2;
 @define-color theme_selected_fg_color #ffffff;
-@define-color fg_color #D3DAE3;
-@define-color text_color #D3DAE3;
-@define-color bg_color #2F343B;
-@define-color base_color #292D33;
+@define-color fg_color #5c616c;
+@define-color text_color #5c616c;
+@define-color bg_color #f9fafb;
+@define-color base_color #ffffff;
 @define-color selected_bg_color #5294E2;
 @define-color selected_fg_color #ffffff;
-@define-color insensitive_bg_color #343941;
-@define-color insensitive_fg_color rgba(211, 218, 227, 0.45);
-@define-color insensitive_base_color #292D33;
-@define-color theme_unfocused_fg_color #D3DAE3;
-@define-color theme_unfocused_text_color #D3DAE3;
-@define-color theme_unfocused_bg_color #2F343B;
-@define-color theme_unfocused_base_color #292D33;
-@define-color borders #1d2024;
-@define-color unfocused_borders #1d2024;
+@define-color insensitive_bg_color #fcfdfd;
+@define-color insensitive_fg_color rgba(92, 97, 108, 0.55);
+@define-color insensitive_base_color #ffffff;
+@define-color theme_unfocused_fg_color #5c616c;
+@define-color theme_unfocused_text_color #5c616c;
+@define-color theme_unfocused_bg_color #f9fafb;
+@define-color theme_unfocused_base_color #ffffff;
+@define-color borders #dde3e9;
+@define-color unfocused_borders #dde3e9;
 @define-color warning_color #F27835;
 @define-color error_color #FC4138;
 @define-color success_color #73d216;
 @define-color placeholder_text_color #A8A8A8;
 @define-color wm_title rgba(207, 218, 231, 0.8);
 @define-color wm_unfocused_title alpha(rgba(207, 218, 231, 0.8), 0.7);
-@define-color wm_bg #25282e;
-@define-color wm_bg_unfocused #282c32;
-@define-color wm_highlight #2c2f36;
+@define-color wm_bg #2f343b;
+@define-color wm_bg_unfocused #32383f;
+@define-color wm_highlight #363c44;
 @define-color wm_shadow alpha(black, 0.35);
-@define-color wm_button_close_bg #e45e65;
-@define-color wm_button_close_hover_bg #f48085;
-@define-color wm_button_close_active_bg #e6262f;
+@define-color wm_button_close_bg #f37076;
+@define-color wm_button_close_hover_bg #f79da1;
+@define-color wm_button_close_active_bg #ef4048;
 @define-color wm_icon_close_bg #ffffff;
 @define-color wm_icon_close_hover_bg #ffffff;
 @define-color wm_icon_close_active_bg #ffffff;
-@define-color wm_button_bg #212429;
-@define-color wm_button_unfocused_bg #22252b;
-@define-color wm_button_hover_bg #212429;
+@define-color wm_button_bg #fdfdfd;
+@define-color wm_button_unfocused_bg #f6f7f8;
+@define-color wm_button_hover_bg #fdfdfd;
 @define-color wm_button_active_bg #5294E2;
-@define-color wm_button_border #141619;
-@define-color wm_button_unfocused_border #1a1c20;
+@define-color wm_button_border #d8dae0;
+@define-color wm_button_unfocused_border #dddee2;
 @define-color wm_button_hover_border #5294E2;
 @define-color wm_button_active_border #5294E2;
-@define-color wm_icon_bg #777d86;
-@define-color wm_icon_unfocused_bg #575c63;
-@define-color wm_icon_hover_bg #838993;
+@define-color wm_icon_bg #a7adb9;
+@define-color wm_icon_unfocused_bg #babec7;
+@define-color wm_icon_hover_bg #757d91;
 @define-color wm_icon_active_bg #ffffff;
-@define-color content_view_bg #292D33;
+@define-color content_view_bg #ffffff;
