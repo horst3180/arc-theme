@@ -78,6 +78,7 @@ Other options to pass to autogen.sh are
     --disable-metacity         disable Metacity support
     --disable-unity            disable Unity support
     --disable-xfwm             disable XFWM support
+    --disable-xfce-notify      disable XFCE Notify support
     --disable-transparency     disable transparency in the GTK3 theme
 
     --with-gnome=<version>     build the theme for a specific Gnome version (3.14, 3.16)
@@ -98,9 +99,12 @@ from the same directory as this README resides in, or
 
 ### Extras
 
-The `extra` directory in the same directory as this README resides in contains a Chrome/Chromium  theme.
+The `extra` directory in the same directory as this README resides in contains a Chrome/Chromium and a Plank theme.
 
 To install the Chrome/Chromium theme go to the `extra/Chrome` folder and drag and drop the arc-theme.crx into the Chrome/Chromium window. The source of the Chrome themes is located in the source "Chrome/arc-theme" folder.
+
+To install the Plank theme, copy the `extra/Arc-Plank` folder to `~/.local/share/plank/themes` or to `/usr/share/plank/themes` for system-wide use.
+Now open the Plank preferences window by executing `plank --preferences` from a terminal and select `Arc-Plank` as the theme.
 
 ### Troubleshooting
 
