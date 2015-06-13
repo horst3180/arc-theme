@@ -44,6 +44,11 @@ if ENABLE_UNITY
 endif # ENABLE_UNITY
 
 
+if ENABLE_XFCE_NOTIFY
+	cp -r --no-preserve=mode,ownership $(srcdir)/xfce-notify-4.0 $(ithemedir)
+endif # ENABLE_XFCE_NOTIFY
+
+
 if ENABLE_XFWM
 	cp -r --no-preserve=mode,ownership $(srcdir)/xfwm4 $(ithemedir)
 endif # ENABLE_XFWM

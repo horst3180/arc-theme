@@ -78,6 +78,7 @@ Other options to pass to autogen.sh are
     --disable-metacity         disable Metacity support
     --disable-unity            disable Unity support
     --disable-xfwm             disable XFWM support
+    --disable-xfce-notify      disable XFCE Notify support
     --disable-transparency     disable transparency in the GTK3 theme
 
     --with-gnome=<version>     build the theme for a specific Gnome version (3.14, 3.16)
