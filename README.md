@@ -5,6 +5,7 @@ Arc is a flat theme with transparent elements for GTK 3, GTK 2 and Gnome-Shell. 
 ### Requirements
 
 * Gnome/GTK 3.14 or 3.16
+* The `gnome-themes-standard` package
 * The `gtk2-engines-pixbuf` package only for Debian/Ubuntu based distros.
 * The murrine engine. This has different names depending on your distro.
   * `gtk-engine-murrine` (Arch Linux)
