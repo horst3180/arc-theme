@@ -2645,6 +2645,9 @@ EphyWindow .floating-bar {
 TotemGrilo.vertical GdMainView.frame {
   border-width: 0; }
 
+SynapseGuiViewDefault *:selected {
+  background-color: #5294E2; }
+
 .gnome-panel-menu-bar,
 PanelApplet > GtkMenuBar.menubar,
 PanelToplevel,
