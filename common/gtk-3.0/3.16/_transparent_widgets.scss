@@ -95,6 +95,15 @@ GeditWindow.background.csd {
   .pane-separator:hover { background-color: $dark_sidebar_border; }
 
   .titlebar .pane-separator { background-color: if($variant == 'light', darken($header_bg, 7%), darken($header_bg, 5%)); }
+
+  .titlebar { background-color: transparent }
+
+  .gedit-titlebar-left.titlebar,
+  .gedit-titlebar-right.titlebar {
+    background-color: $header_bg;
+
+    &:backdrop { background-color: $header_bg_backdrop; }
+  }
 }
 
 .gedit-bottom-panel-paned { background-color: $base_color; }

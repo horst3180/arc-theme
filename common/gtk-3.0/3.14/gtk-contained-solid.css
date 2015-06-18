@@ -3227,6 +3227,14 @@ GeditWindow.background.csd {
     background-color: #3c4049; }
   GeditWindow.background.csd .titlebar .pane-separator {
     background-color: #d4d5db; }
+  GeditWindow.background.csd .titlebar {
+    background-color: transparent; }
+  GeditWindow.background.csd .gedit-titlebar-left.titlebar,
+  GeditWindow.background.csd .gedit-titlebar-right.titlebar {
+    background-color: #e7e8eb; }
+    GeditWindow.background.csd .gedit-titlebar-left.titlebar:backdrop,
+    GeditWindow.background.csd .gedit-titlebar-right.titlebar:backdrop {
+      background-color: #eff0f2; }
 
 .gedit-bottom-panel-paned {
   background-color: #ffffff; }
