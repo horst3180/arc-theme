@@ -51,10 +51,6 @@ TerminalWindow {
         &:backdrop { color: transparentize($header_fg, 0.3); }
       }
 
-      &.reorderable-page.top:hover {
-        border-bottom-color: if($variant == 'light', darken(opacify($header_bg, 1), 7%), darken(opacify($header_bg, 1), 5%));
-      }
-
       &.reorderable-page.top:active,
       &.reorderable-page.top:active:hover {
         background-color: opacify($header_bg, 1);

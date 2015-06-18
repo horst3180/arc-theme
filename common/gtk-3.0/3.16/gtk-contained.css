@@ -2326,8 +2326,6 @@ TerminalWindow .notebook tab .active-page GtkLabel {
   color: rgba(82, 93, 118, 0.8); }
   TerminalWindow .notebook tab .active-page GtkLabel:backdrop {
     color: rgba(82, 93, 118, 0.5); }
-TerminalWindow .notebook tab.reorderable-page.top:hover {
-  border-bottom-color: #d4d5db; }
 TerminalWindow .notebook tab.reorderable-page.top:active, TerminalWindow .notebook tab.reorderable-page.top:active:hover {
   background-color: #e7e8eb;
   border-color: #d4d5db; }

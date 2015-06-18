@@ -2395,8 +2395,6 @@ TerminalWindow .notebook tab .active-page GtkLabel {
   color: rgba(207, 218, 231, 0.8); }
   TerminalWindow .notebook tab .active-page GtkLabel:backdrop {
     color: rgba(207, 218, 231, 0.5); }
-TerminalWindow .notebook tab.reorderable-page.top:hover {
-  border-bottom-color: #1a1c20; }
 TerminalWindow .notebook tab.reorderable-page.top:active, TerminalWindow .notebook tab.reorderable-page.top:active:hover {
   background-color: #25282e;
   border-color: #1a1c20; }
@@ -2414,7 +2412,8 @@ NautilusCanvasViewContainer.view .entry, NemoIconViewContainer .entry {
   border-radius: 2px; }
 
 .nautilus-desktop.nautilus-canvas-item, .nemo-desktop.nemo-canvas-item {
-  color: #ffffff; }
+  color: #ffffff;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.6); }
   .nautilus-desktop.nautilus-canvas-item:active, .nemo-desktop.nemo-canvas-item:active {
     color: #D3DAE3; }
   .nautilus-desktop.nautilus-canvas-item:selected, .nemo-desktop.nemo-canvas-item:selected {
