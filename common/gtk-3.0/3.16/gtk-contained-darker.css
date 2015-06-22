@@ -1065,9 +1065,10 @@ GtkComboBox {
   .primary-toolbar .scale.trough:insensitive, .header-bar .scale.trough:insensitive {
     background-image: linear-gradient(to bottom, rgba(207, 218, 231, 0.1)); }
 .primary-toolbar .scale.slider, .header-bar .scale.slider {
-  background-image: linear-gradient(to bottom, rgba(236, 236, 237, 0.995)); }
+  background-image: linear-gradient(to bottom, rgba(38, 42, 48, 0.95)); }
   .primary-toolbar .scale.slider:insensitive, .header-bar .scale.slider:insensitive {
-    background-image: linear-gradient(to bottom, rgba(135, 138, 142, 0.97)); }
+    background-image: linear-gradient(to bottom, rgba(45, 49, 56, 0.95));
+    border-color: rgba(61, 92, 129, 0.97); }
 
 /************
  * Pathbars *
@@ -1501,12 +1502,18 @@ GtkSwitch {
 GtkSwitch.trough {
   background-image: -gtk-scaled(url("assets/switch.png"), url("assets/switch@2.png")); }
 
+.list-row:selected GtkSwitch.trough {
+  background-image: -gtk-scaled(url("assets/switch-selected.png"), url("assets/switch-selected@2.png")); }
+
 .header-bar GtkSwitch.trough,
 .primary-toolbar GtkSwitch.trough {
   background-image: -gtk-scaled(url("assets/switch-header-darker.png"), url("assets/switch-header-darker@2.png")); }
 
 GtkSwitch.trough:active {
   background-image: -gtk-scaled(url("assets/switch-active.png"), url("assets/switch-active@2.png")); }
+
+.list-row:selected GtkSwitch.trough:active {
+  background-image: -gtk-scaled(url("assets/switch-active-selected.png"), url("assets/switch-active-selected@2.png")); }
 
 .header-bar GtkSwitch.trough:active,
 .primary-toolbar GtkSwitch.trough:active {
@@ -1515,6 +1522,9 @@ GtkSwitch.trough:active {
 GtkSwitch.trough:insensitive {
   background-image: -gtk-scaled(url("assets/switch-insensitive.png"), url("assets/switch-insensitive@2.png")); }
 
+.list-row:selected GtkSwitch.trough:insensitive {
+  background-image: -gtk-scaled(url("assets/switch-insensitive-selected.png"), url("assets/switch-insensitive-selected@2.png")); }
+
 .header-bar GtkSwitch.trough:insensitive,
 .primary-toolbar GtkSwitch.trough:insensitive {
   background-image: -gtk-scaled(url("assets/switch-insensitive-header-darker.png"), url("assets/switch-insensitive-header-darker@2.png")); }
@@ -1522,9 +1532,15 @@ GtkSwitch.trough:insensitive {
 GtkSwitch.trough:active:insensitive {
   background-image: -gtk-scaled(url("assets/switch-active-insensitive.png"), url("assets/switch-active-insensitive@2.png")); }
 
+.list-row:selected GtkSwitch.trough:active:insensitive {
+  background-image: -gtk-scaled(url("assets/switch-active-insensitive-selected.png"), url("assets/switch-active-insensitive-selected@2.png")); }
+
 .header-bar GtkSwitch.trough:active:insensitive,
 .primary-toolbar GtkSwitch.trough:active:insensitive {
   background-image: -gtk-scaled(url("assets/switch-active-insensitive-header-darker.png"), url("assets/switch-active-insensitive-header-darker@2.png")); }
+
+.list-row:selected GtkSwitch.trough {
+  background-image: -gtk-scaled(url("assets/switch.png"), url("assets/switch@2.png")); }
 
 .list-row:selected GtkSwitch.trough {
   background-image: -gtk-scaled(url("assets/switch-selected.png"), url("assets/switch-selected@2.png")); }
@@ -1534,6 +1550,9 @@ GtkSwitch.trough:active:insensitive {
   background-image: -gtk-scaled(url("assets/switch-header-darker.png"), url("assets/switch-header-darker@2.png")); }
 
 .list-row:selected GtkSwitch.trough:active {
+  background-image: -gtk-scaled(url("assets/switch-active.png"), url("assets/switch-active@2.png")); }
+
+.list-row:selected GtkSwitch.trough:active {
   background-image: -gtk-scaled(url("assets/switch-active-selected.png"), url("assets/switch-active-selected@2.png")); }
 
 .header-bar GtkSwitch.trough:active,
@@ -1541,11 +1560,17 @@ GtkSwitch.trough:active:insensitive {
   background-image: -gtk-scaled(url("assets/switch-active-header-darker.png"), url("assets/switch-active-header-darker@2.png")); }
 
 .list-row:selected GtkSwitch.trough:insensitive {
+  background-image: -gtk-scaled(url("assets/switch-insensitive.png"), url("assets/switch-insensitive@2.png")); }
+
+.list-row:selected GtkSwitch.trough:insensitive {
   background-image: -gtk-scaled(url("assets/switch-insensitive-selected.png"), url("assets/switch-insensitive-selected@2.png")); }
 
 .header-bar GtkSwitch.trough:insensitive,
 .primary-toolbar GtkSwitch.trough:insensitive {
   background-image: -gtk-scaled(url("assets/switch-insensitive-header-darker.png"), url("assets/switch-insensitive-header-darker@2.png")); }
+
+.list-row:selected GtkSwitch.trough:active:insensitive {
+  background-image: -gtk-scaled(url("assets/switch-active-insensitive.png"), url("assets/switch-active-insensitive@2.png")); }
 
 .list-row:selected GtkSwitch.trough:active:insensitive {
   background-image: -gtk-scaled(url("assets/switch-active-insensitive-selected.png"), url("assets/switch-active-insensitive-selected@2.png")); }

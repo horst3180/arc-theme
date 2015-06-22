@@ -1328,9 +1328,13 @@ GtkComboBox {
       &:insensitive { background-image: linear-gradient(to bottom, transparentize($header_fg, 0.7)); }
     }
     &.slider {
-      background-image: linear-gradient(to bottom, mix($base_color, $header_bg, 90%));
+      background-image: linear-gradient(to bottom, if($darker == 'false', mix($base_color, $header_bg, 90%), darken($header_bg, 4%)));
 
-      &:insensitive { background-image: linear-gradient(to bottom, mix($base_color, $header_bg, 40%)); }
+      &:insensitive {
+        background-image: linear-gradient(to bottom, if($darker == 'false', mix($base_color, $header_bg, 40%), darken($header_bg, 1%)));
+
+        @if $darker=='true' { border-color: mix($header_bg, $selected_bg_color, 60%); }
+      }
     }
   }
 }
@@ -1908,7 +1912,11 @@ GtkSwitch {
     // load switch troughs from .png files in assets directory
 
     #{$i}GtkSwitch.trough#{$k} {
-      background-image: -gtk-scaled(url("assets/switch#{$l}#{$j}#{$asset_suffix}.png"),url("assets/switch#{$l}#{$j}#{$asset_suffix}@2.png"));
+      background-image: -gtk-scaled(url("assets/switch#{$l}#{$asset_suffix}.png"),url("assets/switch#{$l}#{$asset_suffix}@2.png"));
+    }
+
+    .list-row:selected GtkSwitch.trough#{$k} {
+      background-image: -gtk-scaled(url("assets/switch#{$l}-selected.png"),url("assets/switch#{$l}-selected@2.png"));
     }
 
     .header-bar GtkSwitch.trough#{$k},
