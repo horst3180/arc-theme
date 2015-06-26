@@ -9,11 +9,11 @@ AC_DEFUN([ARC_ENABLE], [
         )],
         [ENABLE_$1="$enableval"],
         [AS_IF(
-            [test "x$4" == "xdisable"],
+            [test "x$4" = "xdisable"],
             [ENABLE_$1="yes"],
             [ENABLE_$1="no"]
         )]
     )
-    AM_CONDITIONAL([ENABLE_$1], [test "x$ENABLE_$1" == "xyes"])
+    AM_CONDITIONAL([ENABLE_$1], [test "x$ENABLE_$1" = "xyes"])
     AC_SUBST([ENABLE_$1])
 ])
