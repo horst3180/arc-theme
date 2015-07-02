@@ -105,7 +105,8 @@ GtkTextView {
   .grid-child:selected {
     outline-offset: -2px; }
 
-.popover.osd, .osd {
+.popover.osd, .app-notification,
+.app-notification.frame, .osd {
   color: #A8ADB5;
   border: none;
   background-color: rgba(60, 64, 73, 0.95);
@@ -579,7 +580,9 @@ GtkTextView {
   .linked.vertical > GtkComboBox:only-child > .button:hover {
     box-shadow: none; }
 
-.menuitem.button.flat, .button:link, .button:visited, .button:link:hover, .button:link:active, .button:link:checked, .button:visited:hover, .button:visited:active, .button:visited:checked, .menu.button, .popup.button, .notebook tab .button, .list-row.button {
+.menuitem.button.flat, .button:link, .button:visited, .button:link:hover, .button:link:active, .button:link:checked, .button:visited:hover, .button:visited:active, .button:visited:checked, .menu.button, .popup.button, .notebook tab .button, .list-row.button, .app-notification .button.flat,
+.app-notification.frame .button.flat, .app-notification .button.flat:insensitive,
+.app-notification.frame .button.flat:insensitive {
   border-color: transparent;
   background-color: transparent;
   background-image: none;
@@ -1881,12 +1884,40 @@ GtkScrolledWindow GtkViewport.frame {
 .app-notification,
 .app-notification.frame {
   padding: 10px;
-  border-radius: 0 0 2.5px 2.5px;
-  border-width: 0 1px 1px;
+  background-color: rgba(60, 64, 73, 0.95);
+  background-clip: border-box;
+  border-radius: 0 0 2px 2px;
+  border-width: 0 1px 1px 1px;
   border-style: solid;
-  border-color: rgba(0, 0, 0, 0.2);
-  background-color: #ffffff;
-  background-clip: padding-box; }
+  border-color: rgba(37, 39, 45, 0.95); }
+  .app-notification .button,
+  .app-notification.frame .button {
+    color: #A8ADB5;
+    outline-color: rgba(168, 173, 181, 0.3);
+    border-color: rgba(168, 173, 181, 0.3);
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, rgba(48, 52, 59, 0.95)); }
+    .app-notification .button.flat,
+    .app-notification.frame .button.flat {
+      border-color: rgba(82, 148, 226, 0); }
+    .app-notification .button:hover,
+    .app-notification.frame .button:hover {
+      color: #5294E2;
+      outline-color: rgba(168, 173, 181, 0.3);
+      border-color: #5294E2;
+      background-image: linear-gradient(to bottom, rgba(48, 52, 59, 0.95)); }
+    .app-notification .button:active, .app-notification .button:checked,
+    .app-notification.frame .button:active,
+    .app-notification.frame .button:checked {
+      color: #ffffff;
+      outline-color: rgba(255, 255, 255, 0.3);
+      border-color: #5294E2;
+      background-image: linear-gradient(to bottom, #5294E2); }
+    .app-notification .button:insensitive,
+    .app-notification.frame .button:insensitive {
+      color: #5c6069;
+      border-color: rgba(168, 173, 181, 0.2);
+      background-image: linear-gradient(to bottom, rgba(53, 57, 65, 0.95)); }
 
 /*************
  * Expanders *

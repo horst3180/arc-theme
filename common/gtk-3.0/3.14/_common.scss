@@ -2153,14 +2153,27 @@ GtkScrolledWindow {
 
 .app-notification,
 .app-notification.frame {
+  @extend %osd;
   padding: 10px;
-  border-radius: 0 0 2.5px 2.5px;
-  border-width: 0 1px 1px;
+  background-color: $osd_bg_color;
+  background-clip: border-box;
+  border-radius: 0 0 2px 2px;
+  border-width: 0 1px 1px 1px;
   border-style: solid;
-  border-color: rgba(0,0,0,0.2);
-  background-color: $base_color;
-
-  background-clip: padding-box;
+  border-color: darken($osd_bg_color, 10%);
+  
+  .button {
+    @include button(osd);
+    &.flat {
+      @extend %undecorated_button;
+      border-color: transparentize($selected_bg_color, 1);
+      &:insensitive { @extend %undecorated_button; }
+    }
+    &:hover { @include button(osd-hover); }
+    &:active, &:checked { @include button(osd-active); }
+    &:insensitive { @include button(osd-insensitive);
+    }
+  }
 }
 
 /*************
