@@ -1630,7 +1630,7 @@ column-header.button.dnd { // for treeview-like derive widgets
   &.header {
     // FIXME: double borders in some case, can't fix it w/o a class tho
     // FIXME: doesn't work on dark var
-    background-color: $base_color;
+    background-color: mix($base_color, $bg_color, 50%);
 
     // this is the shading of the header behind the tabs
     &.frame {
@@ -1701,8 +1701,8 @@ column-header.button.dnd { // for treeview-like derive widgets
           border-width: 1px;
           border-#{$_tab}-width: 0;
           border-color: $borders_color;
-          background-color: if($variant == 'light', transparentize(black, 0.98), transparentize(black, 0.9));
-          &:hover { background-color: if($variant == 'light', transparentize(black, 0.98), transparentize(black, 0.9)); }
+          background-color: if($variant == 'light', transparentize(black, 0.965), transparentize(black, 0.9));
+          &:hover { background-color: if($variant == 'light', transparentize(black, 0.965), transparentize(black, 0.9)); }
         }
       }
     }
@@ -2683,13 +2683,13 @@ GtkVolumeButton.button { padding: 8px; }
   // see bug #722563
   $_wm_border: if($variant=='light', transparentize(black, 0.9), transparentize(black, 0.35));
 
-  box-shadow: 0 0 0 1px if($darker=='true', transparentize(black, 0.4), $_wm_border), 0 4px 8px 1px $_wm_border;
+  box-shadow: 0 0 0 1px if($darker=='true', darken($header_bg, 7%), $_wm_border), 0 4px 8px 1px $_wm_border;
 
   /* this is used for the resize cursor area */
   margin: 10px;
 
   &:backdrop {
-    box-shadow: 0 0 0 1px if($darker=='true', transparentize(black, 0.4), $_wm_border), 0 4px 5px 2px $_wm_border;
+    box-shadow: 0 0 0 1px if($darker=='true', darken($header_bg, 7%), $_wm_border), 0 4px 5px 2px $_wm_border;
   }
   &.tiled {
     border-radius: 0;
@@ -2697,7 +2697,7 @@ GtkVolumeButton.button { padding: 8px; }
   // server-side decorations as used by mutter
   &.ssd {
     border-radius: 4px 4px 0 0;
-    box-shadow: 0 0 0 1px if($darker=='true', transparentize(black, 0.4), $_wm_border);
+    box-shadow: 0 0 0 1px if($darker=='true', darken($header_bg, 7%), $_wm_border);
 
     &.maximized { border-radius: 0; }
   }

@@ -1291,7 +1291,7 @@ column-header .button, column-header .button:hover, column-header .button:active
     .notebook.frame.left {
       border-left-width: 0; }
   .notebook.header {
-    background-color: #ffffff; }
+    background-color: #fcfcfd; }
     .notebook.header.frame {
       border: 1px solid #dde3e9; }
       .notebook.header.frame.top {
@@ -1335,9 +1335,9 @@ column-header .button, column-header .button:hover, column-header .button:active
         border-width: 1px;
         border-top-width: 0;
         border-color: #dde3e9;
-        background-color: rgba(0, 0, 0, 0.02); }
+        background-color: rgba(0, 0, 0, 0.035); }
         .notebook tab.reorderable-page.top:active:hover, .notebook tab.reorderable-page.top.active-page:hover, .notebook tab.reorderable-page.top.active-page:hover:hover, .notebook tab.top:active:hover, .notebook tab.top.active-page:hover, .notebook tab.top.active-page:hover:hover {
-          background-color: rgba(0, 0, 0, 0.02); }
+          background-color: rgba(0, 0, 0, 0.035); }
     .notebook tab.reorderable-page.bottom, .notebook tab.bottom {
       border-color: transparent; }
       .notebook tab.reorderable-page.bottom:hover, .notebook tab.reorderable-page.bottom.prelight-page, .notebook tab.bottom:hover, .notebook tab.bottom.prelight-page {
@@ -1349,9 +1349,9 @@ column-header .button, column-header .button:hover, column-header .button:active
         border-width: 1px;
         border-bottom-width: 0;
         border-color: #dde3e9;
-        background-color: rgba(0, 0, 0, 0.02); }
+        background-color: rgba(0, 0, 0, 0.035); }
         .notebook tab.reorderable-page.bottom:active:hover, .notebook tab.reorderable-page.bottom.active-page:hover, .notebook tab.reorderable-page.bottom.active-page:hover:hover, .notebook tab.bottom:active:hover, .notebook tab.bottom.active-page:hover, .notebook tab.bottom.active-page:hover:hover {
-          background-color: rgba(0, 0, 0, 0.02); }
+          background-color: rgba(0, 0, 0, 0.035); }
     .notebook tab.reorderable-page.right, .notebook tab.right {
       border-color: transparent; }
       .notebook tab.reorderable-page.right:hover, .notebook tab.reorderable-page.right.prelight-page, .notebook tab.right:hover, .notebook tab.right.prelight-page {
@@ -1363,9 +1363,9 @@ column-header .button, column-header .button:hover, column-header .button:active
         border-width: 1px;
         border-right-width: 0;
         border-color: #dde3e9;
-        background-color: rgba(0, 0, 0, 0.02); }
+        background-color: rgba(0, 0, 0, 0.035); }
         .notebook tab.reorderable-page.right:active:hover, .notebook tab.reorderable-page.right.active-page:hover, .notebook tab.reorderable-page.right.active-page:hover:hover, .notebook tab.right:active:hover, .notebook tab.right.active-page:hover, .notebook tab.right.active-page:hover:hover {
-          background-color: rgba(0, 0, 0, 0.02); }
+          background-color: rgba(0, 0, 0, 0.035); }
     .notebook tab.reorderable-page.left, .notebook tab.left {
       border-color: transparent; }
       .notebook tab.reorderable-page.left:hover, .notebook tab.reorderable-page.left.prelight-page, .notebook tab.left:hover, .notebook tab.left.prelight-page {
@@ -1377,9 +1377,9 @@ column-header .button, column-header .button:hover, column-header .button:active
         border-width: 1px;
         border-left-width: 0;
         border-color: #dde3e9;
-        background-color: rgba(0, 0, 0, 0.02); }
+        background-color: rgba(0, 0, 0, 0.035); }
         .notebook tab.reorderable-page.left:active:hover, .notebook tab.reorderable-page.left.active-page:hover, .notebook tab.reorderable-page.left.active-page:hover:hover, .notebook tab.left:active:hover, .notebook tab.left.active-page:hover, .notebook tab.left.active-page:hover:hover {
-          background-color: rgba(0, 0, 0, 0.02); }
+          background-color: rgba(0, 0, 0, 0.035); }
     .notebook tab GtkLabel {
       padding: 0 2px;
       color: rgba(92, 97, 108, 0.55); }
@@ -2178,16 +2178,16 @@ GtkVolumeButton.button {
 .window-frame {
   border-radius: 4px 4px 0 0;
   border-width: 0px;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6), 0 4px 8px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0 1px rgba(31, 34, 39, 0.95), 0 4px 8px 1px rgba(0, 0, 0, 0.1);
   /* this is used for the resize cursor area */
   margin: 10px; }
   .window-frame:backdrop {
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6), 0 4px 5px 2px rgba(0, 0, 0, 0.1); }
+    box-shadow: 0 0 0 1px rgba(31, 34, 39, 0.95), 0 4px 5px 2px rgba(0, 0, 0, 0.1); }
   .window-frame.tiled {
     border-radius: 0; }
   .window-frame.ssd {
     border-radius: 4px 4px 0 0;
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6); }
+    box-shadow: 0 0 0 1px rgba(31, 34, 39, 0.95); }
     .window-frame.ssd.maximized {
       border-radius: 0; }
   .window-frame.csd.popup, .window-frame.csd.menu {
