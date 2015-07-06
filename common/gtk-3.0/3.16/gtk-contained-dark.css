@@ -859,7 +859,7 @@ GtkComboBox {
 .titlebar {
   padding-left: 7px;
   padding-right: 7px;
-  border-radius: 4px 4px 0 0;
+  border-radius: 3px 3px 0 0;
   color: rgba(207, 218, 231, 0.8);
   background-color: #25282e;
   box-shadow: inset 0 1px rgba(44, 47, 54, 0.96); }
@@ -2175,7 +2175,7 @@ GtkVolumeButton.button {
  * Window Decorations *
  *********************/
 .window-frame {
-  border-radius: 4px 4px 0 0;
+  border-radius: 3px 3px 0 0;
   border-width: 0px;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.65), 0 4px 8px 1px rgba(0, 0, 0, 0.65);
   /* this is used for the resize cursor area */
@@ -2185,7 +2185,7 @@ GtkVolumeButton.button {
   .window-frame.tiled {
     border-radius: 0; }
   .window-frame.ssd {
-    border-radius: 4px 4px 0 0;
+    border-radius: 3px 3px 0 0;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.65); }
     .window-frame.ssd.maximized {
       border-radius: 0; }

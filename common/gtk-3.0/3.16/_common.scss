@@ -1135,7 +1135,7 @@ GtkComboBox {
 .titlebar {
   padding-left: 7px;
   padding-right: 7px;
-  border-radius: 4px 4px 0 0;
+  border-radius: if($darker=='false' and $variant=='light', 4px 4px 0 0, 3px 3px 0 0);
   color: $header_fg;
   background-color: opacify($header_bg, 1);
   box-shadow: inset 0  1px lighten($header_bg, 3%);
@@ -2675,7 +2675,7 @@ GtkVolumeButton.button { padding: 8px; }
  *********************/
 
 .window-frame {
-  border-radius: 4px 4px 0 0;
+  border-radius: if($darker=='false' and $variant=='light', 4px 4px 0 0, 3px 3px 0 0);
   // lamefun trick to get rounded borders regardless of CSD use
   border-width: 0px;
 
@@ -2696,7 +2696,7 @@ GtkVolumeButton.button { padding: 8px; }
   }
   // server-side decorations as used by mutter
   &.ssd {
-    border-radius: 4px 4px 0 0;
+    border-radius: if($darker=='false' and $variant=='light', 4px 4px 0 0, 3px 3px 0 0);
     box-shadow: 0 0 0 1px if($darker=='true', darken($header_bg, 7%), $_wm_border);
 
     &.maximized { border-radius: 0; }
