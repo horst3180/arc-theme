@@ -1887,6 +1887,7 @@ $_scrollbar_bg_color: darken($base_color, 1%);
 GtkSwitch {
   font: 1;
   -GtkSwitch-slider-width: 41;
+  outline-color: transparent;
 
   &.trough, &.slider {
     background-size: 52px 24px;

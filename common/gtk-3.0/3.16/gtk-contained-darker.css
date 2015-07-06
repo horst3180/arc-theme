@@ -1489,7 +1489,8 @@ column-header .button, column-header .button:hover, column-header .button:active
  **********/
 GtkSwitch {
   font: 1;
-  -GtkSwitch-slider-width: 41; }
+  -GtkSwitch-slider-width: 41;
+  outline-color: transparent; }
   GtkSwitch.trough, GtkSwitch.slider {
     background-size: 52px 24px;
     background-repeat: no-repeat;
