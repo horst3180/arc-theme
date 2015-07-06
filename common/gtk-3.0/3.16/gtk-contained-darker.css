@@ -2856,7 +2856,7 @@ MarlinViewWindow *:selected:focus {
 PantheonTerminalPantheonTerminalWindow.background {
   background-color: transparent; }
   PantheonTerminalPantheonTerminalWindow.background .notebook.header.top {
-    box-shadow: inset 0 1px rgba(31, 34, 39, 0.95), inset 0 -1px #edf0f3; }
+    box-shadow: inset 0 1px #1f2227, inset 0 -1px #edf0f3; }
 
 SwitchboardCategoryView .view:selected,
 SwitchboardCategoryView .view:selected:focus {
