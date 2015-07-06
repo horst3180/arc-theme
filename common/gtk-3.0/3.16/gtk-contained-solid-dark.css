@@ -3235,10 +3235,15 @@ GeditWindow.background.csd {
   GeditWindow.background.csd .pane-separator,
   GeditWindow.background.csd .pane-separator:hover {
     background-color: #202327; }
-  GeditWindow.background.csd .titlebar .pane-separator {
+  GeditWindow.background.csd .titlebar .pane-separator, GeditWindow.background.csd.maximized .titlebar .pane-separator,
+  GeditWindow.background.csd .titlebar .pane-separator:backdrop, GeditWindow.background.csd.maximized .titlebar .pane-separator:backdrop {
     background-color: #1a1c20; }
   GeditWindow.background.csd .titlebar {
     background-color: transparent; }
+  GeditWindow.background.csd.maximized .titlebar {
+    background-color: #25282e; }
+    GeditWindow.background.csd.maximized .titlebar:backdrop {
+      background-color: #282c32; }
   GeditWindow.background.csd .gedit-titlebar-left.titlebar,
   GeditWindow.background.csd .gedit-titlebar-right.titlebar {
     background-color: #25282E; }

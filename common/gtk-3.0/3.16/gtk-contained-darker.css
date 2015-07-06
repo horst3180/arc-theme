@@ -3227,10 +3227,15 @@ GeditWindow.background.csd {
   GeditWindow.background.csd .pane-separator,
   GeditWindow.background.csd .pane-separator:hover {
     background-color: rgba(60, 64, 73, 0.95); }
-  GeditWindow.background.csd .titlebar .pane-separator {
+  GeditWindow.background.csd .titlebar .pane-separator, GeditWindow.background.csd.maximized .titlebar .pane-separator,
+  GeditWindow.background.csd .titlebar .pane-separator:backdrop, GeditWindow.background.csd.maximized .titlebar .pane-separator:backdrop {
     background-color: rgba(31, 34, 39, 0.95); }
   GeditWindow.background.csd .titlebar {
     background-color: transparent; }
+  GeditWindow.background.csd.maximized .titlebar {
+    background-color: #2f343b; }
+    GeditWindow.background.csd.maximized .titlebar:backdrop {
+      background-color: rgba(50, 56, 63, 0.95); }
   GeditWindow.background.csd .gedit-titlebar-left.titlebar,
   GeditWindow.background.csd .gedit-titlebar-right.titlebar {
     background-color: rgba(47, 52, 59, 0.95); }
