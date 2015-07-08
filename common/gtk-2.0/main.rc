@@ -81,13 +81,13 @@ style "default" {
   fg[NORMAL] = @text_color
   fg[PRELIGHT] = @fg_color
   fg[SELECTED] = @selected_fg_color
-  fg[INSENSITIVE] = darker (@bg_color)
+  fg[INSENSITIVE] = @insensitive_fg_color
   fg[ACTIVE] = @fg_color
 
   text[NORMAL] = @text_color
   text[PRELIGHT] = @text_color
   text[SELECTED] = @selected_fg_color
-  text[INSENSITIVE] = darker (@bg_color)
+  text[INSENSITIVE] = @insensitive_fg_color
   text[ACTIVE] = @selected_fg_color
 
   base[NORMAL] = @base_color
@@ -683,7 +683,7 @@ style "menu" {
 
   GtkMenuItem::arrow-scaling = 0.4
 
-  bg[NORMAL] = shade (1.08, @bg_color)
+  bg[NORMAL] = @base_color
   bg[INSENSITIVE] = @base_color
   bg[PRELIGHT] = @base_color
 
@@ -691,7 +691,7 @@ style "menu" {
 
     image {
       function = HLINE
-      file = "assets/menu_line_h.png"
+      file = "assets/null.png"
       border = { 0, 0, 0, 0 }
       stretch = TRUE
     }
@@ -2224,7 +2224,7 @@ style "inline_toolbar" {
 
 style "notebook_viewport" {
 
-  bg[NORMAL] = "#fcfcfc"
+  bg[NORMAL] = @notebook_bg
 }
 
 style "tooltips" {
@@ -2297,25 +2297,6 @@ style "xfwm-tabwin-button" {
 }
 
 # Chromium
-style "chrome-gtk-frame" {
-
-  ChromeGtkFrame::frame-color = "#e7e8eb"
-  ChromeGtkFrame::inactive-frame-color = "#e7e8eb"
-
-  ChromeGtkFrame::frame-gradient-size = 0
-  ChromeGtkFrame::frame-gradient-color = shade(0.5, @bg_color)
-
-  ChromeGtkFrame::incognito-frame-color = shade(0.85, @bg_color)
-  ChromeGtkFrame::incognito-inactive-frame-color = @bg_color
-
-  ChromeGtkFrame::incognito-frame-gradient-color = @bg_color
-
-  ChromeGtkFrame::scrollbar-trough-color = shade(0.912, @bg_color)
-  ChromeGtkFrame::scrollbar-slider-prelight-color = shade(1.04, @bg_color)
-  ChromeGtkFrame::scrollbar-slider-normal-color = @bg_color
-
-}
-
 style "chrome_menu_item" {
 
   bg[SELECTED] = @selected_bg_color
@@ -2326,16 +2307,6 @@ style "chrome_menu_item" {
 style "text" {
   engine "murrine" { textstyle = 0 }
 }
-
-# Text Style Menubar
-style "menubar-text" {
-
-  engine "murrine" {
-    text_shade = 0.0
-    textstyle = 2
-  }
-}
-
 
 style "null" {
 
@@ -2405,7 +2376,6 @@ widget "*xchat-inputbox"                                            style "entry
 widget_class "*<GimpToolbox>*<GtkFrame>"                            style "gimp_toolbox_frame"
 
 # Chrome/Chromium
-class "ChromeGtkFrame"                                              style "chrome-gtk-frame"
 widget_class "*Chrom*Button*"                                       style "button"
 widget_class "*<GtkCustomMenu>*<GtkCustomMenuItem>*"                style "chrome_menu_item"
 
@@ -2433,6 +2403,5 @@ widget "xfwm4-tabwin*GtkButton*"                                    style "xfwm-
 # Fixes ugly text shadows for insensitive text
 widget_class "*<GtkLabel>"                                          style "text" 
 widget_class "*<GtkComboBox>*<GtkCellLayout>"                       style "text"
-widget_class "*<GtkMenuBar>*<GtkMenuItem>*<GtkAccelLabel>"          style "menubar-text"
 widget_class "*<GtkNotebook>*<GtkLabel>"                            style "text"
 widget_class "*<GtkNotebook>*<GtkCellLayout>"                       style "text"

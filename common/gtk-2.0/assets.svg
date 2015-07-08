@@ -565,11 +565,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2"
-     inkscape:cx="241.34513"
-     inkscape:cy="260.6699"
+     inkscape:zoom="16"
+     inkscape:cx="293.34974"
+     inkscape:cy="302.58131"
      inkscape:document-units="px"
-     inkscape:current-layer="layer3"
+     inkscape:current-layer="layer1"
      showgrid="false"
      showborder="false"
      inkscape:window-width="1366"
@@ -4287,16 +4287,6 @@
        height="2"
        width="2"
        inkscape:label="#image5750" />
-    <image
-       y="-179.63782"
-       x="279.00043"
-       id="menu_line_h"
-       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAABmJLR0QA/wD/AP+gvaeTAAAACXBI WXMAAAsRAAALEQF/ZF+RAAAAB3RJTUUH3AcEFBQdwu2NkwAAABpJREFUCNdjfP369X8GBgYGFgYG BkYGBgYGADpPA8ceLzbjAAAAAElFTkSuQmCC "
-       style="image-rendering:optimizeSpeed"
-       preserveAspectRatio="none"
-       height="2"
-       width="2"
-       inkscape:label="#image5761" />
     <g
        id="menuitem"
        transform="translate(-7,1.9999974)"

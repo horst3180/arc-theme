@@ -59,6 +59,15 @@ style "menubar_item" {
   }
 }
 
+# Text Style Menubar
+style "menubar-text" {
+
+  engine "murrine" {
+    text_shade = 0.0
+    textstyle = 0
+  }
+}
+
 style "toolbar_entry" {
   xthickness = 6
 
@@ -113,12 +122,35 @@ style "toolbar_entry" {
   }
 }
 
+#Chromium
+style "chrome-gtk-frame" {
+
+  ChromeGtkFrame::frame-color = "#e7e8eb"
+  ChromeGtkFrame::inactive-frame-color = "#e7e8eb"
+
+  ChromeGtkFrame::frame-gradient-size = 0
+  ChromeGtkFrame::frame-gradient-color = shade(0.5, @bg_color)
+
+  ChromeGtkFrame::incognito-frame-color = shade(0.85, @bg_color)
+  ChromeGtkFrame::incognito-inactive-frame-color = @bg_color
+
+  ChromeGtkFrame::incognito-frame-gradient-color = @bg_color
+
+  ChromeGtkFrame::scrollbar-trough-color = shade(0.912, @bg_color)
+  ChromeGtkFrame::scrollbar-slider-prelight-color = shade(1.04, @bg_color)
+  ChromeGtkFrame::scrollbar-slider-normal-color = @bg_color
+
+}
+
 widget_class "*<GtkMenuBar>*"                                       style "menubar"
 widget_class "*<GtkMenuBar>.<GtkMenuItem>*"                         style "menubar_item"
 
 widget_class "*ThunarWindow*<GtkToolbar>"                           style "menubar"
 widget_class "*CajaNavigationWindow*<GtkToolbar>"                   style "menubar"
 
+class "ChromeGtkFrame"                                              style "chrome-gtk-frame"
+
+widget_class "*<GtkMenuBar>*<GtkMenuItem>*<GtkAccelLabel>"          style "menubar-text"
 
 # Whitelist for dark toolbars
 widget_class "*ThunarWindow*<GtkMenuBar>"                           style "menubar-borderless"

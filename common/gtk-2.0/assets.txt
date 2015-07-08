@@ -82,7 +82,6 @@ handle-h
 handle-v
 line-h
 line-v
-menu_line_h
 menuitem
 menubar_button
 null
