@@ -4,7 +4,7 @@
 
 $ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 $asset_suffix: if($variant=='dark', '-dark', ''); // use dark assets in dark variant
-$darker_asset_suffix: if($darker=='true', '-darker', $asset_suffix);
+$darker_asset_suffix: if($darker=='true', '-dark', $asset_suffix);
 
 * {
   background-clip: padding-box;
@@ -1516,7 +1516,7 @@ column-header.button.dnd { // for treeview-like derive widgets
   margin: 4px;
   padding: 0;
   border-radius: 0;
-  background-color: if($variant == 'light', $base_color, darken($base_color, 3%));
+  background-color: $base_color;
   border: 1px solid $borders_color;
 
   .csd & {
@@ -1569,9 +1569,9 @@ column-header.button.dnd { // for treeview-like derive widgets
   border: 1px solid darken($borders_color, 5%);
   border-radius: 3px;
   background-clip: border-box;
-  background-color: if($variant == 'light', $base_color, darken($base_color, 3%));
+  background-color: $base_color;
 
-  box-shadow: 0 2px 6px 1px transparentize(black, 0.93);
+  box-shadow: 0 2px 6px 1px if($variant=='light', transparentize(black, 0.93), transparentize(black, 0.65));
 
   & .separator { color: transparentize($base_color, 1); }
   .label.separator { @extend .label.separator; } // Noice
@@ -1641,7 +1641,7 @@ column-header.button.dnd { // for treeview-like derive widgets
       &.left { border-right-width: 0; }
     }
 
-    $_header_border: if($variant == 'light', lighten($borders_color, 5%), lighten($borders_color, 1%));
+    $_header_border: if($variant == 'light', lighten($borders_color, 5%), $borders_color);
     &.top {
       box-shadow: inset 0 -1px $_header_border; // border
     }
@@ -1701,8 +1701,8 @@ column-header.button.dnd { // for treeview-like derive widgets
           border-width: 1px;
           border-#{$_tab}-width: 0;
           border-color: $borders_color;
-          background-color: if($variant == 'light', transparentize(black, 0.965), transparentize(black, 0.9));
-          &:hover { background-color: if($variant == 'light', transparentize(black, 0.965), transparentize(black, 0.9)); }
+          background-color: if($variant == 'light', transparentize(black, 0.965), transparentize(black, 0.85));
+          &:hover { background-color: if($variant == 'light', transparentize(black, 0.965), transparentize(black, 0.85)); }
         }
       }
     }
@@ -2005,7 +2005,7 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
   }
   &.slider {
     background-clip: border-box;
-    background-image: linear-gradient(to bottom, $base_color);
+    background-image: linear-gradient(to bottom, $entry_bg);
     border: 1px solid $selected_bg_color;
     border-radius: 50%;
     box-shadow: none;
@@ -2015,7 +2015,7 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
     border-color: $selected_bg_color;
     }
     &:insensitive {
-      background-image: linear-gradient(to bottom, mix($base_color, $bg_color, 55%));
+      background-image: linear-gradient(to bottom, mix($entry_bg, $bg_color, 55%));
       border-color: mix($selected_bg_color, $bg_color, 55%);
     }
     &:active {
@@ -2053,9 +2053,12 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
     }
   }
   &.trough {
+
+    $_scale_trough_bg: if($variant == 'light', $button_border, darken($base_color, 4%));
+
     border: none;
     border-radius: 2.5px;
-    background-image: linear-gradient(to bottom, $button_border);
+    background-image: linear-gradient(to bottom, $_scale_trough_bg);
     &.highlight {
       background-image: linear-gradient(to bottom, $selected_bg_color);
 
@@ -2064,7 +2067,7 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
       }
     }
     &:insensitive {
-      background-image: linear-gradient(to bottom, transparentize($button_border, 0.45));
+      background-image: linear-gradient(to bottom, transparentize($_scale_trough_bg, 0.45));
     }
 
     //OSD troughs
@@ -2130,7 +2133,7 @@ GtkProgressBar {
 GtkProgressBar.trough {
   border: none;
   border-radius: 3px;
-  background-color: $button_border;
+  background-color: if($variant == 'light', $button_border, darken($base_color, 4%));
 
   &.osd {
     border-style: none;
@@ -2682,15 +2685,17 @@ GtkVolumeButton.button { padding: 8px; }
 
   // this needs to be transparent
   // see bug #722563
-  $_wm_border: if($variant=='light', transparentize(black, 0.9), transparentize(black, 0.35));
+  $_wm_border: if($variant=='light', transparentize(black, 0.9), transparentize(black, 0.45));
 
-  box-shadow: 0 0 0 1px if($darker=='true', darken($header_bg, 7%), $_wm_border), 0 4px 8px 1px $_wm_border;
+  box-shadow: 0 0 0 1px if($darker=='true' or $variant == 'dark', darken($header_bg, 7%), $_wm_border),
+              0 4px 8px 1px if($darker == 'false', $_wm_border, opacify($_wm_border, 0.15));
 
   /* this is used for the resize cursor area */
   margin: 10px;
 
   &:backdrop {
-    box-shadow: 0 0 0 1px if($darker=='true', darken($header_bg, 7%), $_wm_border), 0 4px 5px 2px $_wm_border;
+    box-shadow: 0 0 0 1px if($darker=='true' or $variant == 'dark', darken($header_bg, 7%), $_wm_border),
+                0 4px 5px 2px if($darker == 'false', $_wm_border, opacify($_wm_border, 0.15));
   }
   &.tiled {
     border-radius: 0;
@@ -2698,7 +2703,7 @@ GtkVolumeButton.button { padding: 8px; }
   // server-side decorations as used by mutter
   &.ssd {
     border-radius: if($darker=='false' and $variant=='light', 4px 4px 0 0, 3px 3px 0 0);
-    box-shadow: 0 0 0 1px if($darker=='true', darken($header_bg, 7%), $_wm_border);
+    box-shadow: 0 0 0 1px if($darker=='true' or $variant == 'dark', darken($header_bg, 7%), $_wm_border);
 
     &.maximized { border-radius: 0; }
   }
@@ -2706,7 +2711,7 @@ GtkVolumeButton.button { padding: 8px; }
     &.popup, &.menu {
       border-radius: 3px;
       box-shadow: 0 3px 6px if($variant == 'light', $_wm_border, transparentize($_wm_border, 0.1)),
-                  0 0 0 1px if($variant == 'light', $_wm_border, transparentize($_wm_border, 0.1));
+                  0 0 0 1px if($variant == 'light', $_wm_border, darken($base_color, 10%));
     }
     &.tooltip {
       border-radius: 2px;

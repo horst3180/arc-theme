@@ -52,13 +52,17 @@
     background-image: linear-gradient(to bottom, transparentize($entry_bg, 0.45));
   }
 
+  $_header_entry_bg: if($darker == 'true' or $variant == 'dark', transparentize(darken($header_bg, 4%), 0.1), transparentize($base_color, 0.1));
+  $_header_entry_border: if($darker == 'true' or $variant == 'dark', darken($header_bg, 10%), transparentize($header_fg, 0.7));
+
   @if $t==header-normal {
   //
   // normal header-bar entry
   //
+
     color: $header_fg;
-    border-color: if($variant == 'light', transparentize($header_fg, 0.7), darken($borders_color, 4%));
-    background-image: linear-gradient(to bottom, if($variant == 'light', transparentize($base_color, 0.1), transparentize(darken($base_color, 4%), 0.1)));
+    border-color: $_header_entry_border;
+    background-image: linear-gradient(to bottom, $_header_entry_bg);
     background-color: transparent;
 
     &.image, &.image:hover { color: inherit; }
@@ -78,7 +82,7 @@
   // insensitive header-bar entry
   //
     color: transparentize($header_fg, 0.45);
-    background-image: linear-gradient(to bottom, if($variant == 'light', transparentize($base_color, 0.45), transparentize(darken($base_color, 4%), 0.45)));
+    background-image: linear-gradient(to bottom, transparentize($_header_entry_bg, 0.35));
   }
 
   @if $t==osd {
@@ -175,6 +179,9 @@
     > GtkLabel { color: inherit; }
   }
 
+  $_header_button_bg: if($darker == 'true' or $variant == 'dark', transparentize(darken($header_bg, 3%), 0.1), transparentize($button_bg, 0.1));
+  $_header_button_border: if($darker == 'true' or $variant == 'dark', darken($header_bg, 8%), transparentize($header_fg, 0.7));
+
   @if $t==header-normal {
   //
   // normal header-bar button
@@ -192,8 +199,8 @@
   //
     color: $header_fg;
     outline-color: transparentize($header_fg, 0.7);
-    border-color: if($variant == 'light', transparentize($header_fg, 0.7), darken($borders_color, 4%));
-    background-color: if($variant == 'light', transparentize($button_bg, 0.1), transparentize(darken($button_bg, 4%), 0.1));
+    border-color: $_header_button_border;
+    background-color: $_header_button_bg;
   }
 
   @else if $t==header-active {

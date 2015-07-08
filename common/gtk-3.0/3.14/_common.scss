@@ -4,6 +4,7 @@
 
 $ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 $asset_suffix: if($variant=='dark', '-dark', ''); // use dark assets in dark variant
+$darker_asset_suffix: if($darker=='true', '-dark', $asset_suffix);
 
 * {
   background-clip: padding-box;
@@ -1024,7 +1025,7 @@ GtkComboBox {
   border-width: 0 0 1px;
   border-style: solid;
   border-radius: 0;
-  border-color: if($variant == 'light', darken($header_bg, 7%), darken($header_bg, 5%));
+  border-color: $header_border;
 
   color: $header_fg;
   background-color: opacify($header_bg, 1);
@@ -1125,7 +1126,7 @@ GtkComboBox {
 .titlebar {
   padding-left: 7px;
   padding-right: 7px;
-  border-radius: 4px 4px 0 0;
+  border-radius: if($darker=='false' and $variant=='light', 4px 4px 0 0, 3px 3px 0 0);
   color: $header_fg;
   background-color: opacify($header_bg, 1);
   box-shadow: inset 0  1px lighten($header_bg, 3%);
@@ -1318,9 +1319,13 @@ GtkComboBox {
       &:insensitive { background-image: linear-gradient(to bottom, transparentize($header_fg, 0.7)); }
     }
     &.slider {
-      background-image: linear-gradient(to bottom, mix($base_color, $header_bg, 90%));
+      background-image: linear-gradient(to bottom, if($darker == 'false', mix($base_color, $header_bg, 90%), darken($header_bg, 4%)));
 
-      &:insensitive { background-image: linear-gradient(to bottom, mix($base_color, $header_bg, 40%)); }
+      &:insensitive {
+        background-image: linear-gradient(to bottom, if($darker == 'false', mix($base_color, $header_bg, 40%), darken($header_bg, 1%)));
+
+        @if $darker=='true' { border-color: mix($header_bg, $selected_bg_color, 60%); }
+      }
     }
   }
 }
@@ -1488,7 +1493,7 @@ column-header.button.dnd { // for treeview-like derive widgets
   margin: 4px;
   padding: 0;
   border-radius: 0;
-  background-color: if($variant == 'light', $base_color, darken($base_color, 3%));
+  background-color: $base_color;
   border: 1px solid $borders_color;
 
   .csd & {
@@ -1542,9 +1547,9 @@ column-header.button.dnd { // for treeview-like derive widgets
   border: 1px solid darken($borders_color, 5%);
   border-radius: 3px;
   background-clip: border-box;
-  background-color: if($variant == 'light', $base_color, darken($base_color, 3%));
+  background-color: $base_color;
 
-  box-shadow: 0 2px 6px 1px transparentize(black, 0.93);
+  box-shadow: 0 2px 6px 1px if($variant=='light', transparentize(black, 0.93), transparentize(black, 0.65));
 
   & .separator { color: transparentize($base_color, 1); }
   GtkLabel.separator { @extend GtkLabel.separator; } // Noice
@@ -1603,7 +1608,7 @@ column-header.button.dnd { // for treeview-like derive widgets
   &.header {
     // FIXME: double borders in some case, can't fix it w/o a class tho
     // FIXME: doesn't work on dark var
-    background-color: $base_color;
+    background-color: mix($base_color, $bg_color, 50%);
 
     // this is the shading of the header behind the tabs
     &.frame {
@@ -1614,7 +1619,7 @@ column-header.button.dnd { // for treeview-like derive widgets
       &.left { border-right-width: 0; }
     }
 
-    $_header_border: if($variant == 'light', lighten($borders_color, 5%), lighten($borders_color, 1%));
+    $_header_border: if($variant == 'light', lighten($borders_color, 5%), $borders_color);
     &.top {
       box-shadow: inset 0 -1px $_header_border; // border
     }
@@ -1674,8 +1679,8 @@ column-header.button.dnd { // for treeview-like derive widgets
           border-width: 1px;
           border-#{$_tab}-width: 0;
           border-color: $borders_color;
-          background-color: if($variant == 'light', transparentize(black, 0.98), transparentize(black, 0.9));
-          &:hover { background-color: if($variant == 'light', transparentize(black, 0.98), transparentize(black, 0.9)); }
+          background-color: if($variant == 'light', transparentize(black, 0.965), transparentize(black, 0.85));
+          &:hover { background-color: if($variant == 'light', transparentize(black, 0.965), transparentize(black, 0.85)); }
         }
       }
     }
@@ -1773,6 +1778,7 @@ column-header.button.dnd { // for treeview-like derive widgets
 GtkSwitch {
   font: 1;
   -GtkSwitch-slider-width: 41;
+  outline-color: transparent;
 
   &.trough, &.slider {
     background-size: 52px 24px;
@@ -1788,7 +1794,7 @@ GtkSwitch {
   }
 }
 
-@each $i,$j in ('',''), ('.header-bar ','-header'), ('.list-row:selected ','-selected') {
+@each $i,$j in ('',''), ('.list-row:selected ','-selected') {
 
   @each $k,$l in ('',''),
                  (':active','-active'),
@@ -1798,7 +1804,16 @@ GtkSwitch {
     // load switch troughs from .png files in assets directory
 
     #{$i}GtkSwitch.trough#{$k} {
-      background-image: -gtk-scaled(url("assets/switch#{$l}#{$j}#{$asset_suffix}.png"),url("assets/switch#{$l}#{$j}#{$asset_suffix}@2.png"));
+      background-image: -gtk-scaled(url("assets/switch#{$l}#{$asset_suffix}.png"),url("assets/switch#{$l}#{$asset_suffix}@2.png"));
+    }
+
+    .list-row:selected GtkSwitch.trough#{$k} {
+      background-image: -gtk-scaled(url("assets/switch#{$l}-selected.png"),url("assets/switch#{$l}-selected@2.png"));
+    }
+
+    .header-bar GtkSwitch.trough#{$k},
+    .primary-toolbar GtkSwitch.trough#{$k} {
+      background-image: -gtk-scaled(url("assets/switch#{$l}-header#{$darker_asset_suffix}.png"),url("assets/switch#{$l}-header#{$darker_asset_suffix}@2.png"));
     }
 
     // load switch sliders from .png files in assets directory
@@ -1881,7 +1896,7 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
   }
   &.slider {
     background-clip: border-box;
-    background-image: linear-gradient(to bottom, $base_color);
+    background-image: linear-gradient(to bottom, $entry_bg);
     border: 1px solid $selected_bg_color;
     border-radius: 50%;
     box-shadow: none;
@@ -1891,7 +1906,7 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
     border-color: $selected_bg_color;
     }
     &:insensitive {
-      background-image: linear-gradient(to bottom, mix($base_color, $bg_color, 55%));
+      background-image: linear-gradient(to bottom, mix($entry_bg, $bg_color, 55%));
       border-color: mix($selected_bg_color, $bg_color, 55%);
     }
     &:active {
@@ -1929,9 +1944,12 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
     }
   }
   &.trough {
+
+    $_scale_trough_bg: if($variant == 'light', $button_border, darken($base_color, 4%));
+
     border: none;
     border-radius: 2.5px;
-    background-image: linear-gradient(to bottom, $button_border);
+    background-image: linear-gradient(to bottom, $_scale_trough_bg);
     &.highlight {
       background-image: linear-gradient(to bottom, $selected_bg_color);
 
@@ -1940,7 +1958,7 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
       }
     }
     &:insensitive {
-      background-image: linear-gradient(to bottom, transparentize($button_border, 0.45));
+      background-image: linear-gradient(to bottom, transparentize($_scale_trough_bg, 0.45));
     }
 
     //OSD troughs
@@ -2006,7 +2024,7 @@ GtkProgressBar {
 GtkProgressBar.trough {
   border: none;
   border-radius: 3px;
-  background-color: $button_border;
+  background-color: if($variant == 'light', $button_border, darken($base_color, 4%));
 
   &.osd {
     border-style: none;
@@ -2531,22 +2549,23 @@ GtkVolumeButton.button { padding: 8px; }
  *********************/
 
 .window-frame {
-  border-radius: 4px 4px 0 0;
+  border-radius: if($darker=='false' and $variant=='light', 4px 4px 0 0, 3px 3px 0 0);
   // lamefun trick to get rounded borders regardless of CSD use
   border-width: 0px;
 
   // this needs to be transparent
   // see bug #722563
-  $_wm_border: if($variant=='light', transparentize(black, 0.9), transparentize(black, 0.35));
-  $_wm_border_backdrop: if($variant=='light', transparentize(black, 0.9), transparentize(black, 0.35));
+  $_wm_border: if($variant=='light', transparentize(black, 0.9), transparentize(black, 0.45));
 
-  box-shadow: 0 0 0 1px $_wm_border, 0 4px 8px 1px $_wm_border;
+  box-shadow: 0 0 0 1px if($darker=='true' or $variant == 'dark', darken($header_bg, 7%), $_wm_border),
+              0 4px 8px 1px if($darker == 'false', $_wm_border, opacify($_wm_border, 0.15));
 
   /* this is used for the resize cursor area */
   margin: 10px;
 
   &:backdrop {
-    box-shadow: 0 0 0 1px $_wm_border, 0 4px 5px 2px $_wm_border_backdrop;
+    box-shadow: 0 0 0 1px if($darker=='true' or $variant == 'dark', darken($header_bg, 7%), $_wm_border),
+                0 4px 5px 2px if($darker == 'false', $_wm_border, opacify($_wm_border, 0.15));
   }
   &.tiled {
     border-radius: 0;
@@ -2555,7 +2574,7 @@ GtkVolumeButton.button { padding: 8px; }
     &.popup, &.menu {
       border-radius: 3px;
       box-shadow: 0 3px 6px if($variant == 'light', $_wm_border, transparentize($_wm_border, 0.1)),
-                  0 0 0 1px if($variant == 'light', $_wm_border, transparentize($_wm_border, 0.1));
+                  0 0 0 1px if($variant == 'light', $_wm_border, darken($base_color, 10%));
     }
     &.tooltip {
       border-radius: 2px;
@@ -2595,11 +2614,11 @@ GtkVolumeButton.button { padding: 8px; }
   .right:dir(rtl) .button.titlebutton:nth-child(3),
   .left .button.titlebutton:nth-child(3),
   .left:dir(rtl) .button.titlebutton:nth-last-child(3) {
-    background-image: -gtk-scaled(url('assets/titlebutton-min#{$asset_suffix}.png'),url('assets/titlebutton-min#{$asset_suffix}@2.png'));
+    background-image: -gtk-scaled(url('assets/titlebutton-min#{$asset_suffix}.png'),url('assets/titlebutton-min#{$darker_asset_suffix}@2.png'));
 
-    &:hover, &:backdrop:hover { background-image: -gtk-scaled(url('assets/titlebutton-min-hover#{$asset_suffix}.png'),url('assets/titlebutton-min-hover#{$asset_suffix}@2.png')); }
-    &:active:hover { background-image: -gtk-scaled(url('assets/titlebutton-min-active#{$asset_suffix}.png'),url('assets/titlebutton-min-active#{$asset_suffix}@2.png')); }
-    &:backdrop { background-image: -gtk-scaled(url('assets/titlebutton-min-backdrop#{$asset_suffix}.png'),url('assets/titlebutton-min-backdrop#{$asset_suffix}@2.png')); }
+    &:hover, &:backdrop:hover { background-image: -gtk-scaled(url('assets/titlebutton-min-hover#{$darker_asset_suffix}.png'),url('assets/titlebutton-min-hover#{$darker_asset_suffix}@2.png')); }
+    &:active:hover { background-image: -gtk-scaled(url('assets/titlebutton-min-active#{$darker_asset_suffix}.png'),url('assets/titlebutton-min-active#{$darker_asset_suffix}@2.png')); }
+    &:backdrop { background-image: -gtk-scaled(url('assets/titlebutton-min-backdrop#{$darker_asset_suffix}.png'),url('assets/titlebutton-min-backdrop#{$darker_asset_suffix}@2.png')); }
 }
 
   // Maximize
@@ -2608,11 +2627,11 @@ GtkVolumeButton.button { padding: 8px; }
   .right:dir(rtl) .button.titlebutton:nth-child(2),
   .left .button.titlebutton:nth-child(2),
   .left:dir(rtl) .button.titlebutton:nth-last-child(2) {
-    background-image: -gtk-scaled(url('assets/titlebutton-max#{$asset_suffix}.png'),url('assets/titlebutton-max#{$asset_suffix}@2.png'));
+    background-image: -gtk-scaled(url('assets/titlebutton-max#{$darker_asset_suffix}.png'),url('assets/titlebutton-max#{$darker_asset_suffix}@2.png'));
 
-    &:hover, &:backdrop:hover { background-image: -gtk-scaled(url('assets/titlebutton-max-hover#{$asset_suffix}.png'),url('assets/titlebutton-max-hover#{$asset_suffix}@2.png')); }
-    &:active:hover { background-image: -gtk-scaled(url('assets/titlebutton-max-active#{$asset_suffix}.png'),url('assets/titlebutton-max-active#{$asset_suffix}@2.png')); }
-    &:backdrop { background-image: -gtk-scaled(url('assets/titlebutton-max-backdrop#{$asset_suffix}.png'),url('assets/titlebutton-max-backdrop#{$asset_suffix}@2.png')); }
+    &:hover, &:backdrop:hover { background-image: -gtk-scaled(url('assets/titlebutton-max-hover#{$darker_asset_suffix}.png'),url('assets/titlebutton-max-hover#{$darker_asset_suffix}@2.png')); }
+    &:active:hover { background-image: -gtk-scaled(url('assets/titlebutton-max-active#{$darker_asset_suffix}.png'),url('assets/titlebutton-max-active#{$darker_asset_suffix}@2.png')); }
+    &:backdrop { background-image: -gtk-scaled(url('assets/titlebutton-max-backdrop#{$darker_asset_suffix}.png'),url('assets/titlebutton-max-backdrop#{$darker_asset_suffix}@2.png')); }
 }
 
   // Close
@@ -2621,11 +2640,11 @@ GtkVolumeButton.button { padding: 8px; }
   .right:dir(rtl) .button.titlebutton:first-child,
   .left .button.titlebutton:first-child,
   .left:dir(rtl) .button.titlebutton:last-child {
-    background-image: -gtk-scaled(url('assets/titlebutton-close#{$asset_suffix}.png'),url('assets/titlebutton-close#{$asset_suffix}@2.png'));
+    background-image: -gtk-scaled(url('assets/titlebutton-close#{$darker_asset_suffix}.png'),url('assets/titlebutton-close#{$darker_asset_suffix}@2.png'));
 
-    &:hover, &:backdrop:hover { background-image: -gtk-scaled(url('assets/titlebutton-close-hover#{$asset_suffix}.png'),url('assets/titlebutton-close-hover#{$asset_suffix}@2.png')); }
-    &:active:hover { background-image: -gtk-scaled(url('assets/titlebutton-close-active#{$asset_suffix}.png'),url('assets/titlebutton-close-active#{$asset_suffix}@2.png')); }
-    &:backdrop { background-image: -gtk-scaled(url('assets/titlebutton-close-backdrop#{$asset_suffix}.png'),url('assets/titlebutton-close-backdrop#{$asset_suffix}@2.png')); }
+    &:hover, &:backdrop:hover { background-image: -gtk-scaled(url('assets/titlebutton-close-hover#{$darker_asset_suffix}.png'),url('assets/titlebutton-close-hover#{$darker_asset_suffix}@2.png')); }
+    &:active:hover { background-image: -gtk-scaled(url('assets/titlebutton-close-active#{$darker_asset_suffix}.png'),url('assets/titlebutton-close-active#{$darker_asset_suffix}@2.png')); }
+    &:backdrop { background-image: -gtk-scaled(url('assets/titlebutton-close-backdrop#{$darker_asset_suffix}.png'),url('assets/titlebutton-close-backdrop#{$darker_asset_suffix}@2.png')); }
   }
 }
 

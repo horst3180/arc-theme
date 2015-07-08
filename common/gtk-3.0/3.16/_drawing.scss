@@ -52,11 +52,8 @@
     background-image: linear-gradient(to bottom, transparentize($entry_bg, 0.45));
   }
 
-  $_header_entry_bg: if($variant == 'light', transparentize($base_color, 0.1), transparentize(darken($base_color, 4%), 0.1));
-  $_header_entry_bg: if($darker == 'true', transparentize(darken($header_bg, 4%), 0.1), $_header_entry_bg);
-
-  $_header_entry_border: if($variant == 'light', transparentize($header_fg, 0.7), darken($borders_color, 4%));
-  $_header_entry_border: if($darker == 'true', darken($header_bg, 10%), $_header_entry_border);
+  $_header_entry_bg: if($darker == 'true' or $variant == 'dark', transparentize(darken($header_bg, 4%), 0.1), transparentize($base_color, 0.1));
+  $_header_entry_border: if($darker == 'true' or $variant == 'dark', darken($header_bg, 10%), transparentize($header_fg, 0.7));
 
   @if $t==header-normal {
   //
@@ -182,11 +179,8 @@
     > GtkLabel { color: inherit; }
   }
 
-  $_header_button_bg: if($variant == 'light', transparentize($button_bg, 0.1), transparentize(darken($button_bg, 4%), 0.1));
-  $_header_button_bg: if($darker == 'true', transparentize(darken($header_bg, 3%), 0.1), $_header_button_bg);
-
-  $_header_button_border: if($variant == 'light', transparentize($header_fg, 0.7), darken($borders_color, 4%));
-  $_header_button_border: if($darker == 'true', darken($header_bg, 8%), $_header_button_border);
+  $_header_button_bg: if($darker == 'true' or $variant == 'dark', transparentize(darken($header_bg, 3%), 0.1), transparentize($button_bg, 0.1));
+  $_header_button_border: if($darker == 'true' or $variant == 'dark', darken($header_bg, 8%), transparentize($header_fg, 0.7));
 
   @if $t==header-normal {
   //

@@ -1,0 +1,17 @@
+// General guidelines:
+// - very unlikely you want to edit something else than _common.scss
+// - keep the number of defined colors to a minimum, use the color blending functions if
+//   you need a subtle shade
+
+$variant: 'light';
+$darker: 'true';
+$transparency: 'true';
+
+@import 'colors';
+@import 'drawing';
+@import 'common';
+@import 'applications';
+@import 'unity';
+@import 'granite';
+@import 'transparent_widgets';
+@import 'colors-public';
