@@ -7,4 +7,4 @@ gtk-primary-button-warps-slider = 1
 include "main.rc"
 include "apps.rc"
 include "panel.rc"
-include "menubar-toolbar/menubar-toolbar.rc"
+include "menubar-toolbar/menubar-toolbar-dark.rc"

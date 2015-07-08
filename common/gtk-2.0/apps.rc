@@ -4,12 +4,12 @@
 style "thunar-handle" { GtkPaned::handle-size = 2 }
 
 style "dark-sidebar" {
-  GtkTreeView::odd_row_color = "#3c4049"
-  GtkTreeView::even_row_color = "#3c4049"
+  GtkTreeView::odd_row_color = @dark_sidebar_bg
+  GtkTreeView::even_row_color = @dark_sidebar_bg
 
 
-  base[NORMAL] = "#3c4049"
-  base[INSENSITIVE] = "#3c4049"
+  base[NORMAL] = @dark_sidebar_bg
+  base[INSENSITIVE] = @dark_sidebar_bg
 
   text[NORMAL] = "#a8adb5"
   text[ACTIVE] = @selected_fg_color

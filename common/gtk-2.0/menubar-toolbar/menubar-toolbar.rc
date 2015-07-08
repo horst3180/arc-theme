@@ -71,6 +71,11 @@ style "menubar-text" {
 style "toolbar_entry" {
   xthickness = 6
 
+  base[NORMAL] = "#fdfdfd"
+  base[INSENSITIVE] = "#f4f5f6"
+
+  text[NORMAL] = "#70788d"
+
   engine "pixmap" {
 
     image {

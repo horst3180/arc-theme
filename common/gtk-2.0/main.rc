@@ -1650,40 +1650,40 @@ style "standalone_entry" {
   engine "pixmap" {
 
     image {
-    function = FLAT_BOX
-    detail = "entry_bg"
-    state = NORMAL
-    file = "assets/entry-border-fill.png"
-    stretch = TRUE
-    border = { 0, 0, 0, 0 }
+      function = FLAT_BOX
+      detail = "entry_bg"
+      state = NORMAL
+      file = "assets/entry-border-fill.png"
+      stretch = TRUE
+      border = { 0, 0, 0, 0 }
     }
 
     image {
-    function = FLAT_BOX
-    detail = "entry_bg"
-    state = ACTIVE
-    file = "assets/entry-border-fill.png"
-    stretch = TRUE
-    border = { 0, 0, 0, 0 }
+      function = FLAT_BOX
+      detail = "entry_bg"
+      state = ACTIVE
+      file = "assets/entry-border-fill.png"
+      stretch = TRUE
+      border = { 0, 0, 0, 0 }
     }
 
     image {
-    function = SHADOW
-    detail = "entry"
-    state = NORMAL
-    shadow = IN
-    file = "assets/entry-border-bg-solid.png"
-    border = { 12, 12, 12, 12 }
-    stretch = TRUE
+      function = SHADOW
+      detail = "entry"
+      state = NORMAL
+      shadow = IN
+      file = "assets/entry-border-bg-solid.png"
+      border = { 12, 12, 12, 12 }
+      stretch = TRUE
     }
 
     image {
-    function = SHADOW
-    detail = "entry"
-    state = ACTIVE
-    file = "assets/entry-border-active-bg-solid.png"
-    border = { 12, 12, 12, 12 }
-    stretch = TRUE
+      function = SHADOW
+      detail = "entry"
+      state = ACTIVE
+      file = "assets/entry-border-active-bg-solid.png"
+      border = { 12, 12, 12, 12 }
+      stretch = TRUE
     }
   }
 }
