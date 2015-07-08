@@ -1,0 +1,6 @@
+/* XPM */
+static char * bottom_active_xpm[] = {
+"12 1 2 1",
+" 	c None",
+".	c #111215",
+"............"};
