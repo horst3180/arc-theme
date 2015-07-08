@@ -33,7 +33,7 @@ MarlinViewWindow {
 
   GtkBox.sidebar { background-color: transparent; }
 
-  .sidebar, MarlinPlacesSidebar {
+  .sidebar, MarlinPlacesSidebar, NemoPlacesSidebar {
     background-color: $dark_sidebar_bg;
 
     .view, .source-list.sidebar row {
