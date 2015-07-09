@@ -81,17 +81,17 @@ $wm_icon_close_hover_bg: $selected_fg_color;
 $wm_icon_close_active_bg: $selected_fg_color;
 
 // Minimize, Maximize
-$wm_button_bg: if($variant == 'light' and $darker == 'false', #fdfdfd, #212429);
-$wm_button_unfocused_bg: if($variant == 'light' and $darker == 'false', #f6f7f8, #22252b);
-$wm_button_hover_bg: if($variant == 'light' and $darker == 'false', #fdfdfd, #212429);
+$wm_button_bg: if($variant == 'light' and $darker == 'false', #fdfdfd, #272c32);
+$wm_button_unfocused_bg: if($variant == 'light' and $darker == 'false', #f6f7f8, #2a3035);
+$wm_button_hover_bg: if($variant == 'light' and $darker == 'false', #fdfdfd, #272c32);
 $wm_button_active_bg: $selected_bg_color;
 
-$wm_button_border: if($variant == 'light' and $darker == 'false', #d8dae0, #141619);
-$wm_button_unfocused_border: if($variant == 'light' and $darker == 'false', #dddee2, #1a1c20);
+$wm_button_border: if($variant == 'light' and $darker == 'false', #d8dae0, #191C21);
+$wm_button_unfocused_border: if($variant == 'light' and $darker == 'false', #dddee2, #1F2328);
 $wm_button_hover_border: $selected_bg_color;
 $wm_button_active_border: $selected_bg_color;
 
-$wm_icon_bg: if($variant == 'light' and $darker == 'false', #a7adb9, #777d86);
-$wm_icon_unfocused_bg: if($variant == 'light' and $darker == 'false', #babec7, #575c63);
-$wm_icon_hover_bg: if($variant == 'light' and $darker == 'false', #757d91, #838993);
+$wm_icon_bg: if($variant == 'light' and $darker == 'false', #a7adb9, #939ca8);
+$wm_icon_unfocused_bg: if($variant == 'light' and $darker == 'false', #babec7, #686f78);
+$wm_icon_hover_bg: if($variant == 'light' and $darker == 'false', #757d91, #afb8c5);
 $wm_icon_active_bg: $selected_fg_color;
