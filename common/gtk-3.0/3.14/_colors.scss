@@ -49,8 +49,13 @@ $entry_focus_border: $selected_bg_color;
 $button_bg: if($variant == 'light', lighten($bg_color, 2%), lighten($base_color, 2%));
 $button_border: $entry_border;
 
-$header_bg: if($transparency == 'true' and $variant == 'light', transparentize(#e7e8eb, 0.05), #e7e8eb);
-$header_bg: if($darker == 'true' or $variant == 'dark', transparentize(#2f343b, 0.03), $header_bg);
+$header_bg: red;
+@if $transparency=='true' and $variant=='light' { $header_bg: transparentize(#e7e8eb, 0.05); }
+@if $transparency=='false' and $variant=='light' { $header_bg: #e7e8eb; }
+@if $transparency=='true' and ($variant=='dark' or $darker=='true') { $header_bg: transparentize(#2f343b, 0.03); }
+@if $transparency=='false' and ($variant=='dark' or $darker=='true') { $header_bg: #2f343b; }
+
+//$header_bg: if(($darker == 'true' or $variant == 'dark') and $transparency == 'true', transparentize(#2f343b, 0.03), #2f343b);
 
 $header_bg_backdrop: if($darker == 'true' or $variant == 'dark', lighten($header_bg, 1.5%), lighten($header_bg, 3%));
 
