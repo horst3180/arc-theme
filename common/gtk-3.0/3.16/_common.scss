@@ -232,7 +232,10 @@ GtkTextView { // This will get overridden by .view, needed by gedit line numbers
     border-radius: 0;
   }
 
-  &:focus { @include entry(focus); }
+  &:focus {
+    background-clip: border-box;
+    @include entry(focus);
+  }
 
   &:insensitive { @include entry(insensitive); }
 
@@ -410,6 +413,7 @@ $_dot_color: $selected_bg_color;
     -gtk-image-effect: highlight;
   }
   &:active, &:checked {
+    background-clip: border-box;
     @include button(active);
     transition-duration: 50ms;
   }
@@ -1189,7 +1193,6 @@ GtkComboBox {
 
     &:focus {
       @include entry(header-focus);
-      background-clip: border-box;
 
       &.image { color: $selected_fg_color; }
     }

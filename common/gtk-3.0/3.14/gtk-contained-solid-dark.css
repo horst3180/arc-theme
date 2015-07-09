@@ -157,6 +157,7 @@ GtkFlowBox .grid-child {
     border: none;
     border-radius: 0; }
   .entry:focus {
+    background-clip: border-box;
     color: #D3DAE3;
     border-color: #5294E2;
     background-color: #383c45;
@@ -275,6 +276,7 @@ GtkFlowBox .grid-child {
     background-color: #3d414b;
     -gtk-image-effect: highlight; }
   .button:active, .button:checked {
+    background-clip: border-box;
     color: #ffffff;
     outline-color: rgba(255, 255, 255, 0.3);
     border-color: #5294E2;
