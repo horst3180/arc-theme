@@ -2614,7 +2614,7 @@ GtkVolumeButton.button { padding: 8px; }
   .right:dir(rtl) .button.titlebutton:nth-child(3),
   .left .button.titlebutton:nth-child(3),
   .left:dir(rtl) .button.titlebutton:nth-last-child(3) {
-    background-image: -gtk-scaled(url('assets/titlebutton-min#{$asset_suffix}.png'),url('assets/titlebutton-min#{$darker_asset_suffix}@2.png'));
+    background-image: -gtk-scaled(url('assets/titlebutton-min#{$darker_asset_suffix}.png'),url('assets/titlebutton-min#{$darker_asset_suffix}@2.png'));
 
     &:hover, &:backdrop:hover { background-image: -gtk-scaled(url('assets/titlebutton-min-hover#{$darker_asset_suffix}.png'),url('assets/titlebutton-min-hover#{$darker_asset_suffix}@2.png')); }
     &:active:hover { background-image: -gtk-scaled(url('assets/titlebutton-min-active#{$darker_asset_suffix}.png'),url('assets/titlebutton-min-active#{$darker_asset_suffix}@2.png')); }
