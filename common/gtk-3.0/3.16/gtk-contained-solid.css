@@ -3392,8 +3392,8 @@ GtkFileChooserDialog .action-bar.frame {
 @define-color wm_button_unfocused_border #dddee2;
 @define-color wm_button_hover_border #5294E2;
 @define-color wm_button_active_border #5294E2;
-@define-color wm_icon_bg #a7adb9;
-@define-color wm_icon_unfocused_bg #babec7;
-@define-color wm_icon_hover_bg #757d91;
+@define-color wm_icon_bg #8d93a4;
+@define-color wm_icon_unfocused_bg #b8bcc7;
+@define-color wm_icon_hover_bg #70788d;
 @define-color wm_icon_active_bg #ffffff;
 @define-color content_view_bg #ffffff;

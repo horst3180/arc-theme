@@ -10,39 +10,39 @@
 
 <!-- meaningfull constants -->
 
-<constant name="C_title_focused" value="#70788d" />
-<constant name="C_title_unfocused" value="#979dac" />
+<constant name="C_title_focused" value="#afb8c5" />
+<constant name="C_title_unfocused" value="#686f78" />
 
-<constant name="C_wm_bg_focused" value="#e7e8eb" />
-<constant name="C_wm_bg_unfocused" value="#eff0f2" />
+<constant name="C_wm_bg_focused" value="#2f343b" />
+<constant name="C_wm_bg_unfocused" value="#32383f" />
 
-<constant name="C_wm_highlight" value="#eeeff1" />
+<constant name="C_wm_highlight" value="#353b44" />
 
 <!-- window button colors -->
 
 <!-- close -->
-<constant name="C_button_close_bg_focused" value="#f37076" />
-<constant name="C_button_close_bg_hover" value="#f79da1" />
-<constant name="C_button_close_bg_active" value="#ef4048" />
+<constant name="C_button_close_bg_focused" value="#e45e65" />
+<constant name="C_button_close_bg_hover" value="#f48085" />
+<constant name="C_button_close_bg_active" value="#e6262f" />
 
 <constant name="C_icon_close_bg_focused" value="#ffffff" />
 <constant name="C_icon_close_bg_hover" value="#ffffff" />
 <constant name="C_icon_close_bg_active" value="#ffffff" />
 
 <!-- minimize, maximize -->
-<constant name="C_button_bg_focused" value="#ffffff" />
-<constant name="C_button_bg_unfocused" value="#ffffff" />
-<constant name="C_button_bg_hover" value="#fdfdfd" />
+<constant name="C_button_bg_focused" value="#272c32" />
+<constant name="C_button_bg_unfocused" value="#2a3035" />
+<constant name="C_button_bg_hover" value="#272c32" />
 <constant name="C_button_bg_active" value="#5294E2" />
 
-<constant name="C_button_border_focused" value="#d8dae0" />
-<constant name="C_button_border_unfocused" value="#dddee2" />
+<constant name="C_button_border_focused" value="#191C21" />
+<constant name="C_button_border_unfocused" value="#1F2328" />
 <constant name="C_button_border_hover" value="#5294E2" />
 <constant name="C_button_border_active" value="#5294E2" />
 
-<constant name="C_icon_bg_focused" value="#a7adb9" />
-<constant name="C_icon_bg_unfocused" value="#babec7" />
-<constant name="C_icon_bg_hover" value="#757d91" />
+<constant name="C_icon_bg_focused" value="#939ca8" />
+<constant name="C_icon_bg_unfocused" value="#686f78" />
+<constant name="C_icon_bg_hover" value="#afb8c5" />
 <constant name="C_icon_bg_active" value="#ffffff" />
 
 <!-- geometries -->

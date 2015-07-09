@@ -91,7 +91,7 @@ $wm_button_unfocused_border: if($variant == 'light' and $darker == 'false', #ddd
 $wm_button_hover_border: $selected_bg_color;
 $wm_button_active_border: $selected_bg_color;
 
-$wm_icon_bg: if($variant == 'light' and $darker == 'false', #a7adb9, #939ca8);
-$wm_icon_unfocused_bg: if($variant == 'light' and $darker == 'false', #babec7, #686f78);
-$wm_icon_hover_bg: if($variant == 'light' and $darker == 'false', #757d91, #afb8c5);
+$wm_icon_bg: if($variant == 'light' and $darker == 'false', #8d93a4, #939ca8);
+$wm_icon_unfocused_bg: if($variant == 'light' and $darker == 'false', #b8bcc7, #686f78);
+$wm_icon_hover_bg: if($variant == 'light' and $darker == 'false', #70788d, #afb8c5);
 $wm_icon_active_bg: $selected_fg_color;
