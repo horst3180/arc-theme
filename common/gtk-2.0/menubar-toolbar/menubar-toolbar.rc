@@ -45,7 +45,7 @@ style "menubar_item" {
   xthickness = 2
   ythickness = 4
 
-  fg[PRELIGHT] = @fg_color
+  fg[PRELIGHT] = @selected_fg_color
 
   engine "pixmap" {
 
