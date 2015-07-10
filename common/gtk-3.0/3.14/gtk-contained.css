@@ -3364,18 +3364,6 @@ GeditWindow.background.csd {
   GeditWindow.background.csd .titlebar .pane-separator, GeditWindow.background.csd.maximized .titlebar .pane-separator,
   GeditWindow.background.csd .titlebar .pane-separator:backdrop, GeditWindow.background.csd.maximized .titlebar .pane-separator:backdrop {
     background-color: rgba(212, 213, 219, 0.95); }
-  GeditWindow.background.csd .titlebar {
-    background-color: transparent; }
-  GeditWindow.background.csd.maximized .titlebar {
-    background-color: #e7e8eb; }
-    GeditWindow.background.csd.maximized .titlebar:backdrop {
-      background-color: rgba(239, 240, 242, 0.95); }
-  GeditWindow.background.csd .gedit-titlebar-left.titlebar,
-  GeditWindow.background.csd .gedit-titlebar-right.titlebar {
-    background-color: rgba(231, 232, 235, 0.95); }
-    GeditWindow.background.csd .gedit-titlebar-left.titlebar:backdrop,
-    GeditWindow.background.csd .gedit-titlebar-right.titlebar:backdrop {
-      background-color: rgba(239, 240, 242, 0.95); }
 
 .gedit-bottom-panel-paned {
   background-color: #ffffff; }

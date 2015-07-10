@@ -98,21 +98,6 @@ GeditWindow.background.csd {
   &.maximized .titlebar .pane-separator,
   .titlebar .pane-separator:backdrop,
   &.maximized .titlebar .pane-separator:backdrop { background-color: $header_border; }
-
-  .titlebar { background-color: transparent; }
-
-  &.maximized .titlebar {
-    background-color: opacify($header_bg, 1);
-
-    &:backdrop { background-color: $header_bg_backdrop; }
-  }
-
-  .gedit-titlebar-left.titlebar,
-  .gedit-titlebar-right.titlebar {
-    background-color: $header_bg;
-
-    &:backdrop { background-color: $header_bg_backdrop; }
-  }
 }
 
 .gedit-bottom-panel-paned { background-color: $base_color; }
