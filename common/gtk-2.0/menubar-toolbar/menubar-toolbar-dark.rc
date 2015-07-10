@@ -92,7 +92,7 @@ style "toolbar_button" {
     image {
       function = BOX
       state = NORMAL
-      file = "assets-dark/button.png"
+      file = "menubar-toolbar/button.png"
       border = { 4, 4, 4, 4 }
       stretch = TRUE
     }
@@ -100,7 +100,7 @@ style "toolbar_button" {
     image {
       function = BOX
       state = PRELIGHT
-      file = "assets-dark/button-hover.png"
+      file = "menubar-toolbar/button-hover.png"
       border = { 4, 4, 4, 4 }
       stretch = TRUE
     }
@@ -108,7 +108,7 @@ style "toolbar_button" {
     image {
       function = BOX
       state = ACTIVE
-      file = "assets-dark/button-active.png"
+      file = "menubar-toolbar/button-active.png"
       border = { 4, 4, 4, 4 }
       stretch = TRUE
     }
@@ -116,7 +116,7 @@ style "toolbar_button" {
     image {
       function = BOX
       state = INSENSITIVE
-      file = "assets-dark/button-insensitive.png"
+      file = "menubar-toolbar/button-insensitive.png"
       border = { 4, 4, 4, 4 }
       stretch = TRUE
     }
