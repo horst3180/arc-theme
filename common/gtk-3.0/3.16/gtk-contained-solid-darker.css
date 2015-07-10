@@ -1937,6 +1937,7 @@ GtkScrolledWindow GtkViewport.frame {
  * Calendar *
  ***********/
 GtkCalendar {
+  color: #5c616c;
   border: 1px solid #dcdfe3;
   border-radius: 3px;
   padding: 2px; }

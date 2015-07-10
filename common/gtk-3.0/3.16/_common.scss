@@ -2321,6 +2321,7 @@ GtkScrolledWindow {
  * Calendar *
  ***********/
 GtkCalendar {
+  color: $fg_color;
   border: 1px solid $borders_color;
   border-radius: 3px;
   padding: 2px;
