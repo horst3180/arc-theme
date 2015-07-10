@@ -12,6 +12,9 @@ AC_CONFIG_MACRO_DIR([m4])
 AM_INIT_AUTOMAKE([foreign])
 AC_PROG_MKDIR_P
 
+ARC_ENABLE([LIGHT],         [light],         [Arc Light],     [disable])
+ARC_ENABLE([DARKER],        [darker],        [Arc Darker],    [disable])
+ARC_ENABLE([DARK],          [dark],          [Arc Dark],      [disable])
 ARC_ENABLE([GNOME_SHELL],   [gnome-shell],   [GNOME Shell],   [disable])
 ARC_ENABLE([GTK2],          [gtk2],          [GTK2],          [disable])
 ARC_ENABLE([GTK3],          [gtk3],          [GTK3],          [disable])
