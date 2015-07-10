@@ -32,9 +32,9 @@ If your distribution is not listed, please check the requirements yourself.
 
 **Important:** Remove all older versions of the theme from your system before you proceed any further.
 
-    sudo rm -rf /usr/share/themes/Arc
-    rm -rf ~/.local/share/themes/Arc
-    rm -rf ~/.themes/Arc
+    sudo rm -rf /usr/share/themes/{Arc,Arc-Darker,Arc-Dark}
+    rm -rf ~/.local/share/themes/{Arc,Arc-Darker,Arc-Dark}
+    rm -rf ~/.themes/{Arc,Arc-Darker,Arc-Dark}
 
 **Packages**
 
@@ -73,6 +73,10 @@ If you want to install the latest version from git, clone the repository with
 
 Other options to pass to autogen.sh are
 
+    --disable-transparency     disable transparency in the GTK3 theme
+    --disable-light            disable Arc Light support
+    --disable-darker           disable Arc Darker support
+    --disable-dark             disable Arc Dark support
     --disable-gnome-shell      disable GNOME Shell support
     --disable-gtk2             disable GTK2 support
     --disable-gtk3             disable GTK3 support
@@ -80,13 +84,12 @@ Other options to pass to autogen.sh are
     --disable-unity            disable Unity support
     --disable-xfwm             disable XFWM support
     --disable-xfce-notify      disable XFCE Notify support
-    --disable-transparency     disable transparency in the GTK3 theme
 
     --with-gnome=<version>     build the theme for a specific Gnome version (3.14, 3.16)
                                Note: Normally the correct version is detected automatically and this
                                option should not be needed.
 
-After the installation is complete you can activate the theme with `gnome-tweak-tool` or a similar program by selecting `Arc`.
+After the installation is complete you can activate the theme with `gnome-tweak-tool` or a similar program by selecting `Arc`, `Arc-Darker` or `Arc-Dark` as Window/GTK+ theme and `Arc` as Gnome-Shell theme.
 
 **Uninstall the theme**
 
@@ -96,7 +99,7 @@ Run
 
 from the same directory as this README resides in, or
 
-    sudo rm -rf /usr/share/themes/Arc
+    sudo rm -rf /usr/share/themes/{Arc,Arc-Darker,Arc-Dark}
 
 ### Extras
 
