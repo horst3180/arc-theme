@@ -18,7 +18,7 @@ UnityDecoration {
   -UnityDecoration-title-alignment: 0.0;
 
   &.top {
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid if($darker=='true' or $variant == 'dark', darken($header_bg, 7%), transparentize(black, 0.9));
     border-bottom-width: 0;
     border-radius: 4px 4px 0 0;
     padding: 1px 6px 0 6px;
@@ -36,7 +36,7 @@ UnityDecoration {
   }
   &.left, &.right, &.bottom,
   &.left:backdrop, &.right:backdrop, &.bottom:backdrop {
-    background-image: linear-gradient(to bottom, if($variant == 'light', rgba(0, 0, 0, 0.1), rgba(0,0,0,0.25)));
+    background-image: linear-gradient(to bottom, if($darker=='true' or $variant == 'dark', darken($header_bg, 7%), transparentize(black, 0.9)));
   }
 }
 

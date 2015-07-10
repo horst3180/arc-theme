@@ -2882,7 +2882,7 @@ UnityDecoration {
   -UnityDecoration-title-fade: 35px;
   -UnityDecoration-title-alignment: 0.0; }
   UnityDecoration.top {
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(31, 34, 39, 0.97);
     border-bottom-width: 0;
     border-radius: 4px 4px 0 0;
     padding: 1px 6px 0 6px;
@@ -2894,7 +2894,7 @@ UnityDecoration {
       background-image: linear-gradient(to bottom, #32383f);
       color: rgba(207, 218, 231, 0.5); }
   UnityDecoration.left, UnityDecoration.right, UnityDecoration.bottom, UnityDecoration.left:backdrop, UnityDecoration.right:backdrop, UnityDecoration.bottom:backdrop {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1)); }
+    background-image: linear-gradient(to bottom, rgba(31, 34, 39, 0.97)); }
 
 UnityPanelWidget,
 .unity-panel {
