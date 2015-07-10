@@ -68,6 +68,61 @@ style "menubar-text" {
   }
 }
 
+
+style "toolbar_text" {
+  fg[NORMAL] = "#afb8c5"
+  fg[PRELIGHT] = "#afb8c5"
+  fg[INSENSITIVE] = shade(0.7, "#afb8c5")
+  fg[ACTIVE] = "#afb8c5"
+
+  text[NORMAL] = "#afb8c5"
+  text[PRELIGHT] = "#afb8c5"
+  text[INSENSITIVE] = shade(0.7, "#afb8c5")
+  text[ACTIVE] = "#afb8c5"
+
+}
+
+style "toolbar_button" {
+
+  xthickness = 4
+  ythickness = 4
+
+  engine "pixmap" {
+
+    image {
+      function = BOX
+      state = NORMAL
+      file = "assets-dark/button.png"
+      border = { 4, 4, 4, 4 }
+      stretch = TRUE
+    }
+
+    image {
+      function = BOX
+      state = PRELIGHT
+      file = "assets-dark/button-hover.png"
+      border = { 4, 4, 4, 4 }
+      stretch = TRUE
+    }
+
+    image {
+      function = BOX
+      state = ACTIVE
+      file = "assets-dark/button-active.png"
+      border = { 4, 4, 4, 4 }
+      stretch = TRUE
+    }
+
+    image {
+      function = BOX
+      state = INSENSITIVE
+      file = "assets-dark/button-insensitive.png"
+      border = { 4, 4, 4, 4 }
+      stretch = TRUE
+    }
+  }
+}
+
 style "toolbar_entry" {
   xthickness = 6
 
@@ -151,14 +206,15 @@ widget_class "*<GtkMenuBar>*"                                       style "menub
 widget_class "*<GtkMenuBar>.<GtkMenuItem>*"                         style "menubar_item"
 
 widget_class "*ThunarWindow*<GtkToolbar>"                           style "menubar"
-widget_class "*CajaNavigationWindow*<GtkToolbar>"                   style "menubar"
 
 class "ChromeGtkFrame"                                              style "chrome-gtk-frame"
 
 widget_class "*<GtkMenuBar>*<GtkMenuItem>*<GtkAccelLabel>"          style "menubar-text"
 
 # Whitelist for dark toolbars
-widget_class "*ThunarWindow*<GtkMenuBar>"                           style "menubar-borderless"
-widget_class "*CajaNavigationWindow*<GtkMenuBar>"                   style "menubar-borderless"
-widget_class "*ThunarWindow*<GtkToolbar>*<GtkEntry>"                style "toolbar_entry"
-widget_class "*CajaNavigationWindow*<GtkToolbar>*<GtkEntry>"        style "toolbar_entry"
+widget_class "*ThunarWindow*<GtkMenuBar>"                                   style "menubar-borderless"
+widget_class "*ThunarWindow*<GtkToolbar>*<GtkEntry>"                        style "toolbar_entry"
+widget_class "*ThunarWindow*<GtkToolbar>*<GtkButton>"                       style "toolbar_button"
+widget_class "*ThunarWindow*<GtkToolbar>*<GtkWidget>"                       style "toolbar_text"
+widget_class "*ThunarWindow*<GtkToolbar>*<GtkButton>*<GtkLabel>"            style "menubar-text"
+
