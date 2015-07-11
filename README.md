@@ -21,7 +21,6 @@ Arc is a flat theme with transparent elements for GTK 3, GTK 2 and Gnome-Shell. 
 
 * Gnome/GTK 3.14 or 3.16
 * The `gnome-themes-standard` package
-* The `gtk2-engines-pixbuf` package only for Debian/Ubuntu based distros.
 * The murrine engine. This has different names depending on your distro.
   * `gtk-engine-murrine` (Arch Linux)
   * `gtk2-engines-murrine` (Debian, Ubuntu, elementary OS)
@@ -57,6 +56,9 @@ Prebuilt packages for Ubuntu, Debian, Fedora and openSUSE are available at
 
 http://software.opensuse.org/download.html?project=home%3AHorst3180&package=arc-theme  
 **Note:** elementary OS Freya users can install the package for Ubuntu 15.04
+
+**Note 2:** The debian packages are broken at the moment. Please install manually until this is fixed.
+
 
 Arch Linux users can install the theme from the AUR
 
