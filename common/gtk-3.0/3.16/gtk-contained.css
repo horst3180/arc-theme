@@ -2545,17 +2545,36 @@ GeditViewFrame .gedit-search-slider, GbEditorFrame .gb-search-slider {
 
 GbSearchBox.linked > GtkMenuButton.button:last-child:dir(ltr),
 GbSearchBox.linked > GtkMenuButton.button:first-child:dir(rtl) {
+  padding: 0 10px;
+  color: rgba(82, 93, 118, 0.8);
   border-color: rgba(82, 93, 118, 0.1);
-  background-color: rgba(251, 251, 252, 0.9); }
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.9));
+  background-color: transparent; }
+  GbSearchBox.linked > GtkMenuButton.button:last-child:dir(ltr).image, GbSearchBox.linked > GtkMenuButton.button:last-child:dir(ltr).image:hover,
+  GbSearchBox.linked > GtkMenuButton.button:first-child:dir(rtl).image,
+  GbSearchBox.linked > GtkMenuButton.button:first-child:dir(rtl).image:hover {
+    color: inherit; }
   GbSearchBox.linked > GtkMenuButton.button:last-child:dir(ltr):hover,
   GbSearchBox.linked > GtkMenuButton.button:first-child:dir(rtl):hover {
+    color: rgba(82, 93, 118, 0.8);
+    border-color: rgba(82, 93, 118, 0.1);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.9));
+    background-color: transparent;
     border-color: #5294E2; }
+    GbSearchBox.linked > GtkMenuButton.button:last-child:dir(ltr):hover.image, GbSearchBox.linked > GtkMenuButton.button:last-child:dir(ltr):hover.image:hover,
+    GbSearchBox.linked > GtkMenuButton.button:first-child:dir(rtl):hover.image,
+    GbSearchBox.linked > GtkMenuButton.button:first-child:dir(rtl):hover.image:hover {
+      color: inherit; }
   GbSearchBox.linked > GtkMenuButton.button:last-child:dir(ltr):active, GbSearchBox.linked > GtkMenuButton.button:last-child:dir(ltr):checked,
   GbSearchBox.linked > GtkMenuButton.button:first-child:dir(rtl):active,
   GbSearchBox.linked > GtkMenuButton.button:first-child:dir(rtl):checked {
     color: #ffffff;
-    background-color: #5294E2;
-    border-color: #5294E2; }
+    border-color: #5294E2;
+    background-image: linear-gradient(to bottom, #5294E2); }
+  GbSearchBox.linked > GtkMenuButton.button:last-child:dir(ltr):insensitive,
+  GbSearchBox.linked > GtkMenuButton.button:first-child:dir(rtl):insensitive {
+    color: rgba(82, 93, 118, 0.35);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.55)); }
 GbSearchBox.linked > GtkMenuButton.button:last-child:dir(ltr) {
   border-left-style: none;
   border-radius: 0 14.5px 14.5px 0;
@@ -3212,8 +3231,7 @@ GtkListBox .h4 {
 .titlebar .separator, .titlebar GtkPlacesSidebar.sidebar .view.separator, GtkPlacesSidebar.sidebar .titlebar .view.separator {
   color: rgba(212, 213, 219, 0.95); }
 
-GtkFileChooserDialog .dialog-action-box,
-GtkFileChooserDialog .dialog-vbox {
+GtkFileChooserDialog .dialog-action-box {
   background-color: #F5F6F7; }
 
 NemoWindow GtkEventBox {

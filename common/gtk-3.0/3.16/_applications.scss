@@ -274,17 +274,13 @@ GbSearchBox.linked {
 
   > GtkMenuButton.button:last-child:dir(ltr),
   > GtkMenuButton.button:first-child:dir(rtl) {
-    border-color: transparentize($header_fg, 0.7);
-    background-color: transparentize($button_bg, 0.1);
+    padding: 0 10px;
 
-    &:hover {
-      border-color: $selected_bg_color;
-    }
-    &:active, &:checked {
-      color: $selected_fg_color;
-      background-color: $selected_bg_color;
-      border-color: $selected_bg_color;
-    }
+    @include entry(header-normal);
+
+    &:hover { @include entry(header-normal); border-color: $selected_bg_color; }
+    &:active, &:checked { @include entry(header-focus); }
+    &:insensitive { @include entry(header-insensitive); }
   }
 
   > GtkMenuButton.button:last-child:dir(ltr) {
