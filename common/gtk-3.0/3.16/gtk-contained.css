@@ -615,7 +615,7 @@ GtkTextView {
     color: #2679db; }
     *:selected *:link:active, *:selected .button:active:link, *:selected .button:active:visited {
       color: #dce9f9; }
-  *:link:selected, .button:selected:link, .button:selected:visited, .header-bar.selection-mode .subtitle:link, *:selected *:link, *:selected .button:link, *:selected .button:visited {
+  *:link:selected, .button:selected:link, .button:selected:visited, .header-bar.selection-mode .subtitle:link, .header-bar.titlebar.selection-mode .subtitle:link, *:selected *:link, *:selected .button:link, *:selected .button:visited {
     color: #dce9f9; }
 
 /*****************
@@ -797,52 +797,52 @@ GtkComboBox {
   .header-bar .subtitle {
     font-size: smaller;
     padding: 0 12px; }
-  .header-bar.selection-mode {
+  .header-bar.selection-mode, .header-bar.titlebar.selection-mode {
     color: #ffffff;
     background-color: rgba(82, 148, 226, 0.95);
     border-color: rgba(65, 137, 223, 0.95);
     box-shadow: none; }
-    .header-bar.selection-mode:backdrop {
+    .header-bar.selection-mode:backdrop, .header-bar.titlebar.selection-mode:backdrop {
       background-color: rgba(82, 148, 226, 0.95);
       color: rgba(255, 255, 255, 0.6); }
-    .header-bar.selection-mode .button {
+    .header-bar.selection-mode .button, .header-bar.titlebar.selection-mode .button {
       color: #ffffff;
       outline-color: rgba(255, 255, 255, 0.3);
       background-color: rgba(255, 255, 255, 0);
       border-color: rgba(255, 255, 255, 0); }
-      .header-bar.selection-mode .button.flat {
+      .header-bar.selection-mode .button.flat, .header-bar.titlebar.selection-mode .button.flat {
         border-color: transparent;
         background-color: transparent;
         background-image: none;
         color: #ffffff;
         background-color: rgba(255, 255, 255, 0); }
-      .header-bar.selection-mode .button:hover {
+      .header-bar.selection-mode .button:hover, .header-bar.titlebar.selection-mode .button:hover {
         color: #ffffff;
         outline-color: rgba(255, 255, 255, 0.3);
         background-color: rgba(255, 255, 255, 0.05);
         border-color: rgba(255, 255, 255, 0.5); }
-      .header-bar.selection-mode .button:active, .header-bar.selection-mode .button:checked {
-        color: #ffffff;
-        outline-color: rgba(255, 255, 255, 0.3);
-        background-color: rgba(0, 0, 0, 0.2);
-        border-color: rgba(0, 0, 0, 0.2); }
-      .header-bar.selection-mode .button:insensitive {
+      .header-bar.selection-mode .button:active, .header-bar.selection-mode .button:checked, .header-bar.titlebar.selection-mode .button:active, .header-bar.titlebar.selection-mode .button:checked {
+        color: rgba(82, 148, 226, 0.95);
+        outline-color: rgba(82, 148, 226, 0.25);
+        background-color: #ffffff;
+        border-color: #ffffff; }
+      .header-bar.selection-mode .button:insensitive, .header-bar.titlebar.selection-mode .button:insensitive {
         color: rgba(255, 255, 255, 0.4);
         background-color: rgba(255, 255, 255, 0);
         border-color: rgba(255, 255, 255, 0); }
-        .header-bar.selection-mode .button:insensitive:active, .header-bar.selection-mode .button:insensitive:checked {
-          color: rgba(255, 255, 255, 0.4);
-          background-color: rgba(0, 0, 0, 0.15);
-          border-color: rgba(0, 0, 0, 0.15); }
-    .header-bar.selection-mode .selection-menu {
+        .header-bar.selection-mode .button:insensitive:active, .header-bar.selection-mode .button:insensitive:checked, .header-bar.titlebar.selection-mode .button:insensitive:active, .header-bar.titlebar.selection-mode .button:insensitive:checked {
+          color: rgba(82, 148, 226, 0.35);
+          background-color: rgba(255, 255, 255, 0.15);
+          border-color: rgba(255, 255, 255, 0.15); }
+    .header-bar.selection-mode .selection-menu, .header-bar.titlebar.selection-mode .selection-menu {
       box-shadow: none;
       padding-left: 10px;
       padding-right: 10px; }
-      .header-bar.selection-mode .selection-menu GtkArrow {
+      .header-bar.selection-mode .selection-menu GtkArrow, .header-bar.titlebar.selection-mode .selection-menu GtkArrow {
         -GtkArrow-arrow-scaling: 1; }
-      .header-bar.selection-mode .selection-menu .arrow {
+      .header-bar.selection-mode .selection-menu .arrow, .header-bar.titlebar.selection-mode .selection-menu .arrow {
         -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
-    .maximized .header-bar.selection-mode {
+    .maximized .header-bar.selection-mode, .maximized .header-bar.titlebar.selection-mode {
       background-color: #5294e2; }
   .tiled .header-bar, .tiled .header-bar:backdrop, .maximized .header-bar, .maximized .header-bar:backdrop {
     border-radius: 0; }
@@ -2071,17 +2071,17 @@ GtkInfoBar {
     background-color: rgba(255, 255, 255, 0.2);
     border-color: rgba(255, 255, 255, 0.8); }
   .list-row:selected .button:active, GtkInfoBar .button:active, .list-row:selected .button:checked, GtkInfoBar .button:checked {
-    color: #ffffff;
-    outline-color: rgba(255, 255, 255, 0.3);
-    background-color: rgba(0, 0, 0, 0.2);
-    border-color: rgba(255, 255, 255, 0.8); }
+    color: #5294E2;
+    outline-color: rgba(82, 148, 226, 0.3);
+    background-color: #ffffff;
+    border-color: #ffffff; }
   .list-row:selected .button:insensitive, GtkInfoBar .button:insensitive {
     color: rgba(255, 255, 255, 0.4);
     background-color: rgba(255, 255, 255, 0);
     border-color: rgba(255, 255, 255, 0.2); }
     .list-row:selected .button:insensitive:active, GtkInfoBar .button:insensitive:active, .list-row:selected .button:insensitive:checked, GtkInfoBar .button:insensitive:checked {
-      color: rgba(255, 255, 255, 0.4);
-      background-color: rgba(0, 0, 0, 0.1);
+      color: rgba(82, 148, 226, 0.4);
+      background-color: rgba(255, 255, 255, 0.2);
       border-color: rgba(255, 255, 255, 0.2); }
 
 /************
@@ -3212,7 +3212,8 @@ GtkListBox .h4 {
 .titlebar .separator, .titlebar GtkPlacesSidebar.sidebar .view.separator, GtkPlacesSidebar.sidebar .titlebar .view.separator {
   color: rgba(212, 213, 219, 0.95); }
 
-GtkFileChooserDialog .dialog-action-box {
+GtkFileChooserDialog .dialog-action-box,
+GtkFileChooserDialog .dialog-vbox {
   background-color: #F5F6F7; }
 
 NemoWindow GtkEventBox {

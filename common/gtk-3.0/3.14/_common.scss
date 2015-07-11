@@ -1054,7 +1054,8 @@ GtkComboBox {
   }
 
   // Selectionmode
-  &.selection-mode {
+  &.selection-mode,
+  &.titlebar.selection-mode {
     color: $selected_fg_color;
     background-color: $selection_mode_bg;
     border-color: darken($selection_mode_bg, 4%);
@@ -1085,10 +1086,10 @@ GtkComboBox {
         border-color: transparentize($selected_fg_color, 0.5);
       }
       &:active, &:checked {
-        color: $selected_fg_color;
-        outline-color: transparentize($selected_fg_color, 0.7);
-        background-color: transparentize(black, 0.8);
-        border-color: transparentize(black, 0.8);
+        color: $selection_mode_bg;
+        outline-color: transparentize($selection_mode_bg, 0.7);
+        background-color: $selected_fg_color;
+        border-color: $selected_fg_color;
       }
       &:insensitive {
         color: transparentize($selected_fg_color, 0.6);
@@ -1096,9 +1097,9 @@ GtkComboBox {
         border-color: transparentize($selected_fg_color, 1);
 
         &:active, &:checked {
-          color: transparentize($selected_fg_color, 0.6);
-          background-color: transparentize(black, 0.85);
-          border-color: transparentize(black, 0.85);
+          color: transparentize($selection_mode_bg, 0.6);
+          background-color: transparentize($selected_fg_color, 0.85);
+          border-color: transparentize($selected_fg_color, 0.85);
         }
       }
     }
@@ -1184,7 +1185,6 @@ GtkComboBox {
 
     &:focus {
       @include entry(header-focus);
-      background-clip: border-box;
 
       &.image { color: $selected_fg_color; }
     }
@@ -2420,10 +2420,10 @@ GtkInfoBar {
     border-color: transparentize($selected_fg_color, 0.2);
   }
   &:active, &:checked {
-    color: $selected_fg_color;
-    outline-color: transparentize($selected_fg_color, 0.7);
-    background-color: transparentize(black, 0.8);
-    border-color: transparentize($selected_fg_color, 0.2);
+    color: $selected_bg_color;
+    outline-color: transparentize($selected_bg_color, 0.7);
+    background-color: $selected_fg_color;
+    border-color: $selected_fg_color;
   }
   &:insensitive {
     color: transparentize($selected_fg_color, 0.6);
@@ -2431,8 +2431,8 @@ GtkInfoBar {
     border-color: transparentize($selected_fg_color, 0.8);
 
     &:active, &:checked {
-      color: transparentize($selected_fg_color, 0.6);
-      background-color: transparentize(black, 0.9);
+      color: transparentize($selected_bg_color, 0.6);
+      background-color: transparentize($selected_fg_color, 0.8);
       border-color: transparentize($selected_fg_color, 0.8);
     }
   }
