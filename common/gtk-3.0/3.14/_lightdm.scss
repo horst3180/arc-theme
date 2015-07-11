@@ -1,0 +1,141 @@
+/* the panel widget at the top */
+#panel_window {
+  background-color: $panel_bg;
+  color: $panel_fg;
+  font: bold;
+  box-shadow: inset 0 -1px darken($panel_bg, 7%);
+
+  /* the menubars/menus of the panel, i.e. indicators */
+  .menubar,
+  .menubar > .menuitem {
+    background-color: transparent;
+    color: $panel_fg;
+    font: bold;
+  }
+
+  .menubar .menuitem:insensitive {
+    color: darken($panel_fg, 20%);
+
+    GtkLabel { color: inherit; }
+  }
+  .menubar .menu .menuitem { font: normal; }
+}
+
+/* the login window */
+#login_window,
+#shutdown_dialog,
+#restart_dialog {
+  font: normal;
+  border-style: none;
+  background-color: transparent;
+  color: $fg_color;
+}
+
+/* the top half of the login-window, in GtkDialog terms, the content */
+#content_frame {
+  padding-bottom: 14px;
+  background-color: transparentize($bg_color, 0.05);
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+#content_frame .button {
+  @include button(normal);
+
+  &:hover { @include button(hover); }
+  &:active, &:checked { @include button(active); }
+  &:insensitive { @include button(insensitive); }
+}
+
+/* the lower half of the login-window, in GtkDialog terms the buttonbox or action area */
+#buttonbox_frame {
+  padding-top: 20px;
+  padding-bottom: 0px;
+  border-style: none;
+  background-color: $osd_bg_color;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+#buttonbox_frame .button{
+  @include button(osd);
+
+  &:hover { @include button(osd-hover); }
+  &:active, &:checked { @include button(osd-active); }
+  &:insensitive { @include button(osd-insensitive); }
+}
+
+#login_window #user_combobox {
+  color: $fg_color;
+  font: 13px;
+
+  .menu { font: normal; }
+  .arrow {}
+}
+
+/* the user's avatar box */
+#user_image {
+  padding: 3px;
+  border-radius: 3px;
+}
+
+/* the border around the user's avatar box */
+#user_image_border {}
+
+/* the shutdown button */
+#shutdown_button.button {
+  color: $selected_fg_color;
+  outline-color: transparentize($selected_fg_color, 0.7);
+  border-color: $destructive_color;
+  background-color: $destructive_color;
+  background-image: none;
+  background-clip: border-box;
+
+  &:hover {
+    color: $selected_fg_color;
+    outline-color: transparentize($selected_fg_color, 0.7);
+    border-color: lighten($destructive_color, 9%);
+    background-color: lighten($destructive_color, 9%);
+    background-image: none;
+  }
+  &:active, &:checked {
+    color: $selected_fg_color;
+    outline-color: transparentize($selected_fg_color, 0.7);
+    border-color: darken($destructive_color, 7%);
+    background-color: darken($destructive_color, 7%);
+    background-image: none;
+  }
+}
+
+/* the restart button */
+#restart_button.button {
+  $_restart_bg: #51CF74;
+
+  color: $selected_fg_color;
+  outline-color: transparentize($selected_fg_color, 0.7);
+  border-color: $_restart_bg;
+  background-color: $_restart_bg;
+  background-image: none;
+  background-clip: border-box;
+
+  &:hover {
+    color: $selected_fg_color;
+    outline-color: transparentize($selected_fg_color, 0.7);
+    border-color: lighten($_restart_bg, 9%);
+    background-color: lighten($_restart_bg, 9%);
+    background-image: none;
+  }
+  &:active, &:checked {
+    color: $selected_fg_color;
+    outline-color: transparentize($selected_fg_color, 0.7);
+    border-color: darken($_restart_bg, 7%);
+    background-color: darken($_restart_bg, 7%);
+    background-image: none;
+  }
+}
+
+/* the warning, in case a wrong password is entered or something else goes wrong according to PAM */
+#greeter_infobar {
+  border-bottom-width: 0;
+  font: bold;
+}

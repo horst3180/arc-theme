@@ -3064,6 +3064,152 @@ GraniteWidgetsPopOver * {
 GtkListBox .h4 {
   padding-left: 6px; }
 
+/* the panel widget at the top */
+#panel_window {
+  background-color: rgba(37, 39, 45, 0.95);
+  color: #A8ADB5;
+  font: bold;
+  box-shadow: inset 0 -1px rgba(21, 22, 25, 0.95);
+  /* the menubars/menus of the panel, i.e. indicators */ }
+  #panel_window .menubar,
+  #panel_window .menubar > .menuitem {
+    background-color: transparent;
+    color: #A8ADB5;
+    font: bold; }
+  #panel_window .menubar .menuitem:insensitive {
+    color: #727985; }
+    #panel_window .menubar .menuitem:insensitive GtkLabel {
+      color: inherit; }
+  #panel_window .menubar .menu .menuitem {
+    font: normal; }
+
+/* the login window */
+#login_window,
+#shutdown_dialog,
+#restart_dialog {
+  font: normal;
+  border-style: none;
+  background-color: transparent;
+  color: #5c616c; }
+
+/* the top half of the login-window, in GtkDialog terms, the content */
+#content_frame {
+  padding-bottom: 14px;
+  background-color: rgba(245, 246, 247, 0.95);
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px; }
+
+#content_frame .button {
+  color: #5c616c;
+  outline-color: rgba(92, 97, 108, 0.3);
+  border-color: #cfd6e6;
+  background-color: #fbfbfc; }
+  #content_frame .button:hover {
+    color: #5c616c;
+    outline-color: rgba(92, 97, 108, 0.3);
+    border-color: #5294E2;
+    background-color: #fbfbfc; }
+  #content_frame .button:active, #content_frame .button:checked {
+    color: #ffffff;
+    outline-color: rgba(255, 255, 255, 0.3);
+    border-color: #5294E2;
+    background-color: #5294E2; }
+  #content_frame .button:insensitive {
+    color: rgba(92, 97, 108, 0.55);
+    border-color: rgba(207, 214, 230, 0.55);
+    background-color: rgba(251, 251, 252, 0.55); }
+    #content_frame .button:insensitive > GtkLabel {
+      color: inherit; }
+
+/* the lower half of the login-window, in GtkDialog terms the buttonbox or action area */
+#buttonbox_frame {
+  padding-top: 20px;
+  padding-bottom: 0px;
+  border-style: none;
+  background-color: rgba(60, 64, 73, 0.95);
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px; }
+
+#buttonbox_frame .button {
+  color: #A8ADB5;
+  outline-color: rgba(168, 173, 181, 0.3);
+  border-color: rgba(168, 173, 181, 0.3);
+  background-color: transparent;
+  background-image: linear-gradient(to bottom, rgba(48, 52, 59, 0.95)); }
+  #buttonbox_frame .button:hover {
+    color: #5294E2;
+    outline-color: rgba(168, 173, 181, 0.3);
+    border-color: #5294E2;
+    background-image: linear-gradient(to bottom, rgba(48, 52, 59, 0.95)); }
+  #buttonbox_frame .button:active, #buttonbox_frame .button:checked {
+    color: #ffffff;
+    outline-color: rgba(255, 255, 255, 0.3);
+    border-color: #5294E2;
+    background-image: linear-gradient(to bottom, #5294E2); }
+  #buttonbox_frame .button:insensitive {
+    color: #5c6069;
+    border-color: rgba(168, 173, 181, 0.2);
+    background-image: linear-gradient(to bottom, rgba(53, 57, 65, 0.95)); }
+
+#login_window #user_combobox {
+  color: #5c616c;
+  font: 13px; }
+  #login_window #user_combobox .menu {
+    font: normal; }
+
+/* the user's avatar box */
+#user_image {
+  padding: 3px;
+  border-radius: 3px; }
+
+/* the border around the user's avatar box */
+/* the shutdown button */
+#shutdown_button.button {
+  color: #ffffff;
+  outline-color: rgba(255, 255, 255, 0.3);
+  border-color: #FA4349;
+  background-color: #FA4349;
+  background-image: none;
+  background-clip: border-box; }
+  #shutdown_button.button:hover {
+    color: #ffffff;
+    outline-color: rgba(255, 255, 255, 0.3);
+    border-color: #fb7074;
+    background-color: #fb7074;
+    background-image: none; }
+  #shutdown_button.button:active, #shutdown_button.button:checked {
+    color: #ffffff;
+    outline-color: rgba(255, 255, 255, 0.3);
+    border-color: #f92027;
+    background-color: #f92027;
+    background-image: none; }
+
+/* the restart button */
+#restart_button.button {
+  color: #ffffff;
+  outline-color: rgba(255, 255, 255, 0.3);
+  border-color: #51CF74;
+  background-color: #51CF74;
+  background-image: none;
+  background-clip: border-box; }
+  #restart_button.button:hover {
+    color: #ffffff;
+    outline-color: rgba(255, 255, 255, 0.3);
+    border-color: #75d991;
+    background-color: #75d991;
+    background-image: none; }
+  #restart_button.button:active, #restart_button.button:checked {
+    color: #ffffff;
+    outline-color: rgba(255, 255, 255, 0.3);
+    border-color: #37c65e;
+    background-color: #37c65e;
+    background-image: none; }
+
+/* the warning, in case a wrong password is entered or something else goes wrong according to PAM */
+#greeter_infobar {
+  border-bottom-width: 0;
+  font: bold; }
+
 .titlebar .separator, .titlebar GtkPlacesSidebar.sidebar .view.separator, GtkPlacesSidebar.sidebar .titlebar .view.separator {
   color: #1f2227; }
 
