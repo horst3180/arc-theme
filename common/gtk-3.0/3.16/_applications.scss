@@ -473,6 +473,7 @@ PanelApplet .button:hover {
 
 PanelApplet .button:active, PanelApplet .button:active:backdrop,
 PanelApplet .button:checked, PanelApplet .button:checked:backdrop {
+  background-clip: padding-box;
   color: $selected_fg_color;
   background-color: transparentize(black, 0.75);
   border-radius: 0;

@@ -2748,6 +2748,7 @@ PanelApplet .button:hover {
 
 PanelApplet .button:active, PanelApplet .button:active:backdrop,
 PanelApplet .button:checked, PanelApplet .button:checked:backdrop {
+  background-clip: padding-box;
   color: #ffffff;
   background-color: rgba(0, 0, 0, 0.25);
   border-radius: 0;
