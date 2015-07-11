@@ -2,6 +2,21 @@
 
 Arc is a flat theme with transparent elements for GTK 3, GTK 2 and Gnome-Shell. It supports GTK 3 and GTK 2 based desktop environments like Gnome, Unity, Budgie, Pantheon, etc.
 
+###Arc is available in three variants 
+
+#####Arc
+
+![alt tag](http://i.imgur.com/yVbRmiF.png)
+
+#####Arc-Darker
+
+![alt tag](http://i.imgur.com/iANDteO.png)
+
+#####Arc-Dark
+
+![alt tag](http://i.imgur.com/G63wmCk.png)
+
+
 ### Requirements
 
 * Gnome/GTK 3.14 or 3.16
@@ -89,7 +104,7 @@ Other options to pass to autogen.sh are
                                Note: Normally the correct version is detected automatically and this
                                option should not be needed.
 
-After the installation is complete you can activate the theme with `gnome-tweak-tool` or a similar program by selecting `Arc`, `Arc-Darker` or `Arc-Dark` as Window/GTK+ theme and `Arc` as Gnome-Shell theme.
+After the installation is complete you can activate the theme with `gnome-tweak-tool` or a similar program by selecting `Arc`, `Arc-Darker` or `Arc-Dark` as Window/GTK+ theme and `Arc` as Gnome-Shell and Xfce-Notify theme.
 
 **Uninstall the theme**
 
@@ -105,7 +120,7 @@ from the same directory as this README resides in, or
 
 The `extra` directory in the same directory as this README resides in contains a Chrome/Chromium and a Plank theme.
 
-To install the Chrome/Chromium theme go to the `extra/Chrome` folder and drag and drop the arc-theme.crx into the Chrome/Chromium window. The source of the Chrome themes is located in the source "Chrome/arc-theme" folder.
+To install the Chrome/Chromium theme go to the `extra/Chrome` folder and drag and drop the arc-theme.crx or arc-dark-theme.crx file into the Chrome/Chromium window. The source of the Chrome themes is located in the source "Chrome/arc-theme" folder.
 
 To install the Plank theme, copy the `extra/Arc-Plank` folder to `~/.local/share/plank/themes` or to `/usr/share/plank/themes` for system-wide use.
 Now open the Plank preferences window by executing `plank --preferences` from a terminal and select `Arc-Plank` as the theme.
@@ -120,5 +135,5 @@ If you get artifacts like black or invisible backgrounds under Unity, disable ov
 ### Bug reporting
 If you find a bug, please report it at https://github.com/horst3180/arc-theme/issues
 
-### Preview
+### Full Preview
 ![alt tag](http://i.imgur.com/B1oroyH.jpg)
