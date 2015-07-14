@@ -385,6 +385,7 @@ GtkFlowBox .grid-child {
   .button.suggested-action {
     background-clip: border-box;
     color: #ffffff;
+    outline-color: rgba(255, 255, 255, 0.3);
     border-color: #49C98D;
     background-color: #49C98D; }
     .button.suggested-action.flat {
@@ -407,6 +408,7 @@ GtkFlowBox .grid-child {
   .button.destructive-action {
     background-clip: border-box;
     color: #ffffff;
+    outline-color: rgba(255, 255, 255, 0.3);
     border-color: #F04A50;
     background-color: #F04A50; }
     .button.destructive-action.flat {
