@@ -31,34 +31,37 @@ TerminalWindow {
     background-color: transparent;
   }
 
-  .notebook tab.reorderable-page,
-  .notebook tab.reorderable-page:hover {
-    padding-top: 4px;
-    padding-bottom: 4px;
-  }
-
   .notebook {
 
     &.header.top {
       box-shadow: inset 0  1px opacify($header_border, 1),
-                  inset 0 -1px if($variant == 'light', lighten($borders_color, 5%), lighten($borders_color, 1%));
+                  inset 0 -1px $borders_color;
     }
 
-    tab {
-      .active-page GtkLabel {
-        color: $header_fg;
+/*    tab {
+      &.reorderable-page.top, &.top {
+        border-width: 1px;
+        border-color: transparent;
+        box-shadow: none;
+        &:hover, &.prelight-page {
+          border-color: transparentize($borders_color, 0.5);
+          border-width: 1px;
+          border-top-width: 0;
+          background-color: transparentize($bg_color,0.8);
+          box-shadow: none;
+        }
+        &:active, &.active-page, &.active-page:hover {
+          border-width: 1px;
+          border-top-width: 0;
+          border-color: $header_border;
+          background-color: opacify($header_bg, 1);
+          box-shadow: none;
 
-        &:backdrop { color: transparentize($header_fg, 0.3); }
-      }
-
-      &.reorderable-page.top:active,
-      &.reorderable-page.top:active:hover {
-        background-color: opacify($header_bg, 1);
-        border-color: opacify($header_border, 1);
-
-        &:backdrop { background-color: opacify($header_bg_backdrop, 1); }
+          &:backdrop { background-color: opacify($header_bg_backdrop, 1); }
+        }
       }
     }
+*/
   }
 
   .scrollbar {
@@ -105,6 +108,7 @@ NautilusNotebook.notebook {
 NautilusQueryEditor .search-bar.toolbar {
   padding: 5px;
   box-shadow: none;
+  background-color: $base_color;
 }
 
 .nautilus-circular-button {
@@ -717,7 +721,7 @@ PantheonTerminalPantheonTerminalWindow.background {
 
     &.header.top {
       box-shadow: inset 0  1px opacify($header_border, 1),
-                  inset 0 -1px if($variant == 'light', lighten($borders_color, 5%), lighten($borders_color, 1%));
+                  inset 0 -1px $borders_color;
     }
   }
 }

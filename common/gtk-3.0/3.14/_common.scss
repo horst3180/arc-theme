@@ -1594,11 +1594,11 @@ column-header.button.dnd { // for treeview-like derive widgets
   // ...
   // Abandon all hope — Ye Who Enter Here
   padding: 0;
-  background-color: darken($base_color, 0.5%);
-  -GtkNotebook-initial-gap: 10;
+  background-color: $base_color;
+  -GtkNotebook-initial-gap: 4;
   -GtkNotebook-arrow-spacing: 5;
   -GtkNotebook-tab-curvature: 0;
-  -GtkNotebook-tab-overlap: -8;
+  -GtkNotebook-tab-overlap: 1;
   -GtkNotebook-has-tab-gap: false;
   -GtkWidget-focus-padding: 0;
   -GtkWidget-focus-line-width: 0;
@@ -1615,18 +1615,18 @@ column-header.button.dnd { // for treeview-like derive widgets
   &.header {
     // FIXME: double borders in some case, can't fix it w/o a class tho
     // FIXME: doesn't work on dark var
-    background-color: mix($base_color, $bg_color, 50%);
+    background-color: $bg_color;
 
     // this is the shading of the header behind the tabs
     &.frame {
-      border: 1px solid $borders_color;
+      border: 0px solid $borders_color;
       &.top { border-bottom-width: 0; }
       &.bottom { border-top-width: 0; }
       &.right { border-left-width: 0; }
       &.left { border-right-width: 0; }
     }
 
-    $_header_border: if($variant == 'light', lighten($borders_color, 5%), $borders_color);
+    $_header_border: $borders_color;
     &.top {
       box-shadow: inset 0 -1px $_header_border; // border
     }
@@ -1649,17 +1649,14 @@ column-header.button.dnd { // for treeview-like derive widgets
 
     outline-offset: 0;
 
-    //vertical tab sizing
-    $vt_vpadding: 5px;
-    $vt_hpadding: 20px;
-    // horizontal tab sizing
-    $ht_vpadding: 5px;
-    $ht_hpadding: 20px;
+    // tab sizing
+    $vpadding: 4px;
+    $hpadding: 15px;
 
     //FIXME: we get double border in some cases, not considering the broken
     //notebook content frame...
-    &.top, &.bottom { padding: $vt_vpadding $vt_hpadding; }
-    &.left, &.right { padding: $ht_vpadding $ht_hpadding; }
+    &.top, &.bottom { padding: $vpadding $hpadding; }
+    &.left, &.right { padding: $vpadding $hpadding; }
 
     &.reorderable-page {
       &.top, &.bottom {
@@ -1675,19 +1672,58 @@ column-header.button.dnd { // for treeview-like derive widgets
     }
     @each $_tab in (top, bottom, right, left) {
       &.reorderable-page.#{$_tab}, &.#{$_tab} {
+
+        @if $_tab==top or $_tab==bottom {
+          padding-#{$_tab}: $vpadding + 2;
+        }
+        @else if $_tab==left or $_tab==right {
+          padding-#{$_tab}: $hpadding + 2;
+        }
+
+        @if $_tab==top { border-radius: 3.5px 2px 0 0; }
+        @else if $_tab==bottom { border-radius: 0 0 2px 3.5px; }
+        @else if $_tab==left { border-radius: 3.5px 0 0 3.5px; }
+        @else if $_tab==right { border-radius: 0 3.5px 3.5px 0; }
+
+        border-width: 0;
+        border-#{$_tab}-width: 2px;
         border-color: transparent;
+        background-color: transparentize($base_color, 1);
+
         &:hover, &.prelight-page {
-          border-color: transparentize($borders_color, 0.5);
-          border-width: 1px;
-          border-#{$_tab}-width: 0;
-          background-color: transparentize($bg_color,0.8);
+          background-color: transparentize($base_color, 0.5);
+          box-shadow: inset 0 1px $borders_color,
+                      inset 0 -1px $borders_color,
+                      inset 1px 0 $borders_color,
+                      inset -1px 0 $borders_color;
         }
         &:active, &.active-page, &.active-page:hover {
-          border-width: 1px;
-          border-#{$_tab}-width: 0;
-          border-color: $borders_color;
-          background-color: if($variant == 'light', transparentize(black, 0.965), transparentize(black, 0.85));
-          &:hover { background-color: if($variant == 'light', transparentize(black, 0.965), transparentize(black, 0.85)); }
+          background-color: $base_color;
+
+          @if $_tab==top {
+            box-shadow: inset 0 1px $borders_color,
+                        inset 0 -1px $base_color,
+                        inset 1px 0 $borders_color,
+                        inset -1px 0 $borders_color;
+          }
+          @else if $_tab==bottom {
+            box-shadow: inset 0 -1px $base_color,
+                        inset 0 -1px $borders_color,
+                        inset 1px 0 $borders_color,
+                        inset -1px 0 $borders_color;
+          }
+          @else if $_tab==left {
+            box-shadow: inset 0 1px $borders_color,
+                        inset 0 -1px $borders_color,
+                        inset 1px 0 $borders_color,
+                        inset -1px 0 $base_color;
+          }
+          @else if $_tab==right {
+            box-shadow: inset 0 1px $borders_color,
+                        inset 0 -1px $borders_color,
+                        inset 1px 0 $base_color,
+                        inset -1px 0 $borders_color;
+          }
         }
       }
     }

@@ -1261,11 +1261,11 @@ column-header .button, column-header .button:hover, column-header .button:active
  *****************/
 .notebook {
   padding: 0;
-  background-color: #373b44;
-  -GtkNotebook-initial-gap: 10;
+  background-color: #383C45;
+  -GtkNotebook-initial-gap: 4;
   -GtkNotebook-arrow-spacing: 5;
   -GtkNotebook-tab-curvature: 0;
-  -GtkNotebook-tab-overlap: -8;
+  -GtkNotebook-tab-overlap: 1;
   -GtkNotebook-has-tab-gap: false;
   -GtkWidget-focus-padding: 0;
   -GtkWidget-focus-line-width: 0;
@@ -1281,9 +1281,9 @@ column-header .button, column-header .button:hover, column-header .button:active
     .notebook.frame.left {
       border-left-width: 0; }
   .notebook.header {
-    background-color: #3e424b; }
+    background-color: #444852; }
     .notebook.header.frame {
-      border: 1px solid #2d3036; }
+      border: 0px solid #2d3036; }
       .notebook.header.frame.top {
         border-bottom-width: 0; }
       .notebook.header.frame.bottom {
@@ -1308,68 +1308,64 @@ column-header .button, column-header .button:hover, column-header .button:active
     outline-color: transparent;
     outline-offset: 0; }
     .notebook tab.top, .notebook tab.bottom {
-      padding: 5px 20px; }
+      padding: 4px 15px; }
     .notebook tab.left, .notebook tab.right {
-      padding: 5px 20px; }
+      padding: 4px 15px; }
     .notebook tab.reorderable-page.top, .notebook tab.reorderable-page.bottom {
       padding-left: 12px;
       padding-right: 12px; }
     .notebook tab.reorderable-page.top, .notebook tab.top {
-      border-color: transparent; }
+      padding-top: 6px;
+      border-radius: 3.5px 2px 0 0;
+      border-width: 0;
+      border-top-width: 2px;
+      border-color: transparent;
+      background-color: rgba(56, 60, 69, 0); }
       .notebook tab.reorderable-page.top:hover, .notebook tab.reorderable-page.top.prelight-page, .notebook tab.top:hover, .notebook tab.top.prelight-page {
-        border-color: rgba(45, 48, 54, 0.5);
-        border-width: 1px;
-        border-top-width: 0;
-        background-color: rgba(68, 72, 82, 0.2); }
+        background-color: rgba(56, 60, 69, 0.5);
+        box-shadow: inset 0 1px #2d3036, inset 0 -1px #2d3036, inset 1px 0 #2d3036, inset -1px 0 #2d3036; }
       .notebook tab.reorderable-page.top:active, .notebook tab.reorderable-page.top.active-page, .notebook tab.reorderable-page.top.active-page:hover, .notebook tab.top:active, .notebook tab.top.active-page, .notebook tab.top.active-page:hover {
-        border-width: 1px;
-        border-top-width: 0;
-        border-color: #2d3036;
-        background-color: rgba(0, 0, 0, 0.15); }
-        .notebook tab.reorderable-page.top:active:hover, .notebook tab.reorderable-page.top.active-page:hover, .notebook tab.reorderable-page.top.active-page:hover:hover, .notebook tab.top:active:hover, .notebook tab.top.active-page:hover, .notebook tab.top.active-page:hover:hover {
-          background-color: rgba(0, 0, 0, 0.15); }
+        background-color: #383C45;
+        box-shadow: inset 0 1px #2d3036, inset 0 -1px #383C45, inset 1px 0 #2d3036, inset -1px 0 #2d3036; }
     .notebook tab.reorderable-page.bottom, .notebook tab.bottom {
-      border-color: transparent; }
+      padding-bottom: 6px;
+      border-radius: 0 0 2px 3.5px;
+      border-width: 0;
+      border-bottom-width: 2px;
+      border-color: transparent;
+      background-color: rgba(56, 60, 69, 0); }
       .notebook tab.reorderable-page.bottom:hover, .notebook tab.reorderable-page.bottom.prelight-page, .notebook tab.bottom:hover, .notebook tab.bottom.prelight-page {
-        border-color: rgba(45, 48, 54, 0.5);
-        border-width: 1px;
-        border-bottom-width: 0;
-        background-color: rgba(68, 72, 82, 0.2); }
+        background-color: rgba(56, 60, 69, 0.5);
+        box-shadow: inset 0 1px #2d3036, inset 0 -1px #2d3036, inset 1px 0 #2d3036, inset -1px 0 #2d3036; }
       .notebook tab.reorderable-page.bottom:active, .notebook tab.reorderable-page.bottom.active-page, .notebook tab.reorderable-page.bottom.active-page:hover, .notebook tab.bottom:active, .notebook tab.bottom.active-page, .notebook tab.bottom.active-page:hover {
-        border-width: 1px;
-        border-bottom-width: 0;
-        border-color: #2d3036;
-        background-color: rgba(0, 0, 0, 0.15); }
-        .notebook tab.reorderable-page.bottom:active:hover, .notebook tab.reorderable-page.bottom.active-page:hover, .notebook tab.reorderable-page.bottom.active-page:hover:hover, .notebook tab.bottom:active:hover, .notebook tab.bottom.active-page:hover, .notebook tab.bottom.active-page:hover:hover {
-          background-color: rgba(0, 0, 0, 0.15); }
+        background-color: #383C45;
+        box-shadow: inset 0 -1px #383C45, inset 0 -1px #2d3036, inset 1px 0 #2d3036, inset -1px 0 #2d3036; }
     .notebook tab.reorderable-page.right, .notebook tab.right {
-      border-color: transparent; }
+      padding-right: 17px;
+      border-radius: 0 3.5px 3.5px 0;
+      border-width: 0;
+      border-right-width: 2px;
+      border-color: transparent;
+      background-color: rgba(56, 60, 69, 0); }
       .notebook tab.reorderable-page.right:hover, .notebook tab.reorderable-page.right.prelight-page, .notebook tab.right:hover, .notebook tab.right.prelight-page {
-        border-color: rgba(45, 48, 54, 0.5);
-        border-width: 1px;
-        border-right-width: 0;
-        background-color: rgba(68, 72, 82, 0.2); }
+        background-color: rgba(56, 60, 69, 0.5);
+        box-shadow: inset 0 1px #2d3036, inset 0 -1px #2d3036, inset 1px 0 #2d3036, inset -1px 0 #2d3036; }
       .notebook tab.reorderable-page.right:active, .notebook tab.reorderable-page.right.active-page, .notebook tab.reorderable-page.right.active-page:hover, .notebook tab.right:active, .notebook tab.right.active-page, .notebook tab.right.active-page:hover {
-        border-width: 1px;
-        border-right-width: 0;
-        border-color: #2d3036;
-        background-color: rgba(0, 0, 0, 0.15); }
-        .notebook tab.reorderable-page.right:active:hover, .notebook tab.reorderable-page.right.active-page:hover, .notebook tab.reorderable-page.right.active-page:hover:hover, .notebook tab.right:active:hover, .notebook tab.right.active-page:hover, .notebook tab.right.active-page:hover:hover {
-          background-color: rgba(0, 0, 0, 0.15); }
+        background-color: #383C45;
+        box-shadow: inset 0 1px #2d3036, inset 0 -1px #2d3036, inset 1px 0 #383C45, inset -1px 0 #2d3036; }
     .notebook tab.reorderable-page.left, .notebook tab.left {
-      border-color: transparent; }
+      padding-left: 17px;
+      border-radius: 3.5px 0 0 3.5px;
+      border-width: 0;
+      border-left-width: 2px;
+      border-color: transparent;
+      background-color: rgba(56, 60, 69, 0); }
       .notebook tab.reorderable-page.left:hover, .notebook tab.reorderable-page.left.prelight-page, .notebook tab.left:hover, .notebook tab.left.prelight-page {
-        border-color: rgba(45, 48, 54, 0.5);
-        border-width: 1px;
-        border-left-width: 0;
-        background-color: rgba(68, 72, 82, 0.2); }
+        background-color: rgba(56, 60, 69, 0.5);
+        box-shadow: inset 0 1px #2d3036, inset 0 -1px #2d3036, inset 1px 0 #2d3036, inset -1px 0 #2d3036; }
       .notebook tab.reorderable-page.left:active, .notebook tab.reorderable-page.left.active-page, .notebook tab.reorderable-page.left.active-page:hover, .notebook tab.left:active, .notebook tab.left.active-page, .notebook tab.left.active-page:hover {
-        border-width: 1px;
-        border-left-width: 0;
-        border-color: #2d3036;
-        background-color: rgba(0, 0, 0, 0.15); }
-        .notebook tab.reorderable-page.left:active:hover, .notebook tab.reorderable-page.left.active-page:hover, .notebook tab.reorderable-page.left.active-page:hover:hover, .notebook tab.left:active:hover, .notebook tab.left.active-page:hover, .notebook tab.left.active-page:hover:hover {
-          background-color: rgba(0, 0, 0, 0.15); }
+        background-color: #383C45;
+        box-shadow: inset 0 1px #2d3036, inset 0 -1px #2d3036, inset 1px 0 #2d3036, inset -1px 0 #383C45; }
     .notebook tab GtkLabel {
       padding: 0 2px;
       color: rgba(211, 218, 227, 0.45); }
@@ -2467,21 +2463,33 @@ SushiFontWidget {
 
 TerminalWindow .background {
   background-color: transparent; }
-TerminalWindow .notebook tab.reorderable-page,
-TerminalWindow .notebook tab.reorderable-page:hover {
-  padding-top: 4px;
-  padding-bottom: 4px; }
-TerminalWindow .notebook.header.top {
-  box-shadow: inset 0 1px #24272d, inset 0 -1px #2f3239; }
-TerminalWindow .notebook tab .active-page GtkLabel {
-  color: rgba(207, 218, 231, 0.8); }
-  TerminalWindow .notebook tab .active-page GtkLabel:backdrop {
-    color: rgba(207, 218, 231, 0.5); }
-TerminalWindow .notebook tab.reorderable-page.top:active, TerminalWindow .notebook tab.reorderable-page.top:active:hover {
-  background-color: #2f343b;
-  border-color: #24272d; }
-  TerminalWindow .notebook tab.reorderable-page.top:active:backdrop, TerminalWindow .notebook tab.reorderable-page.top:active:hover:backdrop {
-    background-color: #32383f; }
+TerminalWindow .notebook {
+  /*    tab {
+        &.reorderable-page.top, &.top {
+          border-width: 1px;
+          border-color: transparent;
+          box-shadow: none;
+          &:hover, &.prelight-page {
+            border-color: transparentize($borders_color, 0.5);
+            border-width: 1px;
+            border-top-width: 0;
+            background-color: transparentize($bg_color,0.8);
+            box-shadow: none;
+          }
+          &:active, &.active-page, &.active-page:hover {
+            border-width: 1px;
+            border-top-width: 0;
+            border-color: $header_border;
+            background-color: opacify($header_bg, 1);
+            box-shadow: none;
+  
+            &:backdrop { background-color: opacify($header_bg_backdrop, 1); }
+          }
+        }
+      }
+  */ }
+  TerminalWindow .notebook.header.top {
+    box-shadow: inset 0 1px #24272d, inset 0 -1px #2d3036; }
 TerminalWindow .scrollbar.vertical .slider {
   margin-left: 3px; }
 TerminalWindow .scrollbar.trough {
@@ -2511,7 +2519,8 @@ NautilusNotebook.notebook {
 
 NautilusQueryEditor .search-bar.toolbar, NautilusQueryEditor .search-bar.inline-toolbar {
   padding: 5px;
-  box-shadow: none; }
+  box-shadow: none;
+  background-color: #383C45; }
 
 NemoWindow .sidebar .frame {
   border-width: 0; }
@@ -2602,17 +2611,36 @@ GeditViewFrame .gedit-search-slider, GbEditorFrame .gb-search-slider {
 
 GbSearchBox.linked > GtkMenuButton.button:last-child:dir(ltr),
 GbSearchBox.linked > GtkMenuButton.button:first-child:dir(rtl) {
-  border-color: rgba(207, 218, 231, 0.1);
-  background-color: rgba(61, 65, 75, 0.9); }
+  padding: 0 10px;
+  color: rgba(207, 218, 231, 0.8);
+  border-color: #181b1f;
+  background-image: linear-gradient(to bottom, rgba(38, 42, 48, 0.9));
+  background-color: transparent; }
+  GbSearchBox.linked > GtkMenuButton.button:last-child:dir(ltr).image, GbSearchBox.linked > GtkMenuButton.button:last-child:dir(ltr).image:hover,
+  GbSearchBox.linked > GtkMenuButton.button:first-child:dir(rtl).image,
+  GbSearchBox.linked > GtkMenuButton.button:first-child:dir(rtl).image:hover {
+    color: inherit; }
   GbSearchBox.linked > GtkMenuButton.button:last-child:dir(ltr):hover,
   GbSearchBox.linked > GtkMenuButton.button:first-child:dir(rtl):hover {
+    color: rgba(207, 218, 231, 0.8);
+    border-color: #181b1f;
+    background-image: linear-gradient(to bottom, rgba(38, 42, 48, 0.9));
+    background-color: transparent;
     border-color: #5294E2; }
+    GbSearchBox.linked > GtkMenuButton.button:last-child:dir(ltr):hover.image, GbSearchBox.linked > GtkMenuButton.button:last-child:dir(ltr):hover.image:hover,
+    GbSearchBox.linked > GtkMenuButton.button:first-child:dir(rtl):hover.image,
+    GbSearchBox.linked > GtkMenuButton.button:first-child:dir(rtl):hover.image:hover {
+      color: inherit; }
   GbSearchBox.linked > GtkMenuButton.button:last-child:dir(ltr):active, GbSearchBox.linked > GtkMenuButton.button:last-child:dir(ltr):checked,
   GbSearchBox.linked > GtkMenuButton.button:first-child:dir(rtl):active,
   GbSearchBox.linked > GtkMenuButton.button:first-child:dir(rtl):checked {
     color: #ffffff;
-    background-color: #5294E2;
-    border-color: #5294E2; }
+    border-color: #5294E2;
+    background-image: linear-gradient(to bottom, #5294E2); }
+  GbSearchBox.linked > GtkMenuButton.button:last-child:dir(ltr):insensitive,
+  GbSearchBox.linked > GtkMenuButton.button:first-child:dir(rtl):insensitive {
+    color: rgba(207, 218, 231, 0.35);
+    background-image: linear-gradient(to bottom, rgba(38, 42, 48, 0.55)); }
 GbSearchBox.linked > GtkMenuButton.button:last-child:dir(ltr) {
   border-left-style: none;
   border-radius: 0 14.5px 14.5px 0;
@@ -2939,7 +2967,7 @@ WingpanelWidgetsIndicatorPopover.popover {
 PantheonTerminalPantheonTerminalWindow.background {
   background-color: transparent; }
   PantheonTerminalPantheonTerminalWindow.background .notebook.header.top {
-    box-shadow: inset 0 1px #24272d, inset 0 -1px #2f3239; }
+    box-shadow: inset 0 1px #24272d, inset 0 -1px #2d3036; }
 
 SwitchboardCategoryView .view:selected,
 SwitchboardCategoryView .view:selected:focus {

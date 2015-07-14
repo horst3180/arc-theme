@@ -565,9 +565,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="16"
-     inkscape:cx="293.34974"
-     inkscape:cy="302.58131"
+     inkscape:zoom="5.6568542"
+     inkscape:cx="449.14178"
+     inkscape:cy="382.90905"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -4713,17 +4713,15 @@
        inkscape:label="Ebene 1"
        clip-path="url(#clipPath6057)">
       <rect
-         ry="2"
          transform="translate(0,1022.3622)"
          y="0"
          x="0"
          height="33"
          width="30"
          id="rect2987"
-         style="opacity:1;fill:#dde3e9;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         rx="2" />
+         style="opacity:1;fill:#dde3e9;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <rect
-         ry="1"
+         ry="1.3877788e-16"
          transform="translate(0,1022.3622)"
          y="1"
          x="1"
@@ -4731,7 +4729,7 @@
          width="28"
          id="rect3759"
          style="fill:#fefefe;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         rx="1" />
+         rx="1.3877788e-16" />
     </g>
     <g
        transform="matrix(0,1,-1,0,1503.3622,-277.63782)"
@@ -4739,17 +4737,15 @@
        inkscape:label="Ebene 1"
        clip-path="url(#clipPath6057-7)">
       <rect
-         ry="2"
          transform="translate(0,1022.3622)"
          y="0"
          x="0"
          height="33"
          width="30"
          id="rect2987-3"
-         style="opacity:1;fill:#dde3e9;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         rx="2" />
+         style="opacity:1;fill:#dde3e9;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <rect
-         ry="1"
+         ry="1.3877788e-16"
          transform="translate(0,1022.3622)"
          y="1"
          x="1"
@@ -4757,7 +4753,7 @@
          width="28"
          id="rect3759-2"
          style="fill:#fefefe;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         rx="1" />
+         rx="1.3877788e-16" />
     </g>
     <g
        transform="matrix(1,0,0,-1,416,808.72438)"
@@ -4765,17 +4761,15 @@
        inkscape:label="Ebene 1"
        clip-path="url(#clipPath6057-4)">
       <rect
-         ry="2"
          transform="translate(0,1022.3622)"
          y="0"
          x="0"
          height="33"
          width="30"
          id="rect2987-2"
-         style="opacity:1;fill:#dde3e9;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         rx="2" />
+         style="opacity:1;fill:#dde3e9;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <rect
-         ry="1"
+         ry="1.3877788e-16"
          transform="translate(0,1022.3622)"
          y="1"
          x="1"
@@ -4783,7 +4777,7 @@
          width="28"
          id="rect3759-3"
          style="fill:#fefefe;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         rx="1" />
+         rx="1.3877788e-16" />
     </g>
     <g
        transform="matrix(0,-1,1,0,-571.3622,-213.63782)"
@@ -4791,17 +4785,15 @@
        inkscape:label="Ebene 1"
        clip-path="url(#clipPath6057-9)">
       <rect
-         ry="2"
          transform="translate(0,1022.3622)"
          y="0"
          x="0"
          height="33"
          width="30"
          id="rect2987-28"
-         style="opacity:1;fill:#dde3e9;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         rx="2" />
+         style="opacity:1;fill:#dde3e9;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <rect
-         ry="1"
+         ry="1.3877788e-16"
          transform="translate(0,1022.3622)"
          y="1"
          x="1"
@@ -4809,7 +4801,7 @@
          width="28"
          id="rect3759-6"
          style="fill:#fefefe;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         rx="1" />
+         rx="1.3877788e-16" />
     </g>
     <g
        id="notebook-gap-horiz"
