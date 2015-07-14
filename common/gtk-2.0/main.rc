@@ -1970,7 +1970,7 @@ style "progressbar" {
   xthickness = 1
   ythickness = 1
 
-  fg[NORMAL] = @selected_fg_color
+  fg[NORMAL] = @fg_color
   fg[PRELIGHT] = @selected_fg_color
 
   engine "pixmap" {

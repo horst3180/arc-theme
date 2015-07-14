@@ -1119,6 +1119,7 @@ GtkTreeView.view {
       box-shadow: none;
       background-color: #ffffff; }
   GtkTreeView.view.trough, GtkTreeView.view.trough:selected {
+    color: #D3DAE3;
     background-color: #2d3036;
     border-radius: 3px;
     border-width: 0; }

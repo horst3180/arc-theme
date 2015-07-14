@@ -1403,6 +1403,7 @@ GtkTreeView.view {                                      // treeview grid lines a
   }
 
   &.trough, &.trough:selected { // progress bar trough in treeviews
+    color: $fg_color;
     background-color: $button_border;
     border-radius: 3px;
     border-width: 0;
