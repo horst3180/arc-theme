@@ -2878,6 +2878,26 @@ MarlinViewWindow *:selected:focus {
 .menu .spinner {
   opacity: 1; }
 
+WingpanelWidgetsIndicatorPopover.popover {
+  padding: 0;
+  text-shadow: none;
+  icon-shadow: none; }
+  WingpanelWidgetsIndicatorPopover.popover .menuitem {
+    padding: 5px;
+    outline-color: transparent;
+    text-shadow: none;
+    icon-shadow: none;
+    border: solid transparent;
+    border-width: 1px 0; }
+    WingpanelWidgetsIndicatorPopover.popover .menuitem GtkLabel, WingpanelWidgetsIndicatorPopover.popover .menuitem GtkImage {
+      padding: 0 3px; }
+    WingpanelWidgetsIndicatorPopover.popover .menuitem:hover, WingpanelWidgetsIndicatorPopover.popover .menuitem:active {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: solid rgba(255, 255, 255, 0.07);
+      border-width: 1px 0; }
+    WingpanelWidgetsIndicatorPopover.popover .menuitem *:insensitive {
+      color: rgba(211, 218, 227, 0.45); }
+
 PantheonTerminalPantheonTerminalWindow.background {
   background-color: transparent; }
   PantheonTerminalPantheonTerminalWindow.background .notebook.header.top {
