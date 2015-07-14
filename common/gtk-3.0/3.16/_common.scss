@@ -2722,10 +2722,7 @@ GtkVolumeButton.button { padding: 8px; }
       border-radius: 2px;
       box-shadow: 0 1px 3px 1px $_wm_border;
     }
-    &.message-dialog {
-      border-radius: 3px;
-      box-shadow: 0 1px 6px $_wm_border;
-    }
+    &.message-dialog { border-radius: 3px; }
   }
   &.solid-csd {
     border-radius: 0;

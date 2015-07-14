@@ -2200,8 +2200,7 @@ GtkVolumeButton.button {
     border-radius: 2px;
     box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1); }
   .window-frame.csd.message-dialog {
-    border-radius: 3px;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1); }
+    border-radius: 3px; }
   .window-frame.solid-csd {
     border-radius: 0;
     margin: 1px;
