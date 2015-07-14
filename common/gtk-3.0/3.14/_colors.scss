@@ -21,7 +21,7 @@ $selection_mode_bg: if($transparency == 'true', transparentize($selected_bg_colo
 $warning_color: #F27835;
 $error_color: #FC4138;
 $success_color: #73d216;
-$destructive_color: #FA4349;
+$destructive_color: #F04A50;
 $suggested_color: if($variant == 'light', #9EA4B5, #5B5F69);
 
 $osd_fg_color: #A8ADB5;

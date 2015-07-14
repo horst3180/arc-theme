@@ -274,16 +274,16 @@ StScrollBar {
     font-size: 8pt; }
   .end-session-dialog .button:last-child, .end-session-dialog .notification-banner .notification-button:last-child, .notification-banner .end-session-dialog .notification-button:last-child {
     color: #ffffff;
-    background-color: #FA4349;
-    border-color: #FA4349; }
+    background-color: #F04A50;
+    border-color: #F04A50; }
     .end-session-dialog .button:last-child:hover, .end-session-dialog .notification-banner .notification-button:last-child:hover, .notification-banner .end-session-dialog .notification-button:last-child:hover {
       color: #ffffff;
-      background-color: #fb7074;
-      border-color: #fb7074; }
+      background-color: #f47479;
+      border-color: #f47479; }
     .end-session-dialog .button:last-child:active, .end-session-dialog .notification-banner .notification-button:last-child:active, .notification-banner .end-session-dialog .notification-button:last-child:active {
       color: #ffffff;
-      background-color: #f92a31;
-      border-color: #f92a31; }
+      background-color: #ee3239;
+      border-color: #ee3239; }
 
 .shell-mount-operation-icon {
   icon-size: 48px; }

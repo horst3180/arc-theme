@@ -405,25 +405,25 @@ GtkTextView {
       background-color: rgba(158, 164, 181, 0.65); }
   .button.destructive-action {
     color: #ffffff;
-    border-color: #FA4349;
-    background-color: #FA4349; }
+    border-color: #F04A50;
+    background-color: #F04A50; }
     .button.destructive-action.flat {
       border-color: transparent;
       background-color: transparent;
       background-image: none;
-      color: #FA4349; }
+      color: #F04A50; }
     .button.destructive-action:hover {
       color: #ffffff;
-      border-color: #fb7074;
-      background-color: #fb7074; }
+      border-color: #f47479;
+      background-color: #f47479; }
     .button.destructive-action:active, .button.destructive-action:checked {
       color: #ffffff;
-      border-color: #f92027;
-      background-color: #f92027; }
+      border-color: #ed2930;
+      background-color: #ed2930; }
     .button.destructive-action:insensitive {
       color: rgba(255, 255, 255, 0.6);
-      border-color: rgba(250, 67, 73, 0.65);
-      background-color: rgba(250, 67, 73, 0.65); }
+      border-color: rgba(240, 74, 80, 0.65);
+      background-color: rgba(240, 74, 80, 0.65); }
   .button.image-button {
     padding: 8px; }
   .header-bar .button.image-button {
@@ -1001,30 +1001,30 @@ GtkComboBox {
 .primary-toolbar .button.destructive-action, .header-bar .button.destructive-action {
   color: #ffffff;
   outline-color: rgba(255, 255, 255, 0.3);
-  border-color: #FA4349;
-  background-color: #FA4349; }
+  border-color: #F04A50;
+  background-color: #F04A50; }
   .primary-toolbar .button.destructive-action.flat, .header-bar .button.destructive-action.flat {
     border-color: transparent;
     background-color: transparent;
     background-image: none;
-    color: #FA4349;
-    outline-color: rgba(250, 67, 73, 0.3); }
+    color: #F04A50;
+    outline-color: rgba(240, 74, 80, 0.3); }
   .primary-toolbar .button.destructive-action:hover, .header-bar .button.destructive-action:hover {
     color: #ffffff;
     outline-color: rgba(255, 255, 255, 0.3);
-    border-color: #fb7074;
-    background-color: #fb7074; }
+    border-color: #f47479;
+    background-color: #f47479; }
   .primary-toolbar .button.destructive-action:active, .header-bar .button.destructive-action:active, .primary-toolbar .button.destructive-action:checked, .header-bar .button.destructive-action:checked {
     color: #ffffff;
     outline-color: rgba(255, 255, 255, 0.3);
-    border-color: #f92027;
-    background-color: #f92027; }
+    border-color: #ed2930;
+    background-color: #ed2930; }
   .primary-toolbar .button.destructive-action.flat:insensitive, .header-bar .button.destructive-action.flat:insensitive {
-    color: rgba(250, 67, 73, 0.45); }
+    color: rgba(240, 74, 80, 0.45); }
   .primary-toolbar .button.destructive-action:insensitive, .header-bar .button.destructive-action:insensitive {
     color: rgba(255, 255, 255, 0.6);
-    border-color: rgba(250, 67, 73, 0.65);
-    background-color: rgba(250, 67, 73, 0.65); }
+    border-color: rgba(240, 74, 80, 0.65);
+    background-color: rgba(240, 74, 80, 0.65); }
 .primary-toolbar .button.destructive-action:backdrop, .header-bar .button.destructive-action:backdrop,
 .primary-toolbar .button.destructive-action:backdrop,
 .header-bar .button.destructive-action:backdrop {
@@ -3206,21 +3206,21 @@ GtkListBox .h4 {
 #shutdown_button.button {
   color: #ffffff;
   outline-color: rgba(255, 255, 255, 0.3);
-  border-color: #FA4349;
-  background-color: #FA4349;
+  border-color: #F04A50;
+  background-color: #F04A50;
   background-image: none;
   background-clip: border-box; }
   #shutdown_button.button:hover {
     color: #ffffff;
     outline-color: rgba(255, 255, 255, 0.3);
-    border-color: #fb7074;
-    background-color: #fb7074;
+    border-color: #f47479;
+    background-color: #f47479;
     background-image: none; }
   #shutdown_button.button:active, #shutdown_button.button:checked {
     color: #ffffff;
     outline-color: rgba(255, 255, 255, 0.3);
-    border-color: #f92027;
-    background-color: #f92027;
+    border-color: #ed2930;
+    background-color: #ed2930;
     background-image: none; }
 
 /* the restart button */
