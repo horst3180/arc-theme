@@ -504,7 +504,9 @@ $_dot_color: $selected_bg_color;
   @each $b_type, $b_color in (suggested-action, $suggested_color),
                              (destructive-action, $destructive_color) {
     &.#{$b_type} {
+      background-clip: border-box;
       color: $selected_fg_color;
+      outline-color: transparentize($selected_fg_color, 0.7);
       border-color: $b_color;
       background-color: $b_color;
 
