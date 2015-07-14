@@ -57,9 +57,6 @@ Prebuilt packages for Ubuntu, Debian, Fedora and openSUSE are available at
 http://software.opensuse.org/download.html?project=home%3AHorst3180&package=arc-theme  
 **Note:** elementary OS Freya users can install the package for Ubuntu 15.04
 
-**Note 2:** The debian packages are broken at the moment. Please install manually until this is fixed.
-
-
 Arch Linux users can install the theme from the AUR
 
 https://aur.archlinux.org/packages/gtk-theme-arc-git/
