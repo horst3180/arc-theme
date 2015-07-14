@@ -64,6 +64,8 @@ Arch Linux users can install the theme from the AUR
 
 https://aur.archlinux.org/packages/gtk-theme-arc-git/
 
+**Note:** If you're having trouble with the AUR package please email the package maintainer at zach@zach-adams.com before creating an issue.
+
 **Manual Installation**
 
 To build the theme you need 
