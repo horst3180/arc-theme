@@ -282,6 +282,10 @@ GtkFlowBox .grid-child {
     border-color: #5294E2;
     background-color: #5294E2;
     transition-duration: 50ms; }
+  .button:active {
+    color: #5c616c; }
+  .button:active:hover, .button:checked {
+    color: #ffffff; }
   .button.flat:insensitive {
     border-color: transparent;
     background-color: transparent;

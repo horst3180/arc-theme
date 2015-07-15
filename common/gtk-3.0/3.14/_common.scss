@@ -417,6 +417,12 @@ $_dot_color: $selected_bg_color;
     @include button(active);
     transition-duration: 50ms;
   }
+
+  //Webkitgtk workaround start
+  &:active { color: $fg_color; }
+  &:active:hover, &:checked { color: $selected_fg_color; }
+  //Webkitgtk workaround end
+
   &.flat:insensitive {
     @include button(undecorated);
   }
