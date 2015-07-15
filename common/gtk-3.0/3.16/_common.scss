@@ -513,30 +513,32 @@ $_dot_color: $selected_bg_color;
       background-clip: border-box;
       color: $selected_fg_color;
       outline-color: transparentize($selected_fg_color, 0.7);
-      border-color: $b_color;
-      background-color: $b_color;
+      border-color: lighten($b_color, 5%) $b_color darken($b_color, 5%) $b_color;
+      background-image: linear-gradient(to bottom, lighten($b_color, 5%), darken($b_color, 5%));
 
       &.flat {
         @include button(undecorated);
         color: $b_color;
+        outline-color: transparentize($b_color, 0.7);
       }
       &:hover {
         color: $selected_fg_color;
-        border-color: lighten($b_color, 9%);
-        background-color: lighten($b_color, 9%);
+        outline-color: transparentize($selected_fg_color, 0.7);
+        border-color: lighten($b_color, 12%) lighten($b_color, 6%) darken($b_color, 0%) lighten($b_color, 6%);
+        background-image: linear-gradient(to bottom, lighten($b_color, 12%), darken($b_color, 0%));
       }
       &:active, &:checked {
         color: $selected_fg_color;
-        border-color: darken($b_color, 7%);
-        background-color: darken($b_color, 7%);
+        outline-color: transparentize($selected_fg_color, 0.7);
+        border-color: darken($b_color, 8%) $b_color lighten($b_color, 1%) $b_color;
+        background-image: linear-gradient(to bottom, darken($b_color, 8%), lighten($b_color, 1%));
       }
       &.flat:insensitive {
-
+        color: transparentize($b_color, 0.55);
       }
       &:insensitive {
         color: transparentize($selected_fg_color, 0.4);
-        border-color: transparentize($b_color, 0.35);
-        background-color: transparentize($b_color, 0.35);
+        opacity: 0.75;
 
         &:active, &:checked {
 
@@ -1250,10 +1252,11 @@ GtkComboBox {
   @each $b_type, $b_color in (suggested-action, $suggested_color),
                              (destructive-action, $destructive_color) {
     .button.#{$b_type} {
+      background-clip: border-box;
       color: $selected_fg_color;
       outline-color: transparentize($selected_fg_color, 0.7);
-      border-color: $b_color;
-      background-color: $b_color;
+      border-color: lighten($b_color, 5%) $b_color darken($b_color, 5%) $b_color;
+      background-image: linear-gradient(to bottom, lighten($b_color, 5%), darken($b_color, 5%));
 
       &.flat {
         @include button(undecorated);
@@ -1263,22 +1266,21 @@ GtkComboBox {
       &:hover {
         color: $selected_fg_color;
         outline-color: transparentize($selected_fg_color, 0.7);
-        border-color: lighten($b_color, 9%);
-        background-color: lighten($b_color, 9%);
+        border-color: lighten($b_color, 12%) lighten($b_color, 6%) darken($b_color, 0%) lighten($b_color, 6%);
+        background-image: linear-gradient(to bottom, lighten($b_color, 12%), darken($b_color, 0%));
       }
       &:active, &:checked {
         color: $selected_fg_color;
         outline-color: transparentize($selected_fg_color, 0.7);
-        border-color: darken($b_color, 7%);
-        background-color: darken($b_color, 7%);
+        border-color: darken($b_color, 8%) $b_color lighten($b_color, 1%) $b_color;
+        background-image: linear-gradient(to bottom, darken($b_color, 8%), lighten($b_color, 1%));
       }
       &.flat:insensitive {
         color: transparentize($b_color, 0.55);
       }
       &:insensitive {
         color: transparentize($selected_fg_color, 0.4);
-        border-color: transparentize($b_color, 0.35);
-        background-color: transparentize($b_color, 0.35);
+        opacity: 0.75;
 
         &:active, &:checked {
 
