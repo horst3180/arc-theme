@@ -2466,7 +2466,7 @@ GtkInfoBar {
     background-color: transparentize($selected_fg_color, 0.8);
     border-color: transparentize($selected_fg_color, 0.2);
   }
-  &:active, &:checked {
+  &:active, &:active:hover, &:checked {
     color: $selected_bg_color;
     outline-color: transparentize($selected_bg_color, 0.7);
     background-color: $selected_fg_color;

@@ -2083,7 +2083,7 @@ GtkInfoBar {
     outline-color: rgba(255, 255, 255, 0.3);
     background-color: rgba(255, 255, 255, 0.2);
     border-color: rgba(255, 255, 255, 0.8); }
-  .list-row:selected .button:active, GtkInfoBar .button:active, .list-row:selected .button:checked, GtkInfoBar .button:checked {
+  .list-row:selected .button:active, GtkInfoBar .button:active, .list-row:selected .button:active:hover, GtkInfoBar .button:active:hover, .list-row:selected .button:checked, GtkInfoBar .button:checked {
     color: #5294E2;
     outline-color: rgba(82, 148, 226, 0.3);
     background-color: #ffffff;
