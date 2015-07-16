@@ -2374,6 +2374,48 @@ GtkVolumeButton.button {
   background-origin: content-box;
   background-position: right center; }
 
+GeditNotebook.notebook tab.reorderable-page.top:active, GeditNotebook.notebook tab.reorderable-page.top.active-page, GeditNotebook.notebook tab.reorderable-page.top.active-page:hover, GeditNotebook.notebook tab.top:active, GeditNotebook.notebook tab.top.active-page, GeditNotebook.notebook tab.top.active-page:hover,
+ScratchMainWindow .notebook tab.reorderable-page.top:active,
+ScratchMainWindow .notebook tab.reorderable-page.top.active-page,
+ScratchMainWindow .notebook tab.reorderable-page.top.active-page:hover,
+ScratchMainWindow .notebook tab.top:active,
+ScratchMainWindow .notebook tab.top.active-page,
+ScratchMainWindow .notebook tab.top.active-page:hover,
+EphyNotebook.notebook tab.reorderable-page.top:active,
+EphyNotebook.notebook tab.reorderable-page.top.active-page,
+EphyNotebook.notebook tab.reorderable-page.top.active-page:hover,
+EphyNotebook.notebook tab.top:active,
+EphyNotebook.notebook tab.top.active-page,
+EphyNotebook.notebook tab.top.active-page:hover,
+MidoriNotebook .notebook tab.reorderable-page.top:active,
+MidoriNotebook .notebook tab.reorderable-page.top.active-page,
+MidoriNotebook .notebook tab.reorderable-page.top.active-page:hover,
+MidoriNotebook .notebook tab.top:active,
+MidoriNotebook .notebook tab.top.active-page,
+MidoriNotebook .notebook tab.top.active-page:hover,
+TerminalWindow .notebook tab.reorderable-page.top:active,
+TerminalWindow .notebook tab.reorderable-page.top.active-page,
+TerminalWindow .notebook tab.reorderable-page.top.active-page:hover,
+TerminalWindow .notebook tab.top:active,
+TerminalWindow .notebook tab.top.active-page,
+TerminalWindow .notebook tab.top.active-page:hover,
+PantheonTerminalPantheonTerminalWindow .notebook tab.reorderable-page.top:active,
+PantheonTerminalPantheonTerminalWindow .notebook tab.reorderable-page.top.active-page,
+PantheonTerminalPantheonTerminalWindow .notebook tab.reorderable-page.top.active-page:hover,
+PantheonTerminalPantheonTerminalWindow .notebook tab.top:active,
+PantheonTerminalPantheonTerminalWindow .notebook tab.top.active-page,
+PantheonTerminalPantheonTerminalWindow .notebook tab.top.active-page:hover {
+  box-shadow: inset 0 1px #dcdfe3, inset 0 -1px #dcdfe3, inset 1px 0 #dcdfe3, inset -1px 0 #dcdfe3; }
+
+TerminalWindow .notebook tab.reorderable-page.top, TerminalWindow .notebook tab.top,
+PantheonTerminalPantheonTerminalWindow .notebook tab.reorderable-page.top,
+PantheonTerminalPantheonTerminalWindow .notebook tab.top {
+  padding-top: 7px;
+  border-top-width: 3px; }
+TerminalWindow .notebook.header.top,
+PantheonTerminalPantheonTerminalWindow .notebook.header.top {
+  box-shadow: inset 0 1px #d4d5db, inset 0 -1px #dcdfe3; }
+
 GtkHTML {
   background-color: #ffffff;
   color: #5c616c; }
@@ -2386,33 +2428,6 @@ SushiFontWidget {
 
 TerminalWindow .background {
   background-color: transparent; }
-TerminalWindow .notebook {
-  /*    tab {
-        &.reorderable-page.top, &.top {
-          border-width: 1px;
-          border-color: transparent;
-          box-shadow: none;
-          &:hover, &.prelight-page {
-            border-color: transparentize($borders_color, 0.5);
-            border-width: 1px;
-            border-top-width: 0;
-            background-color: transparentize($bg_color,0.8);
-            box-shadow: none;
-          }
-          &:active, &.active-page, &.active-page:hover {
-            border-width: 1px;
-            border-top-width: 0;
-            border-color: $header_border;
-            background-color: opacify($header_bg, 1);
-            box-shadow: none;
-  
-            &:backdrop { background-color: opacify($header_bg_backdrop, 1); }
-          }
-        }
-      }
-  */ }
-  TerminalWindow .notebook.header.top {
-    box-shadow: inset 0 1px #d4d5db, inset 0 -1px #dcdfe3; }
 TerminalWindow .scrollbar.vertical .slider {
   margin-left: 3px; }
 TerminalWindow .scrollbar.trough {
@@ -2925,8 +2940,6 @@ WingpanelWidgetsIndicatorPopover.popover {
 
 PantheonTerminalPantheonTerminalWindow.background {
   background-color: transparent; }
-  PantheonTerminalPantheonTerminalWindow.background .notebook.header.top {
-    box-shadow: inset 0 1px #d4d5db, inset 0 -1px #dcdfe3; }
 
 SwitchboardCategoryView .view:selected,
 SwitchboardCategoryView .view:selected:focus {

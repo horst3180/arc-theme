@@ -1,4 +1,38 @@
 //
+// Tab overrides
+//
+GeditNotebook.notebook,
+ScratchMainWindow .notebook,
+EphyNotebook.notebook,
+MidoriNotebook .notebook,
+TerminalWindow .notebook,
+PantheonTerminalPantheonTerminalWindow .notebook {
+
+  tab.reorderable-page.top, tab.top {
+    &:active, &.active-page, &.active-page:hover {
+      box-shadow: inset 0 1px $borders_color,
+                  inset 0 -1px $borders_color,
+                  inset 1px 0 $borders_color,
+                  inset -1px 0 $borders_color;
+    }
+  }
+}
+
+TerminalWindow .notebook,
+PantheonTerminalPantheonTerminalWindow .notebook {
+
+  tab.reorderable-page.top, tab.top {
+    padding-top: 7px;
+    border-top-width: 3px;
+  }
+
+  &.header.top {
+    box-shadow: inset 0  1px opacify($header_border, 1),
+                inset 0 -1px $borders_color;
+  }
+}
+
+//
 // Evolution
 //
 // needed for webkit/GtkStyle/Evolution compatibility
@@ -29,39 +63,6 @@ $terminal_fg: white;
 TerminalWindow {
   .background {
     background-color: transparent;
-  }
-
-  .notebook {
-
-    &.header.top {
-      box-shadow: inset 0  1px opacify($header_border, 1),
-                  inset 0 -1px $borders_color;
-    }
-
-/*    tab {
-      &.reorderable-page.top, &.top {
-        border-width: 1px;
-        border-color: transparent;
-        box-shadow: none;
-        &:hover, &.prelight-page {
-          border-color: transparentize($borders_color, 0.5);
-          border-width: 1px;
-          border-top-width: 0;
-          background-color: transparentize($bg_color,0.8);
-          box-shadow: none;
-        }
-        &:active, &.active-page, &.active-page:hover {
-          border-width: 1px;
-          border-top-width: 0;
-          border-color: $header_border;
-          background-color: opacify($header_bg, 1);
-          box-shadow: none;
-
-          &:backdrop { background-color: opacify($header_bg_backdrop, 1); }
-        }
-      }
-    }
-*/
   }
 
   .scrollbar {
@@ -716,14 +717,6 @@ WingpanelWidgetsIndicatorPopover.popover {
 //
 PantheonTerminalPantheonTerminalWindow.background {
    background-color: transparent;
-
-  .notebook {
-
-    &.header.top {
-      box-shadow: inset 0  1px opacify($header_border, 1),
-                  inset 0 -1px $borders_color;
-    }
-  }
 }
 
 //

@@ -1691,12 +1691,6 @@ column-header.button.dnd { // for treeview-like derive widgets
       &.top, &.bottom {
         padding-left: 12px;  // for a nicer close button
         padding-right: 12px; // placement
-        //border-left-width: 1px;
-        //border-right-width: 1px;
-      }
-      &.left, &.right {
-        //border-bottom-width: 1px;
-        //border-top-width: 1px;
       }
     }
     @each $_tab in (top, bottom, right, left) {
