@@ -238,6 +238,19 @@ GtkTextView {
         box-shadow: 0 -1px 0 0 #5294E2; }
       .linked.vertical > .entry:last-child:insensitive {
         border-bottom-color: rgba(0, 0, 0, 0.14); }
+  .osd .entry {
+    color: #A8ADB5;
+    border-color: rgba(168, 173, 181, 0.3);
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, rgba(48, 52, 59, 0.95)); }
+    .osd .entry:focus {
+      color: #5294E2;
+      border-color: #5294E2;
+      background-image: linear-gradient(to bottom, rgba(48, 52, 59, 0.95)); }
+    .osd .entry:insensitive {
+      color: #5c6069;
+      border-color: rgba(168, 173, 181, 0.2);
+      background-image: linear-gradient(to bottom, rgba(53, 57, 65, 0.95)); }
 
 /***********
  * Buttons *
@@ -3306,9 +3319,6 @@ GtkListBox .h4 {
 .titlebar .separator, .titlebar GtkPlacesSidebar.sidebar .view.separator, GtkPlacesSidebar.sidebar .titlebar .view.separator {
   color: rgba(36, 39, 45, 0.97); }
 
-GtkFileChooserDialog .dialog-action-box {
-  background-color: #444852; }
-
 NemoWindow GtkEventBox {
   background-color: #444852; }
 
@@ -3473,8 +3483,24 @@ NemoWindow .pane-separator,
 MarlinViewWindow .pane-separator {
   background-color: rgba(46, 49, 56, 0.95); }
 
+GtkFileChooserDialog.background.csd, GtkFileChooserDialog .background {
+  background-color: rgba(69, 74, 84, 0.95); }
+GtkFileChooserDialog .sidebar {
+  background-color: transparent; }
 GtkFileChooserDialog GtkPaned > .vertical > .horizontal {
   background-color: #444852; }
+GtkFileChooserDialog .dialog-action-box {
+  background-color: #444852; }
+GtkFileChooserDialog .dialog-vbox > .frame {
+  color: #A8ADB5;
+  border-color: transparent; }
+GtkFileChooserDialog .action-bar.frame {
+  background-color: transparent;
+  border-color: rgba(35, 37, 42, 0.95); }
+GtkFileChooserDialog .action-bar.frame GtkLabel, GtkFileChooserDialog .action-bar.frame GtkComboBox,
+GtkFileChooserDialog .dialog-vbox > .frame GtkLabel,
+GtkFileChooserDialog .dialog-vbox > .frame GtkComboBox {
+  color: #A8ADB5; }
 
 GeditWindow.background.csd {
   background-color: transparent; }
@@ -3530,7 +3556,7 @@ GeditWindow.background.csd GeditFileBrowserWidget {
   GeditWindow.background.csd GeditFileBrowserWidget .scrollbar .slider {
     background-color: rgba(209, 212, 216, 0.7); }
     GeditWindow.background.csd GeditFileBrowserWidget .scrollbar .slider:hover {
-      background-color: #dfe1e4; }
+      background-color: #d1d4d8; }
     GeditWindow.background.csd GeditFileBrowserWidget .scrollbar .slider:prelight:active {
       background-color: #5294E2; }
     GeditWindow.background.csd GeditFileBrowserWidget .scrollbar .slider:insensitive {
@@ -3538,21 +3564,6 @@ GeditWindow.background.csd GeditFileBrowserWidget {
   GeditWindow.background.csd GeditFileBrowserWidget .horizontal {
     background-color: transparent;
     border-color: rgba(53, 57, 65, 0.95); }
-    GeditWindow.background.csd GeditFileBrowserWidget .horizontal .button {
-      border-color: transparent;
-      background-color: transparent;
-      background-image: none;
-      color: #A8ADB5;
-      border: 1px solid transparent; }
-      GeditWindow.background.csd GeditFileBrowserWidget .horizontal .button:hover {
-        border: 1px solid #5294E2; }
-      GeditWindow.background.csd GeditFileBrowserWidget .horizontal .button:active, GeditWindow.background.csd GeditFileBrowserWidget .horizontal .button:checked {
-        color: #ffffff;
-        outline-color: rgba(255, 255, 255, 0.3);
-        border-color: #5294E2;
-        background-color: #5294E2; }
-      GeditWindow.background.csd GeditFileBrowserWidget .horizontal .button:insensitive {
-        color: rgba(168, 173, 181, 0.4); }
     GeditWindow.background.csd GeditFileBrowserWidget .horizontal GtkComboBox {
       color: #A8ADB5; }
 
@@ -3564,25 +3575,48 @@ GeditWindow.background.csd GeditFileBrowserView.view {
     GeditWindow.background.csd GeditFileBrowserView.view.expander:hover {
       color: #5294E2; }
 
-GtkFileChooserDialog .action-bar.frame {
-  background-color: rgba(65, 69, 79, 0.95);
-  border-color: rgba(35, 37, 42, 0.95); }
-  GtkFileChooserDialog .action-bar.frame GtkLabel {
-    color: #A8ADB5; }
-  GtkFileChooserDialog .action-bar.frame .button {
-    border-color: transparent;
-    background-color: transparent;
-    background-image: none; }
-    GtkFileChooserDialog .action-bar.frame .button:hover {
-      border: 1px solid #5294E2; }
-    GtkFileChooserDialog .action-bar.frame .button:active, GtkFileChooserDialog .action-bar.frame .button:checked {
-      border: 1px solid #5294E2;
-      color: #ffffff;
-      background-color: #5294E2; }
-    GtkFileChooserDialog .action-bar.frame .button:insensitive {
-      color: rgba(168, 173, 181, 0.4); }
-  GtkFileChooserDialog .action-bar.frame GtkComboBox {
-    color: #A8ADB5; }
+GtkFileChooserDialog .action-bar.frame .button,
+GtkFileChooserDialog .dialog-vbox > .frame .button, GeditWindow.background.csd GeditFileBrowserWidget .horizontal .button {
+  color: #A8ADB5;
+  outline-color: rgba(168, 173, 181, 0.3);
+  border-color: rgba(168, 173, 181, 0.3);
+  background-color: transparent;
+  background-image: linear-gradient(to bottom, rgba(48, 52, 59, 0.95)); }
+  GtkFileChooserDialog .action-bar.frame .button:hover,
+  GtkFileChooserDialog .dialog-vbox > .frame .button:hover, GeditWindow.background.csd GeditFileBrowserWidget .horizontal .button:hover {
+    color: #5294E2;
+    outline-color: rgba(168, 173, 181, 0.3);
+    border-color: #5294E2;
+    background-image: linear-gradient(to bottom, rgba(48, 52, 59, 0.95)); }
+  GtkFileChooserDialog .action-bar.frame .button:active,
+  GtkFileChooserDialog .dialog-vbox > .frame .button:active, GeditWindow.background.csd GeditFileBrowserWidget .horizontal .button:active, GtkFileChooserDialog .action-bar.frame .button:checked,
+  GtkFileChooserDialog .dialog-vbox > .frame .button:checked, GeditWindow.background.csd GeditFileBrowserWidget .horizontal .button:checked {
+    color: #ffffff;
+    outline-color: rgba(255, 255, 255, 0.3);
+    border-color: #5294E2;
+    background-image: linear-gradient(to bottom, #5294E2); }
+  GtkFileChooserDialog .action-bar.frame .button:insensitive,
+  GtkFileChooserDialog .dialog-vbox > .frame .button:insensitive, GeditWindow.background.csd GeditFileBrowserWidget .horizontal .button:insensitive {
+    color: #5c6069;
+    border-color: rgba(168, 173, 181, 0.2);
+    background-image: linear-gradient(to bottom, rgba(53, 57, 65, 0.95)); }
+
+GtkFileChooserDialog .action-bar.frame .entry,
+GtkFileChooserDialog .dialog-vbox > .frame .entry {
+  color: #A8ADB5;
+  border-color: rgba(168, 173, 181, 0.3);
+  background-color: transparent;
+  background-image: linear-gradient(to bottom, rgba(48, 52, 59, 0.95)); }
+  GtkFileChooserDialog .action-bar.frame .entry:focus,
+  GtkFileChooserDialog .dialog-vbox > .frame .entry:focus {
+    color: #5294E2;
+    border-color: #5294E2;
+    background-image: linear-gradient(to bottom, rgba(48, 52, 59, 0.95)); }
+  GtkFileChooserDialog .action-bar.frame .entry:insensitive,
+  GtkFileChooserDialog .dialog-vbox > .frame .entry:insensitive {
+    color: #5c6069;
+    border-color: rgba(168, 173, 181, 0.2);
+    background-image: linear-gradient(to bottom, rgba(53, 57, 65, 0.95)); }
 
 /* GTK NAMED COLORS */
 @define-color theme_fg_color #D3DAE3;

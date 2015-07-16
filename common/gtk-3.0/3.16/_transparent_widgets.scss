@@ -2,8 +2,6 @@
   color: $header_border;  //fixes separator in gnome-tweak-tool
 }
 
-GtkFileChooserDialog .dialog-action-box { background-color: $bg_color }  // fix for non gnome environments
-
 NemoWindow GtkEventBox { background-color: $bg_color; } // fixes nemo statusbar
 
 GtkFileChooserDialog *,
@@ -84,8 +82,35 @@ MarlinViewWindow {
   .pane-separator { background-color: $dark_sidebar_border; }
 }
 
-// Yeah, this is ugly, but prevents a transparent background in the image preview box
-GtkFileChooserDialog GtkPaned > .vertical > .horizontal { background-color: $bg_color; }
+GtkFileChooserDialog {
+
+  &.background.csd, .background { background-color: $dark_sidebar_bg }
+  .sidebar { background-color: transparent }
+
+  // Yeah, this is ugly, but prevents a transparent background in the image preview box
+  GtkPaned > .vertical > .horizontal { background-color: $bg_color; }
+
+  // fix for non gnome environments
+  .dialog-action-box { background-color: $bg_color }
+
+  .dialog-vbox > .frame {
+    color: $dark_sidebar_fg;
+    border-color: transparent;
+  }
+  .action-bar.frame {
+    background-color: transparent;
+    border-color: if($variant =='light', darken($dark_sidebar_bg, 7%), darken($dark_sidebar_bg, 15%));
+  }
+
+  .action-bar.frame,
+  .dialog-vbox > .frame {
+
+    .button { @extend %dark_sidebar_button; }
+    .entry { @extend %dark_sidebar_entry; }
+
+    GtkLabel, GtkComboBox { color: $dark_sidebar_fg; }
+  }
+}
 
 // Gedit sidebar
 GeditWindow.background.csd {
@@ -160,7 +185,7 @@ GeditWindow.background.csd GeditFileBrowserWidget {
     .slider {
       background-color: transparentize(lighten($dark_sidebar_fg, 15%), 0.3);
 
-      &:hover { background-color: lighten($dark_sidebar_fg, 20%); }
+      &:hover { background-color: lighten($dark_sidebar_fg, 15%); }
 
       &:prelight:active { background-color: $selected_bg_color; }
 
@@ -174,15 +199,7 @@ GeditWindow.background.csd GeditFileBrowserWidget {
     background-color: transparent;
     border-color: darken($dark_sidebar_bg, 7%);
 
-    .button {
-      @include button(undecorated);
-      color: $dark_sidebar_fg;
-      border: 1px solid transparent;
-
-      &:hover { border: 1px solid $selected_bg_color; }
-      &:active, &:checked { @include button(active); }
-      &:insensitive { color: transparentize($dark_sidebar_fg, 0.6); }
-    }
+    .button { @extend %dark_sidebar_button; }
     GtkComboBox { color: $dark_sidebar_fg; }
   }
 }
@@ -198,24 +215,17 @@ GeditWindow.background.csd GeditFileBrowserView.view {
   }
 }
 
-// Filechooser bottom bar
-GtkFileChooserDialog .action-bar.frame {
-  background-color: darken($dark_sidebar_bg, 2%);
-  border-color: if($variant =='light', darken($dark_sidebar_bg, 7%), darken($dark_sidebar_bg, 15%));
+%dark_sidebar_button {
+  @include button(osd);
 
-  GtkLabel { color: $dark_sidebar_fg; }
+  &:hover { @include button(osd-hover) }
+  &:active, &:checked { @include button(osd-active); }
+  &:insensitive { @include button(osd-insensitive); }
+}
 
-  .button {
-    @include button(undecorated);
+%dark_sidebar_entry {
+  @include entry(osd);
 
-    &:hover { border: 1px solid $selected_bg_color; }
-    &:active, &:checked {
-      border: 1px solid $selected_bg_color;
-      color: $selected_fg_color;
-      background-color: $selected_bg_color;
-    }
-    &:insensitive { color: transparentize($dark_sidebar_fg, 0.6); }
-  }
-
-  GtkComboBox { color: $dark_sidebar_fg; }
+  &:focus { @include entry(osd-focus) }
+  &:insensitive { @include entry(osd-insensitive); }
 }

@@ -350,11 +350,11 @@ GtkFlowBox .grid-child {
     }
   }
 
-//  .osd & {
-//    @include entry(osd);
-//    &:focus { @include entry(osd-focus); }
-//    &:insensitive { @include entry(osd-insensitive); }
-//  }
+  .osd & {
+    @include entry(osd);
+    &:focus { @include entry(osd-focus); }
+    &:insensitive { @include entry(osd-insensitive); }
+  }
 }
 
 /***********
