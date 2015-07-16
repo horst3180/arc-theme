@@ -350,11 +350,11 @@ GtkTextView { // This will get overridden by .view, needed by gedit line numbers
     }
   }
 
-//  .osd & {
-//    @include entry(osd);
-//    &:focus { @include entry(osd-focus); }
-//    &:insensitive { @include entry(osd-insensitive); }
-//  }
+  .osd & {
+    @include entry(osd);
+    &:focus { @include entry(osd-focus); }
+    &:insensitive { @include entry(osd-insensitive); }
+  }
 }
 
 /***********

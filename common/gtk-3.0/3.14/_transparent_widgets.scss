@@ -105,7 +105,9 @@ GtkFileChooserDialog {
 
   .action-bar.frame,
   .dialog-vbox > .frame {
+
     .button { @extend %dark_sidebar_button; }
+    .entry { @extend %dark_sidebar_entry; }
 
     GtkLabel, GtkComboBox { color: $dark_sidebar_fg; }
   }
@@ -225,4 +227,11 @@ GeditWindow.background.csd GeditFileBrowserView.view {
   &:hover { @include button(osd-hover) }
   &:active, &:checked { @include button(osd-active); }
   &:insensitive { @include button(osd-insensitive); }
+}
+
+%dark_sidebar_entry {
+  @include entry(osd);
+
+  &:focus { @include entry(osd-focus) }
+  &:insensitive { @include entry(osd-insensitive); }
 }
