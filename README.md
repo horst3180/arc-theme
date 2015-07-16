@@ -6,15 +6,15 @@ Arc is a flat theme with transparent elements for GTK 3, GTK 2 and Gnome-Shell. 
 
 #####Arc
 
-![alt tag](http://i.imgur.com/yVbRmiF.png)
+![alt tag](http://i.imgur.com/fDa94sy.png)
 
 #####Arc-Darker
 
-![alt tag](http://i.imgur.com/iANDteO.png)
+![alt tag](http://i.imgur.com/crDBZzD.png)
 
 #####Arc-Dark
 
-![alt tag](http://i.imgur.com/G63wmCk.png)
+![alt tag](http://i.imgur.com/RkIVgJ2.png)
 
 
 ### Requirements
@@ -137,4 +137,4 @@ If you get artifacts like black or invisible backgrounds under Unity, disable ov
 If you find a bug, please report it at https://github.com/horst3180/arc-theme/issues
 
 ### Full Preview
-![alt tag](http://i.imgur.com/B1oroyH.jpg)
+![alt tag](http://i.imgur.com/zlm9lhB.jpg)
