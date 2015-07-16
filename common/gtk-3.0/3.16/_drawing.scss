@@ -118,12 +118,12 @@
 
 // Buttons
 
-@mixin button($t) {
+@mixin button($t, $actionb_color:red) {
 //
 // Button drawing function
 //
 // $t:    button type,
-//
+// $actionb_color: used for destructive and suggested action buttons
 
   @if $t==normal {
   //
@@ -271,6 +271,18 @@
     color: $osd_insensitive_fg_color;
     border-color: transparentize($osd_fg_color, 0.8);
     background-image: linear-gradient(to bottom, $osd_insensitive_bg_color);
+  }
+
+  @else if $t==suggested_destructive {
+  //
+  // suggested or destructive action buttons
+  //
+    background-clip: border-box;
+
+    color: $selected_fg_color;
+    outline-color: transparentize($selected_fg_color, 0.7);
+    background-color: $actionb_color;
+    border-color: $actionb_color;
   }
 
   @else if $t==undecorated {
