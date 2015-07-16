@@ -2149,7 +2149,7 @@ GtkVolumeButton.button {
 .window-frame {
   border-radius: 4px 4px 0 0;
   border-width: 0px;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 8px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 8px 1px rgba(0, 0, 0, 0.2);
   /* this is used for the resize cursor area */
   margin: 10px; }
   .window-frame:backdrop {
@@ -3032,7 +3032,7 @@ UnityDecoration {
   -UnityDecoration-input-extents: 10px;
   -UnityDecoration-shadow-offset-x: 0px;
   -UnityDecoration-shadow-offset-y: 3px;
-  -UnityDecoration-active-shadow-color: rgba(0, 0, 0, 0.15);
+  -UnityDecoration-active-shadow-color: rgba(0, 0, 0, 0.2);
   -UnityDecoration-active-shadow-radius: 12px;
   -UnityDecoration-inactive-shadow-color: rgba(0, 0, 0, 0.07);
   -UnityDecoration-inactive-shadow-radius: 7px;

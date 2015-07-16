@@ -2578,7 +2578,7 @@ GtkVolumeButton.button { padding: 8px; }
   $_wm_border: if($variant=='light', transparentize(black, 0.9), transparentize(black, 0.45));
 
   box-shadow: 0 0 0 1px if($darker=='true' or $variant == 'dark', darken($header_bg, 7%), $_wm_border),
-              0 4px 8px 1px if($darker == 'false', $_wm_border, opacify($_wm_border, 0.15));
+              0 4px 8px 1px if($darker == 'false', opacify($_wm_border, 0.1), opacify($_wm_border, 0.15));
 
   /* this is used for the resize cursor area */
   margin: 10px;
