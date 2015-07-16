@@ -27,7 +27,7 @@
          "ntp_background_repeat": "no-repeat"
       },
       "tints": {
-         "background_tab": [ -1, 0.5, 0.85 ],
+         "background_tab": [ -1, 0.5, 0.5 ],
          "buttons": [ -1, -1, -1 ],
          "frame": [ -1, -1, -1 ],
          "frame_inactive": [ -1, -1, -1 ],
