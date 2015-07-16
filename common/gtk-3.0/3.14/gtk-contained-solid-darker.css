@@ -238,6 +238,19 @@ GtkFlowBox .grid-child {
         box-shadow: 0 -1px 0 0 #5294E2; }
       .linked.vertical > .entry:last-child:insensitive {
         border-bottom-color: rgba(0, 0, 0, 0.14); }
+  .osd .entry {
+    color: #A8ADB5;
+    border-color: rgba(168, 173, 181, 0.3);
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, rgba(48, 52, 59, 0.95)); }
+    .osd .entry:focus {
+      color: #5294E2;
+      border-color: #5294E2;
+      background-image: linear-gradient(to bottom, rgba(48, 52, 59, 0.95)); }
+    .osd .entry:insensitive {
+      color: #5c6069;
+      border-color: rgba(168, 173, 181, 0.2);
+      background-image: linear-gradient(to bottom, rgba(53, 57, 65, 0.95)); }
 
 /***********
  * Buttons *
@@ -3590,7 +3603,7 @@ NemoWindow .pane-separator,
 MarlinViewWindow .pane-separator {
   background-color: #3c4049; }
 
-GtkFileChooserDialog.background.csd {
+GtkFileChooserDialog.background.csd, GtkFileChooserDialog .background {
   background-color: #3c4049; }
 GtkFileChooserDialog .sidebar {
   background-color: transparent; }

@@ -85,7 +85,7 @@ MarlinViewWindow {
 
 GtkFileChooserDialog {
 
-  &.background.csd { background-color: $dark_sidebar_bg }
+  &.background.csd, .background { background-color: $dark_sidebar_bg }
   .sidebar { background-color: transparent }
 
   // Yeah, this is ugly, but prevents a transparent background in the image preview box

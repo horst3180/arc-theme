@@ -3474,7 +3474,7 @@ NemoWindow .pane-separator,
 MarlinViewWindow .pane-separator {
   background-color: #3c4049; }
 
-GtkFileChooserDialog.background.csd {
+GtkFileChooserDialog.background.csd, GtkFileChooserDialog .background {
   background-color: #3c4049; }
 GtkFileChooserDialog .sidebar {
   background-color: transparent; }
