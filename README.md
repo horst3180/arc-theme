@@ -137,4 +137,4 @@ If you get artifacts like black or invisible backgrounds under Unity, disable ov
 If you find a bug, please report it at https://github.com/horst3180/arc-theme/issues
 
 ### Full Preview
-![alt tag](http://i.imgur.com/zlm9lhB.jpg)
+![alt tag](http://i.imgur.com/6SDjAc4.jpg)
