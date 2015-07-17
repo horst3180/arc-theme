@@ -64,7 +64,7 @@ $darker_asset_suffix: if($darker=='true', '-dark', $asset_suffix);
 
 .background {
   color: $fg_color;
-  background-color: transparentize($bg_color, 0.001); // without this headerbar transparency doesn't seem to work
+  background-color: if($transparency == 'true', transparentize($bg_color, 0.001), $bg_color); // without this headerbar transparency doesn't seem to work
 }
 
 /*
