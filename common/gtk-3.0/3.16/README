@@ -1,9 +1,19 @@
-* Do not edit the CSS directly, edit the source SCSS files and process them with SASS (run 
-  `/.parse-sass.sh` when you have the required sofwtare installed, as described below)
+This theme uses libsass/gulp to process the sass/*.scss. Never edit any of the .css files manually.
 
-* To be able to use the lates/adequate version of sass, install ruby and get the sass gem via bundle. 
-  This is done with `gem install bundle && bundle install` from the same directory this README resides in.
+How to edit this theme:
 
-You can read about SASS at http://sass-lang.com/documentation/. Once you make your changes to any .scss file, you can either run the ./parse-sass.sh script or keep SASS watching for changes as you
-edit. This is done by running `bundle exec sass --watch --sourcemap=none .` If sass is out of date, or is
-missing, you can install it with `bundle install`.
+1. Install `nodejs` and `npm`
+
+2. Install `gulp`
+
+    sudo npm install --global gulp
+
+3. Execute the following from the directory containing `gulpfile.js`
+
+    npm install
+
+4. Edit the sass/*.scss files
+
+5. Regenerate the .css files by executing from the directory containing `gulpfile.js`
+
+    gulp
