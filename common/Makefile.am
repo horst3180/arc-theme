@@ -25,54 +25,61 @@ endif # ENABLE_DARK
 
 
 if ENABLE_GNOME_SHELL
-	$(MKDIR_P) $(ithemedir)
-	cp -rH --no-preserve=mode,ownership $(srcdir)/gnome-shell/$(GNOME_VERSION) $(ithemedir)/gnome-shell
+	$(MKDIR_P) $(ithemedir)/gnome-shell
+
+	cd $(srcdir)/gnome-shell/$(GNOME_VERSION) && cp -r --no-preserve=mode,ownership \
+		checkbox \
+		dash \
+		menu \
+		misc \
+		switch \
+		gnome-shell.css \
+		$(ithemedir)/gnome-shell
 endif # ENABLE_GNOME_SHELL
 
 
 if ENABLE_GTK2
 
 if ENABLE_LIGHT
-	cp -r --no-preserve=mode,ownership $(srcdir)/gtk-2.0 $(ithemedir)
+	$(MKDIR_P) $(ithemedir)/gtk-2.0
 
-	cd $(ithemedir)/gtk-2.0 && rm -rf \
-		assets-dark \
-		gtkrc-darker \
-		gtkrc-dark \
-		*.sh \
-		assets.svg \
-		assets-dark.svg \
-		assets.txt
+	cd $(srcdir)/gtk-2.0 && cp -r --no-preserve=mode,ownership \
+		assets \
+		menubar-toolbar \
+		*.rc \
+		gtkrc \
+		$(ithemedir)/gtk-2.0
 endif # ENABLE_LIGHT
 
 if ENABLE_DARKER
-	cp -r --no-preserve=mode,ownership $(srcdir)/gtk-2.0 $(ithemedarkerdir)
+	$(MKDIR_P) $(ithemedarkerdir)/gtk-2.0
 
-	cd $(ithemedarkerdir)/gtk-2.0 && mv gtkrc-darker gtkrc
+	cd $(srcdir)/gtk-2.0 && cp -r --no-preserve=mode,ownership \
+		assets \
+		menubar-toolbar \
+		*.rc \
+		$(ithemedarkerdir)/gtk-2.0
 
-	cd $(ithemedarkerdir)/gtk-2.0 && rm -rf \
-		assets-dark \
-		gtkrc-dark \
-		*.sh \
-		assets.svg \
-		assets-dark.svg \
-		assets.txt
+	cd $(srcdir)/gtk-2.0 && cp -r --no-preserve=mode,ownership \
+		gtkrc-darker \
+		$(ithemedarkerdir)/gtk-2.0/gtkrc
 endif # ENABLE_DARKER
 
 if ENABLE_DARK
-	cp -r --no-preserve=mode,ownership $(srcdir)/gtk-2.0 $(ithemedarkdir)
+	$(MKDIR_P) $(ithemedarkdir)/gtk-2.0
 
-	cd $(ithemedarkdir)/gtk-2.0 && \
-		mv gtkrc-dark gtkrc && \
-		rm -rf assets && \
-		mv assets-dark assets
+	cd $(srcdir)/gtk-2.0 && cp -r --no-preserve=mode,ownership \
+		menubar-toolbar \
+		*.rc \
+		$(ithemedarkdir)/gtk-2.0
 
-	cd $(ithemedarkdir)/gtk-2.0 && rm -rf \
-		gtkrc-darker \
-		*.sh \
-		assets.svg \
-		assets-dark.svg \
-		assets.txt
+	cd $(srcdir)/gtk-2.0 && cp -r --no-preserve=mode,ownership \
+		assets-dark \
+		$(ithemedarkdir)/gtk-2.0/assets
+
+	cd $(srcdir)/gtk-2.0 && cp -r --no-preserve=mode,ownership \
+		gtkrc-dark \
+		$(ithemedarkdir)/gtk-2.0/gtkrc
 endif # ENABLE_DARK
 
 endif # ENABLE_GTK2
@@ -81,87 +88,71 @@ endif # ENABLE_GTK2
 if ENABLE_GTK3
 
 if ENABLE_LIGHT
-	cp -rH --no-preserve=mode,ownership $(srcdir)/gtk-3.0/$(GNOME_VERSION) $(ithemedir)/gtk-3.0
+	$(MKDIR_P) $(ithemedir)/gtk-3.0
 
-	cd $(ithemedir)/gtk-3.0 && rm -f \
-		assets.svg \
-		README \
-		*.scss \
-		*.sh \
-		*.txt \
-		Gemfile* \
-		gtk-contained-darker.css \
-		gtk-contained-solid-darker.css
-
-if ENABLE_TRANSPARENCY
-	cd $(ithemedir)/gtk-3.0 && rm \
-		gtk-contained-solid.css \
-		gtk-contained-solid-dark.css
-endif # ENABLE_TRANSPARENCY
-
+	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -r --no-preserve=mode,ownership \
+		assets \
+		gtk.css \
+		gtk-contained.css \
+		gtk-dark.css \
+		gtk-contained-dark.css \
+		$(ithemedir)/gtk-3.0
 endif # ENABLE_LIGHT
 
 if ENABLE_DARKER
-	cp -rH --no-preserve=mode,ownership $(srcdir)/gtk-3.0/$(GNOME_VERSION) $(ithemedarkerdir)/gtk-3.0
+	$(MKDIR_P) $(ithemedarkerdir)/gtk-3.0
 
-	cd $(ithemedarkerdir)/gtk-3.0 && rm -f \
-		assets.svg \
-		README \
-		*.scss \
-		*.sh \
-		*.txt \
-		Gemfile* \
-		gtk-contained-solid.css
+	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -r --no-preserve=mode,ownership \
+		assets \
+		gtk.css \
+		gtk-dark.css \
+		gtk-contained-dark.css \
+		$(ithemedarkerdir)/gtk-3.0
 
-if ENABLE_TRANSPARENCY
-	cd $(ithemedarkerdir)/gtk-3.0 && rm \
-		gtk-contained-solid-darker.css \
-		gtk-contained-solid-dark.css
-endif # ENABLE_TRANSPARENCY
-
-	cd $(ithemedarkerdir)/gtk-3.0 && mv gtk-contained-darker.css gtk-contained.css
+	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -r --no-preserve=mode,ownership \
+		gtk-contained-darker.css \
+		$(ithemedarkerdir)/gtk-3.0/gtk-contained.css
 endif # ENABLE_DARKER
 
 if ENABLE_DARK
-	cp -rH --no-preserve=mode,ownership $(srcdir)/gtk-3.0/$(GNOME_VERSION) $(ithemedarkdir)/gtk-3.0
+	$(MKDIR_P) $(ithemedarkdir)/gtk-3.0
 
-	cd $(ithemedarkdir)/gtk-3.0 && rm -f \
-		assets.svg \
-		README \
-		*.scss \
-		*.sh \
-		*.txt \
-		Gemfile* \
-		gtk-dark.css \
-		gtk-contained-solid.css \
-		gtk-contained-darker.css \
-		gtk-contained-solid-darker.css
+	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -r --no-preserve=mode,ownership \
+		assets \
+		gtk.css \
+		$(ithemedarkdir)/gtk-3.0
 
-if ENABLE_TRANSPARENCY
-	cd $(ithemedarkdir)/gtk-3.0 && rm \
-		gtk-contained-solid-dark.css
-endif # ENABLE_TRANSPARENCY
-
-	cd $(ithemedarkdir)/gtk-3.0 && mv gtk-contained-dark.css gtk-contained.css
+	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -r --no-preserve=mode,ownership \
+		gtk-contained-dark.css \
+		$(ithemedarkdir)/gtk-3.0/gtk-contained.css
 endif # ENABLE_DARK
 
 if !ENABLE_TRANSPARENCY
 
 if ENABLE_LIGHT
-	cd $(ithemedir)/gtk-3.0 && \
-		mv gtk-contained-solid.css gtk-contained.css && \
-		mv gtk-contained-solid-dark.css gtk-contained-dark.css
+	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -r --no-preserve=mode,ownership \
+		gtk-contained-solid.css \
+		$(ithemedir)/gtk-3.0/gtk-contained.css
+
+	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -r --no-preserve=mode,ownership \
+		gtk-contained-solid-dark.css \
+		$(ithemedir)/gtk-3.0/gtk-contained-dark.css
 endif # ENABLE_LIGHT
 
 if ENABLE_DARKER
-	cd $(ithemedarkerdir)/gtk-3.0 && \
-		mv gtk-contained-solid-darker.css gtk-contained.css && \
-		mv gtk-contained-solid-dark.css gtk-contained-dark.css
+	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -r --no-preserve=mode,ownership \
+		gtk-contained-solid-darker.css \
+		$(ithemedarkerdir)/gtk-3.0/gtk-contained.css
+
+	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -r --no-preserve=mode,ownership \
+		gtk-contained-solid-dark.css \
+		$(ithemedarkerdir)/gtk-3.0/gtk-contained-dark.css
 endif # ENABLE_DARKER
 
 if ENABLE_DARK
-	cd $(ithemedarkdir)/gtk-3.0 && \
-		mv gtk-contained-solid-dark.css gtk-contained.css
+	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -r --no-preserve=mode,ownership \
+		gtk-contained-solid-dark.css \
+		$(ithemedarkdir)/gtk-3.0/gtk-contained.css
 endif # ENABLE_DARK
 
 endif #!ENABLE_TRANSPARENCY

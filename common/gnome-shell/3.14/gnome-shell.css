@@ -1034,7 +1034,7 @@ StScrollBar StButton#vhandle:active {
 }
 
 .placeholder {
-    background-image: url("misc/dash-placeholder.svg");
+    background-image: url("dash/dash-placeholder.svg");
     background-size: contain;
     height: 24px;
 }
