@@ -1049,7 +1049,9 @@ StScrollBar {
   .search-entry:hover, .search-entry:focus {
     color: #ffffff;
     caret-color: #ffffff;
-    background-color: #5294E2; }
+    background-color: #5294E2;
+    selection-background-color: #ffffff;
+    selected-color: #5294E2; }
     .search-entry:hover .search-entry-icon, .search-entry:focus .search-entry-icon {
       color: #ffffff; }
 

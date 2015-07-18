@@ -1333,6 +1333,9 @@ StScrollBar {
     caret-color: $selected_fg_color;
     background-color: $selected_bg_color;
 
+    selection-background-color: $selected_fg_color;
+    selected-color: $selected_bg_color;
+
     .search-entry-icon { color: $selected_fg_color; }
   }
 }

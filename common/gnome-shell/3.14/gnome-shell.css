@@ -633,6 +633,9 @@ StScrollBar StButton#vhandle:active {
     caret-color: #ffffff;
     background-color: #5294E2;
 
+    selection-background-color: $selected_fg_color;
+    selected-color: $selected_bg_color;
+
     font-weight: bold;
     transition-duration: 0ms;
 }
