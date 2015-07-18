@@ -624,17 +624,19 @@ StScrollBar StButton#vhandle:active {
 
 .search-entry:hover {
     color: #5c616c;
+    border-color: rgba(0, 0, 0, 0.0);
     caret-color: #5c616c;
     background-color: rgba(255, 255, 255, 0.9);
 }
 
 .search-entry:focus {
     color: #ffffff;
+    border-color: rgba(0, 0, 0, 0.0);
     caret-color: #ffffff;
     background-color: #5294E2;
 
-    selection-background-color: $selected_fg_color;
-    selected-color: $selected_bg_color;
+    selection-background-color: #ffffff;
+    selected-color: #5294E2;
 
     font-weight: bold;
     transition-duration: 0ms;
