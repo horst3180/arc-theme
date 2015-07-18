@@ -306,26 +306,26 @@ GtkEntry.gb-command-bar-entry.entry.flat:focus {
 }
 
 GbSourceStyleSchemeWidget GtkSourceView {
-    font-family: Monospace;
+  font-family: Monospace;
 }
 
 GtkScrolledWindow.gb-linked-scroller {
-    border-top: none;
+  border-top: none;
 }
 
 // Disable various animatinos that are enabled by default and really annoying
 // to the overall flow of Builder.
 GbSearchDisplayGroup GtkListBox .list-row, GbDocumentStack .button {
-    transition: none;
+  transition: none;
 }
 
 GbViewStack GtkBox.header.notebook,
 GbEditorWorkspace > GtkPaned > GtkBox > GtkBox.header.notebook {
-    border-bottom: 1px solid $borders_color;
+  border-bottom: 1px solid $borders_color;
 }
 
 GbViewStack.focused GtkBox.header.notebook {
-  background-color: $bg_color;
+  background-color: $base_color;
 
  .button.dim-label { opacity: 1; }
 }

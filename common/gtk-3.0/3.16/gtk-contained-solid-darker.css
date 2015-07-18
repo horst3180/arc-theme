@@ -2848,7 +2848,7 @@ GbEditorWorkspace > GtkPaned > GtkBox > GtkBox.header.notebook {
   border-bottom: 1px solid #dbdfe3; }
 
 GbViewStack.focused GtkBox.header.notebook {
-  background-color: #F5F6F7; }
+  background-color: #ffffff; }
   GbViewStack.focused GtkBox.header.notebook .button.dim-label, GbViewStack.focused GtkBox.header.notebook .button.label.separator, GbViewStack.focused GtkBox.header.notebook .header-bar .button.subtitle, .header-bar GbViewStack.focused GtkBox.header.notebook .button.subtitle {
     opacity: 1; }
 
