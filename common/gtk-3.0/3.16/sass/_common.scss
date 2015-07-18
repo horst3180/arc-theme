@@ -1460,7 +1460,8 @@ column-header.button.dnd { // for treeview-like derive widgets
                                 transparentize(if($variant == 'light', black, white), 0.89) 80%,
                                 transparentize(if($variant == 'light', black, white), 1) 80%) 0 1 0 0 / 0 1px 0 0 stretch;
 
-  &:active { background-color: $base_color; }
+  &:active, &:hover { background-color: $base_color; }
+  &:active:hover { color: $fg_color; }
   &:insensitive {
     border-color: $bg_color;
     background-image: none;

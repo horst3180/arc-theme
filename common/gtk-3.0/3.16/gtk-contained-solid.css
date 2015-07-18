@@ -1294,8 +1294,10 @@ column-header .button, column-header .button:hover, column-header .button:active
   border-style: none solid none none;
   border-radius: 0;
   border-image: linear-gradient(to bottom, transparent 20%, rgba(0, 0, 0, 0.11) 20%, rgba(0, 0, 0, 0.11) 80%, transparent 80%) 0 1 0 0/0 1px 0 0 stretch; }
-  column-header .button:active {
+  column-header .button:active, column-header .button:hover {
     background-color: #ffffff; }
+  column-header .button:active:hover {
+    color: #5c616c; }
   column-header .button:insensitive {
     border-color: #F5F6F7;
     background-image: none; }
