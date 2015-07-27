@@ -1563,7 +1563,8 @@ StScrollBar {
 .candidate-popup-content {
   padding: 0.5em;
   spacing: 0.3em;
-  color: #A8ADB5; }
+  color: #A8ADB5;
+  font-size: 1.3em; }
 
 .candidate-index {
   padding: 0 0.5em 0 0;
