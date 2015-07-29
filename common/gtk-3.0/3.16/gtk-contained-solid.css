@@ -1202,8 +1202,8 @@ GtkComboBox {
   padding-left: 6px;
   padding-right: 6px; }
   .path-bar .button:only-child {
-    padding-left: 10px;
-    padding-right: 10px; }
+    padding-left: 12px;
+    padding-right: 12px; }
   .path-bar .button GtkLabel:last-child {
     padding-left: 2px; }
   .path-bar .button GtkLabel:first-child {
