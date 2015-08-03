@@ -1480,7 +1480,7 @@ column-header.button.dnd { // for treeview-like derive widgets
 
   .csd & {
     padding: 4px 0px;
-    border-radius: 3px;
+    border-radius: 2px;
     border: none;
   }
 
@@ -2591,7 +2591,7 @@ GtkVolumeButton.button { padding: 8px; }
   }
   &.csd {
     &.popup, &.menu {
-      border-radius: 3px;
+      border-radius: 2px;
       box-shadow: 0 3px 6px if($variant == 'light', $_wm_border, transparentize($_wm_border, 0.1)),
                   0 0 0 1px if($variant == 'light', $_wm_border, darken($base_color, 10%));
     }

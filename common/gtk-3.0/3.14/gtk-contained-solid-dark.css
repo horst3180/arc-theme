@@ -1309,7 +1309,7 @@ column-header .button, column-header .button:hover, column-header .button:active
   border: 1px solid #2d3036; }
   .csd .menu, .csd .popup {
     padding: 4px 0px;
-    border-radius: 3px;
+    border-radius: 2px;
     border: none; }
   .menu .menuitem, .popup .menuitem {
     padding: 5px; }
@@ -2250,7 +2250,7 @@ GtkVolumeButton.button {
   .window-frame.tiled {
     border-radius: 0; }
   .window-frame.csd.popup, .window-frame.csd.menu {
-    border-radius: 3px;
+    border-radius: 2px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.45), 0 0 0 1px #212429; }
   .window-frame.csd.tooltip {
     border-radius: 2px;
