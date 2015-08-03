@@ -1511,7 +1511,7 @@ column-header .button, column-header .button:hover, column-header .button:active
     .notebook.arrow:active {
       color: #D3DAE3; }
     .notebook.arrow:insensitive {
-      color: rgba(211, 218, 227, 0); }
+      color: rgba(211, 218, 227, 0.15); }
 
 /**************
  * Scrollbars *

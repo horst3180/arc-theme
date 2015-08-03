@@ -1512,7 +1512,7 @@ column-header .button, column-header .button:hover, column-header .button:active
     .notebook.arrow:active {
       color: #5c616c; }
     .notebook.arrow:insensitive {
-      color: rgba(92, 97, 108, 0); }
+      color: rgba(92, 97, 108, 0.25); }
 
 /**************
  * Scrollbars *

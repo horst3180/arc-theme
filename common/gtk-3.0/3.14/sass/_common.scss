@@ -1735,7 +1735,7 @@ column-header.button.dnd { // for treeview-like derive widgets
     &:hover { color: mix($fg_color, $insensitive_fg_color, 50%); }
     &:active { color: $fg_color; }
     &:insensitive {
-      color: transparentize($insensitive_fg_color,0.7);
+      color: transparentize($insensitive_fg_color,0.3);
     }
   }
 }
