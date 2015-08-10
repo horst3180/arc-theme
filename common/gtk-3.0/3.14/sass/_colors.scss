@@ -24,19 +24,6 @@ $success_color: #73d216;
 $destructive_color: #F04A50;
 $suggested_color: #4DADD4;
 
-$osd_fg_color: #A8ADB5;
-$osd_bg_color: transparentize(#3c4049, 0.05);
-$osd_button_bg: darken($osd_bg_color, 3%);
-
-$osd_insensitive_bg_color: darken($osd_bg_color, 3%);
-$osd_insensitive_fg_color: mix($osd_fg_color, opacify($osd_bg_color, 1), 30%);
-$osd_borders_color: transparentize(black, 0.3);
-
-
-$tooltip_bg: $osd_bg_color;
-$tooltip_fg: #edf5fb;
-$tooltip_borders_color: transparentize(white, 0.9);
-
 //insensitive state derived colors
 $insensitive_fg_color: if($variant == 'light', transparentize($fg_color, 0.45), transparentize($fg_color, 0.55));
 $insensitive_bg_color: if($variant == 'light', mix($bg_color, $base_color, 40%), lighten($bg_color, 2%));
@@ -44,7 +31,6 @@ $insensitive_bg_color: if($variant == 'light', mix($bg_color, $base_color, 40%),
 
 $entry_bg: if($variant=='light', $base_color, lighten($base_color, 0%));
 $entry_border: if($variant == 'light', #cfd6e6, darken($borders_color, 0%));
-$entry_focus_border: $selected_bg_color;
 
 $button_bg: if($variant == 'light', lighten($bg_color, 2%), lighten($base_color, 2%));
 $button_border: $entry_border;
@@ -55,8 +41,6 @@ $header_bg: red;
 @if $transparency=='true' and ($variant=='dark' or $darker=='true') { $header_bg: transparentize(#2f343b, 0.03); }
 @if $transparency=='false' and ($variant=='dark' or $darker=='true') { $header_bg: #2f343b; }
 
-//$header_bg: if(($darker == 'true' or $variant == 'dark') and $transparency == 'true', transparentize(#2f343b, 0.03), #2f343b);
-
 $header_bg_backdrop: if($darker == 'true' or $variant == 'dark', lighten($header_bg, 1.5%), lighten($header_bg, 3%));
 
 $header_border: if($variant == 'light', darken($header_bg, 7%), darken($header_bg, 5%));
@@ -64,15 +48,19 @@ $header_border: if($variant == 'light', darken($header_bg, 7%), darken($header_b
 $header_fg: if($variant == 'light', saturate(transparentize($fg_color, 0.2), 10%), saturate(transparentize($fg_color, 0.2), 10%));
 $header_fg: if($darker == 'true', saturate(transparentize(#D3DAE3, 0.2), 10%), $header_fg);
 
-$dark_sidebar_bg: if($transparency == 'true' and $variant == 'light', $osd_bg_color, opacify($osd_bg_color, 1));
-@if $variant==dark { $dark_sidebar_bg: if($transparency == 'true', lighten($osd_bg_color, 4%), lighten(opacify($osd_bg_color, 1), 4%)); }
-
-$dark_sidebar_fg: $osd_fg_color;
+$dark_sidebar_bg: if($transparency == 'true', transparentize(#3c4049, 0.05), #3c4049);
+$dark_sidebar_fg: #BAC3CF;
 $dark_sidebar_border: if($variant == 'light', $dark_sidebar_bg, darken($dark_sidebar_bg, 10%));
 
-$panel_bg: darken($osd_bg_color, 10%);
-$panel_fg: $dark_sidebar_fg;
+$osd_fg_color: $dark_sidebar_fg;
+$osd_bg_color: darken($dark_sidebar_bg, 8%);
 
+$osd_insensitive_bg_color: darken($osd_bg_color, 3%);
+$osd_insensitive_fg_color: mix($osd_fg_color, opacify($osd_bg_color, 1), 30%);
+$osd_borders_color: transparentize(black, 0.3);
+
+$panel_bg: darken($osd_bg_color, 4.7%);
+$panel_fg: $osd_fg_color;
 
 //WM Buttons
 
