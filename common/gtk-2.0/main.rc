@@ -2227,6 +2227,13 @@ style "notebook_viewport" {
   bg[NORMAL] = @notebook_bg
 }
 
+
+style "notebook_eventbox" {
+
+  bg[NORMAL] = @notebook_bg
+  bg[ACTIVE] = @bg_color
+}
+
 style "tooltips" {
 
   xthickness = 8
@@ -2364,6 +2371,9 @@ widget_class "*<GtkNotebook>.<GtkLabel>"                            style "noteb
 
 # GTK tooltips
 widget "gtk-tooltip*"                                               style "tooltips"
+
+#Fix GVim tabs
+widget_class "*<GtkNotebook>*<GtkEventBox>"                         style "notebook_eventbox"
 
 # Xchat special cases
 widget "*xchat-inputbox"                                            style "entry"
