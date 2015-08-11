@@ -1824,7 +1824,6 @@ $legacy_icon_size: 24px;
 
 .legacy-tray {
   background-color: $panel_bg;
-  border-width: 0;
 
   &:ltr { border-radius: 0 2px 0 0; border-left-width: 0; }
   &:rtl { border-radius: 2px 0 0 0; border-right-width: 0; }
