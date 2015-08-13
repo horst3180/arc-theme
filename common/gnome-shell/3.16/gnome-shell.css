@@ -961,7 +961,7 @@ StScrollBar {
     height: 26px;
     width: 26px; }
   .window-close:active {
-    background-image: url("misc/close-active.svg");
+    background-image: url("common-assets/misc/close-active.svg");
     background-size: 26px;
     height: 26px;
     width: 26px; }
@@ -1939,15 +1939,3 @@ StEntry.chat-response {
   border: 1px solid grey;
   border-radius: 2px;
   padding: 6px; }
-
-/*tweaks*/
-.panel-button:active,
-.panel-button:overview,
-.panel-button:focus,
-.panel-button:hover,
-#appMenu,
-#panel {
-  text-shadow: 0px 0px white; }
-
-stage {
-  font-weight: bold; }

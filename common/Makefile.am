@@ -24,15 +24,23 @@ if ENABLE_DARK
 endif # ENABLE_DARK
 
 
+if ENABLE_CINNAMON
+	$(MKDIR_P) $(ithemedir)/cinnamon
+
+	cd $(srcdir)/cinnamon && cp -r --no-preserve=mode,ownership \
+		common-assets \
+		light-assets \
+		cinnamon.css \
+		$(ithemedir)/cinnamon
+endif # ENABLE_GNOME_SHELL
+
+
 if ENABLE_GNOME_SHELL
 	$(MKDIR_P) $(ithemedir)/gnome-shell
 
 	cd $(srcdir)/gnome-shell/$(GNOME_VERSION) && cp -r --no-preserve=mode,ownership \
-		checkbox \
-		dash \
-		menu \
-		misc \
-		switch \
+		common-assets \
+		light-assets \
 		gnome-shell.css \
 		$(ithemedir)/gnome-shell
 endif # ENABLE_GNOME_SHELL
@@ -245,6 +253,7 @@ uninstall-local:
 
 dist-hook:
 	cp -r \
+		cinnamon \
 		gnome-shell \
 		gtk-2.0 \
 		gtk-3.0 \
