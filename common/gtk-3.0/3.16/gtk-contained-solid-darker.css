@@ -672,6 +672,8 @@ GtkTextView {
   border-radius: 2px; }
   .menuitem.button.flat:hover {
     background-color: #edeff0; }
+  .menuitem.button.flat:checked {
+    color: #5c616c; }
 
 /*********
  * Links *
@@ -2434,7 +2436,7 @@ GtkVolumeButton.button {
 .view:selected:focus,
 .view:selected:hover, .label:selected,
 .label:selected:focus,
-.label:selected:hover, .grid-child:selected, .menuitem.button.flat:selected, .menuitem.button.flat:checked, .menuitem.button.flat:active, .list-row:selected, GtkEntry.gb-command-bar-entry.entry.flat:selected,
+.label:selected:hover, .grid-child:selected, .menuitem.button.flat:active, .menuitem.button.flat:selected, .list-row:selected, GtkEntry.gb-command-bar-entry.entry.flat:selected,
 GtkEntry.gb-command-bar-entry.entry.flat:selected:focus {
   background-image: none;
   background-color: #5294E2;

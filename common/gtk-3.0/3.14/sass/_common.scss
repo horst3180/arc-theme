@@ -736,9 +736,10 @@ $_dot_color: $selected_bg_color;
   border-radius: 2px;
 
   &:hover { background-color: mix($fg_color,$bg_color,5%); }
-  &:selected, &:checked, &:active {
+  &:active, &:selected {
     @extend %selected_items;
   }
+  &:checked { color: $fg_color; }
 }
 
 /*********
