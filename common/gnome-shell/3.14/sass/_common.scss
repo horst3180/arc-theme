@@ -240,7 +240,7 @@ StScrollBar {
   }
 
   &-button-box {
-    spacing: 0;
+    spacing: 10px;
     margin: 0px;
     padding: 14px 10px;
     background: none;
@@ -256,7 +256,7 @@ StScrollBar {
     }
   }
 
-  .run-dialog-entry { width: 21em; }
+  .run-dialog-entry { width: 21em;}
   .run-dialog-error-box {
     padding-top: 5px;
     spacing: 5px;
@@ -1094,7 +1094,7 @@ StScrollBar {
 .calendar-today:hover {
   font-weight: bold;
   color: $selected_fg_color;
-  background-color: $selected_bg_color;
+  background: $selected_bg_color, url("misc/null.svg");
   border-width: 0;
 }
 
@@ -1830,6 +1830,11 @@ StScrollBar {
     color: $osd_fg_color;
     padding-top: 12px;
     padding-bottom: 12px;
+
+    .popup-menu-item:active {
+      color: $selected_fg_color;
+      background-color: $selected_bg_color;
+    }
   }
 
   &-stack-scrollview {

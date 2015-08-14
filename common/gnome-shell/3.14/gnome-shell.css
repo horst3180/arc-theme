@@ -242,7 +242,7 @@ StScrollBar {
   .modal-dialog > StBoxLayout:first-child {
     padding: 20px 10px 10px 10px; }
   .modal-dialog-button-box {
-    spacing: 0;
+    spacing: 10px;
     margin: 0px;
     padding: 14px 10px;
     background: none;
@@ -863,7 +863,7 @@ StScrollBar {
 .calendar-today:hover {
   font-weight: bold;
   color: #ffffff;
-  background-color: #5294E2;
+  background: #5294E2, url("misc/null.svg");
   border-width: 0; }
 
 .calendar-day-with-events {
@@ -1455,6 +1455,9 @@ StScrollBar {
     color: #BAC3CF;
     padding-top: 12px;
     padding-bottom: 12px; }
+    .summary-boxpointer #summary-right-click-menu .popup-menu-item:active {
+      color: #ffffff;
+      background-color: #5294E2; }
   .summary-boxpointer-stack-scrollview {
     max-height: 18em;
     padding-top: 8px;
