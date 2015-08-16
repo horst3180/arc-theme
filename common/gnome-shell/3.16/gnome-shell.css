@@ -420,6 +420,7 @@ StScrollBar {
     .popup-menu .popup-menu-item:rtl {
       padding: 0.4em 0em 0.4em 3em; }
     .popup-menu .popup-menu-item:checked {
+      font-weight: normal;
       background: none;
       box-shadow: none;
       border-image: url("light-assets/menu/submenu-open.svg") 9 9 9 9; }

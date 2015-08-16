@@ -523,6 +523,7 @@ StScrollBar {
     &:rtl { padding: .4em 0em .4em 3em; }
 
     &:checked {
+      font-weight: normal;
       background: none;
       box-shadow: none;
       border-image: url("#{$asset_path}/menu/submenu-open.svg") 9 9 9 9;
