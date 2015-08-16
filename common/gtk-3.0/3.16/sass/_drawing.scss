@@ -87,30 +87,30 @@
 
   @else if $t==osd {
   //
-  // normal osd button
+  // normal osd entry
   //
     color: $osd_fg_color;
-    border-color: transparentize($osd_fg_color, 0.7);
+    border-color: transparentize(black, 0.6);
     background-color: transparent;
-    background-image: linear-gradient(to bottom, darken($osd_bg_color, 5%));
+    background-image: linear-gradient(to bottom, transparentize(black, 0.8));
   }
 
   @else if $t==osd-focus {
   //
-  // active osd button
+  // active osd entry
   //
-    color: $selected_bg_color;
+    color: $osd_fg_color;
     border-color: $selected_bg_color;
-    background-image: linear-gradient(to bottom, darken($osd_bg_color, 5%));
+    background-image: linear-gradient(to bottom, transparentize(black, 0.8));
   }
 
   @else if $t==osd-insensitive {
   //
-  // insensitive osd button
+  // insensitive osd entry
   //
     color: $osd_insensitive_fg_color;
-    border-color: transparentize($osd_fg_color, 0.8);
-    background-image: linear-gradient(to bottom, $osd_insensitive_bg_color);
+    border-color: transparentize(black, 0.6);
+    background-image: linear-gradient(to bottom, transparentize(black, 0.9));
   }
 }
 
@@ -237,19 +237,18 @@
   //
     color: $osd_fg_color;
     outline-color: transparentize($osd_fg_color, 0.7);
-    border-color: transparentize($osd_fg_color, 0.7);
-    background-color: transparent;
-    background-image: linear-gradient(to bottom, darken($osd_bg_color, 5%));
+    border-color: transparentize(black, 0.55);
+    background-color: transparentize(black, 0.7);
   }
 
   @else if $t==osd-hover {
   //
   // active osd button
   //
-    color: $selected_bg_color;
+    color: $osd_fg_color;
     outline-color: transparentize($osd_fg_color, 0.7);
     border-color: $selected_bg_color;
-    background-image: linear-gradient(to bottom, darken($osd_bg_color, 5%));
+    background-color: transparentize(black, 0.7);
   }
 
   @else if $t==osd-active {
@@ -259,7 +258,7 @@
     color: $selected_fg_color;
     outline-color: transparentize($selected_fg_color, 0.7);
     border-color: $selected_bg_color;
-    background-image: linear-gradient(to bottom, $selected_bg_color);
+    background-color: $selected_bg_color;
   }
 
   @else if $t==osd-insensitive {
@@ -267,8 +266,8 @@
   // insensitive osd button
   //
     color: $osd_insensitive_fg_color;
-    border-color: transparentize($osd_fg_color, 0.8);
-    background-image: linear-gradient(to bottom, $osd_insensitive_bg_color);
+    border-color: transparentize(black, 0.55);
+    background-color: transparentize(black, 0.85);
   }
 
   @else if $t==suggested_destructive {

@@ -441,7 +441,7 @@ $_dot_color: $selected_bg_color;
 
     &.image-button { padding: 10px; }
 
-    &:hover { @include button(osd-hover); border-color: transparentize($osd_fg_color, 0.7)}
+    &:hover { @include button(osd-hover); background-color: $osd_bg_color; }
     &:active, &:checked { @include button(osd-active); }
     &:insensitive { @include button(osd-insensitive); }
   }
@@ -736,9 +736,10 @@ $_dot_color: $selected_bg_color;
   border-radius: 2px;
 
   &:hover { background-color: mix($fg_color,$bg_color,5%); }
-  &:selected, &:checked, &:active {
+  &:active, &:selected {
     @extend %selected_items;
   }
+  &:checked { color: $fg_color; }
 }
 
 /*********
@@ -970,9 +971,9 @@ GtkComboBox {
   background-color: $bg_color;
   .osd &, &.osd {
     padding: 7px;
-    border: none;
-    border-radius: 4px;
-    background-color: $osd_bg_color;
+    border: 1px solid transparentize(black, 0.4);
+    border-radius: 3px;
+    background-color: transparentize($osd_bg_color, 0.1);
   }
 }
 
@@ -1377,7 +1378,6 @@ GtkTreeView.view {                                      // treeview grid lines a
       background-color: $selected_fg_color;
     }
   }
-
   &.trough, &.trough:selected { // progress bar trough in treeviews
     color: $fg_color;
     background-color: $button_border;
@@ -1480,7 +1480,7 @@ column-header.button.dnd { // for treeview-like derive widgets
 
   .csd & {
     padding: 4px 0px;
-    border-radius: 3px;
+    border-radius: 2px;
     border: none;
   }
 
@@ -1637,12 +1637,6 @@ column-header.button.dnd { // for treeview-like derive widgets
       &.top, &.bottom {
         padding-left: 12px;  // for a nicer close button
         padding-right: 12px; // placement
-        //border-left-width: 1px;
-        //border-right-width: 1px;
-      }
-      &.left, &.right {
-        //border-bottom-width: 1px;
-        //border-top-width: 1px;
       }
     }
     @each $_tab in (top, bottom, right, left) {
@@ -1789,6 +1783,7 @@ column-header.button.dnd { // for treeview-like derive widgets
   border-color: transparent;
   background-color: $base_color;
 }
+
 
 /**********
  * Switch *
@@ -2189,15 +2184,15 @@ GtkScrolledWindow {
 
 .app-notification,
 .app-notification.frame {
-  @extend %osd;
   padding: 10px;
-  background-color: $osd_bg_color;
+  color: $dark_sidebar_fg;
+  background-color: $dark_sidebar_bg;
   background-clip: border-box;
   border-radius: 0 0 2px 2px;
   border-width: 0 1px 1px 1px;
   border-style: solid;
-  border-color: darken($osd_bg_color, 10%);
-  
+  border-color: darken($dark_sidebar_bg, 10%);
+
   .button {
     @include button(osd);
     &.flat {
@@ -2459,11 +2454,11 @@ GtkInfoBar {
   &.background {
     // background-color needs to be set this way otherwise it gets drawn twice
     // see https://bugzilla.gnome.org/show_bug.cgi?id=736155 for details.
-    background-color: $tooltip_bg;
+    background-color: $osd_bg_color;
     background-clip: padding-box;
   }
 
-  color: $tooltip_fg;
+  color: $osd_fg_color;
   border-radius: 2px;
 
   &.window-frame.csd {
@@ -2591,7 +2586,7 @@ GtkVolumeButton.button { padding: 8px; }
   }
   &.csd {
     &.popup, &.menu {
-      border-radius: 3px;
+      border-radius: 2px;
       box-shadow: 0 3px 6px if($variant == 'light', $_wm_border, transparentize($_wm_border, 0.1)),
                   0 0 0 1px if($variant == 'light', $_wm_border, darken($base_color, 10%));
     }

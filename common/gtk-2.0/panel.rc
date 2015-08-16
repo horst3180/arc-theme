@@ -7,15 +7,15 @@ style "theme-panel" {
   bg[PRELIGHT] = shade(1.1, @selected_bg_color)
   bg[SELECTED] = @selected_bg_color
 
-  fg[NORMAL] = "#A8ADB5"
+  fg[NORMAL] = "#BAC3CF"
   fg[PRELIGHT] = @selected_fg_color
   fg[ACTIVE] = @selected_fg_color
   fg[SELECTED] = @selected_fg_color
 
-  text[NORMAL] = "#A8ADB5"
-  text[PRELIGHT] = "#A8ADB5"
-  text[ACTIVE] = "#A8ADB5"
-  text[SELECTED] = "#A8ADB5"
+  text[NORMAL] = "#BAC3CF"
+  text[PRELIGHT] = "#BAC3CF"
+  text[ACTIVE] = "#BAC3CF"
+  text[SELECTED] = "#BAC3CF"
 
   engine "murrine" {
     reliefstyle = 0

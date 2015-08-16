@@ -36,7 +36,7 @@ MarlinViewWindow {
       background-color: transparent;
       color: $dark_sidebar_fg;
 
-      &.image { color: transparentize($dark_sidebar_fg, 0.4); }
+      &.image { color: transparentize($dark_sidebar_fg, 0.3); }
 
       &.cell:selected {
         background-color: $selected_bg_color;
