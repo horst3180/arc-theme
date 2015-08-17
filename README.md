@@ -93,6 +93,7 @@ Other options to pass to autogen.sh are
     --disable-light            disable Arc Light support
     --disable-darker           disable Arc Darker support
     --disable-dark             disable Arc Dark support
+    --disable-cinnamon         disable Cinnamon support
     --disable-gnome-shell      disable GNOME Shell support
     --disable-gtk2             disable GTK2 support
     --disable-gtk3             disable GTK3 support
