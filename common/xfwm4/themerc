@@ -14,7 +14,7 @@ active_text_shadow_color=#e7e8eb
 inactive_text_color=#979dac
 inactive_text_shadow_color=#e7e8eb
 
-placement_ratio=20
+#placement_ratio=20
 shadow_delta_height=2
 shadow_delta_width=0
 shadow_delta_x=0
