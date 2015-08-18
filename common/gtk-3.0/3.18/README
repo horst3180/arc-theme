@@ -1,0 +1,19 @@
+This theme uses libsass/gulp to process the sass/*.scss. Never edit any of the .css files manually.
+
+How to edit this theme:
+
+1. Install `nodejs` and `npm`
+
+2. Install `gulp`
+
+    sudo npm install --global gulp
+
+3. Execute the following from the directory containing `gulpfile.js`
+
+    npm install
+
+4. Edit the sass/*.scss files
+
+5. Regenerate the .css files by executing from the directory containing `gulpfile.js`
+
+    gulp
