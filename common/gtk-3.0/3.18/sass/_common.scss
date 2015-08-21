@@ -256,6 +256,20 @@ GtkTextView { // This will get overridden by .view, needed by gedit line numbers
     box-shadow: none;
   }
 
+  .linked > & { //FIXME: use same buttons linking logic and template
+    &:first-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      &:dir(rtl) { border-right-style: none;}
+    }
+    &:last-child {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-left-style: none;
+      &:dir(rtl) { border-left-style: solid; }
+    }
+  }
+
   &.error {
     color: white;
     border-color: $error_color;
@@ -290,71 +304,52 @@ GtkTextView { // This will get overridden by .view, needed by gedit line numbers
     &:active { color: $selected_bg_color; }
   }
 
-//  .osd & {
-//    @include entry(osd);
-//    &:focus { @include entry(osd-focus); }
-//    &:insensitive { @include entry(osd-insensitive); }
-//  }
-}
-
-.linked > .entry { //FIXME: use same buttons linking logic and template
-  &:first-child {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    &:dir(rtl) { border-right-style: none;}
-  }
-  &:last-child {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border-left-style: none;
-    &:dir(rtl) { border-left-style: solid; }
-  }
-}
-
-.linked.vertical > .entry { //FIXME comment stuff and make the whole thing smarter.
-  border-bottom-color: mix($borders_color, $base_color, 30%);
-  box-shadow: none;
-  @extend %linked_vertical;
-
-  &:focus {
-    border-color: $selected_bg_color;
-    box-shadow: 0 -1px 0 0 $selected_bg_color;
-    @extend %linked_vertical;
-  }
-
-  &:insensitive {
+  .linked.vertical > & { //FIXME comment stuff and make the whole thing smarter.
     border-bottom-color: mix($borders_color, $base_color, 30%);
+    box-shadow: none;
     @extend %linked_vertical;
-  }
-
-  &:first-child {
-    border-bottom-color: mix($borders_color, $base_color, 30%);
 
     &:focus {
-      border-bottom-color: $selected_bg_color;
-      box-shadow: none;
+      border-color: $selected_bg_color;
+      box-shadow: 0 -1px 0 0 $selected_bg_color;
+      @extend %linked_vertical;
     }
 
     &:insensitive {
       border-bottom-color: mix($borders_color, $base_color, 30%);
-      @extend %linked_vertical:first-child;
-    }
-  }
-
-  &:last-child {
-    border-bottom-color: rgba(0,0,0,0.14);
-    &:focus {
-      border-bottom-color: $selected_bg_color;
-      box-shadow: 0 -1px 0 0 $selected_bg_color;
-      @extend %linked_vertical:last-child;
+      @extend %linked_vertical;
     }
 
-    &:insensitive {
+    &:first-child {
+      border-bottom-color: mix($borders_color, $base_color, 30%);
+
+      &:focus {
+        border-bottom-color: $selected_bg_color;
+        box-shadow: none;
+      }
+
+      &:insensitive {
+        border-bottom-color: mix($borders_color, $base_color, 30%);
+        @extend %linked_vertical:first-child;
+      }
+    }
+
+    &:last-child {
       border-bottom-color: rgba(0,0,0,0.14);
-      @extend %linked_vertical:last-child;
+      &:focus {
+        border-bottom-color: $selected_bg_color;
+        box-shadow: 0 -1px 0 0 $selected_bg_color;
+        @extend %linked_vertical:last-child;
+      }
 
+      &:insensitive {
+        border-bottom-color: rgba(0,0,0,0.14);
+        @extend %linked_vertical:last-child;
+
+      }
     }
   }
+
   .osd & {
     @include entry(osd);
     &:focus { @include entry(osd-focus); }
@@ -612,24 +607,24 @@ $_dot_color: $selected_bg_color;
       @else { background-position: left 3px, left 2px; }
     }
   }
+
+  //inline-toolbar buttons
+  .inline-toolbar &, .inline-toolbar &:backdrop {
+    border-radius: 2px;
+    border-width: 1px;
+    @extend %linked;
+  }
+
+  .linked > &,
+  .linked > &:hover,
+  .linked > &:active,
+  .linked > &:checked { @extend %linked; }
+
+  .linked.vertical > &,
+  .linked.vertical > &:hover,
+  .linked.vertical > &:active,
+  .linked.vertical > &:checked { @extend %linked_vertical; }
 }
-
-//inline-toolbar buttons
-.inline-toolbar .button, .inline-toolbar .button:backdrop {
-  border-radius: 2px;
-  border-width: 1px;
-  @extend %linked;
-}
-
-.linked > .button,
-.linked > .button:hover,
-.linked > .button:active,
-.linked > .button:checked { @extend %linked; }
-
-.linked.vertical > .button,
-.linked.vertical > .button:hover,
-.linked.vertical > .button:active,
-.linked.vertical > .button:checked { @extend %linked_vertical; }
 
 // all the following is for the +|- buttons on inline toolbars, that way
 // should really be deprecated...
@@ -735,10 +730,8 @@ $_dot_color: $selected_bg_color;
 
 /* menu buttons */
 .menuitem.button.flat {
-  @extend %undecorated_button;
-
   transition: none;
-  color: $fg_color;
+  @extend %undecorated_button;
   outline-offset: -1px;
   border-radius: 2px;
 
