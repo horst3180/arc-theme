@@ -112,9 +112,10 @@ NautilusQueryEditor .search-bar.toolbar {
   background-color: $base_color;
 }
 
-.nautilus-circular-button {
+.nautilus-circular-button.image-button.button {
   border-radius: 50%;
   outline-radius: 50%;
+  padding: 8px;
 }
 
 $disk_space_unknown: transparentize($fg_color, 0.5);

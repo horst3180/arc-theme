@@ -3220,9 +3220,10 @@ NautilusQueryEditor .search-bar.toolbar, NautilusQueryEditor .search-bar.inline-
   box-shadow: none;
   background-color: #ffffff; }
 
-.nautilus-circular-button {
+.nautilus-circular-button.image-button.button {
   border-radius: 50%;
-  outline-radius: 50%; }
+  outline-radius: 50%;
+  padding: 8px; }
 
 .disk-space-display {
   border-style: solid;
