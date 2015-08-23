@@ -769,6 +769,9 @@ StScrollBar {
   min-height: 27px;
   border-image: url('common-assets/panel/panel.svg') 1 1 1 1;
 
+  // Fix dynamic top bar extension
+  &.dynamic-top-bar-white-btn { border-image: none; }
+
   &.unlock-screen,
   &.login-screen,
   &.lock-screen {

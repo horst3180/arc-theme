@@ -591,6 +591,9 @@ StScrollBar {
   height: 2.1em;
   min-height: 27px;
   border-image: url("common-assets/panel/panel.svg") 1 1 1 1; }
+  #panel.dynamic-top-bar-white-btn {
+    border-image: none;
+    background-color: rgba(31, 33, 37, 0.95); }
   #panel.unlock-screen,
   #panel.login-screen,
   #panel.lock-screen {
