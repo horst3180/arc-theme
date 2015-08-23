@@ -246,10 +246,7 @@ endif # ENABLE_XFWM
 
 
 uninstall-local:
-
-if ENABLE_LIGHT
 	rm -rf $(ithemedir)
-endif # ENABLE_LIGHT
 
 if ENABLE_DARKER
 	rm -rf $(ithemedarkerdir)
