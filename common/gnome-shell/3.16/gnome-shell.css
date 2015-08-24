@@ -31,28 +31,28 @@ stage {
 .notification-banner:hover .notification-button,
 .notification-banner:focus .notification-button, .hotplug-notification-item {
   text-shadow: 0 1px rgba(255, 255, 255, 0);
-  box-shadow: inset 0 0 rgba(255, 255, 255, 0);
+  box-shadow: inset 0 0 black;
   color: #5c616c;
   background-color: #fbfbfc;
   border: 1px solid #cfd6e6; }
   .button:focus, .notification-banner .notification-button:focus,
   .hotplug-notification-item:focus {
     text-shadow: 0 1px rgba(255, 255, 255, 0);
-    box-shadow: inset 0 0 rgba(255, 255, 255, 0);
+    box-shadow: inset 0 0 black;
     color: #5c616c;
     background-color: #fbfbfc;
     border: 1px solid #5294E2; }
   .button:hover, .notification-banner .notification-button:hover,
   .hotplug-notification-item:hover {
     text-shadow: 0 1px rgba(255, 255, 255, 0);
-    box-shadow: inset 0 0 rgba(255, 255, 255, 0);
+    box-shadow: inset 0 0 black;
     color: #5c616c;
     background-color: #fbfbfc;
     border: 1px solid #5294E2; }
   .button:hover:focus, .notification-banner .notification-button:hover:focus,
   .hotplug-notification-item:hover:focus {
     text-shadow: 0 1px rgba(255, 255, 255, 0);
-    box-shadow: inset 0 0 rgba(255, 255, 255, 0);
+    box-shadow: inset 0 0 black;
     color: #5294E2;
     background-color: #fbfbfc;
     border: 1px solid #5294E2; }
@@ -60,27 +60,27 @@ stage {
   .hotplug-notification-item:active, .button:active:focus, .notification-banner .notification-button:active:focus,
   .hotplug-notification-item:active:focus {
     text-shadow: 0 1px rgba(255, 255, 255, 0);
-    box-shadow: inset 0 0 rgba(255, 255, 255, 0);
+    box-shadow: inset 0 0 black;
     color: #ffffff;
     background-color: #5294E2;
     border: 1px solid #5294E2; }
   .button:insensitive, .notification-banner .notification-button:insensitive,
   .hotplug-notification-item:insensitive {
     text-shadow: 0 1px rgba(255, 255, 255, 0);
-    box-shadow: inset 0 0 rgba(255, 255, 255, 0);
+    box-shadow: inset 0 0 black;
     color: rgba(92, 97, 108, 0.55);
     border: 1px solid rgba(207, 214, 230, 0.55);
     background-color: rgba(251, 251, 252, 0.55); }
 
 .modal-dialog-button-box .button {
   text-shadow: 0 1px rgba(255, 255, 255, 0);
-  box-shadow: inset 0 0 rgba(255, 255, 255, 0);
+  box-shadow: inset 0 0 black;
   color: #BAC3CF;
   border: 1px solid rgba(0, 0, 0, 0.45);
   background-color: rgba(0, 0, 0, 0.3); }
   .modal-dialog-button-box .button:hover {
     text-shadow: 0 1px rgba(255, 255, 255, 0);
-    box-shadow: inset 0 0 rgba(255, 255, 255, 0);
+    box-shadow: inset 0 0 black;
     color: #BAC3CF;
     border: 1px solid #5294E2;
     background-color: rgba(0, 0, 0, 0.3); }
@@ -88,13 +88,13 @@ stage {
     color: #5294E2; }
   .modal-dialog-button-box .button:active {
     text-shadow: 0 1px rgba(255, 255, 255, 0);
-    box-shadow: inset 0 0 rgba(255, 255, 255, 0);
+    box-shadow: inset 0 0 black;
     color: #ffffff;
     border: 1px solid #5294E2;
     background-color: #5294E2; }
   .modal-dialog-button-box .button:insensitive {
     text-shadow: 0 1px rgba(255, 255, 255, 0);
-    box-shadow: inset 0 0 rgba(255, 255, 255, 0);
+    box-shadow: inset 0 0 black;
     color: #555a62;
     border: 1px solid rgba(0, 0, 0, 0.45);
     background-color: rgba(0, 0, 0, 0.15); }
@@ -106,20 +106,20 @@ StEntry {
   selected-color: #ffffff;
   transition-duration: 300ms;
   border-radius: 20px;
-  box-shadow: inset 0 0 rgba(255, 255, 255, 0);
   color: #5c616c;
   background-color: #ffffff;
-  border: 1px solid #cfd6e6; }
+  border: 1px solid #cfd6e6;
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.1); }
   StEntry:focus, StEntry:hover {
-    box-shadow: inset 0 0 rgba(255, 255, 255, 0);
     color: #5c616c;
     background-color: #ffffff;
-    border: 1px solid #5294E2; }
+    border: 1px solid #5294E2;
+    box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.1); }
   StEntry:insensitive {
-    box-shadow: inset 0 0 rgba(255, 255, 255, 0);
     color: rgba(92, 97, 108, 0.55);
     background-color: #fbfbfb;
-    border-color: 1px solid #e0e4ee; }
+    border-color: 1px solid #e0e4ee;
+    box-shadow: inset 0 2px 4px rgba(251, 251, 251, 0.1); }
   StEntry StIcon.capslock-warning {
     icon-size: 16px;
     warning-color: #F27835;
@@ -768,7 +768,7 @@ StScrollBar {
   .world-clocks-button:focus,
   .message-list-section-title:hover, .message-list-section-title:focus {
     text-shadow: 0 1px rgba(255, 255, 255, 0);
-    box-shadow: inset 0 0 rgba(255, 255, 255, 0);
+    box-shadow: inset 0 0 black;
     color: #5c616c;
     background-color: #fbfbfc;
     border: 1px solid #5294E2; }
@@ -776,7 +776,7 @@ StScrollBar {
   .world-clocks-button:active,
   .message-list-section-title:active {
     text-shadow: 0 1px rgba(255, 255, 255, 0);
-    box-shadow: inset 0 0 rgba(255, 255, 255, 0);
+    box-shadow: inset 0 0 black;
     color: #ffffff;
     background-color: #5294E2;
     border: 1px solid #5294E2; }
@@ -1245,7 +1245,7 @@ StScrollBar {
     border-color: #5294E2; }
   .app-view-control:checked {
     text-shadow: 0 1px rgba(255, 255, 255, 0);
-    box-shadow: inset 0 0 rgba(255, 255, 255, 0);
+    box-shadow: inset 0 0 black;
     color: #ffffff;
     border: 1px solid #5294E2;
     background-color: #5294E2; }
@@ -1449,17 +1449,6 @@ StScrollBar {
     padding-left: 0px;
     padding-right: 4px; }
 
-StEntry.chat-response {
-  box-shadow: inset 0 0 rgba(255, 255, 255, 0);
-  color: #5c616c;
-  background-color: #ffffff;
-  border: 1px solid #cfd6e6; }
-  StEntry.chat-response:focus {
-    box-shadow: inset 0 0 rgba(255, 255, 255, 0);
-    color: #5c616c;
-    background-color: #ffffff;
-    border: 1px solid #5294E2; }
-
 .chat-sent {
   padding-left: 18pt;
   color: #5294E2; }
@@ -1573,25 +1562,25 @@ StEntry.chat-response {
   border-radius: 3px;
   box-shadow: none;
   text-shadow: 0 1px rgba(255, 255, 255, 0);
-  box-shadow: inset 0 0 rgba(255, 255, 255, 0);
+  box-shadow: inset 0 0 black;
   color: #BAC3CF;
   border: 1px solid rgba(0, 0, 0, 0.45);
   background-color: rgba(0, 0, 0, 0.3); }
   .keyboard-key:hover {
     text-shadow: 0 1px rgba(255, 255, 255, 0);
-    box-shadow: inset 0 0 rgba(255, 255, 255, 0);
+    box-shadow: inset 0 0 black;
     color: #BAC3CF;
     border: 1px solid #5294E2;
     background-color: rgba(0, 0, 0, 0.3); }
   .keyboard-key:active, .keyboard-key:checked {
     text-shadow: 0 1px rgba(255, 255, 255, 0);
-    box-shadow: inset 0 0 rgba(255, 255, 255, 0);
+    box-shadow: inset 0 0 black;
     color: #ffffff;
     border: 1px solid #5294E2;
     background-color: #5294E2; }
   .keyboard-key:grayed {
     text-shadow: 0 1px rgba(255, 255, 255, 0);
-    box-shadow: inset 0 0 rgba(255, 255, 255, 0);
+    box-shadow: inset 0 0 black;
     color: #555a62;
     border: 1px solid rgba(0, 0, 0, 0.45);
     background-color: rgba(0, 0, 0, 0.15); }
@@ -1667,25 +1656,25 @@ StEntry.chat-response {
     padding: 3px 18px; }
     .login-dialog .modal-dialog-button:default {
       text-shadow: 0 1px rgba(255, 255, 255, 0);
-      box-shadow: inset 0 0 rgba(255, 255, 255, 0);
+      box-shadow: inset 0 0 black;
       color: #5c616c;
       background-color: #fbfbfc;
       border: 1px solid #cfd6e6; }
       .login-dialog .modal-dialog-button:default:hover, .login-dialog .modal-dialog-button:default:focus {
         text-shadow: 0 1px rgba(255, 255, 255, 0);
-        box-shadow: inset 0 0 rgba(255, 255, 255, 0);
+        box-shadow: inset 0 0 black;
         color: #5c616c;
         background-color: #fbfbfc;
         border: 1px solid #5294E2; }
       .login-dialog .modal-dialog-button:default:active {
         text-shadow: 0 1px rgba(255, 255, 255, 0);
-        box-shadow: inset 0 0 rgba(255, 255, 255, 0);
+        box-shadow: inset 0 0 black;
         color: #ffffff;
         background-color: #5294E2;
         border: 1px solid #5294E2; }
       .login-dialog .modal-dialog-button:default:insensitive {
         text-shadow: 0 1px rgba(255, 255, 255, 0);
-        box-shadow: inset 0 0 rgba(255, 255, 255, 0);
+        box-shadow: inset 0 0 black;
         color: rgba(92, 97, 108, 0.55);
         border: 1px solid rgba(207, 214, 230, 0.55);
         background-color: rgba(251, 251, 252, 0.55); }
@@ -1892,15 +1881,15 @@ StEntry.chat-response {
 .lg-dialog StEntry {
   selection-background-color: #5294E2;
   selected-color: #ffffff;
-  box-shadow: inset 0 0 rgba(255, 255, 255, 0);
   color: #BAC3CF;
   background-color: rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(0, 0, 0, 0.4); }
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05); }
   .lg-dialog StEntry:focus {
-    box-shadow: inset 0 0 rgba(255, 255, 255, 0);
     color: #BAC3CF;
     background-color: rgba(0, 0, 0, 0.2);
-    border: 1px solid #5294E2; }
+    border: 1px solid #5294E2;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05); }
 
 .lg-dialog .shell-link {
   color: #2679db; }

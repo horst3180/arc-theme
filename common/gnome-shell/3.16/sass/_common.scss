@@ -1777,12 +1777,6 @@ StScrollBar {
   &:rtl { padding-left: 0px; padding-right: 4px; }
 }
 
-StEntry.chat-response {
-  @include entry(normal);
-
-  &:focus { @include entry(focus); }
-}
-
 .chat-sent {
   padding-left: 18pt;
   color: $selected_bg_color;
