@@ -257,6 +257,9 @@ GtkFlowBox .grid-child {
       border-color: rgba(0, 0, 0, 0.4);
       background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1)); }
 
+GtkSearchEntry.entry {
+  border-radius: 20px; }
+
 /***********
  * Buttons *
  ***********/

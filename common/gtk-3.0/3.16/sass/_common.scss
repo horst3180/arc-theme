@@ -357,6 +357,8 @@ GtkTextView { // This will get overridden by .view, needed by gedit line numbers
   }
 }
 
+GtkSearchEntry.entry { border-radius: 20px; }
+
 /***********
  * Buttons *
  ***********/
