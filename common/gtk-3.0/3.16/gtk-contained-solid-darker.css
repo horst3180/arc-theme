@@ -141,14 +141,14 @@ GtkTextView {
 .entry {
   border: 1px solid;
   padding: 5px 8px 6px;
-  border-radius: 15px;
+  border-radius: 3px;
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #5c616c;
   border-color: #cfd6e6;
   background-color: #ffffff;
   background-image: linear-gradient(to bottom, #ffffff); }
   .header-bar .entry {
-    padding: 6px 11px; }
+    padding: 6px; }
   .entry.image {
     padding-left: 3px;
     padding-right: 3px; }

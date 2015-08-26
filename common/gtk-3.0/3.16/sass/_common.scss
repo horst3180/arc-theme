@@ -213,11 +213,11 @@ GtkTextView { // This will get overridden by .view, needed by gedit line numbers
   border: 1px solid;
   padding: 5px 8px 6px;
 
-  border-radius: 15px;
+  border-radius: 3px;
   transition: all 200ms $ease-out-quad;
   @include entry(normal);
 
-  .header-bar & { padding: 6px 11px; }
+  .header-bar & { padding: 6px; }
 
   //&.image { // icons inside the entry
   //  &.left { padding-left: 0; }

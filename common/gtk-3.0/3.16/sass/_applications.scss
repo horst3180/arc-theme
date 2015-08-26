@@ -291,15 +291,15 @@ GbSearchBox.linked {
   > GtkMenuButton.button:last-child:dir(ltr) {
 
     border-left-style: none;
-    border-radius: 0 14.5px 14.5px 0;
-    outline-radius: 0 12.5px 12.5px 0;
+    border-radius: 0 3px 3px 0;
+    outline-radius: 0 1px 1px 0;
 
     &:hover { box-shadow: -1px 0 $selected_bg_color; }
   }
   > GtkMenuButton.button:first-child:dir(rtl) {
     border-right-style: none;
-    border-radius: 14.5px 0 0 14.5px;
-    outline-radius: 12.5px 0 0 12.5px;
+    border-radius: 3px 0 0 3px;
+    outline-radius: 1px 0 0 1px;
 
     &:hover { box-shadow: 1px 0 $selected_bg_color; }
   }
@@ -585,7 +585,7 @@ MarlinViewWindow *:selected:focus {
 }
 
 .marlin-pathbar.pathbar {
-  border-radius: 14.5px;
+  border-radius: 3px;
   @include entry(header-normal);
 
   &:focus { @include entry(header-focus) }

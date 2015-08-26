@@ -67,7 +67,7 @@ stage {
   selection-background-color: $selected_bg_color;
   selected-color: $selected_fg_color;
   transition-duration: 300ms;
-  border-radius: 20px;
+  border-radius: 3px;
 
   @include entry(normal);
 
@@ -88,7 +88,7 @@ stage {
   selection-background-color: $selected_bg_color;
   selected-color: $selected_fg_color;
   transition-duration: 300ms;
-  border-radius: 20px;
+  border-radius: 3px;
 
   @include entry(osd);
 
@@ -234,7 +234,7 @@ StScrollBar {
 // Tooltip
 //
 #Tooltip {
-  border-radius: l3px;
+  border-radius: 3px;
   padding: 5px 12px;
   background-color: $osd_bg_color;
   color: $osd_fg_color;
@@ -899,7 +899,7 @@ StScrollBar {
   &-entry {
     width: 21em;
     padding: 7px;
-    border-radius: 20px;
+    border-radius: 3px;
     caret-color: $osd_fg_color;
     selected-color: $selected_fg_color;
     selection-background-color: $selected_bg_color;
