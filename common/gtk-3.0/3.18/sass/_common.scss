@@ -899,7 +899,7 @@ $_dot_color: $selected_bg_color;
  * ComboBoxes *
  **************/
 GtkComboBox {
-  > .button { padding-top: 3px; padding-bottom: 4px; } // Otherwise combos
+  > .the-button-in-the-combobox { padding-top: 3px; padding-bottom: 4px; } // Otherwise combos
                                                        // are bigger then
                                                        // buttons
   -GtkComboBox-arrow-scaling: 0.5;
@@ -921,7 +921,7 @@ GtkComboBox {
     &:dir(rtl) { border-left-style: none; }
   }
 
-  &.combobox-entry .button {
+  &.combobox-entry .the-button-in-the-combobox {
     @extend %linked;
 
     color: transparentize($fg_color, 0.4);
@@ -940,30 +940,30 @@ GtkComboBox {
   }
 }
 
-.linked > GtkComboBox > .button {
+.linked > GtkComboBox > .the-button-in-the-combobox {
   // the combo is a composite widget so the way we do button linking doesn't
   // work, special case needed. See
   // https://bugzilla.gnome.org/show_bug.cgi?id=733979
   &:dir(ltr) { @extend %linked_middle; } // specificity bump
   &:dir(rtl) { @extend %linked_middle:dir(rtl); }
 }
-.linked > GtkComboBox:first-child > .button {
+.linked > GtkComboBox:first-child > .the-button-in-the-combobox {
   @extend %linked:first-child;
 }
-.linked > GtkComboBox:last-child > .button {
+.linked > GtkComboBox:last-child > .the-button-in-the-combobox {
   @extend %linked:last-child;
 }
-.linked > GtkComboBox:only-child > .button {
+.linked > GtkComboBox:only-child > .the-button-in-the-combobox {
   @extend %linked:only-child;
 }
-.linked.vertical > GtkComboBoxText > .button,
-.linked.vertical > GtkComboBox > .button { @extend %linked_vertical_middle; }
-.linked.vertical > GtkComboBoxText:first-child > .button,
-.linked.vertical > GtkComboBox:first-child > .button { @extend %linked_vertical:first-child; }
-.linked.vertical > GtkComboBoxText:last-child > .button,
-.linked.vertical > GtkComboBox:last-child > .button { @extend %linked_vertical:last-child; }
-.linked.vertical > GtkComboBoxText:only-child > .button,
-.linked.vertical > GtkComboBox:only-child > .button { @extend %linked_vertical:only-child; }
+.linked.vertical > GtkComboBoxText > .the-button-in-the-combobox,
+.linked.vertical > GtkComboBox > .the-button-in-the-combobox { @extend %linked_vertical_middle; }
+.linked.vertical > GtkComboBoxText:first-child > .the-button-in-the-combobox,
+.linked.vertical > GtkComboBox:first-child > .the-button-in-the-combobox { @extend %linked_vertical:first-child; }
+.linked.vertical > GtkComboBoxText:last-child > .the-button-in-the-combobox,
+.linked.vertical > GtkComboBox:last-child > .the-button-in-the-combobox { @extend %linked_vertical:last-child; }
+.linked.vertical > GtkComboBoxText:only-child > .the-button-in-the-combobox,
+.linked.vertical > GtkComboBox:only-child > .the-button-in-the-combobox { @extend %linked_vertical:only-child; }
 
 /************
  * Toolbars *
@@ -1313,7 +1313,7 @@ GtkComboBox {
   > * > * > * > GtkComboBox {
     &:insensitive { color: transparentize($header_fg, 0.6); }
 
-    &.combobox-entry .button {
+    &.combobox-entry .the-button-in-the-combobox {
       @include entry(header-normal);
 
       &:hover { @include entry(header-focus); }
