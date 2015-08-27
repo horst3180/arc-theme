@@ -110,7 +110,7 @@ StEntry {
   selection-background-color: $selected_bg_color;
   selected-color: $selected_fg_color;
   transition-duration: 300ms;
-  border-radius: 20px;
+  border-radius: 3px;
   background-gradient-direction: none !important;
 
   @include entry(normal);
@@ -800,6 +800,9 @@ StScrollBar {
   height: 2.1em;
   min-height: 27px;
   border-image: url('common-assets/panel/panel.svg') 1 1 1 1;
+
+  // Fix dynamic top bar extension
+  .dynamic-top-bar-white-btn { border-image: none; }
 
   &.unlock-screen,
   &.login-screen,

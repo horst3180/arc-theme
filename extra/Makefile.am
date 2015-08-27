@@ -1,5 +1,2 @@
-dist-hook:
-	cp -r \
-		Chrome \
-		Arc-Plank \
-		$(distdir)
+EXTRA_DIST = $(srcdir)/Chrome \
+	     $(srcdir)/Arc-Plank

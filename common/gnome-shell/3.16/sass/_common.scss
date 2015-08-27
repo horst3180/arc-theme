@@ -53,6 +53,10 @@ stage {
   transition-duration: 0;
   border-radius: 2px;
 
+  @extend %button;
+}
+
+%button {
   @include button(normal);
 
   &:focus { @include button(focus); }
@@ -80,7 +84,7 @@ StEntry {
   selection-background-color: $selected_bg_color;
   selected-color: $selected_fg_color;
   transition-duration: 300ms;
-  border-radius: 20px;
+  border-radius: 3px;
 
   @include entry(normal);
 
@@ -768,6 +772,9 @@ StScrollBar {
   height: 2.1em;
   min-height: 27px;
   border-image: url('common-assets/panel/panel.svg') 1 1 1 1;
+
+  // Fix dynamic top bar extension
+  &.dynamic-top-bar-white-btn { border-image: none; }
 
   &.unlock-screen,
   &.login-screen,
@@ -1733,10 +1740,10 @@ StScrollBar {
   width: 34em;
   margin: 5px;
   padding: 10px;
-  color: $osd_fg_color;
+  color: $fg_color;
   background-color: transparent;
   border: 1px solid transparent;
-  border-image: url("common-assets/misc/bg.svg") 9 9 9 9;
+  border-image: url("#{$asset_path}/menu/menu.svg") 9 9 9 9;
 
   .notification-icon { padding: 5px; }
 
@@ -1751,7 +1758,7 @@ StScrollBar {
   }
   .notification-button {
     padding: 4px 4px 5px;
-    @extend %osd_button;
+    @extend %button;
 
     &:first-child, &:last-child { border-radius: 2px; }
   }
@@ -1762,18 +1769,12 @@ StScrollBar {
 // Chat Bubbles
 .chat-body { spacing: 5px; }
 .chat-response { margin: 5px; }
-.chat-log-message { color: $osd_fg_color; }
+.chat-log-message { color: $fg_color; }
 .chat-new-group { padding-top: 1em; }
 .chat-received {
   padding-left: 4px;
 
   &:rtl { padding-left: 0px; padding-right: 4px; }
-}
-
-StEntry.chat-response {
-  @include entry(osd);
-
-  &:focus { @include entry(osd-focus); }
 }
 
 .chat-sent {
@@ -1787,7 +1788,7 @@ StEntry.chat-response {
   padding-left: 4px;
   font-size: 9pt;
   font-weight: bold;
-  color: transparentize($osd_fg_color, 0.4);
+  color: transparentize($fg_color, 0.4);
 
   &:rtl { padding-left: 0; padding-right: 4px; }
 }
@@ -1802,7 +1803,7 @@ StEntry.chat-response {
 
 .hotplug-notification-item {
   padding: 2px 10px;
-  @extend %osd_button;
+  @extend %button;
 
   &:focus { padding: 2px 10px; }
 }

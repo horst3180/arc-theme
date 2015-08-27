@@ -248,20 +248,24 @@ endif # ENABLE_XFWM
 uninstall-local:
 	rm -rf $(ithemedir)
 
-	-rmdir -p $(DESTDIR)$(datadir)/themes 2>/dev/null
+if ENABLE_DARKER
+	rm -rf $(ithemedarkerdir)
+endif # ENABLE_DARKER
+
+if ENABLE_DARK
+	rm -rf $(ithemedarkdir)
+endif # ENABLE_DARK
 
 
-dist-hook:
-	cp -r \
-		cinnamon \
-		gnome-shell \
-		gtk-2.0 \
-		gtk-3.0 \
-		metacity-1 \
-		unity \
-		xfwm4 \
-		xfwm4-dark \
-		index.theme \
-		index.theme-darker \
-		index.theme-dark \
-		$(distdir)
+EXTRA_DIST = $(srcdir)/cinnamon \
+	     $(srcdir)/gnome-shell \
+	     $(srcdir)/gtk-2.0 \
+	     $(srcdir)/gtk-3.0 \
+	     $(srcdir)/metacity-1 \
+	     $(srcdir)/unity \
+	     $(srcdir)/xfce-notify-4.0 \
+	     $(srcdir)/xfwm4 \
+	     $(srcdir)/xfwm4-dark \
+	     $(srcdir)/index.theme \
+	     $(srcdir)/index.theme-darker \
+	     $(srcdir)/index.theme-dark

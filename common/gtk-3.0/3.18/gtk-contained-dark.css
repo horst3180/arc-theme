@@ -148,14 +148,14 @@ GtkTextView {
 .entry {
   border: 1px solid;
   padding: 5px 8px 6px;
-  border-radius: 15px;
+  border-radius: 3px;
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #D3DAE3;
   border-color: #2d3036;
   background-color: #383c45;
   background-image: linear-gradient(to bottom, #383c45); }
   .header-bar .entry {
-    padding: 6px 11px; }
+    padding: 6px; }
   .entry.image {
     padding-left: 3px;
     padding-right: 3px; }
@@ -264,6 +264,9 @@ GtkTextView {
       border-color: rgba(0, 0, 0, 0.4);
       background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1)); }
 
+GtkSearchEntry.entry {
+  border-radius: 20px; }
+
 /***********
  * Buttons *
  ***********/
@@ -323,9 +326,9 @@ GtkTextView {
     .button:insensitive > GtkLabel {
       color: inherit; }
     .button:insensitive:active, .button:insensitive:checked {
-      color: rgba(255, 255, 255, 0.55);
-      border-color: rgba(82, 148, 226, 0.55);
-      background-color: rgba(82, 148, 226, 0.55);
+      color: rgba(255, 255, 255, 0.8);
+      border-color: rgba(82, 148, 226, 0.75);
+      background-color: rgba(82, 148, 226, 0.75);
       opacity: 0.6; }
       .button:insensitive:active > GtkLabel, .button:insensitive:checked > GtkLabel {
         color: inherit; }
@@ -551,9 +554,9 @@ GtkTextView {
       color: inherit; }
   .inline-toolbar GtkToolButton > .button:insensitive:active,
   .inline-toolbar GtkToolButton > .button:insensitive:checked {
-    color: rgba(255, 255, 255, 0.55);
-    border-color: rgba(82, 148, 226, 0.55);
-    background-color: rgba(82, 148, 226, 0.55);
+    color: rgba(255, 255, 255, 0.8);
+    border-color: rgba(82, 148, 226, 0.75);
+    background-color: rgba(82, 148, 226, 0.75);
     opacity: 0.6; }
     .inline-toolbar GtkToolButton > .button:insensitive:active > GtkLabel,
     .inline-toolbar GtkToolButton > .button:insensitive:checked > GtkLabel {
@@ -3610,7 +3613,7 @@ MarlinViewWindow *:selected:focus {
   outline-color: transparent; }
 
 .marlin-pathbar.pathbar {
-  border-radius: 14.5px;
+  border-radius: 3px;
   color: rgba(207, 218, 231, 0.8);
   border-color: rgba(24, 27, 31, 0.97);
   background-image: linear-gradient(to bottom, rgba(38, 42, 48, 0.87));

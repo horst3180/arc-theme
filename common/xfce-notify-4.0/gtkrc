@@ -12,11 +12,11 @@ style "notify-window" {
 style "notify-button" {
   bg[NORMAL] = "#434652"
   bg[PRELIGHT] = "#5C6070"
-  bg[ACTIVE] = @selected_bg_color
+  bg[ACTIVE] = "#5294E2"
 
   fg[NORMAL] = "#BAC3CF"
   fg[PRELIGHT] = "#BAC3CF"
-  fg[ACTIVE] = @selected_fg_color
+  fg[ACTIVE] = "#ffffff"
 
   engine "murrine" {
     gradient_shades = { 1.0, 1.0, 1.0, 1.0 }
@@ -27,7 +27,7 @@ style "notify-button" {
 }
 
 style "notify-text" {
-  GtkWidget::link-color = @link_color
+  GtkWidget::link-color = "#5294E2"
 
   fg[NORMAL] = "#BAC3CF"
   fg[PRELIGHT] = "#BAC3CF"
@@ -49,9 +49,9 @@ style "notify-progressbar" {
   ythickness   = 0
 
   fg[PRELIGHT] = "#000000"
-  bg[NORMAL]   = @selected_bg_color
+  bg[NORMAL]   = "#5294E2"
   bg[ACTIVE] = "#131417"
-  bg[SELECTED] = @selected_bg_color
+  bg[SELECTED] = "#5294E2"
 
   engine "murrine" {
     gradient_shades = { 1.0, 1.0, 1.0, 1.0 }

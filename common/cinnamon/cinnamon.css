@@ -85,7 +85,7 @@ stage {
   selection-background-color: #5294E2;
   selected-color: #ffffff;
   transition-duration: 300ms;
-  border-radius: 20px;
+  border-radius: 3px;
   box-shadow: inset 0 0 rgba(255, 255, 255, 0);
   color: #5c616c;
   background-color: #ffffff;
@@ -112,7 +112,7 @@ stage {
   selection-background-color: #5294E2;
   selected-color: #ffffff;
   transition-duration: 300ms;
-  border-radius: 20px;
+  border-radius: 3px;
   box-shadow: inset 0 0 rgba(255, 255, 255, 0);
   color: #BAC3CF;
   background-color: rgba(0, 0, 0, 0.2);
@@ -229,7 +229,7 @@ StScrollBar {
     color: #5294e2; }
 
 #Tooltip {
-  border-radius: l3px;
+  border-radius: 3px;
   padding: 5px 12px;
   background-color: rgba(42, 44, 51, 0.95);
   color: #BAC3CF;
@@ -740,7 +740,7 @@ StScrollBar {
   .run-dialog-entry {
     width: 21em;
     padding: 7px;
-    border-radius: 20px;
+    border-radius: 3px;
     caret-color: #BAC3CF;
     selected-color: #ffffff;
     selection-background-color: #5294E2;
