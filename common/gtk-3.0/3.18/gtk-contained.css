@@ -787,7 +787,7 @@ GtkSearchEntry.entry {
   .linked.vertical > GtkComboBox:only-child > .button:hover {
     box-shadow: none; }
 
-.menuitem.button.flat, .menuitem.sidebar-button.button, .button:link, .button:visited, .button:link:hover, .button:link:active, .button:link:checked, .button:visited:hover, .button:visited:active, .button:visited:checked, .menu.button, .popup.button, .notebook tab .button, .list-row.button, .app-notification .button.flat,
+.menuitem.button.flat, .menuitem.sidebar-button.button, .button:link, .button:visited, .button:link:hover, .button:link:active, .button:link:checked, .button:visited:hover, .button:visited:active, .button:visited:checked, .menu.button, .popup.button, .notebook tab .button, .list-row.activatable, .app-notification .button.flat,
 .app-notification .sidebar-button.button,
 .app-notification.frame .button.flat, .app-notification.frame .sidebar-button.button, .app-notification .button.flat:insensitive,
 .app-notification .sidebar-button.button:insensitive,
@@ -2549,28 +2549,28 @@ GtkScrolledWindow GtkViewport.frame {
 .grid-child {
   padding: 2px; }
 
-.list-row.button {
+.list-row.activatable {
   background-color: transparent;
   border-style: none;
   border-radius: 0;
   box-shadow: none; }
-  .list-row.button:hover {
+  .list-row.activatable:hover {
     background-color: rgba(0, 0, 0, 0.05); }
-  .list-row.button:active {
+  .list-row.activatable:active {
     color: #5c616c; }
-  .list-row.button:selected:active {
+  .list-row.activatable:selected:active {
     color: #ffffff; }
-  .list-row.button:selected:hover {
+  .list-row.activatable:selected:hover {
     background-color: #4a85cb; }
-  .list-row.button:selected:insensitive {
+  .list-row.activatable:selected:insensitive {
     color: rgba(255, 255, 255, 0.7);
     background-color: rgba(82, 148, 226, 0.7); }
-    .list-row.button:selected:insensitive .label {
+    .list-row.activatable:selected:insensitive .label {
       color: inherit; }
 
-.list-row, list-row.button {
+.list-row, list-row.activatable {
   transition: all 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
-  .list-row:hover, list-row.button:hover {
+  .list-row:hover, list-row.activatable:hover {
     transition: none; }
 
 /*********************
@@ -2719,11 +2719,11 @@ GtkPlacesSidebar.sidebar .sidebar-placeholder-row {
 GtkPlacesSidebar.sidebar .sidebar-new-bookmark-row {
   background-color: #d9dde0; }
 
-GtkPlacesSidebar.sidebar .list-row.button {
+GtkPlacesSidebar.sidebar .list-row.activatable {
   color: rgba(92, 97, 108, 0.8);
   border-width: 1px 0;
   border-style: solid; }
-  GtkPlacesSidebar.sidebar .list-row.button:hover {
+  GtkPlacesSidebar.sidebar .list-row.activatable:hover {
     border-color: rgba(0, 0, 0, 0.05); }
 
 .sidebar-button.button {
@@ -3023,12 +3023,12 @@ GtkVolumeButton.button {
 .view:selected:focus,
 .view:selected:hover, .label:selected,
 .label:selected:focus,
-.label:selected:hover, .grid-child:selected, .menuitem.button.flat:active, .menuitem.sidebar-button.button:active, .menuitem.button.flat:selected, .menuitem.sidebar-button.button:selected, .list-row:selected, .sidebar:selected, .sidebar .view:selected, GtkPlacesSidebar.sidebar .list-row.button:selected, GtkEntry.gb-command-bar-entry.entry.flat:selected,
+.label:selected:hover, .grid-child:selected, .menuitem.button.flat:active, .menuitem.sidebar-button.button:active, .menuitem.button.flat:selected, .menuitem.sidebar-button.button:selected, .list-row:selected, .sidebar:selected, .sidebar .view:selected, GtkPlacesSidebar.sidebar .list-row.activatable:selected, GtkEntry.gb-command-bar-entry.entry.flat:selected,
 GtkEntry.gb-command-bar-entry.entry.flat:selected:focus,
-GtkFileChooserDialog GtkPlacesSidebar.sidebar .list-row.button:selected,
-GtkFileChooserDialog GtkPlacesSidebar.sidebar .list-row.button:selected:hover,
-GtkFileChooserDialog GtkPlacesSidebar.sidebar .list-row.button:active:hover,
-NautilusWindow GtkPlacesSidebar.sidebar .list-row.button:selected, NautilusWindow GtkPlacesSidebar.sidebar .list-row.button:selected:hover, NautilusWindow GtkPlacesSidebar.sidebar .list-row.button:active:hover {
+GtkFileChooserDialog GtkPlacesSidebar.sidebar .list-row.activatable:selected,
+GtkFileChooserDialog GtkPlacesSidebar.sidebar .list-row.activatable:selected:hover,
+GtkFileChooserDialog GtkPlacesSidebar.sidebar .list-row.activatable:active:hover,
+NautilusWindow GtkPlacesSidebar.sidebar .list-row.activatable:selected, NautilusWindow GtkPlacesSidebar.sidebar .list-row.activatable:selected:hover, NautilusWindow GtkPlacesSidebar.sidebar .list-row.activatable:active:hover {
   background-image: none;
   background-color: #5294E2;
   color: #ffffff;
@@ -4092,20 +4092,20 @@ NautilusWindow GtkPlacesSidebar.sidebar {
   GtkFileChooserDialog GtkPlacesSidebar.sidebar .sidebar-new-bookmark-row,
   NautilusWindow GtkPlacesSidebar.sidebar .sidebar-new-bookmark-row {
     background-color: rgba(83, 89, 101, 0.95); }
-  GtkFileChooserDialog GtkPlacesSidebar.sidebar .list-row.button,
-  NautilusWindow GtkPlacesSidebar.sidebar .list-row.button {
+  GtkFileChooserDialog GtkPlacesSidebar.sidebar .list-row.activatable,
+  NautilusWindow GtkPlacesSidebar.sidebar .list-row.activatable {
     border: none;
     color: #BAC3CF; }
-    GtkFileChooserDialog GtkPlacesSidebar.sidebar .list-row.button .sidebar-icon,
-    NautilusWindow GtkPlacesSidebar.sidebar .list-row.button .sidebar-icon {
+    GtkFileChooserDialog GtkPlacesSidebar.sidebar .list-row.activatable .sidebar-icon,
+    NautilusWindow GtkPlacesSidebar.sidebar .list-row.activatable .sidebar-icon {
       color: rgba(186, 195, 207, 0.6); }
-    GtkFileChooserDialog GtkPlacesSidebar.sidebar .list-row.button:hover,
-    NautilusWindow GtkPlacesSidebar.sidebar .list-row.button:hover {
+    GtkFileChooserDialog GtkPlacesSidebar.sidebar .list-row.activatable:hover,
+    NautilusWindow GtkPlacesSidebar.sidebar .list-row.activatable:hover {
       background-color: rgba(186, 195, 207, 0.15); }
-    GtkFileChooserDialog GtkPlacesSidebar.sidebar .list-row.button:selected .sidebar-icon,
-    GtkFileChooserDialog GtkPlacesSidebar.sidebar .list-row.button:selected:hover .sidebar-icon,
-    GtkFileChooserDialog GtkPlacesSidebar.sidebar .list-row.button:active:hover .sidebar-icon,
-    NautilusWindow GtkPlacesSidebar.sidebar .list-row.button:selected .sidebar-icon, NautilusWindow GtkPlacesSidebar.sidebar .list-row.button:selected:hover .sidebar-icon, NautilusWindow GtkPlacesSidebar.sidebar .list-row.button:active:hover .sidebar-icon {
+    GtkFileChooserDialog GtkPlacesSidebar.sidebar .list-row.activatable:selected .sidebar-icon,
+    GtkFileChooserDialog GtkPlacesSidebar.sidebar .list-row.activatable:selected:hover .sidebar-icon,
+    GtkFileChooserDialog GtkPlacesSidebar.sidebar .list-row.activatable:active:hover .sidebar-icon,
+    NautilusWindow GtkPlacesSidebar.sidebar .list-row.activatable:selected .sidebar-icon, NautilusWindow GtkPlacesSidebar.sidebar .list-row.activatable:selected:hover .sidebar-icon, NautilusWindow GtkPlacesSidebar.sidebar .list-row.activatable:active:hover .sidebar-icon {
       color: inherit; }
   GtkFileChooserDialog GtkPlacesSidebar.sidebar .separator,
   GtkFileChooserDialog GtkPlacesSidebar.sidebar .view.separator,

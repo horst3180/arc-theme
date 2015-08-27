@@ -2297,7 +2297,7 @@ GtkScrolledWindow {
   padding: 2px;
 }
 
-.list-row.button {
+.list-row.activatable {
   @extend %undecorated_button;
   background-color: transparentize(black, 1); // for the transition
   border-style: none; // I need no borders here
@@ -2326,7 +2326,7 @@ GtkScrolledWindow {
 }
 
 // transition
-.list-row, list-row.button {
+.list-row, list-row.activatable {
   transition: all 300ms $ease-out-quad;
   &:hover { transition: none; }
 }
@@ -2521,7 +2521,7 @@ GtkPlacesSidebar.sidebar {
   .sidebar-new-bookmark-row { background-color: darken($bg_color, 10%); }
 
   // Preserve everything else of the list-row class
-  .list-row.button {
+  .list-row.activatable {
     color: transparentize($fg_color, 0.2);
     border-width: 1px 0;
     border-style: solid;

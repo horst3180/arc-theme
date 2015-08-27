@@ -31,7 +31,7 @@ NautilusWindow {
 
     .sidebar-new-bookmark-row { background-color: lighten($dark_sidebar_bg, 10%); }
 
-    .list-row.button {
+    .list-row.activatable {
       border: none;
       color: $dark_sidebar_fg;
 
