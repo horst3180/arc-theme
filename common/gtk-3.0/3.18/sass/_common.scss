@@ -2327,7 +2327,7 @@ GtkScrolledWindow {
 
 // transition
 .list-row, list-row.activatable {
-  transition: all 300ms $ease-out-quad;
+  transition: all 150ms $ease-out-quad;
   &:hover { transition: none; }
 }
 
