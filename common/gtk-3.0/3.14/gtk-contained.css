@@ -319,9 +319,9 @@ GtkSearchEntry.entry {
     .button:insensitive > GtkLabel {
       color: inherit; }
     .button:insensitive:active, .button:insensitive:checked {
-      color: rgba(255, 255, 255, 0.55);
-      border-color: rgba(82, 148, 226, 0.55);
-      background-color: rgba(82, 148, 226, 0.55);
+      color: rgba(255, 255, 255, 0.8);
+      border-color: rgba(82, 148, 226, 0.75);
+      background-color: rgba(82, 148, 226, 0.75);
       opacity: 0.6; }
       .button:insensitive:active > GtkLabel, .button:insensitive:checked > GtkLabel {
         color: inherit; }
@@ -547,9 +547,9 @@ GtkSearchEntry.entry {
       color: inherit; }
   .inline-toolbar GtkToolButton > .button:insensitive:active,
   .inline-toolbar GtkToolButton > .button:insensitive:checked {
-    color: rgba(255, 255, 255, 0.55);
-    border-color: rgba(82, 148, 226, 0.55);
-    background-color: rgba(82, 148, 226, 0.55);
+    color: rgba(255, 255, 255, 0.8);
+    border-color: rgba(82, 148, 226, 0.75);
+    background-color: rgba(82, 148, 226, 0.75);
     opacity: 0.6; }
     .inline-toolbar GtkToolButton > .button:insensitive:active > GtkLabel,
     .inline-toolbar GtkToolButton > .button:insensitive:checked > GtkLabel {
