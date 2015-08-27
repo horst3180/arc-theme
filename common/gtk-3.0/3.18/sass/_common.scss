@@ -773,7 +773,7 @@ $_dot_color: $selected_bg_color;
   &:hover, &:active, &:checked {
     @extend %undecorated_button;
   }
-  & .label { text-decoration-line: underline; }
+  > .label { text-decoration-line: underline; }
 }
 
 /*****************

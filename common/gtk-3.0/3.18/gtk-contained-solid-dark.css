@@ -828,7 +828,7 @@ GtkSearchEntry.entry {
   .header-bar.titlebar.selection-mode .subtitle:link, *:selected *:link, *:selected .button:link, *:selected .button:visited {
     color: #dceaf9; }
 
-.button:link .label, .button:visited .label {
+.button:link > .label, .button:visited > .label {
   text-decoration-line: underline; }
 
 /*****************
