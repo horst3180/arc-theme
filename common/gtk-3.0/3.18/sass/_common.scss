@@ -2398,7 +2398,11 @@ GtkCalendar {
       color: $fg_color;
     }
   }
-  &.highlight { color: gtkalpha(currentColor,0.55); }
+  &:inconsistent { color: gtkalpha(currentColor,0.55); }
+  &.highlight {
+    color: $fg_color;
+    background-color: $borders_color;
+  }
 }
 
 /***********

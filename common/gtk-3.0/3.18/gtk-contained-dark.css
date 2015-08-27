@@ -2649,8 +2649,11 @@ GtkCalendar {
     border: none; }
     GtkCalendar.button:hover, GtkCalendar.button:focus:hover {
       color: #D3DAE3; }
-  GtkCalendar.highlight {
+  GtkCalendar:inconsistent {
     color: alpha(currentColor,0.55); }
+  GtkCalendar.highlight {
+    color: #D3DAE3;
+    background-color: #2d3036; }
 
 /***********
  * Dialogs *
