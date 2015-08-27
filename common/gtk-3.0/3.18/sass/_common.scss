@@ -2391,17 +2391,23 @@ GtkCalendar {
     border-radius: 0;
   }
   &.button, &.button:focus {
+    @extend %undecorated_button;
     color: transparentize($fg_color,0.55);
     box-shadow: none;
     border: none;
     &:hover {
       color: $fg_color;
     }
+    &:insensitive {
+      color: $insensitive_fg_color;
+      background-color: transparent;
+      background-image: none;
+    }
   }
   &:inconsistent { color: gtkalpha(currentColor,0.55); }
   &.highlight {
     color: $fg_color;
-    background-color: $borders_color;
+    background-color: transparentize($button_border, 0.5);
   }
 }
 
