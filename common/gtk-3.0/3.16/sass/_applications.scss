@@ -449,6 +449,14 @@ TotemGrilo.vertical GdMainView.frame {
 SynapseGuiViewDefault *:selected { background-color: $selected_bg_color; }
 
 //
+// Transmission
+//
+.tr-workarea .undershoot,
+.tr-workarea .overshoot {
+  border-color: transparent; // Remove black border on over- and undershoot
+}
+
+//
 // Fallback Mode/Budgie Panel
 //
 .gnome-panel-menu-bar,

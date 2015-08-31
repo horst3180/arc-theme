@@ -2933,6 +2933,10 @@ TotemGrilo.vertical GdMainView.frame {
 SynapseGuiViewDefault *:selected {
   background-color: #5294E2; }
 
+.tr-workarea .undershoot,
+.tr-workarea .overshoot {
+  border-color: transparent; }
+
 .gnome-panel-menu-bar,
 PanelApplet > GtkMenuBar.menubar,
 PanelToplevel,
