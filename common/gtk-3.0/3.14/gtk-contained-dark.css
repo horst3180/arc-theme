@@ -3518,6 +3518,9 @@ NautilusWindow .sidebar:dir(rtl),
 NemoWindow .sidebar:dir(rtl) {
   border-left: 1px solid rgba(37, 39, 45, 0.95); }
 
+NautilusWindow GtkBox.sidebar {
+  background-color: transparent; }
+
 GtkFileChooserDialog.csd.background,
 GtkFileChooserDialog .source-list,
 GtkFileChooserDialog .source-list.view,

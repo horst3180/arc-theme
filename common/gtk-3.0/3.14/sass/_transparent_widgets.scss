@@ -21,6 +21,8 @@ NemoWindow {
 }
 
 // Dark transparent sidebars
+NautilusWindow GtkBox.sidebar { background-color: transparent; }
+
 GtkFileChooserDialog,
 NautilusWindow,
 NemoWindow,

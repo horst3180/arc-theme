@@ -3509,6 +3509,9 @@ NautilusWindow *,
 NemoWindow {
   -GtkPaned-handle-size: 0; }
 
+NautilusWindow GtkBox.sidebar {
+  background-color: transparent; }
+
 GtkFileChooserDialog.csd.background,
 GtkFileChooserDialog .source-list,
 GtkFileChooserDialog .source-list.view,
