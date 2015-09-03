@@ -3525,195 +3525,138 @@ MarlinViewWindow.csd.background,
 MarlinViewWindow .source-list, MarlinViewWindow .source-list.view, MarlinViewWindow .source-list.view:prelight {
   background-color: transparent; }
 
-GtkFileChooserDialog GtkBox.sidebar,
-NautilusWindow GtkBox.sidebar,
-NemoWindow GtkBox.sidebar,
-MarlinViewWindow GtkBox.sidebar {
-  background-color: transparent; }
-
 GtkFileChooserDialog .sidebar,
 GtkFileChooserDialog MarlinPlacesSidebar,
-GtkFileChooserDialog NemoPlacesSidebar,
 NautilusWindow .sidebar,
 NautilusWindow MarlinPlacesSidebar,
-NautilusWindow NemoPlacesSidebar,
 NemoWindow .sidebar,
 NemoWindow MarlinPlacesSidebar,
-NemoWindow NemoPlacesSidebar,
-MarlinViewWindow .sidebar, MarlinViewWindow MarlinPlacesSidebar, MarlinViewWindow NemoPlacesSidebar {
+MarlinViewWindow .sidebar, MarlinViewWindow MarlinPlacesSidebar {
   background-color: #3c4049; }
   GtkFileChooserDialog .sidebar .view,
   GtkFileChooserDialog .sidebar .source-list.sidebar row,
   GtkFileChooserDialog MarlinPlacesSidebar .view,
   GtkFileChooserDialog MarlinPlacesSidebar .source-list.sidebar row,
-  GtkFileChooserDialog NemoPlacesSidebar .view,
-  GtkFileChooserDialog NemoPlacesSidebar .source-list.sidebar row,
   NautilusWindow .sidebar .view,
   NautilusWindow .sidebar .source-list.sidebar row,
   NautilusWindow MarlinPlacesSidebar .view,
   NautilusWindow MarlinPlacesSidebar .source-list.sidebar row,
-  NautilusWindow NemoPlacesSidebar .view,
-  NautilusWindow NemoPlacesSidebar .source-list.sidebar row,
   NemoWindow .sidebar .view,
   NemoWindow .sidebar .source-list.sidebar row,
   NemoWindow MarlinPlacesSidebar .view,
   NemoWindow MarlinPlacesSidebar .source-list.sidebar row,
-  NemoWindow NemoPlacesSidebar .view,
-  NemoWindow NemoPlacesSidebar .source-list.sidebar row,
-  MarlinViewWindow .sidebar .view, MarlinViewWindow .sidebar .source-list.sidebar row, MarlinViewWindow MarlinPlacesSidebar .view, MarlinViewWindow MarlinPlacesSidebar .source-list.sidebar row, MarlinViewWindow NemoPlacesSidebar .view, MarlinViewWindow NemoPlacesSidebar .source-list.sidebar row {
+  MarlinViewWindow .sidebar .view, MarlinViewWindow .sidebar .source-list.sidebar row, MarlinViewWindow MarlinPlacesSidebar .view, MarlinViewWindow MarlinPlacesSidebar .source-list.sidebar row {
     background-color: transparent;
     color: #BAC3CF; }
     GtkFileChooserDialog .sidebar .view.image,
     GtkFileChooserDialog .sidebar .source-list.sidebar row.image,
     GtkFileChooserDialog MarlinPlacesSidebar .view.image,
     GtkFileChooserDialog MarlinPlacesSidebar .source-list.sidebar row.image,
-    GtkFileChooserDialog NemoPlacesSidebar .view.image,
-    GtkFileChooserDialog NemoPlacesSidebar .source-list.sidebar row.image,
     NautilusWindow .sidebar .view.image,
     NautilusWindow .sidebar .source-list.sidebar row.image,
     NautilusWindow MarlinPlacesSidebar .view.image,
     NautilusWindow MarlinPlacesSidebar .source-list.sidebar row.image,
-    NautilusWindow NemoPlacesSidebar .view.image,
-    NautilusWindow NemoPlacesSidebar .source-list.sidebar row.image,
     NemoWindow .sidebar .view.image,
     NemoWindow .sidebar .source-list.sidebar row.image,
     NemoWindow MarlinPlacesSidebar .view.image,
     NemoWindow MarlinPlacesSidebar .source-list.sidebar row.image,
-    NemoWindow NemoPlacesSidebar .view.image,
-    NemoWindow NemoPlacesSidebar .source-list.sidebar row.image,
-    MarlinViewWindow .sidebar .view.image, MarlinViewWindow .sidebar .source-list.sidebar row.image, MarlinViewWindow MarlinPlacesSidebar .view.image, MarlinViewWindow MarlinPlacesSidebar .source-list.sidebar row.image, MarlinViewWindow NemoPlacesSidebar .view.image, MarlinViewWindow NemoPlacesSidebar .source-list.sidebar row.image {
+    MarlinViewWindow .sidebar .view.image, MarlinViewWindow .sidebar .source-list.sidebar row.image, MarlinViewWindow MarlinPlacesSidebar .view.image, MarlinViewWindow MarlinPlacesSidebar .source-list.sidebar row.image {
       color: rgba(186, 195, 207, 0.7); }
     GtkFileChooserDialog .sidebar .view.cell:selected,
     GtkFileChooserDialog .sidebar .source-list.sidebar row.cell:selected,
     GtkFileChooserDialog MarlinPlacesSidebar .view.cell:selected,
     GtkFileChooserDialog MarlinPlacesSidebar .source-list.sidebar row.cell:selected,
-    GtkFileChooserDialog NemoPlacesSidebar .view.cell:selected,
-    GtkFileChooserDialog NemoPlacesSidebar .source-list.sidebar row.cell:selected,
     NautilusWindow .sidebar .view.cell:selected,
     NautilusWindow .sidebar .source-list.sidebar row.cell:selected,
     NautilusWindow MarlinPlacesSidebar .view.cell:selected,
     NautilusWindow MarlinPlacesSidebar .source-list.sidebar row.cell:selected,
-    NautilusWindow NemoPlacesSidebar .view.cell:selected,
-    NautilusWindow NemoPlacesSidebar .source-list.sidebar row.cell:selected,
     NemoWindow .sidebar .view.cell:selected,
     NemoWindow .sidebar .source-list.sidebar row.cell:selected,
     NemoWindow MarlinPlacesSidebar .view.cell:selected,
     NemoWindow MarlinPlacesSidebar .source-list.sidebar row.cell:selected,
-    NemoWindow NemoPlacesSidebar .view.cell:selected,
-    NemoWindow NemoPlacesSidebar .source-list.sidebar row.cell:selected,
-    MarlinViewWindow .sidebar .view.cell:selected, MarlinViewWindow .sidebar .source-list.sidebar row.cell:selected, MarlinViewWindow MarlinPlacesSidebar .view.cell:selected, MarlinViewWindow MarlinPlacesSidebar .source-list.sidebar row.cell:selected, MarlinViewWindow NemoPlacesSidebar .view.cell:selected, MarlinViewWindow NemoPlacesSidebar .source-list.sidebar row.cell:selected {
+    MarlinViewWindow .sidebar .view.cell:selected, MarlinViewWindow .sidebar .source-list.sidebar row.cell:selected, MarlinViewWindow MarlinPlacesSidebar .view.cell:selected, MarlinViewWindow MarlinPlacesSidebar .source-list.sidebar row.cell:selected {
       background-color: #5294E2;
       color: #ffffff; }
   GtkFileChooserDialog .sidebar.frame,
   GtkFileChooserDialog MarlinPlacesSidebar.frame,
-  GtkFileChooserDialog NemoPlacesSidebar.frame,
   NautilusWindow .sidebar.frame,
   NautilusWindow MarlinPlacesSidebar.frame,
-  NautilusWindow NemoPlacesSidebar.frame,
   NemoWindow .sidebar.frame,
   NemoWindow MarlinPlacesSidebar.frame,
-  NemoWindow NemoPlacesSidebar.frame,
-  MarlinViewWindow .sidebar.frame, MarlinViewWindow MarlinPlacesSidebar.frame, MarlinViewWindow NemoPlacesSidebar.frame {
+  MarlinViewWindow .sidebar.frame, MarlinViewWindow MarlinPlacesSidebar.frame {
     color: #BAC3CF; }
   GtkFileChooserDialog .sidebar .separator,
   GtkFileChooserDialog GtkPlacesSidebar.sidebar .view.separator,
   GtkFileChooserDialog MarlinPlacesSidebar .separator,
   GtkFileChooserDialog MarlinPlacesSidebar GtkPlacesSidebar.sidebar .view.separator,
-  GtkPlacesSidebar.sidebar GtkFileChooserDialog MarlinPlacesSidebar .view.separator, GtkFileChooserDialog NemoPlacesSidebar .separator,
-  GtkFileChooserDialog NemoPlacesSidebar GtkPlacesSidebar.sidebar .view.separator,
-  GtkPlacesSidebar.sidebar GtkFileChooserDialog NemoPlacesSidebar .view.separator, NautilusWindow .sidebar .separator,
+  GtkPlacesSidebar.sidebar GtkFileChooserDialog MarlinPlacesSidebar .view.separator, NautilusWindow .sidebar .separator,
   NautilusWindow GtkPlacesSidebar.sidebar .view.separator,
   NautilusWindow MarlinPlacesSidebar .separator,
   NautilusWindow MarlinPlacesSidebar GtkPlacesSidebar.sidebar .view.separator,
-  GtkPlacesSidebar.sidebar NautilusWindow MarlinPlacesSidebar .view.separator, NautilusWindow NemoPlacesSidebar .separator,
-  NautilusWindow NemoPlacesSidebar GtkPlacesSidebar.sidebar .view.separator,
-  GtkPlacesSidebar.sidebar NautilusWindow NemoPlacesSidebar .view.separator, NemoWindow .sidebar .separator,
+  GtkPlacesSidebar.sidebar NautilusWindow MarlinPlacesSidebar .view.separator, NemoWindow .sidebar .separator,
   NemoWindow GtkPlacesSidebar.sidebar .view.separator,
   NemoWindow MarlinPlacesSidebar .separator,
   NemoWindow MarlinPlacesSidebar GtkPlacesSidebar.sidebar .view.separator,
-  GtkPlacesSidebar.sidebar NemoWindow MarlinPlacesSidebar .view.separator, NemoWindow NemoPlacesSidebar .separator,
-  NemoWindow NemoPlacesSidebar GtkPlacesSidebar.sidebar .view.separator,
-  GtkPlacesSidebar.sidebar NemoWindow NemoPlacesSidebar .view.separator, MarlinViewWindow .sidebar .separator, MarlinViewWindow GtkPlacesSidebar.sidebar .view.separator, MarlinViewWindow MarlinPlacesSidebar .separator, MarlinViewWindow MarlinPlacesSidebar GtkPlacesSidebar.sidebar .view.separator, GtkPlacesSidebar.sidebar MarlinViewWindow MarlinPlacesSidebar .view.separator, MarlinViewWindow NemoPlacesSidebar .separator, MarlinViewWindow NemoPlacesSidebar GtkPlacesSidebar.sidebar .view.separator, GtkPlacesSidebar.sidebar MarlinViewWindow NemoPlacesSidebar .view.separator {
+  GtkPlacesSidebar.sidebar NemoWindow MarlinPlacesSidebar .view.separator, MarlinViewWindow .sidebar .separator, MarlinViewWindow GtkPlacesSidebar.sidebar .view.separator, MarlinViewWindow MarlinPlacesSidebar .separator, MarlinViewWindow MarlinPlacesSidebar GtkPlacesSidebar.sidebar .view.separator, GtkPlacesSidebar.sidebar MarlinViewWindow MarlinPlacesSidebar .view.separator {
     color: transparent; }
   GtkFileChooserDialog .sidebar .scrollbar.trough,
   GtkFileChooserDialog MarlinPlacesSidebar .scrollbar.trough,
-  GtkFileChooserDialog NemoPlacesSidebar .scrollbar.trough,
   NautilusWindow .sidebar .scrollbar.trough,
   NautilusWindow MarlinPlacesSidebar .scrollbar.trough,
-  NautilusWindow NemoPlacesSidebar .scrollbar.trough,
   NemoWindow .sidebar .scrollbar.trough,
   NemoWindow MarlinPlacesSidebar .scrollbar.trough,
-  NemoWindow NemoPlacesSidebar .scrollbar.trough,
-  MarlinViewWindow .sidebar .scrollbar.trough, MarlinViewWindow MarlinPlacesSidebar .scrollbar.trough, MarlinViewWindow NemoPlacesSidebar .scrollbar.trough {
+  MarlinViewWindow .sidebar .scrollbar.trough, MarlinViewWindow MarlinPlacesSidebar .scrollbar.trough {
     background-color: transparent;
     border-color: transparent; }
   GtkFileChooserDialog .sidebar .scrollbar.slider,
   GtkFileChooserDialog MarlinPlacesSidebar .scrollbar.slider,
-  GtkFileChooserDialog NemoPlacesSidebar .scrollbar.slider,
   NautilusWindow .sidebar .scrollbar.slider,
   NautilusWindow MarlinPlacesSidebar .scrollbar.slider,
-  NautilusWindow NemoPlacesSidebar .scrollbar.slider,
   NemoWindow .sidebar .scrollbar.slider,
   NemoWindow MarlinPlacesSidebar .scrollbar.slider,
-  NemoWindow NemoPlacesSidebar .scrollbar.slider,
-  MarlinViewWindow .sidebar .scrollbar.slider, MarlinViewWindow MarlinPlacesSidebar .scrollbar.slider, MarlinViewWindow NemoPlacesSidebar .scrollbar.slider {
+  MarlinViewWindow .sidebar .scrollbar.slider, MarlinViewWindow MarlinPlacesSidebar .scrollbar.slider {
     border-radius: 20px;
     border: 3px solid transparent;
     background-color: rgba(231, 234, 238, 0.7); }
     GtkFileChooserDialog .sidebar .scrollbar.slider:hover,
     GtkFileChooserDialog MarlinPlacesSidebar .scrollbar.slider:hover,
-    GtkFileChooserDialog NemoPlacesSidebar .scrollbar.slider:hover,
     NautilusWindow .sidebar .scrollbar.slider:hover,
     NautilusWindow MarlinPlacesSidebar .scrollbar.slider:hover,
-    NautilusWindow NemoPlacesSidebar .scrollbar.slider:hover,
     NemoWindow .sidebar .scrollbar.slider:hover,
     NemoWindow MarlinPlacesSidebar .scrollbar.slider:hover,
-    NemoWindow NemoPlacesSidebar .scrollbar.slider:hover,
-    MarlinViewWindow .sidebar .scrollbar.slider:hover, MarlinViewWindow MarlinPlacesSidebar .scrollbar.slider:hover, MarlinViewWindow NemoPlacesSidebar .scrollbar.slider:hover {
+    MarlinViewWindow .sidebar .scrollbar.slider:hover, MarlinViewWindow MarlinPlacesSidebar .scrollbar.slider:hover {
       background-color: #f6f7f9; }
     GtkFileChooserDialog .sidebar .scrollbar.slider:prelight:active,
     GtkFileChooserDialog MarlinPlacesSidebar .scrollbar.slider:prelight:active,
-    GtkFileChooserDialog NemoPlacesSidebar .scrollbar.slider:prelight:active,
     NautilusWindow .sidebar .scrollbar.slider:prelight:active,
     NautilusWindow MarlinPlacesSidebar .scrollbar.slider:prelight:active,
-    NautilusWindow NemoPlacesSidebar .scrollbar.slider:prelight:active,
     NemoWindow .sidebar .scrollbar.slider:prelight:active,
     NemoWindow MarlinPlacesSidebar .scrollbar.slider:prelight:active,
-    NemoWindow NemoPlacesSidebar .scrollbar.slider:prelight:active,
-    MarlinViewWindow .sidebar .scrollbar.slider:prelight:active, MarlinViewWindow MarlinPlacesSidebar .scrollbar.slider:prelight:active, MarlinViewWindow NemoPlacesSidebar .scrollbar.slider:prelight:active {
+    MarlinViewWindow .sidebar .scrollbar.slider:prelight:active, MarlinViewWindow MarlinPlacesSidebar .scrollbar.slider:prelight:active {
       background-color: #5294E2; }
     GtkFileChooserDialog .sidebar .scrollbar.slider.fine-tune,
     GtkFileChooserDialog MarlinPlacesSidebar .scrollbar.slider.fine-tune,
-    GtkFileChooserDialog NemoPlacesSidebar .scrollbar.slider.fine-tune,
     NautilusWindow .sidebar .scrollbar.slider.fine-tune,
     NautilusWindow MarlinPlacesSidebar .scrollbar.slider.fine-tune,
-    NautilusWindow NemoPlacesSidebar .scrollbar.slider.fine-tune,
     NemoWindow .sidebar .scrollbar.slider.fine-tune,
     NemoWindow MarlinPlacesSidebar .scrollbar.slider.fine-tune,
-    NemoWindow NemoPlacesSidebar .scrollbar.slider.fine-tune,
-    MarlinViewWindow .sidebar .scrollbar.slider.fine-tune, MarlinViewWindow MarlinPlacesSidebar .scrollbar.slider.fine-tune, MarlinViewWindow NemoPlacesSidebar .scrollbar.slider.fine-tune {
+    MarlinViewWindow .sidebar .scrollbar.slider.fine-tune, MarlinViewWindow MarlinPlacesSidebar .scrollbar.slider.fine-tune {
       border-width: 4px; }
       GtkFileChooserDialog .sidebar .scrollbar.slider.fine-tune:prelight:active,
       GtkFileChooserDialog MarlinPlacesSidebar .scrollbar.slider.fine-tune:prelight:active,
-      GtkFileChooserDialog NemoPlacesSidebar .scrollbar.slider.fine-tune:prelight:active,
       NautilusWindow .sidebar .scrollbar.slider.fine-tune:prelight:active,
       NautilusWindow MarlinPlacesSidebar .scrollbar.slider.fine-tune:prelight:active,
-      NautilusWindow NemoPlacesSidebar .scrollbar.slider.fine-tune:prelight:active,
       NemoWindow .sidebar .scrollbar.slider.fine-tune:prelight:active,
       NemoWindow MarlinPlacesSidebar .scrollbar.slider.fine-tune:prelight:active,
-      NemoWindow NemoPlacesSidebar .scrollbar.slider.fine-tune:prelight:active,
-      MarlinViewWindow .sidebar .scrollbar.slider.fine-tune:prelight:active, MarlinViewWindow MarlinPlacesSidebar .scrollbar.slider.fine-tune:prelight:active, MarlinViewWindow NemoPlacesSidebar .scrollbar.slider.fine-tune:prelight:active {
+      MarlinViewWindow .sidebar .scrollbar.slider.fine-tune:prelight:active, MarlinViewWindow MarlinPlacesSidebar .scrollbar.slider.fine-tune:prelight:active {
         background-color: #5294E2; }
     GtkFileChooserDialog .sidebar .scrollbar.slider:insensitive,
     GtkFileChooserDialog MarlinPlacesSidebar .scrollbar.slider:insensitive,
-    GtkFileChooserDialog NemoPlacesSidebar .scrollbar.slider:insensitive,
     NautilusWindow .sidebar .scrollbar.slider:insensitive,
     NautilusWindow MarlinPlacesSidebar .scrollbar.slider:insensitive,
-    NautilusWindow NemoPlacesSidebar .scrollbar.slider:insensitive,
     NemoWindow .sidebar .scrollbar.slider:insensitive,
     NemoWindow MarlinPlacesSidebar .scrollbar.slider:insensitive,
-    NemoWindow NemoPlacesSidebar .scrollbar.slider:insensitive,
-    MarlinViewWindow .sidebar .scrollbar.slider:insensitive, MarlinViewWindow MarlinPlacesSidebar .scrollbar.slider:insensitive, MarlinViewWindow NemoPlacesSidebar .scrollbar.slider:insensitive {
+    MarlinViewWindow .sidebar .scrollbar.slider:insensitive, MarlinViewWindow MarlinPlacesSidebar .scrollbar.slider:insensitive {
       background-color: transparent; }
 
 GtkFileChooserDialog.maximized .sidebar,

@@ -29,9 +29,7 @@ MarlinViewWindow {
   &.csd.background,
   .source-list, .source-list.view, .source-list.view:prelight { background-color: transparent; }
 
-  GtkBox.sidebar { background-color: transparent; }
-
-  .sidebar, MarlinPlacesSidebar, NemoPlacesSidebar {
+  .sidebar, MarlinPlacesSidebar {
     background-color: $dark_sidebar_bg;
 
     .view, .source-list.sidebar row {
