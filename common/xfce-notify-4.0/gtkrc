@@ -1,12 +1,12 @@
 style "notify-window" {
   XfceNotifyWindow::summary-bold = 1
-  XfceNotifyWindow::border-color = "#101114"
-  XfceNotifyWindow::border-color-hover = "#101114"
+  XfceNotifyWindow::border-color = "#17191F"
+  XfceNotifyWindow::border-color-hover = "#17191F"
   XfceNotifyWindow::border-radius = 3.0
   XfceNotifyWindow::border-width = 1.0
   XfceNotifyWindow::border-width-hover = 1.0
 
-  bg[NORMAL] = "#25272D"
+  bg[NORMAL] = "#292C36"
 }
 
 style "notify-button" {
@@ -50,7 +50,7 @@ style "notify-progressbar" {
 
   fg[PRELIGHT] = "#000000"
   bg[NORMAL]   = "#5294E2"
-  bg[ACTIVE] = "#131417"
+  bg[ACTIVE] = "#1D1F26"
   bg[SELECTED] = "#5294E2"
 
   engine "murrine" {

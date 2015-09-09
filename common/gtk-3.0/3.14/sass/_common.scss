@@ -415,7 +415,7 @@ $_dot_color: $selected_bg_color;
     -gtk-image-effect: highlight;
   }
   &:active, &:checked {
-    background-clip: border-box;
+    background-clip: if($variant=='light', border-box, padding-box);
     @include button(active);
     transition-duration: 50ms;
   }
@@ -651,14 +651,18 @@ $_dot_color: $selected_bg_color;
   &:only-child > .button.flat { @extend %linked:only-child; }
 }
 
+$_linked_separator_color: if($variant=='light', transparentize($button_border, 0.6), transparentize($button_border, 0.5));
+
 %linked_middle {
   border-radius: 0;
   border-left-style: none;
   border-right-style: none;
 
   &:hover {
-    box-shadow: inset 1px 0 $selected_bg_color, inset -1px 0 $selected_bg_color;
+    box-shadow: inset  1px 0 $_linked_separator_color,
+                inset -1px 0 $_linked_separator_color;
   }
+  &:active, &:checked { box-shadow: none; }
 
   &:dir(rtl) {
     border-radius: 0; // needed when including %linked_middle:dir(rtl)
@@ -672,13 +676,15 @@ $_dot_color: $selected_bg_color;
     border-radius: 3px 0 0 3px;
     border-left-style: solid;
 
-    &:hover { box-shadow: inset -1px 0 $selected_bg_color; }
+    &:hover { box-shadow: inset -1px 0 $_linked_separator_color; }
+    &:active, &:checked { box-shadow: none; }
   }
   &:last-child {
     border-radius: 0 3px 3px 0;
     border-right-style: solid;
 
-    &:hover { box-shadow: inset 1px 0 $selected_bg_color; }
+    &:hover { box-shadow: inset 1px 0 $_linked_separator_color; }
+    &:active, &:checked { box-shadow: none; }
 
     &:dir(rtl) { border-bottom-left-radius: 0; }
 
@@ -688,6 +694,7 @@ $_dot_color: $selected_bg_color;
     border-style: solid;
 
     &:hover { box-shadow: none; }
+    &:active, &:checked { box-shadow: none; }
   }
 }
 
@@ -697,7 +704,11 @@ $_dot_color: $selected_bg_color;
   border-top-style: none;
   border-radius: 0;
 
-  &:hover { box-shadow: inset 0 1px $selected_bg_color, inset 0 -1px $selected_bg_color; }
+  &:hover {
+    box-shadow: inset 0 -1px $_linked_separator_color,
+                inset 0  1px $_linked_separator_color;
+  }
+  &:active, &:checked { box-shadow: none; }
 }
 
 %linked_vertical{
@@ -707,19 +718,22 @@ $_dot_color: $selected_bg_color;
     border-radius: 3px 3px 0 0;
     border-top-style: solid;
 
-    &:hover { box-shadow: inset 0 -1px $selected_bg_color; }
+    &:hover { box-shadow: inset 0 -1px $_linked_separator_color; }
+    &:active, &:checked { box-shadow: none; }
   }
   &:last-child {
     border-radius: 0 0 3px 3px;
     border-bottom-style: solid;
 
-    &:hover { box-shadow: inset 0 1px $selected_bg_color; }
+    &:hover { box-shadow: inset 0 1px $_linked_separator_color; }
+    &:active, &:checked { box-shadow: none; }
   }
   &:only-child {
     border-radius: 3px;
     border-style: solid;
 
     &:hover { box-shadow: none; }
+    &:active, &:checked { box-shadow: none; }
   }
 }
 
@@ -737,7 +751,7 @@ $_dot_color: $selected_bg_color;
   outline-offset: -1px;
   border-radius: 2px;
 
-  &:hover { background-color: mix($fg_color,$bg_color,5%); }
+  &:hover { background-color: if($variant=='light', mix($fg_color,$bg_color,5%), mix($fg_color,$bg_color,10%)); }
   &:active, &:selected {
     @extend %selected_items;
   }
@@ -793,9 +807,7 @@ $_dot_color: $selected_bg_color;
   //  padding-right: 6px;
     &:dir(rtl) { border-style: none solid none none; }
     &:first-child { color: red; }
-    &:hover {
-      color: $selected_bg_color;
-    }
+
     &:insensitive {
       color: $insensitive_fg_color;
     }
@@ -929,8 +941,7 @@ GtkComboBox {
 
     &:hover {
       background-color: lighten($button_border, 5%);
-      border-color: $selected_bg_color;
-      box-shadow: -1px 0 $selected_bg_color;
+      border-color: lighten($button_border, 5%);
     }
 
     &:active, &:checked { @include button(active); }
@@ -973,7 +984,7 @@ GtkComboBox {
   background-color: $bg_color;
   .osd &, &.osd {
     padding: 7px;
-    border: 1px solid transparentize(black, 0.4);
+    border: 1px solid transparentize(black, 0.5);
     border-radius: 3px;
     background-color: transparentize($osd_bg_color, 0.1);
   }
@@ -1182,6 +1193,7 @@ GtkComboBox {
 
     &:focus {
       @include entry(header-focus);
+      background-clip: if($darker=='false' and $variant=='light', border-box, padding-box);
 
       &.image { color: $selected_fg_color; }
     }
@@ -1207,7 +1219,10 @@ GtkComboBox {
     &:backdrop { opacity: 0.7; }
 
     &:hover { @include button(header-hover); }
-    &:active, &:checked { @include button(header-active); }
+    &:active, &:checked {
+      @include button(header-active);
+      background-clip: if($darker=='false' and $variant=='light', border-box, padding-box);
+    }
     &:insensitive { @include button(header-insensitive); }
     &:insensitive:active, &:insensitive:checked { @include button(header-insensitive-active); }
   }
@@ -1218,12 +1233,35 @@ GtkComboBox {
 
     .linked.stack-switcher > .button,
     .linked.path-bar > .button {
+
+      $_linked_separator_color: $header_button_border;
+
       @include button(header-hover);
 
-      &:hover { border-color: $selected_bg_color; }
+      &:hover { background-color: lighten($header_button_bg, 15%); }
       &:active, &:checked { @include button(header-active); }
+      &:insensitive { color: transparentize($header_fg, 0.4); }
 
       @extend %linked;
+
+      &:hover {
+        box-shadow: inset  1px 0 $_linked_separator_color,
+                    inset -1px 0 $_linked_separator_color;
+      }
+      &:active, &:checked { box-shadow: none; }
+
+      &:first-child {
+        &:hover { box-shadow: inset -1px 0 $_linked_separator_color; }
+        &:active, &:checked { box-shadow: none; }
+      }
+      &:last-child {
+        &:hover { box-shadow: inset 1px 0 $_linked_separator_color; }
+        &:active, &:checked { box-shadow: none; }
+      }
+      &:only-child {
+        &:hover { box-shadow: none; }
+        &:active, &:checked { box-shadow: none; }
+      }
     }
 
   // Header-bar Suggested and Destructive Action buttons
@@ -1276,7 +1314,7 @@ GtkComboBox {
     &.combobox-entry .button {
       @include entry(header-normal);
 
-      &:hover { @include entry(header-focus); }
+      &:hover { @include entry(header-focus); box-shadow: none; }
       &:insensitive { @include entry(header-insensitive); }
     }
   }
@@ -1288,7 +1326,7 @@ GtkComboBox {
 
   GtkProgressBar {
 
-    &.trough { background-color: transparentize($header_fg, 0.65); }
+    &.trough { background-color: if($variant=='light' and $darker=='false', opacify($header_button_border, 0.05), $header_button_border); }
 
     &:backdrop { opacity: 0.75; }
   }
@@ -1299,17 +1337,29 @@ GtkComboBox {
     &:backdrop { opacity: 0.75; }
 
     &.trough {
-      background-image: linear-gradient(to bottom, transparentize($header_fg, 0.65));
+      $_trough_bg: if($variant=='light' and $darker=='false', opacify($header_button_border, 0.05), $header_button_border);
+      background-image: linear-gradient(to bottom, $_trough_bg);
 
-      &:insensitive { background-image: linear-gradient(to bottom, transparentize($header_fg, 0.7)); }
+      &:insensitive { background-image: linear-gradient(to bottom, if($variant=='light' and $darker=='false', transparentize($_trough_bg, 0.05), transparentize($_trough_bg, 0.1))); }
     }
     &.slider {
-      background-image: linear-gradient(to bottom, if($darker == 'false', mix($base_color, $header_bg, 90%), darken($header_bg, 4%)));
+      $_slider_border: if($variant=='light' and $darker=='false', opacify($header_button_border, 0.2), opacify($header_button_border, 0.3));
+      $_slider_bg: if($variant=='light' and $darker=='false', opacify($header_button_bg,1), lighten(opacify($header_bg,1), 10%));
 
+      background-image: linear-gradient(to bottom, $_slider_bg);
+      border-color: $_slider_border;
+
+      &:hover {
+        background-image: linear-gradient(to bottom, lighten($_slider_bg, 5%));
+        border-color: $_slider_border;
+      }
+      &:active {
+        background-image: linear-gradient(to bottom, $selected_bg_color);
+        border-color: $selected_bg_color;
+      }
       &:insensitive {
-        background-image: linear-gradient(to bottom, if($darker == 'false', mix($base_color, $header_bg, 40%), darken($header_bg, 1%)));
-
-        @if $darker=='true' { border-color: mix($header_bg, $selected_bg_color, 60%); }
+        background-image: linear-gradient(to bottom, mix($_slider_bg, $header_bg, 70%));
+        border-color: $_slider_border;
       }
     }
   }
@@ -1477,7 +1527,7 @@ column-header.button.dnd { // for treeview-like derive widgets
   margin: 4px;
   padding: 0;
   border-radius: 0;
-  background-color: $base_color;
+  background-color: if($variant=='light', $base_color, $bg_color);
   border: 1px solid $borders_color;
 
   .csd & {
@@ -1531,7 +1581,7 @@ column-header.button.dnd { // for treeview-like derive widgets
   border: 1px solid darken($borders_color, 5%);
   border-radius: 3px;
   background-clip: border-box;
-  background-color: $base_color;
+  background-color: if($variant=='light', $base_color, $bg_color);
 
   box-shadow: 0 2px 6px 1px if($variant=='light', transparentize(black, 0.93), transparentize(black, 0.65));
 
@@ -1903,30 +1953,31 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
   -GtkRange-trough-border: 0;
   outline-offset: -1px;
   outline-radius: 2px;
-  //@include _shadows(_button_shadow(normal));
 
   &.trough { margin: 5px; }
   &.fine-tune {
     &.trough { border-radius: 5px; margin: 3px; }
   }
   &.slider {
+    $_slider_border: if($variant=='light', transparentize(darken($button_border,25%), 0.5), darken($button_border,2%));
+
     background-clip: border-box;
-    background-image: linear-gradient(to bottom, $entry_bg);
-    border: 1px solid $selected_bg_color;
+    background-image: linear-gradient(to bottom, $button_bg);
+    border: 1px solid $_slider_border;
     border-radius: 50%;
     box-shadow: none;
 
     &:hover {
-    background-image: linear-gradient(to bottom, $selected_bg_color);
-    border-color: $selected_bg_color;
+    background-image: linear-gradient(to bottom, lighten($button_bg, 5%));
+    border-color: $_slider_border;
     }
     &:insensitive {
       background-image: linear-gradient(to bottom, mix($entry_bg, $bg_color, 55%));
-      border-color: mix($selected_bg_color, $bg_color, 55%);
+      border-color: transparentize($_slider_border, 0.2);
     }
     &:active {
-      background-image: linear-gradient(to bottom, darken($selected_bg_color, 10%));
-      border-color: darken($selected_bg_color, 10%);
+      background-image: linear-gradient(to bottom, $selected_bg_color);
+      border-color: $selected_bg_color;
     }
     //OSD sliders
     .osd & {
@@ -1960,7 +2011,7 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
   }
   &.trough {
 
-    $_scale_trough_bg: if($variant == 'light', $button_border, darken($base_color, 4%));
+    $_scale_trough_bg: if($variant == 'light', $button_border, darken($bg_color, 5%));
 
     border: none;
     border-radius: 2.5px;
@@ -2039,7 +2090,7 @@ GtkProgressBar {
 GtkProgressBar.trough {
   border: none;
   border-radius: 3px;
-  background-color: if($variant == 'light', $button_border, darken($base_color, 4%));
+  background-color: if($variant == 'light', $button_border, darken($bg_color, 5%));
 
   &.osd {
     border-style: none;
@@ -2089,8 +2140,8 @@ GtkLevelBar.vertical {
       background-color: $warning_color;
     }
     &.empty-fill-block {
-      background-color: transparentize($fg_color,0.8);
-      border-color: transparentize($fg_color,0.8);
+      background-color: if($variant=='light', transparentize($fg_color,0.8), $base_color);
+      border-color: if($variant=='light', transparentize($fg_color,0.8), $base_color);
     }
   }
 }
@@ -2241,8 +2292,8 @@ GtkCalendar {
   }
   &.button, &.button:focus {
     color: transparentize($fg_color,0.55);
-    box-shadow: none;
-    border: none;
+    @include button(undecorated);
+
     &:hover {
       color: $fg_color;
     }
@@ -2573,15 +2624,15 @@ GtkVolumeButton.button { padding: 8px; }
   // see bug #722563
   $_wm_border: if($variant=='light', transparentize(black, 0.9), transparentize(black, 0.45));
 
-  box-shadow: 0 0 0 1px if($darker=='true' or $variant == 'dark', darken($header_bg, 7%), $_wm_border),
-              0 4px 8px 1px if($darker == 'false', opacify($_wm_border, 0.1), opacify($_wm_border, 0.15));
+  box-shadow: 0 0 0 1px if($darker=='true' or $variant == 'dark', darken($header_bg, 6%), $_wm_border),
+              0 8px 8px 0 if($variant == 'light', opacify($_wm_border, 0.1), transparentize($_wm_border, 0.2));
 
   /* this is used for the resize cursor area */
   margin: 10px;
 
   &:backdrop {
-    box-shadow: 0 0 0 1px if($darker=='true' or $variant == 'dark', darken($header_bg, 7%), $_wm_border),
-                0 4px 5px 2px if($darker == 'false', $_wm_border, opacify($_wm_border, 0.15));
+    box-shadow: 0 0 0 1px if($darker=='true' or $variant == 'dark', transparentize(darken($header_bg, 6%), 0.1), $_wm_border),
+                0 5px 5px 0 if($variant == 'light', opacify($_wm_border, 0.1), transparentize($_wm_border, 0.2));
   }
   &.tiled {
     border-radius: 0;
@@ -2590,7 +2641,7 @@ GtkVolumeButton.button { padding: 8px; }
     &.popup, &.menu {
       border-radius: 2px;
       box-shadow: 0 3px 6px if($variant == 'light', $_wm_border, transparentize($_wm_border, 0.1)),
-                  0 0 0 1px if($variant == 'light', $_wm_border, darken($base_color, 10%));
+                  0 0 0 1px if($variant == 'light', $_wm_border, darken($bg_color, 10%));
     }
     &.tooltip {
       border-radius: 2px;

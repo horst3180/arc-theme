@@ -13,40 +13,40 @@ stage {
   transition-duration: 0;
   border-radius: 2px;
   text-shadow: 0 1px rgba(255, 255, 255, 0);
-  box-shadow: inset 0 0 rgba(255, 255, 255, 0);
   color: #5c616c;
   background-color: #fbfbfc;
-  border: 1px solid #cfd6e6; }
+  border: 1px solid #cfd6e6;
+  box-shadow: inset 0 2px 4px rgba(251, 251, 252, 0.05); }
   .popup-menu #notification .notification-button:focus, .popup-menu #notification .notification-icon-button:focus, .sound-button:focus {
     text-shadow: 0 1px rgba(255, 255, 255, 0);
-    box-shadow: inset 0 0 rgba(255, 255, 255, 0);
     color: #5c616c;
     background-color: #fbfbfc;
-    border: 1px solid #5294E2; }
+    border: 1px solid #5294E2;
+    box-shadow: inset 0 2px 4px rgba(251, 251, 252, 0.05); }
   .popup-menu #notification .notification-button:hover, .popup-menu #notification .notification-icon-button:hover, .sound-button:hover {
     text-shadow: 0 1px rgba(255, 255, 255, 0);
-    box-shadow: inset 0 0 rgba(255, 255, 255, 0);
     color: #5c616c;
-    background-color: #fbfbfc;
-    border: 1px solid #5294E2; }
+    background-color: white;
+    border: 1px solid #cfd6e6;
+    box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.05); }
   .popup-menu #notification .notification-button:hover:focus, .popup-menu #notification .notification-icon-button:hover:focus, .sound-button:hover:focus {
     text-shadow: 0 1px rgba(255, 255, 255, 0);
-    box-shadow: inset 0 0 rgba(255, 255, 255, 0);
-    color: #5294E2;
+    color: #5c616c;
     background-color: #fbfbfc;
-    border: 1px solid #5294E2; }
+    border: 1px solid #5294E2;
+    box-shadow: inset 0 2px 4px rgba(251, 251, 252, 0.05); }
   .popup-menu #notification .notification-button:active, .popup-menu #notification .notification-icon-button:active, .sound-button:active, .popup-menu #notification .notification-button:active:focus, .popup-menu #notification .notification-icon-button:active:focus, .sound-button:active:focus {
     text-shadow: 0 1px rgba(255, 255, 255, 0);
-    box-shadow: inset 0 0 rgba(255, 255, 255, 0);
     color: #ffffff;
     background-color: #5294E2;
-    border: 1px solid #5294E2; }
+    border: 1px solid #5294E2;
+    box-shadow: inset 0 2px 4px #5294E2; }
   .popup-menu #notification .notification-button:insensitive, .popup-menu #notification .notification-icon-button:insensitive, .sound-button:insensitive {
     text-shadow: 0 1px rgba(255, 255, 255, 0);
-    box-shadow: inset 0 0 rgba(255, 255, 255, 0);
     color: rgba(92, 97, 108, 0.55);
     border: 1px solid rgba(207, 214, 230, 0.55);
-    background-color: rgba(251, 251, 252, 0.55); }
+    background-color: rgba(251, 251, 252, 0.55);
+    box-shadow: inset 0 2px 4px rgba(251, 251, 252, 0.05); }
 
 .notification-button, .notification-icon-button, .modal-dialog-button-box .modal-dialog-button {
   min-height: 20px;
@@ -54,30 +54,26 @@ stage {
   transition-duration: 0;
   border-radius: 2px;
   text-shadow: 0 1px rgba(255, 255, 255, 0);
-  box-shadow: inset 0 0 rgba(255, 255, 255, 0);
   color: #BAC3CF;
-  border: 1px solid rgba(0, 0, 0, 0.45);
-  background-color: rgba(0, 0, 0, 0.3); }
+  border: 1px solid rgba(26, 28, 34, 0.35);
+  background-color: rgba(102, 109, 132, 0.35); }
   .notification-button:hover, .notification-icon-button:hover, .modal-dialog-button-box .modal-dialog-button:hover {
     text-shadow: 0 1px rgba(255, 255, 255, 0);
-    box-shadow: inset 0 0 rgba(255, 255, 255, 0);
     color: #BAC3CF;
-    border: 1px solid #5294E2;
-    background-color: rgba(0, 0, 0, 0.3); }
+    border: 1px solid rgba(26, 28, 34, 0.35);
+    background-color: rgba(119, 127, 151, 0.45); }
   .notification-button:focus, .notification-icon-button:focus, .modal-dialog-button-box .modal-dialog-button:focus {
     color: #5294E2; }
   .notification-button:active, .notification-icon-button:active, .modal-dialog-button-box .modal-dialog-button:active {
     text-shadow: 0 1px rgba(255, 255, 255, 0);
-    box-shadow: inset 0 0 rgba(255, 255, 255, 0);
     color: #ffffff;
     border: 1px solid #5294E2;
     background-color: #5294E2; }
   .notification-button:insensitive, .notification-icon-button:insensitive, .modal-dialog-button-box .modal-dialog-button:insensitive {
     text-shadow: 0 1px rgba(255, 255, 255, 0);
-    box-shadow: inset 0 0 rgba(255, 255, 255, 0);
-    color: #555a62;
-    border: 1px solid rgba(0, 0, 0, 0.45);
-    background-color: rgba(0, 0, 0, 0.15); }
+    color: #5d626e;
+    border: 1px solid rgba(26, 28, 34, 0.35);
+    background-color: rgba(102, 109, 132, 0.2); }
 
 .popup-menu #notification StEntry, #menu-search-entry {
   padding: 7px;
@@ -86,20 +82,20 @@ stage {
   selected-color: #ffffff;
   transition-duration: 300ms;
   border-radius: 3px;
-  box-shadow: inset 0 0 rgba(255, 255, 255, 0);
   color: #5c616c;
   background-color: #ffffff;
-  border: 1px solid #cfd6e6; }
+  border: 1px solid #cfd6e6;
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.05); }
   .popup-menu #notification StEntry:focus, #menu-search-entry:focus, .popup-menu #notification StEntry:hover, #menu-search-entry:hover {
-    box-shadow: inset 0 0 rgba(255, 255, 255, 0);
     color: #5c616c;
     background-color: #ffffff;
-    border: 1px solid #5294E2; }
+    border: 1px solid #5294E2;
+    box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.05); }
   .popup-menu #notification StEntry:insensitive, #menu-search-entry:insensitive {
-    box-shadow: inset 0 0 rgba(255, 255, 255, 0);
     color: rgba(92, 97, 108, 0.55);
     background-color: #fbfbfb;
-    border-color: 1px solid #e0e4ee; }
+    border-color: 1px solid #e0e4ee;
+    box-shadow: inset 0 2px 4px rgba(251, 251, 251, 0.05); }
   .popup-menu #notification StEntry StIcon.capslock-warning, #menu-search-entry StIcon.capslock-warning {
     icon-size: 16px;
     warning-color: #F27835;
@@ -113,20 +109,20 @@ stage {
   selected-color: #ffffff;
   transition-duration: 300ms;
   border-radius: 3px;
-  box-shadow: inset 0 0 rgba(255, 255, 255, 0);
   color: #BAC3CF;
-  background-color: rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(0, 0, 0, 0.4); }
+  background-color: rgba(102, 109, 132, 0.35);
+  border: 1px solid rgba(26, 28, 34, 0.35);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05); }
   .notification StEntry:focus {
-    box-shadow: inset 0 0 rgba(255, 255, 255, 0);
-    color: #BAC3CF;
-    background-color: rgba(0, 0, 0, 0.2);
-    border: 1px solid #5294E2; }
+    color: #ffffff;
+    background-color: #5294E2;
+    border: 1px solid #5294E2;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05); }
   .notification StEntry:insensitive {
-    box-shadow: inset 0 0 rgba(255, 255, 255, 0);
-    color: #555a62;
-    background-color: rgba(0, 0, 0, 0.1);
-    border-color: 1px solid rgba(0, 0, 0, 0.4); }
+    color: rgba(186, 195, 207, 0.55);
+    background-color: rgba(102, 109, 132, 0.2);
+    border: 1px solid rgba(26, 28, 34, 0.35);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05); }
 
 StScrollView.vfade {
   -st-vfade-offset: 0px; }
@@ -231,7 +227,7 @@ StScrollBar {
 #Tooltip {
   border-radius: 3px;
   padding: 5px 12px;
-  background-color: rgba(42, 44, 51, 0.95);
+  background-color: rgba(53, 57, 69, 0.95);
   color: #BAC3CF;
   font-size: 1em;
   font-weight: normal;
@@ -380,8 +376,8 @@ StScrollBar {
   spacing: 12px; }
 
 .window-caption {
-  background-color: rgba(42, 44, 51, 0.95);
-  border: 1px solid rgba(42, 44, 51, 0.95);
+  background-color: rgba(53, 57, 69, 0.95);
+  border: 1px solid rgba(53, 57, 69, 0.95);
   color: #BAC3CF;
   spacing: 25px;
   border-radius: 2px;
@@ -401,10 +397,10 @@ StScrollBar {
   font-size: 9pt;
   padding: 5px 8px;
   -cinnamon-caption-spacing: 4px;
-  box-shadow: inset 0 0 rgba(255, 255, 255, 0);
   color: #BAC3CF;
-  background-color: rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(0, 0, 0, 0.4); }
+  background-color: rgba(102, 109, 132, 0.35);
+  border: 1px solid rgba(26, 28, 34, 0.35);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05); }
   .expo-workspaces-name-entry:focus,
   .expo-workspaces-name-entry#selected:focus {
     border: 1px solid #5294E2;
@@ -425,7 +421,7 @@ StScrollBar {
     border-radius: 2px; }
 
 .expo-background {
-  background-color: #2a2c33; }
+  background-color: #353945; }
 
 .workspace-thumbnails {
   spacing: 14px; }
@@ -744,15 +740,15 @@ StScrollBar {
     caret-color: #BAC3CF;
     selected-color: #ffffff;
     selection-background-color: #5294E2;
-    box-shadow: inset 0 0 rgba(255, 255, 255, 0);
     color: #BAC3CF;
-    background-color: rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(0, 0, 0, 0.4); }
+    background-color: rgba(102, 109, 132, 0.35);
+    border: 1px solid rgba(26, 28, 34, 0.35);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05); }
     .run-dialog-entry:focus {
-      box-shadow: inset 0 0 rgba(255, 255, 255, 0);
-      color: #BAC3CF;
-      background-color: rgba(0, 0, 0, 0.2);
-      border: 1px solid #5294E2; }
+      color: #ffffff;
+      background-color: #5294E2;
+      border: 1px solid #5294E2;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05); }
   .run-dialog .modal-dialog-button-box {
     border: none;
     box-shadow: none;
@@ -815,7 +811,7 @@ StScrollBar {
     border-width: 0px; }
 
 #keyboard {
-  background-color: rgba(42, 44, 51, 0.95);
+  background-color: rgba(53, 57, 69, 0.95);
   border-width: 0;
   border-top-width: 1px;
   border-color: rgba(0, 0, 0, 0.4); }
@@ -835,34 +831,30 @@ StScrollBar {
   border-radius: 3px;
   box-shadow: none;
   text-shadow: 0 1px rgba(255, 255, 255, 0);
-  box-shadow: inset 0 0 rgba(255, 255, 255, 0);
   color: #BAC3CF;
-  border: 1px solid rgba(0, 0, 0, 0.45);
-  background-color: rgba(0, 0, 0, 0.3); }
+  border: 1px solid rgba(26, 28, 34, 0.35);
+  background-color: rgba(102, 109, 132, 0.35); }
   .keyboard-key:hover {
     text-shadow: 0 1px rgba(255, 255, 255, 0);
-    box-shadow: inset 0 0 rgba(255, 255, 255, 0);
     color: #BAC3CF;
-    border: 1px solid #5294E2;
-    background-color: rgba(0, 0, 0, 0.3); }
+    border: 1px solid rgba(26, 28, 34, 0.35);
+    background-color: rgba(119, 127, 151, 0.45); }
   .keyboard-key:active, .keyboard-key:checked {
     text-shadow: 0 1px rgba(255, 255, 255, 0);
-    box-shadow: inset 0 0 rgba(255, 255, 255, 0);
     color: #ffffff;
     border: 1px solid #5294E2;
     background-color: #5294E2; }
   .keyboard-key:grayed {
     text-shadow: 0 1px rgba(255, 255, 255, 0);
-    box-shadow: inset 0 0 rgba(255, 255, 255, 0);
-    color: #555a62;
-    border: 1px solid rgba(0, 0, 0, 0.45);
-    background-color: rgba(0, 0, 0, 0.15); }
+    color: #5d626e;
+    border: 1px solid rgba(26, 28, 34, 0.35);
+    background-color: rgba(102, 109, 132, 0.2); }
 
 .keyboard-subkeys {
   color: #BAC3CF;
   padding: 5px;
   -arrow-border-radius: 2px;
-  -arrow-background-color: rgba(42, 44, 51, 0.95);
+  -arrow-background-color: rgba(53, 57, 69, 0.95);
   -arrow-border-width: 1px;
   -arrow-border-color: rgba(0, 0, 0, 0.4);
   -arrow-base: 20px;
@@ -881,10 +873,10 @@ StScrollBar {
   border: 1px solid transparent; }
   .menu-favorites-button:hover {
     text-shadow: 0 1px rgba(255, 255, 255, 0);
-    box-shadow: inset 0 0 rgba(255, 255, 255, 0);
     color: #5c616c;
-    background-color: #fbfbfc;
-    border: 1px solid #5294E2; }
+    background-color: white;
+    border: 1px solid #cfd6e6;
+    box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.05); }
 
 .menu-places-box {
   margin: auto;
@@ -909,10 +901,10 @@ StScrollBar {
   .menu-application-button-selected {
     padding: 7px;
     text-shadow: 0 1px rgba(255, 255, 255, 0);
-    box-shadow: inset 0 0 rgba(255, 255, 255, 0);
     color: #5c616c;
-    background-color: #fbfbfc;
-    border: 1px solid #5294E2; }
+    background-color: white;
+    border: 1px solid #cfd6e6;
+    box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.05); }
     .menu-application-button-selected:highlighted {
       font-weight: bold; }
   .menu-application-button-label:ltr {
@@ -926,10 +918,10 @@ StScrollBar {
   .menu-category-button-selected {
     padding: 7px;
     text-shadow: 0 1px rgba(255, 255, 255, 0);
-    box-shadow: inset 0 0 rgba(255, 255, 255, 0);
     color: #5c616c;
-    background-color: #fbfbfc;
-    border: 1px solid #5294E2; }
+    background-color: white;
+    border: 1px solid #cfd6e6;
+    box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.05); }
   .menu-category-button-hover {
     background-color: red;
     border-radius: 2px; }

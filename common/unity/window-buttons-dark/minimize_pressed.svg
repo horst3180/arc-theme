@@ -14,7 +14,7 @@
    id="svg4306"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="minimize_focused_pressed.svg"
+   sodipodi:docname="minimize_pressed.svg"
    style="enable-background:new">
   <defs
      id="defs4308">
@@ -81,9 +81,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.313709"
-     inkscape:cx="9.1889683"
-     inkscape:cy="9.2440344"
+     inkscape:zoom="22.627418"
+     inkscape:cx="4.6255954"
+     inkscape:cy="10.407616"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -111,10 +111,6 @@
        orientation="1,0"
        position="12,12"
        id="guide4316" />
-    <sodipodi:guide
-       orientation="0,1"
-       position="12,12"
-       id="guide4318" />
   </sodipodi:namedview>
   <metadata
      id="metadata4311">
@@ -137,7 +133,7 @@
        style="display:inline"
        id="titlebutton-min-active-dark"
        inkscape:label="#g6414"
-       transform="translate(-379,1218)">
+       transform="translate(-379.00001,1218)">
       <g
          id="g4909-1-2-0"
          style="display:inline;opacity:1"

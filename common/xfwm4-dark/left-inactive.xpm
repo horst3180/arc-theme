@@ -2,7 +2,7 @@
 static char * left_inactive_xpm[] = {
 "1 12 2 1",
 " 	c None",
-".	c #111215",
+".	c #21252B",
 ".",
 ".",
 ".",
