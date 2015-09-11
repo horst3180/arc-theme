@@ -849,24 +849,22 @@ GtkComboBox {
     color: rgba(92, 97, 108, 0.55); }
   GtkComboBox .separator.vertical, GtkComboBox GtkPlacesSidebar.sidebar .vertical.view.separator, GtkPlacesSidebar.sidebar GtkComboBox .vertical.view.separator {
     -GtkWidget-wide-separators: true; }
-  GtkComboBox.combobox-entry .entry {
+  GtkComboBox.combobox-entry .entry:dir(ltr) {
     border-right-style: none; }
-    GtkComboBox.combobox-entry .entry:dir(rtl) {
-      border-left-style: none; }
-  GtkComboBox.combobox-entry .button {
-    color: rgba(92, 97, 108, 0.6);
-    background-color: #cfd6e6;
-    border-color: #cfd6e6; }
-    GtkComboBox.combobox-entry .button:hover {
-      background-color: #e0e4ef;
-      border-color: #e0e4ef; }
-    GtkComboBox.combobox-entry .button:active, GtkComboBox.combobox-entry .button:checked {
-      color: #ffffff;
-      outline-color: rgba(255, 255, 255, 0.3);
-      border-color: #5294E2;
-      background-color: #5294E2; }
-    GtkComboBox.combobox-entry .button:insensitive {
-      opacity: 0.5; }
+    GtkComboBox.combobox-entry .entry:dir(ltr):focus {
+      box-shadow: 1px 0 #5294E2; }
+  GtkComboBox.combobox-entry .entry:dir(rtl) {
+    border-left-style: none; }
+    GtkComboBox.combobox-entry .entry:dir(rtl):focus {
+      box-shadow: -1px 0 #5294E2; }
+  GtkComboBox.combobox-entry .button:dir(ltr) {
+    box-shadow: inset 1px 0 #cfd6e6; }
+    GtkComboBox.combobox-entry .button:dir(ltr):insensitive {
+      box-shadow: inset 1px 0 rgba(207, 214, 230, 0.55); }
+  GtkComboBox.combobox-entry .button:dir(rtl) {
+    box-shadow: inset -1px 0 #cfd6e6; }
+    GtkComboBox.combobox-entry .button:dir(rtl):insensitive {
+      box-shadow: inset -1px 0 rgba(207, 214, 230, 0.55); }
 
 /************
  * Toolbars *

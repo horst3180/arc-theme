@@ -928,25 +928,31 @@ GtkComboBox {
   &.combobox-entry .entry {
     @extend %linked;
 
-    border-right-style: none;
-    &:dir(rtl) { border-left-style: none; }
+    &:dir(ltr) {
+      border-right-style: none;
+
+      &:focus { box-shadow: 1px 0 $selected_bg_color; }
+    }
+    &:dir(rtl) {
+      border-left-style: none;
+
+      &:focus { box-shadow: -1px 0 $selected_bg_color; }
+    }
   }
 
   &.combobox-entry .button {
     @extend %linked;
 
-    color: transparentize($fg_color, 0.4);
-    background-color: $button_border;
-    border-color: $button_border;
+    &:dir(ltr) {
+      box-shadow: inset  1px 0 $button_border;
 
-    &:hover {
-      background-color: lighten($button_border, 5%);
-      border-color: lighten($button_border, 5%);
+      &:insensitive { box-shadow: inset 1px 0 transparentize($button_border, 0.45); }
     }
+    &:dir(rtl) {
+      box-shadow: inset -1px 0 $button_border;
 
-    &:active, &:checked { @include button(active); }
-
-    &:insensitive { opacity: 0.5 }
+      &:insensitive { box-shadow: inset -1px 0 transparentize($button_border, 0.45); }
+    }
   }
 }
 
