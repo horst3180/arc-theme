@@ -55,11 +55,8 @@ NautilusWindow {
   .sidebar-button.button {
     color: $dark_sidebar_fg;
 
-    &:hover { background-color: transparentize(black, 0.9); }
-    &:active {
-      color: $selected_fg_color;
-      background-color: $selected_bg_color;
-    }
+    &:hover { @include button(osd-hover); }
+    &:active { @include button(osd-active); }
 
     &:not(:hover):not(:active) > GtkImage { opacity: 0.5 };
   }

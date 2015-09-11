@@ -1954,7 +1954,8 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
   -GtkRange-slider-width: 15;
   -GtkRange-trough-border: 0;
   outline-offset: -1px;
-  outline-radius: 2px; }
+  outline-radius: 2px;
+  color: alpha(currentColor,0.7); }
   .scale.trough {
     margin: 5px; }
   .scale.fine-tune.trough {
@@ -3734,10 +3735,15 @@ NautilusWindow .sidebar-button.button {
   color: #BAC3CF; }
   GtkFileChooserDialog .sidebar-button.button:hover,
   NautilusWindow .sidebar-button.button:hover {
-    background-color: rgba(0, 0, 0, 0.1); }
+    color: #BAC3CF;
+    outline-color: rgba(186, 195, 207, 0.3);
+    border-color: rgba(26, 28, 34, 0.4);
+    background-color: rgba(119, 127, 151, 0.5); }
   GtkFileChooserDialog .sidebar-button.button:active,
   NautilusWindow .sidebar-button.button:active {
     color: #ffffff;
+    outline-color: rgba(255, 255, 255, 0.3);
+    border-color: #5294E2;
     background-color: #5294E2; }
   GtkFileChooserDialog .sidebar-button.button:not(:hover):not(:active) > GtkImage,
   NautilusWindow .sidebar-button.button:not(:hover):not(:active) > GtkImage {
