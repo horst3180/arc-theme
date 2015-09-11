@@ -1324,6 +1324,27 @@ GtkComboBox {
       &:hover { @include entry(header-focus); box-shadow: none; }
       &:insensitive { @include entry(header-insensitive); }
     }
+    &.combobox-entry .entry {
+      &:dir(ltr) {
+        &:focus { box-shadow: none; }
+      }
+      &:dir(rtl) {
+        &:focus { box-shadow: none; }
+      }
+    }
+    &.combobox-entry .button {
+
+      &:dir(ltr) {
+        box-shadow: inset  1px 0 $header_button_border;
+
+        &:insensitive { box-shadow: inset 1px 0 transparentize($header_button_border, 0.45); }
+      }
+      &:dir(rtl) {
+        box-shadow: inset -1px 0 $header_button_border;
+
+        &:insensitive { box-shadow: inset -1px 0 transparentize($header_button_border, 0.45); }
+      }
+    }
   }
 
   // Header-bar Switches

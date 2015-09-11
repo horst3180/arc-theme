@@ -1276,6 +1276,22 @@ GtkComboBox {
     color: rgba(207, 218, 231, 0.35);
     background-image: linear-gradient(to bottom, rgba(95, 105, 127, 0.22)); }
 
+.primary-toolbar GtkComboBox.combobox-entry .entry:dir(ltr):focus, .header-bar GtkComboBox.combobox-entry .entry:dir(ltr):focus {
+  box-shadow: none; }
+
+.primary-toolbar GtkComboBox.combobox-entry .entry:dir(rtl):focus, .header-bar GtkComboBox.combobox-entry .entry:dir(rtl):focus {
+  box-shadow: none; }
+
+.primary-toolbar GtkComboBox.combobox-entry .button:dir(ltr), .header-bar GtkComboBox.combobox-entry .button:dir(ltr) {
+  box-shadow: inset 1px 0 rgba(21, 23, 28, 0.37); }
+  .primary-toolbar GtkComboBox.combobox-entry .button:dir(ltr):insensitive, .header-bar GtkComboBox.combobox-entry .button:dir(ltr):insensitive {
+    box-shadow: inset 1px 0 rgba(21, 23, 28, 0); }
+
+.primary-toolbar GtkComboBox.combobox-entry .button:dir(rtl), .header-bar GtkComboBox.combobox-entry .button:dir(rtl) {
+  box-shadow: inset -1px 0 rgba(21, 23, 28, 0.37); }
+  .primary-toolbar GtkComboBox.combobox-entry .button:dir(rtl):insensitive, .header-bar GtkComboBox.combobox-entry .button:dir(rtl):insensitive {
+    box-shadow: inset -1px 0 rgba(21, 23, 28, 0); }
+
 .primary-toolbar GtkSwitch:backdrop, .header-bar GtkSwitch:backdrop {
   opacity: 0.75; }
 
