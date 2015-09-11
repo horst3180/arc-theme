@@ -31,6 +31,13 @@ stage {
   font-size: 1em;
   font-weight: normal; }
 
+.app-well-app.running > .overview-icon, .app-well-app.running:hover > .overview-icon, .app-well-app.running:active > .overview-icon,
+.app-well-app.running:checked > .overview-icon {
+  background-color: transparent !important;
+  background-gradient-direction: none !important;
+  border: none !important;
+  border-radius: 0 !important; }
+
 .popup-menu .modal-dialog-button {
   font-size: 1em;
   min-height: 20px;
@@ -91,7 +98,7 @@ stage {
   border-radius: 2px;
   text-shadow: 0 1px rgba(255, 255, 255, 0);
   color: #BAC3CF;
-  border: 1px solid rgba(26, 28, 34, 0.35);
+  border: 1px solid rgba(0, 0, 0, 0.35);
   background-color: rgba(102, 109, 132, 0.35); }
   .candidate-page-button:hover,
   .hotplug-notification-item:hover,
@@ -99,7 +106,7 @@ stage {
   .modal-dialog-button:hover, .modal-dialog-button-box .button:hover, .notification-button:hover, .notification-icon-button:hover, .hotplug-resident-mount:hover {
     text-shadow: 0 1px rgba(255, 255, 255, 0);
     color: #BAC3CF;
-    border: 1px solid rgba(26, 28, 34, 0.35);
+    border: 1px solid rgba(0, 0, 0, 0.35);
     background-color: rgba(119, 127, 151, 0.45); }
   .candidate-page-button:focus,
   .hotplug-notification-item:focus,
@@ -120,7 +127,7 @@ stage {
   .modal-dialog-button:insensitive, .modal-dialog-button-box .button:insensitive, .notification-button:insensitive, .notification-icon-button:insensitive, .hotplug-resident-mount:insensitive {
     text-shadow: 0 1px rgba(255, 255, 255, 0);
     color: #5d626e;
-    border: 1px solid rgba(26, 28, 34, 0.35);
+    border: 1px solid rgba(0, 0, 0, 0.35);
     background-color: rgba(102, 109, 132, 0.2); }
 
 StEntry {
@@ -1272,16 +1279,17 @@ StScrollBar {
   background-gradient-direction: none;
   text-shadow: 0 1px rgba(255, 255, 255, 0);
   color: #BAC3CF;
-  border: 1px solid rgba(26, 28, 34, 0.35);
+  border: 1px solid rgba(0, 0, 0, 0.35);
   background-color: rgba(102, 109, 132, 0.35); }
   .app-view-control:hover {
     text-shadow: 0 1px rgba(255, 255, 255, 0);
     color: #BAC3CF;
-    border: 1px solid rgba(26, 28, 34, 0.35);
+    border: 1px solid rgba(0, 0, 0, 0.35);
     background-color: rgba(119, 127, 151, 0.45); }
   .app-view-control:checked {
     color: #ffffff;
-    background-color: #5294E2; }
+    background-color: #5294E2;
+    border-color: #5294E2; }
   .app-view-control:first-child:ltr,
   .app-view-control:last-child:rtl {
     border-radius: 2px 0 0 2px;
@@ -1325,6 +1333,18 @@ StScrollBar {
   transition-duration: 0ms;
   border-image: none;
   background-image: none; }
+
+.app-well-app.running > .overview-icon {
+  background: none !important;
+  text-shadow: black 0px 0px;
+  border-image: url("common-assets/dash/button-running-bottom.svg") 5 5 5 5; }
+
+.app-well-app.running:hover > .overview-icon {
+  border-image: url("common-assets/dash/button-running-hover-bottom.svg") 5 5 5 5; }
+
+.app-well-app.running:active > .overview-icon,
+.app-well-app.running:checked > .overview-icon {
+  border-image: url("common-assets/dash/button-running-active-bottom.svg") 5 5 5 5; }
 
 .search-provider-icon,
 .list-search-result, .app-well-app .overview-icon,
@@ -1490,12 +1510,12 @@ StScrollBar {
     .summary-source-button .summary-source {
       text-shadow: 0 1px rgba(255, 255, 255, 0);
       color: #BAC3CF;
-      border: 1px solid rgba(26, 28, 34, 0.35);
+      border: 1px solid rgba(0, 0, 0, 0.35);
       background-color: rgba(102, 109, 132, 0.35); }
     .summary-source-button:hover .summary-source {
       text-shadow: 0 1px rgba(255, 255, 255, 0);
       color: #BAC3CF;
-      border: 1px solid rgba(26, 28, 34, 0.35);
+      border: 1px solid rgba(0, 0, 0, 0.35);
       background-color: rgba(119, 127, 151, 0.45); }
     .summary-source-button:focus .summary-source,
     .summary-source-button:selected .summary-source {
@@ -1683,12 +1703,12 @@ StEntry.chat-response {
   background-gradient-direction: none;
   text-shadow: 0 1px rgba(255, 255, 255, 0);
   color: #BAC3CF;
-  border: 1px solid rgba(26, 28, 34, 0.35);
+  border: 1px solid rgba(0, 0, 0, 0.35);
   background-color: rgba(102, 109, 132, 0.35); }
   .keyboard-key:hover {
     text-shadow: 0 1px rgba(255, 255, 255, 0);
     color: #BAC3CF;
-    border: 1px solid rgba(26, 28, 34, 0.35);
+    border: 1px solid rgba(0, 0, 0, 0.35);
     background-color: rgba(119, 127, 151, 0.45); }
   .keyboard-key:active, .keyboard-key:checked {
     text-shadow: 0 1px rgba(255, 255, 255, 0);
@@ -1698,7 +1718,7 @@ StEntry.chat-response {
   .keyboard-key:grayed {
     text-shadow: 0 1px rgba(255, 255, 255, 0);
     color: #5d626e;
-    border: 1px solid rgba(26, 28, 34, 0.35);
+    border: 1px solid rgba(0, 0, 0, 0.35);
     background-color: rgba(102, 109, 132, 0.2); }
 
 .keyboard-subkeys {

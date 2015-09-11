@@ -1622,6 +1622,7 @@ StScrollBar {
   &:checked {
     color: $selected_fg_color;
     background-color: $selected_bg_color;
+    border-color: $selected_bg_color;
   }
 
   &:first-child:ltr,
@@ -1666,6 +1667,27 @@ StScrollBar {
     transition-duration: 0ms;
     border-image: none;
     background-image: none;
+  }
+}
+
+.app-well-app.running {
+  > .overview-icon {
+    @extend %reset_style;
+    background: none !important;
+
+    text-shadow: black 0px 0px;
+    border-image: url("common-assets/dash/button-running-bottom.svg") 5 5 5 5;
+  }
+  &:hover > .overview-icon {
+    @extend %reset_style;
+
+    border-image: url("common-assets/dash/button-running-hover-bottom.svg") 5 5 5 5;
+  }
+  &:active > .overview-icon,
+  &:checked > .overview-icon {
+    @extend %reset_style;
+
+    border-image: url("common-assets/dash/button-running-active-bottom.svg") 5 5 5 5;
   }
 }
 
