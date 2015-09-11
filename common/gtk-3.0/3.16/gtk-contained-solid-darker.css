@@ -3275,6 +3275,9 @@ UnityPanelWidget,
   background-image: linear-gradient(to bottom, #2b2e37);
   color: #f6f7f9;
   box-shadow: none; }
+  UnityPanelWidget:backdrop,
+  .unity-panel:backdrop {
+    color: #abb6c5; }
 
 .unity-panel.menubar.menuitem:hover,
 .unity-panel.menubar .menuitem *:hover {
