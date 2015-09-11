@@ -69,9 +69,9 @@
       color: rgba(255, 255, 255, 0.65);
       text-shadow: none; }
 
-.rubberband {
-  border: 1px solid #5294E2;
-  background-color: rgba(82, 148, 226, 0.2); }
+.rubberband, GtkTreeView.view.rubberband, .content-view.rubberband {
+  border: 1px solid #2679db;
+  background-color: rgba(38, 121, 219, 0.2); }
 
 .label.separator, .popover .label.separator, .sidebar .label.view.separator {
   color: #5c616c; }
@@ -1926,13 +1926,11 @@ GtkTreeView.view.radio:checked:insensitive:selected,
 .list-row:selected .radio:checked:insensitive {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-insensitive-selected.png"), url("assets/radio-checked-insensitive-selected@2.png")); }
 
-GtkIconView.view.check,
-GtkFlowBox.view.check {
+.view.content-view.check:not(.list) {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-selectionmode.png"), url("assets/checkbox-selectionmode@2.png"));
   background-color: transparent; }
 
-GtkIconView.view.check:checked,
-GtkFlowBox.view.check:checked {
+.view.content-view.check:checked:not(.list) {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-selectionmode.png"), url("assets/checkbox-checked-selectionmode@2.png"));
   background-color: transparent; }
 
@@ -2484,6 +2482,11 @@ GtkColorButton.button {
 /********
  * Misc *
  ********/
+.content-view {
+  background-color: #ffffff; }
+  .content-view:hover {
+    -gtk-image-effect: highlight; }
+
 .scale-popup .button {
   padding: 6px; }
   .scale-popup .button:hover {

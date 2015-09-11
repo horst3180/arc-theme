@@ -119,8 +119,8 @@ $darker_asset_suffix: if($darker=='true', '-dark', $asset_suffix);
 }
 
 .rubberband {
-  border: 1px solid $selected_bg_color;
-  background-color: transparentize($selected_bg_color,0.8);
+  border: 1px solid darken($selected_bg_color, 10%);
+  background-color: transparentize(darken($selected_bg_color, 10%), 0.8);
 }
 
 .label {
@@ -1439,6 +1439,8 @@ GtkTreeView.view {                                      // treeview grid lines a
   border-left-color: transparentize($fg_color, 0.85);   // this is actually the tree lines color,
   border-top-color: transparentize(black, 0.9);         // while this is the grid lines color, better then nothing
 
+  &.rubberband { @extend .rubberband; } // to avoid borders being overridden by the previously set props
+
   &:selected {
     border-radius: 0;
     border-left-color: mix($selected_fg_color, $selected_bg_color, 50%);
@@ -2066,8 +2068,7 @@ GtkSwitch {
 //selection-mode
 @each $s,$as in ('','-selectionmode'),
                   (':checked', '-checked-selectionmode') {
-  GtkIconView.view.check#{$s},
-  GtkFlowBox.view.check#{$s} {
+  .view.content-view.check#{$s}:not(.list) {
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox#{$as}#{$asset_suffix}.png"),
                                     url("assets/checkbox#{$as}#{$asset_suffix}@2.png"));
     background-color: transparent;
@@ -2816,6 +2817,13 @@ GtkColorButton.button {
 /********
  * Misc *
  ********/
+//content view (grid/list)
+.content-view {
+  background-color: $base_color;
+  &:hover { -gtk-image-effect: highlight; }
+  &.rubberband { @extend .rubberband; }
+}
+
 .scale-popup .button { // +/- buttons on GtkVolumeButton popup
   padding: 6px;
   &:hover {
