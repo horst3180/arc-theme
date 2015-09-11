@@ -436,8 +436,14 @@ EphyWindow .floating-bar { // Epiphany overrides the floating-bar style, so rese
   margin: 2px;
   padding: 4px;
 
-  &:hover { background-color: lighten($selected_bg_color, 4%) }
-  &:active { background-color: darken($selected_bg_color, 4%) }
+  &:hover {
+    color: $selected_fg_color;
+    background-color: lighten($selected_bg_color, 4%);
+  }
+  &:active {
+    color: $selected_fg_color;
+    background-color: darken($selected_bg_color, 4%);
+  }
 
   .toolbar .linked &.button {
     background: none;

@@ -2998,7 +2998,8 @@ EphyWindow .floating-bar {
   margin: 2px;
   padding: 4px; }
   .documents-entry-tag:hover {
-    background-color: #639fe5; }
+    background-color: #639fe5;
+    color: #ffffff; }
   .documents-entry-tag:active {
     background-color: #4189df; }
   .toolbar .linked .documents-entry-tag.button, .inline-toolbar .linked .documents-entry-tag.button {

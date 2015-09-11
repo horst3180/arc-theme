@@ -3040,8 +3040,10 @@ EphyWindow .floating-bar {
   margin: 2px;
   padding: 4px; }
   .documents-entry-tag:hover {
+    color: #ffffff;
     background-color: #639fe5; }
   .documents-entry-tag:active {
+    color: #ffffff;
     background-color: #4189df; }
   .toolbar .linked .documents-entry-tag.button, .inline-toolbar .linked .documents-entry-tag.button {
     background: none;
