@@ -2,7 +2,6 @@
   background-clip: padding-box;
   -GtkToolButton-icon-spacing: 4;
   -GtkTextView-error-underline-color: #FC4138;
-  -GtkPaned-handle-size: 1;
   -GtkCheckButton-indicator-size: 16;
   -GtkCheckMenuItem-indicator-size: 16;
   -GtkScrolledWindow-scrollbar-spacing: 0;
@@ -171,10 +170,6 @@ GtkTextView {
     border-color: rgba(43, 46, 57, 0.55);
     background-color: rgba(64, 69, 82, 0.55);
     background-image: linear-gradient(to bottom, rgba(64, 69, 82, 0.55)); }
-  .entry:selected,
-  .entry:selected:focus {
-    background-color: #5294E2;
-    color: #ffffff; }
   .entry.progressbar {
     margin: 2px 12px;
     border-radius: 0;
@@ -712,7 +707,7 @@ GtkSearchEntry.entry {
   .linked.vertical > GtkComboBox:only-child > .the-button-in-the-combobox:checked {
     box-shadow: none; }
 
-.menuitem.button.flat, .menuitem.sidebar-button.button, .button:link, .button:visited, .button:link:hover, .button:link:active, .button:link:checked, .button:visited:hover, .button:visited:active, .button:visited:checked, .menu.button, .popup.button, .notebook tab .button, .list-row.activatable, .app-notification .button.flat,
+.menuitem.button.flat, .menuitem.sidebar-button.button, .button:link, .button:visited, .button:link:hover, .button:link:active, .button:link:checked, .button:visited:hover, .button:visited:active, .button:visited:checked, .menu.button, .popup.button, .notebook tab .button, .app-notification .button.flat,
 .app-notification .sidebar-button.button,
 .app-notification.frame .button.flat, .app-notification.frame .sidebar-button.button, .app-notification .button.flat:insensitive,
 .app-notification .sidebar-button.button:insensitive,
@@ -2115,7 +2110,7 @@ GtkScrolledWindow GtkViewport.frame {
 /*********
  * Lists *
  *********/
-.list, .list-row {
+.list {
   background-color: #404552;
   border-color: #2b2e39; }
 
@@ -2123,24 +2118,23 @@ GtkScrolledWindow GtkViewport.frame {
 .grid-child {
   padding: 2px; }
 
-.list-row.activatable {
-  background-color: transparent;
-  border-style: none;
-  border-radius: 0;
-  box-shadow: none; }
-  .list-row.activatable:hover {
-    background-color: rgba(255, 255, 255, 0.03); }
-  .list-row.activatable:active {
-    color: #D3DAE3; }
-  .list-row.activatable:selected:active {
-    color: #ffffff; }
-  .list-row.activatable:selected:hover {
-    background-color: #4a85cb; }
-  .list-row.activatable:selected:insensitive {
-    color: rgba(255, 255, 255, 0.7);
-    background-color: rgba(82, 148, 226, 0.7); }
-    .list-row.activatable:selected:insensitive .label {
-      color: inherit; }
+.list-row.activatable:hover {
+  background-color: rgba(255, 255, 255, 0.03); }
+
+.list-row.activatable:active {
+  color: #D3DAE3; }
+
+.list-row.activatable:selected:active {
+  color: #ffffff; }
+
+.list-row.activatable:selected:hover {
+  background-color: #4a85cb; }
+
+.list-row.activatable:selected:insensitive {
+  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(82, 148, 226, 0.7); }
+  .list-row.activatable:selected:insensitive .label {
+    color: inherit; }
 
 .list-row, list-row.activatable {
   transition: all 150ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
@@ -2610,7 +2604,8 @@ GtkVolumeButton.button {
 .view:selected:focus,
 .view:selected:hover, .label:selected,
 .label:selected:focus,
-.label:selected:hover, .grid-child:selected, .menuitem.button.flat:active, .menuitem.sidebar-button.button:active, .menuitem.button.flat:selected, .menuitem.sidebar-button.button:selected, .list-row:selected, .sidebar:selected, .sidebar .view:selected, GtkPlacesSidebar.sidebar .list-row.activatable:selected, GtkEntry.gb-command-bar-entry.entry.flat:selected,
+.label:selected:hover, .grid-child:selected, .entry:selected,
+.entry:selected:focus, .menuitem.button.flat:active, .menuitem.sidebar-button.button:active, .menuitem.button.flat:selected, .menuitem.sidebar-button.button:selected, .list-row:selected, .sidebar:selected, .sidebar .view:selected, GtkPlacesSidebar.sidebar .list-row.activatable:selected, GtkEntry.gb-command-bar-entry.entry.flat:selected,
 GtkEntry.gb-command-bar-entry.entry.flat:selected:focus,
 GtkFileChooserDialog GtkPlacesSidebar.sidebar .list-row.activatable:selected,
 GtkFileChooserDialog GtkPlacesSidebar.sidebar .list-row.activatable:selected:hover,
