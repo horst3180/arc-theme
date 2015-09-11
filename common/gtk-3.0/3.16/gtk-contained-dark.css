@@ -2442,11 +2442,11 @@ GtkVolumeButton.button {
 .window-frame {
   border-radius: 3px 3px 0 0;
   border-width: 0px;
-  box-shadow: 0 0 0 1px rgba(34, 38, 45, 0.97), 0 8px 8px 0 rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 0 1px rgba(32, 35, 43, 0.97), 0 8px 8px 0 rgba(0, 0, 0, 0.35);
   /* this is used for the resize cursor area */
   margin: 10px; }
   .window-frame:backdrop {
-    box-shadow: 0 0 0 1px rgba(34, 38, 45, 0.87), 0 5px 5px 0 rgba(0, 0, 0, 0.35); }
+    box-shadow: 0 0 0 1px rgba(32, 35, 43, 0.87), 0 5px 5px 0 rgba(0, 0, 0, 0.35); }
   .window-frame.tiled {
     border-radius: 0; }
   .window-frame.ssd {

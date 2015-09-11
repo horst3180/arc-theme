@@ -2624,14 +2624,14 @@ GtkVolumeButton.button { padding: 8px; }
   // see bug #722563
   $_wm_border: if($variant=='light', transparentize(black, 0.9), transparentize(black, 0.45));
 
-  box-shadow: 0 0 0 1px if($darker=='true' or $variant == 'dark', darken($header_bg, 6%), $_wm_border),
+  box-shadow: 0 0 0 1px if($darker=='true' or $variant == 'dark', darken($header_bg, 7%), $_wm_border),
               0 8px 8px 0 if($variant == 'light', opacify($_wm_border, 0.1), transparentize($_wm_border, 0.2));
 
   /* this is used for the resize cursor area */
   margin: 10px;
 
   &:backdrop {
-    box-shadow: 0 0 0 1px if($darker=='true' or $variant == 'dark', transparentize(darken($header_bg, 6%), 0.1), $_wm_border),
+    box-shadow: 0 0 0 1px if($darker=='true' or $variant == 'dark', transparentize(darken($header_bg, 7%), 0.1), $_wm_border),
                 0 5px 5px 0 if($variant == 'light', opacify($_wm_border, 0.1), transparentize($_wm_border, 0.2));
   }
   &.tiled {
