@@ -1246,11 +1246,16 @@ GtkComboBox {
 
 .primary-toolbar .spinbutton:focus .button, .header-bar .spinbutton:focus .button {
   color: #ffffff; }
+  .primary-toolbar .spinbutton:focus .button:hover, .header-bar .spinbutton:focus .button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: transparent; }
+  .primary-toolbar .spinbutton:focus .button:insensitive, .header-bar .spinbutton:focus .button:insensitive {
+    color: rgba(255, 255, 255, 0.4); }
 
 .primary-toolbar .spinbutton .button, .header-bar .spinbutton .button {
   color: rgba(82, 93, 118, 0.8); }
   .primary-toolbar .spinbutton .button:hover, .header-bar .spinbutton .button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(82, 93, 118, 0.05);
     border-color: transparent; }
   .primary-toolbar .spinbutton .button:insensitive, .header-bar .spinbutton .button:insensitive {
     color: rgba(82, 93, 118, 0.5); }
