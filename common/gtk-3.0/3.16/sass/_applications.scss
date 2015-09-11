@@ -57,9 +57,6 @@ SushiFontWidget {
 //
 // GNOME Terminal
 //
-$terminal_bg: #2A2F36;
-$terminal_fg: white;
-
 TerminalWindow {
   .background {
     background-color: transparent;
@@ -157,12 +154,34 @@ NemoWindow GtkSeparator.separator.horizontal {
 }
 
 NemoWindow .primary-toolbar NemoPathBar.linked > .button {
+  $_linked_separator_color: $header_button_border;
+
   @include button(header-hover);
 
-  &:hover { border-color: $selected_bg_color; }
+  &:hover { background-color: lighten($header_button_bg, 15%); }
   &:active, &:checked { @include button(header-active); }
+  &:insensitive { color: transparentize($header_fg, 0.4); }
 
   @extend %linked;
+
+  &:hover {
+    box-shadow: inset  1px 0 $_linked_separator_color,
+                inset -1px 0 $_linked_separator_color;
+  }
+  &:active, &:checked { box-shadow: none; }
+
+  &:first-child {
+    &:hover { box-shadow: inset -1px 0 $_linked_separator_color; }
+    &:active, &:checked { box-shadow: none; }
+  }
+  &:last-child {
+    &:hover { box-shadow: inset 1px 0 $_linked_separator_color; }
+    &:active, &:checked { box-shadow: none; }
+  }
+  &:only-child {
+    &:hover { box-shadow: none; }
+    &:active, &:checked { box-shadow: none; }
+  }
 }
 
 //
@@ -283,7 +302,7 @@ GbSearchBox.linked {
 
     @include entry(header-normal);
 
-    &:hover { @include entry(header-normal); border-color: $selected_bg_color; }
+    &:hover { @include entry(header-focus); }
     &:active, &:checked { @include entry(header-focus); }
     &:insensitive { @include entry(header-insensitive); }
   }
@@ -417,8 +436,14 @@ EphyWindow .floating-bar { // Epiphany overrides the floating-bar style, so rese
   margin: 2px;
   padding: 4px;
 
-  &:hover { background-color: lighten($selected_bg_color, 4%) }
-  &:active { background-color: darken($selected_bg_color, 4%) }
+  &:hover {
+    color: $selected_fg_color;
+    background-color: lighten($selected_bg_color, 4%);
+  }
+  &:active {
+    color: $selected_fg_color;
+    background-color: darken($selected_bg_color, 4%);
+  }
 
   .toolbar .linked &.button {
     background: none;
@@ -447,6 +472,14 @@ TotemGrilo.vertical GdMainView.frame {
 // Synapse
 //
 SynapseGuiViewDefault *:selected { background-color: $selected_bg_color; }
+
+//
+// Transmission
+//
+.tr-workarea .undershoot,
+.tr-workarea .overshoot {
+  border-color: transparent; // Remove black border on over- and undershoot
+}
 
 //
 // Fallback Mode/Budgie Panel

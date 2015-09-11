@@ -34,7 +34,7 @@
 /* the top half of the login-window, in GtkDialog terms, the content */
 #content_frame {
   padding-bottom: 14px;
-  background-color: if($variant == 'light', $bg_color, $base_color);
+  background-color: $bg_color;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
   border: solid transparentize(black, 0.9);
@@ -54,12 +54,12 @@
   padding-top: 20px;
   padding-bottom: 0px;
   border-style: none;
-  background-color: $osd_bg_color;
+  background-color: if($variant=='light', $osd_bg_color, $header_bg);
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
   border: solid transparentize(black, 0.9);
   border-width: 0 1px 1px 1px;
-  box-shadow: inset 0 1px darken($osd_bg_color, 10%);
+  box-shadow: inset 0 1px if($variant=="light", $dark_sidebar_border, $header_border);
 }
 
 #buttonbox_frame .button{

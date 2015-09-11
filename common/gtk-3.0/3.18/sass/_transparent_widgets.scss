@@ -263,7 +263,7 @@ GeditWindow.background.csd GeditFileBrowserView.view {
 %dark_sidebar_button {
   @include button(osd);
 
-  &:hover { @include button(osd-hover) }
+  &:hover { @include button(osd-hover); }
   &:active, &:checked { @include button(osd-active); }
   &:insensitive { @include button(osd-insensitive); }
 }
@@ -271,6 +271,6 @@ GeditWindow.background.csd GeditFileBrowserView.view {
 %dark_sidebar_entry {
   @include entry(osd);
 
-  &:focus { @include entry(osd-focus) }
+  &:focus { @include entry(osd-focus); }
   &:insensitive { @include entry(osd-insensitive); }
 }

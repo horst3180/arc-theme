@@ -52,17 +52,14 @@
     background-image: linear-gradient(to bottom, transparentize($entry_bg, 0.45));
   }
 
-  $_header_entry_bg: if($darker == 'true' or $variant == 'dark', transparentize(darken($header_bg, 4%), 0.1), transparentize($base_color, 0.1));
-  $_header_entry_border: if($darker == 'true' or $variant == 'dark', darken($header_bg, 10%), transparentize($header_fg, 0.7));
-
   @if $t==header-normal {
   //
   // normal header-bar entry
   //
 
     color: $header_fg;
-    border-color: $_header_entry_border;
-    background-image: linear-gradient(to bottom, $_header_entry_bg);
+    border-color: $header_entry_border;
+    background-image: linear-gradient(to bottom, $header_entry_bg);
     background-color: transparent;
 
     &.image, &.image:hover { color: inherit; }
@@ -73,7 +70,7 @@
   // focused header-bar entry
   //
     color: $selected_fg_color;
-    border-color: $selected_bg_color;
+    border-color: if($darker=='false' and $variant=='light', $selected_bg_color, transparent);
     background-image: linear-gradient(to bottom, $selected_bg_color);
   }
 
@@ -82,7 +79,7 @@
   // insensitive header-bar entry
   //
     color: transparentize($header_fg, 0.45);
-    background-image: linear-gradient(to bottom, transparentize($_header_entry_bg, 0.35));
+    background-image: linear-gradient(to bottom, transparentize($header_entry_bg, 0.15));
   }
 
   @else if $t==osd {
@@ -90,27 +87,28 @@
   // normal osd entry
   //
     color: $osd_fg_color;
-    border-color: transparentize(black, 0.6);
+    border-color: $osd_entry_border;
+    background-image: linear-gradient(to bottom, $osd_entry_bg);
     background-color: transparent;
-    background-image: linear-gradient(to bottom, transparentize(black, 0.8));
+
+    &.image, &.image:hover { color: inherit; }
   }
 
   @else if $t==osd-focus {
   //
   // active osd entry
   //
-    color: $osd_fg_color;
-    border-color: $selected_bg_color;
-    background-image: linear-gradient(to bottom, transparentize(black, 0.8));
+    color: $selected_fg_color;
+    border-color: if($darker=='false' and $variant=='light', $selected_bg_color, transparent);
+    background-image: linear-gradient(to bottom, $selected_bg_color);
   }
 
   @else if $t==osd-insensitive {
   //
   // insensitive osd entry
   //
-    color: $osd_insensitive_fg_color;
-    border-color: transparentize(black, 0.6);
-    background-image: linear-gradient(to bottom, transparentize(black, 0.9));
+    color: transparentize($osd_fg_color, 0.45);
+    background-image: linear-gradient(to bottom, transparentize($osd_entry_bg, 0.15));
   }
 }
 
@@ -139,8 +137,8 @@
   //
     color: $fg_color;
     outline-color: transparentize($fg_color, 0.7);
-    border-color: $selected_bg_color;
-    background-color: $button_bg;
+    border-color: $button_border;
+    background-color: lighten($button_bg, 5%);
   }
 
   @else if $t==active {
@@ -149,7 +147,8 @@
   //
     color: $selected_fg_color;
     outline-color: transparentize($selected_fg_color, 0.7);
-    border-color: $selected_bg_color;
+
+    border-color: if($darker=='false' and $variant=='light', $selected_bg_color, transparent);
     background-color: $selected_bg_color;
   }
 
@@ -177,9 +176,6 @@
     > GtkLabel { color: inherit; }
   }
 
-  $_header_button_bg: if($darker == 'true' or $variant == 'dark', transparentize(darken($header_bg, 3%), 0.1), transparentize($button_bg, 0.1));
-  $_header_button_border: if($darker == 'true' or $variant == 'dark', darken($header_bg, 8%), transparentize($header_fg, 0.7));
-
   @if $t==header-normal {
   //
   // normal header-bar button
@@ -197,8 +193,8 @@
   //
     color: $header_fg;
     outline-color: transparentize($header_fg, 0.7);
-    border-color: $_header_button_border;
-    background-color: $_header_button_bg;
+    border-color: $header_button_border;
+    background-color: $header_button_bg;
   }
 
   @else if $t==header-active {
@@ -207,7 +203,7 @@
   //
     color: $selected_fg_color;
     outline-color: transparentize($selected_fg_color, 0.7);
-    border-color: $selected_bg_color;
+    border-color: if($darker=='false' and $variant=='light', $selected_bg_color, transparent);
     background-color: $selected_bg_color;
   }
 
@@ -237,8 +233,8 @@
   //
     color: $osd_fg_color;
     outline-color: transparentize($osd_fg_color, 0.7);
-    border-color: transparentize(black, 0.55);
-    background-color: transparentize(black, 0.7);
+    border-color: $osd_button_border;
+    background-color: $osd_button_bg;
   }
 
   @else if $t==osd-hover {
@@ -247,8 +243,8 @@
   //
     color: $osd_fg_color;
     outline-color: transparentize($osd_fg_color, 0.7);
-    border-color: $selected_bg_color;
-    background-color: transparentize(black, 0.7);
+    border-color: $osd_button_border;
+    background-color: opacify(lighten($osd_button_bg, 7%), 0.1);
   }
 
   @else if $t==osd-active {
@@ -266,8 +262,8 @@
   // insensitive osd button
   //
     color: $osd_insensitive_fg_color;
-    border-color: transparentize(black, 0.55);
-    background-color: transparentize(black, 0.85);
+    border-color: $osd_button_border;
+    background-color: transparentize($osd_button_bg, 0.15);
   }
 
   @else if $t==suggested_destructive {

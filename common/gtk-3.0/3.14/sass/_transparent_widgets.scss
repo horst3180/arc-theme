@@ -21,6 +21,8 @@ NemoWindow {
 }
 
 // Dark transparent sidebars
+NautilusWindow GtkBox.sidebar { background-color: transparent; }
+
 GtkFileChooserDialog,
 NautilusWindow,
 NemoWindow,
@@ -29,9 +31,7 @@ MarlinViewWindow {
   &.csd.background,
   .source-list, .source-list.view, .source-list.view:prelight { background-color: transparent; }
 
-  GtkBox.sidebar { background-color: transparent; }
-
-  .sidebar, MarlinPlacesSidebar, NemoPlacesSidebar {
+  .sidebar, MarlinPlacesSidebar {
     background-color: $dark_sidebar_bg;
 
     .view, .source-list.sidebar row {
@@ -100,7 +100,7 @@ GtkFileChooserDialog {
   }
   .action-bar.frame {
     background-color: transparent;
-    border-color: if($variant =='light', darken($dark_sidebar_bg, 7%), darken($dark_sidebar_bg, 15%));
+    border-color: if($variant =='light', darken($dark_sidebar_bg, 5%), darken($dark_sidebar_bg, 10%));
   }
 
   .action-bar.frame,
@@ -224,7 +224,7 @@ GeditWindow.background.csd GeditFileBrowserView.view {
 %dark_sidebar_button {
   @include button(osd);
 
-  &:hover { @include button(osd-hover) }
+  &:hover { @include button(osd-hover); }
   &:active, &:checked { @include button(osd-active); }
   &:insensitive { @include button(osd-insensitive); }
 }
@@ -232,6 +232,6 @@ GeditWindow.background.csd GeditFileBrowserView.view {
 %dark_sidebar_entry {
   @include entry(osd);
 
-  &:focus { @include entry(osd-focus) }
+  &:focus { @include entry(osd-focus); }
   &:insensitive { @include entry(osd-insensitive); }
 }

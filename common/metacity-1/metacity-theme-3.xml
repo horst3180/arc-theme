@@ -21,29 +21,22 @@
 <!-- window button colors -->
 
 <!-- close -->
-<constant name="C_button_close_bg_focused" value="gtk:custom(wm_button_close_bg,#eeeff1)" />
-<constant name="C_button_close_bg_hover" value="gtk:custom(wm_button_close_hover_bg,#eeeff1)" />
-<constant name="C_button_close_bg_active" value="gtk:custom(wm_button_close_active_bg,#eeeff1)" />
+<constant name="C_button_close_bg_focused" value="gtk:custom(wm_button_close_bg,#f46067)" />
+<constant name="C_button_close_bg_hover" value="gtk:custom(wm_button_close_hover_bg,#f68086)" />
+<constant name="C_button_close_bg_active" value="gtk:custom(wm_button_close_active_bg,#f13039)" />
 
-<constant name="C_icon_close_bg_focused" value="gtk:custom(wm_icon_close_bg,#eeeff1)" />
-<constant name="C_icon_close_bg_hover" value="gtk:custom(wm_icon_close_hover_bg,#eeeff1)" />
-<constant name="C_icon_close_bg_active" value="gtk:custom(wm_icon_close_active_bg,#eeeff1)" />
+<constant name="C_icon_close_bg" value="gtk:custom(wm_icon_close_bg,#F8F8F9)" />
 
 <!-- minimize, maximize -->
-<constant name="C_button_bg_focused" value="gtk:custom(wm_button_bg,#eeeff1)" />
-<constant name="C_button_bg_unfocused" value="gtk:custom(wm_button_unfocused_bg,#eeeff1)" />
-<constant name="C_button_bg_hover" value="gtk:custom(wm_button_hover_bg,#eeeff1)" />
-<constant name="C_button_bg_active" value="gtk:custom(wm_button_active_bg,#eeeff1)" />
+<constant name="C_button_bg_hover" value="gtk:custom(wm_button_hover_bg,#fdfdfd)" />
+<constant name="C_button_bg_active" value="gtk:custom(wm_button_active_bg,#5294E2)" />
 
-<constant name="C_button_border_focused" value="gtk:custom(wm_button_border,#eeeff1)" />
-<constant name="C_button_border_unfocused" value="gtk:custom(wm_button_unfocused_border,#eeeff1)" />
-<constant name="C_button_border_hover" value="gtk:custom(wm_button_hover_border,#eeeff1)" />
-<constant name="C_button_border_active" value="gtk:custom(wm_button_active_border,#eeeff1)" />
+<constant name="C_button_border_hover" value="gtk:custom(wm_button_hover_border,#D1D3DA)" />
 
-<constant name="C_icon_bg_focused" value="gtk:custom(wm_icon_bg,#eeeff1)" />
-<constant name="C_icon_bg_unfocused" value="gtk:custom(wm_icon_unfocused_bg,#eeeff1)" />
-<constant name="C_icon_bg_hover" value="gtk:custom(wm_icon_hover_bg,#eeeff1)" />
-<constant name="C_icon_bg_active" value="gtk:custom(wm_icon_active_bg,#eeeff1)" />
+<constant name="C_icon_bg_focused" value="gtk:custom(wm_icon_bg,#90949E)" />
+<constant name="C_icon_bg_unfocused" value="gtk:custom(wm_icon_unfocused_bg,#B6B8C0)" />
+<constant name="C_icon_bg_hover" value="gtk:custom(wm_icon_hover_bg,#7A7F8B)" />
+<constant name="C_icon_bg_active" value="gtk:custom(wm_icon_active_bg,#ffffff)" />
 
 <!-- geometries -->
 
@@ -196,39 +189,36 @@
 <!--close-->
 <draw_ops name="close_focused">
 	<image filename="button-bg.svg" colorize="C_button_close_bg_focused" x="width/2-8" y="height/2-8" width="16" height="16"/>
-	<image filename="close-icon.svg" colorize="C_icon_close_bg_focused" x="width/2-8" y="height/2-8" width="16" height="16"/>
+	<image filename="close-icon.svg" colorize="C_icon_close_bg" x="width/2-8" y="height/2-8" width="16" height="16"/>
 </draw_ops>
 
 <draw_ops name="close_focused_pressed">
 	<image filename="button-bg.svg" colorize="C_button_close_bg_active" x="width/2-8" y="height/2-8" width="16" height="16"/>
-	<image filename="close-icon.svg" colorize="C_icon_close_bg_active" x="width/2-8" y="height/2-8" width="16" height="16"/>
+	<image filename="close-icon.svg" colorize="C_icon_close_bg" x="width/2-8" y="height/2-8" width="16" height="16"/>
 </draw_ops>
 
 <draw_ops name="close_focused_prelight">
 	<image filename="button-bg.svg" colorize="C_button_close_bg_hover" x="width/2-8" y="height/2-8" width="16" height="16"/>
-	<image filename="close-icon.svg" colorize="C_icon_close_bg_hover" x="width/2-8" y="height/2-8" width="16" height="16"/>
+	<image filename="close-icon.svg" colorize="C_icon_close_bg" x="width/2-8" y="height/2-8" width="16" height="16"/>
 </draw_ops>
 
 <draw_ops name="close_unfocused">
-	<image filename="button-bg.svg" colorize="C_button_bg_unfocused" x="width/2-8" y="height/2-8" width="16" height="16"/>
-	<image filename="button-border.svg" colorize="C_button_border_unfocused" x="width/2-8" y="height/2-8" width="16" height="16"/>
-	<image filename="close-icon.svg" colorize="C_icon_bg_unfocused" x="width/2-8" y="height/2-8" width="16" height="16"/>
+	<image filename="button-bg.svg" colorize="C_icon_bg_unfocused" x="width/2-8" y="height/2-8" width="16" height="16"/>
+	<image filename="close-icon.svg" colorize="C_icon_close_bg" x="width/2-8" y="height/2-8" width="16" height="16"/>
 </draw_ops>
 
 <draw_ops name="close_unfocused_prelight">
 	<image filename="button-bg.svg" colorize="C_button_close_bg_hover" x="width/2-8" y="height/2-8" width="16" height="16"/>
-	<image filename="close-icon.svg" colorize="C_icon_close_bg_hover" x="width/2-8" y="height/2-8" width="16" height="16"/>
+	<image filename="close-icon.svg" colorize="C_icon_close_bg" x="width/2-8" y="height/2-8" width="16" height="16"/>
 </draw_ops>
 
 <draw_ops name="close_unfocused_pressed">
-	<image filename="button-bg.svg" colorize="C_button_close_bg_focused" x="width/2-8" y="height/2-8" width="16" height="16"/>
-	<image filename="close-icon.svg" colorize="C_icon_close_bg_focused" x="width/2-8" y="height/2-8" width="16" height="16"/>
+	<image filename="button-bg.svg" colorize="C_button_close_bg_active" x="width/2-8" y="height/2-8" width="16" height="16"/>
+	<image filename="close-icon.svg" colorize="C_icon_close_bg" x="width/2-8" y="height/2-8" width="16" height="16"/>
 </draw_ops>
 
 <!--maximize-->
 <draw_ops name="maximize_focused">
-	<image filename="button-bg.svg" colorize="C_button_bg_focused" x="width/2-8" y="height/2-8" width="16" height="16"/>
-	<image filename="button-border.svg" colorize="C_button_border_focused" x="width/2-8" y="height/2-8" width="16" height="16"/>
 	<image filename="max-icon.svg" colorize="C_icon_bg_focused" x="width/2-8" y="height/2-8" width="16" height="16"/>
 </draw_ops>
 
@@ -244,8 +234,6 @@
 </draw_ops>
 
 <draw_ops name="maximize_unfocused">
-	<image filename="button-bg.svg" colorize="C_button_bg_unfocused" x="width/2-8" y="height/2-8" width="16" height="16"/>
-	<image filename="button-border.svg" colorize="C_button_border_unfocused" x="width/2-8" y="height/2-8" width="16" height="16"/>
 	<image filename="max-icon.svg" colorize="C_icon_bg_unfocused" x="width/2-8" y="height/2-8" width="16" height="16"/>
 </draw_ops>
 
@@ -262,8 +250,6 @@
 
 <!--minimize-->
 <draw_ops name="minimize_focused">
-	<image filename="button-bg.svg" colorize="C_button_bg_focused" x="width/2-8" y="height/2-8" width="16" height="16"/>
-	<image filename="button-border.svg" colorize="C_button_border_focused" x="width/2-8" y="height/2-8" width="16" height="16"/>
 	<image filename="min-icon.svg" colorize="C_icon_bg_focused" x="width/2-8" y="height/2-8" width="16" height="16"/>
 </draw_ops>
 
@@ -279,8 +265,6 @@
 </draw_ops>
 
 <draw_ops name="minimize_unfocused">
-	<image filename="button-bg.svg" colorize="C_button_bg_unfocused" x="width/2-8" y="height/2-8" width="16" height="16"/>
-	<image filename="button-border.svg" colorize="C_button_border_unfocused" x="width/2-8" y="height/2-8" width="16" height="16"/>
 	<image filename="min-icon.svg" colorize="C_icon_bg_unfocused" x="width/2-8" y="height/2-8" width="16" height="16"/>
 </draw_ops>
 

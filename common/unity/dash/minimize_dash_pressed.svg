@@ -81,9 +81,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.313709"
-     inkscape:cx="-6.9400422"
-     inkscape:cy="16.493795"
+     inkscape:zoom="32.000001"
+     inkscape:cx="10.337718"
+     inkscape:cy="9.0639316"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -111,6 +111,10 @@
        orientation="1,0"
        position="12,12"
        id="guide4316" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="12,12"
+       id="guide4318" />
   </sodipodi:namedview>
   <metadata
      id="metadata4311">
@@ -131,19 +135,19 @@
      transform="translate(0,-1028.3622)">
     <g
        style="display:inline"
-       id="titlebutton-min-active"
+       id="titlebutton-min-active-dark"
        inkscape:label="#g6414"
-       transform="translate(-379,1218)">
+       transform="translate(-379.00001,1218)">
       <g
-         id="g4909-1"
+         id="g4909-1-2-0"
          style="display:inline;opacity:1"
          transform="translate(-882,-432.63782)">
         <g
            transform="translate(-161,0)"
            style="display:inline;opacity:1"
-           id="g4490-3-6-1-4">
+           id="g4490-3-6-1-4-1-6">
           <g
-             id="g4092-0-7-2-0-0"
+             id="g4092-0-7-2-0-0-94-2"
              style="display:inline"
              transform="translate(58,0)">
             <circle
@@ -151,62 +155,62 @@
                cy="255"
                cx="1376"
                style="fill:#5294e2;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-               id="path4068-7-3-0-3-6" />
+               id="path4068-7-3-0-3-6-8-3" />
           </g>
         </g>
         <g
            style="display:inline;opacity:1;fill:#c0e3ff;fill-opacity:1"
-           id="g4834-9-3"
+           id="g4834-9-3-8-5"
            transform="translate(1265,247)">
           <g
              transform="translate(-81.0002,-967)"
              style="display:inline;fill:#c0e3ff;fill-opacity:1"
              inkscape:label="status"
-             id="layer9-3-9-1" />
+             id="layer9-3-9-1-0-4" />
           <g
              transform="translate(-81.0002,-967)"
              inkscape:label="devices"
-             id="layer10-4-0-5"
+             id="layer10-4-0-5-8-5"
              style="fill:#c0e3ff;fill-opacity:1" />
           <g
              transform="translate(-81.0002,-967)"
              inkscape:label="apps"
-             id="layer11-2-5-2"
+             id="layer11-2-5-2-6-8"
              style="fill:#c0e3ff;fill-opacity:1" />
           <g
              transform="translate(-81.0002,-967)"
              inkscape:label="places"
-             id="layer13-5-7-4"
+             id="layer13-5-7-4-2-5"
              style="fill:#c0e3ff;fill-opacity:1" />
           <g
              transform="translate(-81.0002,-967)"
              inkscape:label="mimetypes"
-             id="layer14-6-2-3"
+             id="layer14-6-2-3-2-9"
              style="fill:#c0e3ff;fill-opacity:1" />
           <g
              transform="translate(-81.0002,-967)"
              style="display:inline;fill:#c0e3ff;fill-opacity:1"
              inkscape:label="emblems"
-             id="layer15-52-0-6" />
+             id="layer15-52-0-6-6-6" />
           <g
              transform="translate(-81.0002,-967)"
              style="display:inline;fill:#c0e3ff;fill-opacity:1"
              inkscape:label="emotes"
-             id="g71291-3-4-6" />
+             id="g71291-3-4-6-0-6" />
           <g
              transform="translate(-81.0002,-967)"
              style="display:inline;fill:#c0e3ff;fill-opacity:1"
              inkscape:label="categories"
-             id="g4953-8-6-8" />
+             id="g4953-8-6-8-7-4" />
           <g
              transform="translate(-81.0002,-967)"
              style="display:inline;fill:#c0e3ff;fill-opacity:1"
              inkscape:label="actions"
-             id="layer12-45-3-7">
+             id="layer12-45-3-7-96-7">
             <path
                sodipodi:nodetypes="ccccc"
                style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:Sans;-inkscape-font-specification:Sans;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:start;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2;marker:none;enable-background:accumulate"
-               id="rect9057-3-5"
+               id="rect9057-3-5-1-1"
                d="m 86.0002,974 0,2 6,0 0,-2 z"
                inkscape:connector-curvature="0" />
           </g>
@@ -214,7 +218,7 @@
       </g>
       <rect
          style="display:inline;opacity:1;fill:none;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0"
-         id="rect17883-79-9"
+         id="rect17883-79-9-2-2"
          width="16"
          height="16"
          x="383"

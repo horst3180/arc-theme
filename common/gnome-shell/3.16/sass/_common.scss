@@ -587,7 +587,7 @@ StScrollBar {
   margin: 10px 0px;
   background-color: transparent;
   border: none;
-	border-image: url("common-assets/menu-separator.svg") 1 1 1 1;
+	border-image: url("common-assets/menu/menu-separator.svg") 1 1 1 1;
 }
 
 // Background menu
@@ -1292,7 +1292,10 @@ StScrollBar {
 //
 // Overview
 //
-#overview { spacing: 24px; }
+#overview {
+  spacing: 24px;
+  background: lighten(opacify($dark_sidebar_bg, 1), 3%);
+}
 
 .overview-controls { padding-bottom: 32px; }
 
@@ -1555,22 +1558,19 @@ StScrollBar {
 .app-view-control {
   padding: 4px 32px;
 
-  background-color: $osd_bg_color;
-  color: $osd_fg_color;
-  border-color: rgba(0,0,0,0.7);
+  @include button(osd);
 
-  &:hover {
-    background-color: $osd_bg_color;
-    color: $osd_fg_color;
-    border-color: $selected_bg_color;
+  &:hover { @include button(osd-hover); }
+  &:checked {
+    color: $selected_fg_color;
+    background-color: $selected_bg_color;
   }
-  &:checked { @include button(osd-active); }
 
   &:first-child:ltr,
-  &:last-child:rtl { border-radius: 2px 0 0 2px; }
+  &:last-child:rtl { border-radius: 2px 0 0 2px; border-right-width: 0; }
 
   &:last-child:ltr,
-  &:first-child:rtl { border-radius: 0 2px 2px 0; }
+  &:first-child:rtl { border-radius: 0 2px 2px 0; border-left-width: 0;}
 }
 
 //
@@ -1633,12 +1633,12 @@ StScrollBar {
 .app-well-app.app-folder {
 
   > .overview-icon {
-    background-color: transparentize(darken($panel_bg,10%), 0.15);
-    border: 1px solid transparentize($osd_fg_color, 0.7);
+    background-color: darken($dark_sidebar_bg, 3%);
+    border: 1px solid darken($dark_sidebar_bg, 7%);
   }
 
   &:hover > .overview-icon {
-    background-color: lighten($panel_bg, 10%);
+    background-color: lighten($dark_sidebar_bg, 8%);
   }
 
   &:active > .overview-icon, &:checked > .overview-icon {
@@ -1653,12 +1653,12 @@ StScrollBar {
 
 .app-folder-popup { //expanded collection
   -arrow-border-radius: 2px;
-  -arrow-background-color: transparent;
-  -arrow-border-color: transparent;
-  -arrow-border-width: 0;
-  -arrow-base: 0;
-  -arrow-rise: 0;
-  border-image: url("common-assets/misc/bg.svg") 9 9 9 9;
+  -arrow-background-color: darken($dark_sidebar_bg, 3%);
+  -arrow-border-color: darken($dark_sidebar_bg, 7%);
+  -arrow-border-width: 1px;
+  -arrow-base: 5;
+  -arrow-rise: 5;
+
 }
 .app-folder-popup-bin { padding: 5px; }
 .app-folder-icon {
@@ -1880,7 +1880,7 @@ $legacy_icon_size: 24px;
   background-color: $osd_bg_color;
   border-width: 0;
   border-top-width: 1px;
-  border-color: transparentize(black, 0.6);
+  border-color: transparentize(black, 0.8);
 }
 
 .keyboard-layout {

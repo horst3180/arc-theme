@@ -81,9 +81,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.313709"
-     inkscape:cx="9.1889683"
-     inkscape:cy="9.2440344"
+     inkscape:zoom="22.627418"
+     inkscape:cx="4.6255954"
+     inkscape:cy="10.407616"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -136,20 +136,8 @@
     <g
        id="titlebutton-max-backdrop-dark"
        inkscape:label="#g6521"
-       style="display:inline;opacity:0.7"
+       style="display:inline;opacity:0.4"
        transform="translate(-612.00002,1201)">
-      <ellipse
-         cy="-160.63782"
-         cx="624"
-         style="display:inline;opacity:0.9;fill:#262a30;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         id="path4068-7-5-9-6-7-2-84-0-6"
-         rx="6"
-         ry="6.0000005" />
-      <path
-         style="display:inline;opacity:0.95;fill:#181b1f;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         d="m 624,-167.63782 a 7,7 0 0 0 -7,7 7,7 0 0 0 7,7 7,7 0 0 0 7,-7 7,7 0 0 0 -7,-7 z m 0,1 a 6,6 0 0 1 6,6 6,6 0 0 1 -6,6 6,6 0 0 1 -6,-6 6,6 0 0 1 6,-6 z"
-         id="path4068-7-5-9-6-7-2-5-7-6-7"
-         inkscape:connector-curvature="0" />
       <g
          style="display:inline;opacity:1"
          id="g7146-1-1-6"
@@ -165,7 +153,7 @@
         </g>
         <path
            id="path4293-5-6-4"
-           style="display:inline;opacity:0.65;fill:#afb8c5;fill-opacity:1;fill-rule:evenodd;stroke:none"
+           style="display:inline;opacity:1;fill:#b9bcc2;fill-opacity:1;fill-rule:evenodd;stroke:none"
            d="m 1403.7995,252 3.3818,0 c 0.4503,0 0.8162,0.36847 0.8187,0.8188 l 0,3.3817 z m 2.4074,6.00692 -3.395,0 c -0.4504,0 -0.8188,-0.36842 -0.8188,-0.81875 l 0,-3.39509 4.2138,4.21384"
            inkscape:connector-curvature="0"
            sodipodi:nodetypes="csscccsscc" />

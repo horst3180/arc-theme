@@ -18,7 +18,7 @@
    sodipodi:docname="max-icon.svg"><metadata
      id="metadata26"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
      id="defs24" /><sodipodi:namedview
      pagecolor="#d7d7d7"
      bordercolor="#666666"
@@ -33,7 +33,7 @@
      id="namedview22"
      showgrid="true"
      inkscape:zoom="16"
-     inkscape:cx="-0.5727173"
+     inkscape:cx="-11.666467"
      inkscape:cy="2.449103"
      inkscape:window-x="0"
      inkscape:window-y="27"
@@ -63,7 +63,7 @@
            style="display:inline"
            transform="translate(58,0)" /></g><path
          id="path4293-5-95"
-         style="display:inline;opacity:1;fill:#7d7d7d;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         style="display:inline;opacity:1;fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:none"
          d="m 1403.7995,252 3.3818,0 c 0.4503,0 0.8162,0.36847 0.8187,0.8188 l 0,3.3817 z m 2.4074,6.00692 -3.395,0 c -0.4504,0 -0.8188,-0.36842 -0.8188,-0.81875 l 0,-3.39509 4.2138,4.21384"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="csscccsscc" /></g><rect

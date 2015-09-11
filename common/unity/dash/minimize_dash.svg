@@ -81,9 +81,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.313709"
-     inkscape:cx="16.659646"
-     inkscape:cy="8.8482037"
+     inkscape:zoom="32.000001"
+     inkscape:cx="10.337718"
+     inkscape:cy="9.0639316"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -134,39 +134,37 @@
      id="layer1"
      transform="translate(0,-1028.3622)">
     <g
-       transform="translate(-1364,784.3622)"
-       style="display:inline;opacity:1"
-       id="titlebutton-min"
-       inkscape:label="#g7138">
+       style="display:inline;opacity:0.7"
+       id="titlebutton-min-dark"
+       inkscape:label="#g6247"
+       transform="translate(-583.00002,1218)">
       <g
-         id="g4490-3"
+         id="g7138-6-5"
          style="display:inline;opacity:1"
-         transform="translate(-58,0)">
+         transform="translate(-781,-432.63782)">
         <g
-           transform="translate(58,0)"
-           style="display:inline"
-           id="g4092-0-7">
-          <circle
-             id="path4068-7-3"
-             style="opacity:0.95;fill:#292e36;fill-opacity:1;stroke:#5a6a7d;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-             cx="1376"
-             cy="256.00003"
-             r="7" />
+           transform="translate(-58,0)"
+           style="display:inline;opacity:1"
+           id="g4490-3-75-4-7">
+          <g
+             id="g4092-0-7-0-4-9"
+             style="display:inline"
+             transform="translate(58,0)" />
         </g>
+        <path
+           inkscape:connector-curvature="0"
+           d="m 1373,254 0,2 6,0 0,-2 z"
+           id="rect9057-4-3-8-5"
+           style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:Sans;-inkscape-font-specification:Sans;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:start;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#b9bcc2;fill-opacity:1;stroke:none;stroke-width:2;marker:none;enable-background:accumulate"
+           sodipodi:nodetypes="ccccc" />
       </g>
-      <path
-         sodipodi:nodetypes="ccccc"
-         style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:Sans;-inkscape-font-specification:Sans;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:start;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#edf5fb;fill-opacity:1;stroke:none;stroke-width:2;marker:none;enable-background:accumulate"
-         id="rect9057-4"
-         d="m 1373,255.00002 0,2 6,0 0,-2 z"
-         inkscape:connector-curvature="0" />
       <rect
-         style="display:inline;opacity:1;fill:none;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0"
-         id="rect17883-18"
-         width="16"
+         y="-185.63782"
+         x="587"
          height="16"
-         x="1368"
-         y="248" />
+         width="16"
+         id="rect17883-32-6-9"
+         style="display:inline;opacity:1;fill:none;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0" />
     </g>
   </g>
 </svg>

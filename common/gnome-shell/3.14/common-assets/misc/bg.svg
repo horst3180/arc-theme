@@ -15,7 +15,7 @@
    id="svg5386"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="notification.svg">
+   sodipodi:docname="bg.svg">
   <defs
      id="defs5388" />
   <sodipodi:namedview
@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="14.604606"
-     inkscape:cy="20.53994"
+     inkscape:zoom="11.313708"
+     inkscape:cx="18.271674"
+     inkscape:cy="5.838404"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -58,7 +58,7 @@
      id="layer1"
      transform="translate(0,-1020.3622)">
     <rect
-       style="display:inline;opacity:0.72;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="display:inline;opacity:0.81;fill:none;fill-opacity:1;stroke:#161a26;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4164-4-3"
        width="23"
        height="21.999889"
@@ -67,7 +67,7 @@
        rx="2.0000005"
        ry="1.9999999" />
     <rect
-       style="display:inline;opacity:0.95;fill:#3c4049;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="display:inline;opacity:0.95;fill:#353945;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4164"
        width="22"
        height="20.999971"
@@ -78,7 +78,7 @@
     <g
        transform="translate(-425.99995,658.36226)"
        id="g4271"
-       style="display:inline;opacity:0.75">
+       style="display:inline;opacity:0.65">
       <rect
          ry="8"
          rx="8"
