@@ -398,7 +398,8 @@ $_dot_color: $selected_bg_color;
 
   &.flat { 
     @include button(undecorated);
-    background-color: transparentize($bg_color, 1);
+    background-color: transparentize($button_bg, 1);
+    border-color: transparentize($button_border, 1);
     // to avoid adiacent buttons borders clashing when transitioning, the transition on the normal state is set
     // to none, while it's added back in the hover state, so the button decoration will fade in on hover, but
     // it won't fade out when the pointer leave the button allocation area. To make the transition more evident
