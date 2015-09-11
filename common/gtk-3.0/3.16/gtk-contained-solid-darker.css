@@ -328,20 +328,14 @@ GtkSearchEntry.entry {
       .button:insensitive:active > GtkLabel, .button:insensitive:checked > GtkLabel {
         color: inherit; }
   .button.osd {
-    outline-color: rgba(186, 195, 207, 0.3);
     color: #BAC3CF;
     outline-color: rgba(186, 195, 207, 0.3);
-    border-color: rgba(26, 28, 34, 0.4);
-    background-color: rgba(102, 109, 132, 0.4);
-    background-color: #353945; }
+    background-color: #353945;
+    border-color: #23262e; }
     .button.osd.image-button {
       padding: 10px; }
     .button.osd:hover {
-      color: #BAC3CF;
-      outline-color: rgba(186, 195, 207, 0.3);
-      border-color: rgba(26, 28, 34, 0.4);
-      background-color: rgba(119, 127, 151, 0.5);
-      background-color: #353945; }
+      color: #5294E2; }
     .button.osd:active, .button.osd:checked {
       color: #ffffff;
       outline-color: rgba(255, 255, 255, 0.3);
