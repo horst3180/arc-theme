@@ -932,12 +932,12 @@ GtkComboBox {
     &:dir(ltr) {
       border-right-style: none;
 
-      &:focus { box-shadow: 1px 0 $selected_bg_color; }
+      @if $variant=='light' { &:focus { box-shadow: 1px 0 $selected_bg_color; } }
     }
     &:dir(rtl) {
       border-left-style: none;
 
-      &:focus { box-shadow: -1px 0 $selected_bg_color; }
+      @if $variant=='light' { &:focus { box-shadow: -1px 0 $selected_bg_color; } }
     }
   }
 

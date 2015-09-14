@@ -240,7 +240,8 @@ GtkTextView { // This will get overridden by .view, needed by gedit line numbers
 
   &:selected,
   &:selected:focus {
-    @extend %selected_items;
+    background-color: $selected_bg_color;
+    color: $selected_fg_color;
   }
 
   &.progressbar {
@@ -252,20 +253,6 @@ GtkTextView { // This will get overridden by .view, needed by gedit line numbers
     background-image: none;
     background-color: transparent;
     box-shadow: none;
-  }
-
-  .linked > & { //FIXME: use same buttons linking logic and template
-    &:first-child {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-      &:dir(rtl) { border-right-style: none;}
-    }
-    &:last-child {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-      border-left-style: none;
-      &:dir(rtl) { border-left-style: solid; }
-    }
   }
 
   &.error {
@@ -300,52 +287,6 @@ GtkTextView { // This will get overridden by .view, needed by gedit line numbers
     color: mix($fg_color,$base_color,80%);
     &:hover { color: $fg_color; }
     &:active { color: $selected_bg_color; }
-  }
-
-  .linked.vertical > & { //FIXME comment stuff and make the whole thing smarter.
-    border-bottom-color: mix($borders_color, $base_color, 30%);
-    box-shadow: none;
-    @extend %linked_vertical;
-
-    &:focus {
-      border-color: $selected_bg_color;
-      box-shadow: 0 -1px 0 0 $selected_bg_color;
-      @extend %linked_vertical;
-    }
-
-    &:insensitive {
-      border-bottom-color: mix($borders_color, $base_color, 30%);
-      @extend %linked_vertical;
-    }
-
-    &:first-child {
-      border-bottom-color: mix($borders_color, $base_color, 30%);
-
-      &:focus {
-        border-bottom-color: $selected_bg_color;
-        box-shadow: none;
-      }
-
-      &:insensitive {
-        border-bottom-color: mix($borders_color, $base_color, 30%);
-        @extend %linked_vertical:first-child;
-      }
-    }
-
-    &:last-child {
-      border-bottom-color: rgba(0,0,0,0.14);
-      &:focus {
-        border-bottom-color: $selected_bg_color;
-        box-shadow: 0 -1px 0 0 $selected_bg_color;
-        @extend %linked_vertical:last-child;
-      }
-
-      &:insensitive {
-        border-bottom-color: rgba(0,0,0,0.14);
-        @extend %linked_vertical:last-child;
-
-      }
-    }
   }
 
   .osd & {
@@ -616,15 +557,21 @@ $_dot_color: $selected_bg_color;
     @extend %linked;
   }
 
-  .linked > &,
-  .linked > &:hover,
-  .linked > &:active,
-  .linked > &:checked { @extend %linked; }
+  .linked:not(.vertical) > &,
+  .linked:not(.vertical) > &:hover,
+  .linked:not(.vertical) > &:active,
+  .linked:not(.vertical) > &:checked {
+    @extend %linked;
+    @extend %linked_button;
+  }
 
   .linked.vertical > &,
   .linked.vertical > &:hover,
   .linked.vertical > &:active,
-  .linked.vertical > &:checked { @extend %linked_vertical; }
+  .linked.vertical > &:checked {
+    @extend %linked_vertical;
+    @extend %linked_vertical_button;
+  }
 }
 
 // all the following is for the +|- buttons on inline toolbars, that way
@@ -643,97 +590,135 @@ $_dot_color: $selected_bg_color;
 // More inline toolbar buttons
 .inline-toolbar.toolbar GtkToolButton {
   & > .button.flat { @extend %linked_middle; }
-  &:dir(rtl) > .button.flat { @extend %linked_middle:dir(rtl); }
   &:first-child > .button.flat { @extend %linked:first-child; }
   &:last-child > .button.flat { @extend %linked:last-child; }
-  &:last-child:dir(rtl) > .button.flat { @extend %linked:last-child:dir(rtl); }
   &:only-child > .button.flat { @extend %linked:only-child; }
 }
 
+// Some crazy linking stuff
+
+// horizontal
+.linked:not(.vertical):not(.pathbar) {
+  > .entry { @extend %linked; }
+
+  > .entry + .entry { border-left-color: transparentize($entry_border, 0.7); }
+  > .entry + .entry:focus:not(:last-child),
+  > .entry + .entry:focus:last-child { border-left-color: if($variant=='light', $selected_bg_color, $entry_border); }
+
+  > .entry + .button,
+  > .entry + .button:hover,
+  > .entry + .button:active,
+  > .entry + .button:checked,
+  > .entry + .button:insensitive { border-left-style: solid; }
+
+  > .entry:focus:not(:only-child) + .entry,
+  > .entry:focus:not(:only-child) + .button,
+  > .entry:focus:not(:only-child) + GtkComboBox > .the-button-in-the-combobox,
+  > .entry:focus:not(:only-child) + GtkComboBoxText > .the-button-in-the-combobox { border-left-color:  if($variant=='light', $selected_bg_color, $entry_border); }
+
+  > .button:hover:not(:checked):not(:active):not(:only-child),
+  > .button:hover:not(:checked):not(:active) + .button:not(:checked):not(:active) { box-shadow: -1px 0 $button_border; }
+  > .button:first-child:hover:not(:checked):not(:active) { box-shadow: none; }
+  > .button:checked + .button:not(:checked):not(:active):hover { box-shadow: none; }
+  > .button:checked + .entry { border-left-color: if($variant=='light', $selected_bg_color, $entry_border); }
+  > .entry + .button:not(:checked):not(:active):hover { box-shadow: none; }
+}
+
+// special case for path-bars
+.linked:not(.vertical).path-bar {
+
 $_linked_separator_color: if($variant=='light', transparentize($button_border, 0.6), transparentize($button_border, 0.5));
+
+  > .button:hover:not(:checked):not(:active):not(:only-child) {
+
+    &:hover {
+      box-shadow: inset  1px 0 $_linked_separator_color,
+                  inset -1px 0 $_linked_separator_color;
+    }
+    &:first-child:hover { box-shadow: inset -1px 0 $_linked_separator_color; }
+    &:last-child:hover { box-shadow: inset 1px 0 $_linked_separator_color; }
+  }
+}
+
+// vertical
+.linked.vertical {
+  > .entry { @extend %linked_vertical; }
+
+  > .entry + .entry { border-top-color: transparentize($entry_border, 0.7); }
+  > .entry + .entry:focus:not(:last-child),
+  > .entry + .entry:focus:last-child { border-top-color: if($variant=='light', $selected_bg_color, $entry_border); }
+
+  > .entry + .button,
+  > .entry + .button:hover,
+  > .entry + .button:active,
+  > .entry + .button:checked,
+  > .entry + .button:insensitive { border-top-style: solid; }
+
+  > .entry:focus:not(:only-child) + .entry,
+  > .entry:focus:not(:only-child) + .button,
+  > .entry:focus:not(:only-child) + GtkComboBox > .the-button-in-the-combobox,
+  > .entry:focus:not(:only-child) + GtkComboBoxText > .the-button-in-the-combobox { border-top-color: if($variant=='light', $selected_bg_color, $entry_border); }
+
+  > .button:hover:not(:checked):not(:active):not(:only-child),
+  > .button:hover:not(:checked):not(:active) + .button:not(:checked):not(:active) { box-shadow: 0 -1px $button_border; }
+  > .button:first-child:hover:not(:checked):not(:active) { box-shadow: none; }
+  > .button:checked + .button:not(:checked):not(:active):hover { box-shadow: none; }
+  > .button:checked + .entry { border-top-color: if($variant=='light', $selected_bg_color, $entry_border); }
+  > .entry + .button:not(:checked):not(:active):hover { box-shadow: none; }
+}
 
 %linked_middle {
   border-radius: 0;
-  border-left-style: none;
   border-right-style: none;
-
-  &:hover {
-    box-shadow: inset  1px 0 $_linked_separator_color,
-                inset -1px 0 $_linked_separator_color;
-  }
-  &:active, &:checked { box-shadow: none; }
-
-  &:dir(rtl) {
-    border-radius: 0; // needed when including %linked_middle:dir(rtl)
-  }
 }
 
 %linked {
   @extend %linked_middle;
-
   &:first-child {
-    border-radius: 3px 0 0 3px;
-    border-left-style: solid;
-
-    &:hover { box-shadow: inset -1px 0 $_linked_separator_color; }
-    &:active, &:checked { box-shadow: none; }
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
   }
   &:last-child {
-    border-radius: 0 3px 3px 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
     border-right-style: solid;
-
-    &:hover { box-shadow: inset 1px 0 $_linked_separator_color; }
-    &:active, &:checked { box-shadow: none; }
-
-    &:dir(rtl) { border-bottom-left-radius: 0; }
-
   }
   &:only-child {
     border-radius: 3px;
     border-style: solid;
-
-    &:hover { box-shadow: none; }
-    &:active, &:checked { box-shadow: none; }
   }
 }
 
 %linked_vertical_middle {
-  border-style: solid;
-  border-bottom-style: none;
-  border-top-style: none;
   border-radius: 0;
-
-  &:hover {
-    box-shadow: inset 0 -1px $_linked_separator_color,
-                inset 0  1px $_linked_separator_color;
-  }
-  &:active, &:checked { box-shadow: none; }
+  border-bottom-style: none;
 }
 
 %linked_vertical{
   @extend %linked_vertical_middle;
-
   &:first-child {
-    border-radius: 3px 3px 0 0;
-    border-top-style: solid;
-
-    &:hover { box-shadow: inset 0 -1px $_linked_separator_color; }
-    &:active, &:checked { box-shadow: none; }
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
   }
   &:last-child {
-    border-radius: 0 0 3px 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
     border-bottom-style: solid;
-
-    &:hover { box-shadow: inset 0 1px $_linked_separator_color; }
-    &:active, &:checked { box-shadow: none; }
   }
   &:only-child {
     border-radius: 3px;
     border-style: solid;
-
-    &:hover { box-shadow: none; }
-    &:active, &:checked { box-shadow: none; }
   }
+}
+
+%linked_button {
+  border-left-style: none;
+  &:first-child { border-left-style: solid; }
+}
+
+%linked_vertical_button {
+  border-top-style: none;
+  &:first-child { border-top-style: solid; }
 }
 
 %undecorated_button {
@@ -919,59 +904,59 @@ GtkComboBox {
   &:insensitive {
     color: $insensitive_fg_color;
   }
-
   .separator.vertical {
     // always disable separators
     -GtkWidget-wide-separators: true;
   }
-
   &.combobox-entry .entry {
-    @extend %linked;
-
     &:dir(ltr) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
       border-right-style: none;
 
-      &:focus { box-shadow: 1px 0 $selected_bg_color; }
+      @if $variant=='light' { &:focus { box-shadow: 1px 0 $selected_bg_color; } }
     }
     &:dir(rtl) {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
       border-left-style: none;
 
-      &:focus { box-shadow: -1px 0 $selected_bg_color; }
+      @if $variant=='light' { &:focus { box-shadow: -1px 0 $selected_bg_color; } }
     }
   }
-
-  &.combobox-entry .the-button-in-the-combobox {
-    @extend %linked;
-
+  &.combobox-entry .button {
     &:dir(ltr) {
-      box-shadow: inset  1px 0 $button_border;
-
-      &:insensitive { box-shadow: inset 1px 0 transparentize($button_border, 0.45); }
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
     }
     &:dir(rtl) {
-      box-shadow: inset -1px 0 $button_border;
-
-      &:insensitive { box-shadow: inset -1px 0 transparentize($button_border, 0.45); }
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
     }
   }
 }
 
-.linked > GtkComboBox > .the-button-in-the-combobox {
-  // the combo is a composite widget so the way we do button linking doesn't
+.linked > GtkComboBox > .the-button-in-the-combobox,
+.linked > GtkComboBoxText > .the-button-in-the-combobox {
+  // the combo is a composite widget so the way we do button linkind doesn't
   // work, special case needed. See
   // https://bugzilla.gnome.org/show_bug.cgi?id=733979
-  &:dir(ltr) { @extend %linked_middle; } // specificity bump
-  &:dir(rtl) { @extend %linked_middle:dir(rtl); }
+  &:dir(ltr),
+  &:dir(rtl) { @extend %linked_middle; } // specificity bump
 }
-.linked > GtkComboBox:first-child > .the-button-in-the-combobox {
+.linked > GtkComboBox:first-child > .the-button-in-the-combobox,
+.linked > GtkComboBoxText:first-child > .the-button-in-the-combobox {
   @extend %linked:first-child;
 }
-.linked > GtkComboBox:last-child > .the-button-in-the-combobox {
+.linked > GtkComboBox:last-child > .the-button-in-the-combobox,
+.linked > GtkComboBoxText:last-child > .the-button-in-the-combobox {
   @extend %linked:last-child;
 }
-.linked > GtkComboBox:only-child > .the-button-in-the-combobox {
+.linked > GtkComboBox:only-child > .the-button-in-the-combobox,
+.linked > GtkComboBoxText:only-child > .the-button-in-the-combobox {
   @extend %linked:only-child;
 }
+
 .linked.vertical > GtkComboBoxText > .the-button-in-the-combobox,
 .linked.vertical > GtkComboBox > .the-button-in-the-combobox { @extend %linked_vertical_middle; }
 .linked.vertical > GtkComboBoxText:first-child > .the-button-in-the-combobox,
@@ -1242,42 +1227,72 @@ GtkComboBox {
     &:insensitive:active, &:insensitive:checked { @include button(header-insensitive-active); }
   }
 
-    .linked > .button { border-radius: 3px; border-style: solid}
+  // Linking stuff
+  .linked:not(.vertical):not(.path-bar) > .button,
+  .linked:not(.vertical):not(.path-bar) > .button:hover,
+  .linked:not(.vertical):not(.path-bar) > .button:active,
+  .linked:not(.vertical):not(.path-bar) > .button:checked,
+  .linked:not(.vertical):not(.path-bar) > .button:insensitive {
+    border-radius: 3px;
+    border-style: solid;
+    
+  }
+  .linked:not(.vertical):not(.path-bar) > .button:hover:not(:checked):not(:active):not(:only-child),
+  .linked:not(.vertical):not(.path-bar) > .button:hover:not(:checked):not(:active) + .button:not(:checked):not(:active),
+  .linked:not(.vertical).path-bar > .button:hover:not(:checked):not(:active):not(:only-child),
+  .linked:not(.vertical).path-bar > .button:hover:not(:checked):not(:active) + .button:not(:checked):not(:active) { box-shadow: none; }
 
-    .linked > .button:hover { box-shadow: none; }
+  // special case for path-bars and stack-switchers
+  .linked:not(.vertical):not(.path-bar).stack-switcher > .button,
+  .linked:not(.vertical).path-bar > .button {
 
-    .linked.stack-switcher > .button,
-    .linked.path-bar > .button {
+    @include button(header-hover);
 
-      $_linked_separator_color: $header_button_border;
+    &:hover { background-color: lighten($header_button_bg, 15%); }
+    &:active, &:checked { @include button(header-active); }
+    &:insensitive { color: transparentize($header_fg, 0.4); }
+  }
 
-      @include button(header-hover);
+  .linked:not(.vertical):not(.path-bar).stack-switcher > .button,
+  .linked:not(.vertical).path-bar > .button,
+  .linked:not(.vertical):not(.path-bar).stack-switcher > .button:hover,
+  .linked:not(.vertical).path-bar > .button:hover,
+  .linked:not(.vertical):not(.path-bar).stack-switcher > .button:active,
+  .linked:not(.vertical).path-bar > .button:active,
+  .linked:not(.vertical):not(.path-bar).stack-switcher > .button:checked,
+  .linked:not(.vertical).path-bar > .button:checked,
+  .linked:not(.vertical):not(.path-bar).stack-switcher > .button:insensitive,
+  .linked:not(.vertical).path-bar > .button:insensitive {
+    @extend %linked;
+    @extend %linked_button;
+  }
 
-      &:hover { background-color: lighten($header_button_bg, 15%); }
-      &:active, &:checked { @include button(header-active); }
-      &:insensitive { color: transparentize($header_fg, 0.4); }
+  .linked:not(.vertical).path-bar,
+  .linked:not(.vertical):not(.path-bar).stack-switcher {
 
-      @extend %linked;
+    $_linked_separator_color: $header_button_border;
+
+    > .button:hover:not(:checked):not(:active):not(:only-child) {
 
       &:hover {
         box-shadow: inset  1px 0 $_linked_separator_color,
                     inset -1px 0 $_linked_separator_color;
       }
-      &:active, &:checked { box-shadow: none; }
-
-      &:first-child {
-        &:hover { box-shadow: inset -1px 0 $_linked_separator_color; }
-        &:active, &:checked { box-shadow: none; }
-      }
-      &:last-child {
-        &:hover { box-shadow: inset 1px 0 $_linked_separator_color; }
-        &:active, &:checked { box-shadow: none; }
-      }
-      &:only-child {
-        &:hover { box-shadow: none; }
-        &:active, &:checked { box-shadow: none; }
-      }
+      &:first-child:hover { box-shadow: inset -1px 0 $_linked_separator_color; }
+      &:last-child:hover { box-shadow: inset 1px 0 $_linked_separator_color; }
     }
+  }
+
+  .linked:not(.vertical):not(.pathbar) {
+    > .entry + .entry { border-left-color: transparentize($header_entry_border, 0.5); }
+    > .entry + .entry:focus:not(:last-child),
+    > .entry + .entry:focus:last-child { border-left-color: if($darker=='false' and $variant=='light', $selected_bg_color, $header_entry_border); }
+
+    > .entry:focus:not(:only-child) + .entry,
+    > .entry:focus:not(:only-child) + .button,
+    > .entry:focus:not(:only-child) + GtkComboBox > .the-button-in-the-combobox,
+    > .entry:focus:not(:only-child) + GtkComboBoxText > .the-button-in-the-combobox { border-left-color:  if($darker=='false' and $variant=='light', $selected_bg_color, $header_entry_border); }
+  }
 
   // Header-bar Suggested and Destructive Action buttons
   @each $b_type, $b_color in (suggested-action, $suggested_color),
@@ -1338,25 +1353,19 @@ GtkComboBox {
     }
     &.combobox-entry .entry {
       &:dir(ltr) {
+        border-right-style: none;
+
         &:focus { box-shadow: none; }
+        @if $variant=='light' and $darker=='false' { &:focus { box-shadow: 1px 0 $selected_bg_color; } }
       }
       &:dir(rtl) {
+        border-left-style: none;
+
         &:focus { box-shadow: none; }
+        @if $variant=='light' and $darker=='false' { &:focus { box-shadow: -1px 0 $selected_bg_color; } }
       }
     }
-    &.combobox-entry .button {
 
-      &:dir(ltr) {
-        box-shadow: inset  1px 0 $header_button_border;
-
-        &:insensitive { box-shadow: inset 1px 0 transparentize($header_button_border, 0.45); }
-      }
-      &:dir(rtl) {
-        box-shadow: inset -1px 0 $header_button_border;
-
-        &:insensitive { box-shadow: inset -1px 0 transparentize($header_button_border, 0.45); }
-      }
-    }
   }
 
   // Header-bar Switches

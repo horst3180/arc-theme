@@ -163,9 +163,10 @@ GtkFlowBox .grid-child {
   .entry:focus {
     background-clip: border-box;
     color: #D3DAE3;
-    border-color: #5294E2;
+    border-color: #2b2e39;
     background-color: #404552;
-    background-image: linear-gradient(to bottom, #404552); }
+    background-image: linear-gradient(to bottom, #404552);
+    box-shadow: inset 1px 1px #5294E2, inset -1px -1px #5294E2; }
   .entry:insensitive {
     color: rgba(211, 218, 227, 0.45);
     border-color: rgba(43, 46, 57, 0.55);
@@ -303,9 +304,7 @@ GtkSearchEntry.entry {
     background-clip: padding-box;
     color: #ffffff;
     outline-color: rgba(255, 255, 255, 0.3);
-    border-color: #8b98b0;
-    background-color: #8b98b0;
-    border-color: transparent;
+    border-color: #2b2e39;
     background-color: #5294E2;
     transition-duration: 50ms; }
   .button:active {
@@ -535,9 +534,7 @@ GtkSearchEntry.entry {
   .inline-toolbar GtkToolButton > .button:checked {
     color: #ffffff;
     outline-color: rgba(255, 255, 255, 0.3);
-    border-color: #8b98b0;
-    background-color: #8b98b0;
-    border-color: transparent;
+    border-color: #2b2e39;
     background-color: #5294E2; }
   .inline-toolbar GtkToolButton > .button:insensitive {
     color: rgba(211, 218, 227, 0.45);
@@ -784,9 +781,7 @@ GtkSearchEntry.entry {
     .spinbutton.vertical .button:first-child:active, .spinbutton.vertical:dir(rtl) .button:first-child:active {
       color: #ffffff;
       outline-color: rgba(255, 255, 255, 0.3);
-      border-color: #8b98b0;
-      background-color: #8b98b0;
-      border-color: transparent;
+      border-color: #2b2e39;
       background-color: #5294E2; }
     .spinbutton.vertical .button:first-child:hover, .spinbutton.vertical:dir(rtl) .button:first-child:hover {
       color: #D3DAE3;
@@ -807,9 +802,7 @@ GtkSearchEntry.entry {
     .spinbutton.vertical .button:last-child:active, .spinbutton.vertical:dir(rtl) .button:last-child:active {
       color: #ffffff;
       outline-color: rgba(255, 255, 255, 0.3);
-      border-color: #8b98b0;
-      background-color: #8b98b0;
-      border-color: transparent;
+      border-color: #2b2e39;
       background-color: #5294E2; }
     .spinbutton.vertical .button:last-child:hover, .spinbutton.vertical:dir(rtl) .button:last-child:hover {
       color: #D3DAE3;
@@ -854,12 +847,8 @@ GtkComboBox {
     -GtkWidget-wide-separators: true; }
   GtkComboBox.combobox-entry .entry:dir(ltr) {
     border-right-style: none; }
-    GtkComboBox.combobox-entry .entry:dir(ltr):focus {
-      box-shadow: 1px 0 #5294E2; }
   GtkComboBox.combobox-entry .entry:dir(rtl) {
     border-left-style: none; }
-    GtkComboBox.combobox-entry .entry:dir(rtl):focus {
-      box-shadow: -1px 0 #5294E2; }
   GtkComboBox.combobox-entry .button:dir(ltr) {
     box-shadow: inset 1px 0 #2b2e39; }
     GtkComboBox.combobox-entry .button:dir(ltr):insensitive {
@@ -2165,6 +2154,10 @@ GtkCalendar {
     background-image: none; }
     GtkCalendar.button:hover, GtkCalendar.button:focus:hover {
       color: #D3DAE3; }
+    GtkCalendar.button:insensitive, GtkCalendar.button:focus:insensitive {
+      color: rgba(211, 218, 227, 0.45);
+      background-color: transparent;
+      background-image: none; }
   GtkCalendar.highlight {
     color: alpha(currentColor,0.55); }
 
@@ -3548,9 +3541,7 @@ GtkListBox .h4 {
   #content_frame .button:active, #content_frame .button:checked {
     color: #ffffff;
     outline-color: rgba(255, 255, 255, 0.3);
-    border-color: #8b98b0;
-    background-color: #8b98b0;
-    border-color: transparent;
+    border-color: #2b2e39;
     background-color: #5294E2; }
   #content_frame .button:insensitive {
     color: rgba(211, 218, 227, 0.45);

@@ -157,34 +157,36 @@ NemoWindow GtkSeparator.separator.horizontal {
   @extend .nautilus-desktop.nautilus-canvas-item;
 }
 
-NemoWindow .primary-toolbar NemoPathBar.linked > .button {
-  $_linked_separator_color: $header_button_border;
+NemoWindow .primary-toolbar NemoPathBar.linked:not(.vertical):not(.path-bar) > .button {
 
   @include button(header-hover);
 
   &:hover { background-color: lighten($header_button_bg, 15%); }
   &:active, &:checked { @include button(header-active); }
   &:insensitive { color: transparentize($header_fg, 0.4); }
+}
 
+NemoWindow .primary-toolbar NemoPathBar.linked:not(.vertical):not(.path-bar) > .button,
+NemoWindow .primary-toolbar NemoPathBar.linked:not(.vertical):not(.path-bar) > .button:hover,
+NemoWindow .primary-toolbar NemoPathBar.linked:not(.vertical):not(.path-bar) > .button:active,
+NemoWindow .primary-toolbar NemoPathBar.linked:not(.vertical):not(.path-bar) > .button:checked,
+NemoWindow .primary-toolbar NemoPathBar.linked:not(.vertical):not(.path-bar) > .button:insensitive {
   @extend %linked;
+  @extend %linked_button;
+}
 
-  &:hover {
-    box-shadow: inset  1px 0 $_linked_separator_color,
-                inset -1px 0 $_linked_separator_color;
-  }
-  &:active, &:checked { box-shadow: none; }
+NemoWindow .primary-toolbar NemoPathBar.linked:not(.vertical):not(.path-bar) {
 
-  &:first-child {
-    &:hover { box-shadow: inset -1px 0 $_linked_separator_color; }
-    &:active, &:checked { box-shadow: none; }
-  }
-  &:last-child {
-    &:hover { box-shadow: inset 1px 0 $_linked_separator_color; }
-    &:active, &:checked { box-shadow: none; }
-  }
-  &:only-child {
-    &:hover { box-shadow: none; }
-    &:active, &:checked { box-shadow: none; }
+  $_linked_separator_color: $header_button_border;
+
+  > .button:hover:not(:checked):not(:active):not(:only-child) {
+
+      &:hover {
+        box-shadow: inset  1px 0 $_linked_separator_color,
+                    inset -1px 0 $_linked_separator_color;
+      }
+      &:first-child:hover { box-shadow: inset -1px 0 $_linked_separator_color; }
+      &:last-child:hover { box-shadow: inset 1px 0 $_linked_separator_color; }
   }
 }
 

@@ -303,9 +303,7 @@ GtkSearchEntry.entry {
     background-clip: border-box;
     color: #ffffff;
     outline-color: rgba(255, 255, 255, 0.3);
-    border-color: #8f9aae;
-    background-color: #8f9aae;
-    border-color: transparent;
+    border-color: #5294E2;
     background-color: #5294E2;
     transition-duration: 50ms; }
   .button:active {
@@ -535,9 +533,7 @@ GtkSearchEntry.entry {
   .inline-toolbar GtkToolButton > .button:checked {
     color: #ffffff;
     outline-color: rgba(255, 255, 255, 0.3);
-    border-color: #8f9aae;
-    background-color: #8f9aae;
-    border-color: transparent;
+    border-color: #5294E2;
     background-color: #5294E2; }
   .inline-toolbar GtkToolButton > .button:insensitive {
     color: rgba(92, 97, 108, 0.55);
@@ -784,9 +780,7 @@ GtkSearchEntry.entry {
     .spinbutton.vertical .button:first-child:active, .spinbutton.vertical:dir(rtl) .button:first-child:active {
       color: #ffffff;
       outline-color: rgba(255, 255, 255, 0.3);
-      border-color: #8f9aae;
-      background-color: #8f9aae;
-      border-color: transparent;
+      border-color: #5294E2;
       background-color: #5294E2; }
     .spinbutton.vertical .button:first-child:hover, .spinbutton.vertical:dir(rtl) .button:first-child:hover {
       color: #5c616c;
@@ -807,9 +801,7 @@ GtkSearchEntry.entry {
     .spinbutton.vertical .button:last-child:active, .spinbutton.vertical:dir(rtl) .button:last-child:active {
       color: #ffffff;
       outline-color: rgba(255, 255, 255, 0.3);
-      border-color: #8f9aae;
-      background-color: #8f9aae;
-      border-color: transparent;
+      border-color: #5294E2;
       background-color: #5294E2; }
     .spinbutton.vertical .button:last-child:hover, .spinbutton.vertical:dir(rtl) .button:last-child:hover {
       color: #5c616c;
@@ -2165,6 +2157,10 @@ GtkCalendar {
     background-image: none; }
     GtkCalendar.button:hover, GtkCalendar.button:focus:hover {
       color: #5c616c; }
+    GtkCalendar.button:insensitive, GtkCalendar.button:focus:insensitive {
+      color: rgba(92, 97, 108, 0.55);
+      background-color: transparent;
+      background-image: none; }
   GtkCalendar.highlight {
     color: alpha(currentColor,0.55); }
 
@@ -3548,9 +3544,7 @@ GtkListBox .h4 {
   #content_frame .button:active, #content_frame .button:checked {
     color: #ffffff;
     outline-color: rgba(255, 255, 255, 0.3);
-    border-color: #8f9aae;
-    background-color: #8f9aae;
-    border-color: transparent;
+    border-color: #5294E2;
     background-color: #5294E2; }
   #content_frame .button:insensitive {
     color: rgba(92, 97, 108, 0.55);

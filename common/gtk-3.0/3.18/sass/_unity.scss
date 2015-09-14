@@ -47,7 +47,7 @@ UnityPanelWidget,
   color: lighten($panel_fg, 20%);
   box-shadow: none;
 
-  &:backdrop { color: darken($panel_fg, 5%); }
+  &:backdrop { color: lighten($panel_fg, 1%); }
 }
 
 .unity-panel.menubar.menuitem:hover,

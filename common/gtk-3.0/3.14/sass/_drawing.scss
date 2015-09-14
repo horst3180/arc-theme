@@ -37,9 +37,14 @@
   // focused entry
   //
     color: $text_color;
-    border-color: $selected_bg_color;
+    border-color: if($variant=='light', $selected_bg_color, $button_border);
     background-color: $entry_bg;
     background-image: linear-gradient(to bottom, $entry_bg);
+
+    @if $variant == 'dark' {
+      box-shadow: inset 1px 1px $selected_bg_color,
+                  inset -1px -1px $selected_bg_color;
+    }
   }
 
   @if $t==insensitive {
@@ -147,13 +152,8 @@
   //
     color: $selected_fg_color;
     outline-color: transparentize($selected_fg_color, 0.7);
-    border-color: saturate(mix($fg_color, $bg_color, 60%), 10%);
-    background-color: saturate(mix($fg_color, $bg_color, 60%), 10%);
 
-    //border-color: if($variant=='light', saturate(mix($fg_color, $bg_color, 60%), 10%), transparent);
-    //background-color: if($variant=='light', saturate(mix($fg_color, $bg_color, 60%), 10%), darken($button_bg, 10%));
-
-    border-color: if($darker=='false' and $variant=='light', $selected_bg_color, transparent);
+    border-color: if($variant=='light', $selected_bg_color, $button_border);
     background-color: $selected_bg_color;
   }
 

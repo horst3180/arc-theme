@@ -932,12 +932,12 @@ GtkComboBox {
     &:dir(ltr) {
       border-right-style: none;
 
-      &:focus { box-shadow: 1px 0 $selected_bg_color; }
+      @if $variant=='light' { &:focus { box-shadow: 1px 0 $selected_bg_color; } }
     }
     &:dir(rtl) {
       border-left-style: none;
 
-      &:focus { box-shadow: -1px 0 $selected_bg_color; }
+      @if $variant=='light' { &:focus { box-shadow: -1px 0 $selected_bg_color; } }
     }
   }
 
@@ -2328,6 +2328,11 @@ GtkCalendar {
 
     &:hover {
       color: $fg_color;
+    }
+    &:insensitive {
+      color: $insensitive_fg_color;
+      background-color: transparent;
+      background-image: none;
     }
   }
   &.highlight { color: gtkalpha(currentColor,0.55); }
