@@ -2148,7 +2148,7 @@ GtkScrolledWindow GtkViewport.frame {
 .grid-child {
   padding: 2px; }
 
-.list-row.activatable:hover {
+.list-row.activatable:hover, GtkPlacesSidebar.sidebar .has-open-popup {
   background-color: rgba(0, 0, 0, 0.05); }
 
 .list-row.activatable:active {
@@ -2157,7 +2157,7 @@ GtkScrolledWindow GtkViewport.frame {
 .list-row.activatable:selected:active {
   color: #ffffff; }
 
-.list-row.activatable:selected:hover {
+.list-row.activatable:selected:hover, GtkPlacesSidebar.sidebar .has-open-popup:selected {
   background-color: #4a85cb; }
 
 .list-row.activatable:selected:insensitive {
@@ -2329,7 +2329,7 @@ GtkPlacesSidebar.sidebar .list-row.activatable {
   color: rgba(92, 97, 108, 0.8);
   border-width: 1px 0;
   border-style: solid; }
-  GtkPlacesSidebar.sidebar .list-row.activatable:hover {
+  GtkPlacesSidebar.sidebar .list-row.activatable:hover, GtkPlacesSidebar.sidebar .has-open-popup {
     border-color: rgba(0, 0, 0, 0.05); }
 
 .sidebar-button.button {
@@ -2638,8 +2638,10 @@ GtkVolumeButton.button {
 GtkEntry.gb-command-bar-entry.entry.flat:selected:focus,
 GtkFileChooserDialog GtkPlacesSidebar.sidebar .list-row.activatable:selected,
 GtkFileChooserDialog GtkPlacesSidebar.sidebar .list-row.activatable:selected:hover,
+GtkFileChooserDialog GtkPlacesSidebar.sidebar .has-open-popup:selected,
 GtkFileChooserDialog GtkPlacesSidebar.sidebar .list-row.activatable:active:hover,
-NautilusWindow GtkPlacesSidebar.sidebar .list-row.activatable:selected, NautilusWindow GtkPlacesSidebar.sidebar .list-row.activatable:selected:hover, NautilusWindow GtkPlacesSidebar.sidebar .list-row.activatable:active:hover {
+GtkFileChooserDialog GtkPlacesSidebar.sidebar .has-open-popup:active,
+NautilusWindow GtkPlacesSidebar.sidebar .list-row.activatable:selected, NautilusWindow GtkPlacesSidebar.sidebar .list-row.activatable:selected:hover, NautilusWindow GtkPlacesSidebar.sidebar .has-open-popup:selected, NautilusWindow GtkPlacesSidebar.sidebar .list-row.activatable:active:hover, NautilusWindow GtkPlacesSidebar.sidebar .has-open-popup:active {
   background-image: none;
   background-color: #5294E2;
   color: #ffffff;
@@ -3724,12 +3726,15 @@ NautilusWindow GtkPlacesSidebar.sidebar {
     NautilusWindow GtkPlacesSidebar.sidebar .list-row.activatable .sidebar-icon {
       color: rgba(186, 195, 207, 0.6); }
     GtkFileChooserDialog GtkPlacesSidebar.sidebar .list-row.activatable:hover,
-    NautilusWindow GtkPlacesSidebar.sidebar .list-row.activatable:hover {
+    GtkFileChooserDialog GtkPlacesSidebar.sidebar .has-open-popup,
+    NautilusWindow GtkPlacesSidebar.sidebar .list-row.activatable:hover, NautilusWindow GtkPlacesSidebar.sidebar .has-open-popup {
       background-color: rgba(186, 195, 207, 0.15); }
     GtkFileChooserDialog GtkPlacesSidebar.sidebar .list-row.activatable:selected .sidebar-icon,
     GtkFileChooserDialog GtkPlacesSidebar.sidebar .list-row.activatable:selected:hover .sidebar-icon,
+    GtkFileChooserDialog GtkPlacesSidebar.sidebar .has-open-popup:selected .sidebar-icon,
     GtkFileChooserDialog GtkPlacesSidebar.sidebar .list-row.activatable:active:hover .sidebar-icon,
-    NautilusWindow GtkPlacesSidebar.sidebar .list-row.activatable:selected .sidebar-icon, NautilusWindow GtkPlacesSidebar.sidebar .list-row.activatable:selected:hover .sidebar-icon, NautilusWindow GtkPlacesSidebar.sidebar .list-row.activatable:active:hover .sidebar-icon {
+    GtkFileChooserDialog GtkPlacesSidebar.sidebar .has-open-popup:active .sidebar-icon,
+    NautilusWindow GtkPlacesSidebar.sidebar .list-row.activatable:selected .sidebar-icon, NautilusWindow GtkPlacesSidebar.sidebar .list-row.activatable:selected:hover .sidebar-icon, NautilusWindow GtkPlacesSidebar.sidebar .has-open-popup:selected .sidebar-icon, NautilusWindow GtkPlacesSidebar.sidebar .list-row.activatable:active:hover .sidebar-icon, NautilusWindow GtkPlacesSidebar.sidebar .has-open-popup:active .sidebar-icon {
       color: inherit; }
   GtkFileChooserDialog GtkPlacesSidebar.sidebar .separator,
   GtkFileChooserDialog GtkPlacesSidebar.sidebar .view.separator,
