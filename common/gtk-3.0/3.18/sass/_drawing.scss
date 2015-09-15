@@ -42,8 +42,10 @@
     background-image: linear-gradient(to bottom, $entry_bg);
 
     @if $variant == 'dark' {
-      box-shadow: inset 1px 1px $selected_bg_color,
-                  inset -1px -1px $selected_bg_color;
+      box-shadow: inset 1px 0 $selected_bg_color,
+                  inset -1px 0 $selected_bg_color,
+                  inset 0 1px $selected_bg_color,
+                  inset 0 -1px $selected_bg_color;
     }
   }
 

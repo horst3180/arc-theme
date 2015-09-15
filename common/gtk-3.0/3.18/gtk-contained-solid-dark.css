@@ -165,7 +165,7 @@ GtkTextView {
     border-color: #2b2e39;
     background-color: #404552;
     background-image: linear-gradient(to bottom, #404552);
-    box-shadow: inset 1px 1px #5294E2, inset -1px -1px #5294E2; }
+    box-shadow: inset 1px 0 #5294E2, inset -1px 0 #5294E2, inset 0 1px #5294E2, inset 0 -1px #5294E2; }
   .entry:insensitive {
     color: rgba(211, 218, 227, 0.45);
     border-color: rgba(43, 46, 57, 0.55);
