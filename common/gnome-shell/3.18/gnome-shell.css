@@ -63,7 +63,7 @@ stage {
     color: #ffffff;
     background-color: #5294E2;
     border: 1px solid #5294E2;
-    box-shadow: inset 0 2px 4px #5294E2; }
+    box-shadow: inset 0 1px rgba(82, 148, 226, 0.05); }
   .button:insensitive, .notification-banner .notification-button:insensitive,
   .hotplug-notification-item:insensitive {
     text-shadow: 0 1px rgba(255, 255, 255, 0);
@@ -769,7 +769,7 @@ StScrollBar {
     color: #ffffff;
     background-color: #5294E2;
     border: 1px solid #5294E2;
-    box-shadow: inset 0 2px 4px #5294E2; }
+    box-shadow: inset 0 1px rgba(82, 148, 226, 0.05); }
 
 .datemenu-today-button .date-label {
   font-size: 1.5em; }
@@ -1665,7 +1665,7 @@ StScrollBar {
         color: #ffffff;
         background-color: #5294E2;
         border: 1px solid #5294E2;
-        box-shadow: inset 0 2px 4px #5294E2; }
+        box-shadow: inset 0 1px rgba(82, 148, 226, 0.05); }
       .login-dialog .modal-dialog-button:default:insensitive {
         text-shadow: 0 1px rgba(255, 255, 255, 0);
         color: rgba(92, 97, 108, 0.55);
