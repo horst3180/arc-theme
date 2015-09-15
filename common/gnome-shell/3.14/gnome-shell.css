@@ -1008,7 +1008,7 @@ StScrollBar {
 
 #overview {
   spacing: 24px;
-  background: #3c404e; }
+  background: rgba(60, 64, 78, 0.55); }
 
 .overview-controls {
   padding-bottom: 32px; }
@@ -1358,11 +1358,11 @@ StScrollBar {
   text-align: center; }
 
 .app-well-app.app-folder > .overview-icon {
-  background-color: rgba(46, 50, 60, 0.95);
-  border: 1px solid rgba(37, 40, 49, 0.95); }
+  background-color: rgba(35, 38, 46, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.45); }
 
 .app-well-app.app-folder:hover > .overview-icon {
-  background-color: rgba(71, 76, 92, 0.95); }
+  background-color: rgba(60, 64, 78, 0.95); }
 
 .app-well-app.app-folder:active > .overview-icon, .app-well-app.app-folder:checked > .overview-icon {
   background-color: #5294E2;
@@ -1373,8 +1373,8 @@ StScrollBar {
 
 .app-folder-popup {
   -arrow-border-radius: 2px;
-  -arrow-background-color: rgba(46, 50, 60, 0.95);
-  -arrow-border-color: rgba(37, 40, 49, 0.95);
+  -arrow-background-color: rgba(35, 38, 46, 0.95);
+  -arrow-border-color: rgba(0, 0, 0, 0.45);
   -arrow-border-width: 1px;
   -arrow-base: 5;
   -arrow-rise: 5; }

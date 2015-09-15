@@ -1274,7 +1274,7 @@ StScrollBar {
 //
 #overview {
   spacing: 24px;
-  background: lighten(opacify($dark_sidebar_bg, 1), 3%);
+  background: lighten(transparentize($dark_sidebar_bg, 0.4), 3%);
 }
 
 .overview-controls { padding-bottom: 32px; }
@@ -1706,12 +1706,12 @@ StScrollBar {
 .app-well-app.app-folder {
 
   > .overview-icon {
-    background-color: darken($dark_sidebar_bg, 3%);
-    border: 1px solid darken($dark_sidebar_bg, 7%);
+    background-color: darken($dark_sidebar_bg, 8%);
+    border: 1px solid transparentize(darken($dark_sidebar_bg, 25%), 0.5);
   }
 
   &:hover > .overview-icon {
-    background-color: lighten($dark_sidebar_bg, 8%);
+    background-color: lighten($dark_sidebar_bg, 3%);
   }
 
   &:active > .overview-icon, &:checked > .overview-icon {
@@ -1726,13 +1726,13 @@ StScrollBar {
 
 .app-folder-popup { //expanded collection
   -arrow-border-radius: 2px;
-  -arrow-background-color: darken($dark_sidebar_bg, 3%);
-  -arrow-border-color: darken($dark_sidebar_bg, 7%);
+  -arrow-background-color: darken($dark_sidebar_bg, 8%);
+  -arrow-border-color: transparentize(darken($dark_sidebar_bg, 25%), 0.5);
   -arrow-border-width: 1px;
   -arrow-base: 5;
   -arrow-rise: 5;
-
 }
+
 .app-folder-popup-bin { padding: 5px; }
 .app-folder-icon {
   padding: 5px;
