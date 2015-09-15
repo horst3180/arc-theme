@@ -922,12 +922,12 @@ StScrollBar {
       padding: 8px 8px 8px 0px; }
     .message-icon-bin > StIcon {
       icon-size: 32px; }
-  .message-secondary-bin:ltr {
-    padding-left: 8px; }
-  .message-secondary-bin:rtl {
-    padding-right: 8px; }
   .message-secondary-bin {
     color: rgba(92, 97, 108, 0.4); }
+    .message-secondary-bin:ltr {
+      padding-left: 8px; }
+    .message-secondary-bin:rtl {
+      padding-right: 8px; }
   .message-secondary-bin > StIcon {
     icon-size: 16px; }
   .message-title {

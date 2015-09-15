@@ -1193,11 +1193,12 @@ StScrollBar {
   }
 
   &-secondary-bin {
+    color: transparentize($fg_color, 0.6);
+
     &:ltr { padding-left: 8px; }
     &:rtl { padding-right: 8px; }
   }
 
-  &-secondary-bin { color: transparentize($fg_color, 0.6); }
   &-secondary-bin > StIcon { icon-size: 16px; }
 
   &-title {
