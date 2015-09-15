@@ -719,6 +719,9 @@ style "menu_item"
   # See https://bugs.freedesktop.org/show_bug.cgi?id=38038
   bg[SELECTED] = @selected_fg_color
 
+	fg[NORMAL] = @fg_color
+	fg[SELECTED] = @fg_color
+
   text[PRELIGHT] = @fg_color
 
   engine "pixmap" {

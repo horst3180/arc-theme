@@ -2,6 +2,8 @@ style "menubar" {
 
   bg[NORMAL] = "#2f343f"
   fg[NORMAL] = "#afb8c5"
+  fg[PRELIGHT] = "#afb8c5"
+  fg[ACTIVE] = "#afb8c5"
   fg[SELECTED] = @selected_fg_color
   fg[INSENSITIVE] = shade(0.7, "#afb8c5")
 
