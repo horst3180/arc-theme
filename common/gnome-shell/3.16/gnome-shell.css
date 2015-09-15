@@ -1017,8 +1017,7 @@ StScrollBar {
   spacing: 12px; }
 
 #overview {
-  spacing: 24px;
-  background: rgba(60, 64, 78, 0.55); }
+  spacing: 24px; }
 
 .overview-controls {
   padding-bottom: 32px; }

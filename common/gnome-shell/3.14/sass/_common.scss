@@ -1272,10 +1272,7 @@ StScrollBar {
 //
 // Overview
 //
-#overview {
-  spacing: 24px;
-  background: lighten(transparentize($dark_sidebar_bg, 0.4), 3%);
-}
+#overview { spacing: 24px; }
 
 .overview-controls { padding-bottom: 32px; }
 
