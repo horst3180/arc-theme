@@ -609,10 +609,12 @@ StScrollBar {
 }
 
 .popup-separator-menu-item {
+  -gradient-height: 0px;
   //-margin-horizontal: 24px;
   height: 2px; //not really the whole box
   margin: 10px 0px;
   background-color: transparent;
+  background-gradient-direction: none !important;
   border: none;
 	border-image: url("common-assets/menu/menu-separator.svg") 1 1 1 1;
 }
