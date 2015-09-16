@@ -256,7 +256,10 @@ StScrollBar {
     }
   }
 
-  .run-dialog-entry { width: 21em;}
+  .run-dialog-entry {
+    width: 21em;
+    caret-color: $fg_color;
+  }
   .run-dialog-error-box {
     padding-top: 5px;
     spacing: 5px;

@@ -256,7 +256,8 @@ StScrollBar {
       padding-bottom: 0;
       height: 30px; }
   .modal-dialog .run-dialog-entry {
-    width: 21em; }
+    width: 21em;
+    caret-color: #D3DAE3; }
   .modal-dialog .run-dialog-error-box {
     padding-top: 5px;
     spacing: 5px; }
