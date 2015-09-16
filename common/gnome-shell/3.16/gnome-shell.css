@@ -213,7 +213,7 @@ StScrollBar {
     padding: 14px 10px;
     background: none;
     border: none;
-    border-image: url("common-assets/misc/button-box.svg") 9 9 9 9; }
+    border-image: url("light-assets/misc/button-box.svg") 9 9 9 9; }
     .modal-dialog-button-box .button {
       padding-top: 0;
       padding-bottom: 0;

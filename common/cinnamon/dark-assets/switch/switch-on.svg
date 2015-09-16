@@ -99,9 +99,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="8.2495794"
-     inkscape:cx="22.260853"
-     inkscape:cy="2.3994425"
+     inkscape:zoom="11.666667"
+     inkscape:cx="26.273653"
+     inkscape:cy="16.301439"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:grid-bbox="true"
@@ -184,7 +184,7 @@
                ry="11"
                rx="11" />
             <circle
-               style="fill:#32363d;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               style="fill:#353a47;fill-opacity:1;fill-rule:nonzero;stroke:none"
                id="path3759-0-75"
                cx="41"
                cy="1041.3622"
@@ -204,7 +204,7 @@
            height="1.9999826"
            width="5"
            id="rect3977-39-2-13"
-           style="display:inline;opacity:1;fill:#32363d;fill-opacity:1;stroke:none" />
+           style="display:inline;opacity:1;fill:#353a47;fill-opacity:1;stroke:none" />
         <rect
            transform="matrix(0.70710678,0.70710678,-0.70710678,0.70710678,0,0)"
            ry="0"
@@ -213,7 +213,7 @@
            height="7.9999828"
            width="2"
            id="rect3979-7-0-65"
-           style="display:inline;opacity:1;fill:#32363d;fill-opacity:1;stroke:none" />
+           style="display:inline;opacity:1;fill:#353a47;fill-opacity:1;stroke:none" />
       </g>
     </g>
   </g>
