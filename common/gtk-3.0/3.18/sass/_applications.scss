@@ -321,7 +321,7 @@ GeditFileBrowserWidget .toolbar {
 //
 GbWorkbench .floating-bar { color: $fg_color; }
 
-GbSearchBox.linked {
+GbSearchBox.linked:not(.vertical) {
 
   > GtkMenuButton.button:last-child:dir(ltr),
   > GtkMenuButton.button:first-child:dir(rtl) {
@@ -334,36 +334,35 @@ GbSearchBox.linked {
     &:insensitive { @include entry(header-insensitive); }
   }
 
-  > GtkMenuButton.button:last-child:dir(ltr) {
-
+  > GtkMenuButton.button:last-child:dir(ltr),
+  > GtkMenuButton.button:last-child:dir(ltr):hover,
+  > GtkMenuButton.button:last-child:dir(ltr):active,
+  > GtkMenuButton.button:last-child:dir(ltr):checked {
     border-left-style: none;
     border-radius: 0 3px 3px 0;
     outline-radius: 0 1px 1px 0;
-
-    &:hover { box-shadow: -1px 0 $selected_bg_color; }
   }
-  > GtkMenuButton.button:first-child:dir(rtl) {
+
+  > GtkMenuButton.button:last-child:dir(rtl),
+  > GtkMenuButton.button:last-child:dir(rtl):hover,
+  > GtkMenuButton.button:last-child:dir(rtl):active,
+  > GtkMenuButton.button:last-child:dir(rtl):checked {
     border-right-style: none;
     border-radius: 3px 0 0 3px;
     outline-radius: 1px 0 0 1px;
-
-    &:hover { box-shadow: 1px 0 $selected_bg_color; }
   }
 }
 
 // Preference page language style
 GbPreferencesPageLanguage  {
-
-  GtkSearchEntry {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-  GtkScrolledWindow { border-top-width: 0; }
+  .entry { border-radius: 3px 3px 0 0; }
+  .frame { border-top-width: 0 }
 }
 
 // Editor tweak widget
-GbEditorTweakWidget GtkScrolledWindow {
-  border-top: none;
+GbEditorTweakWidget {
+  .linked.vertical > .entry { border-bottom-style: solid; }
+  GtkScrolledWindow { border-top: none; }
 }
 
 // View stack styling

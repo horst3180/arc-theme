@@ -2444,10 +2444,8 @@ GtkPlacesSidebar.sidebar .sidebar-new-bookmark-row {
 
 GtkPlacesSidebar.sidebar .list-row.activatable {
   color: rgba(92, 97, 108, 0.8);
-  border-width: 1px 0;
+  border-width: 0;
   border-style: solid; }
-  GtkPlacesSidebar.sidebar .list-row.activatable:hover, GtkPlacesSidebar.sidebar .has-open-popup {
-    border-color: rgba(0, 0, 0, 0.05); }
 
 .sidebar-button.button {
   outline-radius: 50%;
@@ -3100,53 +3098,57 @@ GeditViewFrame .gedit-search-slider {
 GbWorkbench .floating-bar {
   color: #5c616c; }
 
-GbSearchBox.linked > GtkMenuButton.button:last-child:dir(ltr),
-GbSearchBox.linked > GtkMenuButton.button:first-child:dir(rtl) {
+GbSearchBox.linked:not(.vertical) > GtkMenuButton.button:last-child:dir(ltr),
+GbSearchBox.linked:not(.vertical) > GtkMenuButton.button:first-child:dir(rtl) {
   padding: 0 10px;
   color: rgba(207, 218, 231, 0.8);
   border-color: rgba(21, 23, 28, 0.4);
   background-image: linear-gradient(to bottom, rgba(95, 105, 127, 0.4));
   background-color: transparent; }
-  GbSearchBox.linked > GtkMenuButton.button:last-child:dir(ltr).image,
-  GbSearchBox.linked > GtkMenuButton.button:last-child:dir(ltr).image:hover,
-  GbSearchBox.linked > GtkMenuButton.button:first-child:dir(rtl).image, GbSearchBox.linked > GtkMenuButton.button:first-child:dir(rtl).image:hover {
+  GbSearchBox.linked:not(.vertical) > GtkMenuButton.button:last-child:dir(ltr).image,
+  GbSearchBox.linked:not(.vertical) > GtkMenuButton.button:last-child:dir(ltr).image:hover,
+  GbSearchBox.linked:not(.vertical) > GtkMenuButton.button:first-child:dir(rtl).image, GbSearchBox.linked:not(.vertical) > GtkMenuButton.button:first-child:dir(rtl).image:hover {
     color: inherit; }
-  GbSearchBox.linked > GtkMenuButton.button:last-child:dir(ltr):hover,
-  GbSearchBox.linked > GtkMenuButton.button:first-child:dir(rtl):hover {
+  GbSearchBox.linked:not(.vertical) > GtkMenuButton.button:last-child:dir(ltr):hover,
+  GbSearchBox.linked:not(.vertical) > GtkMenuButton.button:first-child:dir(rtl):hover {
     color: #ffffff;
     border-color: transparent;
     background-image: linear-gradient(to bottom, #5294E2); }
-  GbSearchBox.linked > GtkMenuButton.button:last-child:dir(ltr):active,
-  GbSearchBox.linked > GtkMenuButton.button:last-child:dir(ltr):checked,
-  GbSearchBox.linked > GtkMenuButton.button:first-child:dir(rtl):active, GbSearchBox.linked > GtkMenuButton.button:first-child:dir(rtl):checked {
+  GbSearchBox.linked:not(.vertical) > GtkMenuButton.button:last-child:dir(ltr):active,
+  GbSearchBox.linked:not(.vertical) > GtkMenuButton.button:last-child:dir(ltr):checked,
+  GbSearchBox.linked:not(.vertical) > GtkMenuButton.button:first-child:dir(rtl):active, GbSearchBox.linked:not(.vertical) > GtkMenuButton.button:first-child:dir(rtl):checked {
     color: #ffffff;
     border-color: transparent;
     background-image: linear-gradient(to bottom, #5294E2); }
-  GbSearchBox.linked > GtkMenuButton.button:last-child:dir(ltr):insensitive,
-  GbSearchBox.linked > GtkMenuButton.button:first-child:dir(rtl):insensitive {
+  GbSearchBox.linked:not(.vertical) > GtkMenuButton.button:last-child:dir(ltr):insensitive,
+  GbSearchBox.linked:not(.vertical) > GtkMenuButton.button:first-child:dir(rtl):insensitive {
     color: rgba(207, 218, 231, 0.35);
     background-image: linear-gradient(to bottom, rgba(95, 105, 127, 0.25)); }
 
-GbSearchBox.linked > GtkMenuButton.button:last-child:dir(ltr) {
+GbSearchBox.linked:not(.vertical) > GtkMenuButton.button:last-child:dir(ltr),
+GbSearchBox.linked:not(.vertical) > GtkMenuButton.button:last-child:dir(ltr):hover,
+GbSearchBox.linked:not(.vertical) > GtkMenuButton.button:last-child:dir(ltr):active,
+GbSearchBox.linked:not(.vertical) > GtkMenuButton.button:last-child:dir(ltr):checked {
   border-left-style: none;
   border-radius: 0 3px 3px 0;
   outline-radius: 0 1px 1px 0; }
-  GbSearchBox.linked > GtkMenuButton.button:last-child:dir(ltr):hover {
-    box-shadow: -1px 0 #5294E2; }
 
-GbSearchBox.linked > GtkMenuButton.button:first-child:dir(rtl) {
+GbSearchBox.linked:not(.vertical) > GtkMenuButton.button:last-child:dir(rtl),
+GbSearchBox.linked:not(.vertical) > GtkMenuButton.button:last-child:dir(rtl):hover,
+GbSearchBox.linked:not(.vertical) > GtkMenuButton.button:last-child:dir(rtl):active,
+GbSearchBox.linked:not(.vertical) > GtkMenuButton.button:last-child:dir(rtl):checked {
   border-right-style: none;
   border-radius: 3px 0 0 3px;
   outline-radius: 1px 0 0 1px; }
-  GbSearchBox.linked > GtkMenuButton.button:first-child:dir(rtl):hover {
-    box-shadow: 1px 0 #5294E2; }
 
-GbPreferencesPageLanguage GtkSearchEntry {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0; }
+GbPreferencesPageLanguage .entry {
+  border-radius: 3px 3px 0 0; }
 
-GbPreferencesPageLanguage GtkScrolledWindow {
+GbPreferencesPageLanguage .frame {
   border-top-width: 0; }
+
+GbEditorTweakWidget .linked.vertical > .entry {
+  border-bottom-style: solid; }
 
 GbEditorTweakWidget GtkScrolledWindow {
   border-top: none; }

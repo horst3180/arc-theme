@@ -2676,12 +2676,8 @@ GtkPlacesSidebar.sidebar {
   // Preserve everything else of the list-row class
   .list-row.activatable {
     color: transparentize($fg_color, 0.2);
-    border-width: 1px 0;
+    border-width: 0;
     border-style: solid;
-
-    &:hover {
-      border-color: if($variant=='light', transparentize(black, 0.95), transparentize(white, 0.95));
-    }
 
     &:selected { @extend %selected_items; }
   }
