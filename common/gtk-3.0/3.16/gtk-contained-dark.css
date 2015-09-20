@@ -3862,28 +3862,28 @@ GeditWindow.background.csd {
   .gedit-document-panel .prelight-row .button:active {
     color: #BAC3CF; }
 
-GeditWindow.background.csd GeditFileBrowserWidget {
+GeditFileBrowserWidget {
   background-color: rgba(53, 57, 69, 0.95); }
-  .maximized GeditWindow.background.csd GeditFileBrowserWidget {
+  .maximized GeditFileBrowserWidget {
     background-color: #353945; }
-  GeditWindow.background.csd GeditFileBrowserWidget .scrollbar.overlay-indicator:not(.dragging):not(.hovering) .slider {
+  GeditFileBrowserWidget .scrollbar.overlay-indicator:not(.dragging):not(.hovering) .slider {
     background-color: #e7eaee;
     border: 1px solid rgba(0, 0, 0, 0.3); }
-  GeditWindow.background.csd GeditFileBrowserWidget .scrollbar .trough {
+  GeditFileBrowserWidget .scrollbar .trough {
     background-color: rgba(0, 0, 0, 0.2);
     border: none; }
-  GeditWindow.background.csd GeditFileBrowserWidget .scrollbar .slider {
+  GeditFileBrowserWidget .scrollbar .slider {
     background-color: rgba(231, 234, 238, 0.7); }
-    GeditWindow.background.csd GeditFileBrowserWidget .scrollbar .slider:hover {
+    GeditFileBrowserWidget .scrollbar .slider:hover {
       background-color: #e7eaee; }
-    GeditWindow.background.csd GeditFileBrowserWidget .scrollbar .slider:prelight:active {
+    GeditFileBrowserWidget .scrollbar .slider:prelight:active {
       background-color: #5294E2; }
-    GeditWindow.background.csd GeditFileBrowserWidget .scrollbar .slider:insensitive {
+    GeditFileBrowserWidget .scrollbar .slider:insensitive {
       background-color: transparent; }
-  GeditWindow.background.csd GeditFileBrowserWidget .horizontal {
+  GeditFileBrowserWidget .horizontal {
     background-color: transparent;
     border-color: rgba(37, 40, 49, 0.95); }
-    GeditWindow.background.csd GeditFileBrowserWidget .horizontal GtkComboBox {
+    GeditFileBrowserWidget .horizontal GtkComboBox {
       color: #BAC3CF; }
 
 GeditWindow.background.csd GeditFileBrowserView.view {
@@ -3895,26 +3895,26 @@ GeditWindow.background.csd GeditFileBrowserView.view {
       color: #5294E2; }
 
 GtkFileChooserDialog .action-bar.frame .button,
-GtkFileChooserDialog .dialog-vbox > .frame .button, GeditWindow.background.csd GeditFileBrowserWidget .horizontal .button {
+GtkFileChooserDialog .dialog-vbox > .frame .button, GeditFileBrowserWidget .horizontal .button {
   color: #BAC3CF;
   outline-color: rgba(186, 195, 207, 0.3);
   border-color: rgba(26, 28, 34, 0.35);
   background-color: rgba(102, 109, 132, 0.35); }
   GtkFileChooserDialog .action-bar.frame .button:hover,
-  GtkFileChooserDialog .dialog-vbox > .frame .button:hover, GeditWindow.background.csd GeditFileBrowserWidget .horizontal .button:hover {
+  GtkFileChooserDialog .dialog-vbox > .frame .button:hover, GeditFileBrowserWidget .horizontal .button:hover {
     color: #BAC3CF;
     outline-color: rgba(186, 195, 207, 0.3);
     border-color: rgba(26, 28, 34, 0.35);
     background-color: rgba(119, 127, 151, 0.45); }
   GtkFileChooserDialog .action-bar.frame .button:active,
-  GtkFileChooserDialog .dialog-vbox > .frame .button:active, GeditWindow.background.csd GeditFileBrowserWidget .horizontal .button:active, GtkFileChooserDialog .action-bar.frame .button:checked,
-  GtkFileChooserDialog .dialog-vbox > .frame .button:checked, GeditWindow.background.csd GeditFileBrowserWidget .horizontal .button:checked {
+  GtkFileChooserDialog .dialog-vbox > .frame .button:active, GeditFileBrowserWidget .horizontal .button:active, GtkFileChooserDialog .action-bar.frame .button:checked,
+  GtkFileChooserDialog .dialog-vbox > .frame .button:checked, GeditFileBrowserWidget .horizontal .button:checked {
     color: #ffffff;
     outline-color: rgba(255, 255, 255, 0.3);
     border-color: #5294E2;
     background-color: #5294E2; }
   GtkFileChooserDialog .action-bar.frame .button:insensitive,
-  GtkFileChooserDialog .dialog-vbox > .frame .button:insensitive, GeditWindow.background.csd GeditFileBrowserWidget .horizontal .button:insensitive {
+  GtkFileChooserDialog .dialog-vbox > .frame .button:insensitive, GeditFileBrowserWidget .horizontal .button:insensitive {
     color: #5d626e;
     border-color: rgba(26, 28, 34, 0.35);
     background-color: rgba(102, 109, 132, 0.2); }

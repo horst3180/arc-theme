@@ -163,7 +163,7 @@ GeditWindow.background.csd {
   }
 }
 
-GeditWindow.background.csd GeditFileBrowserWidget {
+GeditFileBrowserWidget {
   background-color: $dark_sidebar_bg;
 
   .maximized & { background-color: opacify($dark_sidebar_bg, 1); }
