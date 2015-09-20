@@ -161,10 +161,27 @@ GeditWindow.background.csd {
   .pane-separator,
   .pane-separator:hover { background-color: $dark_sidebar_border; }
 
-  .titlebar .pane-separator,
-  &.maximized .titlebar .pane-separator,
-  .titlebar .pane-separator:backdrop,
-  &.maximized .titlebar .pane-separator:backdrop { background-color: $header_border; }
+  .gedit-headerbar-paned.titlebar .pane-separator,
+  &.maximized .gedit-headerbar-paned.titlebar .pane-separator,
+  .gedit-headerbar-paned.titlebar .pane-separator:backdrop,
+  &.maximized .gedit-headerbar-paned.titlebar .pane-separator:backdrop { background-color: $header_border; }
+
+  .gedit-headerbar-paned.titlebar { background-color: transparent; }
+
+  .gedit-titlebar-left,
+  .gedit-titlebar-right {
+    background-color: $header_bg;
+
+    &:backdrop { background-color: $header_bg_backdrop; }
+  }
+
+  &.maximized .gedit-titlebar-left,
+  &.maximized .gedit-titlebar-right {
+    background-color: opacify($header_bg, 1);
+
+    &:backdrop { background-color: opacify($header_bg_backdrop, 1); }
+  }
+
 }
 
 .gedit-bottom-panel-paned { background-color: $base_color; }

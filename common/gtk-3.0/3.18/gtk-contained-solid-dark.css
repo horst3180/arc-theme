@@ -4013,11 +4013,25 @@ GeditWindow.background.csd {
   GeditWindow.background.csd .pane-separator,
   GeditWindow.background.csd .pane-separator:hover {
     background-color: #2a2d37; }
-  GeditWindow.background.csd .titlebar .pane-separator,
-  GeditWindow.background.csd.maximized .titlebar .pane-separator,
-  GeditWindow.background.csd .titlebar .pane-separator:backdrop,
-  GeditWindow.background.csd.maximized .titlebar .pane-separator:backdrop {
+  GeditWindow.background.csd .gedit-headerbar-paned.titlebar .pane-separator,
+  GeditWindow.background.csd.maximized .gedit-headerbar-paned.titlebar .pane-separator,
+  GeditWindow.background.csd .gedit-headerbar-paned.titlebar .pane-separator:backdrop,
+  GeditWindow.background.csd.maximized .gedit-headerbar-paned.titlebar .pane-separator:backdrop {
     background-color: #262a33; }
+  GeditWindow.background.csd .gedit-headerbar-paned.titlebar {
+    background-color: transparent; }
+  GeditWindow.background.csd .gedit-titlebar-left,
+  GeditWindow.background.csd .gedit-titlebar-right {
+    background-color: #2f343f; }
+    GeditWindow.background.csd .gedit-titlebar-left:backdrop,
+    GeditWindow.background.csd .gedit-titlebar-right:backdrop {
+      background-color: #323843; }
+  GeditWindow.background.csd.maximized .gedit-titlebar-left,
+  GeditWindow.background.csd.maximized .gedit-titlebar-right {
+    background-color: #2f343f; }
+    GeditWindow.background.csd.maximized .gedit-titlebar-left:backdrop,
+    GeditWindow.background.csd.maximized .gedit-titlebar-right:backdrop {
+      background-color: #323843; }
 
 .gedit-bottom-panel-paned {
   background-color: #404552; }
