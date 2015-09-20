@@ -66,6 +66,25 @@ TerminalWindow {
     &.vertical .slider { margin-left: 3px; }
     &.trough { border-width: 0; }
   }
+
+  .notebook {
+    tab .button {
+      color: mix($bg_color, $fg_color, 35%);
+
+      &:hover {
+        color: $fg_color;
+        border-color: $button_border;
+        background-color: $button_bg;
+      }
+    }
+    .active-page, .prelight-page {
+      .button {
+        @extend %undecorated_button;
+        &:hover { color: lighten(red, 15%); @extend %undecorated_button;}
+        &:active { color: $selected_bg_color; @extend %undecorated_button;}
+      }
+    }
+  }
 }
 
 //

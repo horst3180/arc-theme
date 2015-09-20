@@ -735,7 +735,7 @@ NemoWindow .primary-toolbar NemoPathBar.linked:not(.vertical):not(.path-bar) > .
 .app-notification .sidebar-button.button,
 .app-notification.frame .button.flat, .app-notification.frame .sidebar-button.button, .app-notification .button.flat:insensitive,
 .app-notification .sidebar-button.button:insensitive,
-.app-notification.frame .button.flat:insensitive, .app-notification.frame .sidebar-button.button:insensitive {
+.app-notification.frame .button.flat:insensitive, .app-notification.frame .sidebar-button.button:insensitive, TerminalWindow .notebook .active-page .button, TerminalWindow .notebook .prelight-page .button, TerminalWindow .notebook .active-page .button:hover, TerminalWindow .notebook .prelight-page .button:hover, TerminalWindow .notebook .active-page .button:active, TerminalWindow .notebook .prelight-page .button:active {
   border-color: transparent;
   background-color: transparent;
   background-image: none;
@@ -2788,6 +2788,19 @@ TerminalWindow .scrollbar.vertical .slider {
 
 TerminalWindow .scrollbar.trough {
   border-width: 0; }
+
+TerminalWindow .notebook tab .button {
+  color: #92959d; }
+  TerminalWindow .notebook tab .button:hover {
+    color: #5c616c;
+    border-color: #cfd6e6;
+    background-color: #fbfbfc; }
+
+TerminalWindow .notebook .active-page .button:hover, TerminalWindow .notebook .prelight-page .button:hover {
+  color: #ff4d4d; }
+
+TerminalWindow .notebook .active-page .button:active, TerminalWindow .notebook .prelight-page .button:active {
+  color: #5294E2; }
 
 NautilusCanvasViewContainer.view .entry, NemoIconViewContainer .entry {
   border-radius: 3px; }
