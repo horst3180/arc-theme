@@ -3082,6 +3082,7 @@ GeditFileBrowserWidget .toolbar, GeditFileBrowserWidget .inline-toolbar {
 
 .gedit-search-entry-occurrences-tag {
   color: rgba(211, 218, 227, 0.6);
+  border: none;
   margin: 2px;
   padding: 2px; }
 
