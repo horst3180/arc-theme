@@ -255,38 +255,27 @@ GtkTextView { // This will get overridden by .view, needed by gedit line numbers
     box-shadow: none;
   }
 
-  &.error {
-    color: white;
-    border-color: $error_color;
-    background-image: linear-gradient(to bottom, mix($error_color, $base_color, 80%));
-    &:focus {
-      background-image: linear-gradient(to bottom, $error_color);
-      color: white;
-    }
-    &:selected, &:selected:focus {
-      background-color: white;
-      color: $error_color;
-    }
-  }
+  @each $e_type, $e_color in (warning, $warning_color),
+                             (error, $error_color) {
+    &.#{$e_type} {
+      color: $selected_fg_color;
+      border-color: if($variant=='light', $e_color, $entry_border);
+      background-image: linear-gradient(to bottom, mix($e_color, $base_color, 60%));
 
-  &.warning {
-    color: white;
-    border-color: $warning_color;
-    background-image: linear-gradient(to bottom, mix($warning_color, $base_color, 80%));
-    &:focus {
-      background-image: linear-gradient(to bottom, $warning_color);
-      color: white;
-    }
-    &:selected, &:selected:focus {
-      background-color: white;
-      color: $warning_color;
+      &:focus {
+        color: $selected_fg_color;
+        background-image: linear-gradient(to bottom, $e_color);
+        box-shadow: none;
+      }
+      &:selected, &:selected:focus {
+        background-color: $selected_fg_color;
+        color: $e_color;
+      }
     }
   }
 
   &.image { // entry icons colors
     color: mix($fg_color,$base_color,80%);
-    &:hover { color: $fg_color; }
-    &:active { color: $selected_bg_color; }
   }
 
   .osd & {
@@ -601,9 +590,27 @@ $_dot_color: $selected_bg_color;
 .linked:not(.vertical):not(.pathbar) {
   > .entry { @extend %linked; }
 
+
   > .entry + .entry { border-left-color: transparentize($entry_border, 0.7); }
+
+  > .entry.error + .entry,
+  > .entry + .entry.error { border-left-color: if($variant=='light', $error_color, transparentize($entry_border, 0.7)); }
+
+  > .entry.warning + .entry,
+  > .entry + .entry.warning { border-left-color: if($variant=='light', $warning_color, transparentize($entry_border, 0.7)); }
+
+  > .entry.error + .entry.warning { border-left-color: if($variant=='light', $error_color, transparentize($entry_border, 0.7));}
+
+
   > .entry + .entry:focus:not(:last-child),
   > .entry + .entry:focus:last-child { border-left-color: if($variant=='light', $selected_bg_color, $entry_border); }
+
+  > .entry + .entry.warning:focus:not(:last-child),
+  > .entry + .entry.warning:focus:last-child { border-left-color: if($variant=='light', $warning_color, $entry_border); }
+
+  > .entry + .entry.error:focus:not(:last-child),
+  > .entry + .entry.error:focus:last-child { border-left-color: if($variant=='light', $error_color, $entry_border); }
+
 
   > .entry + .button,
   > .entry + .button:hover,
@@ -611,10 +618,22 @@ $_dot_color: $selected_bg_color;
   > .entry + .button:checked,
   > .entry + .button:insensitive { border-left-style: solid; }
 
+
   > .entry:focus:not(:only-child) + .entry,
   > .entry:focus:not(:only-child) + .button,
   > .entry:focus:not(:only-child) + GtkComboBox > .the-button-in-the-combobox,
-  > .entry:focus:not(:only-child) + GtkComboBoxText > .the-button-in-the-combobox { border-left-color:  if($variant=='light', $selected_bg_color, $entry_border); }
+  > .entry:focus:not(:only-child) + GtkComboBoxText > .the-button-in-the-combobox { border-left-color: if($variant=='light', $selected_bg_color, $entry_border); }
+
+  > .entry.warning:focus:not(:only-child) + .entry,
+  > .entry.warning:focus:not(:only-child) + .button,
+  > .entry.warning:focus:not(:only-child) + GtkComboBox > .the-button-in-the-combobox,
+  > .entry.warning:focus:not(:only-child) + GtkComboBoxText > .the-button-in-the-combobox { border-left-color: if($variant=='light', $warning_color, $entry_border); }
+
+  > .entry.error:focus:not(:only-child) + .entry,
+  > .entry.error:focus:not(:only-child) + .button,
+  > .entry.error:focus:not(:only-child) + GtkComboBox > .the-button-in-the-combobox,
+  > .entry.error:focus:not(:only-child) + GtkComboBoxText > .the-button-in-the-combobox { border-left-color: if($variant=='light', $error_color, $entry_border); }
+
 
   > .button:hover:not(:checked):not(:active):not(:only-child),
   > .button:hover:not(:checked):not(:active) + .button:not(:checked):not(:active) { box-shadow: -1px 0 $button_border; }
@@ -644,9 +663,27 @@ $_linked_separator_color: if($variant=='light', transparentize($button_border, 0
 .linked.vertical {
   > .entry { @extend %linked_vertical; }
 
+
   > .entry + .entry { border-top-color: transparentize($entry_border, 0.7); }
+
+  > .entry.error + .entry,
+  > .entry + .entry.error { border-top-color: if($variant=='light', $error_color, transparentize($entry_border, 0.7)); }
+
+  > .entry.warning + .entry,
+  > .entry + .entry.warning { border-top-color: if($variant=='light', $warning_color, transparentize($entry_border, 0.7)); }
+
+  > .entry.error + .entry.warning { border-top-color: if($variant=='light', $error_color, transparentize($entry_border, 0.7));}
+
+
   > .entry + .entry:focus:not(:last-child),
   > .entry + .entry:focus:last-child { border-top-color: if($variant=='light', $selected_bg_color, $entry_border); }
+
+  > .entry + .entry.warning:focus:not(:last-child),
+  > .entry + .entry.warning:focus:last-child { border-top-color: if($variant=='light', $warning_color, $entry_border); }
+
+  > .entry + .entry.error:focus:not(:last-child),
+  > .entry + .entry.error:focus:last-child { border-top-color: if($variant=='light', $error_color, $entry_border); }
+
 
   > .entry + .button,
   > .entry + .button:hover,
@@ -654,10 +691,22 @@ $_linked_separator_color: if($variant=='light', transparentize($button_border, 0
   > .entry + .button:checked,
   > .entry + .button:insensitive { border-top-style: solid; }
 
+
   > .entry:focus:not(:only-child) + .entry,
   > .entry:focus:not(:only-child) + .button,
   > .entry:focus:not(:only-child) + GtkComboBox > .the-button-in-the-combobox,
   > .entry:focus:not(:only-child) + GtkComboBoxText > .the-button-in-the-combobox { border-top-color: if($variant=='light', $selected_bg_color, $entry_border); }
+
+  > .entry.warning:focus:not(:only-child) + .entry,
+  > .entry.warning:focus:not(:only-child) + .button,
+  > .entry.warning:focus:not(:only-child) + GtkComboBox > .the-button-in-the-combobox,
+  > .entry.warning:focus:not(:only-child) + GtkComboBoxText > .the-button-in-the-combobox { border-top-color: if($variant=='light', $warning_color, $entry_border); }
+
+  > .entry.error:focus:not(:only-child) + .entry,
+  > .entry.error:focus:not(:only-child) + .button,
+  > .entry.error:focus:not(:only-child) + GtkComboBox > .the-button-in-the-combobox,
+  > .entry.error:focus:not(:only-child) + GtkComboBoxText > .the-button-in-the-combobox { border-top-color: if($variant=='light', $error_color, $entry_border); }
+
 
   > .button:hover:not(:checked):not(:active):not(:only-child),
   > .button:hover:not(:checked):not(:active) + .button:not(:checked):not(:active) { box-shadow: 0 -1px $button_border; }
@@ -1209,6 +1258,24 @@ GtkComboBox {
       background-image: none;
       background-color: transparent;
     }
+
+    @each $e_type, $e_color in (warning, $warning_color),
+                               (error, $error_color) {
+      &.#{$e_type} {
+        color: $selected_fg_color;
+        border-color: if($darker=='false' and $variant=='light', $e_color, $header_entry_border);
+        background-image: linear-gradient(to bottom, mix($e_color, $header_bg, 60%));
+
+        &:focus {
+          color: $selected_fg_color;
+          background-image: linear-gradient(to bottom, $e_color);
+        }
+        &:selected, &:selected:focus {
+          background-color: $selected_fg_color;
+          color: $e_color;
+        }
+      }
+    }
   }
 
   // Header-bar Buttons
@@ -1284,14 +1351,43 @@ GtkComboBox {
   }
 
   .linked:not(.vertical):not(.pathbar) {
+
     > .entry + .entry { border-left-color: transparentize($header_entry_border, 0.5); }
+
+    > .entry.error + .entry,
+    > .entry + .entry.error { border-left-color: if($variant=='light', $error_color, transparentize($header_entry_border, 0.5)); }
+
+    > .entry.warning + .entry,
+    > .entry + .entry.warning { border-left-color: if($variant=='light', $warning_color, transparentize($header_entry_border, 0.5)); }
+
+    > .entry.error + .entry.warning { border-left-color: if($variant=='light', $error_color, transparentize($header_entry_border, 0.5));}
+
+
     > .entry + .entry:focus:not(:last-child),
     > .entry + .entry:focus:last-child { border-left-color: if($darker=='false' and $variant=='light', $selected_bg_color, $header_entry_border); }
+
+    > .entry + .entry.warning:focus:not(:last-child),
+    > .entry + .entry.warning:focus:last-child { border-left-color: if($variant=='light', $warning_color, $header_entry_border); }
+
+    > .entry + .entry.error:focus:not(:last-child),
+    > .entry + .entry.error:focus:last-child { border-left-color: if($variant=='light', $error_color, $header_entry_border); }
+
 
     > .entry:focus:not(:only-child) + .entry,
     > .entry:focus:not(:only-child) + .button,
     > .entry:focus:not(:only-child) + GtkComboBox > .the-button-in-the-combobox,
     > .entry:focus:not(:only-child) + GtkComboBoxText > .the-button-in-the-combobox { border-left-color:  if($darker=='false' and $variant=='light', $selected_bg_color, $header_entry_border); }
+
+    > .entry.warning:focus:not(:only-child) + .entry,
+    > .entry.warning:focus:not(:only-child) + .button,
+    > .entry.warning:focus:not(:only-child) + GtkComboBox > .the-button-in-the-combobox,
+    > .entry.warning:focus:not(:only-child) + GtkComboBoxText > .the-button-in-the-combobox { border-left-color: if($variant=='light', $warning_color, $header_entry_border); }
+
+    > .entry.error:focus:not(:only-child) + .entry,
+    > .entry.error:focus:not(:only-child) + .button,
+    > .entry.error:focus:not(:only-child) + GtkComboBox > .the-button-in-the-combobox,
+    > .entry.error:focus:not(:only-child) + GtkComboBoxText > .the-button-in-the-combobox { border-left-color: if($variant=='light', $error_color, $header_entry_border); }
+
   }
 
   // Header-bar Suggested and Destructive Action buttons

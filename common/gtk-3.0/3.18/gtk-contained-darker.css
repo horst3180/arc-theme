@@ -183,32 +183,30 @@ GtkTextView {
     background-image: none;
     background-color: transparent;
     box-shadow: none; }
-  .entry.error {
-    color: white;
-    border-color: #FC4138;
-    background-image: linear-gradient(to bottom, #fd6760); }
-    .entry.error:focus {
-      background-image: linear-gradient(to bottom, #FC4138);
-      color: white; }
-    .entry.error:selected, .entry.error:selected:focus {
-      background-color: white;
-      color: #FC4138; }
   .entry.warning {
-    color: white;
+    color: #ffffff;
     border-color: #F27835;
-    background-image: linear-gradient(to bottom, #f5935d); }
+    background-image: linear-gradient(to bottom, #f7ae86); }
     .entry.warning:focus {
+      color: #ffffff;
       background-image: linear-gradient(to bottom, #F27835);
-      color: white; }
+      box-shadow: none; }
     .entry.warning:selected, .entry.warning:selected:focus {
-      background-color: white;
+      background-color: #ffffff;
       color: #F27835; }
+  .entry.error {
+    color: #ffffff;
+    border-color: #FC4138;
+    background-image: linear-gradient(to bottom, #fd8d88); }
+    .entry.error:focus {
+      color: #ffffff;
+      background-image: linear-gradient(to bottom, #FC4138);
+      box-shadow: none; }
+    .entry.error:selected, .entry.error:selected:focus {
+      background-color: #ffffff;
+      color: #FC4138; }
   .entry.image {
     color: #7d8189; }
-    .entry.image:hover {
-      color: #5c616c; }
-    .entry.image:active {
-      color: #5294E2; }
   .osd .entry {
     color: #BAC3CF;
     border-color: rgba(26, 28, 34, 0.35);
@@ -520,9 +518,28 @@ GtkSearchEntry.entry {
 .linked:not(.vertical):not(.pathbar) > .entry + .entry {
   border-left-color: rgba(207, 214, 230, 0.3); }
 
+.linked:not(.vertical):not(.pathbar) > .entry.error + .entry,
+.linked:not(.vertical):not(.pathbar) > .entry + .entry.error {
+  border-left-color: #FC4138; }
+
+.linked:not(.vertical):not(.pathbar) > .entry.warning + .entry,
+.linked:not(.vertical):not(.pathbar) > .entry + .entry.warning {
+  border-left-color: #F27835; }
+
+.linked:not(.vertical):not(.pathbar) > .entry.error + .entry.warning {
+  border-left-color: #FC4138; }
+
 .linked:not(.vertical):not(.pathbar) > .entry + .entry:focus:not(:last-child),
 .linked:not(.vertical):not(.pathbar) > .entry + .entry:focus:last-child {
   border-left-color: #5294E2; }
+
+.linked:not(.vertical):not(.pathbar) > .entry + .entry.warning:focus:not(:last-child),
+.linked:not(.vertical):not(.pathbar) > .entry + .entry.warning:focus:last-child {
+  border-left-color: #F27835; }
+
+.linked:not(.vertical):not(.pathbar) > .entry + .entry.error:focus:not(:last-child),
+.linked:not(.vertical):not(.pathbar) > .entry + .entry.error:focus:last-child {
+  border-left-color: #FC4138; }
 
 .linked:not(.vertical):not(.pathbar) > .entry + .button,
 .linked:not(.vertical):not(.pathbar) > .entry + .button:hover,
@@ -536,6 +553,18 @@ GtkSearchEntry.entry {
 .linked:not(.vertical):not(.pathbar) > .entry:focus:not(:only-child) + GtkComboBox > .the-button-in-the-combobox,
 .linked:not(.vertical):not(.pathbar) > .entry:focus:not(:only-child) + GtkComboBoxText > .the-button-in-the-combobox {
   border-left-color: #5294E2; }
+
+.linked:not(.vertical):not(.pathbar) > .entry.warning:focus:not(:only-child) + .entry,
+.linked:not(.vertical):not(.pathbar) > .entry.warning:focus:not(:only-child) + .button,
+.linked:not(.vertical):not(.pathbar) > .entry.warning:focus:not(:only-child) + GtkComboBox > .the-button-in-the-combobox,
+.linked:not(.vertical):not(.pathbar) > .entry.warning:focus:not(:only-child) + GtkComboBoxText > .the-button-in-the-combobox {
+  border-left-color: #F27835; }
+
+.linked:not(.vertical):not(.pathbar) > .entry.error:focus:not(:only-child) + .entry,
+.linked:not(.vertical):not(.pathbar) > .entry.error:focus:not(:only-child) + .button,
+.linked:not(.vertical):not(.pathbar) > .entry.error:focus:not(:only-child) + GtkComboBox > .the-button-in-the-combobox,
+.linked:not(.vertical):not(.pathbar) > .entry.error:focus:not(:only-child) + GtkComboBoxText > .the-button-in-the-combobox {
+  border-left-color: #FC4138; }
 
 .linked:not(.vertical):not(.pathbar) > .button:hover:not(:checked):not(:active):not(:only-child),
 .linked:not(.vertical):not(.pathbar) > .button:hover:not(:checked):not(:active) + .button:not(:checked):not(:active) {
@@ -565,9 +594,28 @@ GtkSearchEntry.entry {
 .linked.vertical > .entry + .entry {
   border-top-color: rgba(207, 214, 230, 0.3); }
 
+.linked.vertical > .entry.error + .entry,
+.linked.vertical > .entry + .entry.error {
+  border-top-color: #FC4138; }
+
+.linked.vertical > .entry.warning + .entry,
+.linked.vertical > .entry + .entry.warning {
+  border-top-color: #F27835; }
+
+.linked.vertical > .entry.error + .entry.warning {
+  border-top-color: #FC4138; }
+
 .linked.vertical > .entry + .entry:focus:not(:last-child),
 .linked.vertical > .entry + .entry:focus:last-child {
   border-top-color: #5294E2; }
+
+.linked.vertical > .entry + .entry.warning:focus:not(:last-child),
+.linked.vertical > .entry + .entry.warning:focus:last-child {
+  border-top-color: #F27835; }
+
+.linked.vertical > .entry + .entry.error:focus:not(:last-child),
+.linked.vertical > .entry + .entry.error:focus:last-child {
+  border-top-color: #FC4138; }
 
 .linked.vertical > .entry + .button,
 .linked.vertical > .entry + .button:hover,
@@ -581,6 +629,18 @@ GtkSearchEntry.entry {
 .linked.vertical > .entry:focus:not(:only-child) + GtkComboBox > .the-button-in-the-combobox,
 .linked.vertical > .entry:focus:not(:only-child) + GtkComboBoxText > .the-button-in-the-combobox {
   border-top-color: #5294E2; }
+
+.linked.vertical > .entry.warning:focus:not(:only-child) + .entry,
+.linked.vertical > .entry.warning:focus:not(:only-child) + .button,
+.linked.vertical > .entry.warning:focus:not(:only-child) + GtkComboBox > .the-button-in-the-combobox,
+.linked.vertical > .entry.warning:focus:not(:only-child) + GtkComboBoxText > .the-button-in-the-combobox {
+  border-top-color: #F27835; }
+
+.linked.vertical > .entry.error:focus:not(:only-child) + .entry,
+.linked.vertical > .entry.error:focus:not(:only-child) + .button,
+.linked.vertical > .entry.error:focus:not(:only-child) + GtkComboBox > .the-button-in-the-combobox,
+.linked.vertical > .entry.error:focus:not(:only-child) + GtkComboBoxText > .the-button-in-the-combobox {
+  border-top-color: #FC4138; }
 
 .linked.vertical > .button:hover:not(:checked):not(:active):not(:only-child),
 .linked.vertical > .button:hover:not(:checked):not(:active) + .button:not(:checked):not(:active) {
@@ -1087,6 +1147,26 @@ GtkComboBox {
     border-color: #5294E2;
     background-image: none;
     background-color: transparent; }
+  .primary-toolbar .entry.warning, .header-bar .entry.warning {
+    color: #ffffff;
+    border-color: rgba(21, 23, 28, 0.37);
+    background-image: linear-gradient(to bottom, rgba(167, 94, 57, 0.988)); }
+    .primary-toolbar .entry.warning:focus, .header-bar .entry.warning:focus {
+      color: #ffffff;
+      background-image: linear-gradient(to bottom, #F27835); }
+    .primary-toolbar .entry.warning:selected, .header-bar .entry.warning:selected, .primary-toolbar .entry.warning:selected:focus, .header-bar .entry.warning:selected:focus {
+      background-color: #ffffff;
+      color: #F27835; }
+  .primary-toolbar .entry.error, .header-bar .entry.error {
+    color: #ffffff;
+    border-color: rgba(21, 23, 28, 0.37);
+    background-image: linear-gradient(to bottom, rgba(173, 60, 59, 0.988)); }
+    .primary-toolbar .entry.error:focus, .header-bar .entry.error:focus {
+      color: #ffffff;
+      background-image: linear-gradient(to bottom, #FC4138); }
+    .primary-toolbar .entry.error:selected, .header-bar .entry.error:selected, .primary-toolbar .entry.error:selected:focus, .header-bar .entry.error:selected:focus {
+      background-color: #ffffff;
+      color: #FC4138; }
 
 .primary-toolbar .button, .header-bar .button {
   color: rgba(207, 218, 231, 0.8);
@@ -1182,10 +1262,33 @@ GtkComboBox {
 .primary-toolbar .linked:not(.vertical):not(.pathbar) > .entry + .entry, .header-bar .linked:not(.vertical):not(.pathbar) > .entry + .entry {
   border-left-color: rgba(21, 23, 28, 0); }
 
+.primary-toolbar .linked:not(.vertical):not(.pathbar) > .entry.error + .entry,
+.header-bar .linked:not(.vertical):not(.pathbar) > .entry.error + .entry,
+.primary-toolbar .linked:not(.vertical):not(.pathbar) > .entry + .entry.error, .header-bar .linked:not(.vertical):not(.pathbar) > .entry + .entry.error {
+  border-left-color: #FC4138; }
+
+.primary-toolbar .linked:not(.vertical):not(.pathbar) > .entry.warning + .entry,
+.header-bar .linked:not(.vertical):not(.pathbar) > .entry.warning + .entry,
+.primary-toolbar .linked:not(.vertical):not(.pathbar) > .entry + .entry.warning, .header-bar .linked:not(.vertical):not(.pathbar) > .entry + .entry.warning {
+  border-left-color: #F27835; }
+
+.primary-toolbar .linked:not(.vertical):not(.pathbar) > .entry.error + .entry.warning, .header-bar .linked:not(.vertical):not(.pathbar) > .entry.error + .entry.warning {
+  border-left-color: #FC4138; }
+
 .primary-toolbar .linked:not(.vertical):not(.pathbar) > .entry + .entry:focus:not(:last-child),
 .header-bar .linked:not(.vertical):not(.pathbar) > .entry + .entry:focus:not(:last-child),
 .primary-toolbar .linked:not(.vertical):not(.pathbar) > .entry + .entry:focus:last-child, .header-bar .linked:not(.vertical):not(.pathbar) > .entry + .entry:focus:last-child {
   border-left-color: rgba(21, 23, 28, 0.37); }
+
+.primary-toolbar .linked:not(.vertical):not(.pathbar) > .entry + .entry.warning:focus:not(:last-child),
+.header-bar .linked:not(.vertical):not(.pathbar) > .entry + .entry.warning:focus:not(:last-child),
+.primary-toolbar .linked:not(.vertical):not(.pathbar) > .entry + .entry.warning:focus:last-child, .header-bar .linked:not(.vertical):not(.pathbar) > .entry + .entry.warning:focus:last-child {
+  border-left-color: #F27835; }
+
+.primary-toolbar .linked:not(.vertical):not(.pathbar) > .entry + .entry.error:focus:not(:last-child),
+.header-bar .linked:not(.vertical):not(.pathbar) > .entry + .entry.error:focus:not(:last-child),
+.primary-toolbar .linked:not(.vertical):not(.pathbar) > .entry + .entry.error:focus:last-child, .header-bar .linked:not(.vertical):not(.pathbar) > .entry + .entry.error:focus:last-child {
+  border-left-color: #FC4138; }
 
 .primary-toolbar .linked:not(.vertical):not(.pathbar) > .entry:focus:not(:only-child) + .entry,
 .header-bar .linked:not(.vertical):not(.pathbar) > .entry:focus:not(:only-child) + .entry,
@@ -1195,6 +1298,24 @@ GtkComboBox {
 .header-bar .linked:not(.vertical):not(.pathbar) > .entry:focus:not(:only-child) + GtkComboBox > .the-button-in-the-combobox,
 .primary-toolbar .linked:not(.vertical):not(.pathbar) > .entry:focus:not(:only-child) + GtkComboBoxText > .the-button-in-the-combobox, .header-bar .linked:not(.vertical):not(.pathbar) > .entry:focus:not(:only-child) + GtkComboBoxText > .the-button-in-the-combobox {
   border-left-color: rgba(21, 23, 28, 0.37); }
+
+.primary-toolbar .linked:not(.vertical):not(.pathbar) > .entry.warning:focus:not(:only-child) + .entry,
+.header-bar .linked:not(.vertical):not(.pathbar) > .entry.warning:focus:not(:only-child) + .entry,
+.primary-toolbar .linked:not(.vertical):not(.pathbar) > .entry.warning:focus:not(:only-child) + .button,
+.header-bar .linked:not(.vertical):not(.pathbar) > .entry.warning:focus:not(:only-child) + .button,
+.primary-toolbar .linked:not(.vertical):not(.pathbar) > .entry.warning:focus:not(:only-child) + GtkComboBox > .the-button-in-the-combobox,
+.header-bar .linked:not(.vertical):not(.pathbar) > .entry.warning:focus:not(:only-child) + GtkComboBox > .the-button-in-the-combobox,
+.primary-toolbar .linked:not(.vertical):not(.pathbar) > .entry.warning:focus:not(:only-child) + GtkComboBoxText > .the-button-in-the-combobox, .header-bar .linked:not(.vertical):not(.pathbar) > .entry.warning:focus:not(:only-child) + GtkComboBoxText > .the-button-in-the-combobox {
+  border-left-color: #F27835; }
+
+.primary-toolbar .linked:not(.vertical):not(.pathbar) > .entry.error:focus:not(:only-child) + .entry,
+.header-bar .linked:not(.vertical):not(.pathbar) > .entry.error:focus:not(:only-child) + .entry,
+.primary-toolbar .linked:not(.vertical):not(.pathbar) > .entry.error:focus:not(:only-child) + .button,
+.header-bar .linked:not(.vertical):not(.pathbar) > .entry.error:focus:not(:only-child) + .button,
+.primary-toolbar .linked:not(.vertical):not(.pathbar) > .entry.error:focus:not(:only-child) + GtkComboBox > .the-button-in-the-combobox,
+.header-bar .linked:not(.vertical):not(.pathbar) > .entry.error:focus:not(:only-child) + GtkComboBox > .the-button-in-the-combobox,
+.primary-toolbar .linked:not(.vertical):not(.pathbar) > .entry.error:focus:not(:only-child) + GtkComboBoxText > .the-button-in-the-combobox, .header-bar .linked:not(.vertical):not(.pathbar) > .entry.error:focus:not(:only-child) + GtkComboBoxText > .the-button-in-the-combobox {
+  border-left-color: #FC4138; }
 
 .primary-toolbar .button.suggested-action, .header-bar .button.suggested-action {
   background-clip: border-box;

@@ -270,38 +270,27 @@ GtkFlowBox .grid-child {
     }
   }
 
-  &.error {
-    color: white;
-    border-color: $error_color;
-    background-image: linear-gradient(to bottom, mix($error_color, $base_color, 80%));
-    &:focus {
-      background-image: linear-gradient(to bottom, $error_color);
-      color: white;
-    }
-    &:selected, &:selected:focus {
-      background-color: white;
-      color: $error_color;
-    }
-  }
+  @each $e_type, $e_color in (warning, $warning_color),
+                             (error, $error_color) {
+    &.#{$e_type} {
+      color: $selected_fg_color;
+      border-color: if($variant=='light', $e_color, $entry_border);
+      background-image: linear-gradient(to bottom, mix($e_color, $base_color, 60%));
 
-  &.warning {
-    color: white;
-    border-color: $warning_color;
-    background-image: linear-gradient(to bottom, mix($warning_color, $base_color, 80%));
-    &:focus {
-      background-image: linear-gradient(to bottom, $warning_color);
-      color: white;
-    }
-    &:selected, &:selected:focus {
-      background-color: white;
-      color: $warning_color;
+      &:focus {
+        color: $selected_fg_color;
+        background-image: linear-gradient(to bottom, $e_color);
+        box-shadow: none;
+      }
+      &:selected, &:selected:focus {
+        background-color: $selected_fg_color;
+        color: $e_color;
+      }
     }
   }
 
   &.image { // entry icons colors
     color: mix($fg_color,$base_color,80%);
-    &:hover { color: $fg_color; }
-    &:active { color: $selected_bg_color; }
   }
 
   .linked.vertical > & { //FIXME comment stuff and make the whole thing smarter.
@@ -1215,6 +1204,24 @@ GtkComboBox {
       border-color: $selected_bg_color;
       background-image: none;
       background-color: transparent;
+    }
+
+    @each $e_type, $e_color in (warning, $warning_color),
+                               (error, $error_color) {
+      &.#{$e_type} {
+        color: $selected_fg_color;
+        border-color: if($darker=='false' and $variant=='light', $e_color, $header_entry_border);
+        background-image: linear-gradient(to bottom, mix($e_color, $header_bg, 60%));
+
+        &:focus {
+          color: $selected_fg_color;
+          background-image: linear-gradient(to bottom, $e_color);
+        }
+        &:selected, &:selected:focus {
+          background-color: $selected_fg_color;
+          color: $e_color;
+        }
+      }
     }
   }
 
