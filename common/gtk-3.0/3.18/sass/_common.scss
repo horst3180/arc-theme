@@ -2114,33 +2114,24 @@ GtkSwitch {
   }
 }
 
-@each $i,$j in ('',''), ('.list-row:selected ','-selected') {
+@each $k,$l in ('',''),
+               (':active','-active'),
+               (':insensitive','-insensitive'),
+               (':active:insensitive','-active-insensitive') {
 
-  @each $k,$l in ('',''),
-                 (':active','-active'),
-                 (':insensitive','-insensitive'),
-                 (':active:insensitive','-active-insensitive') {
+  // load switch troughs from .png files in assets directory
 
-    // load switch troughs from .png files in assets directory
+  GtkSwitch.trough#{$k} {
+    background-image: -gtk-scaled(url("assets/switch#{$l}#{$asset_suffix}.png"),url("assets/switch#{$l}#{$asset_suffix}@2.png"));
+  }
 
-    #{$i}GtkSwitch.trough#{$k} {
-      background-image: -gtk-scaled(url("assets/switch#{$l}#{$asset_suffix}.png"),url("assets/switch#{$l}#{$asset_suffix}@2.png"));
-    }
+  .list-row:selected GtkSwitch.trough#{$k} {
+    background-image: -gtk-scaled(url("assets/switch#{$l}-selected.png"),url("assets/switch#{$l}-selected@2.png"));
+  }
 
-    .list-row:selected GtkSwitch.trough#{$k} {
-      background-image: -gtk-scaled(url("assets/switch#{$l}-selected.png"),url("assets/switch#{$l}-selected@2.png"));
-    }
-
-    .header-bar GtkSwitch.trough#{$k},
-    .primary-toolbar GtkSwitch.trough#{$k} {
-      background-image: -gtk-scaled(url("assets/switch#{$l}-header#{$darker_asset_suffix}.png"),url("assets/switch#{$l}-header#{$darker_asset_suffix}@2.png"));
-    }
-
-    // load switch sliders from .png files in assets directory
-
-    //#{$i}GtkSwitch.slider#{$k} {
-    //  background-image: -gtk-scaled(url("assets/switch-slider#{$l}#{$j}#{$asset_suffix}.png"),url("assets/switch-slider#{$l}#{$j}#{$asset_suffix}@2.png"));
-    //}
+  .header-bar GtkSwitch.trough#{$k},
+  .primary-toolbar GtkSwitch.trough#{$k} {
+    background-image: -gtk-scaled(url("assets/switch#{$l}-header#{$darker_asset_suffix}.png"),url("assets/switch#{$l}-header#{$darker_asset_suffix}@2.png"));
   }
 }
 

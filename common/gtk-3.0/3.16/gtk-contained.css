@@ -1814,46 +1814,6 @@ GtkSwitch.trough:active:insensitive {
 .primary-toolbar GtkSwitch.trough:active:insensitive {
   background-image: -gtk-scaled(url("assets/switch-active-insensitive-header.png"), url("assets/switch-active-insensitive-header@2.png")); }
 
-.list-row:selected GtkSwitch.trough {
-  background-image: -gtk-scaled(url("assets/switch.png"), url("assets/switch@2.png")); }
-
-.list-row:selected GtkSwitch.trough {
-  background-image: -gtk-scaled(url("assets/switch-selected.png"), url("assets/switch-selected@2.png")); }
-
-.header-bar GtkSwitch.trough,
-.primary-toolbar GtkSwitch.trough {
-  background-image: -gtk-scaled(url("assets/switch-header.png"), url("assets/switch-header@2.png")); }
-
-.list-row:selected GtkSwitch.trough:active {
-  background-image: -gtk-scaled(url("assets/switch-active.png"), url("assets/switch-active@2.png")); }
-
-.list-row:selected GtkSwitch.trough:active {
-  background-image: -gtk-scaled(url("assets/switch-active-selected.png"), url("assets/switch-active-selected@2.png")); }
-
-.header-bar GtkSwitch.trough:active,
-.primary-toolbar GtkSwitch.trough:active {
-  background-image: -gtk-scaled(url("assets/switch-active-header.png"), url("assets/switch-active-header@2.png")); }
-
-.list-row:selected GtkSwitch.trough:insensitive {
-  background-image: -gtk-scaled(url("assets/switch-insensitive.png"), url("assets/switch-insensitive@2.png")); }
-
-.list-row:selected GtkSwitch.trough:insensitive {
-  background-image: -gtk-scaled(url("assets/switch-insensitive-selected.png"), url("assets/switch-insensitive-selected@2.png")); }
-
-.header-bar GtkSwitch.trough:insensitive,
-.primary-toolbar GtkSwitch.trough:insensitive {
-  background-image: -gtk-scaled(url("assets/switch-insensitive-header.png"), url("assets/switch-insensitive-header@2.png")); }
-
-.list-row:selected GtkSwitch.trough:active:insensitive {
-  background-image: -gtk-scaled(url("assets/switch-active-insensitive.png"), url("assets/switch-active-insensitive@2.png")); }
-
-.list-row:selected GtkSwitch.trough:active:insensitive {
-  background-image: -gtk-scaled(url("assets/switch-active-insensitive-selected.png"), url("assets/switch-active-insensitive-selected@2.png")); }
-
-.header-bar GtkSwitch.trough:active:insensitive,
-.primary-toolbar GtkSwitch.trough:active:insensitive {
-  background-image: -gtk-scaled(url("assets/switch-active-insensitive-header.png"), url("assets/switch-active-insensitive-header@2.png")); }
-
 /*************************
  * Check and Radio items *
  *************************/
