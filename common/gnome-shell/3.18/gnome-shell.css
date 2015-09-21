@@ -185,10 +185,10 @@ StScrollBar {
   .modal-dialog .modal-dialog-content-box {
     padding: 20px 10px 10px 10px; }
   .modal-dialog-linked-button {
-    height: 38px;
+    height: 39px;
     padding: 0;
     box-shadow: inset 0 0 black;
-    border-top-width: 1px;
+    border-top-width: 0px;
     border-bottom-width: 0;
     color: #BAC3CF;
     background-color: rgba(53, 57, 69, 0.95);

@@ -192,7 +192,7 @@ StScrollBar {
     border-bottom-width: 0;
     color: #BAC3CF;
     background-color: rgba(53, 57, 69, 0.95);
-    border-color: rgba(42, 45, 55, 0.95); }
+    border-color: rgba(35, 38, 46, 0.95); }
     .modal-dialog-linked-button:hover {
       background-color: rgba(64, 69, 83, 0.95); }
     .modal-dialog-linked-button:focus {
