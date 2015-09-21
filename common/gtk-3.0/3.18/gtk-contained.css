@@ -996,11 +996,12 @@ GtkComboBox {
   border-width: 0 0 1px;
   border-style: solid;
   border-radius: 0;
-  border-color: rgba(212, 213, 219, 0.95);
+  border-color: #d4d5db;
   color: rgba(82, 93, 118, 0.8);
   background-color: #e7e8eb; }
   .csd .header-bar {
-    background-color: rgba(231, 232, 235, 0.95); }
+    background-color: rgba(231, 232, 235, 0.95);
+    border-color: rgba(212, 213, 219, 0.95); }
   .header-bar:backdrop {
     color: rgba(82, 93, 118, 0.5);
     background-color: #eff0f2; }
@@ -1077,9 +1078,11 @@ GtkComboBox {
   .maximized .header-bar, .maximized .header-bar:backdrop {
     border-radius: 0; }
   .maximized .header-bar {
-    background-color: #e7e8eb; }
+    background-color: #e7e8eb;
+    border-color: #d4d5db; }
     .maximized .header-bar:backdrop {
-      background-color: #eff0f2; }
+      background-color: #eff0f2;
+      border-color: #d4d5db; }
   .header-bar.default-decoration {
     padding-top: 5px;
     padding-bottom: 5px;

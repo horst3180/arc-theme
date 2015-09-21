@@ -1033,12 +1033,15 @@ GtkComboBox {
   border-width: 0 0 1px;
   border-style: solid;
   border-radius: 0;
-  border-color: $header_border;
+  border-color: opacify($header_border, 1);
 
   color: $header_fg;
   background-color: opacify($header_bg, 1);
 
-  .csd & { background-color: $header_bg; }  // Transparent header-bars only in csd windows
+  .csd & {  // Transparent header-bars only in csd windows
+    background-color: $header_bg;
+    border-color: $header_border;
+  }
 
   &:backdrop {
     color: transparentize($header_fg, 0.3);
@@ -1127,8 +1130,12 @@ GtkComboBox {
 
   .maximized & {
     background-color: opacify($header_bg, 1);
+    border-color: opacify($header_border, 1);
 
-    &:backdrop { background-color: opacify($header_bg_backdrop, 1); }
+    &:backdrop {
+      background-color: opacify($header_bg_backdrop, 1);
+      border-color: opacify($header_border, 1);
+    }
   }
 }
 
