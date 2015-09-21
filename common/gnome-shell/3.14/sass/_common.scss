@@ -865,7 +865,7 @@ StScrollBar {
 
     &:active, &:overview, &:focus, &:checked {
       color: $selected_fg_color;
-      background:$selected_bg_color, url("misc/null.svg");
+      background:$selected_bg_color, url("common-assets/misc/null.svg");
       border-image: none;
       box-shadow: none;
       border-bottom-width: 1px;
@@ -1102,7 +1102,7 @@ StScrollBar {
 .calendar-today:hover {
   font-weight: bold;
   color: $selected_fg_color;
-  background: $selected_bg_color, url("misc/null.svg");
+  background: $selected_bg_color, url("common-assets/misc/null.svg");
   border-width: 0;
 }
 

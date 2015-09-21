@@ -675,7 +675,7 @@ StScrollBar {
       text-shadow: 0 0 transparent; }
     #panel .panel-button:active, #panel .panel-button:overview, #panel .panel-button:focus, #panel .panel-button:checked {
       color: #ffffff;
-      background: #5294E2, url("misc/null.svg");
+      background: #5294E2, url("common-assets/misc/null.svg");
       border-image: none;
       box-shadow: none;
       border-bottom-width: 1px;
@@ -871,7 +871,7 @@ StScrollBar {
 .calendar-today:hover {
   font-weight: bold;
   color: #ffffff;
-  background: #5294E2, url("misc/null.svg");
+  background: #5294E2, url("common-assets/misc/null.svg");
   border-width: 0; }
 
 .calendar-day-with-events {
