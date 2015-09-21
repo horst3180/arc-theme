@@ -339,6 +339,7 @@ GtkSearchEntry.entry {
       border-color: rgba(26, 28, 34, 0.35);
       background-color: rgba(119, 127, 151, 0.45); }
     .osd .button:active, .osd .button:checked {
+      background-clip: padding-box;
       color: #ffffff;
       outline-color: rgba(255, 255, 255, 0.3);
       border-color: rgba(26, 28, 34, 0.35);
@@ -2323,7 +2324,8 @@ GtkScrolledWindow GtkViewport.frame {
       color: #ffffff;
       outline-color: rgba(255, 255, 255, 0.3);
       border-color: rgba(26, 28, 34, 0.35);
-      background-color: #5294E2; }
+      background-color: #5294E2;
+      background-clip: padding-box; }
     .app-notification .button:insensitive,
     .app-notification.frame .button:insensitive {
       color: #5d626e;

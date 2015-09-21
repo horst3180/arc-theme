@@ -475,6 +475,7 @@ $_dot_color: $selected_bg_color;
       @extend %linked;
     }
     &:active, &:checked {
+      background-clip: padding-box;
       @include button(osd-active);
       @extend %linked;
     }
@@ -2300,7 +2301,7 @@ GtkScrolledWindow {
       &:insensitive { @extend %undecorated_button; }
     }
     &:hover { @include button(osd-hover); }
-    &:active, &:checked { @include button(osd-active); }
+    &:active, &:checked { @include button(osd-active); background-clip: padding-box; }
     &:insensitive { @include button(osd-insensitive);
     }
   }
