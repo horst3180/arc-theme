@@ -10,13 +10,13 @@
 
 <!-- meaningfull constants -->
 
-<constant name="C_title_focused" value="#70788d" />
-<constant name="C_title_unfocused" value="#979dac" />
+<constant name="C_title_focused" value="#afb8c6" />
+<constant name="C_title_unfocused" value="#8a939f" />
 
-<constant name="C_wm_bg_focused" value="#e7e8eb" />
-<constant name="C_wm_bg_unfocused" value="#eff0f2" />
+<constant name="C_wm_bg_focused" value="#2f343f" />
+<constant name="C_wm_bg_unfocused" value="#323843" />
 
-<constant name="C_wm_highlight" value="#eeeff1" />
+<constant name="C_wm_highlight" value="#353a48" />
 
 <!-- window button colors -->
 
