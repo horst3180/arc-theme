@@ -106,7 +106,7 @@
   // active osd entry
   //
     color: $selected_fg_color;
-    border-color: if($darker=='false' and $variant=='light', $selected_bg_color, transparent);
+    border-color: $osd_entry_border;
     background-image: linear-gradient(to bottom, $selected_bg_color);
   }
 
@@ -260,7 +260,7 @@
   //
     color: $selected_fg_color;
     outline-color: transparentize($selected_fg_color, 0.7);
-    border-color: $selected_bg_color;
+    border-color: $osd_button_border;
     background-color: $selected_bg_color;
   }
 

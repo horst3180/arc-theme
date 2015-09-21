@@ -34,35 +34,35 @@ stage {
   color: #D3DAE3;
   background-color: #444a58;
   border: 1px solid #2b2e39;
-  box-shadow: inset 0 2px 4px rgba(68, 74, 88, 0.05); }
+  box-shadow: inset 0 1px rgba(68, 74, 88, 0.05); }
   .button:focus, .notification-banner .notification-button:focus,
   .hotplug-notification-item:focus {
     text-shadow: 0 1px rgba(64, 69, 82, 0);
     color: #D3DAE3;
     background-color: #444a58;
     border: 1px solid #5294E2;
-    box-shadow: inset 0 2px 4px rgba(68, 74, 88, 0.05); }
+    box-shadow: inset 0 1px rgba(68, 74, 88, 0.05); }
   .button:hover, .notification-banner .notification-button:hover,
   .hotplug-notification-item:hover {
     text-shadow: 0 1px rgba(64, 69, 82, 0);
     color: #D3DAE3;
     background-color: #505666;
     border: 1px solid #2b2e39;
-    box-shadow: inset 0 2px 4px rgba(80, 86, 102, 0.05); }
+    box-shadow: inset 0 1px rgba(80, 86, 102, 0.05); }
   .button:hover:focus, .notification-banner .notification-button:hover:focus,
   .hotplug-notification-item:hover:focus {
     text-shadow: 0 1px rgba(64, 69, 82, 0);
     color: #D3DAE3;
     background-color: #444a58;
     border: 1px solid #5294E2;
-    box-shadow: inset 0 2px 4px rgba(68, 74, 88, 0.05); }
+    box-shadow: inset 0 1px rgba(68, 74, 88, 0.05); }
   .button:active, .notification-banner .notification-button:active,
   .hotplug-notification-item:active, .button:active:focus, .notification-banner .notification-button:active:focus,
   .hotplug-notification-item:active:focus {
     text-shadow: 0 1px rgba(64, 69, 82, 0);
     color: #ffffff;
     background-color: #5294E2;
-    border: 1px solid #5294E2;
+    border: 1px solid #2b2e39;
     box-shadow: inset 0 1px rgba(82, 148, 226, 0.05); }
   .button:insensitive, .notification-banner .notification-button:insensitive,
   .hotplug-notification-item:insensitive {
@@ -70,30 +70,34 @@ stage {
     color: rgba(211, 218, 227, 0.45);
     border: 1px solid rgba(43, 46, 57, 0.55);
     background-color: rgba(68, 74, 88, 0.55);
-    box-shadow: inset 0 2px 4px rgba(68, 74, 88, 0.05); }
+    box-shadow: inset 0 1px rgba(68, 74, 88, 0.05); }
 
 .modal-dialog-button-box .button {
   text-shadow: 0 1px rgba(64, 69, 82, 0);
   color: #BAC3CF;
   border: 1px solid rgba(26, 28, 34, 0.35);
-  background-color: rgba(102, 109, 132, 0.35); }
+  background-color: rgba(102, 109, 132, 0.35);
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.05); }
   .modal-dialog-button-box .button:hover {
     text-shadow: 0 1px rgba(64, 69, 82, 0);
     color: #BAC3CF;
     border: 1px solid rgba(26, 28, 34, 0.35);
-    background-color: rgba(119, 127, 151, 0.45); }
+    background-color: rgba(119, 127, 151, 0.45);
+    box-shadow: inset 0 1px rgba(0, 0, 0, 0.05); }
   .modal-dialog-button-box .button:focus {
     color: #5294E2; }
   .modal-dialog-button-box .button:active {
     text-shadow: 0 1px rgba(64, 69, 82, 0);
     color: #ffffff;
-    border: 1px solid #5294E2;
-    background-color: #5294E2; }
+    border: 1px solid rgba(26, 28, 34, 0.35);
+    background-color: #5294E2;
+    box-shadow: inset 0 1px rgba(82, 148, 226, 0.05); }
   .modal-dialog-button-box .button:insensitive {
     text-shadow: 0 1px rgba(64, 69, 82, 0);
     color: #5d626e;
     border: 1px solid rgba(26, 28, 34, 0.35);
-    background-color: rgba(102, 109, 132, 0.2); }
+    background-color: rgba(102, 109, 132, 0.2);
+    box-shadow: inset 0 1px rgba(0, 0, 0, 0.05); }
 
 StEntry {
   padding: 7px;
@@ -767,14 +771,14 @@ StScrollBar {
     color: #D3DAE3;
     background-color: #505666;
     border: 1px solid #2b2e39;
-    box-shadow: inset 0 2px 4px rgba(80, 86, 102, 0.05); }
+    box-shadow: inset 0 1px rgba(80, 86, 102, 0.05); }
   .datemenu-today-button:active,
   .world-clocks-button:active,
   .message-list-section-title:active {
     text-shadow: 0 1px rgba(64, 69, 82, 0);
     color: #ffffff;
     background-color: #5294E2;
-    border: 1px solid #5294E2;
+    border: 1px solid #2b2e39;
     box-shadow: inset 0 1px rgba(82, 148, 226, 0.05); }
 
 .datemenu-today-button .date-label {
@@ -1235,12 +1239,14 @@ StScrollBar {
   text-shadow: 0 1px rgba(64, 69, 82, 0);
   color: #BAC3CF;
   border: 1px solid rgba(26, 28, 34, 0.35);
-  background-color: rgba(102, 109, 132, 0.35); }
+  background-color: rgba(102, 109, 132, 0.35);
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.05); }
   .app-view-control:hover {
     text-shadow: 0 1px rgba(64, 69, 82, 0);
     color: #BAC3CF;
     border: 1px solid rgba(26, 28, 34, 0.35);
-    background-color: rgba(119, 127, 151, 0.45); }
+    background-color: rgba(119, 127, 151, 0.45);
+    box-shadow: inset 0 1px rgba(0, 0, 0, 0.05); }
   .app-view-control:checked {
     color: #ffffff;
     background-color: #5294E2; }
@@ -1560,22 +1566,26 @@ StScrollBar {
   text-shadow: 0 1px rgba(64, 69, 82, 0);
   color: #BAC3CF;
   border: 1px solid rgba(26, 28, 34, 0.35);
-  background-color: rgba(102, 109, 132, 0.35); }
+  background-color: rgba(102, 109, 132, 0.35);
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.05); }
   .keyboard-key:hover {
     text-shadow: 0 1px rgba(64, 69, 82, 0);
     color: #BAC3CF;
     border: 1px solid rgba(26, 28, 34, 0.35);
-    background-color: rgba(119, 127, 151, 0.45); }
+    background-color: rgba(119, 127, 151, 0.45);
+    box-shadow: inset 0 1px rgba(0, 0, 0, 0.05); }
   .keyboard-key:active, .keyboard-key:checked {
     text-shadow: 0 1px rgba(64, 69, 82, 0);
     color: #ffffff;
-    border: 1px solid #5294E2;
-    background-color: #5294E2; }
+    border: 1px solid rgba(26, 28, 34, 0.35);
+    background-color: #5294E2;
+    box-shadow: inset 0 1px rgba(82, 148, 226, 0.05); }
   .keyboard-key:grayed {
     text-shadow: 0 1px rgba(64, 69, 82, 0);
     color: #5d626e;
     border: 1px solid rgba(26, 28, 34, 0.35);
-    background-color: rgba(102, 109, 132, 0.2); }
+    background-color: rgba(102, 109, 132, 0.2);
+    box-shadow: inset 0 1px rgba(0, 0, 0, 0.05); }
 
 .keyboard-subkeys {
   color: #BAC3CF;
@@ -1651,25 +1661,25 @@ StScrollBar {
       color: #D3DAE3;
       background-color: #444a58;
       border: 1px solid #2b2e39;
-      box-shadow: inset 0 2px 4px rgba(68, 74, 88, 0.05); }
+      box-shadow: inset 0 1px rgba(68, 74, 88, 0.05); }
       .login-dialog .modal-dialog-button:default:hover, .login-dialog .modal-dialog-button:default:focus {
         text-shadow: 0 1px rgba(64, 69, 82, 0);
         color: #D3DAE3;
         background-color: #505666;
         border: 1px solid #2b2e39;
-        box-shadow: inset 0 2px 4px rgba(80, 86, 102, 0.05); }
+        box-shadow: inset 0 1px rgba(80, 86, 102, 0.05); }
       .login-dialog .modal-dialog-button:default:active {
         text-shadow: 0 1px rgba(64, 69, 82, 0);
         color: #ffffff;
         background-color: #5294E2;
-        border: 1px solid #5294E2;
+        border: 1px solid #2b2e39;
         box-shadow: inset 0 1px rgba(82, 148, 226, 0.05); }
       .login-dialog .modal-dialog-button:default:insensitive {
         text-shadow: 0 1px rgba(64, 69, 82, 0);
         color: rgba(211, 218, 227, 0.45);
         border: 1px solid rgba(43, 46, 57, 0.55);
         background-color: rgba(68, 74, 88, 0.55);
-        box-shadow: inset 0 2px 4px rgba(68, 74, 88, 0.05); }
+        box-shadow: inset 0 1px rgba(68, 74, 88, 0.05); }
 
 .login-dialog-logo-bin {
   padding: 24px 0px; }
@@ -1880,7 +1890,7 @@ StScrollBar {
   .lg-dialog StEntry:focus {
     color: #ffffff;
     background-color: #5294E2;
-    border: 1px solid #5294E2;
+    border: 1px solid rgba(26, 28, 34, 0.35);
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05); }
 
 .lg-dialog .shell-link {

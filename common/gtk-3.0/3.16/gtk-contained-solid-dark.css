@@ -251,7 +251,7 @@ GtkTextView {
       color: inherit; }
     .osd .entry:focus {
       color: #ffffff;
-      border-color: transparent;
+      border-color: rgba(26, 28, 34, 0.4);
       background-image: linear-gradient(to bottom, #5294E2); }
     .osd .entry:insensitive {
       color: rgba(186, 195, 207, 0.55);
@@ -338,7 +338,7 @@ GtkSearchEntry.entry {
     .button.osd:active, .button.osd:checked {
       color: #ffffff;
       outline-color: rgba(255, 255, 255, 0.3);
-      border-color: #5294E2;
+      border-color: rgba(26, 28, 34, 0.4);
       background-color: #5294E2; }
     .button.osd:insensitive {
       color: #5d626e;
@@ -375,7 +375,7 @@ GtkSearchEntry.entry {
     .osd .button:active, .osd .button:checked {
       color: #ffffff;
       outline-color: rgba(255, 255, 255, 0.3);
-      border-color: #5294E2;
+      border-color: rgba(26, 28, 34, 0.4);
       background-color: #5294E2; }
     .osd .button:insensitive {
       color: #5d626e;
@@ -399,7 +399,7 @@ GtkSearchEntry.entry {
       .osd .button.flat:active, .osd .button.flat:checked {
         color: #ffffff;
         outline-color: rgba(255, 255, 255, 0.3);
-        border-color: #5294E2;
+        border-color: rgba(26, 28, 34, 0.4);
         background-color: #5294E2; }
   .button.suggested-action {
     background-clip: border-box;
@@ -2187,7 +2187,7 @@ GtkScrolledWindow GtkViewport.frame {
     .app-notification.frame .button:active, .app-notification.frame .button:checked {
       color: #ffffff;
       outline-color: rgba(255, 255, 255, 0.3);
-      border-color: #5294E2;
+      border-color: rgba(26, 28, 34, 0.4);
       background-color: #5294E2; }
     .app-notification .button:insensitive,
     .app-notification.frame .button:insensitive {
@@ -3559,7 +3559,7 @@ GtkListBox .h4 {
   #buttonbox_frame .button:active, #buttonbox_frame .button:checked {
     color: #ffffff;
     outline-color: rgba(255, 255, 255, 0.3);
-    border-color: #5294E2;
+    border-color: rgba(26, 28, 34, 0.4);
     background-color: #5294E2; }
   #buttonbox_frame .button:insensitive {
     color: #5d626e;
@@ -3911,7 +3911,7 @@ GtkFileChooserDialog .dialog-vbox > .frame .button, GeditFileBrowserWidget .hori
   GtkFileChooserDialog .dialog-vbox > .frame .button:checked, GeditFileBrowserWidget .horizontal .button:checked {
     color: #ffffff;
     outline-color: rgba(255, 255, 255, 0.3);
-    border-color: #5294E2;
+    border-color: rgba(26, 28, 34, 0.4);
     background-color: #5294E2; }
   GtkFileChooserDialog .action-bar.frame .button:insensitive,
   GtkFileChooserDialog .dialog-vbox > .frame .button:insensitive, GeditFileBrowserWidget .horizontal .button:insensitive {
@@ -3932,7 +3932,7 @@ GtkFileChooserDialog .dialog-vbox > .frame .entry {
   GtkFileChooserDialog .action-bar.frame .entry:focus,
   GtkFileChooserDialog .dialog-vbox > .frame .entry:focus {
     color: #ffffff;
-    border-color: transparent;
+    border-color: rgba(26, 28, 34, 0.4);
     background-image: linear-gradient(to bottom, #5294E2); }
   GtkFileChooserDialog .action-bar.frame .entry:insensitive,
   GtkFileChooserDialog .dialog-vbox > .frame .entry:insensitive {
