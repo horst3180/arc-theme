@@ -2125,7 +2125,8 @@ GtkSwitch {
     background-image: -gtk-scaled(url("assets/switch#{$l}#{$asset_suffix}.png"),url("assets/switch#{$l}#{$asset_suffix}@2.png"));
   }
 
-  .list-row:selected GtkSwitch.trough#{$k} {
+  .list-row:selected GtkSwitch.trough#{$k},
+  GtkInfoBar GtkSwitch.trough#{$k} {
     background-image: -gtk-scaled(url("assets/switch#{$l}-selected.png"),url("assets/switch#{$l}-selected@2.png"));
   }
 
@@ -2160,7 +2161,8 @@ GtkSwitch {
     // too similar in luminosity to the selected background color, hence
     // we need special casing.
     GtkTreeView.view.#{$w}#{$s}:selected,
-    .list-row:selected .#{$w}#{$s} {
+    .list-row:selected .#{$w}#{$s},
+    GtkInfoBar .#{$w}#{$s} {
       -gtk-icon-source: -gtk-scaled(url("assets/#{$a}#{$as}-selected.png"),
                                     url("assets/#{$a}#{$as}-selected@2.png"));
     }
@@ -2237,8 +2239,9 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
         border-color: darken($selected_bg_color, 10%);
       }
     }
-    //selected list-row sliders
-    .list-row:selected & {
+    //selected list-row and infobar sliders
+    .list-row:selected &,
+    GtkInfoBar & {
       background-image: linear-gradient(to bottom, $selected_fg_color);
       border-color: $selected_fg_color;
 
@@ -2284,8 +2287,9 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
       }
       &:insensitive {  }
     }
-    // troughs in selected list-rows
-    .list-row:selected & {
+    // troughs in selected list-rows and infobars
+    .list-row:selected &,
+    GtkInfoBar & {
       background-image: linear-gradient(to bottom, transparentize(black, 0.8));
 
       &.highlight {
@@ -2327,6 +2331,8 @@ GtkProgressBar {
   &.osd {
     background-color: $selected_bg_color;
   }
+  .list-row:selected &,
+  GtkInfoBar & { background-color: $selected_fg_color; }
 }
 
 .osd .scale.progressbar {
@@ -2345,6 +2351,8 @@ GtkProgressBar.trough {
     box-shadow: none;
     //FIXME: there is a margin on top
   }
+  .list-row:selected &,
+  GtkInfoBar & { background-color: transparentize(black, 0.8); }
 }
 
 /*************

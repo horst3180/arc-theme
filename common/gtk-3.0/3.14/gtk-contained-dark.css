@@ -1716,7 +1716,8 @@ GtkSwitch {
 GtkSwitch.trough {
   background-image: -gtk-scaled(url("assets/switch-dark.png"), url("assets/switch-dark@2.png")); }
 
-.list-row:selected GtkSwitch.trough {
+.list-row:selected GtkSwitch.trough,
+GtkInfoBar GtkSwitch.trough {
   background-image: -gtk-scaled(url("assets/switch-selected.png"), url("assets/switch-selected@2.png")); }
 
 .header-bar GtkSwitch.trough,
@@ -1726,7 +1727,8 @@ GtkSwitch.trough {
 GtkSwitch.trough:active {
   background-image: -gtk-scaled(url("assets/switch-active-dark.png"), url("assets/switch-active-dark@2.png")); }
 
-.list-row:selected GtkSwitch.trough:active {
+.list-row:selected GtkSwitch.trough:active,
+GtkInfoBar GtkSwitch.trough:active {
   background-image: -gtk-scaled(url("assets/switch-active-selected.png"), url("assets/switch-active-selected@2.png")); }
 
 .header-bar GtkSwitch.trough:active,
@@ -1736,7 +1738,8 @@ GtkSwitch.trough:active {
 GtkSwitch.trough:insensitive {
   background-image: -gtk-scaled(url("assets/switch-insensitive-dark.png"), url("assets/switch-insensitive-dark@2.png")); }
 
-.list-row:selected GtkSwitch.trough:insensitive {
+.list-row:selected GtkSwitch.trough:insensitive,
+GtkInfoBar GtkSwitch.trough:insensitive {
   background-image: -gtk-scaled(url("assets/switch-insensitive-selected.png"), url("assets/switch-insensitive-selected@2.png")); }
 
 .header-bar GtkSwitch.trough:insensitive,
@@ -1746,7 +1749,8 @@ GtkSwitch.trough:insensitive {
 GtkSwitch.trough:active:insensitive {
   background-image: -gtk-scaled(url("assets/switch-active-insensitive-dark.png"), url("assets/switch-active-insensitive-dark@2.png")); }
 
-.list-row:selected GtkSwitch.trough:active:insensitive {
+.list-row:selected GtkSwitch.trough:active:insensitive,
+GtkInfoBar GtkSwitch.trough:active:insensitive {
   background-image: -gtk-scaled(url("assets/switch-active-insensitive-selected.png"), url("assets/switch-active-insensitive-selected@2.png")); }
 
 .header-bar GtkSwitch.trough:active:insensitive,
@@ -1760,84 +1764,96 @@ GtkSwitch.trough:active:insensitive {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-dark.png"), url("assets/checkbox-unchecked-dark@2.png")); }
 
 GtkTreeView.view.check:selected,
-.list-row:selected .check {
+.list-row:selected .check,
+GtkInfoBar .check {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-selected.png"), url("assets/checkbox-unchecked-selected@2.png")); }
 
 .check:insensitive {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-insensitive-dark.png"), url("assets/checkbox-unchecked-insensitive-dark@2.png")); }
 
 GtkTreeView.view.check:insensitive:selected,
-.list-row:selected .check:insensitive {
+.list-row:selected .check:insensitive,
+GtkInfoBar .check:insensitive {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-insensitive-selected.png"), url("assets/checkbox-unchecked-insensitive-selected@2.png")); }
 
 .check:inconsistent {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-dark.png"), url("assets/checkbox-mixed-dark@2.png")); }
 
 GtkTreeView.view.check:inconsistent:selected,
-.list-row:selected .check:inconsistent {
+.list-row:selected .check:inconsistent,
+GtkInfoBar .check:inconsistent {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-selected.png"), url("assets/checkbox-mixed-selected@2.png")); }
 
 .check:inconsistent:insensitive {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-insensitive-dark.png"), url("assets/checkbox-mixed-insensitive-dark@2.png")); }
 
 GtkTreeView.view.check:inconsistent:insensitive:selected,
-.list-row:selected .check:inconsistent:insensitive {
+.list-row:selected .check:inconsistent:insensitive,
+GtkInfoBar .check:inconsistent:insensitive {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-insensitive-selected.png"), url("assets/checkbox-mixed-insensitive-selected@2.png")); }
 
 .check:checked {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-dark.png"), url("assets/checkbox-checked-dark@2.png")); }
 
 GtkTreeView.view.check:checked:selected,
-.list-row:selected .check:checked {
+.list-row:selected .check:checked,
+GtkInfoBar .check:checked {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-selected.png"), url("assets/checkbox-checked-selected@2.png")); }
 
 .check:checked:insensitive {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-insensitive-dark.png"), url("assets/checkbox-checked-insensitive-dark@2.png")); }
 
 GtkTreeView.view.check:checked:insensitive:selected,
-.list-row:selected .check:checked:insensitive {
+.list-row:selected .check:checked:insensitive,
+GtkInfoBar .check:checked:insensitive {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-insensitive-selected.png"), url("assets/checkbox-checked-insensitive-selected@2.png")); }
 
 .radio {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-dark.png"), url("assets/radio-unchecked-dark@2.png")); }
 
 GtkTreeView.view.radio:selected,
-.list-row:selected .radio {
+.list-row:selected .radio,
+GtkInfoBar .radio {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-selected.png"), url("assets/radio-unchecked-selected@2.png")); }
 
 .radio:insensitive {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-insensitive-dark.png"), url("assets/radio-unchecked-insensitive-dark@2.png")); }
 
 GtkTreeView.view.radio:insensitive:selected,
-.list-row:selected .radio:insensitive {
+.list-row:selected .radio:insensitive,
+GtkInfoBar .radio:insensitive {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-insensitive-selected.png"), url("assets/radio-unchecked-insensitive-selected@2.png")); }
 
 .radio:inconsistent {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-dark.png"), url("assets/radio-mixed-dark@2.png")); }
 
 GtkTreeView.view.radio:inconsistent:selected,
-.list-row:selected .radio:inconsistent {
+.list-row:selected .radio:inconsistent,
+GtkInfoBar .radio:inconsistent {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-selected.png"), url("assets/radio-mixed-selected@2.png")); }
 
 .radio:inconsistent:insensitive {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-insensitive-dark.png"), url("assets/radio-mixed-insensitive-dark@2.png")); }
 
 GtkTreeView.view.radio:inconsistent:insensitive:selected,
-.list-row:selected .radio:inconsistent:insensitive {
+.list-row:selected .radio:inconsistent:insensitive,
+GtkInfoBar .radio:inconsistent:insensitive {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-insensitive-selected.png"), url("assets/radio-mixed-insensitive-selected@2.png")); }
 
 .radio:checked {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-dark.png"), url("assets/radio-checked-dark@2.png")); }
 
 GtkTreeView.view.radio:checked:selected,
-.list-row:selected .radio:checked {
+.list-row:selected .radio:checked,
+GtkInfoBar .radio:checked {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-selected.png"), url("assets/radio-checked-selected@2.png")); }
 
 .radio:checked:insensitive {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-insensitive-dark.png"), url("assets/radio-checked-insensitive-dark@2.png")); }
 
 GtkTreeView.view.radio:checked:insensitive:selected,
-.list-row:selected .radio:checked:insensitive {
+.list-row:selected .radio:checked:insensitive,
+GtkInfoBar .radio:checked:insensitive {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-insensitive-selected.png"), url("assets/radio-checked-insensitive-selected@2.png")); }
 
 GtkIconView.view.check,
@@ -1897,16 +1913,20 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
       .osd .scale.slider:active {
         background-image: linear-gradient(to bottom, #2679db);
         border-color: #2679db; }
-    .list-row:selected .scale.slider {
+    .list-row:selected .scale.slider,
+    GtkInfoBar .scale.slider {
       background-image: linear-gradient(to bottom, #ffffff);
       border-color: #ffffff; }
-      .list-row:selected .scale.slider:hover {
+      .list-row:selected .scale.slider:hover,
+      GtkInfoBar .scale.slider:hover {
         background-image: linear-gradient(to bottom, #e5effb);
         border-color: #e5effb; }
-      .list-row:selected .scale.slider:active {
+      .list-row:selected .scale.slider:active,
+      GtkInfoBar .scale.slider:active {
         background-image: linear-gradient(to bottom, #a9caf1);
         border-color: #a9caf1; }
-      .list-row:selected .scale.slider:insensitive {
+      .list-row:selected .scale.slider:insensitive,
+      GtkInfoBar .scale.slider:insensitive {
         background-image: linear-gradient(to bottom, #b1cff2);
         border-color: #b1cff2; }
   .scale.trough {
@@ -1925,13 +1945,17 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
       .osd .scale.trough.highlight {
         background-image: none;
         background-image: linear-gradient(to bottom, #5294E2); }
-    .list-row:selected .scale.trough {
+    .list-row:selected .scale.trough,
+    GtkInfoBar .scale.trough {
       background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2)); }
-      .list-row:selected .scale.trough.highlight {
+      .list-row:selected .scale.trough.highlight,
+      GtkInfoBar .scale.trough.highlight {
         background-image: linear-gradient(to bottom, #ffffff); }
-        .list-row:selected .scale.trough.highlight:insensitive {
+        .list-row:selected .scale.trough.highlight:insensitive,
+        GtkInfoBar .scale.trough.highlight:insensitive {
           background-image: linear-gradient(to bottom, #b1cff2); }
-      .list-row:selected .scale.trough:insensitive {
+      .list-row:selected .scale.trough:insensitive,
+      GtkInfoBar .scale.trough:insensitive {
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1)); }
 
 /*****************
@@ -1953,6 +1977,9 @@ GtkProgressBar {
   box-shadow: none; }
   .progressbar.osd {
     background-color: #5294E2; }
+  .list-row:selected .progressbar,
+  GtkInfoBar .progressbar {
+    background-color: #ffffff; }
 
 .osd .scale.progressbar {
   background-color: #5294E2; }
@@ -1965,6 +1992,10 @@ GtkProgressBar.trough, .level-bar.trough {
     border-style: none;
     background-color: transparent;
     box-shadow: none; }
+  .list-row:selected GtkProgressBar.trough,
+  .list-row:selected .level-bar.trough,
+  GtkInfoBar GtkProgressBar.trough, GtkInfoBar .level-bar.trough {
+    background-color: rgba(0, 0, 0, 0.2); }
 
 /*************
  * Level Bar *
