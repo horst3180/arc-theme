@@ -566,11 +566,11 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="11.313708"
-     inkscape:cx="247.42082"
-     inkscape:cy="280.79196"
+     inkscape:cx="258.94404"
+     inkscape:cy="123.52013"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
-     showgrid="false"
+     showgrid="true"
      showborder="false"
      inkscape:window-width="1366"
      inkscape:window-height="720"
@@ -5220,5 +5220,53 @@
        id="focus-line"
        style="display:inline;opacity:1;fill:none;fill-opacity:1;stroke:#cfd6e6;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.14492753"
        inkscape:label="#rect6176-4-2" />
+    <g
+       style="display:inline"
+       id="trough-horizontal-active"
+       transform="translate(36,-283.63782)"
+       inkscape:label="#g5902">
+      <rect
+         ry="0"
+         rx="0"
+         y="276"
+         x="208"
+         height="15"
+         width="24"
+         id="rect5900-0"
+         style="opacity:1;fill:none;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         rx="2.5"
+         ry="2.5"
+         y="281"
+         x="208"
+         height="5"
+         width="24"
+         id="rect5799-8-5"
+         style="opacity:1;fill:#5294e2;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <g
+       style="display:inline"
+       transform="matrix(0,1,-1,0,539,-200.63782)"
+       id="trough-vertical-active"
+       inkscape:label="#g5902-6">
+      <rect
+         ry="0"
+         rx="0"
+         y="276"
+         x="208"
+         height="15"
+         width="24"
+         id="rect5900-2-4"
+         style="opacity:1;fill:none;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         rx="2.5"
+         ry="2.5"
+         y="281"
+         x="208"
+         height="5"
+         width="24"
+         id="rect5799-8-9-4"
+         style="opacity:1;fill:#5294e2;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
   </g>
 </svg>

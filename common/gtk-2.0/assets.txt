@@ -95,6 +95,8 @@ slider-insensitive
 slider-prelight
 trough-horizontal
 trough-vertical
+trough-horizontal-active
+trough-vertical-active
 slider-horiz
 slider-horiz-active
 slider-horiz-insens
