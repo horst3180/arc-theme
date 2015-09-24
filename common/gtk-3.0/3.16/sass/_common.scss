@@ -1863,7 +1863,7 @@ $_scrollbar_bg_color: darken($base_color, 1%);
 
 .scrollbar {
   -GtkRange-slider-width: 13;
-  -GtkRange-trough-border: 1;
+  -GtkRange-trough-border: 0;
   -GtkScrollbar-has-backward-stepper: false;
   -GtkScrollbar-has-forward-stepper: false;
   -GtkScrollbar-min-slider-length: 42; // minimum size for the slider.
