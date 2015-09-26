@@ -4015,9 +4015,11 @@ GeditWindow.background.csd {
     background-color: #d4d5db; }
   GeditWindow.background.csd .gedit-headerbar-paned.titlebar {
     background-color: transparent; }
+  GeditWindow.background.csd .gedit-headerbar-paned.titlebar > GtkHeaderBar.header-bar.titlebar,
   GeditWindow.background.csd .gedit-titlebar-left,
   GeditWindow.background.csd .gedit-titlebar-right {
     background-color: #e7e8eb; }
+    GeditWindow.background.csd .gedit-headerbar-paned.titlebar > GtkHeaderBar.header-bar.titlebar:backdrop,
     GeditWindow.background.csd .gedit-titlebar-left:backdrop,
     GeditWindow.background.csd .gedit-titlebar-right:backdrop {
       background-color: #eff0f2; }

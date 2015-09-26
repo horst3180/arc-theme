@@ -4011,9 +4011,11 @@ GeditWindow.background.csd {
     background-color: rgba(38, 42, 51, 0.97); }
   GeditWindow.background.csd .gedit-headerbar-paned.titlebar {
     background-color: transparent; }
+  GeditWindow.background.csd .gedit-headerbar-paned.titlebar > GtkHeaderBar.header-bar.titlebar,
   GeditWindow.background.csd .gedit-titlebar-left,
   GeditWindow.background.csd .gedit-titlebar-right {
     background-color: rgba(47, 52, 63, 0.97); }
+    GeditWindow.background.csd .gedit-headerbar-paned.titlebar > GtkHeaderBar.header-bar.titlebar:backdrop,
     GeditWindow.background.csd .gedit-titlebar-left:backdrop,
     GeditWindow.background.csd .gedit-titlebar-right:backdrop {
       background-color: rgba(50, 56, 67, 0.97); }

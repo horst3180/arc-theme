@@ -168,6 +168,7 @@ GeditWindow.background.csd {
 
   .gedit-headerbar-paned.titlebar { background-color: transparent; }
 
+  .gedit-headerbar-paned.titlebar > GtkHeaderBar.header-bar.titlebar,
   .gedit-titlebar-left,
   .gedit-titlebar-right {
     background-color: $header_bg;
