@@ -1084,12 +1084,14 @@ GtkComboBox {
     .maximized .header-bar:backdrop {
       background-color: #323843;
       border-color: #262a33; }
-  .header-bar.default-decoration {
+  .header-bar.default-decoration,
+  .csd .header-bar.default-decoration {
     padding-top: 5px;
     padding-bottom: 5px;
     background-color: #2f343f;
     border-bottom-width: 0; }
-    .header-bar.default-decoration:backdrop {
+    .header-bar.default-decoration:backdrop,
+    .csd .header-bar.default-decoration:backdrop {
       background-color: #323843; }
 
 .titlebar {
