@@ -4023,9 +4023,11 @@ GeditWindow.background.csd {
     GeditWindow.background.csd .gedit-titlebar-left:backdrop,
     GeditWindow.background.csd .gedit-titlebar-right:backdrop {
       background-color: #eff0f2; }
+  GeditWindow.background.csd.maximized .gedit-headerbar-paned.titlebar > GtkHeaderBar.header-bar.titlebar,
   GeditWindow.background.csd.maximized .gedit-titlebar-left,
   GeditWindow.background.csd.maximized .gedit-titlebar-right {
     background-color: #e7e8eb; }
+    GeditWindow.background.csd.maximized .gedit-headerbar-paned.titlebar > GtkHeaderBar.header-bar.titlebar:backdrop,
     GeditWindow.background.csd.maximized .gedit-titlebar-left:backdrop,
     GeditWindow.background.csd.maximized .gedit-titlebar-right:backdrop {
       background-color: #eff0f2; }

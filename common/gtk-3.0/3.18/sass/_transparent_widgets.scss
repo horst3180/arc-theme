@@ -176,6 +176,7 @@ GeditWindow.background.csd {
     &:backdrop { background-color: $header_bg_backdrop; }
   }
 
+  &.maximized .gedit-headerbar-paned.titlebar > GtkHeaderBar.header-bar.titlebar,
   &.maximized .gedit-titlebar-left,
   &.maximized .gedit-titlebar-right {
     background-color: opacify($header_bg, 1);
