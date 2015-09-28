@@ -14,7 +14,7 @@
 <constant name="C_title_unfocused" value="gtk:custom(wm_unfocused_title,#979dac)" />
 
 <constant name="C_wm_bg_focused" value="gtk:custom(wm_bg,#e7e8eb)" />
-<constant name="C_wm_bg_unfocused" value="gtk:custom(wm_bg_unfocused,#eff0f2)" />
+<constant name="C_wm_bg_unfocused" value="gtk:custom(wm_bg,#e7e8eb)" />
 
 <constant name="C_wm_highlight" value="gtk:custom(wm_highlight,#eeeff1)" />
 

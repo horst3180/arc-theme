@@ -996,7 +996,7 @@ GtkComboBox {
   border-image: linear-gradient(to bottom, opacify($header_bg, 1),
                                            darken($header_bg, 7%)) 1 0 1 0; //temporary hack for rhythmbox 3.1
 
-  &:backdrop { background-color: opacify($header_bg_backdrop, 1); }
+  //&:backdrop { background-color: opacify($header_bg_backdrop, 1); }
 
   .separator { @extend %header_separator; }
 
@@ -1046,7 +1046,7 @@ GtkComboBox {
 
   &:backdrop {
     color: transparentize($header_fg, 0.3);
-    background-color: opacify($header_bg_backdrop, 1);
+    //background-color: opacify($header_bg_backdrop, 1);
 
     .csd & { background-color: $header_bg_backdrop; }  // Transparent header-bars only in csd windows
   }
@@ -1134,18 +1134,19 @@ GtkComboBox {
     border-color: opacify($header_border, 1);
 
     &:backdrop {
-      background-color: opacify($header_bg_backdrop, 1);
+      //background-color: opacify($header_bg_backdrop, 1);
       border-color: opacify($header_border, 1);
     }
   }
 
-  &.default-decoration {
+  &.default-decoration,
+  .csd &.default-decoration {  // needed under wayland, since all gtk3 windows are csd windows
     padding-top: 5px;	    // less padding for ssd
     padding-bottom: 5px;  //
     background-color: opacify($header_bg, 1);
     border-bottom-width: 0;
 
-    &:backdrop { background-color: opacify($header_bg_backdrop, 1); }
+    //&:backdrop { background-color: opacify($header_bg_backdrop, 1); }
   }
 }
 
@@ -1161,7 +1162,7 @@ GtkComboBox {
 
   &:backdrop {
     color: transparentize($header_fg, 0.3);
-    background-color: opacify($header_bg_backdrop, 1);
+    //background-color: opacify($header_bg_backdrop, 1);
 
     .csd & { background-color: $header_bg_backdrop; }
   }
@@ -1169,7 +1170,11 @@ GtkComboBox {
   .maximized & {
     background-color: opacify($header_bg, 1);
 
-    &:backdrop { background-color: opacify($header_bg_backdrop, 1); }
+    &:backdrop {
+    //background-color: opacify($header_bg_backdrop, 1);
+
+    .csd & { background-color: opacify($header_bg_backdrop, 1); }
+    }
   }
 }
 
@@ -1575,7 +1580,10 @@ column-header.button.dnd { // for treeview-like derive widgets
   background-color: opacify($header_bg, 1);
   color: $header_fg;
 
-  &:backdrop { background-color: opacify($header_bg_backdrop, 1); }
+  &:backdrop {
+    color: transparentize($header_fg, 0.3);
+    //background-color: opacify($header_bg_backdrop, 1);
+  }
 
   & > .menuitem {
     padding: 6px 8px;

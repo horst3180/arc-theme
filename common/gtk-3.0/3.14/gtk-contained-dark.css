@@ -877,8 +877,6 @@ GtkComboBox {
   border-width: 0 0 1px 0;
   border-style: solid;
   border-image: linear-gradient(to bottom, #2f343f, rgba(32, 35, 43, 0.97)) 1 0 1 0; }
-  .primary-toolbar:backdrop {
-    background-color: #323843; }
 
 .inline-toolbar {
   background-color: #313541;
@@ -913,8 +911,7 @@ GtkComboBox {
     background-color: rgba(47, 52, 63, 0.97);
     border-color: rgba(38, 42, 51, 0.97); }
   .header-bar:backdrop {
-    color: rgba(207, 218, 231, 0.5);
-    background-color: #323843; }
+    color: rgba(207, 218, 231, 0.5); }
     .csd .header-bar:backdrop {
       background-color: rgba(50, 56, 67, 0.97); }
   .header-bar .title {
@@ -990,7 +987,6 @@ GtkComboBox {
     background-color: #2f343f;
     border-color: #262a33; }
     .maximized .header-bar:backdrop {
-      background-color: #323843;
       border-color: #262a33; }
 
 .titlebar {
@@ -1003,13 +999,12 @@ GtkComboBox {
   .csd .titlebar {
     background-color: rgba(47, 52, 63, 0.97); }
   .titlebar:backdrop {
-    color: rgba(207, 218, 231, 0.5);
-    background-color: #323843; }
+    color: rgba(207, 218, 231, 0.5); }
     .csd .titlebar:backdrop {
       background-color: rgba(50, 56, 67, 0.97); }
   .maximized .titlebar {
     background-color: #2f343f; }
-    .maximized .titlebar:backdrop {
+    .csd .maximized .titlebar:backdrop {
       background-color: #323843; }
 
 .titlebar .titlebar,
@@ -1433,7 +1428,7 @@ column-header .button, column-header .button:hover, column-header .button:active
   background-color: #2f343f;
   color: rgba(207, 218, 231, 0.8); }
   .menubar:backdrop {
-    background-color: #323843; }
+    color: rgba(207, 218, 231, 0.5); }
   .menubar > .menuitem {
     padding: 6px 8px;
     border: solid transparent;
@@ -3329,7 +3324,6 @@ UnityDecoration {
     box-shadow: inset 0 1px rgba(54, 59, 72, 0.97); }
     UnityDecoration.top:backdrop {
       border-bottom-width: 0;
-      background-image: linear-gradient(to bottom, #323843);
       color: rgba(207, 218, 231, 0.5); }
   UnityDecoration.left, UnityDecoration.right, UnityDecoration.bottom,
   UnityDecoration.left:backdrop, UnityDecoration.right:backdrop, UnityDecoration.bottom:backdrop {

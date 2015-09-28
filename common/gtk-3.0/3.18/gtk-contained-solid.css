@@ -968,8 +968,6 @@ GtkComboBox {
   border-width: 0 0 1px 0;
   border-style: solid;
   border-image: linear-gradient(to bottom, #e7e8eb, #d4d5db) 1 0 1 0; }
-  .primary-toolbar:backdrop {
-    background-color: #eff0f2; }
 
 .inline-toolbar {
   background-color: #edeef0;
@@ -1004,8 +1002,7 @@ GtkComboBox {
     background-color: #e7e8eb;
     border-color: #d4d5db; }
   .header-bar:backdrop {
-    color: rgba(82, 93, 118, 0.5);
-    background-color: #eff0f2; }
+    color: rgba(82, 93, 118, 0.5); }
     .csd .header-bar:backdrop {
       background-color: #eff0f2; }
   .header-bar .title {
@@ -1082,7 +1079,6 @@ GtkComboBox {
     background-color: #e7e8eb;
     border-color: #d4d5db; }
     .maximized .header-bar:backdrop {
-      background-color: #eff0f2;
       border-color: #d4d5db; }
   .header-bar.default-decoration,
   .csd .header-bar.default-decoration {
@@ -1090,9 +1086,6 @@ GtkComboBox {
     padding-bottom: 5px;
     background-color: #e7e8eb;
     border-bottom-width: 0; }
-    .header-bar.default-decoration:backdrop,
-    .csd .header-bar.default-decoration:backdrop {
-      background-color: #eff0f2; }
 
 .titlebar {
   padding-left: 7px;
@@ -1104,13 +1097,12 @@ GtkComboBox {
   .csd .titlebar {
     background-color: #e7e8eb; }
   .titlebar:backdrop {
-    color: rgba(82, 93, 118, 0.5);
-    background-color: #eff0f2; }
+    color: rgba(82, 93, 118, 0.5); }
     .csd .titlebar:backdrop {
       background-color: #eff0f2; }
   .maximized .titlebar {
     background-color: #e7e8eb; }
-    .maximized .titlebar:backdrop {
+    .csd .maximized .titlebar:backdrop {
       background-color: #eff0f2; }
 
 .titlebar .titlebar,
@@ -1588,7 +1580,7 @@ column-header .button, column-header .button:hover, column-header .button:active
   background-color: #e7e8eb;
   color: rgba(82, 93, 118, 0.8); }
   .menubar:backdrop {
-    background-color: #eff0f2; }
+    color: rgba(82, 93, 118, 0.5); }
   .menubar > .menuitem {
     padding: 6px 8px;
     border: solid transparent;

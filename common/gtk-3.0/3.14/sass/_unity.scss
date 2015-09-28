@@ -30,7 +30,7 @@ UnityDecoration {
 
     &:backdrop {
       border-bottom-width: 0;
-      background-image: linear-gradient(to bottom, opacify($header_bg_backdrop, 1));
+      //background-image: linear-gradient(to bottom, opacify($header_bg_backdrop, 1));
       color: transparentize($header_fg, 0.3);
     }
   }
