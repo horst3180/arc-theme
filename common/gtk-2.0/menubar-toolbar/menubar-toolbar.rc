@@ -133,7 +133,7 @@ style "toolbar_entry" {
 style "chrome-gtk-frame" {
 
   ChromeGtkFrame::frame-color = "#e7e8eb"
-  ChromeGtkFrame::inactive-frame-color = "#EFF0F2"
+  ChromeGtkFrame::inactive-frame-color = "#e7e8eb"
 
   ChromeGtkFrame::frame-gradient-size = 0
   ChromeGtkFrame::frame-gradient-color = shade(0.5, @bg_color)
