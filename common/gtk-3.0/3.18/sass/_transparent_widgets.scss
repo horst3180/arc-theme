@@ -184,8 +184,7 @@ GeditWindow.background.csd {
 GeditWindow.background.csd {
   background-color: transparent;
 
-  .pane-separator,
-  .pane-separator:hover { background-color: $dark_sidebar_border; }
+  .pane-separator { background-color: $dark_sidebar_border; }
 }
 
 .gedit-bottom-panel-paned { background-color: $base_color; }

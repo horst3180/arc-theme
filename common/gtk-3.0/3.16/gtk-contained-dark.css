@@ -3838,8 +3838,7 @@ GeditWindow.background.csd.maximized > .titlebar > GtkHeaderBar.header-bar.title
 
 GeditWindow.background.csd {
   background-color: transparent; }
-  GeditWindow.background.csd .pane-separator,
-  GeditWindow.background.csd .pane-separator:hover {
+  GeditWindow.background.csd .pane-separator {
     background-color: rgba(42, 45, 55, 0.95); }
 
 .gedit-bottom-panel-paned {
