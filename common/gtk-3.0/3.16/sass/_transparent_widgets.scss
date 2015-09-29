@@ -50,32 +50,7 @@ MarlinViewWindow {
 
     .separator { color: transparent; }
 
-    .scrollbar {
-
-      &.overlay-indicator:not(.dragging):not(.hovering) .slider {
-        background-color: lighten($dark_sidebar_fg, 15%);
-        border: 1px solid transparentize(black, 0.7);
-      }
-
-      // trough coloring
-      .trough {
-        background-color: transparentize(black, 0.8);
-        border: none;
-      }
-
-      // slider coloring
-      .slider {
-        background-color: transparentize(lighten($dark_sidebar_fg, 15%), 0.3);
-
-        &:hover { background-color: lighten($dark_sidebar_fg, 20%); }
-
-        &:prelight:active { background-color: $selected_bg_color; }
-
-        &:insensitive {
-          background-color: transparent;
-        }
-      }
-    }
+    .scrollbar { @extend %dark_sidebar_scrollbar }
   }
   &.maximized .sidebar { background-color: opacify($dark_sidebar_bg, 1); }
 
@@ -188,32 +163,7 @@ GeditFileBrowserWidget {
 
   .maximized & { background-color: opacify($dark_sidebar_bg, 1); }
 
-  .scrollbar {
-
-    &.overlay-indicator:not(.dragging):not(.hovering) .slider {
-      background-color: lighten($dark_sidebar_fg, 15%);
-      border: 1px solid transparentize(black, 0.7);
-    }
-
-    // trough coloring
-    .trough {
-      background-color: transparentize(black, 0.8);
-      border: none;
-    }
-
-    // slider coloring
-    .slider {
-      background-color: transparentize(lighten($dark_sidebar_fg, 15%), 0.3);
-
-      &:hover { background-color: lighten($dark_sidebar_fg, 15%); }
-
-      &:prelight:active { background-color: $selected_bg_color; }
-
-      &:insensitive {
-        background-color: transparent;
-      }
-    }
-  }
+  .scrollbar { @extend %dark_sidebar_scrollbar; }
 
   .horizontal {
     background-color: transparent;
@@ -248,4 +198,31 @@ GeditWindow.background.csd GeditFileBrowserView.view {
 
   &:focus { @include entry(osd-focus); }
   &:insensitive { @include entry(osd-insensitive); }
+}
+
+%dark_sidebar_scrollbar {
+
+  &.overlay-indicator:not(.dragging):not(.hovering) .slider {
+    background-color: lighten($dark_sidebar_fg, 15%);
+    border: 1px solid transparentize(black, 0.7);
+  }
+
+  // trough coloring
+  .trough {
+    background-color: transparentize(black, 0.8);
+    border: none;
+  }
+
+  // slider coloring
+  .slider {
+    background-color: transparentize(lighten($dark_sidebar_fg, 15%), 0.3);
+
+    &:hover { background-color: lighten($dark_sidebar_fg, 20%); }
+
+    &:prelight:active { background-color: $selected_bg_color; }
+
+    &:insensitive {
+      background-color: transparent;
+    }
+  }
 }

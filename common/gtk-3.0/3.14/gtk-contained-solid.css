@@ -3754,65 +3754,6 @@ MarlinViewWindow .sidebar, MarlinViewWindow MarlinPlacesSidebar {
   NemoWindow MarlinPlacesSidebar GtkPlacesSidebar.sidebar .view.separator,
   GtkPlacesSidebar.sidebar NemoWindow MarlinPlacesSidebar .view.separator, MarlinViewWindow .sidebar .separator, MarlinViewWindow GtkPlacesSidebar.sidebar .view.separator, MarlinViewWindow MarlinPlacesSidebar .separator, MarlinViewWindow MarlinPlacesSidebar GtkPlacesSidebar.sidebar .view.separator, GtkPlacesSidebar.sidebar MarlinViewWindow MarlinPlacesSidebar .view.separator {
     color: transparent; }
-  GtkFileChooserDialog .sidebar .scrollbar.trough,
-  GtkFileChooserDialog MarlinPlacesSidebar .scrollbar.trough,
-  NautilusWindow .sidebar .scrollbar.trough,
-  NautilusWindow MarlinPlacesSidebar .scrollbar.trough,
-  NemoWindow .sidebar .scrollbar.trough,
-  NemoWindow MarlinPlacesSidebar .scrollbar.trough,
-  MarlinViewWindow .sidebar .scrollbar.trough, MarlinViewWindow MarlinPlacesSidebar .scrollbar.trough {
-    background-color: transparent;
-    border-color: transparent; }
-  GtkFileChooserDialog .sidebar .scrollbar.slider,
-  GtkFileChooserDialog MarlinPlacesSidebar .scrollbar.slider,
-  NautilusWindow .sidebar .scrollbar.slider,
-  NautilusWindow MarlinPlacesSidebar .scrollbar.slider,
-  NemoWindow .sidebar .scrollbar.slider,
-  NemoWindow MarlinPlacesSidebar .scrollbar.slider,
-  MarlinViewWindow .sidebar .scrollbar.slider, MarlinViewWindow MarlinPlacesSidebar .scrollbar.slider {
-    border-radius: 20px;
-    border: 3px solid transparent;
-    background-color: rgba(231, 234, 238, 0.7); }
-    GtkFileChooserDialog .sidebar .scrollbar.slider:hover,
-    GtkFileChooserDialog MarlinPlacesSidebar .scrollbar.slider:hover,
-    NautilusWindow .sidebar .scrollbar.slider:hover,
-    NautilusWindow MarlinPlacesSidebar .scrollbar.slider:hover,
-    NemoWindow .sidebar .scrollbar.slider:hover,
-    NemoWindow MarlinPlacesSidebar .scrollbar.slider:hover,
-    MarlinViewWindow .sidebar .scrollbar.slider:hover, MarlinViewWindow MarlinPlacesSidebar .scrollbar.slider:hover {
-      background-color: #f6f7f9; }
-    GtkFileChooserDialog .sidebar .scrollbar.slider:prelight:active,
-    GtkFileChooserDialog MarlinPlacesSidebar .scrollbar.slider:prelight:active,
-    NautilusWindow .sidebar .scrollbar.slider:prelight:active,
-    NautilusWindow MarlinPlacesSidebar .scrollbar.slider:prelight:active,
-    NemoWindow .sidebar .scrollbar.slider:prelight:active,
-    NemoWindow MarlinPlacesSidebar .scrollbar.slider:prelight:active,
-    MarlinViewWindow .sidebar .scrollbar.slider:prelight:active, MarlinViewWindow MarlinPlacesSidebar .scrollbar.slider:prelight:active {
-      background-color: #5294E2; }
-    GtkFileChooserDialog .sidebar .scrollbar.slider.fine-tune,
-    GtkFileChooserDialog MarlinPlacesSidebar .scrollbar.slider.fine-tune,
-    NautilusWindow .sidebar .scrollbar.slider.fine-tune,
-    NautilusWindow MarlinPlacesSidebar .scrollbar.slider.fine-tune,
-    NemoWindow .sidebar .scrollbar.slider.fine-tune,
-    NemoWindow MarlinPlacesSidebar .scrollbar.slider.fine-tune,
-    MarlinViewWindow .sidebar .scrollbar.slider.fine-tune, MarlinViewWindow MarlinPlacesSidebar .scrollbar.slider.fine-tune {
-      border-width: 4px; }
-      GtkFileChooserDialog .sidebar .scrollbar.slider.fine-tune:prelight:active,
-      GtkFileChooserDialog MarlinPlacesSidebar .scrollbar.slider.fine-tune:prelight:active,
-      NautilusWindow .sidebar .scrollbar.slider.fine-tune:prelight:active,
-      NautilusWindow MarlinPlacesSidebar .scrollbar.slider.fine-tune:prelight:active,
-      NemoWindow .sidebar .scrollbar.slider.fine-tune:prelight:active,
-      NemoWindow MarlinPlacesSidebar .scrollbar.slider.fine-tune:prelight:active,
-      MarlinViewWindow .sidebar .scrollbar.slider.fine-tune:prelight:active, MarlinViewWindow MarlinPlacesSidebar .scrollbar.slider.fine-tune:prelight:active {
-        background-color: #5294E2; }
-    GtkFileChooserDialog .sidebar .scrollbar.slider:insensitive,
-    GtkFileChooserDialog MarlinPlacesSidebar .scrollbar.slider:insensitive,
-    NautilusWindow .sidebar .scrollbar.slider:insensitive,
-    NautilusWindow MarlinPlacesSidebar .scrollbar.slider:insensitive,
-    NemoWindow .sidebar .scrollbar.slider:insensitive,
-    NemoWindow MarlinPlacesSidebar .scrollbar.slider:insensitive,
-    MarlinViewWindow .sidebar .scrollbar.slider:insensitive, MarlinViewWindow MarlinPlacesSidebar .scrollbar.slider:insensitive {
-      background-color: transparent; }
 
 GtkFileChooserDialog.maximized .sidebar,
 NautilusWindow.maximized .sidebar,
@@ -3920,28 +3861,6 @@ GeditFileBrowserWidget {
   background-color: #353945; }
   .maximized GeditFileBrowserWidget {
     background-color: #353945; }
-  GeditFileBrowserWidget .scrollbar.trough {
-    background-color: transparent;
-    border-color: transparent; }
-  GeditFileBrowserWidget .scrollbar.slider {
-    border-radius: 20px;
-    border: 3px solid transparent;
-    background-color: rgba(231, 234, 238, 0.7); }
-    GeditFileBrowserWidget .scrollbar.slider:hover {
-      background-color: #f6f7f9; }
-    GeditFileBrowserWidget .scrollbar.slider:prelight:active {
-      background-color: #5294E2; }
-    GeditFileBrowserWidget .scrollbar.slider.fine-tune {
-      border-width: 4px; }
-      GeditFileBrowserWidget .scrollbar.slider.fine-tune:prelight:active {
-        background-color: #5294E2; }
-    GeditFileBrowserWidget .scrollbar.slider:insensitive {
-      background-color: transparent; }
-  GeditFileBrowserWidget .scrollbars-junction,
-  GeditFileBrowserWidget .scrollbar.trough,
-  GeditFileBrowserWidget .scrollbars-junction.frame, GeditFileBrowserWidget .frame.scrollbar.trough {
-    border-color: transparent;
-    background-color: transparent; }
   GeditFileBrowserWidget .horizontal {
     background-color: transparent;
     border-color: #252831; }
@@ -4000,6 +3919,67 @@ GtkFileChooserDialog .dialog-vbox > .frame .entry {
   GtkFileChooserDialog .dialog-vbox > .frame .entry:insensitive {
     color: rgba(186, 195, 207, 0.55);
     background-image: linear-gradient(to bottom, rgba(102, 109, 132, 0.25)); }
+
+GtkFileChooserDialog .sidebar .trough.scrollbar,
+GtkFileChooserDialog MarlinPlacesSidebar .trough.scrollbar,
+NautilusWindow .sidebar .trough.scrollbar,
+NautilusWindow MarlinPlacesSidebar .trough.scrollbar,
+NemoWindow .sidebar .trough.scrollbar,
+NemoWindow MarlinPlacesSidebar .trough.scrollbar,
+MarlinViewWindow .sidebar .trough.scrollbar, MarlinViewWindow MarlinPlacesSidebar .trough.scrollbar, GeditFileBrowserWidget .trough.scrollbar {
+  background-color: transparent;
+  border-color: transparent; }
+
+GtkFileChooserDialog .sidebar .slider.scrollbar,
+GtkFileChooserDialog MarlinPlacesSidebar .slider.scrollbar,
+NautilusWindow .sidebar .slider.scrollbar,
+NautilusWindow MarlinPlacesSidebar .slider.scrollbar,
+NemoWindow .sidebar .slider.scrollbar,
+NemoWindow MarlinPlacesSidebar .slider.scrollbar,
+MarlinViewWindow .sidebar .slider.scrollbar, MarlinViewWindow MarlinPlacesSidebar .slider.scrollbar, GeditFileBrowserWidget .slider.scrollbar {
+  border-radius: 20px;
+  border: 3px solid transparent;
+  background-color: rgba(231, 234, 238, 0.7); }
+  GtkFileChooserDialog .sidebar .slider.scrollbar:hover,
+  GtkFileChooserDialog MarlinPlacesSidebar .slider.scrollbar:hover,
+  NautilusWindow .sidebar .slider.scrollbar:hover,
+  NautilusWindow MarlinPlacesSidebar .slider.scrollbar:hover,
+  NemoWindow .sidebar .slider.scrollbar:hover,
+  NemoWindow MarlinPlacesSidebar .slider.scrollbar:hover,
+  MarlinViewWindow .sidebar .slider.scrollbar:hover, MarlinViewWindow MarlinPlacesSidebar .slider.scrollbar:hover, GeditFileBrowserWidget .slider.scrollbar:hover {
+    background-color: #f6f7f9; }
+  GtkFileChooserDialog .sidebar .slider.scrollbar:prelight:active,
+  GtkFileChooserDialog MarlinPlacesSidebar .slider.scrollbar:prelight:active,
+  NautilusWindow .sidebar .slider.scrollbar:prelight:active,
+  NautilusWindow MarlinPlacesSidebar .slider.scrollbar:prelight:active,
+  NemoWindow .sidebar .slider.scrollbar:prelight:active,
+  NemoWindow MarlinPlacesSidebar .slider.scrollbar:prelight:active,
+  MarlinViewWindow .sidebar .slider.scrollbar:prelight:active, MarlinViewWindow MarlinPlacesSidebar .slider.scrollbar:prelight:active, GeditFileBrowserWidget .slider.scrollbar:prelight:active {
+    background-color: #5294E2; }
+  GtkFileChooserDialog .sidebar .slider.fine-tune.scrollbar,
+  GtkFileChooserDialog MarlinPlacesSidebar .slider.fine-tune.scrollbar,
+  NautilusWindow .sidebar .slider.fine-tune.scrollbar,
+  NautilusWindow MarlinPlacesSidebar .slider.fine-tune.scrollbar,
+  NemoWindow .sidebar .slider.fine-tune.scrollbar,
+  NemoWindow MarlinPlacesSidebar .slider.fine-tune.scrollbar,
+  MarlinViewWindow .sidebar .slider.fine-tune.scrollbar, MarlinViewWindow MarlinPlacesSidebar .slider.fine-tune.scrollbar, GeditFileBrowserWidget .slider.fine-tune.scrollbar {
+    border-width: 4px; }
+    GtkFileChooserDialog .sidebar .slider.fine-tune.scrollbar:prelight:active,
+    GtkFileChooserDialog MarlinPlacesSidebar .slider.fine-tune.scrollbar:prelight:active,
+    NautilusWindow .sidebar .slider.fine-tune.scrollbar:prelight:active,
+    NautilusWindow MarlinPlacesSidebar .slider.fine-tune.scrollbar:prelight:active,
+    NemoWindow .sidebar .slider.fine-tune.scrollbar:prelight:active,
+    NemoWindow MarlinPlacesSidebar .slider.fine-tune.scrollbar:prelight:active,
+    MarlinViewWindow .sidebar .slider.fine-tune.scrollbar:prelight:active, MarlinViewWindow MarlinPlacesSidebar .slider.fine-tune.scrollbar:prelight:active, GeditFileBrowserWidget .slider.fine-tune.scrollbar:prelight:active {
+      background-color: #5294E2; }
+  GtkFileChooserDialog .sidebar .slider.scrollbar:insensitive,
+  GtkFileChooserDialog MarlinPlacesSidebar .slider.scrollbar:insensitive,
+  NautilusWindow .sidebar .slider.scrollbar:insensitive,
+  NautilusWindow MarlinPlacesSidebar .slider.scrollbar:insensitive,
+  NemoWindow .sidebar .slider.scrollbar:insensitive,
+  NemoWindow MarlinPlacesSidebar .slider.scrollbar:insensitive,
+  MarlinViewWindow .sidebar .slider.scrollbar:insensitive, MarlinViewWindow MarlinPlacesSidebar .slider.scrollbar:insensitive, GeditFileBrowserWidget .slider.scrollbar:insensitive {
+    background-color: transparent; }
 
 /* GTK NAMED COLORS */
 @define-color theme_fg_color #5c616c;

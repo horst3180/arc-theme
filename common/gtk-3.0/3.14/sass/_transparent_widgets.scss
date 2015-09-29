@@ -46,37 +46,11 @@ MarlinViewWindow {
       }
     }
 
-    &.frame {
-      color: $dark_sidebar_fg;
-    }
+    &.frame { color: $dark_sidebar_fg; }
 
     .separator { color: transparent; }
 
-    .scrollbar {
-
-      &.trough { background-color: transparent; border-color: transparent; }
-
-      &.slider {
-        border-radius: 20px;
-        border: 3px solid transparent; //margin :/
-        background-color: transparentize(lighten($dark_sidebar_fg, 15%), 0.3);
-        &:hover {
-          background-color: lighten($dark_sidebar_fg, 20%);
-        }
-        &:prelight:active {
-          background-color: $selected_bg_color;
-        }
-        &.fine-tune {
-          border-width: 4px;
-          &:prelight:active {
-            background-color: $selected_bg_color;
-          }
-        }
-        &:insensitive {
-          background-color: transparent;
-        }
-      }
-    }
+    .scrollbar { @extend %dark_sidebar_scrollbar }
   }
   &.maximized .sidebar { background-color: opacify($dark_sidebar_bg, 1); }
 
@@ -189,37 +163,7 @@ GeditFileBrowserWidget {
 
   .maximized & { background-color: opacify($dark_sidebar_bg, 1); }
 
-  .scrollbar {
-
-    &.trough { background-color: transparent; border-color: transparent; }
-
-    &.slider {
-      border-radius: 20px;
-      border: 3px solid transparent; //margin :/
-      background-color: transparentize(lighten($dark_sidebar_fg, 15%), 0.3);
-      &:hover {
-        background-color: lighten($dark_sidebar_fg, 20%);
-      }
-      &:prelight:active {
-        background-color: $selected_bg_color;
-      }
-      &.fine-tune {
-        border-width: 4px;
-        &:prelight:active {
-          background-color: $selected_bg_color;
-        }
-      }
-      &:insensitive {
-        background-color: transparent;
-      }
-    }
-  }
-
-  .scrollbars-junction,
-  .scrollbars-junction.frame { // the small square between two scrollbars
-    border-color: transparent;
-    background-color: transparent;
-  }
+  .scrollbar { @extend %dark_sidebar_scrollbar }
 
   .horizontal {
     background-color: transparent;
@@ -254,4 +198,35 @@ GeditWindow.background.csd GeditFileBrowserView.view {
 
   &:focus { @include entry(osd-focus); }
   &:insensitive { @include entry(osd-insensitive); }
+}
+
+%dark_sidebar_scrollbar {
+
+  &.trough { background-color: transparent; border-color: transparent; }
+
+  &.slider {
+    border-radius: 20px;
+    border: 3px solid transparent;
+    background-color: transparentize(lighten($dark_sidebar_fg, 15%), 0.3);
+    &:hover {
+      background-color: lighten($dark_sidebar_fg, 20%);
+    }
+    &:prelight:active {
+      background-color: $selected_bg_color;
+    }
+    &.fine-tune {
+      border-width: 4px;
+      &:prelight:active {
+        background-color: $selected_bg_color;
+      }
+    }
+    &:insensitive {
+      background-color: transparent;
+    }
+  }
+  &s-junction,
+  &s-junction.frame {
+    border-color: transparent;
+    background-color: transparent;
+  }
 }
