@@ -50,7 +50,7 @@ If your distribution is not listed, please check the requirements yourself.
     rm -rf ~/.local/share/themes/{Arc,Arc-Darker,Arc-Dark}
     rm -rf ~/.themes/{Arc,Arc-Darker,Arc-Dark}
 
-**Packages**
+#### Packages
 
 Prebuilt packages for Ubuntu, Debian, Fedora and openSUSE are available at  
 http://software.opensuse.org/download.html?project=home%3AHorst3180&package=arc-theme  
@@ -65,9 +65,10 @@ http://software.opensuse.org/download.html?project=home%3AHorst3180&package=arc-
 Arch Linux users can install the theme from the AUR
 
 https://aur.archlinux.org/packages/gtk-theme-arc-git/  
+
 **Note:** If you're having trouble with the AUR package please email the package maintainer at zach@zach-adams.com before creating an issue.
 
-**Manual Installation**
+#### Manual Installation
 
 To build the theme you need 
 * `autoconf`
