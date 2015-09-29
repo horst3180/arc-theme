@@ -3868,6 +3868,11 @@ GeditFileBrowserWidget {
   background-color: rgba(53, 57, 69, 0.95); }
   .maximized GeditFileBrowserWidget {
     background-color: #353945; }
+  GeditFileBrowserWidget .scrollbars-junction,
+  GeditFileBrowserWidget .scrollbar.trough,
+  GeditFileBrowserWidget .scrollbars-junction.frame, GeditFileBrowserWidget .frame.scrollbar.trough {
+    border-color: transparent;
+    background-color: transparent; }
   GeditFileBrowserWidget .horizontal {
     background-color: transparent;
     border-color: rgba(37, 40, 49, 0.95); }

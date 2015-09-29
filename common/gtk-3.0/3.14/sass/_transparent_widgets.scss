@@ -165,6 +165,12 @@ GeditFileBrowserWidget {
 
   .scrollbar { @extend %dark_sidebar_scrollbar }
 
+  .scrollbars-junction,
+  .scrollbars-junction.frame {
+    border-color: transparent;
+    background-color: transparent;
+  }
+
   .horizontal {
     background-color: transparent;
     border-color: darken($dark_sidebar_bg, 7%);
@@ -223,10 +229,5 @@ GeditWindow.background.csd GeditFileBrowserView.view {
     &:insensitive {
       background-color: transparent;
     }
-  }
-  &s-junction,
-  &s-junction.frame {
-    border-color: transparent;
-    background-color: transparent;
   }
 }
