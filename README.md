@@ -52,9 +52,12 @@ If your distribution is not listed, please check the requirements yourself.
 
 **Packages**
 
-Prebuilt packages for Ubuntu, Debian, Fedora and openSUSE are available at 
-
+Prebuilt packages for Ubuntu, Debian, Fedora and openSUSE are available at  
 http://software.opensuse.org/download.html?project=home%3AHorst3180&package=arc-theme  
+
+A non-transparent version of the theme is available here  
+http://software.opensuse.org/download.html?project=home%3AHorst3180&package=arc-theme-solid  
+
 **Note:** elementary OS Freya users can install the package for Ubuntu 15.04
 
 --
