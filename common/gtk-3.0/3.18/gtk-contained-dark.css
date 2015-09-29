@@ -3492,7 +3492,6 @@ UnityDecoration {
     box-shadow: inset 0 1px rgba(54, 59, 72, 0.97); }
     UnityDecoration.top:backdrop {
       border-bottom-width: 0;
-      background-image: linear-gradient(to bottom, #323843);
       color: rgba(207, 218, 231, 0.5); }
   UnityDecoration.left, UnityDecoration.right, UnityDecoration.bottom,
   UnityDecoration.left:backdrop, UnityDecoration.right:backdrop, UnityDecoration.bottom:backdrop {
@@ -4000,34 +3999,39 @@ GtkFileChooserDialog GtkFileChooserWidget > GtkActionBar > GtkRevealer > .action
 GtkFileChooserDialog .dialog-vbox > .frame GtkLabel, GtkFileChooserDialog .dialog-vbox > .frame GtkComboBox {
   color: #BAC3CF; }
 
+FeedReaderreaderUI.background.csd > .titlebar .pane-separator,
+FeedReaderreaderUI.background.csd.maximized > .titlebar .pane-separator,
+FeedReaderreaderUI.background.csd > .titlebar .pane-separator:backdrop,
+FeedReaderreaderUI.background.csd.maximized > .titlebar .pane-separator:backdrop,
+GeditWindow.background.csd > .titlebar .pane-separator,
+GeditWindow.background.csd.maximized > .titlebar .pane-separator,
+GeditWindow.background.csd > .titlebar .pane-separator:backdrop,
+GeditWindow.background.csd.maximized > .titlebar .pane-separator:backdrop {
+  background-color: rgba(38, 42, 51, 0.97); }
+
+FeedReaderreaderUI.background.csd > .titlebar,
+GeditWindow.background.csd > .titlebar {
+  background-color: transparent; }
+
+FeedReaderreaderUI.background.csd > .titlebar > GtkHeaderBar.header-bar.titlebar,
+GeditWindow.background.csd > .titlebar > GtkHeaderBar.header-bar.titlebar {
+  background-color: rgba(47, 52, 63, 0.97); }
+  FeedReaderreaderUI.background.csd > .titlebar > GtkHeaderBar.header-bar.titlebar:backdrop,
+  GeditWindow.background.csd > .titlebar > GtkHeaderBar.header-bar.titlebar:backdrop {
+    background-color: rgba(50, 56, 67, 0.97); }
+
+FeedReaderreaderUI.background.csd.maximized > .titlebar > GtkHeaderBar.header-bar.titlebar,
+GeditWindow.background.csd.maximized > .titlebar > GtkHeaderBar.header-bar.titlebar {
+  background-color: #2f343f; }
+  FeedReaderreaderUI.background.csd.maximized > .titlebar > GtkHeaderBar.header-bar.titlebar:backdrop,
+  GeditWindow.background.csd.maximized > .titlebar > GtkHeaderBar.header-bar.titlebar:backdrop {
+    background-color: #323843; }
+
 GeditWindow.background.csd {
   background-color: transparent; }
   GeditWindow.background.csd .pane-separator,
   GeditWindow.background.csd .pane-separator:hover {
     background-color: rgba(42, 45, 55, 0.95); }
-  GeditWindow.background.csd .gedit-headerbar-paned.titlebar .pane-separator,
-  GeditWindow.background.csd.maximized .gedit-headerbar-paned.titlebar .pane-separator,
-  GeditWindow.background.csd .gedit-headerbar-paned.titlebar .pane-separator:backdrop,
-  GeditWindow.background.csd.maximized .gedit-headerbar-paned.titlebar .pane-separator:backdrop {
-    background-color: rgba(38, 42, 51, 0.97); }
-  GeditWindow.background.csd .gedit-headerbar-paned.titlebar {
-    background-color: transparent; }
-  GeditWindow.background.csd .gedit-headerbar-paned.titlebar > GtkHeaderBar.header-bar.titlebar,
-  GeditWindow.background.csd .gedit-titlebar-left,
-  GeditWindow.background.csd .gedit-titlebar-right {
-    background-color: rgba(47, 52, 63, 0.97); }
-    GeditWindow.background.csd .gedit-headerbar-paned.titlebar > GtkHeaderBar.header-bar.titlebar:backdrop,
-    GeditWindow.background.csd .gedit-titlebar-left:backdrop,
-    GeditWindow.background.csd .gedit-titlebar-right:backdrop {
-      background-color: rgba(50, 56, 67, 0.97); }
-  GeditWindow.background.csd.maximized .gedit-headerbar-paned.titlebar > GtkHeaderBar.header-bar.titlebar,
-  GeditWindow.background.csd.maximized .gedit-titlebar-left,
-  GeditWindow.background.csd.maximized .gedit-titlebar-right {
-    background-color: #2f343f; }
-    GeditWindow.background.csd.maximized .gedit-headerbar-paned.titlebar > GtkHeaderBar.header-bar.titlebar:backdrop,
-    GeditWindow.background.csd.maximized .gedit-titlebar-left:backdrop,
-    GeditWindow.background.csd.maximized .gedit-titlebar-right:backdrop {
-      background-color: #323843; }
 
 .gedit-bottom-panel-paned {
   background-color: #404552; }

@@ -3858,16 +3858,39 @@ GtkFileChooserDialog .action-bar.frame GtkComboBox,
 GtkFileChooserDialog .dialog-vbox > .frame GtkLabel, GtkFileChooserDialog .dialog-vbox > .frame GtkComboBox {
   color: #BAC3CF; }
 
+FeedReaderreaderUI.background.csd > .titlebar .pane-separator,
+FeedReaderreaderUI.background.csd.maximized > .titlebar .pane-separator,
+FeedReaderreaderUI.background.csd > .titlebar .pane-separator:backdrop,
+FeedReaderreaderUI.background.csd.maximized > .titlebar .pane-separator:backdrop,
+GeditWindow.background.csd > .titlebar .pane-separator,
+GeditWindow.background.csd.maximized > .titlebar .pane-separator,
+GeditWindow.background.csd > .titlebar .pane-separator:backdrop,
+GeditWindow.background.csd.maximized > .titlebar .pane-separator:backdrop {
+  background-color: #262a33; }
+
+FeedReaderreaderUI.background.csd > .titlebar,
+GeditWindow.background.csd > .titlebar {
+  background-color: transparent; }
+
+FeedReaderreaderUI.background.csd > .titlebar > GtkHeaderBar.header-bar.titlebar,
+GeditWindow.background.csd > .titlebar > GtkHeaderBar.header-bar.titlebar {
+  background-color: #2f343f; }
+  FeedReaderreaderUI.background.csd > .titlebar > GtkHeaderBar.header-bar.titlebar:backdrop,
+  GeditWindow.background.csd > .titlebar > GtkHeaderBar.header-bar.titlebar:backdrop {
+    background-color: #323843; }
+
+FeedReaderreaderUI.background.csd.maximized > .titlebar > GtkHeaderBar.header-bar.titlebar,
+GeditWindow.background.csd.maximized > .titlebar > GtkHeaderBar.header-bar.titlebar {
+  background-color: #2f343f; }
+  FeedReaderreaderUI.background.csd.maximized > .titlebar > GtkHeaderBar.header-bar.titlebar:backdrop,
+  GeditWindow.background.csd.maximized > .titlebar > GtkHeaderBar.header-bar.titlebar:backdrop {
+    background-color: #323843; }
+
 GeditWindow.background.csd {
   background-color: transparent; }
   GeditWindow.background.csd .pane-separator,
   GeditWindow.background.csd .pane-separator:hover {
     background-color: #2a2d37; }
-  GeditWindow.background.csd .titlebar .pane-separator,
-  GeditWindow.background.csd.maximized .titlebar .pane-separator,
-  GeditWindow.background.csd .titlebar .pane-separator:backdrop,
-  GeditWindow.background.csd.maximized .titlebar .pane-separator:backdrop {
-    background-color: #262a33; }
 
 .gedit-bottom-panel-paned {
   background-color: #404552; }

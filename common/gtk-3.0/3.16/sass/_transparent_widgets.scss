@@ -112,17 +112,38 @@ GtkFileChooserDialog {
   }
 }
 
-// Gedit sidebar
+//
+// Paned Headerbars
+//
+FeedReaderreaderUI.background.csd,
+GeditWindow.background.csd {
+
+  > .titlebar .pane-separator,
+  &.maximized > .titlebar .pane-separator,
+  > .titlebar .pane-separator:backdrop,
+  &.maximized > .titlebar .pane-separator:backdrop { background-color: $header_border; }
+
+  > .titlebar { background-color: transparent; }
+
+  > .titlebar > GtkHeaderBar.header-bar.titlebar {
+    background-color: $header_bg;
+
+    &:backdrop { background-color: $header_bg_backdrop; }
+  }
+
+  &.maximized > .titlebar > GtkHeaderBar.header-bar.titlebar {
+    background-color: opacify($header_bg, 1);
+
+    &:backdrop { background-color: opacify($header_bg_backdrop, 1); }
+  }
+}
+
+// Gedit
 GeditWindow.background.csd {
   background-color: transparent;
 
   .pane-separator,
   .pane-separator:hover { background-color: $dark_sidebar_border; }
-
-  .titlebar .pane-separator,
-  &.maximized .titlebar .pane-separator,
-  .titlebar .pane-separator:backdrop,
-  &.maximized .titlebar .pane-separator:backdrop { background-color: $header_border; }
 }
 
 .gedit-bottom-panel-paned { background-color: $base_color; }
