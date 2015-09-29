@@ -31,11 +31,11 @@ Arc is a flat theme with transparent elements for GTK 3, GTK 2 and Gnome-Shell. 
 Main distributions that meet these requirements are
 
 * Arch Linux and Arch Linux based distros
-* Ubuntu 15.04
+* Ubuntu 15.04 and 15.10 (**Ubuntu 14.04 and 14.10 are not supported**)
 * elementary OS Freya
 * Debian Jessie, Testing or Unstable
 * Gentoo
-* Fedora 21 and 22
+* Fedora 21, 22 and 23
 * OpenSuse 13.2 and Tumbleweed
 
 Derivatives of these distributions should work, aswell.
@@ -57,10 +57,11 @@ Prebuilt packages for Ubuntu, Debian, Fedora and openSUSE are available at
 http://software.opensuse.org/download.html?project=home%3AHorst3180&package=arc-theme  
 **Note:** elementary OS Freya users can install the package for Ubuntu 15.04
 
+--
+
 Arch Linux users can install the theme from the AUR
 
-https://aur.archlinux.org/packages/gtk-theme-arc-git/
-
+https://aur.archlinux.org/packages/gtk-theme-arc-git/  
 **Note:** If you're having trouble with the AUR package please email the package maintainer at zach@zach-adams.com before creating an issue.
 
 **Manual Installation**
@@ -131,6 +132,11 @@ To install the Plank theme, copy the `extra/Arc-Plank` folder to `~/.local/share
 Now open the Plank preferences window by executing `plank --preferences` from a terminal and select `Arc-Plank` as the theme.
 
 ### Troubleshooting
+
+If you have Ubuntu with a newer GTK/Gnome version than the one included by default (i.e Ubuntu 14.04 with GTK 3.14 or Ubuntu 15.04 with GTK 3.16, etc.) the prebuilt packages don't work properly and you have to install the theme manually as described above.
+This is also true for other distros with a different GTK/Gnome version than the one included by default
+
+--
 
 If you get artifacts like black or invisible backgrounds under Unity, disable overlay scrollbars with
 
