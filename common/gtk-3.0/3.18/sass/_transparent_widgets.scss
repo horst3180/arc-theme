@@ -29,6 +29,8 @@ NautilusWindow {
   GtkPlacesSidebar.sidebar {
     background-color: $dark_sidebar_bg;
 
+    .sidebar-placeholder-row.list-row.activatable { border: 1px solid $selected_bg_color; }
+
     .sidebar-new-bookmark-row { background-color: lighten($dark_sidebar_bg, 10%); }
 
     .list-row.activatable {
