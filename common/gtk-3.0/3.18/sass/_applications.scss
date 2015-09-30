@@ -521,7 +521,8 @@ TotemGrilo.vertical GdMainView.frame {
 //
 // Synapse
 //
-SynapseGuiViewDefault *:selected { background-color: $selected_bg_color; }
+SynapseGuiSelectionContainer *:selected,
+SynapseGuiViewVirgilio *:selected { background-color: $selected_bg_color; }
 
 //
 // Transmission

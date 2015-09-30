@@ -3253,7 +3253,8 @@ EphyWindow .floating-bar {
 TotemGrilo.vertical GdMainView.frame {
   border-width: 0; }
 
-SynapseGuiViewDefault *:selected {
+SynapseGuiSelectionContainer *:selected,
+SynapseGuiViewVirgilio *:selected {
   background-color: #5294E2; }
 
 .tr-workarea .undershoot,
