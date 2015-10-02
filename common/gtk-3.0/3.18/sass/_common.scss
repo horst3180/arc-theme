@@ -2601,31 +2601,6 @@ GtkCalendar {
         @extend %middle_button;
       }
 
-      &:focus {
-        color: $selected_bg_color;
-
-        &:active, &:checked { color: $selected_fg_color; }
-      }
-
-//      @each $b_type, $b_color in (suggested-action, $selected_bg_color),
-//                                 (destructive-action, $destructive_color) {
-//        &.#{$b_type} {
-//          @include button(normal, $b_color, white, $edge:none);
-//          @extend %middle_button;
-//          &:hover {
-//            @include button(hover, $b_color, white, $edge:none);
-//            @extend %middle_button;
-//          }
-//          &:active {
-//            @include button(active, $b_color, white, $edge:none);
-//            @extend %middle_button;
-//          }
-//          &:insensitive {
-//            @include button(insensitive, $edge:none);
-//           @extend %middle_button;
-//          }
-//        }
-//      }
       &:first-child{ @extend %first_button; }
       &:last-child { @extend %last_button; }
     }

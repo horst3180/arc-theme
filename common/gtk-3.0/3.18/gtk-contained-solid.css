@@ -2457,10 +2457,6 @@ GtkCalendar {
   .message-dialog.csd .dialog-action-area .button {
     padding: 8px;
     border-radius: 0; }
-    .message-dialog.csd .dialog-action-area .button:focus {
-      color: #5294E2; }
-      .message-dialog.csd .dialog-action-area .button:focus:active, .message-dialog.csd .dialog-action-area .button:focus:checked {
-        color: #ffffff; }
   .message-dialog.csd .dialog-action-area .button, .message-dialog.csd .dialog-action-area .button:hover, .message-dialog.csd .dialog-action-area .button:active, .message-dialog.csd .dialog-action-area .button:insensitive {
     border-right-style: none;
     border-bottom-style: none; }
