@@ -1949,6 +1949,10 @@ GtkInfoBar GtkSwitch.trough:active:insensitive {
 .check {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked.png"), url("assets/checkbox-unchecked@2.png")); }
 
+GtkFileChooserDialog GtkFileChooserWidget > GtkActionBar > GtkRevealer > .action-bar.frame .check,
+GtkFileChooserDialog .dialog-vbox > .frame .check {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-dark.png"), url("assets/checkbox-unchecked-dark@2.png")); }
+
 GtkTreeView.view.check:selected,
 .list-row:selected .check,
 GtkInfoBar .check {
@@ -1956,6 +1960,10 @@ GtkInfoBar .check {
 
 .check:insensitive {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-insensitive.png"), url("assets/checkbox-unchecked-insensitive@2.png")); }
+
+GtkFileChooserDialog GtkFileChooserWidget > GtkActionBar > GtkRevealer > .action-bar.frame .check:insensitive,
+GtkFileChooserDialog .dialog-vbox > .frame .check:insensitive {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-insensitive-dark.png"), url("assets/checkbox-unchecked-insensitive-dark@2.png")); }
 
 GtkTreeView.view.check:insensitive:selected,
 .list-row:selected .check:insensitive,
@@ -1965,6 +1973,10 @@ GtkInfoBar .check:insensitive {
 .check:inconsistent {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed.png"), url("assets/checkbox-mixed@2.png")); }
 
+GtkFileChooserDialog GtkFileChooserWidget > GtkActionBar > GtkRevealer > .action-bar.frame .check:inconsistent,
+GtkFileChooserDialog .dialog-vbox > .frame .check:inconsistent {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-dark.png"), url("assets/checkbox-mixed-dark@2.png")); }
+
 GtkTreeView.view.check:inconsistent:selected,
 .list-row:selected .check:inconsistent,
 GtkInfoBar .check:inconsistent {
@@ -1972,6 +1984,10 @@ GtkInfoBar .check:inconsistent {
 
 .check:inconsistent:insensitive {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-insensitive.png"), url("assets/checkbox-mixed-insensitive@2.png")); }
+
+GtkFileChooserDialog GtkFileChooserWidget > GtkActionBar > GtkRevealer > .action-bar.frame .check:inconsistent:insensitive,
+GtkFileChooserDialog .dialog-vbox > .frame .check:inconsistent:insensitive {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-insensitive-dark.png"), url("assets/checkbox-mixed-insensitive-dark@2.png")); }
 
 GtkTreeView.view.check:inconsistent:insensitive:selected,
 .list-row:selected .check:inconsistent:insensitive,
@@ -1981,6 +1997,10 @@ GtkInfoBar .check:inconsistent:insensitive {
 .check:checked {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked.png"), url("assets/checkbox-checked@2.png")); }
 
+GtkFileChooserDialog GtkFileChooserWidget > GtkActionBar > GtkRevealer > .action-bar.frame .check:checked,
+GtkFileChooserDialog .dialog-vbox > .frame .check:checked {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-dark.png"), url("assets/checkbox-checked-dark@2.png")); }
+
 GtkTreeView.view.check:checked:selected,
 .list-row:selected .check:checked,
 GtkInfoBar .check:checked {
@@ -1988,6 +2008,10 @@ GtkInfoBar .check:checked {
 
 .check:checked:insensitive {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-insensitive.png"), url("assets/checkbox-checked-insensitive@2.png")); }
+
+GtkFileChooserDialog GtkFileChooserWidget > GtkActionBar > GtkRevealer > .action-bar.frame .check:checked:insensitive,
+GtkFileChooserDialog .dialog-vbox > .frame .check:checked:insensitive {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-insensitive-dark.png"), url("assets/checkbox-checked-insensitive-dark@2.png")); }
 
 GtkTreeView.view.check:checked:insensitive:selected,
 .list-row:selected .check:checked:insensitive,
@@ -1997,6 +2021,10 @@ GtkInfoBar .check:checked:insensitive {
 .radio {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked.png"), url("assets/radio-unchecked@2.png")); }
 
+GtkFileChooserDialog GtkFileChooserWidget > GtkActionBar > GtkRevealer > .action-bar.frame .radio,
+GtkFileChooserDialog .dialog-vbox > .frame .radio {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-dark.png"), url("assets/radio-unchecked-dark@2.png")); }
+
 GtkTreeView.view.radio:selected,
 .list-row:selected .radio,
 GtkInfoBar .radio {
@@ -2004,6 +2032,10 @@ GtkInfoBar .radio {
 
 .radio:insensitive {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-insensitive.png"), url("assets/radio-unchecked-insensitive@2.png")); }
+
+GtkFileChooserDialog GtkFileChooserWidget > GtkActionBar > GtkRevealer > .action-bar.frame .radio:insensitive,
+GtkFileChooserDialog .dialog-vbox > .frame .radio:insensitive {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-insensitive-dark.png"), url("assets/radio-unchecked-insensitive-dark@2.png")); }
 
 GtkTreeView.view.radio:insensitive:selected,
 .list-row:selected .radio:insensitive,
@@ -2013,6 +2045,10 @@ GtkInfoBar .radio:insensitive {
 .radio:inconsistent {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed.png"), url("assets/radio-mixed@2.png")); }
 
+GtkFileChooserDialog GtkFileChooserWidget > GtkActionBar > GtkRevealer > .action-bar.frame .radio:inconsistent,
+GtkFileChooserDialog .dialog-vbox > .frame .radio:inconsistent {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-dark.png"), url("assets/radio-mixed-dark@2.png")); }
+
 GtkTreeView.view.radio:inconsistent:selected,
 .list-row:selected .radio:inconsistent,
 GtkInfoBar .radio:inconsistent {
@@ -2020,6 +2056,10 @@ GtkInfoBar .radio:inconsistent {
 
 .radio:inconsistent:insensitive {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-insensitive.png"), url("assets/radio-mixed-insensitive@2.png")); }
+
+GtkFileChooserDialog GtkFileChooserWidget > GtkActionBar > GtkRevealer > .action-bar.frame .radio:inconsistent:insensitive,
+GtkFileChooserDialog .dialog-vbox > .frame .radio:inconsistent:insensitive {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-insensitive-dark.png"), url("assets/radio-mixed-insensitive-dark@2.png")); }
 
 GtkTreeView.view.radio:inconsistent:insensitive:selected,
 .list-row:selected .radio:inconsistent:insensitive,
@@ -2029,6 +2069,10 @@ GtkInfoBar .radio:inconsistent:insensitive {
 .radio:checked {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-checked.png"), url("assets/radio-checked@2.png")); }
 
+GtkFileChooserDialog GtkFileChooserWidget > GtkActionBar > GtkRevealer > .action-bar.frame .radio:checked,
+GtkFileChooserDialog .dialog-vbox > .frame .radio:checked {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-dark.png"), url("assets/radio-checked-dark@2.png")); }
+
 GtkTreeView.view.radio:checked:selected,
 .list-row:selected .radio:checked,
 GtkInfoBar .radio:checked {
@@ -2036,6 +2080,10 @@ GtkInfoBar .radio:checked {
 
 .radio:checked:insensitive {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-insensitive.png"), url("assets/radio-checked-insensitive@2.png")); }
+
+GtkFileChooserDialog GtkFileChooserWidget > GtkActionBar > GtkRevealer > .action-bar.frame .radio:checked:insensitive,
+GtkFileChooserDialog .dialog-vbox > .frame .radio:checked:insensitive {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-insensitive-dark.png"), url("assets/radio-checked-insensitive-dark@2.png")); }
 
 GtkTreeView.view.radio:checked:insensitive:selected,
 .list-row:selected .radio:checked:insensitive,

@@ -1956,6 +1956,13 @@ GtkSwitch {
       -gtk-icon-source: -gtk-scaled(url("assets/#{$a}#{$as}#{$asset_suffix}.png"),
                                     url("assets/#{$a}#{$as}#{$asset_suffix}@2.png"));
     }
+
+    %osd_check_radio {
+      .#{$w}#{$s} {
+        -gtk-icon-source: -gtk-scaled(url("assets/#{$a}#{$as}-dark.png"),
+                                      url("assets/#{$a}#{$as}-dark@2.png"));
+      }
+    }
     // the borders of checks and radios are
     // too similar in luminosity to the selected background color, hence
     // we need special casing.

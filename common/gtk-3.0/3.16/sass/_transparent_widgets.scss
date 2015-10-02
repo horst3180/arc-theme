@@ -83,6 +83,8 @@ GtkFileChooserDialog {
     .button { @extend %dark_sidebar_button; }
     .entry { @extend %dark_sidebar_entry; }
 
+    @extend %osd_check_radio;
+
     GtkLabel, GtkComboBox { color: $dark_sidebar_fg; }
   }
 }
