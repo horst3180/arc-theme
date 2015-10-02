@@ -395,9 +395,13 @@ GtkSearchEntry.entry {
       border-color: transparent;
       background-color: transparent;
       background-image: none;
-      color: rgba(77, 173, 212, 0.65); }
+      color: rgba(92, 97, 108, 0.55); }
     .button.suggested-action:insensitive {
-      opacity: 0.75; }
+      color: rgba(92, 97, 108, 0.55);
+      border-color: rgba(207, 214, 230, 0.55);
+      background-color: rgba(251, 251, 252, 0.55); }
+      .button.suggested-action:insensitive > GtkLabel {
+        color: inherit; }
   .button.destructive-action {
     background-clip: border-box;
     color: #ffffff;
@@ -426,9 +430,13 @@ GtkSearchEntry.entry {
       border-color: transparent;
       background-color: transparent;
       background-image: none;
-      color: rgba(240, 74, 80, 0.65); }
+      color: rgba(92, 97, 108, 0.55); }
     .button.destructive-action:insensitive {
-      opacity: 0.75; }
+      color: rgba(92, 97, 108, 0.55);
+      border-color: rgba(207, 214, 230, 0.55);
+      background-color: rgba(251, 251, 252, 0.55); }
+      .button.destructive-action:insensitive > GtkLabel {
+        color: inherit; }
   .button.image-button {
     padding: 8px; }
   .header-bar .button.image-button {
@@ -1339,13 +1347,20 @@ GtkComboBox {
     outline-color: rgba(255, 255, 255, 0.3);
     background-color: #2e96c0;
     border-color: #2e96c0; }
-  .primary-toolbar .button.suggested-action.flat:insensitive, .header-bar .button.suggested-action.flat:insensitive, .primary-toolbar .suggested-action.sidebar-button.button:insensitive, .header-bar .suggested-action.sidebar-button.button:insensitive {
-    border-color: transparent;
-    background-color: transparent;
-    background-image: none;
-    color: rgba(77, 173, 212, 0.65); }
+  .primary-toolbar .button.suggested-action.flat:insensitive,
+  .header-bar .button.suggested-action.flat:insensitive,
+  .primary-toolbar .suggested-action.sidebar-button.button:insensitive,
+  .header-bar .suggested-action.sidebar-button.button:insensitive,
   .primary-toolbar .button.suggested-action:insensitive, .header-bar .button.suggested-action:insensitive {
-    opacity: 0.75; }
+    color: rgba(207, 218, 231, 0.35);
+    background-color: rgba(47, 52, 63, 0);
+    border-color: rgba(47, 52, 63, 0); }
+    .primary-toolbar .button.suggested-action.flat:insensitive > GtkLabel,
+    .header-bar .button.suggested-action.flat:insensitive > GtkLabel,
+    .primary-toolbar .suggested-action.sidebar-button.button:insensitive > GtkLabel,
+    .header-bar .suggested-action.sidebar-button.button:insensitive > GtkLabel,
+    .primary-toolbar .button.suggested-action:insensitive > GtkLabel, .header-bar .button.suggested-action:insensitive > GtkLabel {
+      color: inherit; }
 
 .primary-toolbar .button.suggested-action:backdrop,
 .header-bar .button.suggested-action:backdrop,
@@ -1376,13 +1391,20 @@ GtkComboBox {
     outline-color: rgba(255, 255, 255, 0.3);
     background-color: #ec1b22;
     border-color: #ec1b22; }
-  .primary-toolbar .button.destructive-action.flat:insensitive, .header-bar .button.destructive-action.flat:insensitive, .primary-toolbar .destructive-action.sidebar-button.button:insensitive, .header-bar .destructive-action.sidebar-button.button:insensitive {
-    border-color: transparent;
-    background-color: transparent;
-    background-image: none;
-    color: rgba(240, 74, 80, 0.65); }
+  .primary-toolbar .button.destructive-action.flat:insensitive,
+  .header-bar .button.destructive-action.flat:insensitive,
+  .primary-toolbar .destructive-action.sidebar-button.button:insensitive,
+  .header-bar .destructive-action.sidebar-button.button:insensitive,
   .primary-toolbar .button.destructive-action:insensitive, .header-bar .button.destructive-action:insensitive {
-    opacity: 0.75; }
+    color: rgba(207, 218, 231, 0.35);
+    background-color: rgba(47, 52, 63, 0);
+    border-color: rgba(47, 52, 63, 0); }
+    .primary-toolbar .button.destructive-action.flat:insensitive > GtkLabel,
+    .header-bar .button.destructive-action.flat:insensitive > GtkLabel,
+    .primary-toolbar .destructive-action.sidebar-button.button:insensitive > GtkLabel,
+    .header-bar .destructive-action.sidebar-button.button:insensitive > GtkLabel,
+    .primary-toolbar .button.destructive-action:insensitive > GtkLabel, .header-bar .button.destructive-action:insensitive > GtkLabel {
+      color: inherit; }
 
 .primary-toolbar .button.destructive-action:backdrop,
 .header-bar .button.destructive-action:backdrop,

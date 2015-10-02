@@ -324,7 +324,7 @@ $_dot_color: $selected_bg_color;
 
   @include button(normal);
 
-  &.flat { 
+  &.flat {
     @include button(undecorated);
     background-color: transparentize($button_bg, 1);
     border-color: transparentize($button_border, 1);
@@ -457,9 +457,9 @@ $_dot_color: $selected_bg_color;
       }
       &.flat:insensitive {
         @include button(undecorated);
-        color: transparentize($b_color, 0.35);
+        color: $insensitive_fg_color;
       }
-      &:insensitive { opacity: 0.75; }
+      &:insensitive { @include button(insensitive); }
     }
   }
 
@@ -1420,11 +1420,8 @@ GtkComboBox {
       &:active, &:checked {
         @include button(suggested_destructive, darken($b_color, 10%));
       }
-      &.flat:insensitive {
-        @include button(undecorated);
-        color: transparentize($b_color, 0.35);
-      }
-      &:insensitive { opacity: 0.75; }
+      &.flat:insensitive,
+      &:insensitive { @include button(header-insensitive); }
     }
     .button.#{$b_type}:backdrop,
     .button.#{$b_type}:backdrop {
