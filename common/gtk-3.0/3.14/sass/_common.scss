@@ -1138,6 +1138,16 @@ GtkComboBox {
       border-color: opacify($header_border, 1);
     }
   }
+  &.default-decoration,
+  .csd &.default-decoration {
+    padding-top: 5px;	    // less padding for ssd
+    padding-bottom: 5px;    //
+    background-color: opacify($header_bg, 1);
+    border-bottom-width: 0;
+
+    //&:backdrop { background-color: opacify($header_bg_backdrop, 1); }
+    &:backdrop { background-color: opacify($header_bg, 1); }
+  }
 }
 
 .titlebar {
@@ -2694,6 +2704,11 @@ GtkVolumeButton.button { padding: 8px; }
 
 .header-bar, .titlebar,
 .header-bar.selection-mode, .titlebar.selection-mode {
+
+  &.default-decoration .button.titlebutton { // no vertical padding for ssd buttons
+    padding-top: 0px;                        // already handled by the titlebar-padding
+    padding-bottom: 0px;
+  }
 
   .button.titlebutton {
     padding: 7px 4px;

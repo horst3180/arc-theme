@@ -996,6 +996,15 @@ GtkComboBox {
     border-color: #262a33; }
     .maximized .header-bar:backdrop {
       border-color: #262a33; }
+  .header-bar.default-decoration,
+  .csd .header-bar.default-decoration {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #2f343f;
+    border-bottom-width: 0; }
+    .header-bar.default-decoration:backdrop,
+    .csd .header-bar.default-decoration:backdrop {
+      background-color: #2f343f; }
 
 .titlebar {
   padding-left: 7px;
@@ -2452,6 +2461,11 @@ GtkVolumeButton.button {
   .window-frame.csd.message-dialog {
     border-radius: 3px; }
 
+.header-bar.default-decoration .button.titlebutton, .titlebar.default-decoration .button.titlebutton,
+.header-bar.selection-mode.default-decoration .button.titlebutton, .titlebar.selection-mode.default-decoration .button.titlebutton {
+  padding-top: 0px;
+  padding-bottom: 0px; }
+
 .header-bar .button.titlebutton, .titlebar .button.titlebutton,
 .header-bar.selection-mode .button.titlebutton, .titlebar.selection-mode .button.titlebutton {
   padding: 7px 4px;
@@ -3890,6 +3904,9 @@ GeditWindow.background.csd {
   background-color: transparent; }
   GeditWindow.background.csd .pane-separator {
     background-color: #2a2d37; }
+  GeditWindow.background.csd > .titlebar.default-decoration,
+  GeditWindow.background.csd > .titlebar.default-decoration:backdrop {
+    background-color: #2f343f; }
 
 .gedit-bottom-panel-paned {
   background-color: #404552; }

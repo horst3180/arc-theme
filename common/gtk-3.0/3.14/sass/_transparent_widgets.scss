@@ -120,6 +120,9 @@ GeditWindow.background.csd {
   background-color: transparent;
 
   .pane-separator { background-color: $dark_sidebar_border; }
+
+  > .titlebar.default-decoration,
+  > .titlebar.default-decoration:backdrop { background-color: opacify($header_bg, 1); }  // fix for elementary OS
 }
 
 .gedit-bottom-panel-paned { background-color: $base_color; }
