@@ -1405,14 +1405,15 @@ GtkTreeView.view {
       -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
   GtkTreeView.view.progressbar {
     color: #ffffff;
-    border-radius: 3px; }
+    border-radius: 3px;
+    background-image: linear-gradient(to bottom, #5294E2); }
     GtkTreeView.view.progressbar:selected {
       color: #5294E2;
       box-shadow: none;
-      background-color: #ffffff; }
+      background-image: linear-gradient(to bottom, #ffffff); }
   GtkTreeView.view.trough, GtkTreeView.view.trough:selected {
     color: #5c616c;
-    background-color: #cfd6e6;
+    background-image: linear-gradient(to bottom, #cfd6e6);
     border-radius: 3px;
     border-width: 0; }
 

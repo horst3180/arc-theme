@@ -1495,16 +1495,17 @@ GtkTreeView.view {                                      // treeview grid lines a
   &.progressbar { // progress bar in treeviews
     color: $selected_fg_color;
     border-radius: 3px;
+    background-image: linear-gradient(to bottom, $selected_bg_color);
 
     &:selected {
       color: $selected_bg_color;
       box-shadow: none;
-      background-color: $selected_fg_color;
+      background-image: linear-gradient(to bottom, $selected_fg_color);
     }
   }
   &.trough, &.trough:selected { // progress bar trough in treeviews
     color: $fg_color;
-    background-color: $button_border;
+    background-image: linear-gradient(to bottom, $button_border);
     border-radius: 3px;
     border-width: 0;
   }
