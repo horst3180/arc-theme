@@ -1,0 +1,19 @@
+#/!bin/bash
+
+# Script to upgrade/install the arc-theme
+
+# Remove previows files
+rm -rf /tmp/arc-theme
+
+git clone https://github.com/horst3180/arc-theme /tmp/arc-theme --depth 1 && cd /tmp/arc-theme
+
+# Remove old versions
+sudo rm -rf /usr/share/themes/{Arc,Arc-Darker,Arc-Dark}
+rm -rf ~/.local/share/themes/{Arc,Arc-Darker,Arc-Dark}
+rm -rf ~/.themes/{Arc,Arc-Darker,Arc-Dark}
+
+./autogen.sh --prefix=/usr
+sudo make install
+
+# Remove the sources
+rm -rf /tmp/arc-theme
