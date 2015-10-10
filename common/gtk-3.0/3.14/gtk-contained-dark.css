@@ -3564,8 +3564,7 @@ GraniteWidgetsPopOver * {
 .h4,
 .category-label {
   color: #a5abb5;
-  font-weight: 600;
-  text-shadow: 0 1px rgba(255, 255, 255, 0.6); }
+  font-weight: 600; }
 
 .h4 {
   padding-bottom: 6px;
