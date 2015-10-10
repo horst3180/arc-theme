@@ -3369,7 +3369,8 @@ UnityPanelWidget,
 .unity-panel.menubar.menuitem:hover,
 .unity-panel.menubar .menuitem *:hover {
   border-radius: 0;
-  color: #5294E2;
+  color: #ffffff;
+  background-image: linear-gradient(to bottom, #5294E2);
   border-bottom: none; }
 
 .overlay-bar {

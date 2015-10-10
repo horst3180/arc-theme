@@ -53,6 +53,7 @@ UnityPanelWidget,
 .unity-panel.menubar.menuitem:hover,
 .unity-panel.menubar .menuitem *:hover {
   border-radius: 0;
-  color: $selected_bg_color;
+  color: $selected_fg_color;
+  background-image: linear-gradient(to bottom, $selected_bg_color);
   border-bottom: none;
 }
