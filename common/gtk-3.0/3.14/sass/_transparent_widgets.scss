@@ -100,8 +100,6 @@ GeditWindow.background.csd {
   > .titlebar .pane-separator:backdrop,
   &.maximized > .titlebar .pane-separator:backdrop { background-color: $header_border; }
 
-  > .titlebar { background-color: transparent; }
-
   > .titlebar > GtkHeaderBar.header-bar.titlebar {
     background-color: $header_bg;
 
@@ -113,6 +111,11 @@ GeditWindow.background.csd {
 
     &:backdrop { background-color: opacify($header_bg_backdrop, 1); }
   }
+}
+
+FeedReaderreaderUI.background.csd > FeedReaderreaderHeaderbar.titlebar,
+GeditWindow.background.csd > .titlebar {
+  background-color: transparent;
 }
 
 // Gedit

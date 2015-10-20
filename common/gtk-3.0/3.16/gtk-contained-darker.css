@@ -3821,10 +3821,6 @@ GeditWindow.background.csd > .titlebar .pane-separator:backdrop,
 GeditWindow.background.csd.maximized > .titlebar .pane-separator:backdrop {
   background-color: rgba(38, 42, 51, 0.97); }
 
-FeedReaderreaderUI.background.csd > .titlebar,
-GeditWindow.background.csd > .titlebar {
-  background-color: transparent; }
-
 FeedReaderreaderUI.background.csd > .titlebar > GtkHeaderBar.header-bar.titlebar,
 GeditWindow.background.csd > .titlebar > GtkHeaderBar.header-bar.titlebar {
   background-color: rgba(47, 52, 63, 0.97); }
@@ -3838,6 +3834,10 @@ GeditWindow.background.csd.maximized > .titlebar > GtkHeaderBar.header-bar.title
   FeedReaderreaderUI.background.csd.maximized > .titlebar > GtkHeaderBar.header-bar.titlebar:backdrop,
   GeditWindow.background.csd.maximized > .titlebar > GtkHeaderBar.header-bar.titlebar:backdrop {
     background-color: #323843; }
+
+FeedReaderreaderUI.background.csd > FeedReaderreaderHeaderbar.titlebar,
+GeditWindow.background.csd > .titlebar {
+  background-color: transparent; }
 
 GeditWindow.background.csd {
   background-color: transparent; }
