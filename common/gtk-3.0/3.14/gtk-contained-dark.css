@@ -2870,9 +2870,6 @@ TerminalWindow .scrollbar.vertical .slider {
 TerminalWindow .scrollbar.trough {
   border-width: 0; }
 
-NautilusCanvasViewContainer.view .entry, NemoIconViewContainer .entry {
-  border-radius: 3px; }
-
 .nautilus-canvas-item {
   border-radius: 2px; }
 

@@ -2971,9 +2971,6 @@ TerminalWindow .notebook .active-page .button:hover, TerminalWindow .notebook .p
 TerminalWindow .notebook .active-page .button:active, TerminalWindow .notebook .prelight-page .button:active {
   color: #5294E2; }
 
-NautilusCanvasViewContainer.view .entry, NemoIconViewContainer .entry {
-  border-radius: 3px; }
-
 .nautilus-canvas-item {
   border-radius: 2px; }
 

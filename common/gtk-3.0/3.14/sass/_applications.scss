@@ -71,8 +71,6 @@ TerminalWindow {
 //
 // Nautilus
 //
-NautilusCanvasViewContainer.view .entry { border-radius: 3px; }
-
 .nautilus-canvas-item {
   border-radius: 2px;
 }
@@ -96,64 +94,56 @@ NautilusNotebook.notebook {
   }
 }
 
-//NautilusNotebook.notebook {
-//  background-color: $base_color;
-//}
-
 NautilusQueryEditor .search-bar.toolbar {
   padding: 5px;
   box-shadow: none;
   background-color: $base_color;
 }
 
-
 //
 // Nemo
 //
-NemoIconViewContainer { @extend NautilusCanvasViewContainer.view }
-
-NemoWindow EelEditableLabel.entry { transition: none; }  // Workaround for invisible text in rename entry
-
-NemoWindow .sidebar .frame {
-	border-width: 0;
-}
-
-NemoWindow GtkSeparator.separator.horizontal {
-	color: $borders_color;
-}
-
 .nemo-desktop.nemo-canvas-item {
   @extend .nautilus-desktop.nautilus-canvas-item;
 }
 
-NemoWindow .primary-toolbar NemoPathBar.linked > .button {
-  $_linked_separator_color: $header_button_border;
+NemoWindow {
 
-  @include button(header-hover);
+  EelEditableLabel.entry { transition: none; }  // Workaround for invisible text in rename entry
 
-  &:hover { background-color: lighten($header_button_bg, 15%); }
-  &:active, &:checked { @include button(header-active); }
-  &:insensitive { color: transparentize($header_fg, 0.4); }
+  .sidebar .frame { border-width: 0; }
 
-  @extend %linked;
+  GtkSeparator.separator.horizontal { color: $borders_color; }
 
-  &:hover {
-    box-shadow: inset  1px 0 $_linked_separator_color,
-                inset -1px 0 $_linked_separator_color;
-  }
-  &:active, &:checked { box-shadow: none; }
+  .primary-toolbar NemoPathBar.linked > .button {
+    $_linked_separator_color: $header_button_border;
 
-  &:first-child {
-    &:hover { box-shadow: inset -1px 0 $_linked_separator_color; }
+    @include button(header-hover);
+
+    &:hover { background-color: lighten($header_button_bg, 15%); }
+    &:active, &:checked { @include button(header-active); }
+    &:insensitive { color: transparentize($header_fg, 0.4); }
+
+    @extend %linked;
+
+    &:hover {
+      box-shadow: inset  1px 0 $_linked_separator_color,
+                  inset -1px 0 $_linked_separator_color;
+    }
     &:active, &:checked { box-shadow: none; }
-  }
-  &:last-child {
-    &:hover { box-shadow: inset 1px 0 $_linked_separator_color; }
-    &:active, &:checked { box-shadow: none; }
-  }
-  &:only-child {
-    &:hover { box-shadow: none; }
-    &:active, &:checked { box-shadow: none; }
+
+    &:first-child {
+      &:hover { box-shadow: inset -1px 0 $_linked_separator_color; }
+      &:active, &:checked { box-shadow: none; }
+    }
+    &:last-child {
+      &:hover { box-shadow: inset 1px 0 $_linked_separator_color; }
+      &:active, &:checked { box-shadow: none; }
+    }
+    &:only-child {
+      &:hover { box-shadow: none; }
+      &:active, &:checked { box-shadow: none; }
+    }
   }
 }
 
