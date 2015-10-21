@@ -3787,10 +3787,10 @@ NemoWindow.maximized .sidebar,
 MarlinViewWindow.maximized .sidebar {
   background-color: #353945; }
 
-GtkFileChooserDialog .pane-separator,
-NautilusWindow .pane-separator,
-NemoWindow .pane-separator,
-MarlinViewWindow .pane-separator {
+GtkFileChooserDialog,
+NautilusWindow,
+NemoWindow.background > GtkGrid > GtkPaned > .pane-separator,
+MarlinViewWindow.background > GtkBox > GtkPaned > .pane-separator {
   background-color: #2a2d37; }
 
 GtkFileChooserDialog.background.csd, GtkFileChooserDialog.background {
@@ -3848,8 +3848,12 @@ GeditWindow.background.csd > .titlebar {
 
 GeditWindow.background.csd {
   background-color: transparent; }
-  GeditWindow.background.csd .pane-separator {
-    background-color: #2a2d37; }
+
+GeditWindow.background .gedit-side-panel-paned .pane-separator {
+  background-color: #2a2d37; }
+
+GeditWindow.background .gedit-bottom-panel-paned .pane-separator {
+  background-color: #2b2e39; }
 
 .gedit-bottom-panel-paned {
   background-color: #404552; }

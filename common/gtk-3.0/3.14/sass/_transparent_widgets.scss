@@ -53,9 +53,12 @@ MarlinViewWindow {
     .scrollbar { @extend %dark_sidebar_scrollbar }
   }
   &.maximized .sidebar { background-color: opacify($dark_sidebar_bg, 1); }
-
-  .pane-separator { background-color: $dark_sidebar_border; }
 }
+
+GtkFileChooserDialog,
+NautilusWindow,
+NemoWindow.background > GtkGrid > GtkPaned > .pane-separator,
+MarlinViewWindow.background > GtkBox > GtkPaned > .pane-separator {background-color: $dark_sidebar_border}
 
 GtkFileChooserDialog {
 
@@ -119,10 +122,11 @@ GeditWindow.background.csd > .titlebar {
 }
 
 // Gedit
-GeditWindow.background.csd {
-  background-color: transparent;
+GeditWindow.background {
+  &.csd { background-color: transparent; }
 
-  .pane-separator { background-color: $dark_sidebar_border; }
+  .gedit-side-panel-paned .pane-separator { background-color: $dark_sidebar_border; }
+  .gedit-bottom-panel-paned .pane-separator { background-color: $borders_color; }
 
   > .titlebar.default-decoration,
   > .titlebar.default-decoration:backdrop { background-color: opacify($header_bg, 1); }  // fix for elementary OS

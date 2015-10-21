@@ -96,8 +96,11 @@ MarlinViewWindow {
   }
   &.maximized .sidebar { background-color: opacify($dark_sidebar_bg, 1); }
 
-  .pane-separator { background-color: $dark_sidebar_border; }
 }
+
+NemoWindow.background > GtkGrid > GtkPaned > .pane-separator,
+MarlinViewWindow.background > GtkBox > GtkPaned > .pane-separator { background-color: $dark_sidebar_border }
+
 
 GtkFileChooserDialog {
 
@@ -161,10 +164,11 @@ GeditWindow.background.csd > .titlebar {
 }
 
 // Gedit
-GeditWindow.background.csd {
-  background-color: transparent;
+GeditWindow.background {
+  &.csd { background-color: transparent; }
 
-  .pane-separator { background-color: $dark_sidebar_border; }
+  .gedit-side-panel-paned .pane-separator { background-color: $dark_sidebar_border; }
+  .gedit-bottom-panel-paned .pane-separator { background-color: $borders_color; }
 }
 
 .gedit-bottom-panel-paned { background-color: $base_color; }
