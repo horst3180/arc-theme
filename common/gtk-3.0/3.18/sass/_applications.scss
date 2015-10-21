@@ -164,6 +164,8 @@ NautilusListView .view { border-bottom: 1px solid $borders_color; }
 //
 NemoIconViewContainer { @extend NautilusCanvasViewContainer.view }
 
+NemoWindow EelEditableLabel.entry { transition: none; }  // Workaround for invisible text in rename entry
+
 NemoWindow .sidebar .frame {
 	border-width: 0;
 }

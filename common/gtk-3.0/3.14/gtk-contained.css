@@ -2900,6 +2900,9 @@ NautilusQueryEditor .search-bar.toolbar, NautilusQueryEditor .search-bar.inline-
   box-shadow: none;
   background-color: #ffffff; }
 
+NemoWindow EelEditableLabel.entry {
+  transition: none; }
+
 NemoWindow .sidebar .frame {
   border-width: 0; }
 

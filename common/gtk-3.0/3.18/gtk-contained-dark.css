@@ -3033,6 +3033,9 @@ NautilusQueryEditor .search-bar.toolbar, NautilusQueryEditor .search-bar.inline-
 NautilusListView .view {
   border-bottom: 1px solid #2b2e39; }
 
+NemoWindow EelEditableLabel.entry {
+  transition: none; }
+
 NemoWindow .sidebar .frame {
   border-width: 0; }
 

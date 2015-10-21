@@ -141,6 +141,8 @@ $disk_space_free: darken($bg_color, 3%);
 //
 NemoIconViewContainer { @extend NautilusCanvasViewContainer.view }
 
+NemoWindow EelEditableLabel.entry { transition: none; }  // Workaround for invisible text in rename entry
+
 NemoWindow .sidebar .frame {
 	border-width: 0;
 }
