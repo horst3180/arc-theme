@@ -3842,7 +3842,7 @@ GtkFileChooserDialog,
 NautilusWindow,
 NemoWindow.background > GtkGrid > GtkPaned > .pane-separator,
 MarlinViewWindow.background > GtkBox > GtkPaned > .pane-separator {
-  background-image: linear-gradient(to bottom, #353945); }
+  background-color: #353945; }
 
 GtkFileChooserDialog.background.csd, GtkFileChooserDialog.background {
   background-color: #353945; }
@@ -3877,7 +3877,7 @@ GeditWindow.background.csd > .titlebar .pane-separator,
 GeditWindow.background.csd.maximized > .titlebar .pane-separator,
 GeditWindow.background.csd > .titlebar .pane-separator:backdrop,
 GeditWindow.background.csd.maximized > .titlebar .pane-separator:backdrop {
-  background-image: linear-gradient(to bottom, #d4d5db); }
+  background-color: #d4d5db; }
 
 FeedReaderreaderUI.background.csd > .titlebar > GtkHeaderBar.header-bar.titlebar,
 GeditWindow.background.csd > .titlebar > GtkHeaderBar.header-bar.titlebar {
@@ -3901,10 +3901,10 @@ GeditWindow.background.csd {
   background-color: transparent; }
 
 GeditWindow.background .gedit-side-panel-paned .pane-separator {
-  background-image: linear-gradient(to bottom, #353945); }
+  background-color: #353945; }
 
 GeditWindow.background .gedit-bottom-panel-paned .pane-separator {
-  background-image: linear-gradient(to bottom, #dbdfe3); }
+  background-color: #dbdfe3; }
 
 GeditWindow.background > .titlebar.default-decoration,
 GeditWindow.background > .titlebar.default-decoration:backdrop {
