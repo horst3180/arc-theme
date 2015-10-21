@@ -58,7 +58,7 @@ MarlinViewWindow {
 GtkFileChooserDialog,
 NautilusWindow,
 NemoWindow.background > GtkGrid > GtkPaned > .pane-separator,
-MarlinViewWindow.background > GtkBox > GtkPaned > .pane-separator {background-color: $dark_sidebar_border}
+MarlinViewWindow.background > GtkBox > GtkPaned > .pane-separator { background-image: linear-gradient(to bottom, $dark_sidebar_border); }
 
 GtkFileChooserDialog {
 
@@ -101,7 +101,7 @@ GeditWindow.background.csd {
   > .titlebar .pane-separator,
   &.maximized > .titlebar .pane-separator,
   > .titlebar .pane-separator:backdrop,
-  &.maximized > .titlebar .pane-separator:backdrop { background-color: $header_border; }
+  &.maximized > .titlebar .pane-separator:backdrop { background-image: linear-gradient(to bottom, $header_border); }
 
   > .titlebar > GtkHeaderBar.header-bar.titlebar {
     background-color: $header_bg;
@@ -125,8 +125,8 @@ GeditWindow.background.csd > .titlebar {
 GeditWindow.background {
   &.csd { background-color: transparent; }
 
-  .gedit-side-panel-paned .pane-separator { background-color: $dark_sidebar_border; }
-  .gedit-bottom-panel-paned .pane-separator { background-color: $borders_color; }
+  .gedit-side-panel-paned .pane-separator { background-image: linear-gradient(to bottom, $dark_sidebar_border); }
+  .gedit-bottom-panel-paned .pane-separator { background-image: linear-gradient(to bottom, $borders_color); }
 
   > .titlebar.default-decoration,
   > .titlebar.default-decoration:backdrop { background-color: opacify($header_bg, 1); }  // fix for elementary OS
