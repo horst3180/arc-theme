@@ -3506,6 +3506,9 @@ GraniteWidgetsPopOver .sidebar.view,
 GraniteWidgetsPopOver * {
   background-color: transparent; }
 
+GraniteWidgetsXsEntry.entry {
+  padding: 4px; }
+
 .h1 {
   font: open sans 24px; }
 
