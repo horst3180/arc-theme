@@ -2708,6 +2708,21 @@ GtkPlacesSidebar.sidebar {
 }
 
 //
+// File chooser
+//
+GtkPlacesView {
+  .server-list-button > GtkImage {
+    transition: 200ms $ease-out-quad;
+    -gtk-icon-transform: rotate(0turn);
+  }
+
+  .server-list-button:checked > GtkImage {
+    transition: 200ms $ease-out-quad;
+    -gtk-icon-transform: rotate(-0.5turn);
+  }
+}
+
+//
 // Paned
 //
 GtkPaned {                        // this is for the standard paned separator
