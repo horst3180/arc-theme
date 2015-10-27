@@ -2748,12 +2748,11 @@ GtkVolumeButton.button {
 
 .header-bar .button.titlebutton,
 .titlebar .button.titlebutton {
-  padding: 7px 4px;
+  padding: 6px 4px;
   border-color: transparent;
   background-color: transparent;
   background-image: none;
-  background-color: rgba(231, 232, 235, 0);
-  border-width: 0; }
+  background-color: rgba(231, 232, 235, 0); }
   .header-bar .button.titlebutton:hover,
   .titlebar .button.titlebutton:hover {
     color: rgba(82, 93, 118, 0.8);
@@ -2774,7 +2773,8 @@ GtkVolumeButton.button {
     color: transparent;
     background-color: transparent;
     background-position: center;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    border-width: 0; }
     .header-bar .button.titlebutton.close:backdrop,
     .header-bar .button.titlebutton.maximize:backdrop,
     .header-bar .button.titlebutton.minimize:backdrop,

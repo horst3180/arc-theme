@@ -371,6 +371,8 @@ GtkSearchEntry.entry {
       outline-color: rgba(186, 195, 207, 0.3);
       border-color: rgba(26, 28, 34, 0.35);
       background-color: rgba(119, 127, 151, 0.45); }
+      .osd .button:hover, .osd .button:hover:first-child, .osd .button:hover:last-child {
+        box-shadow: none; }
     .osd .button:active, .osd .button:checked {
       background-clip: padding-box;
       color: #ffffff;
@@ -391,6 +393,8 @@ GtkSearchEntry.entry {
         outline-color: rgba(186, 195, 207, 0.3);
         border-color: rgba(26, 28, 34, 0.35);
         background-color: rgba(119, 127, 151, 0.45); }
+        .osd .button.flat:hover, .osd .button.flat:hover:first-child, .osd .button.flat:hover:last-child {
+          box-shadow: none; }
       .osd .button.flat:insensitive {
         color: #5d626e;
         border-color: rgba(26, 28, 34, 0.35);
@@ -2560,12 +2564,11 @@ GtkVolumeButton.button {
 
 .header-bar .button.titlebutton,
 .titlebar .button.titlebutton {
-  padding: 7px 4px;
+  padding: 6px 4px;
   border-color: transparent;
   background-color: transparent;
   background-image: none;
-  background-color: rgba(47, 52, 63, 0);
-  border-width: 0; }
+  background-color: rgba(47, 52, 63, 0); }
   .header-bar .button.titlebutton:hover,
   .titlebar .button.titlebutton:hover {
     color: rgba(207, 218, 231, 0.8);
@@ -2586,7 +2589,8 @@ GtkVolumeButton.button {
     color: transparent;
     background-color: transparent;
     background-position: center;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    border-width: 0; }
     .header-bar .button.titlebutton.close:backdrop,
     .header-bar .button.titlebutton.maximize:backdrop,
     .header-bar .button.titlebutton.minimize:backdrop,

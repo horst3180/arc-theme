@@ -473,6 +473,7 @@ $_dot_color: $selected_bg_color;
     &:hover {
       @include button(osd-hover);
       @extend %linked;
+      &, &:first-child, &:last-child { box-shadow: none; }
     }
     &:active, &:checked {
       background-clip: padding-box;
@@ -489,6 +490,7 @@ $_dot_color: $selected_bg_color;
       box-shadow: none;
       &:hover {
         @include button(osd-hover);
+        &, &:first-child, &:last-child { box-shadow: none; }
       }
       &:insensitive {
         @include button(osd-insensitive);
@@ -2844,11 +2846,10 @@ GtkVolumeButton.button { padding: 8px; }
   }
 
   .button.titlebutton {
-    padding: 7px 4px;
+    padding: 6px 4px;
 
     @include button(undecorated);
     background-color: transparentize($header_bg, 1);
-    border-width: 0;
 
     &:hover {
       @include button(header-hover);
@@ -2863,6 +2864,7 @@ GtkVolumeButton.button { padding: 8px; }
       background-color: transparent;
       background-position: center;
       background-repeat: no-repeat;
+      border-width: 0;
 
       &:backdrop { opacity: 1; }
     }

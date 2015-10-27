@@ -473,6 +473,7 @@ $_dot_color: $selected_bg_color;
     &:hover {
       @include button(osd-hover);
       @extend %linked;
+      &, &:first-child, &:last-child { box-shadow: none; }
     }
     &:active, &:checked {
       background-clip: padding-box;
@@ -489,6 +490,7 @@ $_dot_color: $selected_bg_color;
       box-shadow: none;
       &:hover {
         @include button(osd-hover);
+        &, &:first-child, &:last-child { box-shadow: none; }
       }
       &:insensitive {
         @include button(osd-insensitive);

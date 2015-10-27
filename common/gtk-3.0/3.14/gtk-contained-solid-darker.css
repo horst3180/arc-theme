@@ -371,6 +371,8 @@ GtkSearchEntry.entry {
       outline-color: rgba(186, 195, 207, 0.3);
       border-color: rgba(26, 28, 34, 0.4);
       background-color: rgba(119, 127, 151, 0.5); }
+      .osd .button:hover, .osd .button:hover:first-child, .osd .button:hover:last-child {
+        box-shadow: none; }
     .osd .button:active, .osd .button:checked {
       background-clip: padding-box;
       color: #ffffff;
@@ -391,6 +393,8 @@ GtkSearchEntry.entry {
         outline-color: rgba(186, 195, 207, 0.3);
         border-color: rgba(26, 28, 34, 0.4);
         background-color: rgba(119, 127, 151, 0.5); }
+        .osd .button.flat:hover, .osd .button.flat:hover:first-child, .osd .button.flat:hover:last-child {
+          box-shadow: none; }
       .osd .button.flat:insensitive {
         color: #5d626e;
         border-color: rgba(26, 28, 34, 0.4);

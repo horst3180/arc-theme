@@ -3008,11 +3008,10 @@ GtkVolumeButton.button { padding: 8px; }
   }
 
   .button.titlebutton {
-    padding: 7px 4px;
+    padding: 6px 4px;
 
     @include button(undecorated);
     background-color: transparentize($header_bg, 1);
-    border-width: 0;
 
     &:hover {
       @include button(header-hover);
@@ -3027,6 +3026,7 @@ GtkVolumeButton.button { padding: 8px; }
       background-color: transparent;
       background-position: center;
       background-repeat: no-repeat;
+      border-width: 0;
 
       &:backdrop { opacity: 1; }
     }
