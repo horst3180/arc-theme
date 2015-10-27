@@ -34,19 +34,19 @@
   </defs>
   <sodipodi:namedview
      id="base"
-     pagecolor="#ffffff"
+     pagecolor="#828282"
      bordercolor="#666666"
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="22.627417"
-     inkscape:cx="8.2254385"
-     inkscape:cy="0.39374777"
+     inkscape:cx="1.4637299"
+     inkscape:cy="12.768116"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:window-width="1301"
-     inkscape:window-height="650"
+     inkscape:window-height="744"
      inkscape:window-x="65"
      inkscape:window-y="24"
      inkscape:window-maximized="1"
@@ -90,7 +90,7 @@
      id="layer1"
      transform="translate(0,-1015.3622)">
     <rect
-       style="fill:#5294e2;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:#ffffff;fill-opacity:0.90196079;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="rect3338"
        width="4"
        height="33.000019"
