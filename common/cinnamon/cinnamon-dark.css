@@ -7,7 +7,7 @@ stage {
 .label-shadow {
   color: transparent; }
 
-.popup-menu #notification .notification-button, .popup-menu #notification .notification-icon-button, .sound-button {
+.notification-button, .notification-icon-button, .sound-button {
   min-height: 20px;
   padding: 5px 32px;
   transition-duration: 0;
@@ -17,31 +17,31 @@ stage {
   background-color: #444a58;
   border: 1px solid #2b2e39;
   box-shadow: inset 0 2px 4px rgba(68, 74, 88, 0.05); }
-  .popup-menu #notification .notification-button:focus, .popup-menu #notification .notification-icon-button:focus, .sound-button:focus {
+  .notification-button:focus, .notification-icon-button:focus, .sound-button:focus {
     text-shadow: 0 1px rgba(64, 69, 82, 0);
     color: #D3DAE3;
     background-color: #444a58;
     border: 1px solid #5294E2;
     box-shadow: inset 0 2px 4px rgba(68, 74, 88, 0.05); }
-  .popup-menu #notification .notification-button:hover, .popup-menu #notification .notification-icon-button:hover, .sound-button:hover {
+  .notification-button:hover, .notification-icon-button:hover, .sound-button:hover {
     text-shadow: 0 1px rgba(64, 69, 82, 0);
     color: #D3DAE3;
     background-color: #505666;
     border: 1px solid #2b2e39;
     box-shadow: inset 0 2px 4px rgba(80, 86, 102, 0.05); }
-  .popup-menu #notification .notification-button:hover:focus, .popup-menu #notification .notification-icon-button:hover:focus, .sound-button:hover:focus {
+  .notification-button:hover:focus, .notification-icon-button:hover:focus, .sound-button:hover:focus {
     text-shadow: 0 1px rgba(64, 69, 82, 0);
     color: #D3DAE3;
     background-color: #444a58;
     border: 1px solid #5294E2;
     box-shadow: inset 0 2px 4px rgba(68, 74, 88, 0.05); }
-  .popup-menu #notification .notification-button:active, .popup-menu #notification .notification-icon-button:active, .sound-button:active, .popup-menu #notification .notification-button:active:focus, .popup-menu #notification .notification-icon-button:active:focus, .sound-button:active:focus {
+  .notification-button:active, .notification-icon-button:active, .sound-button:active, .notification-button:active:focus, .notification-icon-button:active:focus, .sound-button:active:focus {
     text-shadow: 0 1px rgba(64, 69, 82, 0);
     color: #ffffff;
     background-color: #5294E2;
     border: 1px solid #5294E2;
     box-shadow: inset 0 2px 4px #5294E2; }
-  .popup-menu #notification .notification-button:insensitive, .popup-menu #notification .notification-icon-button:insensitive, .sound-button:insensitive {
+  .notification-button:insensitive, .notification-icon-button:insensitive, .sound-button:insensitive {
     text-shadow: 0 1px rgba(64, 69, 82, 0);
     color: rgba(211, 218, 227, 0.45);
     border: 1px solid rgba(43, 46, 57, 0.55);
@@ -605,6 +605,8 @@ StScrollBar {
   .popup-menu #notification {
     color: #D3DAE3;
     border-image: url("dark-assets/misc/message.svg") 9 9 9 9; }
+    .notification-button, .notification-icon-button {
+      padding: 5px; }
   #notification.multi-line-notification {
     padding-bottom: 13px;
     color: #BAC3CF; }
