@@ -12,7 +12,8 @@ sudo rm -rf /usr/share/themes/{Arc,Arc-Darker,Arc-Dark}
 rm -rf ~/.local/share/themes/{Arc,Arc-Darker,Arc-Dark}
 rm -rf ~/.themes/{Arc,Arc-Darker,Arc-Dark}
 
-./autogen.sh --prefix=/usr
+#./autogen.sh --prefix=/usr
+./autogen.sh --prefix=/usr --with-gnome=3.16
 sudo make install
 
 # Remove the sources
