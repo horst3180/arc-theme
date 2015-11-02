@@ -712,11 +712,9 @@ StScrollBar {
     color: $fg_color;
     border-image: url("#{$asset_path}/misc/message.svg") 9 9 9 9;
 
-    @at-root {
-      .notification-button, .notification-icon-button {
-        @extend %button;
-        padding: 5px;
-      }
+    .notification-button, .notification-icon-button {
+      @extend %button;
+      padding: 5px;
     }
 
     StEntry { @extend %entry; }
@@ -747,7 +745,10 @@ StScrollBar {
     color: $osd_fg_color;
   }
 
-  &-button, &-icon-button { @extend %osd_button; }
+  &-button, &-icon-button {
+    @extend %osd_button;
+    padding: 5px;
+  }
 
   &-icon-button > StIcon { icon-size: 36px; }
 
