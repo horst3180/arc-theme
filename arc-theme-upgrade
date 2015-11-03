@@ -1,4 +1,4 @@
-#/!bin/bash
+#!/bin/bash
 
 # Script to upgrade/install the arc-theme
 
@@ -12,8 +12,8 @@ sudo rm -rf /usr/share/themes/{Arc,Arc-Darker,Arc-Dark}
 rm -rf ~/.local/share/themes/{Arc,Arc-Darker,Arc-Dark}
 rm -rf ~/.themes/{Arc,Arc-Darker,Arc-Dark}
 
-#./autogen.sh --prefix=/usr
-./autogen.sh --prefix=/usr --with-gnome=3.16
+GNOME_VERSION=$(apt-cache show gnome-shell | grep Version | cut -d ' ' -f2 | cut -c1-4)
+./autogen.sh --prefix=/usr --with-gnome=${GNOME_VERSION}
 sudo make install
 
 # Remove the sources
