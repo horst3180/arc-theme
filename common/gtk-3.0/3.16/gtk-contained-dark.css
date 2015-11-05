@@ -724,7 +724,7 @@ GtkSearchEntry.entry {
   .linked.vertical > GtkComboBox:only-child > .button:checked {
     box-shadow: none; }
 
-.menuitem.button.flat, .button:link, .button:visited, .button:link:hover, .button:link:active, .button:link:checked, .button:visited:hover, .button:visited:active, .button:visited:checked, .menu.button, .popup.button, .notebook tab .button, .list-row.button, .app-notification .button.flat,
+.menuitem.button.flat, .button:link, .button:visited, .button:link:hover, .button:link:active, .button:link:checked, .button:visited:hover, .button:visited:active, .button:visited:checked, .menu.button, .notebook tab .button, .list-row.button, .app-notification .button.flat,
 .app-notification.frame .button.flat, .app-notification .button.flat:insensitive,
 .app-notification.frame .button.flat:insensitive {
   border-color: transparent;
@@ -1474,44 +1474,47 @@ column-header .button, column-header .button:hover, column-header .button:active
       color: rgba(207, 218, 231, 0.2);
       border-color: transparent; }
 
-.menu, .popup {
+.menu {
   margin: 4px;
   padding: 0;
   border-radius: 0;
   background-color: #383C4A;
   border: 1px solid #2b2e39; }
-  .csd .menu, .csd .popup {
+  .csd .menu {
     padding: 4px 0px;
     border-radius: 2px;
     border: none; }
-  .menu .menuitem, .popup .menuitem {
+  .menu .menuitem {
     padding: 5px; }
-    .menu .menuitem:hover, .popup .menuitem:hover {
+    .menu .menuitem:hover {
       color: #D3DAE3;
       background-color: rgba(255, 255, 255, 0.05);
       border: solid rgba(255, 255, 255, 0.07);
       border-width: 1px 0 1px 0; }
-    .menu .menuitem:insensitive, .popup .menuitem:insensitive {
+    .menu .menuitem:insensitive {
       color: rgba(211, 218, 227, 0.45); }
-    .menu .menuitem.separator, .menu GtkPlacesSidebar.sidebar .menuitem.view.separator, GtkPlacesSidebar.sidebar .menu .menuitem.view.separator, .popup .menuitem.separator, .popup GtkPlacesSidebar.sidebar .menuitem.view.separator, GtkPlacesSidebar.sidebar .popup .menuitem.view.separator {
+    .menu .menuitem.separator, .menu GtkPlacesSidebar.sidebar .menuitem.view.separator, GtkPlacesSidebar.sidebar .menu .menuitem.view.separator {
       color: rgba(64, 69, 82, 0); }
-    .menu .menuitem.arrow, .popup .menuitem.arrow {
+    .menu .menuitem.arrow {
       -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
-    .menu .menuitem.arrow:dir(rtl), .popup .menuitem.arrow:dir(rtl) {
+    .menu .menuitem.arrow:dir(rtl) {
       -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl"); }
-  .menu.button, .popup.button {
+  .menu.button {
     border-style: none;
     border-radius: 0; }
-    .menu.button.top, .popup.button.top {
+    .menu.button.top {
       border-bottom: 1px solid #4f5461; }
-    .menu.button.bottom, .popup.button.bottom {
+    .menu.button.bottom {
       border-top: 1px solid #4f5461; }
-    .menu.button:hover, .popup.button:hover {
+    .menu.button:hover {
       background-color: #4f5461; }
-    .menu.button:insensitive, .popup.button:insensitive {
+    .menu.button:insensitive {
       color: transparent;
       background-color: transparent;
       border-color: transparent; }
+
+.csd .popup {
+  border-radius: 2px; }
 
 .menuitem .accelerator {
   color: alpha(currentColor,0.55); }
@@ -2535,12 +2538,15 @@ GtkVolumeButton.button {
     box-shadow: 0 0 0 1px rgba(32, 35, 43, 0.87), 0 5px 5px 0 rgba(0, 0, 0, 0.35); }
   .window-frame.tiled {
     border-radius: 0; }
+  .window-frame.popup {
+    box-shadow: none;
+    border-radius: 0; }
   .window-frame.ssd {
     border-radius: 3px 3px 0 0;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.65); }
     .window-frame.ssd.maximized {
       border-radius: 0; }
-  .window-frame.csd.popup, .window-frame.csd.menu {
+  .window-frame.csd.popup {
     border-radius: 2px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.45), 0 0 0 1px #22242d; }
   .window-frame.csd.tooltip {
