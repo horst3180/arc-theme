@@ -19,7 +19,7 @@
       },
       "images": {
          "theme_frame": "images/theme_frame.png",
-         "theme_frame_inactive": "images/theme_frame_inactive.png",
+         "theme_frame_inactive": "images/theme_frame.png",
 	 "theme_toolbar": "images/theme_toolbar.png"
       },
       "properties": {
