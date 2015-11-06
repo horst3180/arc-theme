@@ -7,8 +7,6 @@ ithemedarkerdir   = $(DESTDIR)$(themedarkerdir)
 ithemedarkdir  = $(DESTDIR)$(themedarkdir)
 
 install-exec-hook:
-	@ echo "Coping/upgrading arc-theme-upgrade script to /usr/bin/"
-	@ cp -f $(srcdir)/arc-theme-upgrade /usr/bin/
 
 install-data-local:
 
