@@ -92,25 +92,28 @@ install_theme() {
   make install
 
   # Install this script
-  if [ ! -f /usr/bin/$(basename $0) ]; then
-    echo
-    read -r -p "Do you like to install the $(basename $0) for future upgrades? [y/N] " response
-    case $response in
-      [yY][eE][sS]|[yY])
-        cp -r arc-theme-upgrade /usr/bin/
+  if [ -f $(basename $0) ]; then
+    if [ ! -f /usr/bin/$(basename $0) ]; then
+      echo
+      read -r -p "Do you like to install the $(basename $0) for future upgrades? [y/N] " response
+      case $response in
+        [yY][eE][sS]|[yY])
+          echo "Installing $(basename $0) on /usr/bin/"
+          cp -r arc-theme-upgrade /usr/bin/
+          ;;
+        *)
+          echo "Aborted by user"
+          exit 0;
         ;;
-      *)
-        echo "Aborted by user"
-        exit 0;
-      ;;
-    esac
-  else
-    echo "Upgrading the $(basename $0)"
-    cp -f $(basename $0) /usr/bin/
+      esac
+    else
+      echo "Upgrading $(basename $0)"
+      cp -f $(basename $0) /usr/bin/
+    fi
   fi
 
   # Remove the sources
-  rm -rf $tempdir
+  # rm -rf $tempdir
 
   echo
   echo "Installation complete."
