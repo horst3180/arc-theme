@@ -8,6 +8,9 @@ theme_name=Arc-theme
 # Theme name
 download_url=https://github.com/horst3180/$theme_name/archive/master.tar.gz
 
+# for test purporses only (the repo needs to have this script)
+# download_url=https://github.com/leoheck/$theme_name/archive/master.tar.gz
+
 # Tempdir
 tempdir=/tmp/$theme_name
 
@@ -113,7 +116,7 @@ install_theme() {
   fi
 
   # Remove the sources
-  # rm -rf $tempdir
+  rm -rf $tempdir
 
   echo
   echo "Installation complete."
