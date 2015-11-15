@@ -133,10 +133,19 @@ StScrollBar {
   }
 }
 
+.separator {
+  -gradient-height: 1px;
+  -gradient-start: rgba(0,0,0,0);
+  -gradient-end: rgba(0,0,0,0);
+  -margin-horizontal: 1.5em;
+  height: 1em;
+}
+
 //
 // Slider
 //
-.popup-slider-menu-item {
+.popup-slider-menu-item,
+.slider {
   -slider-height: 4px;
   -slider-background-color: $button_border;                   //background of the trough
   -slider-border-color: transparentize(black, 1);             //trough border color
@@ -254,6 +263,8 @@ StScrollBar {
   min-width: 200px;
   color: $fg_color;
   border-image: url("#{$asset_path}/menu/menu.svg") 9 9 9 9;
+
+  &-arrow { icon-size: 16px; }
 
   .popup-sub-menu {
     background-gradient-direction: none;
@@ -1303,12 +1314,82 @@ StScrollBar {
 
 .sound-playback-control { padding: 5px 10px 10px 10px; }
 
+// 2.8
+.sound-player {
+  padding: 0 4px;
+
+  > StBoxLayout:first-child {
+    padding: 5px 10px 12px 10px;
+    spacing: 0.5em;
+
+    StButton:small {
+      width: 16px;
+      height: 8px;
+      padding: 1px;
+
+      StIcon { icon-size: 12px; }
+    }
+  }
+
+  &-generic-coverart {
+    background: rgba(0,0,0,0.2);
+  }
+
+  &-overlay {
+    width: 290px;
+    height: 70px;
+    padding: 15px;
+    spacing: 0.5em;
+    background: transparentize(darken($osd_bg_color, 5%), 0.1);
+    border: 0px solid darken($osd_bg_color, 10%);
+    border-bottom: 1px ;
+    color: $osd_fg_color;
+
+    StButton {
+      width: 22px;
+      height: 13px;
+      padding: 5px;
+      color: $osd_fg_color;
+      border-radius: 2px;
+      border: 1px solid transparentize($osd_bg_color,1);
+
+      StIcon { icon-size: 16px; }
+
+      &:hover{ @include button(osd-hover); }
+      &:active { @include button(active); }
+    }
+
+    StBoxLayout {
+      padding-top: 2px;
+    }
+  }
+
+  .slider {
+    height: 0.5em;
+    padding: 0;
+    border: none;
+    -slider-height: 0.5em;
+    -slider-background-color: if($variant == 'light', $button_border, darken($bg_color, 5%));
+    -slider-border-color: rgba(0,0,0,0);
+    -slider-active-background-color: $selected_bg_color;
+    -slider-active-border-color: rgba(0,0,0,0);
+    -slider-border-width: 0px;
+    -slider-handle-radius: 0px;
+  }
+}
+
 //
 // Workspace Switcher applet (workspaceSwitcher.js)
 //
 #workspaceSwitcher {
   spacing: 0px;
   padding: 3px;
+}
+
+/* Controls the styling when using the "Simple buttons" option */
+.workspace-switcher {
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
 .workspace-button {
@@ -1321,6 +1402,37 @@ StScrollBar {
 
   &:outlined, &:outlined:hover { color: $selected_bg_color; }
   &:hover { color: transparentize($selected_bg_color, 0.5) }
+}
+
+/* Controls the style when using the "Visual representation" option */
+.workspace-graph {
+  padding: 3px;
+  spacing: 3px;
+}
+
+.workspace-graph .workspace {
+  border: 1px solid transparentize(black, 0.6);
+  background-gradient-direction: none;
+  background-color: transparentize(black, 0.8);
+}
+
+.workspace-graph .workspace:active {
+  border: 1px solid $selected_bg_color;
+  background-gradient-direction: none;
+}
+
+.workspace-graph .workspace .windows {
+  -active-window-background: lighten($panel_bg, 15%);
+  -active-window-border: rgba(0, 0, 0, 0.8);
+  -inactive-window-background: lighten($panel_bg, 15%);
+  -inactive-window-border: rgba(0, 0, 0, 0.8);
+}
+
+.workspace-graph .workspace:active .windows {
+  -active-window-background: lighten($panel_bg, 20%);
+  -active-window-border: rgba(0, 0, 0, 0.8);
+  -inactive-window-background: lighten($panel_bg, 5%);
+  -inactive-window-border: rgba(0, 0, 0, 0.8);
 }
 
 //
