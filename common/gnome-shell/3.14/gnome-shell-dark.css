@@ -462,9 +462,9 @@ StScrollBar {
   .popup-menu .popup-menu-item {
     spacing: 12px; }
     .popup-menu .popup-menu-item:ltr {
-      padding: .4em 3em .4em 0em; }
+      padding: 0.4em 3em 0.4em 0em; }
     .popup-menu .popup-menu-item:rtl {
-      padding: .4em 0em .4em 3em; }
+      padding: 0.4em 0em 0.4em 3em; }
     .popup-menu .popup-menu-item:active, .popup-menu .popup-menu-item.selected {
       color: #D3DAE3 !important;
       background-color: transparent;
@@ -643,7 +643,9 @@ StScrollBar {
   border-image: url("common-assets/panel/panel.svg") 1 1 1 1 !important; }
   #panel.dynamic-top-bar-white-btn {
     border-image: none; }
-  #panel.unlock-screen, #panel.login-screen, #panel.lock-screen {
+  #panel.unlock-screen,
+  #panel.login-screen,
+  #panel.lock-screen {
     background-color: transparent;
     border-image: none; }
   #panel:overview {
@@ -697,13 +699,13 @@ StScrollBar {
     .login-screen #panel .panel-button,
     .lock-screen #panel .panel-button {
       color: #f2f4f7; }
-      .unlock-screen #panel .panel-button:focus, .unlock-screen #panel .panel-button:hover, .unlock-screen #panel .panel-button:active,
+      .unlock-screen #panel .panel-button:focus,
+      .unlock-screen #panel .panel-button:hover,
+      .unlock-screen #panel .panel-button:active,
       .login-screen #panel .panel-button:focus,
       .login-screen #panel .panel-button:hover,
       .login-screen #panel .panel-button:active,
-      .lock-screen #panel .panel-button:focus,
-      .lock-screen #panel .panel-button:hover,
-      .lock-screen #panel .panel-button:active {
+      .lock-screen #panel .panel-button:focus, .lock-screen #panel .panel-button:hover, .lock-screen #panel .panel-button:active {
         color: #f2f4f7; }
   #panel #panelActivities.panel-button {
     -natural-hpadding: 12px; }
@@ -781,7 +783,7 @@ StScrollBar {
   width: 0.3em; }
 
 .calendar {
-  padding: .4em 1.75em .8em 2.5em; }
+  padding: 0.4em 1.75em 0.8em 2.5em; }
 
 .calendar-month-label {
   color: #D3DAE3 !important;
@@ -829,7 +831,7 @@ StScrollBar {
       background-image: url("dark-assets/misc/calendar-arrow-left.svg"); }
 
 .datemenu-date-label {
-  padding: .4em 1.7em;
+  padding: 0.4em 1.7em;
   font-weight: bold;
   text-align: center;
   color: #D3DAE3 !important;
@@ -1118,7 +1120,8 @@ StScrollBar {
   border-image: url("common-assets/dash/dash-left.svg") 3 3 3 3; }
   .extended.left #dash {
     border-image: url("common-assets/dash/dash-extended-left.svg") 3 3 3 3; }
-  .right #dash, #dash:rtl {
+  .right #dash,
+  #dash:rtl {
     padding: 3px 0px 3px 0px;
     border-image: url("common-assets/dash/dash-right.svg") 3 3 3 3; }
   .extended.right #dash {
@@ -1301,22 +1304,24 @@ StScrollBar {
     color: #ffffff;
     background-color: #5294E2;
     border-color: #5294E2; }
-  .app-view-control:first-child:ltr, .app-view-control:last-child:rtl {
+  .app-view-control:first-child:ltr,
+  .app-view-control:last-child:rtl {
     border-radius: 2px 0 0 2px;
     border-right-width: 0; }
-  .app-view-control:last-child:ltr, .app-view-control:first-child:rtl {
+  .app-view-control:last-child:ltr,
+  .app-view-control:first-child:rtl {
     border-radius: 0 2px 2px 0;
     border-left-width: 0; }
 
-.search-provider-icon:active, .search-provider-icon:checked,
-.list-search-result:active,
-.list-search-result:checked {
+.search-provider-icon:active,
+.search-provider-icon:checked,
+.list-search-result:active, .list-search-result:checked {
   background-color: rgba(31, 33, 40, 0.85); }
 
-.search-provider-icon:focus, .search-provider-icon:selected, .search-provider-icon:hover,
-.list-search-result:focus,
-.list-search-result:selected,
-.list-search-result:hover {
+.search-provider-icon:focus,
+.search-provider-icon:selected,
+.search-provider-icon:hover,
+.list-search-result:focus, .list-search-result:selected, .list-search-result:hover {
   background-color: rgba(186, 195, 207, 0.4);
   transition-duration: 200ms; }
 
@@ -1406,7 +1411,8 @@ StScrollBar {
     background-image: url(common-assets/misc/page-indicator-hover.svg); }
   .page-indicator:active .page-indicator-icon {
     background-image: url(common-assets/misc/page-indicator-active.svg); }
-  .page-indicator:checked .page-indicator-icon, .page-indicator:checked:active {
+  .page-indicator:checked .page-indicator-icon,
+  .page-indicator:checked:active {
     background-image: url(common-assets/misc/page-indicator-checked.svg); }
 
 .app-well-app > .overview-icon.overview-icon-with-label,
