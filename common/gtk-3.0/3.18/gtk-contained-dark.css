@@ -2433,8 +2433,7 @@ GtkCalendar {
   GtkCalendar:inconsistent {
     color: alpha(currentColor,0.55); }
   GtkCalendar.highlight {
-    color: #D3DAE3;
-    background-color: rgba(43, 46, 57, 0.5); }
+    color: #D3DAE3; }
 
 /***********
  * Dialogs *

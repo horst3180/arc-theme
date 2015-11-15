@@ -2572,7 +2572,6 @@ GtkCalendar {
   &:inconsistent { color: gtkalpha(currentColor,0.55); }
   &.highlight {
     color: $fg_color;
-    background-color: transparentize($button_border, 0.5);
   }
 }
 
