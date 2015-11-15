@@ -33,7 +33,10 @@ stage {
   min-height: 20px;
   padding: 5px 32px;
   transition-duration: 0;
-  border-radius: 2px;
+
+  &, &:focus, &:hover, &:hover:focus, &:active, &:active:focus, &:insensitive {
+    border-radius: 2px;
+  }
 
   @include button(normal);
 
@@ -488,11 +491,15 @@ StScrollBar {
     background-image: url("common-assets/misc/add-workspace.svg");
     height: 200px;
     width: 35px;
-    transition-duration: 200;
+    transition-duration: 100;
 
     &:hover {
       background-image: url("common-assets/misc/add-workspace-hover.svg");
-      transition-duration: 200;
+      transition-duration: 100;
+    }
+    &:active {
+      background-image: url("common-assets/misc/add-workspace-active.svg");
+      transition-duration: 100;
     }
   }
   &-overview-background-shade { background-color: rgba(0,0,0,0.5); }
@@ -785,7 +792,7 @@ StScrollBar {
     &:selected {
       color: $selected_fg_color;
       background-color: $selected_bg_color;
-      border: 1px solid $selected_bg_color;
+      border: 0px solid $selected_bg_color;
     }
   }
 
@@ -1055,7 +1062,7 @@ StScrollBar {
     padding: 10px;
     border: 1px solid rgba(0,0,0,0);
 
-    &:hover { @include button(hover); }
+    &:hover { @extend %button:hover; }
   }
 
   &-places {
@@ -1083,7 +1090,7 @@ StScrollBar {
 
     &-selected {
       padding: 7px;
-      @include button(hover);
+      @extend %button:hover;
 
       &:highlighted { font-weight: bold; }
     }
@@ -1098,7 +1105,7 @@ StScrollBar {
 
     &-selected {
       padding: 7px;
-      @include button(hover);
+      @extend %button:hover;
     }
     &-hover {
       background-color: red;
