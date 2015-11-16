@@ -122,7 +122,7 @@ StScrollBar {
   }
 
   StButton#vhandle, StButton#hhandle {
-    border-radius: 4px;
+    border-radius: 2px;
     background-color: mix($fg_color, $bg_color, 40%);
     border: 0px solid;
     margin: 0px;
@@ -277,12 +277,6 @@ StScrollBar {
     StScrollBar {
       padding: 4px;
       StBin#trough, StBin#vhandle { border-width: 0; }
-    }
-
-    &-menu-item:open {
-      background: none;
-      box-shadow: none;
-      border-image: url("#{$asset_path}/menu/submenu-open.svg") 9 9 9 9;
     }
   }
 
@@ -455,7 +449,7 @@ StScrollBar {
 
 .expo-workspaces-name-entry,
 .expo-workspaces-name-entry#selected {
-  spacing: 25px;
+  height: 15px;
   border-radius: 2px;
   font-size: 9pt;
   padding: 5px 8px;
@@ -493,7 +487,7 @@ StScrollBar {
   //&-controls { visible-height: 32px; }
 
   &-thumbnails {
-    spacing: 14px;
+    spacing: 26px;
 
     &-background, &-background:rtl { padding: 8px; }
   }
@@ -623,35 +617,35 @@ StScrollBar {
 
 //arrow back
 .calendar-change-month-back {
-  background-image: url("#{$asset_path}/misc/calendar-arrow-left.svg");
+  background-image: url("common-assets/misc/calendar-arrow-left.svg");
 
-  &:focus, &:hover { background-image: url("#{$asset_path}/misc/calendar-arrow-left-hover.svg"); }
+  &:focus, &:hover { background-image: url("common-assets/misc/calendar-arrow-left-hover.svg"); }
 
-  &:active { background-image: url("#{$asset_path}/misc/calendar-arrow-left.svg"); }
+  &:active { background-image: url("common-assets/misc/calendar-arrow-left.svg"); }
 
   &:rtl {
-    background-image: url("#{$asset_path}/misc/calendar-arrow-right.svg");
+    background-image: url("common-assets/misc/calendar-arrow-right.svg");
 
-    &:focus, &:hover { background-image: url("#{$asset_path}/misc/calendar-arrow-right-hover.svg"); }
+    &:focus, &:hover { background-image: url("common-assets/misc/calendar-arrow-right-hover.svg"); }
 
-    &:active { background-image: url("#{$asset_path}/misc/calendar-arrow-right.svg"); }
+    &:active { background-image: url("common-assets/misc/calendar-arrow-right.svg"); }
   }
 }
 
 //arrow forward
 .calendar-change-month-forward {
-  background-image: url("#{$asset_path}/misc/calendar-arrow-right.svg");
+  background-image: url("common-assets/misc/calendar-arrow-right.svg");
 
-  &:focus, &:hover { background-image: url("#{$asset_path}/misc/calendar-arrow-right-hover.svg"); }
+  &:focus, &:hover { background-image: url("common-assets/misc/calendar-arrow-right-hover.svg"); }
 
-  &:active { background-image: url("#{$asset_path}/misc/calendar-arrow-right.svg"); }
+  &:active { background-image: url("common-assets/misc/calendar-arrow-right.svg"); }
 
   &:rtl {
-    background-image: url("#{$asset_path}/misc/calendar-arrow-left.svg");
+    background-image: url("common-assets/misc/calendar-arrow-left.svg");
 
-    &:focus, &:hover { background-image: url("#{$asset_path}/misc/calendar-arrow-left-hover.svg"); }
+    &:focus, &:hover { background-image: url("common-assets/misc/calendar-arrow-left-hover.svg"); }
 
-    &:active { background-image: url("#{$asset_path}/misc/calendar-arrow-left.svg"); }
+    &:active { background-image: url("common-assets/misc/calendar-arrow-left.svg"); }
   }
 }
 
@@ -788,6 +782,10 @@ StScrollBar {
   border-image: url("common-assets/misc/bg.svg") 9 9 9 9;
   border-radius: 3px;
   padding: 20px;
+
+  > StBoxLayout {
+    padding: 4px;
+  }
 
   &-item-container { spacing: 8px; }
 

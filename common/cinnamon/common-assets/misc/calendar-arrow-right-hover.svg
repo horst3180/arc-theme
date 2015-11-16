@@ -9,7 +9,7 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   sodipodi:docname="calendar-arrow-right.svg"
+   sodipodi:docname="calendar-arrow-right-hover.svg"
    height="16"
    id="svg7384"
    inkscape:version="0.91 r13725"
@@ -28,13 +28,13 @@
     </rdf:RDF>
   </metadata>
   <sodipodi:namedview
-     inkscape:bbox-nodes="false"
+     inkscape:bbox-nodes="true"
      inkscape:bbox-paths="true"
      bordercolor="#666666"
      borderopacity="1"
      inkscape:current-layer="layer12"
-     inkscape:cx="-12.348759"
-     inkscape:cy="7.764245"
+     inkscape:cx="14.072123"
+     inkscape:cy="8.0207106"
      gridtolerance="10"
      inkscape:guide-bbox="true"
      guidetolerance="10"
@@ -45,8 +45,8 @@
      pagecolor="#ffffff"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     showborder="false"
-     showgrid="false"
+     showborder="true"
+     showgrid="true"
      showguides="true"
      inkscape:snap-bbox="true"
      inkscape:snap-bbox-midpoints="false"
@@ -60,12 +60,13 @@
      inkscape:window-width="1366"
      inkscape:window-x="0"
      inkscape:window-y="25"
-     inkscape:zoom="8">
+     inkscape:zoom="22.627417"
+     inkscape:snap-bbox-edge-midpoints="true">
     <inkscape:grid
        empspacing="2"
        enabled="true"
        id="grid4866"
-       originx="-80.000002px"
+       originx="141px"
        originy="530px"
        snapvisiblegridlinesonly="true"
        spacingx="1px"
@@ -80,7 +81,7 @@
        enabled="true"
        id="grid5968"
        opacity="0.1254902"
-       originx="-80.000002px"
+       originx="141px"
        originy="530px"
        snapvisiblegridlinesonly="true"
        spacingx="0.5px"
@@ -97,75 +98,55 @@
      id="layer9"
      inkscape:label="status"
      style="display:inline"
-     transform="translate(-321.0002,-747)" />
+     transform="translate(-100.0002,-747)" />
   <g
      inkscape:groupmode="layer"
      id="layer10"
      inkscape:label="devices"
-     transform="translate(-321.0002,-747)" />
+     transform="translate(-100.0002,-747)" />
   <g
      inkscape:groupmode="layer"
      id="layer11"
      inkscape:label="apps"
-     transform="translate(-321.0002,-747)" />
+     transform="translate(-100.0002,-747)" />
   <g
      inkscape:groupmode="layer"
      id="layer13"
      inkscape:label="places"
-     transform="translate(-321.0002,-747)" />
+     transform="translate(-100.0002,-747)" />
   <g
      inkscape:groupmode="layer"
      id="layer14"
      inkscape:label="mimetypes"
-     transform="translate(-321.0002,-747)" />
+     transform="translate(-100.0002,-747)" />
   <g
      inkscape:groupmode="layer"
      id="layer15"
      inkscape:label="emblems"
      style="display:inline"
-     transform="translate(-321.0002,-747)" />
+     transform="translate(-100.0002,-747)" />
   <g
      inkscape:groupmode="layer"
      id="g71291"
      inkscape:label="emotes"
      style="display:inline"
-     transform="translate(-321.0002,-747)" />
+     transform="translate(-100.0002,-747)" />
   <g
      inkscape:groupmode="layer"
      id="g4953"
      inkscape:label="categories"
      style="display:inline"
-     transform="translate(-321.0002,-747)" />
+     transform="translate(-100.0002,-747)" />
   <g
      inkscape:groupmode="layer"
      id="layer12"
      inkscape:label="actions"
      style="display:inline"
-     transform="translate(-321.0002,-747)">
+     transform="translate(-100.0002,-747)">
     <path
-       inkscape:connector-curvature="0"
-       d="m 325.78125,749 a 1.0001,1.0001 0 0 0 -0.5,1.71875 L 329.5625,755 l -4.28125,4.28125 a 1.016466,1.016466 0 1 0 1.4375,1.4375 l 5,-5 0.6875,-0.71875 -0.6875,-0.71875 -5,-5 A 1.0001,1.0001 0 0 0 325.78125,749 z"
-       id="path8460"
-       style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#a1a1a1;fill-opacity:1;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans" />
-    <rect
-       height="1"
-       id="rect8464"
-       rx="0"
-       ry="1"
-       style="fill:#a1a1a1;fill-opacity:1;stroke:none"
-       transform="scale(-1,1)"
-       width="1"
-       x="-326.00021"
-       y="749" />
-    <rect
-       height="1"
-       id="rect8468"
-       rx="0"
-       ry="1"
-       style="fill:#a1a1a1;fill-opacity:1;stroke:none"
-       transform="scale(-1,1)"
-       width="1"
-       x="-326.00021"
-       y="760" />
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:Sans;-inkscape-font-specification:Sans;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:start;display:inline;overflow:visible;visibility:visible;fill:#5294e2;fill-opacity:1;stroke:none;stroke-width:2;marker:none;enable-background:accumulate"
+       d="m 106.17699,751.00006 a 0.67182557,0.66502524 0 0 1 0.10367,0.009 0.67182557,0.66502524 0 0 1 0.39887,0.18702 l 3.35878,3.32479 0.46184,0.47795 -0.46184,0.47792 -3.35878,3.32481 a 0.68281953,0.67590797 0 0 1 -0.698,0.16363 c -0.0374,0.0143 -0.0779,0.0233 -0.1207,0.0233 -0.18608,0 -0.33589,-0.14829 -0.33589,-0.33248 0,-0.0423 0.009,-0.0823 0.0236,-0.11948 a 0.68281953,0.67590797 0 0 1 0.16531,-0.69094 l 2.876,-2.84689 -2.87597,-2.84686 a 0.67182557,0.66502524 0 0 1 -0.17056,-0.72082 c -0.008,-0.0292 -0.0185,-0.058 -0.0185,-0.0896 0,-0.18421 0.14978,-0.33249 0.33587,-0.33249 0.0395,0 0.0765,0.01 0.11152,0.022 A 0.67182557,0.66502524 0 0 1 106.17701,751 Z"
+       id="path6040"
+       inkscape:connector-curvature="0" />
   </g>
 </svg>

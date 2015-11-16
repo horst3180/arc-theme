@@ -27,9 +27,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="16.000001"
-     inkscape:cx="7.5374477"
-     inkscape:cy="6.5634088"
+     inkscape:zoom="45.254837"
+     inkscape:cx="2.5411162"
+     inkscape:cy="14.440542"
      inkscape:document-units="px"
      inkscape:current-layer="g3027"
      showgrid="true"
@@ -103,6 +103,14 @@
          height="1"
          x="1058.3102"
          y="-9.9350014"
+         transform="matrix(0,1,-1,0,0,0)" />
+      <rect
+         style="opacity:0.1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect3883-9"
+         width="28.999802"
+         height="1"
+         x="1058.3101"
+         y="-26.935005"
          transform="matrix(0,1,-1,0,0,0)" />
     </g>
   </g>
