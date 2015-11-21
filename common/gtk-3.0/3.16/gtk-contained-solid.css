@@ -1025,8 +1025,10 @@ GtkComboBox {
       background-color: #eff0f2; }
   .maximized .titlebar {
     background-color: #e7e8eb; }
-    .csd .maximized .titlebar:backdrop {
+    .maximized .titlebar:backdrop {
       background-color: #eff0f2; }
+      .csd .maximized .titlebar:backdrop {
+        background-color: #eff0f2; }
 
 .titlebar .titlebar,
 .titlebar .titlebar:backdrop {

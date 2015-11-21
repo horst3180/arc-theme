@@ -1215,7 +1215,7 @@ GtkComboBox {
     background-color: opacify($header_bg, 1);
 
     &:backdrop {
-    //background-color: opacify($header_bg_backdrop, 1);
+    background-color: opacify($header_bg_backdrop, 1);
 
     .csd & { background-color: opacify($header_bg_backdrop, 1); }
     }
