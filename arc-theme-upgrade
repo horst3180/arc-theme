@@ -1,0 +1,151 @@
+#!/bin/bash
+
+# Script to upgrade/install the arc-theme
+
+#URL
+theme_name=Arc-theme
+
+# Theme name
+download_url=https://github.com/horst3180/$theme_name/archive/master.tar.gz
+
+# for test purporses only (the repo needs to have this script)
+# download_url=https://github.com/leoheck/$theme_name/archive/master.tar.gz
+
+# Tempdir
+tempdir=/tmp/$theme_name
+
+# Directories
+lightdir=/usr/share/themes/Arc
+darkerdir=/usr/share/themes/Arc-Darker
+darkdir=/usr/share/themes/Arc-Dark
+
+userlightdir=$HOME/.themes/Arc
+userdarkerdir=$HOME/.themes/Arc-Darker
+userdarkdir=$HOME/.themes/Arc-Dark
+
+userlightdir2=$HOME/local/share/themes/Arc
+userdarkerdir2=$HOME/local/share/themes/Arc-Darker
+userdarkdir2=$HOME/local/share/themes/Arc-Dark
+
+#Functions
+show_error() {
+echo -e "\033[1;31m$@\033[0m"
+}
+
+check_root() {
+  if [[ "${EUID}" -ne 0 ]]; then
+    show_error "This script has to be run as root"
+    exit 1;
+  fi
+}
+
+check_command() {
+  fail=false
+
+  for i in "$@"
+  do
+    command -v $i >/dev/null 2>&1 || { show_error >&2 "This script requires "$i" but it's not installed."; fail=true; }
+  done
+
+  if [ "$fail" = true ]; then
+    echo
+    echo "Aborting."
+    echo
+    exit 1;
+  fi
+}
+
+check_directories() {
+  dirfound=false
+
+  echo "Checking if theme is installed..."
+  echo
+
+  for i in "$@"
+  do
+    if [ -d "$i" ]; then
+      echo "Found $i"
+      dirfound=true
+    fi
+  done
+
+  if [ "$dirfound" = true ]; then
+    echo
+    echo "The above directories will be overwritten."
+  fi
+
+  if [ "$dirfound" = false ]; then
+    echo "Theme is not installed."
+  fi
+}
+
+install_theme() {
+  # Remove current installation
+  rm -rf $lightdir $darkerdir $darkdir
+
+  # Clean tempdir
+  rm -rf $tempdir && mkdir $tempdir && cd $tempdir
+
+  # Get the sources
+  wget $download_url
+  tar xf master.tar.gz && cd "$theme_name"-master
+
+  # Build and install
+  ./autogen.sh --prefix=/usr
+  make install
+
+  # Install this script
+  if [ -f $(basename $0) ]; then
+    if [ ! -f /usr/bin/$(basename $0) ]; then
+      echo
+      read -r -p "Do you like to install the $(basename $0) for future upgrades? [y/N] " response
+      case $response in
+        [yY][eE][sS]|[yY])
+          echo "Installing $(basename $0) on /usr/bin/"
+          cp -r arc-theme-upgrade /usr/bin/
+          ;;
+        *)
+          echo "Aborted by user"
+          exit 0;
+        ;;
+      esac
+    else
+      echo "Upgrading $(basename $0)"
+      cp -f $(basename $0) /usr/bin/
+    fi
+  fi
+
+  # Remove the sources
+  rm -rf $tempdir
+
+  echo
+  echo "Installation complete."
+}
+
+# Main part
+clear
+echo '####################################'
+echo '#     Arc Theme Install Script     #'
+echo '####################################'
+echo
+
+#Check available commands
+check_command automake wget pkg-config autoconf make tar
+
+#Check if we are root
+check_root
+
+#Check if theme is installed
+check_directories $lightdir $darkerdir $darkdir
+
+echo
+read -r -p "Do you want to continue installation? [y/N] " response
+case $response in
+  [yY][eE][sS]|[yY]) 
+    install_theme
+    ;;
+  *)
+    echo "Aborted by user"
+    exit 0;
+    ;;
+esac
