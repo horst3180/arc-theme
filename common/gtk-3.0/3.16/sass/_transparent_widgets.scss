@@ -58,6 +58,9 @@ NautilusWindow,
 NemoWindow.background > GtkGrid > GtkPaned > .pane-separator,
 MarlinViewWindow.background > GtkBox > GtkPaned > .pane-separator {background-color: $dark_sidebar_border}
 
+/*Fix 1px transparent line at the bottom of the Nautilus window*/
+NautilusListView.vertical { background-color: $base_color; }
+
 GtkFileChooserDialog {
 
   &.background.csd, &.background { background-color: $dark_sidebar_bg }
