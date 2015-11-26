@@ -927,8 +927,6 @@ GtkComboBox {
     border-color: #d4d5db; }
   .header-bar:backdrop {
     color: rgba(82, 93, 118, 0.5); }
-    .csd .header-bar:backdrop {
-      background-color: #eff0f2; }
   .header-bar .title {
     padding: 0px 12px; }
   .header-bar .subtitle {
@@ -1001,16 +999,16 @@ GtkComboBox {
   .maximized .header-bar {
     background-color: #e7e8eb;
     border-color: #d4d5db; }
-    .maximized .header-bar:backdrop {
-      border-color: #d4d5db; }
   .header-bar.default-decoration,
-  .csd .header-bar.default-decoration {
+  .csd .header-bar.default-decoration, .header-bar.default-decoration:backdrop,
+  .csd .header-bar.default-decoration:backdrop {
     padding-top: 5px;
     padding-bottom: 5px;
     background-color: #e7e8eb;
     border-bottom-width: 0; }
-    .header-bar.default-decoration:backdrop,
-    .csd .header-bar.default-decoration:backdrop {
+    .maximized .header-bar.default-decoration,
+    .maximized .csd .header-bar.default-decoration, .maximized .header-bar.default-decoration:backdrop,
+    .maximized .csd .header-bar.default-decoration:backdrop {
       background-color: #e7e8eb; }
 
 .titlebar {
@@ -1023,15 +1021,14 @@ GtkComboBox {
   .csd .titlebar {
     background-color: #e7e8eb; }
   .titlebar:backdrop {
-    color: rgba(82, 93, 118, 0.5); }
+    color: rgba(82, 93, 118, 0.5);
+    background-color: #eff0f2; }
     .csd .titlebar:backdrop {
       background-color: #eff0f2; }
   .maximized .titlebar {
     background-color: #e7e8eb; }
-    .maximized .titlebar:backdrop {
+    .maximized .titlebar:backdrop, .csd .maximized .titlebar:backdrop {
       background-color: #eff0f2; }
-      .csd .maximized .titlebar:backdrop {
-        background-color: #eff0f2; }
 
 .titlebar .titlebar,
 .titlebar .titlebar:backdrop {

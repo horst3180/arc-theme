@@ -1088,12 +1088,7 @@ GtkComboBox {
     border-color: $header_border;
   }
 
-  &:backdrop {
-    color: transparentize($header_fg, 0.3);
-    //background-color: opacify($header_bg_backdrop, 1);
-
-    .csd & { background-color: $header_bg_backdrop; }  // Transparent header-bars only in csd windows
-  }
+  &:backdrop { color: transparentize($header_fg, 0.3); }
 
   .title {
     padding: 0px 12px;
@@ -1176,21 +1171,18 @@ GtkComboBox {
   .maximized & {
     background-color: opacify($header_bg, 1);
     border-color: opacify($header_border, 1);
-
-    &:backdrop {
-      //background-color: opacify($header_bg_backdrop, 1);
-      border-color: opacify($header_border, 1);
-    }
   }
 
   &.default-decoration,
-  .csd &.default-decoration {  // needed under wayland, since all gtk3 windows are csd windows
-    padding-top: 5px;	    // less padding for ssd
-    padding-bottom: 5px;  //
+  .csd &.default-decoration,             // needed under wayland, since all gtk3 windows are csd windows
+  &.default-decoration:backdrop,
+  .csd &.default-decoration:backdrop {
+    padding-top: 5px;	                   // less padding for ssd
+    padding-bottom: 5px;                 //
     background-color: opacify($header_bg, 1);
     border-bottom-width: 0;
 
-    //&:backdrop { background-color: opacify($header_bg_backdrop, 1); }
+    .maximized & { background-color: opacify($header_bg, 1); }
   }
 }
 
@@ -1206,7 +1198,7 @@ GtkComboBox {
 
   &:backdrop {
     color: transparentize($header_fg, 0.3);
-    //background-color: opacify($header_bg_backdrop, 1);
+    background-color: opacify($header_bg_backdrop, 1);
 
     .csd & { background-color: $header_bg_backdrop; }
   }
@@ -1214,11 +1206,7 @@ GtkComboBox {
   .maximized & {
     background-color: opacify($header_bg, 1);
 
-    &:backdrop {
-    background-color: opacify($header_bg_backdrop, 1);
-
-    .csd & { background-color: opacify($header_bg_backdrop, 1); }
-    }
+    &:backdrop, .csd &:backdrop { background-color: opacify($header_bg_backdrop, 1); }
   }
 }
 

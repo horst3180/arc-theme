@@ -1008,8 +1008,6 @@ GtkComboBox {
     border-color: rgba(38, 42, 51, 0.97); }
   .header-bar:backdrop {
     color: rgba(207, 218, 231, 0.5); }
-    .csd .header-bar:backdrop {
-      background-color: rgba(50, 56, 67, 0.97); }
   .header-bar .title {
     padding: 0px 12px; }
   .header-bar .subtitle {
@@ -1083,14 +1081,17 @@ GtkComboBox {
   .maximized .header-bar {
     background-color: #2f343f;
     border-color: #262a33; }
-    .maximized .header-bar:backdrop {
-      border-color: #262a33; }
   .header-bar.default-decoration,
-  .csd .header-bar.default-decoration {
+  .csd .header-bar.default-decoration, .header-bar.default-decoration:backdrop,
+  .csd .header-bar.default-decoration:backdrop {
     padding-top: 5px;
     padding-bottom: 5px;
     background-color: #2f343f;
     border-bottom-width: 0; }
+    .maximized .header-bar.default-decoration,
+    .maximized .csd .header-bar.default-decoration, .maximized .header-bar.default-decoration:backdrop,
+    .maximized .csd .header-bar.default-decoration:backdrop {
+      background-color: #2f343f; }
 
 .titlebar {
   padding-left: 7px;
@@ -1102,15 +1103,14 @@ GtkComboBox {
   .csd .titlebar {
     background-color: rgba(47, 52, 63, 0.97); }
   .titlebar:backdrop {
-    color: rgba(207, 218, 231, 0.5); }
+    color: rgba(207, 218, 231, 0.5);
+    background-color: #323843; }
     .csd .titlebar:backdrop {
       background-color: rgba(50, 56, 67, 0.97); }
   .maximized .titlebar {
     background-color: #2f343f; }
-    .maximized .titlebar:backdrop {
+    .maximized .titlebar:backdrop, .csd .maximized .titlebar:backdrop {
       background-color: #323843; }
-      .csd .maximized .titlebar:backdrop {
-        background-color: #323843; }
 
 .titlebar .titlebar,
 .titlebar .titlebar:backdrop {
