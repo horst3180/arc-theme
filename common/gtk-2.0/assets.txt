@@ -105,7 +105,8 @@ slider-vert
 slider-vert-active
 slider-vert-insens
 slider-vert-prelight
-trough-scrollbar
+trough-scrollbar-horiz
+trough-scrollbar-vert
 frame
 frame-gap-end
 frame-gap-start
