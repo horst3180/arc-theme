@@ -1844,6 +1844,8 @@ column-header.button.dnd { // for treeview-like derive widgets
  * Scrollbars *
  **************/
 
+$_scrollbar_bg_color: darken($base_color, 1%);
+
 .scrollbar {
   background-clip: padding-box;
   background-image: none;
@@ -1851,7 +1853,7 @@ column-header.button.dnd { // for treeview-like derive widgets
   -GtkRange-trough-border: 0;
   -GtkScrollbar-has-backward-stepper: false;
   -GtkScrollbar-has-forward-stepper: false;
-  -GtkRange-slider-width: 11;
+  -GtkRange-slider-width: 13;
   -GtkScrollbar-min-slider-length: 42; // minimum size for the slider.
                                        // sadly can't be in '.slider'
                                        // where it belongs
@@ -1861,13 +1863,28 @@ column-header.button.dnd { // for treeview-like derive widgets
   .button {
     border: none;
   }
-  &.trough { @extend .scrollbars-junction; }
+  &.trough {
+    background-color: $_scrollbar_bg_color;
+    border-left: 1px solid $borders_color;
+
+    &.horizontal {
+      border-left: none;
+      border-top: 1px solid $borders_color;
+    }
+  }
   &.slider {
-    border-radius: 20px;
+    border-radius: 21px 20px 20px 21px;
     border: 3px solid transparent; //margin :/
-    background-color: mix($bg_color, $fg_color, 60%);
+    border-left-width: 4px;
+    background-color: mix($fg_color, $bg_color, 40%);
+
+    &.horizontal {
+      border-radius: 21px 21px 20px 20px;
+      border-left-width: 3px;
+      border-top-width: 4px;
+    }
     &:hover {
-      background-color: mix($bg_color, $fg_color, 30%);
+      background-color: mix($fg_color, $bg_color, 25%);
     }
     &:prelight:active {
       background-color: $selected_bg_color;
@@ -1887,7 +1904,7 @@ column-header.button.dnd { // for treeview-like derive widgets
 .scrollbars-junction,
 .scrollbars-junction.frame { // the small square between two scrollbars
   border-color: transparent;
-  background-color: $base_color;
+  background-color: $_scrollbar_bg_color;
 }
 
 

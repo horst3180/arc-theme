@@ -1567,18 +1567,29 @@ column-header .button, column-header .button:hover, column-header .button:active
   -GtkRange-trough-border: 0;
   -GtkScrollbar-has-backward-stepper: false;
   -GtkScrollbar-has-forward-stepper: false;
-  -GtkRange-slider-width: 11;
+  -GtkRange-slider-width: 13;
   -GtkScrollbar-min-slider-length: 42;
   -GtkRange-stepper-spacing: 0;
   -GtkRange-trough-under-steppers: 1; }
   .scrollbar .button {
     border: none; }
+  .scrollbar.trough {
+    background-color: #fcfcfc;
+    border-left: 1px solid #dcdfe3; }
+    .scrollbar.trough.horizontal {
+      border-left: none;
+      border-top: 1px solid #dcdfe3; }
   .scrollbar.slider {
-    border-radius: 20px;
+    border-radius: 21px 20px 20px 21px;
     border: 3px solid transparent;
+    border-left-width: 4px;
     background-color: #b8babf; }
+    .scrollbar.slider.horizontal {
+      border-radius: 21px 21px 20px 20px;
+      border-left-width: 3px;
+      border-top-width: 4px; }
     .scrollbar.slider:hover {
-      background-color: #8a8e96; }
+      background-color: #cfd1d4; }
     .scrollbar.slider:prelight:active {
       background-color: #5294E2; }
     .scrollbar.slider.fine-tune {
@@ -1588,11 +1599,10 @@ column-header .button, column-header .button:hover, column-header .button:active
     .scrollbar.slider:insensitive {
       background-color: transparent; }
 
-.scrollbars-junction, .scrollbar.trough,
-.scrollbars-junction.frame,
-.frame.scrollbar.trough {
+.scrollbars-junction,
+.scrollbars-junction.frame {
   border-color: transparent;
-  background-color: #ffffff; }
+  background-color: #fcfcfc; }
 
 /**********
  * Switch *
@@ -3359,8 +3369,7 @@ GraniteWidgetsStaticNotebook .frame {
   background-color: #5294E2; }
 
 .source-list .scrollbar.trough,
-.source-list .scrollbars-junction,
-.source-list .scrollbar.trough {
+.source-list .scrollbars-junction {
   border-image: none;
   border-color: transparent;
   background-color: #F5F6F7;
@@ -3824,9 +3833,8 @@ GeditFileBrowserWidget {
   background-color: #353945; }
   .maximized GeditFileBrowserWidget {
     background-color: #353945; }
-  GeditFileBrowserWidget .scrollbars-junction, GeditFileBrowserWidget .scrollbar.trough,
-  GeditFileBrowserWidget .scrollbars-junction.frame,
-  GeditFileBrowserWidget .frame.scrollbar.trough {
+  GeditFileBrowserWidget .scrollbars-junction,
+  GeditFileBrowserWidget .scrollbars-junction.frame {
     border-color: transparent;
     background-color: transparent; }
   GeditFileBrowserWidget .horizontal {
