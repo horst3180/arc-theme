@@ -3853,8 +3853,8 @@ NemoWindow.background > GtkGrid > GtkPaned > .pane-separator,
 MarlinViewWindow.background > GtkBox > GtkPaned > .pane-separator {
   background-color: #353945; }
 
-/*Fix 1px transparent line at the bottom of the Nautilus window*/
-NautilusListView.vertical {
+/*Fix Nautilus transparency issues*/
+NautilusWindowSlot {
   background-color: #ffffff; }
 
 GtkFileChooserDialog.background.csd, GtkFileChooserDialog.background {
