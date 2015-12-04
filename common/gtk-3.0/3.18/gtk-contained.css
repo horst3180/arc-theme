@@ -3858,8 +3858,11 @@ MarlinViewWindow.background > GtkBox > GtkPaned > .pane-separator {
   background-color: rgba(53, 57, 69, 0.95); }
 
 /*Fix Nautilus transparency issues*/
-NautilusWindowSlot {
+NautilusWindow NautilusWindowSlot {
   background-color: #ffffff; }
+
+NautilusDesktopWindow NautilusWindowSlot {
+  background-color: transparent; }
 
 GtkFileChooserDialog.background.csd, GtkFileChooserDialog.background {
   background-color: rgba(53, 57, 69, 0.95); }
