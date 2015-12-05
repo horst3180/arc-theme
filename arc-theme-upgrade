@@ -35,7 +35,8 @@ echo -e "\033[1;31m$@\033[0m"
 check_root() {
   if [[ "${EUID}" -ne 0 ]]; then
     show_error "This script has to be run as root"
-    exit 1;
+    echo
+    exec sudo "$0" "$@" # Instead of exit, just re-execute as root
   fi
 }
 
@@ -80,15 +81,11 @@ check_directories() {
 }
 
 install_theme() {
-  # Remove current installation
-  rm -rf $lightdir $darkerdir $darkdir
-
   # Clean tempdir
   rm -rf $tempdir && mkdir $tempdir && cd $tempdir
 
-  # Get the sources
-  wget $download_url
-  tar xf master.tar.gz && cd "$theme_name"-master
+  # Get the sources && Remove current installation only if download and unpack are successful
+  wget $download_url && tar xf master.tar.gz && rm -rf $lightdir $darkerdir $darkdir && cd "$theme_name"-master 
 
   # Build and install
   ./autogen.sh --prefix=/usr
