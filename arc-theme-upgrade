@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Script to upgrade/install the arc-theme
 
@@ -29,11 +29,11 @@ userdarkdir2=$HOME/local/share/themes/Arc-Dark
 
 #Functions
 show_error() {
-echo -e "\033[1;31m$@\033[0m"
+printf "\033[1;31m$@\033[0m\n"
 }
 
 check_root() {
-  if [[ "${EUID}" -ne 0 ]]; then
+  if [ "$(id -u)" -ne 0 ]; then
     show_error "This script has to be run as root"
     echo
     exec sudo "$0" "$@" # Instead of exit, just re-execute as root
