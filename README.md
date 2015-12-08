@@ -1,6 +1,6 @@
 # Arc Theme
 
-Arc is a flat theme with transparent elements for GTK 3, GTK 2 and Gnome-Shell. It supports GTK 3 and GTK 2 based desktop environments like Gnome, Unity, Budgie, Pantheon, XFCE, Mate, etc.
+Arc is a flat theme with transparent elements for GTK 3, GTK 2 and Gnome-Shell which supports GTK 3 and GTK 2 based desktop environments like Gnome, Unity, Budgie, Pantheon, XFCE, Mate, etc.
 
 ###Arc is available in three variants 
 
@@ -36,11 +36,11 @@ Main distributions that meet these requirements are
 * Debian Jessie, Testing or Unstable
 * Gentoo
 * Fedora 21, 22 and 23
-* OpenSuse 13.2 and Tumbleweed
+* openSUSE 13.2 and Tumbleweed
 
-Derivatives of these distributions should work, aswell.
+Derivatives of these distributions should work, as well.
 
-If your distribution is not listed, please check the requirements yourself.
+If your distribution isn't listed, please check the requirements yourself.
 
 ### Installation
 
@@ -72,7 +72,7 @@ Arch Linux users can install the theme from the AUR
 
 #### Manual Installation
 
-To build the theme you need 
+To build the theme you'll need 
 * `autoconf`
 * `automake`
 * `pkg-config` or `pkgconfig` if you use Fedora
@@ -139,7 +139,7 @@ Now open the Plank preferences window by executing `plank --preferences` from a 
 
 ### Troubleshooting
 
-If you have Ubuntu with a newer GTK/Gnome version than the one included by default (i.e Ubuntu 14.04 with GTK 3.14 or Ubuntu 15.04 with GTK 3.16, etc.) the prebuilt packages don't work properly and you have to install the theme manually as described above.
+If you have Ubuntu with a newer GTK/Gnome version than the one included by default (i.e Ubuntu 14.04 with GTK 3.14 or Ubuntu 15.04 with GTK 3.16, etc.) the prebuilt packages won't work properly and you have to install the theme manually as described above.
 This is also true for other distros with a different GTK/Gnome version than the one included by default
 
 --
