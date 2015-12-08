@@ -3650,8 +3650,8 @@ NemoWindow.maximized .sidebar,
 MarlinViewWindow.maximized .sidebar {
   background-color: #353945; }
 
-GtkFileChooserDialog,
-NautilusWindow,
+GtkFileChooserDialog .pane-separator,
+NautilusWindow .pane-separator,
 NemoWindow.background > GtkGrid > GtkPaned > .pane-separator,
 MarlinViewWindow.background > GtkBox > GtkPaned > .pane-separator {
   background-color: #353945; }
