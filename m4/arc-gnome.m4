@@ -2,7 +2,7 @@
 # ---------------
 AC_DEFUN([ARC_GNOME], [
     GNOMEDIR="$srcdir/common/gtk-3.0"
-
+    PKG_PROG_PKG_CONFIG()
     AC_ARG_WITH(
         [gnome],
         [AS_HELP_STRING(
@@ -10,12 +10,7 @@ AC_DEFUN([ARC_GNOME], [
             [GNOME minor version]
         )],
         [GNOME_VERSION="$withval"],
-        [AC_CHECK_PROG(HAVE_PKG_CONFIG, pkg-config, yes)
-         AS_IF(
-             [test "x$HAVE_PKG_CONFIG" != "xyes"],
-             [AC_MSG_ERROR([Could not find pkg-config.])]
-         )
-         PKG_CHECK_EXISTS(
+        [PKG_CHECK_EXISTS(
              [gtk+-3.0],
              [GNOME_VERSION=`$PKG_CONFIG --modversion gtk+-3.0`],
              [AC_MSG_ERROR([Could not determine GNOME version. Install GTK3 and its development files (libgtk-3-dev for Debian/Ubuntu based distros and gtk3-devel for RPM based distros).])]
