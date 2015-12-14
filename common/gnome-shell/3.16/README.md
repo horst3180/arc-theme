@@ -4,17 +4,13 @@ This theme uses libsass/gulp to process the sass/*.scss. Never edit any of the .
 
 * Install `nvm` (https://github.com/creationix/nvm)
 
-* Install `gulp`
+* Run `nvm i` from the directory containing `.nvmrc`
 
-        npm i -g gulp
+* Run `npm i` from the directory containing `gulpfile.js`. It's the same directory as the one that contains `.nvmrc` in this case.
 
-* Execute the following from the directory containing `gulpfile.js`
-
-        npm i
+* Install `gulp` with `npm i -g gulp`
 
 * Edit the sass/*.scss files
 
-* Regenerate the .css files by executing from the directory containing `gulpfile.js`
-
-        gulp
+* Regenerate the .css files by executing `gulp` from the directory that contains `gulpfile.js`
 
