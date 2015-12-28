@@ -663,6 +663,9 @@ MarlinViewWindow *:selected:focus {
 
 .marlin-pathbar.pathbar {
   border-radius: 3px;
+  padding-left: 4px;
+  padding-right: 4px;
+
   @include entry(header-normal);
 
   &:focus { @include entry(header-focus) }

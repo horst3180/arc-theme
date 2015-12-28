@@ -3162,6 +3162,8 @@ MarlinViewWindow *:selected:focus {
 
 .marlin-pathbar.pathbar {
   border-radius: 3px;
+  padding-left: 4px;
+  padding-right: 4px;
   color: rgba(207, 218, 231, 0.8);
   border-color: rgba(21, 23, 28, 0.37);
   background-image: linear-gradient(to bottom, rgba(95, 105, 127, 0.37));
