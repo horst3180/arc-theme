@@ -1,5 +1,4 @@
 //apps rely on some named colors to be exported
-/* GTK NAMED COLORS */
 
 // Sass thinks we're using the colors in the variables as strings and may shoot
 // warning, it's innocuous and can be defeated by using "" + $var
@@ -29,6 +28,8 @@
 @define-color error_color #{"" + $error_color};
 @define-color success_color #{"" + $success_color};
 @define-color placeholder_text_color #A8A8A8;
+
+@define-color content_view_bg #{"" + $base_color};
 
 //WM
 $wm_highlight: lighten(opacify($header_bg, 1), 3%);
@@ -62,9 +63,4 @@ $wm_bg_unfocused: opacify($header_bg_backdrop, 1);
 @define-color wm_icon_unfocused_bg #{"" + $wm_icon_unfocused_bg};
 @define-color wm_icon_hover_bg #{"" + $wm_icon_hover_bg};
 @define-color wm_icon_active_bg #{"" + $wm_icon_active_bg};
-
-
-//FIXME this is really an API
-
-@define-color content_view_bg #{"" + $base_color};
 

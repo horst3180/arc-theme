@@ -60,7 +60,7 @@ NautilusWindow .pane-separator,
 NemoWindow.background > GtkGrid > GtkPaned > .pane-separator,
 MarlinViewWindow.background > GtkBox > GtkPaned > .pane-separator {background-color: $dark_sidebar_border}
 
-/*Fix Nautilus transparency issues*/
+// Fix Nautilus transparency issues
 NautilusWindow NautilusWindowSlot { background-color: $base_color; }
 NautilusDesktopWindow NautilusWindowSlot { background-color: transparent; }
 

@@ -200,12 +200,10 @@ NemoWindow {
   }
 }
 
-/* Only normal state is handle */
 .open-document-selector-name-label {
   color: $fg_color;
 }
 
-/* Only normal state is handle */
 .open-document-selector-path-label {
     color: mix($fg_color, $base_color, 50%);
     font-size: smaller;
