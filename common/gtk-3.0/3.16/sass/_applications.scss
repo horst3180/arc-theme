@@ -594,23 +594,17 @@ BirdieWidgetsTweetList * {
 //
 // Marlin / Pantheon Files
 //
-MarlinViewWindow GtkIconView.view:selected,
-MarlinViewWindow GtkIconView.view:selected:focus,
-MarlinViewWindow GtkIconView.view:selected:hover,
-MarlinViewWindow GtkIconView.view:selected:focus:hover {
-  background-color: transparent;
-}
+MarlinViewWindow {
 
-MarlinViewWindow FMListView,
-MarlinViewWindow FMColumnView {
-  outline-color: transparent;
-}
-
-MarlinViewWindow *:selected,
-MarlinViewWindow *:selected:focus {
-	color: $selected_fg_color;
-	background-color: $selected_bg_color;
-  outline-color: transparent;
+  *:selected, *:selected:focus {
+    color: $selected_fg_color;
+    background-color: $selected_bg_color;
+    outline-color: transparent;
+  }
+  GtkIconView.view:selected {
+    &, &:focus, &:hover, &:focus:hover { background-color: transparent; }
+  }
+  FMListView, FMColumnView { outline-color: transparent; }
 }
 
 .marlin-pathbar.pathbar {
@@ -653,37 +647,33 @@ MarlinViewWindow *:selected:focus {
   font-weight: bold;
   text-shadow: 0 1px 2px transparentize(black, 0.4);
   icon-shadow: 0 1px 2px transparentize(black, 0.4);
-}
 
-.panel-shadow {
-  background-image: none;
-  background-color: transparent;
-}
+  &-shadow {
+    background-image: none;
+    background-color: transparent;
+  }
+  .menu {
+    box-shadow: none;
 
-.panel .menu {
-  box-shadow: none;
-}
+    .menuitem {
+      font-weight: normal;
+      text-shadow: none;
+      icon-shadow: none;
+    }
 
-.panel .menu .menuitem {
-  font-weight: normal;
-  text-shadow: none;
-  icon-shadow: none;
-}
-
-.panel .menubar > .menuitem { padding: 3px 6px; }
-
-.panel .menubar > .menuitem:hover { background-color: transparent; }
-
-.panel .window-frame.menu.csd,
-.panel .window-frame.popup.csd {
-  box-shadow: none;
-}
-
-.panel .menu .window-frame.menu.csd,
-.panel .menu .window-frame.popup.csd {
-  box-shadow: 0 0 0 1px transparentize(black, 0.8),
-              0 10px 20px transparentize(black, 0.81),
-              0 6px 6px transparentize(black, 0.77);
+    .window-frame.menu.csd,
+    .window-frame.popup.csd {
+      box-shadow: 0 0 0 1px transparentize(black, 0.8),
+                  0 10px 20px transparentize(black, 0.81),
+                  0 6px 6px transparentize(black, 0.77);
+    }
+  }
+  .menubar > .menuitem {
+    padding: 3px 6px;
+    &:hover { background-color: transparent; }
+  }
+  .window-frame.menu.csd,
+  .window-frame.popup.csd { box-shadow: none; }
 }
 
 .composited-indicator {
@@ -691,26 +681,22 @@ MarlinViewWindow *:selected:focus {
   color: white;
   text-shadow: 0 1px 2px transparentize(black, 0.4);
   icon-shadow: 0 1px 2px transparentize(black, 0.4);
-}
 
-.composited-indicator > GtkWidget > GtkWidget:first-child {
-  padding: 0 2px;
+  > GtkWidget > GtkWidget:first-child { padding: 0 2px; }
+
+  .menuitem:active, .menuitem:prelight {
+    border-style: none;
+    background-image: none;
+    box-shadow: none;
+  }
+  > .popup > .menu {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
 }
 
 .panel-app-button > GtkWidget > GtkWidget:first-child {
   padding: 0 2px 0 4px;
-}
-
-.composited-indicator.menuitem:active,
-.composited-indicator.menuitem:prelight {
-  border-style: none;
-  background-image: none;
-  box-shadow: none;
-}
-
-.composited-indicator > .popup > .menu {
-  padding-top: 8px;
-  padding-bottom: 8px;
 }
 
 .panel .menu .spinner,

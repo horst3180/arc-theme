@@ -3147,20 +3147,15 @@ BirdieWidgetsTweetList * {
   background-image: none;
   background-color: transparent; }
 
-MarlinViewWindow GtkIconView.view:selected,
-MarlinViewWindow GtkIconView.view:selected:focus,
-MarlinViewWindow GtkIconView.view:selected:hover,
-MarlinViewWindow GtkIconView.view:selected:focus:hover {
-  background-color: transparent; }
-
-MarlinViewWindow FMListView,
-MarlinViewWindow FMColumnView {
-  outline-color: transparent; }
-
-MarlinViewWindow *:selected,
-MarlinViewWindow *:selected:focus {
+MarlinViewWindow *:selected, MarlinViewWindow *:selected:focus {
   color: #ffffff;
   background-color: #5294E2;
+  outline-color: transparent; }
+
+MarlinViewWindow GtkIconView.view:selected, MarlinViewWindow GtkIconView.view:selected:focus, MarlinViewWindow GtkIconView.view:selected:hover, MarlinViewWindow GtkIconView.view:selected:focus:hover {
+  background-color: transparent; }
+
+MarlinViewWindow FMListView, MarlinViewWindow FMColumnView {
   outline-color: transparent; }
 
 .marlin-pathbar.pathbar {
@@ -3198,54 +3193,43 @@ MarlinViewWindow *:selected:focus {
   font-weight: bold;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
   icon-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
-
-.panel-shadow {
-  background-image: none;
-  background-color: transparent; }
-
-.panel .menu {
-  box-shadow: none; }
-
-.panel .menu .menuitem {
-  font-weight: normal;
-  text-shadow: none;
-  icon-shadow: none; }
-
-.panel .menubar > .menuitem {
-  padding: 3px 6px; }
-
-.panel .menubar > .menuitem:hover {
-  background-color: transparent; }
-
-.panel .window-frame.menu.csd,
-.panel .window-frame.popup.csd {
-  box-shadow: none; }
-
-.panel .menu .window-frame.menu.csd,
-.panel .menu .window-frame.popup.csd {
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2), 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+  .panel-shadow {
+    background-image: none;
+    background-color: transparent; }
+  .panel .menu {
+    box-shadow: none; }
+    .panel .menu .menuitem {
+      font-weight: normal;
+      text-shadow: none;
+      icon-shadow: none; }
+    .panel .menu .window-frame.menu.csd,
+    .panel .menu .window-frame.popup.csd {
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2), 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+  .panel .menubar > .menuitem {
+    padding: 3px 6px; }
+    .panel .menubar > .menuitem:hover {
+      background-color: transparent; }
+  .panel .window-frame.menu.csd,
+  .panel .window-frame.popup.csd {
+    box-shadow: none; }
 
 .composited-indicator {
   background-color: transparent;
   color: white;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
   icon-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
-
-.composited-indicator > GtkWidget > GtkWidget:first-child {
-  padding: 0 2px; }
+  .composited-indicator > GtkWidget > GtkWidget:first-child {
+    padding: 0 2px; }
+  .composited-indicator .menuitem:active, .composited-indicator .menuitem:prelight {
+    border-style: none;
+    background-image: none;
+    box-shadow: none; }
+  .composited-indicator > .popup > .menu {
+    padding-top: 8px;
+    padding-bottom: 8px; }
 
 .panel-app-button > GtkWidget > GtkWidget:first-child {
   padding: 0 2px 0 4px; }
-
-.composited-indicator.menuitem:active,
-.composited-indicator.menuitem:prelight {
-  border-style: none;
-  background-image: none;
-  box-shadow: none; }
-
-.composited-indicator > .popup > .menu {
-  padding-top: 8px;
-  padding-bottom: 8px; }
 
 .panel .menu .spinner,
 .menu .spinner {
