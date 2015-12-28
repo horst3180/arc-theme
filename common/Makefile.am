@@ -131,9 +131,7 @@ if ENABLE_LIGHT
 	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -r --no-preserve=mode,ownership \
 		assets \
 		gtk.css \
-		gtk-contained.css \
 		gtk-dark.css \
-		gtk-contained-dark.css \
 		$(ithemedir)/gtk-3.0
 endif # ENABLE_LIGHT
 
@@ -142,14 +140,12 @@ if ENABLE_DARKER
 
 	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -r --no-preserve=mode,ownership \
 		assets \
-		gtk.css \
 		gtk-dark.css \
-		gtk-contained-dark.css \
 		$(ithemedarkerdir)/gtk-3.0
 
 	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -r --no-preserve=mode,ownership \
-		gtk-contained-darker.css \
-		$(ithemedarkerdir)/gtk-3.0/gtk-contained.css
+		gtk-darker.css \
+		$(ithemedarkerdir)/gtk-3.0/gtk.css
 endif # ENABLE_DARKER
 
 if ENABLE_DARK
@@ -157,40 +153,39 @@ if ENABLE_DARK
 
 	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -r --no-preserve=mode,ownership \
 		assets \
-		gtk.css \
 		$(ithemedarkdir)/gtk-3.0
 
 	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -r --no-preserve=mode,ownership \
-		gtk-contained-dark.css \
-		$(ithemedarkdir)/gtk-3.0/gtk-contained.css
+		gtk-dark.css \
+		$(ithemedarkdir)/gtk-3.0/gtk.css
 endif # ENABLE_DARK
 
 if !ENABLE_TRANSPARENCY
 
 if ENABLE_LIGHT
 	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -r --no-preserve=mode,ownership \
-		gtk-contained-solid.css \
-		$(ithemedir)/gtk-3.0/gtk-contained.css
+		gtk-solid.css \
+		$(ithemedir)/gtk-3.0/gtk.css
 
 	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -r --no-preserve=mode,ownership \
-		gtk-contained-solid-dark.css \
-		$(ithemedir)/gtk-3.0/gtk-contained-dark.css
+		gtk-solid-dark.css \
+		$(ithemedir)/gtk-3.0/gtk-dark.css
 endif # ENABLE_LIGHT
 
 if ENABLE_DARKER
 	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -r --no-preserve=mode,ownership \
-		gtk-contained-solid-darker.css \
-		$(ithemedarkerdir)/gtk-3.0/gtk-contained.css
+		gtk-solid-darker.css \
+		$(ithemedarkerdir)/gtk-3.0/gtk.css
 
 	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -r --no-preserve=mode,ownership \
-		gtk-contained-solid-dark.css \
-		$(ithemedarkerdir)/gtk-3.0/gtk-contained-dark.css
+		gtk-solid-dark.css \
+		$(ithemedarkerdir)/gtk-3.0/gtk-dark.css
 endif # ENABLE_DARKER
 
 if ENABLE_DARK
 	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -r --no-preserve=mode,ownership \
-		gtk-contained-solid-dark.css \
-		$(ithemedarkdir)/gtk-3.0/gtk-contained.css
+		gtk-solid-dark.css \
+		$(ithemedarkdir)/gtk-3.0/gtk.css
 endif # ENABLE_DARK
 
 endif #!ENABLE_TRANSPARENCY
