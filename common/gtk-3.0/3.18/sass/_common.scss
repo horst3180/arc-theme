@@ -187,24 +187,22 @@ GtkTextView { // This will get overridden by .view, needed by gedit line numbers
   }
 }
 
+$vert_padding: 5px;
 //
 // Text Entries
 //
 .entry {
   border: 1px solid;
-  padding: 5px 8px 6px;
+  padding: $vert_padding 8px;
 
   border-radius: 3px;
   transition: all 200ms $ease-out-quad;
   @include entry(normal);
 
-  .header-bar & { padding: 6px; }
-
-  //&.image { // icons inside the entry
-  //  &.left { padding-left: 0; }
-  //  &.right { padding-right: 0; }
-  //}
-  &.image { padding-left: 3px; padding-right: 3px; }
+  &.image { // icons inside the entry
+    &.left { padding-left: 0; }
+    &.right { padding-right: 0; }
+  }
 
   &.flat, &.flat:focus {
     padding: 2px;
@@ -298,9 +296,7 @@ $_dot_color: $selected_bg_color;
   transition: $_button_transition;
   border: 1px solid;
   border-radius: 3px;
-  padding: 5px 8px;
-
-  .header-bar & { padding: 6px 11px; }
+  padding: $vert_padding 8px;
 
   @include button(normal);
 
@@ -443,28 +439,22 @@ $_dot_color: $selected_bg_color;
     }
   }
 
-  &.image-button { padding: 8px; }
-
-  .header-bar &.image-button { padding: 6px 9px; }
+  &.image-button { padding: 2px + $vert_padding 10px; }
 
   &.text-button {
     padding-left: 16px;
     padding-right: 16px;
   }
 
-  .header-bar &.text-button { padding: 6px 16px; }
-
   &.text-button.image-button {
     // those buttons needs uneven horizontal padding, we want the icon side
     // to have the image-button padding, while the text side the text-button
     // one, so we're adding the missing padding to the label depending on
     // its position inside the button
-    padding: 4px 8px 5px; // same as .button
+    padding: $vert_padding 8px; // same as .button
     GtkLabel:first-child { padding-left: 8px; }
     GtkLabel:last-child { padding-right: 8px; }
   }
-
-  .header-bar &.text-button.image-button { padding: 6px 16px; }
 
   .stack-switcher > & {
     // to position the needs attention dot, padding is added to the button
@@ -480,17 +470,13 @@ $_dot_color: $selected_bg_color;
     > GtkImage {
       padding-left: 6px;
       padding-right: 6px;
-      padding-top: 5px;
-      padding-bottom: 5px;
+      padding-top: $vert_padding - 2px;
+      padding-bottom: $vert_padding - 2px;
     }
 
-    .header-bar > GtkLabel { padding: 6px 10px; }
+    &.text-button { padding: $vert_padding 10px; }  // needed or it will get overridden
 
-    &.text-button { padding: 5px 10px; }
-
-    .header-bar &.text-button { padding: 6px 10px; }
-
-    &.image-button { padding: 1px 3px; }
+    &.image-button { padding: $vert_padding - 3px 4px; }
 
     &.needs-attention > .label,
     &.needs-attention > GtkImage { @extend %needs_attention; }
@@ -923,9 +909,9 @@ GtkComboBox {
   -GtkComboBox-arrow-scaling: 0.5;
   -GtkComboBox-shadow-type: none;
 
-  > .the-button-in-the-combobox {   // Otherwise combos
-    padding-top: 3px;               // are bigger than
-    padding-bottom: 4px;            // buttons
+  > .the-button-in-the-combobox {                   // Otherwise combos
+    padding-top: $vert_padding - 2px;               // are bigger than
+    padding-bottom: $vert_padding - 2px;            // buttons
   }
 
   &:insensitive {
@@ -1047,7 +1033,7 @@ GtkComboBox {
 // Headerbars
 //
 .header-bar {
-  padding: 7px 7px 6px 7px;
+  padding: 5px 5px 4px 5px;
 
   border-width: 0 0 1px;
   border-style: solid;
@@ -1065,12 +1051,14 @@ GtkComboBox {
   &:backdrop { color: transparentize($header_fg, 0.3); }
 
   .title {
-    padding: 0px 12px;
+    padding-left: 12px;
+    padding-right: 12px;
   }
 
   .subtitle {
     font-size: smaller;
-    padding: 0 12px;
+    padding-left: 12px;
+    padding-right: 12px;
     @extend .dim-label;
   }
 
@@ -1151,8 +1139,8 @@ GtkComboBox {
   .csd &.default-decoration,             // needed under wayland, since all gtk3 windows are csd windows
   &.default-decoration:backdrop,
   .csd &.default-decoration:backdrop {
-    padding-top: 5px;	                   // less padding for ssd
-    padding-bottom: 5px;                 //
+    padding-top: 4px;	                   // less padding for ssd
+    padding-bottom: 4px;                 //
     background-color: opacify($header_bg, 1);
     border-bottom-width: 0;
 
@@ -1486,18 +1474,20 @@ GtkComboBox {
 // Pathbars
 //
 .path-bar .button {
-  padding-left: 6px;
-  padding-right: 6px;
+  padding: 5px 10px;
 
+  &:first-child { padding-left: 10px; }
+  &:last-child { padding-right: 10px; }
   &:only-child {
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 14px;
+    padding-right: 14px;
   }
 
   // the following is for spacing the icon and the label inside the home button
-  GtkLabel:last-child { padding-left: 2px; }
-  GtkLabel:first-child { padding-right: 2px; }
-  GtkLabel:only-child, GtkLabel { padding-right: 4px; padding-left: 4px; }
+  GtkLabel:last-child { padding-left: 4px; }
+  GtkLabel:first-child { padding-right: 4px; }
+  GtkLabel:only-child, GtkLabel { padding-right: 0; padding-left: 0; }
+  GtkImage { padding-top: 2px; padding-bottom: 1px; }
 }
 
 //
@@ -2852,7 +2842,7 @@ GtkColorSwatch {
 }
 
 GtkColorButton.button {
-  padding: 4px; // Uniform padding on the GtkColorButton
+  padding: 5px; // Uniform padding on the GtkColorButton
 
   GtkColorSwatch { border-radius: 0; }
 }
@@ -2971,7 +2961,9 @@ GtkVolumeButton.button { padding: 8px; }
   }
 
   .button.titlebutton {
-    padding: 6px 4px;
+    @extend .image-button;
+
+    padding: 8px 4px;
 
     @include button(undecorated);
     background-color: transparentize($header_bg, 1);
