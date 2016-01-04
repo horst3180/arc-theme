@@ -439,7 +439,8 @@ $_dot_color: $selected_bg_color;
     }
   }
 
-  &.image-button { padding: 2px + $vert_padding 10px; }
+  &.image-button { padding: 2px + $vert_padding; }
+  .header-bar &.image-button { padding: 2px + $vert_padding 10px; }
 
   &.text-button {
     padding-left: 16px;

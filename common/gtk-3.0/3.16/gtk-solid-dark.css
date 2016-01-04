@@ -457,6 +457,8 @@ GtkSearchEntry.entry {
         color: inherit; }
   .button.image-button, .header-bar .button.titlebutton,
   .titlebar .button.titlebutton {
+    padding: 7px; }
+  .header-bar .button.image-button, .header-bar .button.titlebutton {
     padding: 7px 10px; }
   .button.text-button {
     padding-left: 16px;
