@@ -1140,8 +1140,8 @@ GtkComboBox {
   .csd &.default-decoration,             // needed under wayland, since all gtk3 windows are csd windows
   &.default-decoration:backdrop,
   .csd &.default-decoration:backdrop {
-    padding-top: 4px;	                   // less padding for ssd
-    padding-bottom: 4px;                 //
+    padding-top: 5px;
+    padding-bottom: 5px;
     background-color: opacify($header_bg, 1);
     border-bottom-width: 0;
 

@@ -969,8 +969,8 @@ GtkComboBox {
   .header-bar.default-decoration,
   .csd .header-bar.default-decoration, .header-bar.default-decoration:backdrop,
   .csd .header-bar.default-decoration:backdrop {
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     background-color: #e7e8eb;
     border-bottom-width: 0; }
     .maximized .header-bar.default-decoration, .maximized
