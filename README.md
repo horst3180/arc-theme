@@ -154,4 +154,4 @@ If you find a bug, please report it at https://github.com/horst3180/arc-theme/is
 
 ### Full Preview
 ![A full screenshot of the Arc theme](http://i.imgur.com/tD1OBQ3.png)
-<sub>** Screenshot Details:** Icons: unreleased | Launcher Icons based on [White Pixel Icons](http://darkdawg.deviantart.com/art/White-Pixel-Icons-252310560) | [Wallpaper](https://pixabay.com/photo-869593/) | Font: Futura Bk bt</sub>
+<sub>Screenshot Details: Icons: unreleased | Launcher Icons based on [White Pixel Icons](http://darkdawg.deviantart.com/art/White-Pixel-Icons-252310560) | [Wallpaper](https://pixabay.com/photo-869593/) | Font: Futura Bk bt</sub>
