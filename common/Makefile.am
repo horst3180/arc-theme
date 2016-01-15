@@ -29,7 +29,7 @@ endif # ENABLE_DARK
 if ENABLE_CINNAMON
 	$(MKDIR_P) $(ithemedir)/cinnamon
 
-	cd $(srcdir)/cinnamon && cp -r \
+	cd $(srcdir)/cinnamon && cp -R \
 		common-assets \
 		light-assets \
 		cinnamon.css \
@@ -38,12 +38,12 @@ if ENABLE_CINNAMON
 if ENABLE_DARK
 	$(MKDIR_P) $(ithemedarkdir)/cinnamon
 
-	cd $(srcdir)/cinnamon && cp -r \
+	cd $(srcdir)/cinnamon && cp -R \
 		common-assets \
 		dark-assets \
 		$(ithemedarkdir)/cinnamon
 
-	cd $(srcdir)/cinnamon && cp -r \
+	cd $(srcdir)/cinnamon && cp -R \
 		cinnamon-dark.css \
 		$(ithemedarkdir)/cinnamon/cinnamon.css
 endif # ENABLE_DARK
@@ -54,7 +54,7 @@ endif # ENABLE_GNOME_SHELL
 if ENABLE_GNOME_SHELL
 	$(MKDIR_P) $(ithemedir)/gnome-shell
 
-	cd $(srcdir)/gnome-shell/$(GNOME_VERSION) && cp -r \
+	cd $(srcdir)/gnome-shell/$(GNOME_VERSION) && cp -R \
 		common-assets \
 		light-assets \
 		gnome-shell.css \
@@ -63,12 +63,12 @@ if ENABLE_GNOME_SHELL
 if ENABLE_DARK
 	$(MKDIR_P) $(ithemedarkdir)/gnome-shell
 
-	cd $(srcdir)/gnome-shell/$(GNOME_VERSION) && cp -r \
+	cd $(srcdir)/gnome-shell/$(GNOME_VERSION) && cp -R \
 		common-assets \
 		dark-assets \
 		$(ithemedarkdir)/gnome-shell
 
-	cd $(srcdir)/gnome-shell/$(GNOME_VERSION) && cp -r \
+	cd $(srcdir)/gnome-shell/$(GNOME_VERSION) && cp -R \
 		gnome-shell-dark.css \
 		$(ithemedarkdir)/gnome-shell/gnome-shell.css
 endif # ENABLE_DARK
@@ -81,7 +81,7 @@ if ENABLE_GTK2
 if ENABLE_LIGHT
 	$(MKDIR_P) $(ithemedir)/gtk-2.0
 
-	cd $(srcdir)/gtk-2.0 && cp -r \
+	cd $(srcdir)/gtk-2.0 && cp -R \
 		assets \
 		menubar-toolbar \
 		*.rc \
@@ -92,13 +92,13 @@ endif # ENABLE_LIGHT
 if ENABLE_DARKER
 	$(MKDIR_P) $(ithemedarkerdir)/gtk-2.0
 
-	cd $(srcdir)/gtk-2.0 && cp -r \
+	cd $(srcdir)/gtk-2.0 && cp -R \
 		assets \
 		menubar-toolbar \
 		*.rc \
 		$(ithemedarkerdir)/gtk-2.0
 
-	cd $(srcdir)/gtk-2.0 && cp -r \
+	cd $(srcdir)/gtk-2.0 && cp -R \
 		gtkrc-darker \
 		$(ithemedarkerdir)/gtk-2.0/gtkrc
 endif # ENABLE_DARKER
@@ -106,16 +106,16 @@ endif # ENABLE_DARKER
 if ENABLE_DARK
 	$(MKDIR_P) $(ithemedarkdir)/gtk-2.0
 
-	cd $(srcdir)/gtk-2.0 && cp -r \
+	cd $(srcdir)/gtk-2.0 && cp -R \
 		menubar-toolbar \
 		*.rc \
 		$(ithemedarkdir)/gtk-2.0
 
-	cd $(srcdir)/gtk-2.0 && cp -r \
+	cd $(srcdir)/gtk-2.0 && cp -R \
 		assets-dark \
 		$(ithemedarkdir)/gtk-2.0/assets
 
-	cd $(srcdir)/gtk-2.0 && cp -r \
+	cd $(srcdir)/gtk-2.0 && cp -R \
 		gtkrc-dark \
 		$(ithemedarkdir)/gtk-2.0/gtkrc
 endif # ENABLE_DARK
@@ -128,7 +128,7 @@ if ENABLE_GTK3
 if ENABLE_LIGHT
 	$(MKDIR_P) $(ithemedir)/gtk-3.0
 
-	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -r \
+	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -R \
 		assets \
 		gtk.css \
 		gtk-dark.css \
@@ -138,12 +138,12 @@ endif # ENABLE_LIGHT
 if ENABLE_DARKER
 	$(MKDIR_P) $(ithemedarkerdir)/gtk-3.0
 
-	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -r \
+	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -R \
 		assets \
 		gtk-dark.css \
 		$(ithemedarkerdir)/gtk-3.0
 
-	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -r \
+	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -R \
 		gtk-darker.css \
 		$(ithemedarkerdir)/gtk-3.0/gtk.css
 endif # ENABLE_DARKER
@@ -151,11 +151,11 @@ endif # ENABLE_DARKER
 if ENABLE_DARK
 	$(MKDIR_P) $(ithemedarkdir)/gtk-3.0
 
-	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -r \
+	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -R \
 		assets \
 		$(ithemedarkdir)/gtk-3.0
 
-	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -r \
+	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -R \
 		gtk-dark.css \
 		$(ithemedarkdir)/gtk-3.0/gtk.css
 endif # ENABLE_DARK
@@ -163,27 +163,27 @@ endif # ENABLE_DARK
 if !ENABLE_TRANSPARENCY
 
 if ENABLE_LIGHT
-	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -r \
+	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -R \
 		gtk-solid.css \
 		$(ithemedir)/gtk-3.0/gtk.css
 
-	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -r \
+	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -R \
 		gtk-solid-dark.css \
 		$(ithemedir)/gtk-3.0/gtk-dark.css
 endif # ENABLE_LIGHT
 
 if ENABLE_DARKER
-	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -r \
+	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -R \
 		gtk-solid-darker.css \
 		$(ithemedarkerdir)/gtk-3.0/gtk.css
 
-	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -r \
+	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -R \
 		gtk-solid-dark.css \
 		$(ithemedarkerdir)/gtk-3.0/gtk-dark.css
 endif # ENABLE_DARKER
 
 if ENABLE_DARK
-	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -r \
+	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -R \
 		gtk-solid-dark.css \
 		$(ithemedarkdir)/gtk-3.0/gtk.css
 endif # ENABLE_DARK
@@ -196,13 +196,13 @@ endif # ENABLE_GTK3
 if ENABLE_METACITY
 
 if ENABLE_LIGHT
-	cp -r $(srcdir)/metacity-1 $(ithemedir)
+	cp -R $(srcdir)/metacity-1 $(ithemedir)
 
 	cd $(ithemedir)/metacity-1 && rm metacity-theme-1-dark.xml metacity-theme-2-dark.xml
 endif # ENABLE_LIGHT
 
 if ENABLE_DARKER
-	cp -r $(srcdir)/metacity-1 $(ithemedarkerdir)
+	cp -R $(srcdir)/metacity-1 $(ithemedarkerdir)
 
 	cd $(ithemedarkerdir)/metacity-1 && \
 		mv metacity-theme-1-dark.xml metacity-theme-1.xml && \
@@ -210,7 +210,7 @@ if ENABLE_DARKER
 endif # ENABLE_DARKER
 
 if ENABLE_DARK
-	cp -r $(srcdir)/metacity-1 $(ithemedarkdir)
+	cp -R $(srcdir)/metacity-1 $(ithemedarkdir)
 
 	cd $(ithemedarkdir)/metacity-1 && \
 		mv metacity-theme-1-dark.xml metacity-theme-1.xml && \
@@ -223,13 +223,13 @@ endif # ENABLE_METACITY
 if ENABLE_UNITY
 
 if ENABLE_LIGHT
-	cp -r $(srcdir)/unity $(ithemedir)
+	cp -R $(srcdir)/unity $(ithemedir)
 
 	cd $(ithemedir)/unity && rm -rf window-buttons-dark
 endif # ENABLE_LIGHT
 
 if ENABLE_DARKER
-	cp -r $(srcdir)/unity $(ithemedarkerdir)
+	cp -R $(srcdir)/unity $(ithemedarkerdir)
 
 	cd $(ithemedarkerdir)/unity && \
 	rm -rf window-buttons && \
@@ -237,7 +237,7 @@ if ENABLE_DARKER
 endif # ENABLE_DARKER
 
 if ENABLE_DARK
-	cp -r $(srcdir)/unity $(ithemedarkdir)
+	cp -R $(srcdir)/unity $(ithemedarkdir)
 
 	cd $(ithemedarkdir)/unity && \
 	rm -rf window-buttons && \
@@ -249,22 +249,22 @@ endif # ENABLE_UNITY
 
 if ENABLE_XFCE_NOTIFY
 	$(MKDIR_P) $(ithemedir)
-	cp -r $(srcdir)/xfce-notify-4.0 $(ithemedir)
+	cp -R $(srcdir)/xfce-notify-4.0 $(ithemedir)
 endif # ENABLE_XFCE_NOTIFY
 
 
 if ENABLE_XFWM
 
 if ENABLE_LIGHT
-	cp -r $(srcdir)/xfwm4 $(ithemedir)
+	cp -R $(srcdir)/xfwm4 $(ithemedir)
 endif # ENABLE_LIGHT
 
 if ENABLE_DARKER
-	cp -r $(srcdir)/xfwm4-dark $(ithemedarkerdir)/xfwm4
+	cp -R $(srcdir)/xfwm4-dark $(ithemedarkerdir)/xfwm4
 endif # ENABLE_DARKER
 
 if ENABLE_DARK
-	cp -r $(srcdir)/xfwm4-dark $(ithemedarkdir)/xfwm4
+	cp -R $(srcdir)/xfwm4-dark $(ithemedarkdir)/xfwm4
 endif # ENABLE_DARK
 
 endif # ENABLE_XFWM
