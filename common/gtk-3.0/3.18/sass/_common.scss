@@ -200,6 +200,8 @@ $vert_padding: 5px;
   @include entry(normal);
 
   &.image { // icons inside the entry
+    color: mix($fg_color,$base_color,80%);
+
     &.left { padding-left: 0; }
     &.right { padding-right: 0; }
   }
@@ -254,15 +256,17 @@ $vert_padding: 5px;
     }
   }
 
-  &.image { // entry icons colors
-    color: mix($fg_color,$base_color,80%);
-  }
-
   .osd & {
     @include entry(osd);
     &:focus { @include entry(osd-focus); }
     &:insensitive { @include entry(osd-insensitive); }
   }
+
+  .linked:not(.vertical) > &,
+  .linked:not(.vertical) > &:focus { @extend %linked; }
+
+  .linked.vertical > &,
+  .linked.vertical > &:focus { @extend %linked_vertical; }
 }
 
 GtkSearchEntry.entry { border-radius: 20px; }
@@ -356,48 +360,15 @@ $_dot_color: $selected_bg_color;
   //overlay / OSD style
   .osd & {
     @include button(osd);
-    // there's a problem with sass which prevents it to extend the linked
-    // placeholder as expected, it should just be "@extend %linked;", the
-    // placeholder is basically replicated here
-    //
-    // Workaround START
-    border-radius: 0;
-    border-left-style: none;
-    border-right-style: none;
 
-    &:dir(rtl) {
-      border-radius: 0;
-      border-right-style: none;
-      border-left-style: none
-    }
-    &:first-child {
-      border-radius: 3px 0 0 3px;
-      border-left-style: solid;
-    }
-    &:last-child {
-      border-radius: 0 3px 3px 0;
-      border-right-style: solid;
-
-      &:dir(rtl) { border-left-style: solid; }
-    }
-    &:only-child {
-      border-radius: 3px;
-      border-style: solid;
-    }
-    // Workaround END
-    &:hover {
-      @include button(osd-hover);
-      @extend %linked;
-    }
+    &:hover { @include button(osd-hover); }
     &:active, &:checked {
       background-clip: padding-box;
       @include button(osd-active);
-      @extend %linked;
     }
-    &:insensitive {
-      @include button(osd-insensitive);
-      @extend %linked;
-    }
+    &:insensitive { @include button(osd-insensitive); }
+
+    &, &:hover, &:active, &:checked, &:insensitive { @extend %linked; }
 
     &.flat {
       @include button(undecorated);
@@ -414,6 +385,9 @@ $_dot_color: $selected_bg_color;
       }
     }
   }
+  .osd .linked:not(.vertical):not(.path-bar) > &:hover:not(:checked):not(:active):not(:only-child),
+  .osd .linked:not(.vertical):not(.path-bar) > &:hover:not(:checked):not(:active) + &:not(:checked):not(:active) { box-shadow: none; }
+
   // Suggested and Destructive Action buttons
   @each $b_type, $b_color in (suggested-action, $suggested_color),
                              (destructive-action, $destructive_color) {
@@ -519,7 +493,6 @@ $_dot_color: $selected_bg_color;
   .linked:not(.vertical) > &:active,
   .linked:not(.vertical) > &:checked {
     @extend %linked;
-    @extend %linked_button;
   }
 
   .linked.vertical > &,
@@ -527,7 +500,6 @@ $_dot_color: $selected_bg_color;
   .linked.vertical > &:active,
   .linked.vertical > &:checked {
     @extend %linked_vertical;
-    @extend %linked_vertical_button;
   }
 }
 
@@ -553,136 +525,72 @@ $_dot_color: $selected_bg_color;
 }
 
 // Some crazy linking stuff
+@mixin linking_rules($a:0.7, $var:$variant, $vert:'false', $entry_rules:'true', $button_rules:'true',
+                     $e_border:$entry_border, $b_border:$button_border) {
 
-// horizontal
-.linked:not(.vertical):not(.pathbar) {
-  > .entry { @extend %linked; }
+  $_border: if($vert=='false', left, top);
 
+  @if $entry_rules=='true' {
+    > .entry + .entry { border-#{$_border}-color: transparentize($e_border, $a); }
 
-  > .entry + .entry { border-left-color: transparentize($entry_border, 0.7); }
+    > .entry.error + .entry,
+    > .entry + .entry.error { border-#{$_border}-color: if($var=='light', $error_color, transparentize($e_border, $a)); }
 
-  > .entry.error + .entry,
-  > .entry + .entry.error { border-left-color: if($variant=='light', $error_color, transparentize($entry_border, 0.7)); }
+    > .entry.warning + .entry,
+    > .entry + .entry.warning { border-#{$_border}-color: if($var=='light', $warning_color, transparentize($e_border, $a)); }
 
-  > .entry.warning + .entry,
-  > .entry + .entry.warning { border-left-color: if($variant=='light', $warning_color, transparentize($entry_border, 0.7)); }
+    > .entry.error + .entry.warning { border-#{$_border}-color: if($var=='light', $error_color, transparentize($e_border, $a));}
 
-  > .entry.error + .entry.warning { border-left-color: if($variant=='light', $error_color, transparentize($entry_border, 0.7));}
+    @each $e_type, $e_color in ('',$selected_bg_color),
+                               ('.warning', $warning_color),
+                               ('.error', $error_color) {
 
+      > .entry + .entry#{$e_type}:focus:not(:last-child),
+      > .entry + .entry#{$e_type}:focus:last-child { border-#{$_border}-color: if($var=='light', $e_color, $e_border); }
 
-  > .entry + .entry:focus:not(:last-child),
-  > .entry + .entry:focus:last-child { border-left-color: if($variant=='light', $selected_bg_color, $entry_border); }
-
-  > .entry + .entry.warning:focus:not(:last-child),
-  > .entry + .entry.warning:focus:last-child { border-left-color: if($variant=='light', $warning_color, $entry_border); }
-
-  > .entry + .entry.error:focus:not(:last-child),
-  > .entry + .entry.error:focus:last-child { border-left-color: if($variant=='light', $error_color, $entry_border); }
-
-
-  > .entry + .button,
-  > .entry + .button:hover,
-  > .entry + .button:active,
-  > .entry + .button:checked,
-  > .entry + .button:insensitive { border-left-style: solid; }
-
-
-  > .entry:focus:not(:only-child) + .entry,
-  > .entry:focus:not(:only-child) + .button,
-  > .entry:focus:not(:only-child) + GtkComboBox > .the-button-in-the-combobox,
-  > .entry:focus:not(:only-child) + GtkComboBoxText > .the-button-in-the-combobox { border-left-color: if($variant=='light', $selected_bg_color, $entry_border); }
-
-  > .entry.warning:focus:not(:only-child) + .entry,
-  > .entry.warning:focus:not(:only-child) + .button,
-  > .entry.warning:focus:not(:only-child) + GtkComboBox > .the-button-in-the-combobox,
-  > .entry.warning:focus:not(:only-child) + GtkComboBoxText > .the-button-in-the-combobox { border-left-color: if($variant=='light', $warning_color, $entry_border); }
-
-  > .entry.error:focus:not(:only-child) + .entry,
-  > .entry.error:focus:not(:only-child) + .button,
-  > .entry.error:focus:not(:only-child) + GtkComboBox > .the-button-in-the-combobox,
-  > .entry.error:focus:not(:only-child) + GtkComboBoxText > .the-button-in-the-combobox { border-left-color: if($variant=='light', $error_color, $entry_border); }
-
-
-  > .button:hover:not(:checked):not(:active):not(:only-child),
-  > .button:hover:not(:checked):not(:active) + .button:not(:checked):not(:active) { box-shadow: -1px 0 $button_border; }
-  > .button:first-child:hover:not(:checked):not(:active) { box-shadow: none; }
-  > .button:checked + .button:not(:checked):not(:active):hover { box-shadow: none; }
-  > .button:checked + .entry { border-left-color: if($variant=='light', $selected_bg_color, $entry_border); }
-  > .entry + .button:not(:checked):not(:active):hover { box-shadow: none; }
-}
-
-// special case for path-bars
-.linked:not(.vertical).path-bar {
-
-$_linked_separator_color: if($variant=='light', transparentize($button_border, 0.6), transparentize($button_border, 0.5));
-
-  > .button:hover:not(:checked):not(:active):not(:only-child) {
-
-    &:hover {
-      box-shadow: inset  1px 0 $_linked_separator_color,
-                  inset -1px 0 $_linked_separator_color;
+      > .entry#{$e_type}:focus:not(:only-child) {
+        + .entry, + .button,
+        + GtkComboBox > .the-button-in-the-combobox,
+        + GtkComboBoxText > .the-button-in-the-combobox { border-#{$_border}-color: if($var=='light', $e_color, $e_border); }
+      }
     }
-    &:first-child:hover { box-shadow: inset -1px 0 $_linked_separator_color; }
-    &:last-child:hover { box-shadow: inset 1px 0 $_linked_separator_color; }
+    > .button:checked + .entry { border-#{$_border}-color: if($var=='light', $selected_bg_color, $e_border); }
+  }
+  @if $button_rules=='true' {
+    > .button + .button { border-#{$_border}-style: none; }
+
+    > .button:hover:not(:checked):not(:active):not(:only-child),
+    > .button:hover:not(:checked):not(:active) + .button:not(:checked):not(:active) { box-shadow: inset if($vert=='false', 1px 0, 0 1px) $b_border; }
+
+    > .button:first-child:hover:not(:checked):not(:active),
+    > .button:checked + .button:not(:checked):not(:active):hover,
+    > .entry + .button:not(:checked):not(:active):hover { box-shadow: none; }
   }
 }
 
-// vertical
-.linked.vertical {
-  > .entry { @extend %linked_vertical; }
+// special case, because path-bars are bugged
+@mixin pathbar_linking_rules($sep_color:if($variant=='light', transparentize($button_border, 0.6), transparentize($button_border, 0.5))) {
 
+    > .button + .button { border-left-style: none; }
 
-  > .entry + .entry { border-top-color: transparentize($entry_border, 0.7); }
+    > .button:hover:not(:checked):not(:active):not(:only-child) {
 
-  > .entry.error + .entry,
-  > .entry + .entry.error { border-top-color: if($variant=='light', $error_color, transparentize($entry_border, 0.7)); }
-
-  > .entry.warning + .entry,
-  > .entry + .entry.warning { border-top-color: if($variant=='light', $warning_color, transparentize($entry_border, 0.7)); }
-
-  > .entry.error + .entry.warning { border-top-color: if($variant=='light', $error_color, transparentize($entry_border, 0.7));}
-
-
-  > .entry + .entry:focus:not(:last-child),
-  > .entry + .entry:focus:last-child { border-top-color: if($variant=='light', $selected_bg_color, $entry_border); }
-
-  > .entry + .entry.warning:focus:not(:last-child),
-  > .entry + .entry.warning:focus:last-child { border-top-color: if($variant=='light', $warning_color, $entry_border); }
-
-  > .entry + .entry.error:focus:not(:last-child),
-  > .entry + .entry.error:focus:last-child { border-top-color: if($variant=='light', $error_color, $entry_border); }
-
-
-  > .entry + .button,
-  > .entry + .button:hover,
-  > .entry + .button:active,
-  > .entry + .button:checked,
-  > .entry + .button:insensitive { border-top-style: solid; }
-
-
-  > .entry:focus:not(:only-child) + .entry,
-  > .entry:focus:not(:only-child) + .button,
-  > .entry:focus:not(:only-child) + GtkComboBox > .the-button-in-the-combobox,
-  > .entry:focus:not(:only-child) + GtkComboBoxText > .the-button-in-the-combobox { border-top-color: if($variant=='light', $selected_bg_color, $entry_border); }
-
-  > .entry.warning:focus:not(:only-child) + .entry,
-  > .entry.warning:focus:not(:only-child) + .button,
-  > .entry.warning:focus:not(:only-child) + GtkComboBox > .the-button-in-the-combobox,
-  > .entry.warning:focus:not(:only-child) + GtkComboBoxText > .the-button-in-the-combobox { border-top-color: if($variant=='light', $warning_color, $entry_border); }
-
-  > .entry.error:focus:not(:only-child) + .entry,
-  > .entry.error:focus:not(:only-child) + .button,
-  > .entry.error:focus:not(:only-child) + GtkComboBox > .the-button-in-the-combobox,
-  > .entry.error:focus:not(:only-child) + GtkComboBoxText > .the-button-in-the-combobox { border-top-color: if($variant=='light', $error_color, $entry_border); }
-
-
-  > .button:hover:not(:checked):not(:active):not(:only-child),
-  > .button:hover:not(:checked):not(:active) + .button:not(:checked):not(:active) { box-shadow: 0 -1px $button_border; }
-  > .button:first-child:hover:not(:checked):not(:active) { box-shadow: none; }
-  > .button:checked + .button:not(:checked):not(:active):hover { box-shadow: none; }
-  > .button:checked + .entry { border-top-color: if($variant=='light', $selected_bg_color, $entry_border); }
-  > .entry + .button:not(:checked):not(:active):hover { box-shadow: none; }
+      &:hover {
+        box-shadow: inset  1px 0 $sep_color,
+                    inset -1px 0 $sep_color;
+      }
+      &:first-child:hover { box-shadow: inset -1px 0 $sep_color; }
+      &:last-child:hover { box-shadow: inset 1px 0 $sep_color; }
+    }
 }
+
+// Apply the rules defined above
+.linked:not(.vertical) {
+  &:not(.path-bar) { @include linking_rules(); }
+  &.path-bar { @include pathbar_linking_rules(); }
+}
+
+.linked.vertical { @include linking_rules($vert:'true'); }
 
 %linked_middle {
   border-radius: 0;
@@ -726,16 +634,6 @@ $_linked_separator_color: if($variant=='light', transparentize($button_border, 0
     border-radius: 3px;
     border-style: solid;
   }
-}
-
-%linked_button {
-  border-left-style: none;
-  &:first-child { border-left-style: solid; }
-}
-
-%linked_vertical_button {
-  border-top-style: none;
-  &:first-child { border-top-style: solid; }
 }
 
 %undecorated_button {
@@ -1259,6 +1157,8 @@ GtkComboBox {
   }
 
   // Linking stuff
+
+  // Reset buttons
   .linked:not(.vertical):not(.path-bar) > .button,
   .linked:not(.vertical):not(.path-bar) > .button:hover,
   .linked:not(.vertical):not(.path-bar) > .button:active,
@@ -1266,92 +1166,35 @@ GtkComboBox {
   .linked:not(.vertical):not(.path-bar) > .button:insensitive {
     border-radius: 3px;
     border-style: solid;
-    
   }
-  .linked:not(.vertical):not(.path-bar) > .button:hover:not(:checked):not(:active):not(:only-child),
-  .linked:not(.vertical):not(.path-bar) > .button:hover:not(:checked):not(:active) + .button:not(:checked):not(:active),
-  .linked:not(.vertical).path-bar > .button:hover:not(:checked):not(:active):not(:only-child),
-  .linked:not(.vertical).path-bar > .button:hover:not(:checked):not(:active) + .button:not(:checked):not(:active) { box-shadow: none; }
+  .linked:not(.vertical):not(.path-bar), .linked:not(.vertical).path-bar {
+    > .button:hover:not(:checked):not(:active):not(:only-child),
+    > .button:hover:not(:checked):not(:active) + .button:not(:checked):not(:active) { box-shadow: none; }
+  }
 
   // special case for path-bars and stack-switchers
-  .linked:not(.vertical):not(.path-bar).stack-switcher > .button,
-  .linked:not(.vertical).path-bar > .button {
+  .linked:not(.vertical):not(.path-bar).stack-switcher,
+  .linked:not(.vertical).path-bar {
 
-    @include button(header-hover);
+    > .button {
+      @include button(header-hover);
 
-    &:hover { background-color: lighten($header_button_bg, 15%); }
-    &:active, &:checked { @include button(header-active); }
-    &:insensitive { color: transparentize($header_fg, 0.4); }
-  }
+      &:hover { background-color: lighten($header_button_bg, 15%); }
+      &:active, &:checked { @include button(header-active); }
+      &:insensitive { color: transparentize($header_fg, 0.4); }
 
-  .linked:not(.vertical):not(.path-bar).stack-switcher > .button,
-  .linked:not(.vertical).path-bar > .button,
-  .linked:not(.vertical):not(.path-bar).stack-switcher > .button:hover,
-  .linked:not(.vertical).path-bar > .button:hover,
-  .linked:not(.vertical):not(.path-bar).stack-switcher > .button:active,
-  .linked:not(.vertical).path-bar > .button:active,
-  .linked:not(.vertical):not(.path-bar).stack-switcher > .button:checked,
-  .linked:not(.vertical).path-bar > .button:checked,
-  .linked:not(.vertical):not(.path-bar).stack-switcher > .button:insensitive,
-  .linked:not(.vertical).path-bar > .button:insensitive {
-    @extend %linked;
-    @extend %linked_button;
-  }
-
-  .linked:not(.vertical).path-bar,
-  .linked:not(.vertical):not(.path-bar).stack-switcher {
-
-    $_linked_separator_color: $header_button_border;
-
-    > .button:hover:not(:checked):not(:active):not(:only-child) {
-
-      &:hover {
-        box-shadow: inset  1px 0 $_linked_separator_color,
-                    inset -1px 0 $_linked_separator_color;
-      }
-      &:first-child:hover { box-shadow: inset -1px 0 $_linked_separator_color; }
-      &:last-child:hover { box-shadow: inset 1px 0 $_linked_separator_color; }
+      &, &:hover, &:active, &:checked, &:insensitive { @extend %linked; }
     }
+
+    @include pathbar_linking_rules($sep_color:$header_button_border);
   }
-
-  .linked:not(.vertical):not(.pathbar) {
-
-    > .entry + .entry { border-left-color: transparentize($header_entry_border, 0.5); }
-
-    > .entry.error + .entry,
-    > .entry + .entry.error { border-left-color: if($variant=='light', $error_color, transparentize($header_entry_border, 0.5)); }
-
-    > .entry.warning + .entry,
-    > .entry + .entry.warning { border-left-color: if($variant=='light', $warning_color, transparentize($header_entry_border, 0.5)); }
-
-    > .entry.error + .entry.warning { border-left-color: if($variant=='light', $error_color, transparentize($header_entry_border, 0.5));}
-
-
-    > .entry + .entry:focus:not(:last-child),
-    > .entry + .entry:focus:last-child { border-left-color: if($darker=='false' and $variant=='light', $selected_bg_color, $header_entry_border); }
-
-    > .entry + .entry.warning:focus:not(:last-child),
-    > .entry + .entry.warning:focus:last-child { border-left-color: if($variant=='light', $warning_color, $header_entry_border); }
-
-    > .entry + .entry.error:focus:not(:last-child),
-    > .entry + .entry.error:focus:last-child { border-left-color: if($variant=='light', $error_color, $header_entry_border); }
-
-
-    > .entry:focus:not(:only-child) + .entry,
-    > .entry:focus:not(:only-child) + .button,
-    > .entry:focus:not(:only-child) + GtkComboBox > .the-button-in-the-combobox,
-    > .entry:focus:not(:only-child) + GtkComboBoxText > .the-button-in-the-combobox { border-left-color:  if($darker=='false' and $variant=='light', $selected_bg_color, $header_entry_border); }
-
-    > .entry.warning:focus:not(:only-child) + .entry,
-    > .entry.warning:focus:not(:only-child) + .button,
-    > .entry.warning:focus:not(:only-child) + GtkComboBox > .the-button-in-the-combobox,
-    > .entry.warning:focus:not(:only-child) + GtkComboBoxText > .the-button-in-the-combobox { border-left-color: if($variant=='light', $warning_color, $header_entry_border); }
-
-    > .entry.error:focus:not(:only-child) + .entry,
-    > .entry.error:focus:not(:only-child) + .button,
-    > .entry.error:focus:not(:only-child) + GtkComboBox > .the-button-in-the-combobox,
-    > .entry.error:focus:not(:only-child) + GtkComboBoxText > .the-button-in-the-combobox { border-left-color: if($variant=='light', $error_color, $header_entry_border); }
-
+  // use linking rules for entries only
+  .linked:not(.vertical):not(.path-bar) {
+    @include linking_rules( $a:0.5,
+                            $var:if($variant=='light' and $darker=='false', 'light', 'dark'),
+                            $button_rules:'false',
+                            $e_border:$header_entry_border,
+                            $b_border:$header_button_border );
   }
 
   // Headerbar Suggested and Destructive Action buttons
