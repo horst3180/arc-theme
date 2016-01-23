@@ -2126,7 +2126,7 @@ GtkFileChooserDialog .dialog-action-box {
 
 .sidebar, .sidebar .view {
   border: none;
-  background-color: #F5F6F7; }
+  background-color: #fbfbfc; }
   .sidebar:selected, .sidebar .view:selected {
     background-color: #5294E2; }
 

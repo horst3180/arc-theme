@@ -2381,7 +2381,7 @@ GtkFileChooserDialog {
 //
 .sidebar {
   border: none;
-  background-color: $bg_color;
+  background-color: lighten($bg_color, 2%);
 
   .scrollbar {
     &.trough {

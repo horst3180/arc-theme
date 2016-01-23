@@ -2082,7 +2082,7 @@ GtkFileChooserDialog .dialog-action-box {
 
 .sidebar {
   border: none;
-  background-color: #F5F6F7; }
+  background-color: #fbfbfc; }
   .sidebar .scrollbar.trough {
     background-color: transparent;
     border-width: 2px;

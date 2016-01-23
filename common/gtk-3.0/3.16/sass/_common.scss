@@ -2463,7 +2463,7 @@ GtkFileChooserDialog {
 //
 .sidebar, .sidebar .view {
   border: none;
-  background-color: $bg_color;
+  background-color: lighten($bg_color, 2%);
 
   &:selected {
     background-color: $selected_bg_color;
