@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="8"
-     inkscape:cx="176.38504"
-     inkscape:cy="151.27384"
+     inkscape:zoom="4"
+     inkscape:cx="117.91346"
+     inkscape:cy="193.93448"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -2239,7 +2239,7 @@
      style="display:inline"
      transform="translate(8.000005,285.63782)">
     <g
-       id="titlebutton-min"
+       id="titlebutton-minimize"
        inkscape:label="#g6247"
        transform="translate(-471,-43)"
        style="opacity:0.8">
@@ -2652,7 +2652,7 @@
          style="color:#bebebe;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:'Andale Mono';-inkscape-font-specification:'Andale Mono';text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#f8f8f9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.78124988;marker:none;enable-background:new" />
     </g>
     <g
-       id="titlebutton-max"
+       id="titlebutton-maximize"
        inkscape:label="#g6234"
        transform="translate(-480,-43)"
        style="opacity:0.8">
@@ -2765,7 +2765,7 @@
          style="color:#bebebe;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:'Andale Mono';-inkscape-font-specification:'Andale Mono';text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#f8f8f9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.78124988;marker:none;enable-background:new" />
     </g>
     <g
-       id="titlebutton-max-hover"
+       id="titlebutton-maximize-hover"
        inkscape:label="#g6284"
        transform="translate(-377,-9)">
       <g
@@ -2851,7 +2851,7 @@
          style="display:inline;opacity:1;fill:none;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0" />
     </g>
     <g
-       id="titlebutton-min-hover"
+       id="titlebutton-minimize-hover"
        inkscape:label="#g6308"
        transform="translate(-368,-9)">
       <g
@@ -3019,7 +3019,7 @@
          style="display:inline;opacity:1;fill:none;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0" />
     </g>
     <g
-       id="titlebutton-max-active"
+       id="titlebutton-maximize-active"
        inkscape:label="#g6356"
        transform="translate(-276,8)">
       <g
@@ -3109,7 +3109,7 @@
          style="display:inline;opacity:1;fill:none;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0" />
     </g>
     <g
-       id="titlebutton-min-active"
+       id="titlebutton-minimize-active"
        inkscape:label="#g6414"
        transform="translate(-267,8)">
       <g
@@ -3199,7 +3199,7 @@
          y="-185.63782" />
     </g>
     <g
-       id="titlebutton-max-backdrop"
+       id="titlebutton-maximize-backdrop"
        inkscape:label="#g6521"
        style="opacity:0.45"
        transform="translate(-480,-43)">
@@ -3232,7 +3232,7 @@
          y="-168.63782" />
     </g>
     <g
-       id="titlebutton-min-backdrop"
+       id="titlebutton-minimize-backdrop"
        inkscape:label="#g6534"
        style="opacity:0.45"
        transform="translate(-471,-43)">
@@ -4648,7 +4648,7 @@
     </g>
     <g
        style="display:inline;opacity:0.7"
-       id="titlebutton-min-dark"
+       id="titlebutton-minimize-dark"
        inkscape:label="#g6247"
        transform="translate(-229.00002,-43.000019)">
       <g
@@ -4757,7 +4757,7 @@
     </g>
     <g
        style="display:inline;opacity:0.7"
-       id="titlebutton-max-dark"
+       id="titlebutton-maximize-dark"
        inkscape:label="#g6234"
        transform="translate(-238.00002,-43.000019)">
       <g
@@ -4866,7 +4866,7 @@
     </g>
     <g
        style="display:inline"
-       id="titlebutton-max-hover-dark"
+       id="titlebutton-maximize-hover-dark"
        inkscape:label="#g6284"
        transform="translate(-135.00001,-9.0000206)">
       <g
@@ -4953,7 +4953,7 @@
     </g>
     <g
        style="display:inline"
-       id="titlebutton-min-hover-dark"
+       id="titlebutton-minimize-hover-dark"
        inkscape:label="#g6308"
        transform="translate(-126.00001,-9.0000206)">
       <g
@@ -5116,7 +5116,7 @@
     </g>
     <g
        style="display:inline"
-       id="titlebutton-max-active-dark"
+       id="titlebutton-maximize-active-dark"
        inkscape:label="#g6356"
        transform="translate(-34.000017,7.9999889)">
       <g
@@ -5207,7 +5207,7 @@
     </g>
     <g
        style="display:inline"
-       id="titlebutton-min-active-dark"
+       id="titlebutton-minimize-active-dark"
        inkscape:label="#g6414"
        transform="translate(-25.000017,7.9999889)">
       <g
@@ -5297,7 +5297,7 @@
          y="-185.63782" />
     </g>
     <g
-       id="titlebutton-max-backdrop-dark"
+       id="titlebutton-maximize-backdrop-dark"
        inkscape:label="#g6521"
        style="display:inline;opacity:0.4"
        transform="translate(-238.00002,-43.000019)">
@@ -5330,7 +5330,7 @@
          y="-168.63782" />
     </g>
     <g
-       id="titlebutton-min-backdrop-dark"
+       id="titlebutton-minimize-backdrop-dark"
        inkscape:label="#g6534"
        style="display:inline;opacity:0.4"
        transform="translate(-229.00002,-43.000019)">

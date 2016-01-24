@@ -2818,9 +2818,7 @@ GtkVolumeButton.button { padding: 8px; }
     &:active, &:checked {
       @include button(header-active);
     }
-
     &.close, &.maximize, &.minimize {
-
       color: transparent;
       background-color: transparent;
       background-position: center;
@@ -2829,21 +2827,14 @@ GtkVolumeButton.button { padding: 8px; }
 
       &:backdrop { opacity: 1; }
     }
+    // Load png assets for each button
+    @each $k in ('close','maximize', 'minimize') {
+      @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-active') {
 
-    &.close { background-image: -gtk-scaled(url('assets/titlebutton-close#{$darker_asset_suffix}.png'),url('assets/titlebutton-close#{$darker_asset_suffix}@2.png')); }
-    &.close:backdrop { background-image: -gtk-scaled(url('assets/titlebutton-close-backdrop#{$darker_asset_suffix}.png'),url('assets/titlebutton-close-backdrop#{$darker_asset_suffix}@2.png')); }
-    &.close:hover { background-image: -gtk-scaled(url('assets/titlebutton-close-hover#{$darker_asset_suffix}.png'),url('assets/titlebutton-close-hover#{$darker_asset_suffix}@2.png')); }
-    &.close:active { background-image: -gtk-scaled(url('assets/titlebutton-close-active#{$darker_asset_suffix}.png'),url('assets/titlebutton-close-active#{$darker_asset_suffix}@2.png')); }
-
-    &.maximize { background-image: -gtk-scaled(url('assets/titlebutton-max#{$darker_asset_suffix}.png'),url('assets/titlebutton-max#{$darker_asset_suffix}@2.png')); }
-    &.maximize:backdrop { background-image: -gtk-scaled(url('assets/titlebutton-max-backdrop#{$darker_asset_suffix}.png'),url('assets/titlebutton-max-backdrop#{$darker_asset_suffix}@2.png')); }
-    &.maximize:hover { background-image: -gtk-scaled(url('assets/titlebutton-max-hover#{$darker_asset_suffix}.png'),url('assets/titlebutton-max-hover#{$darker_asset_suffix}@2.png')); }
-    &.maximize:active { background-image: -gtk-scaled(url('assets/titlebutton-max-active#{$darker_asset_suffix}.png'),url('assets/titlebutton-max-active#{$darker_asset_suffix}@2.png')); }
-
-    &.minimize { background-image: -gtk-scaled(url('assets/titlebutton-min#{$darker_asset_suffix}.png'),url('assets/titlebutton-min#{$darker_asset_suffix}@2.png')); }
-    &.minimize:backdrop { background-image: -gtk-scaled(url('assets/titlebutton-min-backdrop#{$darker_asset_suffix}.png'),url('assets/titlebutton-min-backdrop#{$darker_asset_suffix}@2.png')); }
-    &.minimize:hover { background-image: -gtk-scaled(url('assets/titlebutton-min-hover#{$darker_asset_suffix}.png'),url('assets/titlebutton-min-hover#{$darker_asset_suffix}@2.png')); }
-    &.minimize:active { background-image: -gtk-scaled(url('assets/titlebutton-min-active#{$darker_asset_suffix}.png'),url('assets/titlebutton-min-active#{$darker_asset_suffix}@2.png')); }
+        &.#{$k}#{$l} { background-image: -gtk-scaled(url('assets/titlebutton-#{$k}#{$m}#{$darker_asset_suffix}.png'),
+                                                     url('assets/titlebutton-#{$k}#{$m}#{$darker_asset_suffix}@2.png')); }
+      }
+    }
   }
 }
 
