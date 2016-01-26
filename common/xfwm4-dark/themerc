@@ -18,13 +18,10 @@ inactive_text_shadow_color=#2f343b
 shadow_delta_height=2
 shadow_delta_width=0
 shadow_delta_x=0
-shadow_delta_y=-10
-shadow_opacity=35
+shadow_delta_y=-5
+shadow_opacity=50
 
 title_shadow_active=false
 
-resize_opacity=100
-move_opacity=100
-popup_opacity=100
 show_frame_shadow=true
 show_popup_shadow=true
