@@ -3,7 +3,7 @@
 # Script to upgrade/install the arc-theme
 
 #URL
-theme_name=Arc-theme
+theme_name=arc-theme
 
 # Theme name
 download_url=https://github.com/horst3180/$theme_name/archive/master.tar.gz
