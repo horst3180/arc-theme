@@ -1115,24 +1115,15 @@ StScrollBar {
   background-color: transparent;
   border: none;
   padding: 3px 0px 3px 0px;
-  border-image: url("common-assets/dash/dash-left.svg") 3 3 3 3; }
-  .extended.left #dash {
-    border-image: url("common-assets/dash/dash-extended-left.svg") 3 3 3 3; }
+  border-radius: 0 3px 3px 0; }
+  #dash:rtl {
+    border-radius: 3px 0 0 3px; }
   .right #dash, #dash:rtl {
-    padding: 3px 0px 3px 0px;
-    border-image: url("common-assets/dash/dash-right.svg") 3 3 3 3; }
-  .extended.right #dash {
-    border-image: url("common-assets/dash/dash-extended-right.svg") 3 3 3 3; }
+    padding: 3px 0px 3px 0px; }
   .bottom #dash {
-    padding: 0px 3px 0px 3px;
-    border-image: url("common-assets/dash/dash-bottom.svg") 3 3 3 3; }
-  .extended.bottom #dash {
-    border-image: url("common-assets/dash/dash-extended-bottom.svg") 3 3 3 3; }
+    padding: 0px 3px 0px 3px; }
   .top #dash {
-    padding: 0px 3px 0px 3px;
-    border-image: url("common-assets/dash/dash-top.svg") 3 3 3 3; }
-  .extended.top #dash {
-    border-image: url("common-assets/dash/dash-extended-top.svg") 3 3 3 3; }
+    padding: 0px 3px 0px 3px; }
   #dash .placeholder {
     background-image: url("common-assets/dash/dash-placeholder.svg");
     background-size: contain;
