@@ -2416,11 +2416,16 @@ GtkVolumeButton.button {
 
 .header-bar .button.titlebutton,
 .titlebar .button.titlebutton {
-  padding: 8px 4px;
+  padding-left: 4px;
+  padding-right: 4px;
   border-color: transparent;
   background-color: transparent;
   background-image: none;
   background-color: rgba(47, 52, 63, 0); }
+  .header-bar .button.titlebutton:not(GtkMenuButton),
+  .titlebar .button.titlebutton:not(GtkMenuButton) {
+    padding-top: 8px;
+    padding-bottom: 8px; }
   .header-bar .button.titlebutton:hover,
   .titlebar .button.titlebutton:hover {
     color: rgba(207, 218, 231, 0.8);

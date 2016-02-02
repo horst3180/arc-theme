@@ -2807,7 +2807,12 @@ GtkVolumeButton.button { padding: 8px; }
   .button.titlebutton {
     @extend .image-button;
 
-    padding: 8px 4px;
+    &:not(GtkMenuButton) {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+    padding-left: 4px;
+    padding-right: 4px;
 
     @include button(undecorated);
     background-color: transparentize($header_bg, 1);
