@@ -1534,7 +1534,7 @@ column-header .button, column-header .button:hover, column-header .button:active
       border-top-width: 4px; }
     .scrollbar.slider:hover {
       background-color: #5f6470; }
-    .scrollbar.slider:prelight:active {
+    .scrollbar.slider:prelight:active, .scrollbar.slider:active {
       background-color: #5294E2; }
     .scrollbar.slider.fine-tune {
       border-width: 4px; }

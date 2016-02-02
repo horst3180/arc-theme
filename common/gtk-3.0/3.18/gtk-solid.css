@@ -1617,7 +1617,7 @@ column-header .button, column-header .button:hover, column-header .button:active
     background-color: #b8babf; }
     .scrollbar .slider:hover {
       background-color: #c7c9cd; }
-    .scrollbar .slider:prelight:active {
+    .scrollbar .slider:prelight:active, .scrollbar .slider:active {
       background-color: #5294E2; }
     .scrollbar .slider:insensitive {
       background-color: transparent; }

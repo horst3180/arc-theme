@@ -1810,7 +1810,8 @@ $_scrollbar_bg_color: darken($base_color, 1%);
 
     &:hover { background-color: mix($fg_color, $bg_color, 30%); }
 
-    &:prelight:active { background-color: $selected_bg_color;}
+    &:prelight:active,
+    &:active { background-color: $selected_bg_color;}
 
     &:insensitive {
       background-color: transparent;
