@@ -2570,15 +2570,80 @@ GtkVolumeButton.button {
 .header-bar .left GtkMenuButton.button.titlebutton:first-child,
 .header-bar .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child,
 .header-bar.selection-mode .left GtkMenuButton.button.titlebutton:first-child,
-.header-bar.selection-mode .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child,
-.titlebar .left GtkMenuButton.button.titlebutton:first-child,
+.header-bar.selection-mode .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child, .titlebar .left GtkMenuButton.button.titlebutton:first-child,
 .titlebar .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child,
 .titlebar.selection-mode .left GtkMenuButton.button.titlebutton:first-child,
 .titlebar.selection-mode .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child {
   padding: 4px 6px 4px 6px;
-  border-color: transparent;
-  background-color: transparent;
-  background-image: none; }
+  color: rgba(207, 218, 231, 0.8); }
+  .header-bar .left GtkMenuButton.button.titlebutton:first-child, .header-bar .left GtkMenuButton.button.titlebutton:first-child:hover, .header-bar .left GtkMenuButton.button.titlebutton:first-child:active:hover, .header-bar .left GtkMenuButton.button.titlebutton:first-child:backdrop, .header-bar .left GtkMenuButton.button.titlebutton:first-child:backdrop:hover,
+  .header-bar .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child,
+  .header-bar .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child:hover,
+  .header-bar .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child:active:hover,
+  .header-bar .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child:backdrop,
+  .header-bar .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child:backdrop:hover,
+  .header-bar.selection-mode .left GtkMenuButton.button.titlebutton:first-child,
+  .header-bar.selection-mode .left GtkMenuButton.button.titlebutton:first-child:hover,
+  .header-bar.selection-mode .left GtkMenuButton.button.titlebutton:first-child:active:hover,
+  .header-bar.selection-mode .left GtkMenuButton.button.titlebutton:first-child:backdrop,
+  .header-bar.selection-mode .left GtkMenuButton.button.titlebutton:first-child:backdrop:hover,
+  .header-bar.selection-mode .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child,
+  .header-bar.selection-mode .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child:hover,
+  .header-bar.selection-mode .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child:active:hover,
+  .header-bar.selection-mode .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child:backdrop,
+  .header-bar.selection-mode .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child:backdrop:hover, .titlebar .left GtkMenuButton.button.titlebutton:first-child, .titlebar .left GtkMenuButton.button.titlebutton:first-child:hover, .titlebar .left GtkMenuButton.button.titlebutton:first-child:active:hover, .titlebar .left GtkMenuButton.button.titlebutton:first-child:backdrop, .titlebar .left GtkMenuButton.button.titlebutton:first-child:backdrop:hover,
+  .titlebar .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child,
+  .titlebar .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child:hover,
+  .titlebar .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child:active:hover,
+  .titlebar .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child:backdrop,
+  .titlebar .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child:backdrop:hover,
+  .titlebar.selection-mode .left GtkMenuButton.button.titlebutton:first-child,
+  .titlebar.selection-mode .left GtkMenuButton.button.titlebutton:first-child:hover,
+  .titlebar.selection-mode .left GtkMenuButton.button.titlebutton:first-child:active:hover,
+  .titlebar.selection-mode .left GtkMenuButton.button.titlebutton:first-child:backdrop,
+  .titlebar.selection-mode .left GtkMenuButton.button.titlebutton:first-child:backdrop:hover,
+  .titlebar.selection-mode .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child,
+  .titlebar.selection-mode .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child:hover,
+  .titlebar.selection-mode .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child:active:hover,
+  .titlebar.selection-mode .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child:backdrop,
+  .titlebar.selection-mode .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child:backdrop:hover {
+    border-color: transparent;
+    background-color: transparent;
+    background-image: none; }
+  .header-bar .left GtkMenuButton.button.titlebutton:first-child:hover, .header-bar .left GtkMenuButton.button.titlebutton:first-child:backdrop:hover,
+  .header-bar .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child:hover,
+  .header-bar .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child:backdrop:hover,
+  .header-bar.selection-mode .left GtkMenuButton.button.titlebutton:first-child:hover,
+  .header-bar.selection-mode .left GtkMenuButton.button.titlebutton:first-child:backdrop:hover,
+  .header-bar.selection-mode .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child:hover,
+  .header-bar.selection-mode .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child:backdrop:hover, .titlebar .left GtkMenuButton.button.titlebutton:first-child:hover, .titlebar .left GtkMenuButton.button.titlebutton:first-child:backdrop:hover,
+  .titlebar .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child:hover,
+  .titlebar .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child:backdrop:hover,
+  .titlebar.selection-mode .left GtkMenuButton.button.titlebutton:first-child:hover,
+  .titlebar.selection-mode .left GtkMenuButton.button.titlebutton:first-child:backdrop:hover,
+  .titlebar.selection-mode .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child:hover,
+  .titlebar.selection-mode .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child:backdrop:hover {
+    color: rgba(207, 218, 231, 0.8);
+    outline-color: rgba(207, 218, 231, 0.1);
+    border-color: rgba(21, 23, 28, 0.37);
+    background-color: rgba(95, 105, 127, 0.37); }
+  .header-bar .left GtkMenuButton.button.titlebutton:first-child:active:hover, .header-bar .left GtkMenuButton.button.titlebutton:first-child:checked,
+  .header-bar .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child:active:hover,
+  .header-bar .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child:checked,
+  .header-bar.selection-mode .left GtkMenuButton.button.titlebutton:first-child:active:hover,
+  .header-bar.selection-mode .left GtkMenuButton.button.titlebutton:first-child:checked,
+  .header-bar.selection-mode .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child:active:hover,
+  .header-bar.selection-mode .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child:checked, .titlebar .left GtkMenuButton.button.titlebutton:first-child:active:hover, .titlebar .left GtkMenuButton.button.titlebutton:first-child:checked,
+  .titlebar .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child:active:hover,
+  .titlebar .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child:checked,
+  .titlebar.selection-mode .left GtkMenuButton.button.titlebutton:first-child:active:hover,
+  .titlebar.selection-mode .left GtkMenuButton.button.titlebutton:first-child:checked,
+  .titlebar.selection-mode .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child:active:hover,
+  .titlebar.selection-mode .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child:checked {
+    color: #ffffff;
+    outline-color: rgba(255, 255, 255, 0.3);
+    border-color: transparent;
+    background-color: #5294E2; }
 
 .view:selected, .view:selected:focus, .view:selected:hover, GtkLabel:selected, GtkLabel:selected:focus, GtkLabel:selected:hover, GtkFlowBox .grid-child:selected, .menuitem.button.flat:active, .menuitem.button.flat:selected, .list-row:selected, GtkEntry.gb-command-bar-entry.entry.flat:selected, GtkEntry.gb-command-bar-entry.entry.flat:selected:focus {
   background-image: none;

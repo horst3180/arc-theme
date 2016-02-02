@@ -2746,19 +2746,22 @@ GtkVolumeButton.button { padding: 8px; }
 }
 
 // Fallback menubutton
-.header-bar .left GtkMenuButton.button.titlebutton:first-child,
-.header-bar .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child,
-.header-bar.selection-mode .left GtkMenuButton.button.titlebutton:first-child,
-.header-bar.selection-mode .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child,
-.titlebar .left GtkMenuButton.button.titlebutton:first-child,
-.titlebar .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child,
-.titlebar.selection-mode .left GtkMenuButton.button.titlebutton:first-child,
-.titlebar.selection-mode .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child {
+.header-bar, .titlebar {
+  .left GtkMenuButton.button.titlebutton:first-child,
+  .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child,
+  &.selection-mode .left GtkMenuButton.button.titlebutton:first-child,
+  &.selection-mode .left:dir(rtl) GtkMenuButton.button.titlebutton:last-child {
 
-  padding: 4px 6px 4px 6px;
-  @include button(undecorated);
+    padding: 4px 6px 4px 6px;
+    color: $header_fg;
+
+    &, &:hover, &:active:hover,
+    &:backdrop, &:backdrop:hover { @include button(undecorated); }
+
+    &:hover, &:backdrop:hover { @include button(header-hover); }
+    &:active:hover, &:checked { @include button(header-active); }
+  }
 }
-
 
 // catch all extend
 %selected_items {
