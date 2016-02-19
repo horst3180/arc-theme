@@ -2769,10 +2769,10 @@ decoration {
   decoration.popup {
     box-shadow: none;
     border-radius: 0; }
-  decoration.ssd {
+  .ssd decoration, decoration.ssd {
     border-radius: 3px 3px 0 0;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.65); }
-    decoration.ssd.maximized {
+    .ssd decoration.maximized, decoration.ssd.maximized {
       border-radius: 0; }
   .csd.popup decoration {
     border-radius: 2px;

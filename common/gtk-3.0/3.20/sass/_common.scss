@@ -2865,6 +2865,7 @@ decoration {
     border-radius: 0;
   }
   // server-side decorations as used by mutter
+  .ssd &,
   &.ssd {
     border-radius: if($darker=='false' and $variant=='light', 4px 4px 0 0, 3px 3px 0 0);
     box-shadow: 0 0 0 1px if($darker=='true' or $variant == 'dark', transparentize(black, 0.35), $_wm_border);
