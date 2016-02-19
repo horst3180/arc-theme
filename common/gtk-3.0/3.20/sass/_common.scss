@@ -737,8 +737,13 @@ spinbutton {
     > entry:focus + button { border-left-color: if($variant=='light', $selected_bg_color, $entry_border); }
   }
   &.vertical {
-    button, entry { @extend %linked_vertical; }
+    button, entry {
+      padding-left: 4px;
+      padding-right: 4px;
+      min-width: 0;
 
+      @extend %linked_vertical;
+    }
     > entry:focus + button { border-top-color: if($variant=='light', $selected_bg_color, $entry_border); }
   }
 }
@@ -1359,7 +1364,7 @@ treeview.view {
     button {
       $_column_header_color: mix($fg_color,$base_color,80%);
 
-      &, &:hover, &:active { @extend %column_header_button; }
+      @extend %column_header_button;
 
       color: $_column_header_color;
       background-color: $base_color;

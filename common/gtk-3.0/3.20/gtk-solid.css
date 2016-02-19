@@ -742,6 +742,11 @@ spinbutton:not(.vertical) > entry + button:not(:active):hover {
 spinbutton:not(.vertical) > entry:focus + button {
   border-left-color: #5294E2; }
 
+spinbutton.vertical button, spinbutton.vertical entry {
+  padding-left: 4px;
+  padding-right: 4px;
+  min-width: 0; }
+
 spinbutton.vertical > entry:focus + button {
   border-top-color: #5294E2; }
 
@@ -1321,7 +1326,7 @@ treeview.view {
       color: #5294E2;
       box-shadow: inset 1px 1px 0 1px #5294E2, inset -1px 0 0 1px #5294E2, inset 1px 1px #ffffff, inset -1px 0 #ffffff; }
 
-treeview.view header button, treeview.view header button:hover, treeview.view header button:active {
+treeview.view header button {
   min-height: 0;
   min-width: 0;
   padding: 3px 6px;
