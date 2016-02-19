@@ -890,7 +890,11 @@ spinbutton {
 // Comboboxes
 //
 combobox {
-
+  button.combo {
+    min-width: 0;       // otherwise the arrow placement is unsymmetric
+    padding-left: 8px;  //
+    padding-right: 8px  //
+  }
   arrow {
     -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
     min-height: 16px;

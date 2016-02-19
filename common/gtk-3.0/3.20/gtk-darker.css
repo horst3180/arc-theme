@@ -878,6 +878,11 @@ treeview spinbutton entry, treeview spinbutton spinbutton, treeview spinbutton e
   border-radius: 0;
   box-shadow: none; }
 
+combobox button.combo {
+  min-width: 0;
+  padding-left: 8px;
+  padding-right: 8px; }
+
 combobox arrow {
   -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
   min-height: 16px;
