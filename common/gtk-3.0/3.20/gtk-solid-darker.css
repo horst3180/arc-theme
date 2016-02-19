@@ -1841,7 +1841,8 @@ headerbar switch:active:disabled,
 .primary-toolbar switch:active:disabled {
   background-image: -gtk-scaled(url("assets/switch-active-insensitive-header-dark.png"), url("assets/switch-active-insensitive-header-dark@2.png")); }
 
-check {
+check,
+treeview.check {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked.png"), url("assets/checkbox-unchecked@2.png")); }
 
 GtkFileChooserDialog GtkFileChooserWidget > actionbar > revealer > .action-bar.frame check,
@@ -1849,11 +1850,13 @@ GtkFileChooserDialog .dialog-vbox > .frame check {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-dark.png"), url("assets/checkbox-unchecked-dark@2.png")); }
 
 .view check:selected,
+treeview.check:selected,
 row:selected check,
 infobar check {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-selected.png"), url("assets/checkbox-unchecked-selected@2.png")); }
 
-check:disabled {
+check:disabled,
+treeview.check:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-insensitive.png"), url("assets/checkbox-unchecked-insensitive@2.png")); }
 
 GtkFileChooserDialog GtkFileChooserWidget > actionbar > revealer > .action-bar.frame check:disabled,
@@ -1861,11 +1864,13 @@ GtkFileChooserDialog .dialog-vbox > .frame check:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-insensitive-dark.png"), url("assets/checkbox-unchecked-insensitive-dark@2.png")); }
 
 .view check:disabled:selected,
+treeview.check:disabled:selected,
 row:selected check:disabled,
 infobar check:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-insensitive-selected.png"), url("assets/checkbox-unchecked-insensitive-selected@2.png")); }
 
-check:indeterminate {
+check:indeterminate,
+treeview.check:indeterminate {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed.png"), url("assets/checkbox-mixed@2.png")); }
 
 GtkFileChooserDialog GtkFileChooserWidget > actionbar > revealer > .action-bar.frame check:indeterminate,
@@ -1873,11 +1878,13 @@ GtkFileChooserDialog .dialog-vbox > .frame check:indeterminate {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-dark.png"), url("assets/checkbox-mixed-dark@2.png")); }
 
 .view check:indeterminate:selected,
+treeview.check:indeterminate:selected,
 row:selected check:indeterminate,
 infobar check:indeterminate {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-selected.png"), url("assets/checkbox-mixed-selected@2.png")); }
 
-check:indeterminate:disabled {
+check:indeterminate:disabled,
+treeview.check:indeterminate:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-insensitive.png"), url("assets/checkbox-mixed-insensitive@2.png")); }
 
 GtkFileChooserDialog GtkFileChooserWidget > actionbar > revealer > .action-bar.frame check:indeterminate:disabled,
@@ -1885,11 +1892,13 @@ GtkFileChooserDialog .dialog-vbox > .frame check:indeterminate:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-insensitive-dark.png"), url("assets/checkbox-mixed-insensitive-dark@2.png")); }
 
 .view check:indeterminate:disabled:selected,
+treeview.check:indeterminate:disabled:selected,
 row:selected check:indeterminate:disabled,
 infobar check:indeterminate:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-insensitive-selected.png"), url("assets/checkbox-mixed-insensitive-selected@2.png")); }
 
-check:checked {
+check:checked,
+treeview.check:checked {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked.png"), url("assets/checkbox-checked@2.png")); }
 
 GtkFileChooserDialog GtkFileChooserWidget > actionbar > revealer > .action-bar.frame check:checked,
@@ -1897,11 +1906,13 @@ GtkFileChooserDialog .dialog-vbox > .frame check:checked {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-dark.png"), url("assets/checkbox-checked-dark@2.png")); }
 
 .view check:checked:selected,
+treeview.check:checked:selected,
 row:selected check:checked,
 infobar check:checked {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-selected.png"), url("assets/checkbox-checked-selected@2.png")); }
 
-check:checked:disabled {
+check:checked:disabled,
+treeview.check:checked:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-insensitive.png"), url("assets/checkbox-checked-insensitive@2.png")); }
 
 GtkFileChooserDialog GtkFileChooserWidget > actionbar > revealer > .action-bar.frame check:checked:disabled,
@@ -1909,11 +1920,13 @@ GtkFileChooserDialog .dialog-vbox > .frame check:checked:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-insensitive-dark.png"), url("assets/checkbox-checked-insensitive-dark@2.png")); }
 
 .view check:checked:disabled:selected,
+treeview.check:checked:disabled:selected,
 row:selected check:checked:disabled,
 infobar check:checked:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-insensitive-selected.png"), url("assets/checkbox-checked-insensitive-selected@2.png")); }
 
-radio {
+radio,
+treeview.radio {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked.png"), url("assets/radio-unchecked@2.png")); }
 
 GtkFileChooserDialog GtkFileChooserWidget > actionbar > revealer > .action-bar.frame radio,
@@ -1921,11 +1934,13 @@ GtkFileChooserDialog .dialog-vbox > .frame radio {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-dark.png"), url("assets/radio-unchecked-dark@2.png")); }
 
 .view radio:selected,
+treeview.radio:selected,
 row:selected radio,
 infobar radio {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-selected.png"), url("assets/radio-unchecked-selected@2.png")); }
 
-radio:disabled {
+radio:disabled,
+treeview.radio:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-insensitive.png"), url("assets/radio-unchecked-insensitive@2.png")); }
 
 GtkFileChooserDialog GtkFileChooserWidget > actionbar > revealer > .action-bar.frame radio:disabled,
@@ -1933,11 +1948,13 @@ GtkFileChooserDialog .dialog-vbox > .frame radio:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-insensitive-dark.png"), url("assets/radio-unchecked-insensitive-dark@2.png")); }
 
 .view radio:disabled:selected,
+treeview.radio:disabled:selected,
 row:selected radio:disabled,
 infobar radio:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-insensitive-selected.png"), url("assets/radio-unchecked-insensitive-selected@2.png")); }
 
-radio:indeterminate {
+radio:indeterminate,
+treeview.radio:indeterminate {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed.png"), url("assets/radio-mixed@2.png")); }
 
 GtkFileChooserDialog GtkFileChooserWidget > actionbar > revealer > .action-bar.frame radio:indeterminate,
@@ -1945,11 +1962,13 @@ GtkFileChooserDialog .dialog-vbox > .frame radio:indeterminate {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-dark.png"), url("assets/radio-mixed-dark@2.png")); }
 
 .view radio:indeterminate:selected,
+treeview.radio:indeterminate:selected,
 row:selected radio:indeterminate,
 infobar radio:indeterminate {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-selected.png"), url("assets/radio-mixed-selected@2.png")); }
 
-radio:indeterminate:disabled {
+radio:indeterminate:disabled,
+treeview.radio:indeterminate:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-insensitive.png"), url("assets/radio-mixed-insensitive@2.png")); }
 
 GtkFileChooserDialog GtkFileChooserWidget > actionbar > revealer > .action-bar.frame radio:indeterminate:disabled,
@@ -1957,11 +1976,13 @@ GtkFileChooserDialog .dialog-vbox > .frame radio:indeterminate:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-insensitive-dark.png"), url("assets/radio-mixed-insensitive-dark@2.png")); }
 
 .view radio:indeterminate:disabled:selected,
+treeview.radio:indeterminate:disabled:selected,
 row:selected radio:indeterminate:disabled,
 infobar radio:indeterminate:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-insensitive-selected.png"), url("assets/radio-mixed-insensitive-selected@2.png")); }
 
-radio:checked {
+radio:checked,
+treeview.radio:checked {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-checked.png"), url("assets/radio-checked@2.png")); }
 
 GtkFileChooserDialog GtkFileChooserWidget > actionbar > revealer > .action-bar.frame radio:checked,
@@ -1969,11 +1990,13 @@ GtkFileChooserDialog .dialog-vbox > .frame radio:checked {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-dark.png"), url("assets/radio-checked-dark@2.png")); }
 
 .view radio:checked:selected,
+treeview.radio:checked:selected,
 row:selected radio:checked,
 infobar radio:checked {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-selected.png"), url("assets/radio-checked-selected@2.png")); }
 
-radio:checked:disabled {
+radio:checked:disabled,
+treeview.radio:checked:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-insensitive.png"), url("assets/radio-checked-insensitive@2.png")); }
 
 GtkFileChooserDialog GtkFileChooserWidget > actionbar > revealer > .action-bar.frame radio:checked:disabled,
@@ -1981,6 +2004,7 @@ GtkFileChooserDialog .dialog-vbox > .frame radio:checked:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-insensitive-dark.png"), url("assets/radio-checked-insensitive-dark@2.png")); }
 
 .view radio:checked:disabled:selected,
+treeview.radio:checked:disabled:selected,
 row:selected radio:checked:disabled,
 infobar radio:checked:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-insensitive-selected.png"), url("assets/radio-checked-insensitive-selected@2.png")); }
