@@ -1173,31 +1173,39 @@ headerbar entry, headerbar button, headerbar separator, headerbar .sidebar separ
 .primary-toolbar combobox:disabled, headerbar combobox:disabled {
   color: rgba(207, 218, 231, 0.2); }
 
-.primary-toolbar combobox.combobox-entry button, headerbar combobox.combobox-entry button {
+.primary-toolbar combobox.linked button, headerbar combobox.linked button {
   color: rgba(207, 218, 231, 0.8);
   border-color: rgba(21, 23, 28, 0.4);
   background-image: linear-gradient(to bottom, rgba(95, 105, 127, 0.4));
   background-color: transparent; }
-  .primary-toolbar combobox.combobox-entry button image, headerbar combobox.combobox-entry button image, .primary-toolbar combobox.combobox-entry button image:hover, headerbar combobox.combobox-entry button image:hover {
+  .primary-toolbar combobox.linked button image, headerbar combobox.linked button image, .primary-toolbar combobox.linked button image:hover, headerbar combobox.linked button image:hover {
     color: inherit; }
-  .primary-toolbar combobox.combobox-entry button:hover, headerbar combobox.combobox-entry button:hover {
+  .primary-toolbar combobox.linked button:hover, headerbar combobox.linked button:hover {
     color: #ffffff;
     border-color: transparent;
     background-image: linear-gradient(to bottom, #5294E2);
     box-shadow: none; }
-  .primary-toolbar combobox.combobox-entry button:disabled, headerbar combobox.combobox-entry button:disabled {
+  .primary-toolbar combobox.linked button:disabled, headerbar combobox.linked button:disabled {
     color: rgba(207, 218, 231, 0.35);
     background-image: linear-gradient(to bottom, rgba(95, 105, 127, 0.25)); }
 
-.primary-toolbar combobox.combobox-entry entry:dir(ltr), headerbar combobox.combobox-entry entry:dir(ltr) {
+.primary-toolbar combobox.linked entry:dir(ltr), headerbar combobox.linked entry:dir(ltr) {
   border-right-style: none; }
-  .primary-toolbar combobox.combobox-entry entry:dir(ltr):focus, headerbar combobox.combobox-entry entry:dir(ltr):focus {
+  .primary-toolbar combobox.linked entry:dir(ltr):focus, headerbar combobox.linked entry:dir(ltr):focus {
     box-shadow: none; }
 
-.primary-toolbar combobox.combobox-entry entry:dir(rtl), headerbar combobox.combobox-entry entry:dir(rtl) {
+.primary-toolbar combobox.linked entry:dir(rtl), headerbar combobox.linked entry:dir(rtl) {
   border-left-style: none; }
-  .primary-toolbar combobox.combobox-entry entry:dir(rtl):focus, headerbar combobox.combobox-entry entry:dir(rtl):focus {
+  .primary-toolbar combobox.linked entry:dir(rtl):focus, headerbar combobox.linked entry:dir(rtl):focus {
     box-shadow: none; }
+
+.primary-toolbar combobox.linked button.combo:dir(ltr), headerbar combobox.linked button.combo:dir(ltr), .primary-toolbar combobox.linked button.combo:dir(ltr):hover, headerbar combobox.linked button.combo:dir(ltr):hover, .primary-toolbar combobox.linked button.combo:dir(ltr):active, headerbar combobox.linked button.combo:dir(ltr):active, .primary-toolbar combobox.linked button.combo:dir(ltr):checked, headerbar combobox.linked button.combo:dir(ltr):checked, .primary-toolbar combobox.linked button.combo:dir(ltr):disabled, headerbar combobox.linked button.combo:dir(ltr):disabled {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0; }
+
+.primary-toolbar combobox.linked button.combo:dir(rtl), headerbar combobox.linked button.combo:dir(rtl), .primary-toolbar combobox.linked button.combo:dir(rtl):hover, headerbar combobox.linked button.combo:dir(rtl):hover, .primary-toolbar combobox.linked button.combo:dir(rtl):active, headerbar combobox.linked button.combo:dir(rtl):active, .primary-toolbar combobox.linked button.combo:dir(rtl):checked, headerbar combobox.linked button.combo:dir(rtl):checked, .primary-toolbar combobox.linked button.combo:dir(rtl):disabled, headerbar combobox.linked button.combo:dir(rtl):disabled {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0; }
 
 .primary-toolbar switch:backdrop, headerbar switch:backdrop {
   opacity: 0.75; }

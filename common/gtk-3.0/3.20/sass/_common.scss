@@ -1181,13 +1181,13 @@ headerbar {
   combobox {
     &:disabled { color: transparentize($header_fg, 0.6); }
 
-    &.combobox-entry button {
+    &.linked button {
       @include entry(header-normal);
 
       &:hover { @include entry(header-focus); box-shadow: none; }
       &:disabled { @include entry(header-insensitive); }
     }
-    &.combobox-entry entry {
+    &.linked entry {
       &:dir(ltr) {
         border-right-style: none;
 
@@ -1201,7 +1201,20 @@ headerbar {
         @if $variant=='light' and $darker=='false' { &:focus { box-shadow: -1px 0 $selected_bg_color; } }
       }
     }
-
+    &.linked button.combo {
+      &:dir(ltr) {
+        &, &:hover, &:active, &:checked, &:disabled {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
+      &:dir(rtl) {
+        &, &:hover, &:active, &:checked, &:disabled {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+      }
+    }
   }
 
   // Headerbar Switches
