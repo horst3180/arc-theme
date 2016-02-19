@@ -890,68 +890,35 @@ spinbutton {
 //
 combobox {
 
-  > button.combo {
-    padding-left: 8px;
-    padding-right: 8px;
-  }
-
-  &:disabled {
-    color: $insensitive_fg_color;
-  }
   arrow {
     -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
     min-height: 16px;
     min-width: 16px;
   }
-  > entry.combo {
-    &:dir(ltr) {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-      border-right-style: none;
 
-      @if $variant=='light' { &:focus { box-shadow: 1px 0 $selected_bg_color; } }
-    }
-    &:dir(rtl) {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-      border-left-style: none;
-
-      @if $variant=='light' { &:focus { box-shadow: -1px 0 $selected_bg_color; } }
+  &.linked {
+    button:nth-child(2) {
+      &:dir(ltr) { @extend %linked:last-child; }
+      &:dir(rtl) { @extend %linked:first-child; }
     }
   }
-  > button.combo:not(:only-child) {
-    &:dir(ltr) {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-    }
-    &:dir(rtl) {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-    }
+
+  .linked > & > button.combo {
+    // the combobox is a composite widget so the way we do button linking doesn't
+    // work, special case needed.
+    &:dir(ltr),
+    &:dir(rtl) { @extend %linked_middle; } // specificity bump
   }
-}
 
-.linked > combobox > button.combo {
-  // the combo is a composite widget so the way we do button linkind doesn't
-  // work, special case needed. See
-  // https://bugzilla.gnome.org/show_bug.cgi?id=733979
-  &:dir(ltr),
-  &:dir(rtl) { @extend %linked_middle; } // specificity bump
-}
-.linked > combobox:first-child > button.combo {
-  @extend %linked:first-child;
-}
-.linked > combobox:last-child > button.combo {
-  @extend %linked:last-child;
-}
-.linked > combobox:only-child > button.combo {
-  @extend %linked:only-child;
-}
+  .linked:not(.vertical) > &:first-child > button.combo { @extend %linked:first-child; }
+  .linked:not(.vertical) > &:last-child > button.combo { @extend %linked:last-child; }
+  .linked:not(.vertical) > &:only-child > button.combo { @extend %linked:only-child; }
 
-.linked.vertical > combobox > button.combo { @extend %linked_vertical_middle; }
-.linked.vertical > combobox:first-child > button.combo { @extend %linked_vertical:first-child; }
-.linked.vertical > combobox:last-child > button.combo { @extend %linked_vertical:last-child; }
-.linked.vertical > combobox:only-child > button.combo { @extend %linked_vertical:only-child; }
+  .linked.vertical > & > button.combo { @extend %linked_vertical_middle; }
+  .linked.vertical > &:first-child > button.combo { @extend %linked_vertical:first-child; }
+  .linked.vertical > &:last-child > button.combo { @extend %linked_vertical:last-child; }
+  .linked.vertical > &:only-child > button.combo { @extend %linked_vertical:only-child; }
+}
 
 //
 // Toolbars

@@ -691,16 +691,16 @@ NemoWindow .primary-toolbar NemoPathBar.linked:not(.vertical):not(.path-bar) > b
   border-radius: 0;
   border-right-style: none; }
 
-.inline-toolbar button:first-child, .linked:not(.vertical) > button:first-child, toolbar.inline-toolbar toolbutton:first-child > button.flat, .inline-toolbar toolbutton:first-child > button.flat, toolbar.inline-toolbar toolbutton:first-child > button.sidebar-button, .inline-toolbar toolbutton:first-child > button.sidebar-button, .linked:not(.vertical):not(.pathbar) > entry:first-child, .linked:not(.vertical):not(.pathbar) > spinbutton:first-child, .linked > combobox:first-child > button.combo, .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:first-child, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:first-child, .primary-toolbar .linked:not(.vertical).path-bar > button:first-child, headerbar .linked:not(.vertical).path-bar > button:first-child, NemoWindow .primary-toolbar NemoPathBar.linked:not(.vertical):not(.path-bar) > button:first-child {
+.inline-toolbar button:first-child, .linked:not(.vertical) > button:first-child, toolbar.inline-toolbar toolbutton:first-child > button.flat, .inline-toolbar toolbutton:first-child > button.flat, toolbar.inline-toolbar toolbutton:first-child > button.sidebar-button, .inline-toolbar toolbutton:first-child > button.sidebar-button, .linked:not(.vertical):not(.pathbar) > entry:first-child, .linked:not(.vertical):not(.pathbar) > spinbutton:first-child, combobox.linked button:nth-child(2):dir(rtl), .linked:not(.vertical) > combobox:first-child > button.combo, .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:first-child, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:first-child, .primary-toolbar .linked:not(.vertical).path-bar > button:first-child, headerbar .linked:not(.vertical).path-bar > button:first-child, NemoWindow .primary-toolbar NemoPathBar.linked:not(.vertical):not(.path-bar) > button:first-child {
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px; }
 
-.inline-toolbar button:last-child, .linked:not(.vertical) > button:last-child, toolbar.inline-toolbar toolbutton:last-child > button.flat, .inline-toolbar toolbutton:last-child > button.flat, toolbar.inline-toolbar toolbutton:last-child > button.sidebar-button, .inline-toolbar toolbutton:last-child > button.sidebar-button, .linked:not(.vertical):not(.pathbar) > entry:last-child, .linked:not(.vertical):not(.pathbar) > spinbutton:last-child, .linked > combobox:last-child > button.combo, .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:last-child, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:last-child, .primary-toolbar .linked:not(.vertical).path-bar > button:last-child, headerbar .linked:not(.vertical).path-bar > button:last-child, NemoWindow .primary-toolbar NemoPathBar.linked:not(.vertical):not(.path-bar) > button:last-child {
+.inline-toolbar button:last-child, .linked:not(.vertical) > button:last-child, toolbar.inline-toolbar toolbutton:last-child > button.flat, .inline-toolbar toolbutton:last-child > button.flat, toolbar.inline-toolbar toolbutton:last-child > button.sidebar-button, .inline-toolbar toolbutton:last-child > button.sidebar-button, .linked:not(.vertical):not(.pathbar) > entry:last-child, .linked:not(.vertical):not(.pathbar) > spinbutton:last-child, combobox.linked button:nth-child(2):dir(ltr), .linked:not(.vertical) > combobox:last-child > button.combo, .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:last-child, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:last-child, .primary-toolbar .linked:not(.vertical).path-bar > button:last-child, headerbar .linked:not(.vertical).path-bar > button:last-child, NemoWindow .primary-toolbar NemoPathBar.linked:not(.vertical):not(.path-bar) > button:last-child {
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
   border-right-style: solid; }
 
-.inline-toolbar button:only-child, .linked:not(.vertical) > button:only-child, toolbar.inline-toolbar toolbutton:only-child > button.flat, .inline-toolbar toolbutton:only-child > button.flat, toolbar.inline-toolbar toolbutton:only-child > button.sidebar-button, .inline-toolbar toolbutton:only-child > button.sidebar-button, .linked:not(.vertical):not(.pathbar) > entry:only-child, .linked:not(.vertical):not(.pathbar) > spinbutton:only-child, .linked > combobox:only-child > button.combo, .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:only-child, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:only-child, .primary-toolbar .linked:not(.vertical).path-bar > button:only-child, headerbar .linked:not(.vertical).path-bar > button:only-child, NemoWindow .primary-toolbar NemoPathBar.linked:not(.vertical):not(.path-bar) > button:only-child {
+.inline-toolbar button:only-child, .linked:not(.vertical) > button:only-child, toolbar.inline-toolbar toolbutton:only-child > button.flat, .inline-toolbar toolbutton:only-child > button.flat, toolbar.inline-toolbar toolbutton:only-child > button.sidebar-button, .inline-toolbar toolbutton:only-child > button.sidebar-button, .linked:not(.vertical):not(.pathbar) > entry:only-child, .linked:not(.vertical):not(.pathbar) > spinbutton:only-child, .linked:not(.vertical) > combobox:only-child > button.combo, .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:only-child, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:only-child, .primary-toolbar .linked:not(.vertical).path-bar > button:only-child, headerbar .linked:not(.vertical).path-bar > button:only-child, NemoWindow .primary-toolbar NemoPathBar.linked:not(.vertical):not(.path-bar) > button:only-child {
   border-radius: 3px;
   border-style: solid; }
 
@@ -881,35 +881,10 @@ treeview spinbutton entry, treeview spinbutton spinbutton, treeview spinbutton e
   border-radius: 0;
   box-shadow: none; }
 
-combobox > button.combo {
-  padding-left: 8px;
-  padding-right: 8px; }
-
-combobox:disabled {
-  color: rgba(211, 218, 227, 0.45); }
-
 combobox arrow {
   -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
   min-height: 16px;
   min-width: 16px; }
-
-combobox > entry.combo:dir(ltr), combobox > spinbutton.combo:dir(ltr) {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-right-style: none; }
-
-combobox > entry.combo:dir(rtl), combobox > spinbutton.combo:dir(rtl) {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  border-left-style: none; }
-
-combobox > button.combo:not(:only-child):dir(ltr) {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0; }
-
-combobox > button.combo:not(:only-child):dir(rtl) {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0; }
 
 toolbar, .inline-toolbar {
   -GtkWidget-window-dragging: true;
