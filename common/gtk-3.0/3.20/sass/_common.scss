@@ -1138,7 +1138,6 @@ headerbar {
   }
   // Separator in Gnome Tweak Tool
   separator { background-color: $header_border; }
-
 }
 
 // Only extending headerbar avoids some problems (Gnome Documents searchbar)
@@ -1146,6 +1145,11 @@ headerbar {
   separator.titlebutton { @extend %header_separator; }
 
   @extend %header_widgets;
+
+  entry, button, separator {
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
 }
 
 %header_separator {
@@ -1163,11 +1167,6 @@ headerbar {
 }
 
 %header_widgets {
-
-  entry, button, separator {
-    margin-top: 6px;
-    margin-bottom: 6px;
-  }
 
   // Headerbar Entries
   entry, spinbutton {
@@ -2508,11 +2507,10 @@ calendar {
 // Dialogs
 //
 messagedialog { // Message Dialog styling
-  -GtkDialog-button-spacing: 0;
 
   .titlebar { background-color: $header_bg; border-bottom: 1px solid darken($header_bg, 7%) }
 
-  .dialog-action-area button { padding: 2px; }
+  .dialog-action-area button { padding: 8px; min-height: 0; }
 
   &.csd { // rounded bottom border styling for csd version
     &.background {
@@ -2521,28 +2519,29 @@ messagedialog { // Message Dialog styling
       border: none;
     }
     .dialog-action-area button {
-      padding: 2px;
-      border-radius: 0;
+      border-bottom-style: none;
 
       @extend %middle_button;
-
-      &:hover, &:active, &:disabled {
-        @extend %middle_button;
-      }
-
       &:first-child{ @extend %first_button; }
       &:last-child { @extend %last_button; }
+      &:only-child { @extend %single_button; }
     }
     %middle_button {
+      border-radius: 0;
       border-right-style: none;
-      border-bottom-style: none;
     }
     %last_button {
-      border-bottom-right-radius: 3px;
+      border-radius: 0 0 3px 0;
+      border-right-style: none;
     }
     %first_button {
+      border-radius: 0 0 0 3px;
       border-left-style: none;
-      border-bottom-left-radius: 3px;
+    }
+    %single_button {
+      border-radius: 0 0 3px 3px;
+      border-left-style: none;
+      border-right-style: none;
     }
   }
 }

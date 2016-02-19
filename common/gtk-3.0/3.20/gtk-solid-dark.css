@@ -1044,6 +1044,10 @@ headerbar {
   .titlebar separator, .titlebar .sidebar .view separator, .sidebar .view .titlebar separator {
     background-color: #262a33; }
 
+headerbar entry, headerbar spinbutton, headerbar button, headerbar separator, headerbar .sidebar separator, .sidebar headerbar separator, headerbar .sidebar .view separator, .sidebar .view headerbar separator {
+  margin-top: 6px;
+  margin-bottom: 6px; }
+
 .primary-toolbar separator, .primary-toolbar .sidebar .view separator, .sidebar .view .primary-toolbar separator, headerbar separator.titlebutton, headerbar .sidebar .view separator.titlebutton, .sidebar .view headerbar separator.titlebutton {
   min-width: 1px;
   min-height: 1px;
@@ -1052,10 +1056,6 @@ headerbar {
   border-image: linear-gradient(to bottom, rgba(207, 218, 231, 0) 25%, rgba(207, 218, 231, 0.15) 25%, rgba(207, 218, 231, 0.15) 75%, rgba(207, 218, 231, 0) 75%) 0 1/0 1px stretch; }
   .primary-toolbar separator:backdrop, headerbar separator.titlebutton:backdrop {
     opacity: 0.6; }
-
-.primary-toolbar entry, headerbar entry, .primary-toolbar spinbutton, headerbar spinbutton, .primary-toolbar button, headerbar button, .primary-toolbar separator, headerbar separator, headerbar .sidebar separator, .sidebar headerbar separator, .primary-toolbar .sidebar .view separator, .sidebar .view .primary-toolbar separator, headerbar .sidebar .view separator, .sidebar .view headerbar separator {
-  margin-top: 6px;
-  margin-bottom: 6px; }
 
 .primary-toolbar entry, headerbar entry, .primary-toolbar spinbutton, headerbar spinbutton, .primary-toolbar spinbutton, headerbar spinbutton {
   color: rgba(207, 218, 231, 0.8);
@@ -2397,28 +2397,38 @@ calendar {
   calendar.highlight {
     color: #D3DAE3; }
 
-messagedialog {
-  -GtkDialog-button-spacing: 0; }
-  messagedialog .titlebar {
-    background-color: #2f343f;
-    border-bottom: 1px solid #20232b; }
-  messagedialog .dialog-action-area button {
-    padding: 2px; }
-  messagedialog.csd.background {
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
-    border: none; }
-  messagedialog.csd .dialog-action-area button {
-    padding: 2px;
-    border-radius: 0; }
-  messagedialog.csd .dialog-action-area button, messagedialog.csd .dialog-action-area button:hover, messagedialog.csd .dialog-action-area button:active, messagedialog.csd .dialog-action-area button:disabled {
-    border-right-style: none;
-    border-bottom-style: none; }
-  messagedialog.csd .dialog-action-area button:last-child {
-    border-bottom-right-radius: 3px; }
-  messagedialog.csd .dialog-action-area button:first-child {
-    border-left-style: none;
-    border-bottom-left-radius: 3px; }
+messagedialog .titlebar {
+  background-color: #2f343f;
+  border-bottom: 1px solid #20232b; }
+
+messagedialog .dialog-action-area button {
+  padding: 8px;
+  min-height: 0; }
+
+messagedialog.csd.background {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border: none; }
+
+messagedialog.csd .dialog-action-area button {
+  border-bottom-style: none; }
+
+messagedialog.csd .dialog-action-area button {
+  border-radius: 0;
+  border-right-style: none; }
+
+messagedialog.csd .dialog-action-area button:last-child {
+  border-radius: 0 0 3px 0;
+  border-right-style: none; }
+
+messagedialog.csd .dialog-action-area button:first-child {
+  border-radius: 0 0 0 3px;
+  border-left-style: none; }
+
+messagedialog.csd .dialog-action-area button:only-child {
+  border-radius: 0 0 3px 3px;
+  border-left-style: none;
+  border-right-style: none; }
 
 .sidebar, .sidebar .view {
   border: none;
