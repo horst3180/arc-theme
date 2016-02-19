@@ -1577,24 +1577,25 @@ notebook {
   background-color: $base_color;
   transition: all 200ms $ease-out-quad;
 
-  &.frame { border: 1px solid $borders_color; }
+  &.frame {
+    border: 1px solid $borders_color;
+
+    header { margin: -1px; }  // ugly hack to hide the borders around the header
+  }
 
   header {
     $vpadding: 4px;
     $hpadding: 15px;
-    padding: 2px;
+    padding: 3px;
     background-color: $bg_color;
 
-    $_header_border: $borders_color;
-
-    // FIXME use borders and margins
-    &.top {    box-shadow: inset  0  -1px $_header_border; }
-    &.bottom { box-shadow: inset  0   1px $_header_border; }
-    &.right {  box-shadow: inset  1px 0   $_header_border; }
-    &.left {   box-shadow: inset -1px 0   $_header_border; }
+    &.top {    box-shadow: inset  0  -1px $borders_color; }
+    &.bottom { box-shadow: inset  0   1px $borders_color; }
+    &.right {  box-shadow: inset  1px 0   $borders_color; }
+    &.left {   box-shadow: inset -1px 0   $borders_color; }
 
   @each $_pos, $_bpos in (top, bottom), (bottom, top), (right, left), (left, right) {
-
+      // sizing and borders
       &.#{$_pos} {
         padding-#{$_bpos}: 0;
 
@@ -1603,16 +1604,16 @@ notebook {
           border: 1px solid transparent;
           border-#{$_bpos}: none;
 
+          // nicer close button placement
           &.reorderable-page {
-            padding-left: 12px;  // for a nicer close button
-            padding-right: 12px; // placement
+            padding-left: 12px;
+            padding-right: 12px;
           }
-
-          // Tab overlap
+          // tab overlap
           @if $_pos==top or $_pos==bottom { margin-right: -1px; }
           @else { margin-bottom: -1px; }
 
-          // Tab border radius
+          // tab border radius
           @if $_pos==top { border-radius: 1px 1px 0 0; }
           @else if $_pos==bottom { border-radius: 0 0 1px 1px; }
           @else if $_pos==left { border-radius: 1px 0 0 1px; }
@@ -1620,7 +1621,7 @@ notebook {
         }
       }
     }
-
+    // overflow arrows
     &.top, &.bottom {
       tabs arrow.up {
         -gtk-icon-source: -gtk-icontheme('pan-end-symbolic');
@@ -1648,41 +1649,41 @@ notebook {
       &:active { color: $fg_color; }
       &:disabled { color: transparentize($insensitive_fg_color,0.3); }
     }
-  }
+    // tab colors
+    tab {
+      background-color: transparentize($base_color, 1);
 
-  header tab {
-    background-color: transparentize($base_color, 1);
-
-    label { color: $insensitive_fg_color; }
-
-    &:hover {
-      background-color: transparentize($base_color, 0.5);
-      border-color: $borders_color;
-
-      label { color: mix($fg_color, $insensitive_fg_color, 50%); }
-    }
-    &:active {
-      background-color: $base_color;
-      border-color: $borders_color;
-
-      label { color: $fg_color; }
-    }
-
-    button {              // close button
-      min-height: 18px;
-      min-width: 16px;
-      padding: 0;
-      color: mix($bg_color, $fg_color, 35%);
-
-      @extend %undecorated_button;
+      label { color: $insensitive_fg_color; }
 
       &:hover {
-        @extend %undecorated_button;
-        color: lighten(red, 15%);
+        background-color: transparentize($base_color, 0.5);
+        border-color: $borders_color;
+
+        label { color: mix($fg_color, $insensitive_fg_color, 50%); }
       }
-      &:active, &:active:hover {
+      &:active {
+        background-color: $base_color;
+        border-color: $borders_color;
+
+        label { color: $fg_color; }
+      }
+      // close button
+      button {
+        min-height: 18px;
+        min-width: 16px;
+        padding: 0;
+        color: mix($bg_color, $fg_color, 35%);
+
         @extend %undecorated_button;
-        color: $selected_bg_color;
+
+        &:hover {
+          @extend %undecorated_button;
+          color: lighten(red, 15%);
+        }
+        &:active, &:active:hover {
+          @extend %undecorated_button;
+          color: $selected_bg_color;
+        }
       }
     }
   }
