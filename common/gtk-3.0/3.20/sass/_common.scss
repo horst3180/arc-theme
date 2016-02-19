@@ -578,7 +578,7 @@ toolbar.inline-toolbar toolbutton {
   > button:first-child:hover:not(:checked):not(:active) { box-shadow: none; }
   > button:checked + button:not(:checked):not(:active):hover { box-shadow: none; }
   > button:checked + entry { border-left-color: if($variant=='light', $selected_bg_color, $entry_border); }
-  > entry + button:not(:checked):not(:active):hover { box-shadow: none; }
+  > entry + button:not(:checked):not(:active):not(:only-child):hover { box-shadow: none; }
 }
 
 // special case for path-bars

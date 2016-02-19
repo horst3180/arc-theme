@@ -578,7 +578,7 @@ button {
 .linked:not(.vertical):not(.pathbar) > button:checked + entry, .linked:not(.vertical):not(.pathbar) > button:checked + spinbutton {
   border-left-color: #5294E2; }
 
-.linked:not(.vertical):not(.pathbar) > entry + button:not(:checked):not(:active):hover, .linked:not(.vertical):not(.pathbar) > spinbutton + button:not(:checked):not(:active):hover {
+.linked:not(.vertical):not(.pathbar) > entry + button:not(:checked):not(:active):not(:only-child):hover, .linked:not(.vertical):not(.pathbar) > spinbutton + button:not(:checked):not(:active):not(:only-child):hover {
   box-shadow: none; }
 
 .linked:not(.vertical).path-bar > button:hover:not(:checked):not(:active):not(:only-child):hover {
