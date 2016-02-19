@@ -27,7 +27,6 @@
   // normal entry
   //
     color: $text_color;
-    caret-color: $text_color;
     border-color: $entry_border;
     background-color: $entry_bg;
     background-image: linear-gradient(to bottom, $entry_bg);
@@ -38,7 +37,6 @@
   // focused entry
   //
     color: $text_color;
-    caret-color: $text_color;
     border-color: if($variant=='light', $selected_bg_color, $button_border);
     background-color: $entry_bg;
     background-image: linear-gradient(to bottom, $entry_bg);
@@ -67,7 +65,6 @@
   //
 
     color: $header_fg;
-    caret-color: $header_fg;
     border-color: $header_entry_border;
     background-image: linear-gradient(to bottom, $header_entry_bg);
     background-color: transparent;
@@ -80,7 +77,6 @@
   // focused header-bar entry
   //
     color: $selected_fg_color;
-    caret-color: $selected_fg_color;
     border-color: if($darker=='false' and $variant=='light', $selected_bg_color, transparent);
     background-image: linear-gradient(to bottom, $selected_bg_color);
   }

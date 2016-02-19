@@ -137,10 +137,10 @@ entry, spinbutton {
   border: 1px solid;
   padding-left: 8px;
   padding-right: 8px;
+  caret-color: currentColor;
   border-radius: 3px;
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #D3DAE3;
-  caret-color: #D3DAE3;
   border-color: #2b2e39;
   background-color: #404552;
   background-image: linear-gradient(to bottom, #404552); }
@@ -156,7 +156,6 @@ entry, spinbutton {
       padding-left: 5px; }
   entry.flat, spinbutton.flat, entry.flat:focus, spinbutton.flat:focus {
     color: #D3DAE3;
-    caret-color: #D3DAE3;
     border-color: #2b2e39;
     background-color: #404552;
     background-image: linear-gradient(to bottom, #404552);
@@ -167,7 +166,6 @@ entry, spinbutton {
   entry:focus, spinbutton:focus {
     background-clip: border-box;
     color: #D3DAE3;
-    caret-color: #D3DAE3;
     border-color: #2b2e39;
     background-color: #404552;
     background-image: linear-gradient(to bottom, #404552);
@@ -1056,7 +1054,6 @@ headerbar {
 
 .primary-toolbar entry, headerbar entry, .primary-toolbar spinbutton, headerbar spinbutton, .primary-toolbar spinbutton, headerbar spinbutton {
   color: rgba(207, 218, 231, 0.8);
-  caret-color: rgba(207, 218, 231, 0.8);
   border-color: rgba(21, 23, 28, 0.4);
   background-image: linear-gradient(to bottom, rgba(95, 105, 127, 0.4));
   background-color: transparent; }
@@ -1066,7 +1063,6 @@ headerbar {
     opacity: 0.85; }
   .primary-toolbar entry:focus, headerbar entry:focus, .primary-toolbar spinbutton:focus, headerbar spinbutton:focus, .primary-toolbar spinbutton:focus, headerbar spinbutton:focus {
     color: #ffffff;
-    caret-color: #ffffff;
     border-color: transparent;
     background-image: linear-gradient(to bottom, #5294E2);
     background-clip: padding-box; }
@@ -1285,7 +1281,6 @@ headerbar {
 
 .primary-toolbar combobox.combobox-entry button, headerbar combobox.combobox-entry button {
   color: rgba(207, 218, 231, 0.8);
-  caret-color: rgba(207, 218, 231, 0.8);
   border-color: rgba(21, 23, 28, 0.4);
   background-image: linear-gradient(to bottom, rgba(95, 105, 127, 0.4));
   background-color: transparent; }
@@ -1293,7 +1288,6 @@ headerbar {
     color: inherit; }
   .primary-toolbar combobox.combobox-entry button:hover, headerbar combobox.combobox-entry button:hover {
     color: #ffffff;
-    caret-color: #ffffff;
     border-color: transparent;
     background-image: linear-gradient(to bottom, #5294E2);
     box-shadow: none; }
@@ -3093,7 +3087,6 @@ GbSearchBox.linked:not(.vertical) > button.popup:last-child:dir(ltr),
 GbSearchBox.linked:not(.vertical) > button.popup:first-child:dir(rtl) {
   padding: 0 10px;
   color: rgba(207, 218, 231, 0.8);
-  caret-color: rgba(207, 218, 231, 0.8);
   border-color: rgba(21, 23, 28, 0.4);
   background-image: linear-gradient(to bottom, rgba(95, 105, 127, 0.4));
   background-color: transparent; }
@@ -3104,14 +3097,12 @@ GbSearchBox.linked:not(.vertical) > button.popup:first-child:dir(rtl) {
   GbSearchBox.linked:not(.vertical) > button.popup:last-child:dir(ltr):hover,
   GbSearchBox.linked:not(.vertical) > button.popup:first-child:dir(rtl):hover {
     color: #ffffff;
-    caret-color: #ffffff;
     border-color: transparent;
     background-image: linear-gradient(to bottom, #5294E2); }
   GbSearchBox.linked:not(.vertical) > button.popup:last-child:dir(ltr):active, GbSearchBox.linked:not(.vertical) > button.popup:last-child:dir(ltr):checked,
   GbSearchBox.linked:not(.vertical) > button.popup:first-child:dir(rtl):active,
   GbSearchBox.linked:not(.vertical) > button.popup:first-child:dir(rtl):checked {
     color: #ffffff;
-    caret-color: #ffffff;
     border-color: transparent;
     background-image: linear-gradient(to bottom, #5294E2); }
   GbSearchBox.linked:not(.vertical) > button.popup:last-child:dir(ltr):disabled,
@@ -3364,7 +3355,6 @@ MarlinViewWindow FMListView, MarlinViewWindow FMColumnView {
   padding-left: 4px;
   padding-right: 4px;
   color: rgba(207, 218, 231, 0.8);
-  caret-color: rgba(207, 218, 231, 0.8);
   border-color: rgba(21, 23, 28, 0.4);
   background-image: linear-gradient(to bottom, rgba(95, 105, 127, 0.4));
   background-color: transparent; }
@@ -3372,7 +3362,6 @@ MarlinViewWindow FMListView, MarlinViewWindow FMColumnView {
     color: inherit; }
   .marlin-pathbar.pathbar:focus {
     color: #ffffff;
-    caret-color: #ffffff;
     border-color: transparent;
     background-image: linear-gradient(to bottom, #5294E2); }
   .marlin-pathbar.pathbar:disabled {
