@@ -1,32 +1,27 @@
-.titlebar separator {
-  color: $header_border;  //fixes separator in gnome-tweak-tool
-}
+//NemoWindow GtkEventBox { background-color: $bg_color; } // fixes nemo statusbar
 
-NemoWindow GtkEventBox { background-color: $bg_color; } // fixes nemo statusbar
-
-GtkFileChooserDialog *,
-NautilusWindow *,
-NemoWindow {
-  //-GtkPaned-handle-size: 0;
-}
-
-@if $variant==dark {
-  GtkFileChooserDialog,
-  NautilusWindow ,
-  NemoWindow {
-    .sidebar { border-right: 1px solid $dark_sidebar_border; }
-
-    .sidebar:dir(rtl) { border-left: 1px solid $dark_sidebar_border; }
-  }
+//GtkFileChooserDialog,
+//NemoWindow,
+.nautilus-window {
+  paned > separator { background: $dark_sidebar_bg; }
 }
 
 // Dark transparent sidebars
-GtkFileChooserDialog,
-NautilusWindow {
+//GtkFileChooserDialog,
+.nautilus-window {
 
   &.csd.background, placessidebar list { background-color: transparent; }
 
   placessidebar.sidebar {
+
+    &:dir(ltr) { margin-right: -1px; }
+    &:dir(rtl) { margin-left: -1px; }
+
+    @if $variant=='dark' {
+      &:dir(ltr) { border-right: 1px solid $dark_sidebar_border; }
+      &:dir(rtl) { border-left: 1px solid $dark_sidebar_border; }
+    }
+
     background-color: $dark_sidebar_bg;
 
     row.sidebar-placeholder-row { border: 1px solid $selected_bg_color; }
@@ -47,7 +42,7 @@ NautilusWindow {
       }
     }
 
-    separator { color: transparent; }
+    separator { background-color: transparent; }
 
     scrollbar { @extend %dark_sidebar_scrollbar }
   }
@@ -65,112 +60,82 @@ NautilusWindow {
 }
 
 
-NemoWindow,
-MarlinViewWindow {
+//NemoWindow,
+//MarlinViewWindow {
+//
+//  &.csd.background,
+//  .source-list, .source-list.view, .source-list.view:hover { background-color: transparent; }
+//
+//  .sidebar, .source-list.sidebar.view {
+//    background-color: $dark_sidebar_bg;
+//
+//    .view, row {
+//      background-color: transparent;
+//      color: $dark_sidebar_fg;
+//
+//      &.cell:selected {
+//        background-color: $selected_bg_color;
+//        color: $selected_fg_color;
+//      }
+//    }
+//
+//    &.frame {
+//      color: $dark_sidebar_fg;
+//    }
+//
+//    separator { color: transparent; }
+//
+//    scrollbar { @extend %dark_sidebar_scrollbar }
+//  }
+//  &.maximized .sidebar { background-color: opacify($dark_sidebar_bg, 1); }
+//
+//}
 
-  &.csd.background,
-  .source-list, .source-list.view, .source-list.view:hover { background-color: transparent; }
-
-  .sidebar, .source-list.sidebar.view {
-    background-color: $dark_sidebar_bg;
-
-    .view, row {
-      background-color: transparent;
-      color: $dark_sidebar_fg;
-
-      &.cell:selected {
-        background-color: $selected_bg_color;
-        color: $selected_fg_color;
-      }
-    }
-
-    &.frame {
-      color: $dark_sidebar_fg;
-    }
-
-    separator { color: transparent; }
-
-    scrollbar { @extend %dark_sidebar_scrollbar }
-  }
-  &.maximized .sidebar { background-color: opacify($dark_sidebar_bg, 1); }
-
-}
-
-NemoWindow.background > GtkGrid > paned > separator,
-MarlinViewWindow.background > GtkBox > paned > separator { background-color: $dark_sidebar_border }
+//NemoWindow.background > GtkGrid > paned > separator,
+//MarlinViewWindow.background > GtkBox > paned > separator { background-color: $dark_sidebar_border }
 
 // Fix Nautilus transparency issues
-NautilusWindow NautilusWindowSlot { background-color: $base_color; }
-NautilusDesktopWindow NautilusWindowSlot { background-color: transparent; }
+//.nautilus-window NautilusWindowSlot { background-color: $base_color; }
 
-GtkFileChooserDialog {
-
-  &.background.csd, &.background { background-color: $dark_sidebar_bg }
-  scrolledwindow.sidebar { background-color: transparent }
-
-  // Yeah, this is ugly, but prevents a transparent background in the image preview box
-  paned > .vertical > .horizontal { background-color: $bg_color; }
-
-  // fix for non gnome environments
-  .dialog-action-box { background-color: $bg_color }
-
-  .dialog-vbox > .frame {
-    color: $dark_sidebar_fg;
-    border-color: transparent;
-  }
-  GtkFileChooserWidget > actionbar > revealer > .action-bar.frame {
-    background-color: transparent;
-    border-color: if($variant =='light', darken($dark_sidebar_bg, 7%), darken($dark_sidebar_bg, 15%));
-  }
-
-  GtkFileChooserWidget > actionbar > revealer > .action-bar.frame,
-  .dialog-vbox > .frame {
-
-    button { @extend %dark_sidebar_button; }
-    entry { @extend %dark_sidebar_entry; }
-
-    @extend %osd_check_radio;
-
-    label, combobox { color: $dark_sidebar_fg; }
-  }
-}
-
+//GtkFileChooserDialog {
 //
-// Paned Headerbars
+//  &.background.csd, &.background { background-color: $dark_sidebar_bg }
+//  scrolledwindow.sidebar { background-color: transparent }
 //
-FeedReaderreaderUI.background.csd,
-GeditWindow.background.csd {
-
-  > .titlebar .pane-separator,
-  &.maximized > .titlebar .pane-separator,
-  > .titlebar .pane-separator:backdrop,
-  &.maximized > .titlebar .pane-separator:backdrop { background-color: $header_border; }
-
-  > .titlebar > headerbar.titlebar {
-    background-color: $header_bg;
-
-    &:backdrop { background-color: $header_bg_backdrop; }
-  }
-
-  &.maximized > .titlebar > headerbar.titlebar {
-    background-color: opacify($header_bg, 1);
-
-    &:backdrop { background-color: opacify($header_bg_backdrop, 1); }
-  }
-}
-
-FeedReaderreaderUI.background.csd > FeedReaderreaderHeaderbar.titlebar,
-GeditWindow.background.csd > .titlebar {
-  background-color: transparent;
-}
+//  // Yeah, this is ugly, but prevents a transparent background in the image preview box
+//  paned > .vertical > .horizontal { background-color: $bg_color; }
+//
+//  // fix for non gnome environments
+//  .dialog-action-box { background-color: $bg_color }
+//
+//  .dialog-vbox > .frame {
+//    color: $dark_sidebar_fg;
+//    border-color: transparent;
+//  }
+//  GtkFileChooserWidget > actionbar > revealer > .action-bar.frame {
+//    background-color: transparent;
+//    border-color: if($variant =='light', darken($dark_sidebar_bg, 7%), darken($dark_sidebar_bg, 15%));
+//  }
+//
+//  GtkFileChooserWidget > actionbar > revealer > .action-bar.frame,
+//  .dialog-vbox > .frame {
+//
+//    button { @extend %dark_sidebar_button; }
+//    entry { @extend %dark_sidebar_entry; }
+//
+//    @extend %osd_check_radio;
+//
+//    label, combobox { color: $dark_sidebar_fg; }
+//  }
+//}
 
 // Gedit
-GeditWindow.background {
-  &.csd { background-color: transparent; }
-
-  .gedit-side-panel-paned .pane-separator { background-color: $dark_sidebar_border; }
-  .gedit-bottom-panel-paned .pane-separator { background-color: $borders_color; }
-}
+//GeditWindow.background {
+//  &.csd { background-color: transparent; }
+//
+//  .gedit-side-panel-paned .pane-separator { background-color: $dark_sidebar_border; }
+//  .gedit-bottom-panel-paned .pane-separator { background-color: $borders_color; }
+//}
 
 .gedit-bottom-panel-paned { background-color: $base_color; }
 
@@ -210,32 +175,32 @@ GeditWindow.background {
   }
 }
 
-GeditFileBrowserWidget {
-  background-color: $dark_sidebar_bg;
+//GeditFileBrowserWidget {
+//  background-color: $dark_sidebar_bg;
+//
+//  .maximized & { background-color: opacify($dark_sidebar_bg, 1); }
+//
+//  scrollbar { @extend %dark_sidebar_scrollbar; }
+//
+//  .horizontal {
+//    background-color: transparent;
+//    border-color: darken($dark_sidebar_bg, 7%);
+//
+//    button { @extend %dark_sidebar_button; }
+//    combobox { color: $dark_sidebar_fg; }
+//  }
+//}
 
-  .maximized & { background-color: opacify($dark_sidebar_bg, 1); }
-
-  scrollbar { @extend %dark_sidebar_scrollbar; }
-
-  .horizontal {
-    background-color: transparent;
-    border-color: darken($dark_sidebar_bg, 7%);
-
-    button { @extend %dark_sidebar_button; }
-    combobox { color: $dark_sidebar_fg; }
-  }
-}
-
-GeditWindow.background.csd GeditFileBrowserView.view {
-
-  background-color: transparent;
-  color: $dark_sidebar_fg;
-
-  &.expander {
-    color: $dark_sidebar_fg;
-    &:hover { color: $selected_bg_color; }
-  }
-}
+//GeditWindow.background.csd GeditFileBrowserView.view {
+//
+//  background-color: transparent;
+//  color: $dark_sidebar_fg;
+//
+//  &.expander {
+//    color: $dark_sidebar_fg;
+//    &:hover { color: $selected_bg_color; }
+//  }
+//}
 
 %dark_sidebar_button {
   @include button(osd);
