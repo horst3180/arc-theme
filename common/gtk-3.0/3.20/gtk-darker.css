@@ -1456,7 +1456,7 @@ menu,
   .menu separator,
   .csd
   .menu separator {
-    min-height: 10px;
+    margin: 2px 0;
     background-color: #ffffff; }
   menu menuitem,
   .menu menuitem {
