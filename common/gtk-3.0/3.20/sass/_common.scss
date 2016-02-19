@@ -716,111 +716,30 @@ button:link, button:visited {
 // Spinbuttons
 //
 spinbutton {
-  @extend entry;
+  button:active { color: $selected_fg_color; }
+
   &:not(.vertical) {
-    button {
-      background-image: none;
-      border: 1px solid transparentize($borders_color,0.4);
-      border-style: none none none solid;
-      color: mix($fg_color,$base_color,95%);
-      border-radius: 0;
-      box-shadow: none;
-    //  padding-left: 6px;
-    //  padding-right: 6px;
-      &:dir(rtl) { border-style: none solid none none; }
+    button, entry {
+      padding-top: 0;
+      padding-bottom: 0;
+      min-height: 0;
 
-      &:disabled {
-        color: $insensitive_fg_color;
-      }
-      &:active {
-        background-color: $selected_bg_color;
-        color: $selected_fg_color;
-      }
+      @extend %linked;
     }
+    > button + button { border-left-style: none; }
+
+    > button:hover:not(:active),
+    > button:hover + button { box-shadow: inset 1px 0 $button_border; }
+
+    > button:first-child:hover:not(:active),
+    > entry + button:not(:active):hover { box-shadow: none; }
+
+    > entry:focus + button { border-left-color: if($variant=='light', $selected_bg_color, $entry_border); }
   }
-
-//  .osd & {
-//    button {
-//      @include button(undecorated);
-//      color: $osd_fg_color;
-//      border-style: none none none solid;
-//      border-color: transparentize($osd_borders_color, 0.3);
-//      border-radius: 0;
-//      box-shadow: none;
-//      &:dir(rtl) { border-style: none solid none none; }
-//      &:hover {
-//        @include button(undecorated);
-//        color: $osd_fg_color;
-//        border-color: transparentize(opacify($osd_borders_color, 1), 0.5);
-//        background-color: transparentize($osd_fg_color, 0.9);
-//        box-shadow: none;
-//      }
-//      &:disabled {
-//        @include button(undecorated);
-//        color: $osd_insensitive_fg_color;
-//        border-color: transparentize(opacify($osd_borders_color, 1), 0.5);
-//        box-shadow: none;
-//      }
-//      &:last-child { border-radius: 0 2px 2px 0; }
-//      &:dir(rtl):first-child { border-radius: 2px 0 0 2px; }
-//    }
-//  }
-
   &.vertical {
-    border-radius: 0;
-    padding-left: 5px;
-    padding-right: 5px;
-    button {
-      &:first-child {
-        @extend %top_button;
-        @include button(normal);
-        &:active {
-          @extend %top_button;
-          @include button(active);
-        }
-        &:hover {
-          @extend %top_button;
-          @include button(hover);
-        }
-        &:disabled {
-          @extend %top_button;
-          @include button(insensitive);
-        }
-      }
-      &:last-child {
-        @extend %bottom_button;
-        @include button(normal);
-        &:active {
-          @extend %bottom_button;
-          @include button(active);
-        }
-        &:hover {
-          @extend %bottom_button;
-          @include button(hover);
-        }
-        &:disabled {
-          @extend %bottom_button;
-          @include button(insensitive);
-        }
-      }
-    }
-    %top_button {
-      border-radius: 2px 2px 0 0;
-      border-style: solid solid none solid;
-    }
-    %bottom_button {
-      border-radius: 0 0 2px 2px;
-      border-style: none solid solid solid;
-    }
-  }
-  treeview & {
-    entry, entry:focus {
-      padding: 1px;
-      border-width: 1px 0;
-      border-color: $selected_bg_color;
-      border-radius: 0;
-      box-shadow: none;
-    }
+    button, entry { @extend %linked_vertical; }
+
+    > entry:focus + button { border-top-color: if($variant=='light', $selected_bg_color, $entry_border); }
   }
 }
 
@@ -1107,7 +1026,7 @@ headerbar {
 %header_widgets {
 
   // Headerbar Entries
-  entry, spinbutton {
+  entry {
     @include entry(header-normal);
 
     &:backdrop { opacity: 0.85; }
@@ -1234,21 +1153,28 @@ headerbar {
   }
 
   // Headerbar Spinbuttons
-  spinbutton {
-
-    &:focus button {
-      color: $selected_fg_color;
-
-      &:hover { background-color: transparentize($selected_fg_color, 0.9); border-color: transparent; }
-      &:disabled { color: transparentize($selected_fg_color, 0.6); }
+  spinbutton:not(.vertical) {
+    &:focus {
+    color: $selected_fg_color;
+    caret-color: $selected_fg_color;
     }
     button {
-      color: $header_fg;
+      &,&:disabled { @include button(header-hover); }
 
-      &:hover { background-color: transparentize($header_fg, 0.75); border-color: transparent; }
-      &:disabled { color: transparentize($header_fg, 0.3); }
-      &:active { background-color: rgba(0,0,0,0.1); }
+      &:hover { background-color: lighten($header_button_bg, 15%); }
+      &:active, &:checked { @include button(header-active); }
+      &:disabled { color: transparentize($header_fg, 0.4); }
     }
+
+    > button + button { border-left-style: none; }
+
+    > button:hover:not(:active),
+    > button:hover + button { box-shadow: inset 1px 0 $header_button_border; }
+
+    > button:first-child:hover:not(:active),
+    > entry + button:not(:active):hover { box-shadow: none; }
+
+    > entry:focus + button { border-left-color: if($variant=='light' and $darker=='false', $selected_bg_color, $header_entry_border); }
   }
 
   // Headerbar ComboBoxes

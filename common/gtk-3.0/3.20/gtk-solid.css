@@ -132,7 +132,7 @@ spinner {
     spinner:checked:disabled {
       opacity: 0.5; }
 
-entry, spinbutton {
+entry {
   min-height: 22px;
   border: 1px solid;
   padding: 2px 8px;
@@ -143,17 +143,17 @@ entry, spinbutton {
   border-color: #cfd6e6;
   background-color: #ffffff;
   background-image: linear-gradient(to bottom, #ffffff); }
-  entry.search, spinbutton.search {
+  entry.search {
     border-radius: 20px; }
-  entry image, spinbutton image {
+  entry image {
     color: #7d8189; }
-    entry image.left, spinbutton image.left {
+    entry image.left {
       padding-left: 0;
       padding-right: 5px; }
-    entry image.right, spinbutton image.right {
+    entry image.right {
       padding-right: 0;
       padding-left: 5px; }
-  entry.flat, spinbutton.flat, entry.flat:focus, spinbutton.flat:focus {
+  entry.flat, entry.flat:focus {
     color: #5c616c;
     border-color: #cfd6e6;
     background-color: #ffffff;
@@ -162,22 +162,22 @@ entry, spinbutton {
     padding-right: 2px;
     border: none;
     border-radius: 0; }
-  entry:focus, spinbutton:focus {
+  entry:focus {
     background-clip: border-box;
     color: #5c616c;
     border-color: #5294E2;
     background-color: #ffffff;
     background-image: linear-gradient(to bottom, #ffffff); }
-  entry:disabled, spinbutton:disabled {
+  entry:disabled {
     color: rgba(92, 97, 108, 0.55);
     border-color: rgba(207, 214, 230, 0.55);
     background-color: rgba(255, 255, 255, 0.55);
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.55)); }
-  entry selection, spinbutton selection,
-  entry selection:focus, spinbutton selection:focus {
+  entry selection,
+  entry selection:focus {
     background-color: #5294E2;
     color: #ffffff; }
-  entry progress, spinbutton progress {
+  entry progress {
     margin: 2px 12px;
     border-radius: 0;
     border-width: 0 0 2px;
@@ -186,40 +186,40 @@ entry, spinbutton {
     background-image: none;
     background-color: transparent;
     box-shadow: none; }
-  entry.warning, spinbutton.warning {
+  entry.warning {
     color: #ffffff;
     border-color: #F27835;
     background-image: linear-gradient(to bottom, #f7ae86); }
-    entry.warning:focus, spinbutton.warning:focus {
+    entry.warning:focus {
       color: #ffffff;
       background-image: linear-gradient(to bottom, #F27835);
       box-shadow: none; }
-    entry.warning selection, spinbutton.warning selection, entry.warning selection:focus, spinbutton.warning selection:focus {
+    entry.warning selection, entry.warning selection:focus {
       background-color: #ffffff;
       color: #F27835; }
-  entry.error, spinbutton.error {
+  entry.error {
     color: #ffffff;
     border-color: #FC4138;
     background-image: linear-gradient(to bottom, #fd8d88); }
-    entry.error:focus, spinbutton.error:focus {
+    entry.error:focus {
       color: #ffffff;
       background-image: linear-gradient(to bottom, #FC4138);
       box-shadow: none; }
-    entry.error selection, spinbutton.error selection, entry.error selection:focus, spinbutton.error selection:focus {
+    entry.error selection, entry.error selection:focus {
       background-color: #ffffff;
       color: #FC4138; }
-  .osd entry, .osd spinbutton {
+  .osd entry {
     color: #BAC3CF;
     border-color: rgba(26, 28, 34, 0.4);
     background-image: linear-gradient(to bottom, rgba(102, 109, 132, 0.4));
     background-color: transparent; }
-    .osd entry image, .osd spinbutton image, .osd entry image:hover, .osd spinbutton image:hover {
+    .osd entry image, .osd entry image:hover {
       color: inherit; }
-    .osd entry:focus, .osd spinbutton:focus {
+    .osd entry:focus {
       color: #ffffff;
       border-color: rgba(26, 28, 34, 0.4);
       background-image: linear-gradient(to bottom, #5294E2); }
-    .osd entry:disabled, .osd spinbutton:disabled {
+    .osd entry:disabled {
       color: rgba(186, 195, 207, 0.55);
       background-image: linear-gradient(to bottom, rgba(102, 109, 132, 0.25)); }
 
@@ -492,69 +492,48 @@ button {
     .inline-toolbar toolbutton > button:disabled:active > label, .inline-toolbar toolbutton > button:disabled:checked > label {
       color: inherit; }
 
-.linked:not(.vertical):not(.path-bar) > entry + entry, .linked:not(.vertical):not(.path-bar) > spinbutton + entry, .linked:not(.vertical):not(.path-bar) > entry + spinbutton, .linked:not(.vertical):not(.path-bar) > spinbutton + spinbutton {
+.linked:not(.vertical):not(.path-bar) > entry + entry {
   border-left-color: rgba(207, 214, 230, 0.3); }
 
-.linked:not(.vertical):not(.path-bar) > entry.error + entry, .linked:not(.vertical):not(.path-bar) > spinbutton.error + entry, .linked:not(.vertical):not(.path-bar) > entry.error + spinbutton, .linked:not(.vertical):not(.path-bar) > spinbutton.error + spinbutton,
-.linked:not(.vertical):not(.path-bar) > entry + entry.error,
-.linked:not(.vertical):not(.path-bar) > spinbutton + entry.error,
-.linked:not(.vertical):not(.path-bar) > entry + spinbutton.error,
-.linked:not(.vertical):not(.path-bar) > spinbutton + spinbutton.error {
+.linked:not(.vertical):not(.path-bar) > entry.error + entry,
+.linked:not(.vertical):not(.path-bar) > entry + entry.error {
   border-left-color: #FC4138; }
 
-.linked:not(.vertical):not(.path-bar) > entry.warning + entry, .linked:not(.vertical):not(.path-bar) > spinbutton.warning + entry, .linked:not(.vertical):not(.path-bar) > entry.warning + spinbutton, .linked:not(.vertical):not(.path-bar) > spinbutton.warning + spinbutton,
-.linked:not(.vertical):not(.path-bar) > entry + entry.warning,
-.linked:not(.vertical):not(.path-bar) > spinbutton + entry.warning,
-.linked:not(.vertical):not(.path-bar) > entry + spinbutton.warning,
-.linked:not(.vertical):not(.path-bar) > spinbutton + spinbutton.warning {
+.linked:not(.vertical):not(.path-bar) > entry.warning + entry,
+.linked:not(.vertical):not(.path-bar) > entry + entry.warning {
   border-left-color: #F27835; }
 
-.linked:not(.vertical):not(.path-bar) > entry.error + entry.warning, .linked:not(.vertical):not(.path-bar) > spinbutton.error + entry.warning, .linked:not(.vertical):not(.path-bar) > entry.error + spinbutton.warning, .linked:not(.vertical):not(.path-bar) > spinbutton.error + spinbutton.warning {
+.linked:not(.vertical):not(.path-bar) > entry.error + entry.warning {
   border-left-color: #FC4138; }
 
-.linked:not(.vertical):not(.path-bar) > entry + entry:focus:not(:last-child), .linked:not(.vertical):not(.path-bar) > spinbutton + entry:focus:not(:last-child), .linked:not(.vertical):not(.path-bar) > entry + spinbutton:focus:not(:last-child), .linked:not(.vertical):not(.path-bar) > spinbutton + spinbutton:focus:not(:last-child),
-.linked:not(.vertical):not(.path-bar) > entry + entry:focus:last-child,
-.linked:not(.vertical):not(.path-bar) > spinbutton + entry:focus:last-child,
-.linked:not(.vertical):not(.path-bar) > entry + spinbutton:focus:last-child,
-.linked:not(.vertical):not(.path-bar) > spinbutton + spinbutton:focus:last-child {
+.linked:not(.vertical):not(.path-bar) > entry + entry:focus:not(:last-child),
+.linked:not(.vertical):not(.path-bar) > entry + entry:focus:last-child {
   border-left-color: #5294E2; }
 
-.linked:not(.vertical):not(.path-bar) > entry:focus:not(:only-child) + entry, .linked:not(.vertical):not(.path-bar) > spinbutton:focus:not(:only-child) + entry, .linked:not(.vertical):not(.path-bar) > entry:focus:not(:only-child) + spinbutton, .linked:not(.vertical):not(.path-bar) > spinbutton:focus:not(:only-child) + spinbutton,
+.linked:not(.vertical):not(.path-bar) > entry:focus:not(:only-child) + entry,
 .linked:not(.vertical):not(.path-bar) > entry:focus:not(:only-child) + button,
-.linked:not(.vertical):not(.path-bar) > spinbutton:focus:not(:only-child) + button,
-.linked:not(.vertical):not(.path-bar) > entry:focus:not(:only-child) + combobox > button.combo,
-.linked:not(.vertical):not(.path-bar) > spinbutton:focus:not(:only-child) + combobox > button.combo {
+.linked:not(.vertical):not(.path-bar) > entry:focus:not(:only-child) + combobox > button.combo {
   border-left-color: #5294E2; }
 
-.linked:not(.vertical):not(.path-bar) > entry + entry.warning:focus:not(:last-child), .linked:not(.vertical):not(.path-bar) > spinbutton + entry.warning:focus:not(:last-child), .linked:not(.vertical):not(.path-bar) > entry + spinbutton.warning:focus:not(:last-child), .linked:not(.vertical):not(.path-bar) > spinbutton + spinbutton.warning:focus:not(:last-child),
-.linked:not(.vertical):not(.path-bar) > entry + entry.warning:focus:last-child,
-.linked:not(.vertical):not(.path-bar) > spinbutton + entry.warning:focus:last-child,
-.linked:not(.vertical):not(.path-bar) > entry + spinbutton.warning:focus:last-child,
-.linked:not(.vertical):not(.path-bar) > spinbutton + spinbutton.warning:focus:last-child {
+.linked:not(.vertical):not(.path-bar) > entry + entry.warning:focus:not(:last-child),
+.linked:not(.vertical):not(.path-bar) > entry + entry.warning:focus:last-child {
   border-left-color: #F27835; }
 
-.linked:not(.vertical):not(.path-bar) > entry.warning:focus:not(:only-child) + entry, .linked:not(.vertical):not(.path-bar) > spinbutton.warning:focus:not(:only-child) + entry, .linked:not(.vertical):not(.path-bar) > entry.warning:focus:not(:only-child) + spinbutton, .linked:not(.vertical):not(.path-bar) > spinbutton.warning:focus:not(:only-child) + spinbutton,
+.linked:not(.vertical):not(.path-bar) > entry.warning:focus:not(:only-child) + entry,
 .linked:not(.vertical):not(.path-bar) > entry.warning:focus:not(:only-child) + button,
-.linked:not(.vertical):not(.path-bar) > spinbutton.warning:focus:not(:only-child) + button,
-.linked:not(.vertical):not(.path-bar) > entry.warning:focus:not(:only-child) + combobox > button.combo,
-.linked:not(.vertical):not(.path-bar) > spinbutton.warning:focus:not(:only-child) + combobox > button.combo {
+.linked:not(.vertical):not(.path-bar) > entry.warning:focus:not(:only-child) + combobox > button.combo {
   border-left-color: #F27835; }
 
-.linked:not(.vertical):not(.path-bar) > entry + entry.error:focus:not(:last-child), .linked:not(.vertical):not(.path-bar) > spinbutton + entry.error:focus:not(:last-child), .linked:not(.vertical):not(.path-bar) > entry + spinbutton.error:focus:not(:last-child), .linked:not(.vertical):not(.path-bar) > spinbutton + spinbutton.error:focus:not(:last-child),
-.linked:not(.vertical):not(.path-bar) > entry + entry.error:focus:last-child,
-.linked:not(.vertical):not(.path-bar) > spinbutton + entry.error:focus:last-child,
-.linked:not(.vertical):not(.path-bar) > entry + spinbutton.error:focus:last-child,
-.linked:not(.vertical):not(.path-bar) > spinbutton + spinbutton.error:focus:last-child {
+.linked:not(.vertical):not(.path-bar) > entry + entry.error:focus:not(:last-child),
+.linked:not(.vertical):not(.path-bar) > entry + entry.error:focus:last-child {
   border-left-color: #FC4138; }
 
-.linked:not(.vertical):not(.path-bar) > entry.error:focus:not(:only-child) + entry, .linked:not(.vertical):not(.path-bar) > spinbutton.error:focus:not(:only-child) + entry, .linked:not(.vertical):not(.path-bar) > entry.error:focus:not(:only-child) + spinbutton, .linked:not(.vertical):not(.path-bar) > spinbutton.error:focus:not(:only-child) + spinbutton,
+.linked:not(.vertical):not(.path-bar) > entry.error:focus:not(:only-child) + entry,
 .linked:not(.vertical):not(.path-bar) > entry.error:focus:not(:only-child) + button,
-.linked:not(.vertical):not(.path-bar) > spinbutton.error:focus:not(:only-child) + button,
-.linked:not(.vertical):not(.path-bar) > entry.error:focus:not(:only-child) + combobox > button.combo,
-.linked:not(.vertical):not(.path-bar) > spinbutton.error:focus:not(:only-child) + combobox > button.combo {
+.linked:not(.vertical):not(.path-bar) > entry.error:focus:not(:only-child) + combobox > button.combo {
   border-left-color: #FC4138; }
 
-.linked:not(.vertical):not(.path-bar) > button:checked + entry, .linked:not(.vertical):not(.path-bar) > button:checked + spinbutton {
+.linked:not(.vertical):not(.path-bar) > button:checked + entry {
   border-left-color: #5294E2; }
 
 .linked:not(.vertical):not(.path-bar) > button + button {
@@ -566,8 +545,7 @@ button {
 
 .linked:not(.vertical):not(.path-bar) > button:first-child:hover:not(:checked):not(:active),
 .linked:not(.vertical):not(.path-bar) > button:checked + button:not(:checked):not(:active):hover,
-.linked:not(.vertical):not(.path-bar) > entry + button:not(:checked):not(:active):not(:only-child):hover,
-.linked:not(.vertical):not(.path-bar) > spinbutton + button:not(:checked):not(:active):not(:only-child):hover {
+.linked:not(.vertical):not(.path-bar) > entry + button:not(:checked):not(:active):not(:only-child):hover {
   box-shadow: none; }
 
 .linked:not(.vertical).path-bar > button + button {
@@ -582,69 +560,48 @@ button {
 .linked:not(.vertical).path-bar > button:hover:not(:checked):not(:active):not(:only-child):last-child:hover {
   box-shadow: inset 1px 0 rgba(207, 214, 230, 0.4); }
 
-.linked.vertical > entry + entry, .linked.vertical > spinbutton + entry, .linked.vertical > entry + spinbutton, .linked.vertical > spinbutton + spinbutton {
+.linked.vertical > entry + entry {
   border-top-color: rgba(207, 214, 230, 0.3); }
 
-.linked.vertical > entry.error + entry, .linked.vertical > spinbutton.error + entry, .linked.vertical > entry.error + spinbutton, .linked.vertical > spinbutton.error + spinbutton,
-.linked.vertical > entry + entry.error,
-.linked.vertical > spinbutton + entry.error,
-.linked.vertical > entry + spinbutton.error,
-.linked.vertical > spinbutton + spinbutton.error {
+.linked.vertical > entry.error + entry,
+.linked.vertical > entry + entry.error {
   border-top-color: #FC4138; }
 
-.linked.vertical > entry.warning + entry, .linked.vertical > spinbutton.warning + entry, .linked.vertical > entry.warning + spinbutton, .linked.vertical > spinbutton.warning + spinbutton,
-.linked.vertical > entry + entry.warning,
-.linked.vertical > spinbutton + entry.warning,
-.linked.vertical > entry + spinbutton.warning,
-.linked.vertical > spinbutton + spinbutton.warning {
+.linked.vertical > entry.warning + entry,
+.linked.vertical > entry + entry.warning {
   border-top-color: #F27835; }
 
-.linked.vertical > entry.error + entry.warning, .linked.vertical > spinbutton.error + entry.warning, .linked.vertical > entry.error + spinbutton.warning, .linked.vertical > spinbutton.error + spinbutton.warning {
+.linked.vertical > entry.error + entry.warning {
   border-top-color: #FC4138; }
 
-.linked.vertical > entry + entry:focus:not(:last-child), .linked.vertical > spinbutton + entry:focus:not(:last-child), .linked.vertical > entry + spinbutton:focus:not(:last-child), .linked.vertical > spinbutton + spinbutton:focus:not(:last-child),
-.linked.vertical > entry + entry:focus:last-child,
-.linked.vertical > spinbutton + entry:focus:last-child,
-.linked.vertical > entry + spinbutton:focus:last-child,
-.linked.vertical > spinbutton + spinbutton:focus:last-child {
+.linked.vertical > entry + entry:focus:not(:last-child),
+.linked.vertical > entry + entry:focus:last-child {
   border-top-color: #5294E2; }
 
-.linked.vertical > entry:focus:not(:only-child) + entry, .linked.vertical > spinbutton:focus:not(:only-child) + entry, .linked.vertical > entry:focus:not(:only-child) + spinbutton, .linked.vertical > spinbutton:focus:not(:only-child) + spinbutton,
+.linked.vertical > entry:focus:not(:only-child) + entry,
 .linked.vertical > entry:focus:not(:only-child) + button,
-.linked.vertical > spinbutton:focus:not(:only-child) + button,
-.linked.vertical > entry:focus:not(:only-child) + combobox > button.combo,
-.linked.vertical > spinbutton:focus:not(:only-child) + combobox > button.combo {
+.linked.vertical > entry:focus:not(:only-child) + combobox > button.combo {
   border-top-color: #5294E2; }
 
-.linked.vertical > entry + entry.warning:focus:not(:last-child), .linked.vertical > spinbutton + entry.warning:focus:not(:last-child), .linked.vertical > entry + spinbutton.warning:focus:not(:last-child), .linked.vertical > spinbutton + spinbutton.warning:focus:not(:last-child),
-.linked.vertical > entry + entry.warning:focus:last-child,
-.linked.vertical > spinbutton + entry.warning:focus:last-child,
-.linked.vertical > entry + spinbutton.warning:focus:last-child,
-.linked.vertical > spinbutton + spinbutton.warning:focus:last-child {
+.linked.vertical > entry + entry.warning:focus:not(:last-child),
+.linked.vertical > entry + entry.warning:focus:last-child {
   border-top-color: #F27835; }
 
-.linked.vertical > entry.warning:focus:not(:only-child) + entry, .linked.vertical > spinbutton.warning:focus:not(:only-child) + entry, .linked.vertical > entry.warning:focus:not(:only-child) + spinbutton, .linked.vertical > spinbutton.warning:focus:not(:only-child) + spinbutton,
+.linked.vertical > entry.warning:focus:not(:only-child) + entry,
 .linked.vertical > entry.warning:focus:not(:only-child) + button,
-.linked.vertical > spinbutton.warning:focus:not(:only-child) + button,
-.linked.vertical > entry.warning:focus:not(:only-child) + combobox > button.combo,
-.linked.vertical > spinbutton.warning:focus:not(:only-child) + combobox > button.combo {
+.linked.vertical > entry.warning:focus:not(:only-child) + combobox > button.combo {
   border-top-color: #F27835; }
 
-.linked.vertical > entry + entry.error:focus:not(:last-child), .linked.vertical > spinbutton + entry.error:focus:not(:last-child), .linked.vertical > entry + spinbutton.error:focus:not(:last-child), .linked.vertical > spinbutton + spinbutton.error:focus:not(:last-child),
-.linked.vertical > entry + entry.error:focus:last-child,
-.linked.vertical > spinbutton + entry.error:focus:last-child,
-.linked.vertical > entry + spinbutton.error:focus:last-child,
-.linked.vertical > spinbutton + spinbutton.error:focus:last-child {
+.linked.vertical > entry + entry.error:focus:not(:last-child),
+.linked.vertical > entry + entry.error:focus:last-child {
   border-top-color: #FC4138; }
 
-.linked.vertical > entry.error:focus:not(:only-child) + entry, .linked.vertical > spinbutton.error:focus:not(:only-child) + entry, .linked.vertical > entry.error:focus:not(:only-child) + spinbutton, .linked.vertical > spinbutton.error:focus:not(:only-child) + spinbutton,
+.linked.vertical > entry.error:focus:not(:only-child) + entry,
 .linked.vertical > entry.error:focus:not(:only-child) + button,
-.linked.vertical > spinbutton.error:focus:not(:only-child) + button,
-.linked.vertical > entry.error:focus:not(:only-child) + combobox > button.combo,
-.linked.vertical > spinbutton.error:focus:not(:only-child) + combobox > button.combo {
+.linked.vertical > entry.error:focus:not(:only-child) + combobox > button.combo {
   border-top-color: #FC4138; }
 
-.linked.vertical > button:checked + entry, .linked.vertical > button:checked + spinbutton {
+.linked.vertical > button:checked + entry {
   border-top-color: #5294E2; }
 
 .linked.vertical > button + button {
@@ -656,51 +613,48 @@ button {
 
 .linked.vertical > button:first-child:hover:not(:checked):not(:active),
 .linked.vertical > button:checked + button:not(:checked):not(:active):hover,
-.linked.vertical > entry + button:not(:checked):not(:active):not(:only-child):hover,
-.linked.vertical > spinbutton + button:not(:checked):not(:active):not(:only-child):hover {
+.linked.vertical > entry + button:not(:checked):not(:active):not(:only-child):hover {
   box-shadow: none; }
 
-toolbar.inline-toolbar toolbutton > button.flat, .inline-toolbar toolbutton > button.flat, toolbar.inline-toolbar toolbutton > button.sidebar-button, .inline-toolbar toolbutton > button.sidebar-button, .linked:not(.vertical) > entry, .linked:not(.vertical) > spinbutton,
-.linked:not(.vertical) > entry:focus,
-.linked:not(.vertical) > spinbutton:focus, .inline-toolbar button, .inline-toolbar button:backdrop, .linked:not(.vertical) > button,
+toolbar.inline-toolbar toolbutton > button.flat, .inline-toolbar toolbutton > button.flat, toolbar.inline-toolbar toolbutton > button.sidebar-button, .inline-toolbar toolbutton > button.sidebar-button, .linked:not(.vertical) > entry,
+.linked:not(.vertical) > entry:focus, .inline-toolbar button, .inline-toolbar button:backdrop, .linked:not(.vertical) > button,
 .linked:not(.vertical) > button:hover,
 .linked:not(.vertical) > button:active,
-.linked:not(.vertical) > button:checked, .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button, .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:hover, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:hover, .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:active, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:active, .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked, .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:disabled, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:disabled, .primary-toolbar .linked:not(.vertical).path-bar > button, headerbar .linked:not(.vertical).path-bar > button, .primary-toolbar .linked:not(.vertical).path-bar > button:hover, headerbar .linked:not(.vertical).path-bar > button:hover, .primary-toolbar .linked:not(.vertical).path-bar > button:active, headerbar .linked:not(.vertical).path-bar > button:active, .primary-toolbar .linked:not(.vertical).path-bar > button:checked, headerbar .linked:not(.vertical).path-bar > button:checked, .primary-toolbar .linked:not(.vertical).path-bar > button:disabled, headerbar .linked:not(.vertical).path-bar > button:disabled, .linked > combobox > button.combo:dir(ltr) {
+.linked:not(.vertical) > button:checked, spinbutton:not(.vertical) button, spinbutton:not(.vertical) entry, .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button, .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:hover, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:hover, .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:active, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:active, .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked, .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:disabled, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:disabled, .primary-toolbar .linked:not(.vertical).path-bar > button, headerbar .linked:not(.vertical).path-bar > button, .primary-toolbar .linked:not(.vertical).path-bar > button:hover, headerbar .linked:not(.vertical).path-bar > button:hover, .primary-toolbar .linked:not(.vertical).path-bar > button:active, headerbar .linked:not(.vertical).path-bar > button:active, .primary-toolbar .linked:not(.vertical).path-bar > button:checked, headerbar .linked:not(.vertical).path-bar > button:checked, .primary-toolbar .linked:not(.vertical).path-bar > button:disabled, headerbar .linked:not(.vertical).path-bar > button:disabled, .linked > combobox > button.combo:dir(ltr) {
   border-radius: 0;
   border-right-style: none; }
 
-.linked:not(.vertical) > entry:first-child, .linked:not(.vertical) > spinbutton:first-child, .inline-toolbar button:first-child, .linked:not(.vertical) > button:first-child, toolbar.inline-toolbar toolbutton:first-child > button.flat, .inline-toolbar toolbutton:first-child > button.flat, toolbar.inline-toolbar toolbutton:first-child > button.sidebar-button, .inline-toolbar toolbutton:first-child > button.sidebar-button, combobox.linked button:nth-child(2):dir(rtl), .linked:not(.vertical) > combobox:first-child > button.combo, .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:first-child, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:first-child, .primary-toolbar .linked:not(.vertical).path-bar > button:first-child, headerbar .linked:not(.vertical).path-bar > button:first-child {
+.linked:not(.vertical) > entry:first-child, .inline-toolbar button:first-child, .linked:not(.vertical) > button:first-child, toolbar.inline-toolbar toolbutton:first-child > button.flat, .inline-toolbar toolbutton:first-child > button.flat, toolbar.inline-toolbar toolbutton:first-child > button.sidebar-button, .inline-toolbar toolbutton:first-child > button.sidebar-button, spinbutton:not(.vertical) button:first-child, spinbutton:not(.vertical) entry:first-child, combobox.linked button:nth-child(2):dir(rtl), .linked:not(.vertical) > combobox:first-child > button.combo, .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:first-child, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:first-child, .primary-toolbar .linked:not(.vertical).path-bar > button:first-child, headerbar .linked:not(.vertical).path-bar > button:first-child {
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px; }
 
-.linked:not(.vertical) > entry:last-child, .linked:not(.vertical) > spinbutton:last-child, .inline-toolbar button:last-child, .linked:not(.vertical) > button:last-child, toolbar.inline-toolbar toolbutton:last-child > button.flat, .inline-toolbar toolbutton:last-child > button.flat, toolbar.inline-toolbar toolbutton:last-child > button.sidebar-button, .inline-toolbar toolbutton:last-child > button.sidebar-button, combobox.linked button:nth-child(2):dir(ltr), .linked:not(.vertical) > combobox:last-child > button.combo, .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:last-child, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:last-child, .primary-toolbar .linked:not(.vertical).path-bar > button:last-child, headerbar .linked:not(.vertical).path-bar > button:last-child {
+.linked:not(.vertical) > entry:last-child, .inline-toolbar button:last-child, .linked:not(.vertical) > button:last-child, toolbar.inline-toolbar toolbutton:last-child > button.flat, .inline-toolbar toolbutton:last-child > button.flat, toolbar.inline-toolbar toolbutton:last-child > button.sidebar-button, .inline-toolbar toolbutton:last-child > button.sidebar-button, spinbutton:not(.vertical) button:last-child, spinbutton:not(.vertical) entry:last-child, combobox.linked button:nth-child(2):dir(ltr), .linked:not(.vertical) > combobox:last-child > button.combo, .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:last-child, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:last-child, .primary-toolbar .linked:not(.vertical).path-bar > button:last-child, headerbar .linked:not(.vertical).path-bar > button:last-child {
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
   border-right-style: solid; }
 
-.linked:not(.vertical) > entry:only-child, .linked:not(.vertical) > spinbutton:only-child, .inline-toolbar button:only-child, .linked:not(.vertical) > button:only-child, toolbar.inline-toolbar toolbutton:only-child > button.flat, .inline-toolbar toolbutton:only-child > button.flat, toolbar.inline-toolbar toolbutton:only-child > button.sidebar-button, .inline-toolbar toolbutton:only-child > button.sidebar-button, .linked:not(.vertical) > combobox:only-child > button.combo, .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:only-child, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:only-child, .primary-toolbar .linked:not(.vertical).path-bar > button:only-child, headerbar .linked:not(.vertical).path-bar > button:only-child {
+.linked:not(.vertical) > entry:only-child, .inline-toolbar button:only-child, .linked:not(.vertical) > button:only-child, toolbar.inline-toolbar toolbutton:only-child > button.flat, .inline-toolbar toolbutton:only-child > button.flat, toolbar.inline-toolbar toolbutton:only-child > button.sidebar-button, .inline-toolbar toolbutton:only-child > button.sidebar-button, spinbutton:not(.vertical) button:only-child, spinbutton:not(.vertical) entry:only-child, .linked:not(.vertical) > combobox:only-child > button.combo, .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:only-child, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:only-child, .primary-toolbar .linked:not(.vertical).path-bar > button:only-child, headerbar .linked:not(.vertical).path-bar > button:only-child {
   border-radius: 3px;
   border-style: solid; }
 
-.linked.vertical > entry, .linked.vertical > spinbutton,
-.linked.vertical > entry:focus,
-.linked.vertical > spinbutton:focus, .linked.vertical > button,
+.linked.vertical > entry,
+.linked.vertical > entry:focus, .linked.vertical > button,
 .linked.vertical > button:hover,
 .linked.vertical > button:active,
-.linked.vertical > button:checked, .linked.vertical > combobox > button.combo {
+.linked.vertical > button:checked, spinbutton.vertical button, spinbutton.vertical entry, .linked.vertical > combobox > button.combo {
   border-radius: 0;
   border-bottom-style: none; }
 
-.linked.vertical > entry:first-child, .linked.vertical > spinbutton:first-child, .linked.vertical > button:first-child, .linked.vertical > combobox:first-child > button.combo {
+.linked.vertical > entry:first-child, .linked.vertical > button:first-child, spinbutton.vertical button:first-child, spinbutton.vertical entry:first-child, .linked.vertical > combobox:first-child > button.combo {
   border-top-left-radius: 3px;
   border-top-right-radius: 3px; }
 
-.linked.vertical > entry:last-child, .linked.vertical > spinbutton:last-child, .linked.vertical > button:last-child, .linked.vertical > combobox:last-child > button.combo {
+.linked.vertical > entry:last-child, .linked.vertical > button:last-child, spinbutton.vertical button:last-child, spinbutton.vertical entry:last-child, .linked.vertical > combobox:last-child > button.combo {
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
   border-bottom-style: solid; }
 
-.linked.vertical > entry:only-child, .linked.vertical > spinbutton:only-child, .linked.vertical > button:only-child, .linked.vertical > combobox:only-child > button.combo {
+.linked.vertical > entry:only-child, .linked.vertical > button:only-child, spinbutton.vertical button:only-child, spinbutton.vertical entry:only-child, .linked.vertical > combobox:only-child > button.combo {
   border-radius: 3px;
   border-style: solid; }
 
@@ -766,80 +720,30 @@ modelbutton.flat arrow.right {
 button:link > label, button:visited > label {
   text-decoration-line: underline; }
 
-spinbutton:not(.vertical) button {
-  background-image: none;
-  border: 1px solid rgba(220, 223, 227, 0.6);
-  border-style: none none none solid;
-  color: #646973;
-  border-radius: 0;
-  box-shadow: none; }
-  spinbutton:not(.vertical) button:dir(rtl) {
-    border-style: none solid none none; }
-  spinbutton:not(.vertical) button:disabled {
-    color: rgba(92, 97, 108, 0.55); }
-  spinbutton:not(.vertical) button:active {
-    background-color: #5294E2;
-    color: #ffffff; }
+spinbutton button:active {
+  color: #ffffff; }
 
-spinbutton.vertical {
-  border-radius: 0;
-  padding-left: 5px;
-  padding-right: 5px; }
-  spinbutton.vertical button:first-child {
-    color: #5c616c;
-    outline-color: rgba(92, 97, 108, 0.3);
-    border-color: #cfd6e6;
-    background-color: #fbfbfc; }
-    spinbutton.vertical button:first-child:active {
-      color: #ffffff;
-      outline-color: rgba(255, 255, 255, 0.3);
-      border-color: #5294E2;
-      background-color: #5294E2; }
-    spinbutton.vertical button:first-child:hover {
-      color: #5c616c;
-      outline-color: rgba(92, 97, 108, 0.3);
-      border-color: #cfd6e6;
-      background-color: white; }
-    spinbutton.vertical button:first-child:disabled {
-      color: rgba(92, 97, 108, 0.55);
-      border-color: rgba(207, 214, 230, 0.55);
-      background-color: rgba(251, 251, 252, 0.55); }
-      spinbutton.vertical button:first-child:disabled > label {
-        color: inherit; }
-  spinbutton.vertical button:last-child {
-    color: #5c616c;
-    outline-color: rgba(92, 97, 108, 0.3);
-    border-color: #cfd6e6;
-    background-color: #fbfbfc; }
-    spinbutton.vertical button:last-child:active {
-      color: #ffffff;
-      outline-color: rgba(255, 255, 255, 0.3);
-      border-color: #5294E2;
-      background-color: #5294E2; }
-    spinbutton.vertical button:last-child:hover {
-      color: #5c616c;
-      outline-color: rgba(92, 97, 108, 0.3);
-      border-color: #cfd6e6;
-      background-color: white; }
-    spinbutton.vertical button:last-child:disabled {
-      color: rgba(92, 97, 108, 0.55);
-      border-color: rgba(207, 214, 230, 0.55);
-      background-color: rgba(251, 251, 252, 0.55); }
-      spinbutton.vertical button:last-child:disabled > label {
-        color: inherit; }
-  spinbutton.vertical button:first-child, spinbutton.vertical button:first-child:active, spinbutton.vertical button:first-child:hover, spinbutton.vertical button:first-child:disabled {
-    border-radius: 2px 2px 0 0;
-    border-style: solid solid none solid; }
-  spinbutton.vertical button:last-child, spinbutton.vertical button:last-child:active, spinbutton.vertical button:last-child:hover, spinbutton.vertical button:last-child:disabled {
-    border-radius: 0 0 2px 2px;
-    border-style: none solid solid solid; }
+spinbutton:not(.vertical) button, spinbutton:not(.vertical) entry {
+  padding-top: 0;
+  padding-bottom: 0;
+  min-height: 0; }
 
-treeview spinbutton entry, treeview spinbutton spinbutton, treeview spinbutton entry:focus, treeview spinbutton spinbutton:focus {
-  padding: 1px;
-  border-width: 1px 0;
-  border-color: #5294E2;
-  border-radius: 0;
+spinbutton:not(.vertical) > button + button {
+  border-left-style: none; }
+
+spinbutton:not(.vertical) > button:hover:not(:active),
+spinbutton:not(.vertical) > button:hover + button {
+  box-shadow: inset 1px 0 #cfd6e6; }
+
+spinbutton:not(.vertical) > button:first-child:hover:not(:active),
+spinbutton:not(.vertical) > entry + button:not(:active):hover {
   box-shadow: none; }
+
+spinbutton:not(.vertical) > entry:focus + button {
+  border-left-color: #5294E2; }
+
+spinbutton.vertical > entry:focus + button {
+  border-top-color: #5294E2; }
 
 combobox button.combo {
   min-width: 0;
@@ -1006,7 +910,7 @@ headerbar {
   .titlebar separator, .titlebar .sidebar .view separator, .sidebar .view .titlebar separator {
     background-color: #d4d5db; }
 
-headerbar entry, headerbar spinbutton, headerbar button, headerbar separator, headerbar .sidebar separator, .sidebar headerbar separator, headerbar .sidebar .view separator, .sidebar .view headerbar separator {
+headerbar entry, headerbar button, headerbar separator, headerbar .sidebar separator, .sidebar headerbar separator, headerbar .sidebar .view separator, .sidebar .view headerbar separator {
   margin-top: 6px;
   margin-bottom: 6px; }
 
@@ -1019,50 +923,50 @@ headerbar entry, headerbar spinbutton, headerbar button, headerbar separator, he
   .primary-toolbar separator:backdrop, headerbar separator.titlebutton:backdrop {
     opacity: 0.6; }
 
-.primary-toolbar entry, headerbar entry, .primary-toolbar spinbutton, headerbar spinbutton, .primary-toolbar spinbutton, headerbar spinbutton {
+.primary-toolbar entry, headerbar entry {
   color: rgba(82, 93, 118, 0.8);
   border-color: rgba(82, 93, 118, 0.1);
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.9));
   background-color: transparent; }
-  .primary-toolbar entry image, headerbar entry image, .primary-toolbar spinbutton image, headerbar spinbutton image, .primary-toolbar entry image:hover, headerbar entry image:hover, .primary-toolbar spinbutton image:hover, headerbar spinbutton image:hover, .primary-toolbar spinbutton image, headerbar spinbutton image, .primary-toolbar spinbutton image:hover, headerbar spinbutton image:hover {
+  .primary-toolbar entry image, headerbar entry image, .primary-toolbar entry image:hover, headerbar entry image:hover {
     color: inherit; }
-  .primary-toolbar entry:backdrop, headerbar entry:backdrop, .primary-toolbar spinbutton:backdrop, headerbar spinbutton:backdrop, .primary-toolbar spinbutton:backdrop, headerbar spinbutton:backdrop {
+  .primary-toolbar entry:backdrop, headerbar entry:backdrop {
     opacity: 0.85; }
-  .primary-toolbar entry:focus, headerbar entry:focus, .primary-toolbar spinbutton:focus, headerbar spinbutton:focus, .primary-toolbar spinbutton:focus, headerbar spinbutton:focus {
+  .primary-toolbar entry:focus, headerbar entry:focus {
     color: #ffffff;
     border-color: #5294E2;
     background-image: linear-gradient(to bottom, #5294E2);
     background-clip: border-box; }
-    .primary-toolbar entry:focus image, headerbar entry:focus image, .primary-toolbar spinbutton:focus image, headerbar spinbutton:focus image, .primary-toolbar spinbutton:focus image, headerbar spinbutton:focus image {
+    .primary-toolbar entry:focus image, headerbar entry:focus image {
       color: #ffffff; }
-  .primary-toolbar entry:disabled, headerbar entry:disabled, .primary-toolbar spinbutton:disabled, headerbar spinbutton:disabled, .primary-toolbar spinbutton:disabled, headerbar spinbutton:disabled {
+  .primary-toolbar entry:disabled, headerbar entry:disabled {
     color: rgba(82, 93, 118, 0.35);
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.75)); }
-  .primary-toolbar entry selection:focus, headerbar entry selection:focus, .primary-toolbar spinbutton selection:focus, headerbar spinbutton selection:focus, .primary-toolbar spinbutton selection:focus, headerbar spinbutton selection:focus {
+  .primary-toolbar entry selection:focus, headerbar entry selection:focus {
     background-color: #ffffff;
     color: #5294E2; }
-  .primary-toolbar entry progress, headerbar entry progress, .primary-toolbar spinbutton progress, headerbar spinbutton progress, .primary-toolbar spinbutton progress, headerbar spinbutton progress {
+  .primary-toolbar entry progress, headerbar entry progress {
     border-color: #5294E2;
     background-image: none;
     background-color: transparent; }
-  .primary-toolbar entry.warning, headerbar entry.warning, .primary-toolbar spinbutton.warning, headerbar spinbutton.warning, .primary-toolbar spinbutton.warning, headerbar spinbutton.warning {
+  .primary-toolbar entry.warning, headerbar entry.warning {
     color: #ffffff;
     border-color: #F27835;
     background-image: linear-gradient(to bottom, #eea57e); }
-    .primary-toolbar entry.warning:focus, headerbar entry.warning:focus, .primary-toolbar spinbutton.warning:focus, headerbar spinbutton.warning:focus, .primary-toolbar spinbutton.warning:focus, headerbar spinbutton.warning:focus {
+    .primary-toolbar entry.warning:focus, headerbar entry.warning:focus {
       color: #ffffff;
       background-image: linear-gradient(to bottom, #F27835); }
-    .primary-toolbar entry.warning selection, headerbar entry.warning selection, .primary-toolbar spinbutton.warning selection, headerbar spinbutton.warning selection, .primary-toolbar entry.warning selection:focus, headerbar entry.warning selection:focus, .primary-toolbar spinbutton.warning selection:focus, headerbar spinbutton.warning selection:focus, .primary-toolbar spinbutton.warning selection, headerbar spinbutton.warning selection, .primary-toolbar spinbutton.warning selection:focus, headerbar spinbutton.warning selection:focus {
+    .primary-toolbar entry.warning selection, headerbar entry.warning selection, .primary-toolbar entry.warning selection:focus, headerbar entry.warning selection:focus {
       background-color: #ffffff;
       color: #F27835; }
-  .primary-toolbar entry.error, headerbar entry.error, .primary-toolbar spinbutton.error, headerbar spinbutton.error, .primary-toolbar spinbutton.error, headerbar spinbutton.error {
+  .primary-toolbar entry.error, headerbar entry.error {
     color: #ffffff;
     border-color: #FC4138;
     background-image: linear-gradient(to bottom, #f48480); }
-    .primary-toolbar entry.error:focus, headerbar entry.error:focus, .primary-toolbar spinbutton.error:focus, headerbar spinbutton.error:focus, .primary-toolbar spinbutton.error:focus, headerbar spinbutton.error:focus {
+    .primary-toolbar entry.error:focus, headerbar entry.error:focus {
       color: #ffffff;
       background-image: linear-gradient(to bottom, #FC4138); }
-    .primary-toolbar entry.error selection, headerbar entry.error selection, .primary-toolbar spinbutton.error selection, headerbar spinbutton.error selection, .primary-toolbar entry.error selection:focus, headerbar entry.error selection:focus, .primary-toolbar spinbutton.error selection:focus, headerbar spinbutton.error selection:focus, .primary-toolbar spinbutton.error selection, headerbar spinbutton.error selection, .primary-toolbar spinbutton.error selection:focus, headerbar spinbutton.error selection:focus {
+    .primary-toolbar entry.error selection, headerbar entry.error selection, .primary-toolbar entry.error selection:focus, headerbar entry.error selection:focus {
       background-color: #ffffff;
       color: #FC4138; }
 
@@ -1130,37 +1034,37 @@ headerbar entry, headerbar spinbutton, headerbar button, headerbar separator, he
 .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:hover:not(:checked):not(:active):not(:only-child):last-child:hover, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:hover:not(:checked):not(:active):not(:only-child):last-child:hover, .primary-toolbar .linked:not(.vertical).path-bar > button:hover:not(:checked):not(:active):not(:only-child):last-child:hover, headerbar .linked:not(.vertical).path-bar > button:hover:not(:checked):not(:active):not(:only-child):last-child:hover {
   box-shadow: inset 1px 0 rgba(82, 93, 118, 0.1); }
 
-.primary-toolbar .linked:not(.vertical):not(.path-bar) > entry + entry, headerbar .linked:not(.vertical):not(.path-bar) > entry + entry, .primary-toolbar .linked:not(.vertical):not(.path-bar) > spinbutton + entry, headerbar .linked:not(.vertical):not(.path-bar) > spinbutton + entry, .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry + spinbutton, headerbar .linked:not(.vertical):not(.path-bar) > entry + spinbutton, .primary-toolbar .linked:not(.vertical):not(.path-bar) > spinbutton + spinbutton, headerbar .linked:not(.vertical):not(.path-bar) > spinbutton + spinbutton {
+.primary-toolbar .linked:not(.vertical):not(.path-bar) > entry + entry, headerbar .linked:not(.vertical):not(.path-bar) > entry + entry {
   border-left-color: rgba(82, 93, 118, 0); }
 
-.primary-toolbar .linked:not(.vertical):not(.path-bar) > entry.error + entry, headerbar .linked:not(.vertical):not(.path-bar) > entry.error + entry, .primary-toolbar .linked:not(.vertical):not(.path-bar) > spinbutton.error + entry, headerbar .linked:not(.vertical):not(.path-bar) > spinbutton.error + entry, .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry.error + spinbutton, headerbar .linked:not(.vertical):not(.path-bar) > entry.error + spinbutton, .primary-toolbar .linked:not(.vertical):not(.path-bar) > spinbutton.error + spinbutton, headerbar .linked:not(.vertical):not(.path-bar) > spinbutton.error + spinbutton, .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry + entry.error, headerbar .linked:not(.vertical):not(.path-bar) > entry + entry.error, .primary-toolbar .linked:not(.vertical):not(.path-bar) > spinbutton + entry.error, headerbar .linked:not(.vertical):not(.path-bar) > spinbutton + entry.error, .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry + spinbutton.error, headerbar .linked:not(.vertical):not(.path-bar) > entry + spinbutton.error, .primary-toolbar .linked:not(.vertical):not(.path-bar) > spinbutton + spinbutton.error, headerbar .linked:not(.vertical):not(.path-bar) > spinbutton + spinbutton.error {
+.primary-toolbar .linked:not(.vertical):not(.path-bar) > entry.error + entry, headerbar .linked:not(.vertical):not(.path-bar) > entry.error + entry, .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry + entry.error, headerbar .linked:not(.vertical):not(.path-bar) > entry + entry.error {
   border-left-color: #FC4138; }
 
-.primary-toolbar .linked:not(.vertical):not(.path-bar) > entry.warning + entry, headerbar .linked:not(.vertical):not(.path-bar) > entry.warning + entry, .primary-toolbar .linked:not(.vertical):not(.path-bar) > spinbutton.warning + entry, headerbar .linked:not(.vertical):not(.path-bar) > spinbutton.warning + entry, .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry.warning + spinbutton, headerbar .linked:not(.vertical):not(.path-bar) > entry.warning + spinbutton, .primary-toolbar .linked:not(.vertical):not(.path-bar) > spinbutton.warning + spinbutton, headerbar .linked:not(.vertical):not(.path-bar) > spinbutton.warning + spinbutton, .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry + entry.warning, headerbar .linked:not(.vertical):not(.path-bar) > entry + entry.warning, .primary-toolbar .linked:not(.vertical):not(.path-bar) > spinbutton + entry.warning, headerbar .linked:not(.vertical):not(.path-bar) > spinbutton + entry.warning, .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry + spinbutton.warning, headerbar .linked:not(.vertical):not(.path-bar) > entry + spinbutton.warning, .primary-toolbar .linked:not(.vertical):not(.path-bar) > spinbutton + spinbutton.warning, headerbar .linked:not(.vertical):not(.path-bar) > spinbutton + spinbutton.warning {
+.primary-toolbar .linked:not(.vertical):not(.path-bar) > entry.warning + entry, headerbar .linked:not(.vertical):not(.path-bar) > entry.warning + entry, .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry + entry.warning, headerbar .linked:not(.vertical):not(.path-bar) > entry + entry.warning {
   border-left-color: #F27835; }
 
-.primary-toolbar .linked:not(.vertical):not(.path-bar) > entry.error + entry.warning, headerbar .linked:not(.vertical):not(.path-bar) > entry.error + entry.warning, .primary-toolbar .linked:not(.vertical):not(.path-bar) > spinbutton.error + entry.warning, headerbar .linked:not(.vertical):not(.path-bar) > spinbutton.error + entry.warning, .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry.error + spinbutton.warning, headerbar .linked:not(.vertical):not(.path-bar) > entry.error + spinbutton.warning, .primary-toolbar .linked:not(.vertical):not(.path-bar) > spinbutton.error + spinbutton.warning, headerbar .linked:not(.vertical):not(.path-bar) > spinbutton.error + spinbutton.warning {
+.primary-toolbar .linked:not(.vertical):not(.path-bar) > entry.error + entry.warning, headerbar .linked:not(.vertical):not(.path-bar) > entry.error + entry.warning {
   border-left-color: #FC4138; }
 
-.primary-toolbar .linked:not(.vertical):not(.path-bar) > entry + entry:focus:not(:last-child), headerbar .linked:not(.vertical):not(.path-bar) > entry + entry:focus:not(:last-child), .primary-toolbar .linked:not(.vertical):not(.path-bar) > spinbutton + entry:focus:not(:last-child), headerbar .linked:not(.vertical):not(.path-bar) > spinbutton + entry:focus:not(:last-child), .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry + spinbutton:focus:not(:last-child), headerbar .linked:not(.vertical):not(.path-bar) > entry + spinbutton:focus:not(:last-child), .primary-toolbar .linked:not(.vertical):not(.path-bar) > spinbutton + spinbutton:focus:not(:last-child), headerbar .linked:not(.vertical):not(.path-bar) > spinbutton + spinbutton:focus:not(:last-child), .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry + entry:focus:last-child, headerbar .linked:not(.vertical):not(.path-bar) > entry + entry:focus:last-child, .primary-toolbar .linked:not(.vertical):not(.path-bar) > spinbutton + entry:focus:last-child, headerbar .linked:not(.vertical):not(.path-bar) > spinbutton + entry:focus:last-child, .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry + spinbutton:focus:last-child, headerbar .linked:not(.vertical):not(.path-bar) > entry + spinbutton:focus:last-child, .primary-toolbar .linked:not(.vertical):not(.path-bar) > spinbutton + spinbutton:focus:last-child, headerbar .linked:not(.vertical):not(.path-bar) > spinbutton + spinbutton:focus:last-child {
+.primary-toolbar .linked:not(.vertical):not(.path-bar) > entry + entry:focus:not(:last-child), headerbar .linked:not(.vertical):not(.path-bar) > entry + entry:focus:not(:last-child), .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry + entry:focus:last-child, headerbar .linked:not(.vertical):not(.path-bar) > entry + entry:focus:last-child {
   border-left-color: #5294E2; }
 
-.primary-toolbar .linked:not(.vertical):not(.path-bar) > entry:focus:not(:only-child) + entry, headerbar .linked:not(.vertical):not(.path-bar) > entry:focus:not(:only-child) + entry, .primary-toolbar .linked:not(.vertical):not(.path-bar) > spinbutton:focus:not(:only-child) + entry, headerbar .linked:not(.vertical):not(.path-bar) > spinbutton:focus:not(:only-child) + entry, .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry:focus:not(:only-child) + spinbutton, headerbar .linked:not(.vertical):not(.path-bar) > entry:focus:not(:only-child) + spinbutton, .primary-toolbar .linked:not(.vertical):not(.path-bar) > spinbutton:focus:not(:only-child) + spinbutton, headerbar .linked:not(.vertical):not(.path-bar) > spinbutton:focus:not(:only-child) + spinbutton, .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry:focus:not(:only-child) + button, headerbar .linked:not(.vertical):not(.path-bar) > entry:focus:not(:only-child) + button, .primary-toolbar .linked:not(.vertical):not(.path-bar) > spinbutton:focus:not(:only-child) + button, headerbar .linked:not(.vertical):not(.path-bar) > spinbutton:focus:not(:only-child) + button, .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry:focus:not(:only-child) + combobox > button.combo, headerbar .linked:not(.vertical):not(.path-bar) > entry:focus:not(:only-child) + combobox > button.combo, .primary-toolbar .linked:not(.vertical):not(.path-bar) > spinbutton:focus:not(:only-child) + combobox > button.combo, headerbar .linked:not(.vertical):not(.path-bar) > spinbutton:focus:not(:only-child) + combobox > button.combo {
+.primary-toolbar .linked:not(.vertical):not(.path-bar) > entry:focus:not(:only-child) + entry, headerbar .linked:not(.vertical):not(.path-bar) > entry:focus:not(:only-child) + entry, .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry:focus:not(:only-child) + button, headerbar .linked:not(.vertical):not(.path-bar) > entry:focus:not(:only-child) + button, .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry:focus:not(:only-child) + combobox > button.combo, headerbar .linked:not(.vertical):not(.path-bar) > entry:focus:not(:only-child) + combobox > button.combo {
   border-left-color: #5294E2; }
 
-.primary-toolbar .linked:not(.vertical):not(.path-bar) > entry + entry.warning:focus:not(:last-child), headerbar .linked:not(.vertical):not(.path-bar) > entry + entry.warning:focus:not(:last-child), .primary-toolbar .linked:not(.vertical):not(.path-bar) > spinbutton + entry.warning:focus:not(:last-child), headerbar .linked:not(.vertical):not(.path-bar) > spinbutton + entry.warning:focus:not(:last-child), .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry + spinbutton.warning:focus:not(:last-child), headerbar .linked:not(.vertical):not(.path-bar) > entry + spinbutton.warning:focus:not(:last-child), .primary-toolbar .linked:not(.vertical):not(.path-bar) > spinbutton + spinbutton.warning:focus:not(:last-child), headerbar .linked:not(.vertical):not(.path-bar) > spinbutton + spinbutton.warning:focus:not(:last-child), .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry + entry.warning:focus:last-child, headerbar .linked:not(.vertical):not(.path-bar) > entry + entry.warning:focus:last-child, .primary-toolbar .linked:not(.vertical):not(.path-bar) > spinbutton + entry.warning:focus:last-child, headerbar .linked:not(.vertical):not(.path-bar) > spinbutton + entry.warning:focus:last-child, .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry + spinbutton.warning:focus:last-child, headerbar .linked:not(.vertical):not(.path-bar) > entry + spinbutton.warning:focus:last-child, .primary-toolbar .linked:not(.vertical):not(.path-bar) > spinbutton + spinbutton.warning:focus:last-child, headerbar .linked:not(.vertical):not(.path-bar) > spinbutton + spinbutton.warning:focus:last-child {
+.primary-toolbar .linked:not(.vertical):not(.path-bar) > entry + entry.warning:focus:not(:last-child), headerbar .linked:not(.vertical):not(.path-bar) > entry + entry.warning:focus:not(:last-child), .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry + entry.warning:focus:last-child, headerbar .linked:not(.vertical):not(.path-bar) > entry + entry.warning:focus:last-child {
   border-left-color: #F27835; }
 
-.primary-toolbar .linked:not(.vertical):not(.path-bar) > entry.warning:focus:not(:only-child) + entry, headerbar .linked:not(.vertical):not(.path-bar) > entry.warning:focus:not(:only-child) + entry, .primary-toolbar .linked:not(.vertical):not(.path-bar) > spinbutton.warning:focus:not(:only-child) + entry, headerbar .linked:not(.vertical):not(.path-bar) > spinbutton.warning:focus:not(:only-child) + entry, .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry.warning:focus:not(:only-child) + spinbutton, headerbar .linked:not(.vertical):not(.path-bar) > entry.warning:focus:not(:only-child) + spinbutton, .primary-toolbar .linked:not(.vertical):not(.path-bar) > spinbutton.warning:focus:not(:only-child) + spinbutton, headerbar .linked:not(.vertical):not(.path-bar) > spinbutton.warning:focus:not(:only-child) + spinbutton, .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry.warning:focus:not(:only-child) + button, headerbar .linked:not(.vertical):not(.path-bar) > entry.warning:focus:not(:only-child) + button, .primary-toolbar .linked:not(.vertical):not(.path-bar) > spinbutton.warning:focus:not(:only-child) + button, headerbar .linked:not(.vertical):not(.path-bar) > spinbutton.warning:focus:not(:only-child) + button, .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry.warning:focus:not(:only-child) + combobox > button.combo, headerbar .linked:not(.vertical):not(.path-bar) > entry.warning:focus:not(:only-child) + combobox > button.combo, .primary-toolbar .linked:not(.vertical):not(.path-bar) > spinbutton.warning:focus:not(:only-child) + combobox > button.combo, headerbar .linked:not(.vertical):not(.path-bar) > spinbutton.warning:focus:not(:only-child) + combobox > button.combo {
+.primary-toolbar .linked:not(.vertical):not(.path-bar) > entry.warning:focus:not(:only-child) + entry, headerbar .linked:not(.vertical):not(.path-bar) > entry.warning:focus:not(:only-child) + entry, .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry.warning:focus:not(:only-child) + button, headerbar .linked:not(.vertical):not(.path-bar) > entry.warning:focus:not(:only-child) + button, .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry.warning:focus:not(:only-child) + combobox > button.combo, headerbar .linked:not(.vertical):not(.path-bar) > entry.warning:focus:not(:only-child) + combobox > button.combo {
   border-left-color: #F27835; }
 
-.primary-toolbar .linked:not(.vertical):not(.path-bar) > entry + entry.error:focus:not(:last-child), headerbar .linked:not(.vertical):not(.path-bar) > entry + entry.error:focus:not(:last-child), .primary-toolbar .linked:not(.vertical):not(.path-bar) > spinbutton + entry.error:focus:not(:last-child), headerbar .linked:not(.vertical):not(.path-bar) > spinbutton + entry.error:focus:not(:last-child), .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry + spinbutton.error:focus:not(:last-child), headerbar .linked:not(.vertical):not(.path-bar) > entry + spinbutton.error:focus:not(:last-child), .primary-toolbar .linked:not(.vertical):not(.path-bar) > spinbutton + spinbutton.error:focus:not(:last-child), headerbar .linked:not(.vertical):not(.path-bar) > spinbutton + spinbutton.error:focus:not(:last-child), .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry + entry.error:focus:last-child, headerbar .linked:not(.vertical):not(.path-bar) > entry + entry.error:focus:last-child, .primary-toolbar .linked:not(.vertical):not(.path-bar) > spinbutton + entry.error:focus:last-child, headerbar .linked:not(.vertical):not(.path-bar) > spinbutton + entry.error:focus:last-child, .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry + spinbutton.error:focus:last-child, headerbar .linked:not(.vertical):not(.path-bar) > entry + spinbutton.error:focus:last-child, .primary-toolbar .linked:not(.vertical):not(.path-bar) > spinbutton + spinbutton.error:focus:last-child, headerbar .linked:not(.vertical):not(.path-bar) > spinbutton + spinbutton.error:focus:last-child {
+.primary-toolbar .linked:not(.vertical):not(.path-bar) > entry + entry.error:focus:not(:last-child), headerbar .linked:not(.vertical):not(.path-bar) > entry + entry.error:focus:not(:last-child), .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry + entry.error:focus:last-child, headerbar .linked:not(.vertical):not(.path-bar) > entry + entry.error:focus:last-child {
   border-left-color: #FC4138; }
 
-.primary-toolbar .linked:not(.vertical):not(.path-bar) > entry.error:focus:not(:only-child) + entry, headerbar .linked:not(.vertical):not(.path-bar) > entry.error:focus:not(:only-child) + entry, .primary-toolbar .linked:not(.vertical):not(.path-bar) > spinbutton.error:focus:not(:only-child) + entry, headerbar .linked:not(.vertical):not(.path-bar) > spinbutton.error:focus:not(:only-child) + entry, .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry.error:focus:not(:only-child) + spinbutton, headerbar .linked:not(.vertical):not(.path-bar) > entry.error:focus:not(:only-child) + spinbutton, .primary-toolbar .linked:not(.vertical):not(.path-bar) > spinbutton.error:focus:not(:only-child) + spinbutton, headerbar .linked:not(.vertical):not(.path-bar) > spinbutton.error:focus:not(:only-child) + spinbutton, .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry.error:focus:not(:only-child) + button, headerbar .linked:not(.vertical):not(.path-bar) > entry.error:focus:not(:only-child) + button, .primary-toolbar .linked:not(.vertical):not(.path-bar) > spinbutton.error:focus:not(:only-child) + button, headerbar .linked:not(.vertical):not(.path-bar) > spinbutton.error:focus:not(:only-child) + button, .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry.error:focus:not(:only-child) + combobox > button.combo, headerbar .linked:not(.vertical):not(.path-bar) > entry.error:focus:not(:only-child) + combobox > button.combo, .primary-toolbar .linked:not(.vertical):not(.path-bar) > spinbutton.error:focus:not(:only-child) + combobox > button.combo, headerbar .linked:not(.vertical):not(.path-bar) > spinbutton.error:focus:not(:only-child) + combobox > button.combo {
+.primary-toolbar .linked:not(.vertical):not(.path-bar) > entry.error:focus:not(:only-child) + entry, headerbar .linked:not(.vertical):not(.path-bar) > entry.error:focus:not(:only-child) + entry, .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry.error:focus:not(:only-child) + button, headerbar .linked:not(.vertical):not(.path-bar) > entry.error:focus:not(:only-child) + button, .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry.error:focus:not(:only-child) + combobox > button.combo, headerbar .linked:not(.vertical):not(.path-bar) > entry.error:focus:not(:only-child) + combobox > button.combo {
   border-left-color: #FC4138; }
 
-.primary-toolbar .linked:not(.vertical):not(.path-bar) > button:checked + entry, headerbar .linked:not(.vertical):not(.path-bar) > button:checked + entry, .primary-toolbar .linked:not(.vertical):not(.path-bar) > button:checked + spinbutton, headerbar .linked:not(.vertical):not(.path-bar) > button:checked + spinbutton {
+.primary-toolbar .linked:not(.vertical):not(.path-bar) > button:checked + entry, headerbar .linked:not(.vertical):not(.path-bar) > button:checked + entry {
   border-left-color: #5294E2; }
 
 .primary-toolbar button.suggested-action, headerbar button.suggested-action {
@@ -1231,23 +1135,39 @@ headerbar entry, headerbar spinbutton, headerbar button, headerbar separator, he
 .primary-toolbar button.destructive-action:backdrop, headerbar button.destructive-action:backdrop, .primary-toolbar button.destructive-action:backdrop, headerbar button.destructive-action:backdrop {
   opacity: 0.8; }
 
-.primary-toolbar spinbutton:focus button, headerbar spinbutton:focus button {
-  color: #ffffff; }
-  .primary-toolbar spinbutton:focus button:hover, headerbar spinbutton:focus button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-color: transparent; }
-  .primary-toolbar spinbutton:focus button:disabled, headerbar spinbutton:focus button:disabled {
-    color: rgba(255, 255, 255, 0.4); }
+.primary-toolbar spinbutton:not(.vertical):focus, headerbar spinbutton:not(.vertical):focus {
+  color: #ffffff;
+  caret-color: #ffffff; }
 
-.primary-toolbar spinbutton button, headerbar spinbutton button {
-  color: rgba(82, 93, 118, 0.8); }
-  .primary-toolbar spinbutton button:hover, headerbar spinbutton button:hover {
-    background-color: rgba(82, 93, 118, 0.05);
-    border-color: transparent; }
-  .primary-toolbar spinbutton button:disabled, headerbar spinbutton button:disabled {
-    color: rgba(82, 93, 118, 0.5); }
-  .primary-toolbar spinbutton button:active, headerbar spinbutton button:active {
-    background-color: rgba(0, 0, 0, 0.1); }
+.primary-toolbar spinbutton:not(.vertical) button, headerbar spinbutton:not(.vertical) button, .primary-toolbar spinbutton:not(.vertical) button:disabled, headerbar spinbutton:not(.vertical) button:disabled {
+  color: rgba(82, 93, 118, 0.8);
+  outline-color: rgba(82, 93, 118, 0.1);
+  border-color: rgba(82, 93, 118, 0.1);
+  background-color: rgba(251, 251, 252, 0.9); }
+
+.primary-toolbar spinbutton:not(.vertical) button:hover, headerbar spinbutton:not(.vertical) button:hover {
+  background-color: rgba(255, 255, 255, 0.9); }
+
+.primary-toolbar spinbutton:not(.vertical) button:active, headerbar spinbutton:not(.vertical) button:active, .primary-toolbar spinbutton:not(.vertical) button:checked, headerbar spinbutton:not(.vertical) button:checked {
+  color: #ffffff;
+  outline-color: rgba(255, 255, 255, 0.3);
+  border-color: #5294E2;
+  background-color: #5294E2; }
+
+.primary-toolbar spinbutton:not(.vertical) button:disabled, headerbar spinbutton:not(.vertical) button:disabled {
+  color: rgba(82, 93, 118, 0.4); }
+
+.primary-toolbar spinbutton:not(.vertical) > button + button, headerbar spinbutton:not(.vertical) > button + button {
+  border-left-style: none; }
+
+.primary-toolbar spinbutton:not(.vertical) > button:hover:not(:active), headerbar spinbutton:not(.vertical) > button:hover:not(:active), .primary-toolbar spinbutton:not(.vertical) > button:hover + button, headerbar spinbutton:not(.vertical) > button:hover + button {
+  box-shadow: inset 1px 0 rgba(82, 93, 118, 0.1); }
+
+.primary-toolbar spinbutton:not(.vertical) > button:first-child:hover:not(:active), headerbar spinbutton:not(.vertical) > button:first-child:hover:not(:active), .primary-toolbar spinbutton:not(.vertical) > entry + button:not(:active):hover, headerbar spinbutton:not(.vertical) > entry + button:not(:active):hover {
+  box-shadow: none; }
+
+.primary-toolbar spinbutton:not(.vertical) > entry:focus + button, headerbar spinbutton:not(.vertical) > entry:focus + button {
+  border-left-color: #5294E2; }
 
 .primary-toolbar combobox:disabled, headerbar combobox:disabled {
   color: rgba(82, 93, 118, 0.2); }
@@ -1268,18 +1188,18 @@ headerbar entry, headerbar spinbutton, headerbar button, headerbar separator, he
     color: rgba(82, 93, 118, 0.35);
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.75)); }
 
-.primary-toolbar combobox.combobox-entry entry:dir(ltr), headerbar combobox.combobox-entry entry:dir(ltr), .primary-toolbar combobox.combobox-entry spinbutton:dir(ltr), headerbar combobox.combobox-entry spinbutton:dir(ltr) {
+.primary-toolbar combobox.combobox-entry entry:dir(ltr), headerbar combobox.combobox-entry entry:dir(ltr) {
   border-right-style: none; }
-  .primary-toolbar combobox.combobox-entry entry:dir(ltr):focus, headerbar combobox.combobox-entry entry:dir(ltr):focus, .primary-toolbar combobox.combobox-entry spinbutton:dir(ltr):focus, headerbar combobox.combobox-entry spinbutton:dir(ltr):focus {
+  .primary-toolbar combobox.combobox-entry entry:dir(ltr):focus, headerbar combobox.combobox-entry entry:dir(ltr):focus {
     box-shadow: none; }
-  .primary-toolbar combobox.combobox-entry entry:dir(ltr):focus, headerbar combobox.combobox-entry entry:dir(ltr):focus, .primary-toolbar combobox.combobox-entry spinbutton:dir(ltr):focus, headerbar combobox.combobox-entry spinbutton:dir(ltr):focus {
+  .primary-toolbar combobox.combobox-entry entry:dir(ltr):focus, headerbar combobox.combobox-entry entry:dir(ltr):focus {
     box-shadow: 1px 0 #5294E2; }
 
-.primary-toolbar combobox.combobox-entry entry:dir(rtl), headerbar combobox.combobox-entry entry:dir(rtl), .primary-toolbar combobox.combobox-entry spinbutton:dir(rtl), headerbar combobox.combobox-entry spinbutton:dir(rtl) {
+.primary-toolbar combobox.combobox-entry entry:dir(rtl), headerbar combobox.combobox-entry entry:dir(rtl) {
   border-left-style: none; }
-  .primary-toolbar combobox.combobox-entry entry:dir(rtl):focus, headerbar combobox.combobox-entry entry:dir(rtl):focus, .primary-toolbar combobox.combobox-entry spinbutton:dir(rtl):focus, headerbar combobox.combobox-entry spinbutton:dir(rtl):focus {
+  .primary-toolbar combobox.combobox-entry entry:dir(rtl):focus, headerbar combobox.combobox-entry entry:dir(rtl):focus {
     box-shadow: none; }
-  .primary-toolbar combobox.combobox-entry entry:dir(rtl):focus, headerbar combobox.combobox-entry entry:dir(rtl):focus, .primary-toolbar combobox.combobox-entry spinbutton:dir(rtl):focus, headerbar combobox.combobox-entry spinbutton:dir(rtl):focus {
+  .primary-toolbar combobox.combobox-entry entry:dir(rtl):focus, headerbar combobox.combobox-entry entry:dir(rtl):focus {
     box-shadow: -1px 0 #5294E2; }
 
 .primary-toolbar switch:backdrop, headerbar switch:backdrop {
