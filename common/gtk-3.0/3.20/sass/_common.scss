@@ -1781,12 +1781,6 @@ cursor-handle {
 // Notebooks and Tabs
 //
 notebook {
-  -GtkNotebook-initial-gap: 4;
-  -GtkNotebook-arrow-spacing: 5;
-  -GtkNotebook-tab-curvature: 0;
-  -GtkNotebook-tab-overlap: 1;
-  -GtkNotebook-has-tab-gap: false;
-
   padding: 0;
   background-color: $base_color;
   transition: all 200ms $ease-out-quad;
