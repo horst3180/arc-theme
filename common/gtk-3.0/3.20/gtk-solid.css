@@ -2445,6 +2445,9 @@ stacksidebar row {
   stacksidebar row.needs-attention > label {
     background-size: 6px 6px, 0 0; }
 
+placessidebar list {
+  background-color: transparent; }
+
 placessidebar row {
   padding: 0px; }
   placessidebar row > revealer {

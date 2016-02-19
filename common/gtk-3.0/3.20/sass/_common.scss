@@ -2575,6 +2575,8 @@ placessidebar {
 
   @extend scrolledwindow;
 
+  list { background-color: transparent; }
+
   row {
     // Needs overriding of the GtkListBoxRow padding
     padding: 0px;
