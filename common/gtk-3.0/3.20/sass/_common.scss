@@ -1419,42 +1419,29 @@ treeview.view {
 
   header {
     button {
-      @extend %column_header_button;
       $_column_header_color: mix($fg_color,$base_color,80%);
+
+      &, &:hover, &:active { @extend %column_header_button; }
+
       color: $_column_header_color;
       background-color: $base_color;
       font-weight: bold;
       &:hover {
-        @extend %column_header_button;
         color: $selected_bg_color;
-        box-shadow: none;
-        transition: none; //I shouldn't need this
       }
       &:active {
-        @extend %column_header_button;
         color: $fg_color;
-        transition: none; //I shouldn't need this
       }
       &.dnd {
-        @extend header.button.dnd;
+        &, &:selected, &:hover {
+          transition: none;
+          color: $selected_bg_color;
+          box-shadow: inset 1px 1px 0 1px $selected_bg_color,
+                      inset -1px 0 0 1px $selected_bg_color,
+                      inset 1px 1px $base_color, inset -1px 0 $base_color;
+        }
       }
     }
-    button:last-child,
-    button:last-child:hover,
-    button:last-child:active { //treeview-like derived widgets in Banshee and Evolution
-      border-right-style: none;
-      border-image: none;
-    }
-  }
-  header.button.dnd { // for treeview-like derive widgets
-    transition: none;
-    color: $selected_bg_color;
-    box-shadow: inset 1px 1px 0 1px $selected_bg_color,
-                inset -1px 0 0 1px $selected_bg_color,
-                inset 1px 1px $base_color, inset -1px 0 $base_color;;
-    &:active { @extend header.button.dnd; }
-    &:selected { @extend header.button.dnd; }
-    &:hover { @extend header.button.dnd; }
   }
 }
 
@@ -1466,16 +1453,20 @@ treeview.view {
   border-style: none solid none none;
   border-radius: 0;
   border-image: linear-gradient(to bottom,
-                                transparentize(if($variant == 'light', black, white), 1) 20%,
+                                $base_color 20%,
                                 transparentize(if($variant == 'light', black, white), 0.89) 20%,
                                 transparentize(if($variant == 'light', black, white), 0.89) 80%,
-                                transparentize(if($variant == 'light', black, white), 1) 80%) 0 1 0 0 / 0 1px 0 0 stretch;
+                                $base_color 80%) 0 1 0 0 / 0 1px 0 0 stretch;
 
   &:active, &:hover { background-color: $base_color; }
   &:active:hover { color: $fg_color; }
   &:disabled {
     border-color: $bg_color;
     background-image: none;
+  }
+  &:last-child {
+    border-right-style: none;
+    border-image: none;
   }
 }
 

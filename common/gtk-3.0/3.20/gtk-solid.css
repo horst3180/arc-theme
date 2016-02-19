@@ -1390,21 +1390,13 @@ treeview.view {
     background-color: #ffffff;
     font-weight: bold; }
     treeview.view header button:hover {
-      color: #5294E2;
-      box-shadow: none;
-      transition: none; }
+      color: #5294E2; }
     treeview.view header button:active {
-      color: #5c616c;
-      transition: none; }
-  treeview.view header button:last-child,
-  treeview.view header button:last-child:hover,
-  treeview.view header button:last-child:active {
-    border-right-style: none;
-    border-image: none; }
-  treeview.view header.button.dnd, treeview.view header button.dnd, treeview.view header.button.dnd:active, treeview.view header.button.dnd:selected, treeview.view header.button.dnd:hover {
-    transition: none;
-    color: #5294E2;
-    box-shadow: inset 1px 1px 0 1px #5294E2, inset -1px 0 0 1px #5294E2, inset 1px 1px #ffffff, inset -1px 0 #ffffff; }
+      color: #5c616c; }
+    treeview.view header button.dnd, treeview.view header button.dnd:selected, treeview.view header button.dnd:hover {
+      transition: none;
+      color: #5294E2;
+      box-shadow: inset 1px 1px 0 1px #5294E2, inset -1px 0 0 1px #5294E2, inset 1px 1px #ffffff, inset -1px 0 #ffffff; }
 
 treeview.view header button, treeview.view header button:hover, treeview.view header button:active {
   min-height: 0;
@@ -1413,7 +1405,7 @@ treeview.view header button, treeview.view header button:hover, treeview.view he
   background-image: none;
   border-style: none solid none none;
   border-radius: 0;
-  border-image: linear-gradient(to bottom, transparent 20%, rgba(0, 0, 0, 0.11) 20%, rgba(0, 0, 0, 0.11) 80%, transparent 80%) 0 1 0 0/0 1px 0 0 stretch; }
+  border-image: linear-gradient(to bottom, #ffffff 20%, rgba(0, 0, 0, 0.11) 20%, rgba(0, 0, 0, 0.11) 80%, #ffffff 80%) 0 1 0 0/0 1px 0 0 stretch; }
   treeview.view header button:active, treeview.view header button:hover {
     background-color: #ffffff; }
   treeview.view header button:active:hover {
@@ -1421,6 +1413,9 @@ treeview.view header button, treeview.view header button:hover, treeview.view he
   treeview.view header button:disabled {
     border-color: #F5F6F7;
     background-image: none; }
+  treeview.view header button:last-child {
+    border-right-style: none;
+    border-image: none; }
 
 menubar,
 .menubar {
