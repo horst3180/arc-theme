@@ -2930,8 +2930,6 @@ button.circular-button {
   box-shadow: inset 0px -2px 0px if($variant=='light', transparentize(black, 0.95), transparentize(black, 0.85));
   color: $fg_color;
   padding: 3px 8px 3px 8px;
-
-  border { border-style: none; }
 }
 
 stackswitcher button {

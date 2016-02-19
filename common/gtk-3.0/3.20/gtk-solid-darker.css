@@ -2686,8 +2686,6 @@ button.circular-button {
   box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.05);
   color: #5c616c;
   padding: 3px 8px 3px 8px; }
-  .keycap border {
-    border-style: none; }
 
 stackswitcher button.text-button {
   min-width: 80px; }
