@@ -1600,7 +1600,7 @@ notebook {
     header { margin: -1px; }  // ugly hack to hide the borders around the header
   }
 
-  header {
+  > header {
     $vpadding: 4px;
     $hpadding: 15px;
     padding: 3px;
