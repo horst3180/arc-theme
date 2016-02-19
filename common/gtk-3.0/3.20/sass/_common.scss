@@ -195,10 +195,9 @@ spinner {
 // Text Entries
 //
 entry {
-  min-height: 26px;
+  min-height: 22px;
   border: 1px solid;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding: 2px 8px;
 
   caret-color: currentColor;
   border-radius: 3px;
@@ -305,12 +304,12 @@ $_dot_color: $selected_bg_color;
 button {
   $_button_transition: all 200ms $ease-out-quad;
 
-  min-height: 26px;
+  min-height: 22px;
   min-width: 20px;
   transition: $_button_transition;
   border: 1px solid;
   border-radius: 3px;
-  padding: 0 6px;
+  padding: 2px 6px;
 
   @include button(normal);
 
