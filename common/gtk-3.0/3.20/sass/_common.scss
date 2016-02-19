@@ -1785,106 +1785,71 @@ notebook {
   background-color: $base_color;
   transition: all 200ms $ease-out-quad;
 
-  &.frame {
-    border: 1px solid $borders_color;
-  }
+  &.frame { border: 1px solid $borders_color; }
+
   header {
-    // tab sizing
     $vpadding: 4px;
     $hpadding: 15px;
-
+    padding: 2px;
     background-color: $bg_color;
-
-    .frame & {
-      border: 0px solid $borders_color;
-      &.top { border-bottom-width: 0; }
-      &.bottom { border-top-width: 0; }
-      &.right { border-left-width: 0; }
-      &.left { border-right-width: 0; }
-    }
 
     $_header_border: $borders_color;
 
-    &.top {    box-shadow: inset  0   -1px $_header_border; }
-    &.bottom { box-shadow: inset  0    1px $_header_border; }
-    &.right {  box-shadow: inset  1px  0   $_header_border; }
-    &.left {   box-shadow: inset -1px  0   $_header_border; }
+    // FIXME use borders and margins
+    &.top {    box-shadow: inset  0  -1px $_header_border; }
+    &.bottom { box-shadow: inset  0   1px $_header_border; }
+    &.right {  box-shadow: inset  1px 0   $_header_border; }
+    &.left {   box-shadow: inset -1px 0   $_header_border; }
 
-    @each $_pos in (top, bottom, right, left) {
-     &.#{$_pos} tab {
-        border-width: 0;
-        background-color: transparentize($base_color, 1);
-        padding: $vpadding $hpadding;
+  @each $_pos, $_bpos in (top, bottom), (bottom, top), (right, left), (left, right) {
 
-        border-#{$_pos}: 2px solid transparent;
+      &.#{$_pos} {
+        padding-#{$_bpos}: 0;
 
-        @if $_pos==top or $_pos==bottom {
-          padding-#{$_pos}: $vpadding + 2;
+        tab {
+          padding: $vpadding $hpadding;
+          border: 1px solid transparent;
+          border-#{$_bpos}: none;
 
           &.reorderable-page {
             padding-left: 12px;  // for a nicer close button
             padding-right: 12px; // placement
           }
-        }
 
-        @else if $_pos==left or $_pos==right {
-          padding-#{$_pos}: $hpadding + 2; // FIXME
+          // Tab overlap
+          @if $_pos==top or $_pos==bottom { margin-right: -1px; }
+          @else { margin-bottom: -1px; }
 
-        }
-
-        @if $_pos==top { border-radius: 3.5px 2px 0 0; }
-        @else if $_pos==bottom { border-radius: 0 0 2px 3.5px; }
-        @else if $_pos==left { border-radius: 3.5px 0 0 3.5px; }
-        @else if $_pos==right { border-radius: 0 3.5px 3.5px 0; }
-
-        &:hover {
-          background-color: transparentize($base_color, 0.5);
-          box-shadow: inset 0 1px $borders_color,
-                      inset 0 -1px $borders_color,
-                      inset 1px 0 $borders_color,
-                      inset -1px 0 $borders_color;
-        }
-
-        &:active, &:active:hover {
-          background-color: $base_color;
-
-          @if $_pos==top {
-            box-shadow: inset 0 1px $borders_color,
-                        inset 0 -1px $base_color,
-                        inset 1px 0 $borders_color,
-                        inset -1px 0 $borders_color;
-          }
-          @else if $_pos==bottom {
-            box-shadow: inset 0 -1px $base_color,
-                        inset 0 -1px $borders_color,
-                        inset 1px 0 $borders_color,
-                        inset -1px 0 $borders_color;
-          }
-          @else if $_pos==left {
-            box-shadow: inset 0 1px $borders_color,
-                        inset 0 -1px $borders_color,
-                        inset 1px 0 $borders_color,
-                        inset -1px 0 $base_color;
-          }
-          @else if $_pos==right {
-            box-shadow: inset 0 1px $borders_color,
-                        inset 0 -1px $borders_color,
-                        inset 1px 0 $base_color,
-                        inset -1px 0 $borders_color;
-          }
+          // Tab border radius
+          @if $_pos==top { border-radius: 1px 1px 0 0; }
+          @else if $_pos==bottom { border-radius: 0 0 1px 1px; }
+          @else if $_pos==left { border-radius: 1px 0 0 1px; }
+          @else if $_pos==right { border-radius: 0 1px 1px 0; }
         }
       }
     }
 
     &.top, &.bottom {
-      & tabs arrow.up { -gtk-icon-source: -gtk-icontheme('pan-end-symbolic'); }
-      & tabs arrow.down { -gtk-icon-source: -gtk-icontheme('pan-start-symbolic'); }
+      tabs arrow.up {
+        -gtk-icon-source: -gtk-icontheme('pan-end-symbolic');
+        &:last-child { margin-left: 2px; }
+      }
+      tabs arrow.down {
+        -gtk-icon-source: -gtk-icontheme('pan-start-symbolic');
+        &:first-child { margin-right: 2px; }
+      }
     }
     &.left, &.right {
-      & tabs arrow.up { -gtk-icon-source: -gtk-icontheme('pan-down-symbolic'); }
-      & tabs arrow.down { -gtk-icon-source: -gtk-icontheme('pan-up-symbolic'); }
+      tabs arrow.up {
+        -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
+        &:last-child { margin-top: 2px; }
+      }
+      tabs arrow.down {
+        -gtk-icon-source: -gtk-icontheme('pan-up-symbolic');
+        &:first-child { margin-bottom: 2px; }
+      }
     }
-    & tabs arrow {
+    tabs arrow {
       color: $insensitive_fg_color;
 
       &:hover { color: mix($fg_color, $insensitive_fg_color, 50%); }
@@ -1893,20 +1858,25 @@ notebook {
     }
   }
 
-  tab {
-    label { //tab text
-      padding: 0 2px; // needed for a nicer focus ring
-      color: $insensitive_fg_color;
+  header tab {
+    background-color: transparentize($base_color, 1);
+
+    label { color: $insensitive_fg_color; }
+
+    &:hover {
+      background-color: transparentize($base_color, 0.5);
+      border-color: $borders_color;
+
+      label { color: mix($fg_color, $insensitive_fg_color, 50%); }
     }
-    &:hover label {
-      // prelight tab text
-      color: mix($fg_color, $insensitive_fg_color, 50%);
+    &:active {
+      background-color: $base_color;
+      border-color: $borders_color;
+
+      label { color: $fg_color; }
     }
-    &:active label {
-      // active tab text
-      color: $fg_color;
-    }
-    button { //tab close button
+
+    button {              // close button
       min-height: 18px;
       min-width: 16px;
       padding: 0;

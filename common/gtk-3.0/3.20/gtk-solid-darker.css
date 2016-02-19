@@ -745,7 +745,7 @@ NemoWindow .primary-toolbar NemoPathBar.linked:not(.vertical):not(.path-bar) > b
 
 menuitem.button.flat,
 modelbutton.flat, button:link, button:visited, button:link:hover, button:link:active, button:link:checked, button:visited:hover, button:visited:active, button:visited:checked, menu arrow,
-.menu arrow, notebook tab button, notebook tab button:hover, notebook tab button:active, notebook tab button:active:hover, .app-notification button.flat, .app-notification button.sidebar-button, .app-notification button.flat:disabled, .app-notification button.sidebar-button:disabled, TerminalWindow .notebook tab:active button, TerminalWindow .notebook tab:hover button, TerminalWindow .notebook tab:active button:hover, TerminalWindow .notebook tab:hover button:hover, TerminalWindow .notebook tab:active button:active, TerminalWindow .notebook tab:hover button:active {
+.menu arrow, notebook header tab button, notebook header tab button:hover, notebook header tab button:active, notebook header tab button:active:hover, .app-notification button.flat, .app-notification button.sidebar-button, .app-notification button.flat:disabled, .app-notification button.sidebar-button:disabled, TerminalWindow .notebook tab:active button, TerminalWindow .notebook tab:hover button, TerminalWindow .notebook tab:active button:hover, TerminalWindow .notebook tab:hover button:hover, TerminalWindow .notebook tab:active button:active, TerminalWindow .notebook tab:hover button:active {
   border-color: transparent;
   background-color: transparent;
   background-image: none;
@@ -1627,17 +1627,8 @@ notebook {
   notebook.frame {
     border: 1px solid #dcdfe3; }
   notebook header {
+    padding: 2px;
     background-color: #F5F6F7; }
-    .frame notebook header {
-      border: 0px solid #dcdfe3; }
-      .frame notebook header.top {
-        border-bottom-width: 0; }
-      .frame notebook header.bottom {
-        border-top-width: 0; }
-      .frame notebook header.right {
-        border-left-width: 0; }
-      .frame notebook header.left {
-        border-right-width: 0; }
     notebook header.top {
       box-shadow: inset 0 -1px #dcdfe3; }
     notebook header.bottom {
@@ -1646,72 +1637,66 @@ notebook {
       box-shadow: inset 1px 0 #dcdfe3; }
     notebook header.left {
       box-shadow: inset -1px 0 #dcdfe3; }
-    notebook header.top tab {
-      border-width: 0;
-      background-color: rgba(255, 255, 255, 0);
-      padding: 4px 15px;
-      border-top: 2px solid transparent;
-      padding-top: 6px;
-      border-radius: 3.5px 2px 0 0; }
-      notebook header.top tab.reorderable-page {
-        padding-left: 12px;
-        padding-right: 12px; }
-      notebook header.top tab:hover {
-        background-color: rgba(255, 255, 255, 0.5);
-        box-shadow: inset 0 1px #dcdfe3, inset 0 -1px #dcdfe3, inset 1px 0 #dcdfe3, inset -1px 0 #dcdfe3; }
-      notebook header.top tab:active, notebook header.top tab:active:hover {
-        background-color: #ffffff;
-        box-shadow: inset 0 1px #dcdfe3, inset 0 -1px #ffffff, inset 1px 0 #dcdfe3, inset -1px 0 #dcdfe3; }
-    notebook header.bottom tab {
-      border-width: 0;
-      background-color: rgba(255, 255, 255, 0);
-      padding: 4px 15px;
-      border-bottom: 2px solid transparent;
-      padding-bottom: 6px;
-      border-radius: 0 0 2px 3.5px; }
-      notebook header.bottom tab.reorderable-page {
-        padding-left: 12px;
-        padding-right: 12px; }
-      notebook header.bottom tab:hover {
-        background-color: rgba(255, 255, 255, 0.5);
-        box-shadow: inset 0 1px #dcdfe3, inset 0 -1px #dcdfe3, inset 1px 0 #dcdfe3, inset -1px 0 #dcdfe3; }
-      notebook header.bottom tab:active, notebook header.bottom tab:active:hover {
-        background-color: #ffffff;
-        box-shadow: inset 0 -1px #ffffff, inset 0 -1px #dcdfe3, inset 1px 0 #dcdfe3, inset -1px 0 #dcdfe3; }
-    notebook header.right tab {
-      border-width: 0;
-      background-color: rgba(255, 255, 255, 0);
-      padding: 4px 15px;
-      border-right: 2px solid transparent;
-      padding-right: 17px;
-      border-radius: 0 3.5px 3.5px 0; }
-      notebook header.right tab:hover {
-        background-color: rgba(255, 255, 255, 0.5);
-        box-shadow: inset 0 1px #dcdfe3, inset 0 -1px #dcdfe3, inset 1px 0 #dcdfe3, inset -1px 0 #dcdfe3; }
-      notebook header.right tab:active, notebook header.right tab:active:hover {
-        background-color: #ffffff;
-        box-shadow: inset 0 1px #dcdfe3, inset 0 -1px #dcdfe3, inset 1px 0 #ffffff, inset -1px 0 #dcdfe3; }
-    notebook header.left tab {
-      border-width: 0;
-      background-color: rgba(255, 255, 255, 0);
-      padding: 4px 15px;
-      border-left: 2px solid transparent;
-      padding-left: 17px;
-      border-radius: 3.5px 0 0 3.5px; }
-      notebook header.left tab:hover {
-        background-color: rgba(255, 255, 255, 0.5);
-        box-shadow: inset 0 1px #dcdfe3, inset 0 -1px #dcdfe3, inset 1px 0 #dcdfe3, inset -1px 0 #dcdfe3; }
-      notebook header.left tab:active, notebook header.left tab:active:hover {
-        background-color: #ffffff;
-        box-shadow: inset 0 1px #dcdfe3, inset 0 -1px #dcdfe3, inset 1px 0 #dcdfe3, inset -1px 0 #ffffff; }
+    notebook header.top {
+      padding-bottom: 0; }
+      notebook header.top tab {
+        padding: 4px 15px;
+        border: 1px solid transparent;
+        border-bottom: none;
+        margin-right: -1px;
+        border-radius: 1px 1px 0 0; }
+        notebook header.top tab.reorderable-page {
+          padding-left: 12px;
+          padding-right: 12px; }
+    notebook header.bottom {
+      padding-top: 0; }
+      notebook header.bottom tab {
+        padding: 4px 15px;
+        border: 1px solid transparent;
+        border-top: none;
+        margin-right: -1px;
+        border-radius: 0 0 1px 1px; }
+        notebook header.bottom tab.reorderable-page {
+          padding-left: 12px;
+          padding-right: 12px; }
+    notebook header.right {
+      padding-left: 0; }
+      notebook header.right tab {
+        padding: 4px 15px;
+        border: 1px solid transparent;
+        border-left: none;
+        margin-bottom: -1px;
+        border-radius: 0 1px 1px 0; }
+        notebook header.right tab.reorderable-page {
+          padding-left: 12px;
+          padding-right: 12px; }
+    notebook header.left {
+      padding-right: 0; }
+      notebook header.left tab {
+        padding: 4px 15px;
+        border: 1px solid transparent;
+        border-right: none;
+        margin-bottom: -1px;
+        border-radius: 1px 0 0 1px; }
+        notebook header.left tab.reorderable-page {
+          padding-left: 12px;
+          padding-right: 12px; }
     notebook header.top tabs arrow.up, notebook header.bottom tabs arrow.up {
       -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
+      notebook header.top tabs arrow.up:last-child, notebook header.bottom tabs arrow.up:last-child {
+        margin-left: 2px; }
     notebook header.top tabs arrow.down, notebook header.bottom tabs arrow.down {
       -gtk-icon-source: -gtk-icontheme("pan-start-symbolic"); }
+      notebook header.top tabs arrow.down:first-child, notebook header.bottom tabs arrow.down:first-child {
+        margin-right: 2px; }
     notebook header.left tabs arrow.up, notebook header.right tabs arrow.up {
       -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
+      notebook header.left tabs arrow.up:last-child, notebook header.right tabs arrow.up:last-child {
+        margin-top: 2px; }
     notebook header.left tabs arrow.down, notebook header.right tabs arrow.down {
       -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
+      notebook header.left tabs arrow.down:first-child, notebook header.right tabs arrow.down:first-child {
+        margin-bottom: 2px; }
     notebook header tabs arrow {
       color: rgba(92, 97, 108, 0.55); }
       notebook header tabs arrow:hover {
@@ -1720,22 +1705,29 @@ notebook {
         color: #5c616c; }
       notebook header tabs arrow:disabled {
         color: rgba(92, 97, 108, 0.25); }
-  notebook tab label {
-    padding: 0 2px;
-    color: rgba(92, 97, 108, 0.55); }
-  notebook tab:hover label {
-    color: rgba(92, 97, 108, 0.775); }
-  notebook tab:active label {
-    color: #5c616c; }
-  notebook tab button {
-    min-height: 18px;
-    min-width: 16px;
-    padding: 0;
-    color: #92959d; }
-    notebook tab button:hover {
-      color: #ff4d4d; }
-    notebook tab button:active, notebook tab button:active:hover {
-      color: #5294E2; }
+  notebook header tab {
+    background-color: rgba(255, 255, 255, 0); }
+    notebook header tab label {
+      color: rgba(92, 97, 108, 0.55); }
+    notebook header tab:hover {
+      background-color: rgba(255, 255, 255, 0.5);
+      border-color: #dcdfe3; }
+      notebook header tab:hover label {
+        color: rgba(92, 97, 108, 0.775); }
+    notebook header tab:active {
+      background-color: #ffffff;
+      border-color: #dcdfe3; }
+      notebook header tab:active label {
+        color: #5c616c; }
+    notebook header tab button {
+      min-height: 18px;
+      min-width: 16px;
+      padding: 0;
+      color: #92959d; }
+      notebook header tab button:hover {
+        color: #ff4d4d; }
+      notebook header tab button:active, notebook header tab button:active:hover {
+        color: #5294E2; }
 
 * {
   -GtkRange-slider-width: 13;
