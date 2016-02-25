@@ -63,7 +63,7 @@ iconview {
   color: #5c616c;
   background-color: #ffffff; }
   iconview:selected, iconview:selected:focus {
-    border-radius: 3px; }
+    border-radius: 2px; }
 
 rubberband, flowbox rubberband, treeview.view rubberband, .content-view rubberband,
 .rubberband {
@@ -158,8 +158,8 @@ entry {
     border-color: #cfd6e6;
     background-color: #ffffff;
     background-image: linear-gradient(to bottom, #ffffff);
-    padding-left: 2px;
-    padding-right: 2px;
+    min-height: 0;
+    padding: 2px;
     border: none;
     border-radius: 0; }
   entry:focus {
@@ -178,7 +178,7 @@ entry {
     background-color: #5294E2;
     color: #ffffff; }
   entry progress {
-    margin: 2px 12px;
+    margin: 0 -6px;
     border-radius: 0;
     border-width: 0 0 2px;
     border-color: #5294E2;
@@ -420,13 +420,25 @@ button {
       background-color: rgba(251, 251, 252, 0.55); }
       button.destructive-action:disabled > label {
         color: inherit; }
+  button.image-button {
+    min-width: 32px;
+    padding-left: 0;
+    padding-right: 0; }
   button.text-button {
     padding-left: 16px;
     padding-right: 16px; }
-  button.text-button.image-button label:first-child {
-    padding-left: 8px; }
-  button.text-button.image-button label:last-child {
-    padding-right: 8px; }
+  button.text-button.image-button {
+    padding-left: 0;
+    padding-right: 0; }
+    button.text-button.image-button label:first-child {
+      padding-left: 12px;
+      padding-right: 0; }
+    button.text-button.image-button label:last-child {
+      padding-left: 0;
+      padding-right: 12px; }
+    button.text-button.image-button image {
+      padding-left: 6px;
+      padding-right: 6px; }
   .stack-switcher > button {
     outline-offset: -3px; }
     .stack-switcher > button > label {
@@ -722,6 +734,9 @@ button:link > label, button:visited > label {
 
 spinbutton button:active {
   color: #ffffff; }
+
+spinbutton:disabled {
+  color: rgba(92, 97, 108, 0.55); }
 
 spinbutton:not(.vertical) button, spinbutton:not(.vertical) entry {
   padding-top: 0;
@@ -1257,12 +1272,6 @@ headerbar entry, headerbar button, headerbar separator, headerbar .sidebar separ
   .primary-toolbar scale trough:disabled, headerbar scale trough:disabled {
     background-image: linear-gradient(to bottom, rgba(21, 23, 28, 0.3)); }
 
-.path-bar button:first-child {
-  padding-left: 10px; }
-
-.path-bar button:last-child {
-  padding-right: 10px; }
-
 .path-bar button:only-child {
   padding-left: 10px;
   padding-right: 10px; }
@@ -1326,36 +1335,41 @@ treeview.view {
     border-radius: 3px;
     border-width: 0; }
   treeview.view header button {
+    min-height: 0;
+    min-width: 0;
+    padding: 3px 6px;
+    font-weight: bold;
     color: #7d8189;
     background-color: #ffffff;
-    font-weight: bold; }
+    background-image: none;
+    border-style: none solid none none;
+    border-radius: 0;
+    border-image: linear-gradient(to bottom, #ffffff 20%, rgba(0, 0, 0, 0.11) 20%, rgba(0, 0, 0, 0.11) 80%, #ffffff 80%) 0 1 0 0/0 1px 0 0 stretch; }
     treeview.view header button:hover {
       color: #5294E2; }
     treeview.view header button:active {
       color: #5c616c; }
-    treeview.view header button.dnd, treeview.view header button.dnd:selected, treeview.view header button.dnd:hover {
-      transition: none;
-      color: #5294E2;
-      box-shadow: inset 1px 1px 0 1px #5294E2, inset -1px 0 0 1px #5294E2, inset 1px 1px #ffffff, inset -1px 0 #ffffff; }
-
-treeview.view header button {
-  min-height: 0;
-  min-width: 0;
-  padding: 3px 6px;
-  background-image: none;
-  border-style: none solid none none;
-  border-radius: 0;
-  border-image: linear-gradient(to bottom, #ffffff 20%, rgba(0, 0, 0, 0.11) 20%, rgba(0, 0, 0, 0.11) 80%, #ffffff 80%) 0 1 0 0/0 1px 0 0 stretch; }
-  treeview.view header button:active, treeview.view header button:hover {
-    background-color: #ffffff; }
-  treeview.view header button:active:hover {
-    color: #5c616c; }
-  treeview.view header button:disabled {
-    border-color: #F5F6F7;
-    background-image: none; }
-  treeview.view header button:last-child {
-    border-right-style: none;
-    border-image: none; }
+    treeview.view header button:active, treeview.view header button:hover {
+      background-color: #ffffff; }
+    treeview.view header button:active:hover {
+      color: #5c616c; }
+    treeview.view header button:disabled {
+      border-color: #F5F6F7;
+      background-image: none; }
+    treeview.view header button:last-child {
+      border-right-style: none;
+      border-image: none; }
+  treeview.view button.dnd, treeview.view button.dnd:selected, treeview.view button.dnd:hover, treeview.view button.dnd:active,
+  treeview.view header.button.dnd,
+  treeview.view header.button.dnd:selected,
+  treeview.view header.button.dnd:hover,
+  treeview.view header.button.dnd:active {
+    padding: 0 6px;
+    transition: none;
+    color: #ffffff;
+    background-color: #5294E2;
+    border-radius: 0;
+    border-style: none; }
 
 menubar,
 .menubar {
@@ -2052,6 +2066,14 @@ levelbar block.empty {
   background-color: rgba(92, 97, 108, 0.2);
   border-color: rgba(92, 97, 108, 0.2); }
 
+printdialog paper {
+  border: 1px solid #dcdfe3;
+  background: white;
+  padding: 0; }
+
+printdialog .dialog-action-box {
+  margin: 12px; }
+
 frame border,
 .frame {
   margin: 0;
@@ -2062,11 +2084,6 @@ frame border,
   frame border.flat,
   .frame.flat {
     border-style: none; }
-
-paper {
-  border: 1px solid #dcdfe3;
-  background: white;
-  padding: 0; }
 
 scrolledwindow viewport.frame, placessidebar viewport.frame {
   border-style: none; }
@@ -2296,9 +2313,12 @@ messagedialog.csd .dialog-action-area button:only-child {
   border-left-style: none;
   border-right-style: none; }
 
+filechooser #pathbarbox {
+  border-bottom: 1px solid rgba(220, 223, 227, 0.5); }
+
 .sidebar, .sidebar .view {
   border: none;
-  background-color: #F5F6F7; }
+  background-color: #fbfbfc; }
 
 stacksidebar row {
   padding: 10px 4px; }
@@ -2312,9 +2332,10 @@ placessidebar list {
   background-color: transparent; }
 
 placessidebar row {
+  min-height: 30px;
   padding: 0px; }
   placessidebar row > revealer {
-    padding: 8px 10px; }
+    padding: 0 10px; }
   placessidebar row image.sidebar-icon:dir(ltr) {
     padding-right: 8px; }
   placessidebar row image.sidebar-icon:dir(rtl) {
@@ -2324,8 +2345,10 @@ placessidebar row {
   placessidebar row label.sidebar-label:dir(rtl) {
     padding-left: 2px; }
   button.sidebar-button {
-    min-width: 26px;
-    min-height: 26px;
+    min-width: 22px;
+    min-height: 22px;
+    margin-top: 2px;
+    margin-bottom: 2px;
     padding: 0;
     border-radius: 100%;
     -gtk-outline-radius: 100%; }
@@ -2521,16 +2544,11 @@ button.color {
   .content-view:hover {
     -gtk-icon-effect: highlight; }
 
-.scale-popup button {
-  padding: 6px; }
-  .scale-popup button:hover {
-    color: #5c616c;
-    outline-color: rgba(92, 97, 108, 0.3);
-    border-color: #cfd6e6;
-    background-color: white; }
-
-button.scale {
-  padding: 8px; }
+.scale-popup button:hover {
+  color: #5c616c;
+  outline-color: rgba(92, 97, 108, 0.3);
+  border-color: #cfd6e6;
+  background-color: white; }
 
 .context-menu, popover.touch-selection,
 popover.background.touch-selection {
@@ -2551,12 +2569,14 @@ button.circular-button {
     padding: 0; }
 
 .keycap {
+  min-width: 16px;
+  min-height: 20px;
+  padding: 3px 6px 4px 6px;
+  color: #5c616c;
   background-color: #ffffff;
   border: 1px solid #dcdfe3;
-  border-radius: 2px;
-  box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.05);
-  color: #5c616c;
-  padding: 3px 8px 3px 8px; }
+  border-radius: 2.5px;
+  box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.05); }
 
 stackswitcher button.text-button {
   min-width: 80px; }
@@ -2566,7 +2586,8 @@ stackswitcher button.circular {
 
 *:drop(active):focus,
 *:drop(active) {
-  border: 1px solid black; }
+  border-color: black;
+  box-shadow: inset 0 0 0 1px black; }
 
 decoration {
   border-radius: 3px 3px 0 0;
@@ -2575,15 +2596,16 @@ decoration {
   margin: 10px; }
   decoration:backdrop {
     box-shadow: 0 0 0 1px rgba(32, 35, 43, 0.9), 0 8px 8px 0 transparent, 0 5px 5px 0 rgba(0, 0, 0, 0.2); }
+  .fullscreen decoration,
   .tiled decoration {
     border-radius: 0; }
   .popup decoration, decoration.popup {
     box-shadow: none;
     border-radius: 0; }
-  .ssd decoration, decoration.ssd {
+  .ssd decoration {
     border-radius: 3px 3px 0 0;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.65); }
-    .ssd decoration.maximized, decoration.ssd.maximized {
+    .ssd decoration.maximized {
       border-radius: 0; }
   .csd.popup decoration {
     border-radius: 2px;
@@ -3418,16 +3440,16 @@ GtkListBox .h4 {
 
 .nautilus-window paned > separator, .nautilus-window .sidebar paned > separator, .nautilus-window .sidebar .view paned > separator, .sidebar .view .nautilus-window paned > separator {
   background: #353945; }
+  .nautilus-window paned > separator:dir(ltr), .nautilus-window .sidebar paned > separator:dir(ltr), .nautilus-window .sidebar .view paned > separator:dir(ltr), .sidebar .view .nautilus-window paned > separator:dir(ltr) {
+    margin-left: -1px; }
+  .nautilus-window paned > separator:dir(rtl), .nautilus-window .sidebar paned > separator:dir(rtl), .nautilus-window .sidebar .view paned > separator:dir(rtl), .sidebar .view .nautilus-window paned > separator:dir(rtl) {
+    margin-right: -1px; }
 
 .nautilus-window.csd.background, .nautilus-window placessidebar list {
   background-color: transparent; }
 
 .nautilus-window placessidebar.sidebar {
   background-color: #353945; }
-  .nautilus-window placessidebar.sidebar:dir(ltr) {
-    margin-right: -1px; }
-  .nautilus-window placessidebar.sidebar:dir(rtl) {
-    margin-left: -1px; }
   .nautilus-window placessidebar.sidebar row.sidebar-placeholder-row {
     border: 1px solid #5294E2; }
   .nautilus-window placessidebar.sidebar row.sidebar-new-bookmark-row {
@@ -3447,20 +3469,24 @@ GtkListBox .h4 {
 .nautilus-window.maximized placessidebar.sidebar {
   background-color: #353945; }
 
-.nautilus-window .sidebar-button.button {
+.nautilus-window button.sidebar-button {
   color: #BAC3CF; }
-  .nautilus-window .sidebar-button.button:hover {
+  .nautilus-window button.sidebar-button:hover {
     color: #BAC3CF;
     outline-color: rgba(186, 195, 207, 0.3);
     border-color: rgba(26, 28, 34, 0.4);
     background-color: rgba(119, 127, 151, 0.5); }
-  .nautilus-window .sidebar-button.button:active {
+  .nautilus-window button.sidebar-button:active {
     color: #ffffff;
     outline-color: rgba(255, 255, 255, 0.3);
-    border-color: rgba(26, 28, 34, 0.4);
+    border-color: #5294E2;
     background-color: #5294E2; }
-  .nautilus-window .sidebar-button.button:not(:hover):not(:active) > image {
+  .nautilus-window button.sidebar-button:not(:hover):not(:active) > image {
     opacity: 0.5; }
+
+.nautilus-window searchbar {
+  border-color: transparent;
+  box-shadow: inset 0 -1px #dcdfe3; }
 
 .gedit-bottom-panel-paned {
   background-color: #ffffff; }

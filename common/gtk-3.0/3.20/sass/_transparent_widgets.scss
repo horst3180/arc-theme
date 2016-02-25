@@ -3,7 +3,12 @@
 //GtkFileChooserDialog,
 //NemoWindow,
 .nautilus-window {
-  paned > separator { background: $dark_sidebar_bg; }
+  paned > separator {
+    background: $dark_sidebar_border;
+
+    &:dir(ltr) { margin-left: -1px; }
+    &:dir(rtl) { margin-right: -1px; }
+  }
 }
 
 // Dark transparent sidebars
@@ -13,14 +18,6 @@
   &.csd.background, placessidebar list { background-color: transparent; }
 
   placessidebar.sidebar {
-
-    &:dir(ltr) { margin-right: -1px; }
-    &:dir(rtl) { margin-left: -1px; }
-
-    @if $variant=='dark' {
-      &:dir(ltr) { border-right: 1px solid $dark_sidebar_border; }
-      &:dir(rtl) { border-left: 1px solid $dark_sidebar_border; }
-    }
 
     background-color: $dark_sidebar_bg;
 
@@ -49,13 +46,19 @@
 
   &.maximized placessidebar.sidebar { background-color: opacify($dark_sidebar_bg, 1); }
 
-  .sidebar-button.button {
+  button.sidebar-button {
     color: $dark_sidebar_fg;
 
     &:hover { @include button(osd-hover); }
-    &:active { @include button(osd-active); }
+    &:active { @include button(active); }
 
     &:not(:hover):not(:active) > image { opacity: 0.5 };
+  }
+
+  searchbar {
+    // Workaround for https://bugzilla.gnome.org/show_bug.cgi?id=724096
+    border-color: transparent;
+    box-shadow: inset 0 -1px $borders_color;
   }
 }
 
