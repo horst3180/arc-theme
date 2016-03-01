@@ -1613,10 +1613,10 @@ notebook {
         border-color: #dcdfe3; }
         notebook > header tab:hover label {
           color: rgba(92, 97, 108, 0.775); }
-      notebook > header tab:active {
+      notebook > header tab:checked {
         background-color: #ffffff;
         border-color: #dcdfe3; }
-        notebook > header tab:active label {
+        notebook > header tab:checked label {
           color: #5c616c; }
       notebook > header tab button {
         min-height: 18px;

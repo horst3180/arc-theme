@@ -1697,7 +1697,7 @@ notebook {
 
         label { color: mix($fg_color, $insensitive_fg_color, 50%); }
       }
-      &:active {
+      &:checked {
         background-color: $base_color;
         border-color: $borders_color;
 
