@@ -594,15 +594,16 @@ ClockBox {
     color: $panel_fg;
     background-color: transparentize($panel_bg, 1);
     border-radius: 0;
+    border: none;
 
     &:hover {
       border: none;
       background-color: lighten($panel_bg, 10%);
     }
     &:active, &:checked {
-      color: $selected_bg_color;
+      color: $selected_fg_color;
       border: none;
-      background-color: darken($panel_bg, 7%);
+      background-color: $selected_bg_color;
     }
   }
 }

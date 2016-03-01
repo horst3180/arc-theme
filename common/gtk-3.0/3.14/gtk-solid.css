@@ -3060,14 +3060,15 @@ ClockBox {
   .xfce4-panel.panel .button.flat {
     color: #BAC3CF;
     background-color: rgba(43, 46, 55, 0);
-    border-radius: 0; }
+    border-radius: 0;
+    border: none; }
     .xfce4-panel.panel .button.flat:hover {
       border: none;
       background-color: #414654; }
     .xfce4-panel.panel .button.flat:active, .xfce4-panel.panel .button.flat:checked {
-      color: #5294E2;
+      color: #ffffff;
       border: none;
-      background-color: #1b1d23; }
+      background-color: #5294E2; }
 
 .floating-bar {
   background-color: #5294E2;
