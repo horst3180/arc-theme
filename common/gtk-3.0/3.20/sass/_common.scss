@@ -1732,15 +1732,8 @@ $_scrollbar_bg_color: darken($base_color, 1%);
 
 scrollbar {
   @at-root * {
-    -GtkRange-slider-width: 13;
-    -GtkRange-trough-border: 0;
     -GtkScrollbar-has-backward-stepper: false;
     -GtkScrollbar-has-forward-stepper: false;
-    -GtkScrollbar-min-slider-length: 42; // minimum size for the slider.
-                                         // sadly can't be in '.slider'
-                                         // where it belongs
-    -GtkRange-stepper-spacing: 0;
-    -GtkRange-trough-under-steppers: 1;
   }
 
   $_slider_margin: 3px;
@@ -1748,11 +1741,27 @@ scrollbar {
 
   button { border: none; }
 
+  &.vertical {
+    button.down {
+      -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
+    }
+    button.up {
+      -gtk-icon-source: -gtk-icontheme('pan-up-symbolic');
+    }
+  }
+
+  &.horizontal {
+    button.down {
+      -gtk-icon-source: -gtk-icontheme('pan-right-symbolic');
+    }
+    button.up {
+      -gtk-icon-source: -gtk-icontheme('pan-left-symbolic');
+    }
+  }
+
   &.overlay-indicator {
     &:not(.dragging):not(.hovering) { // Overlay scrolling indicator
       opacity: 0.4;
-
-      -GtkRange-slider-width: 6px;
 
       slider {
         margin: 0;
@@ -1766,17 +1775,17 @@ scrollbar {
         background-color: transparent;
       }
 
-      // w/o the following margin tweaks the slider shrinks when hovering/dragging
       &.vertical slider {
+        min-width: 4px;
         margin-top: $_slider_margin - 1px;
         margin-bottom: $_slider_margin - 1px;
       }
 
       &.horizontal slider {
+        min-height: 4px;
         margin-left: $_slider_margin - 1px;
         margin-right: $_slider_margin - 1px;
       }
-
     }
 
     &.dragging,
@@ -1808,42 +1817,37 @@ scrollbar {
     margin: $_slider_margin;
   }
 
-  &.fine-tune slider { margin: $_slider_fine_tune_margin; }
-
   &.vertical {
 
-    slider {
-      margin-left: 1px + $_slider_margin;
-
-      &:dir(rtl) {
-        margin-left: $_slider_margin;
-        margin-right: 1px + $_slider_margin;
-      }
+    &.fine-tune slider {
+      min-width: 4px;
+      margin: $_slider_fine_tune_margin;
     }
 
-    &.fine-tune .slider {
-      margin-left: 1px + $_slider_fine_tune_margin;
-
-      &:dir(rtl) {
-        margin-left: $_slider_fine_tune_margin;
-        margin-right: 1px + $_slider_fine_tune_margin;
-      }
+    slider {
+      min-height: 42px;
+      min-width: 6px;
+      margin: $_slider_margin;
     }
 
     trough {
-      border-left-style: solid;
-
-      &:dir(rtl) {
-        border-left-style: none;
-        border-right-style: solid;
-      }
+      &:dir(ltr) { border-left-style: solid; }
+      &:dir(rtl) { border-right-style: solid; }
     }
   }
 
   &.horizontal {
-    slider { margin-top: 1px + $_slider_margin; }
 
-    &.fine-tune slider { margin-top: 1px + $_slider_fine_tune_margin; }
+    &.fine-tune slider {
+      min-height: 4px;
+      margin: $_slider_fine_tune_margin;
+    }
+
+    slider {
+      min-height: 6px;
+      min-width: 42px;
+      margin-top: $_slider_margin;
+    }
 
     trough { border-top-style: solid; }
   }
@@ -1970,19 +1974,34 @@ checkbutton check {
 // GtkScale
 //
 scale {
-  -GtkScale-slider-length: 15;
-  -GtkRange-slider-width: 15;
-  -GtkRange-trough-border: 0;
-  outline-offset: -1px;
-  -gtk-outline-radius: 2px;
+  min-height: 9px;
+  min-width: 9px;
+  padding: 5px;
 
-  marks { color: gtkalpha(currentColor, 0.7); }
+  marks {
+    color: gtkalpha(currentColor, 0.3);
+
+    &.top { margin-bottom: -4px; }
+    &.bottom { margin-top: -4px; }
+    &.left { margin-right: -4px; }
+    &.right { margin-left: -4px; }
+  }
+
+  &.horizontal mark indicator {
+    min-height: 3px;
+    min-width: 1px;
+  }
+  &.vertical mark indicator {
+    min-height: 1px;
+    min-width: 3px;
+  }
 
   &.fine-tune {
-    trough, fill, highlight {
-    border-radius: 5px;
-    margin: 3px;
-    }
+    padding: 3px;
+
+    trough, fill, highlight { border-radius: 5px; }
+
+    slider { margin: -4px; }
   }
 
   trough, fill, highlight {
@@ -1992,6 +2011,9 @@ scale {
   slider {
     $_slider_border: if($variant=='light', transparentize(darken($button_border,25%), 0.5), darken($button_border,2%));
 
+    min-width: 15px;
+    min-height: 15px;
+    margin: -6px;
     background-clip: border-box;
     background-image: linear-gradient(to bottom, $button_bg);
     border: 1px solid $_slider_border;
@@ -2044,6 +2066,8 @@ scale {
   trough {
     $_scale_trough_bg: if($variant == 'light', $button_border, darken($bg_color, 5%));
 
+    outline-offset: 2px;
+    -gtk-outline-radius: 2px;
     margin: 5px;
     border: none;
     background-image: linear-gradient(to bottom, $_scale_trough_bg);

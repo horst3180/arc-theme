@@ -1633,20 +1633,26 @@ notebook {
           color: #5294E2; }
 
 * {
-  -GtkRange-slider-width: 13;
-  -GtkRange-trough-border: 0;
   -GtkScrollbar-has-backward-stepper: false;
-  -GtkScrollbar-has-forward-stepper: false;
-  -GtkScrollbar-min-slider-length: 42;
-  -GtkRange-stepper-spacing: 0;
-  -GtkRange-trough-under-steppers: 1; }
+  -GtkScrollbar-has-forward-stepper: false; }
 
 scrollbar button {
   border: none; }
 
+scrollbar.vertical button.down {
+  -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
+
+scrollbar.vertical button.up {
+  -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
+
+scrollbar.horizontal button.down {
+  -gtk-icon-source: -gtk-icontheme("pan-right-symbolic"); }
+
+scrollbar.horizontal button.up {
+  -gtk-icon-source: -gtk-icontheme("pan-left-symbolic"); }
+
 scrollbar.overlay-indicator:not(.dragging):not(.hovering) {
-  opacity: 0.4;
-  -GtkRange-slider-width: 6px; }
+  opacity: 0.4; }
   scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider {
     margin: 0;
     background-color: #8a8e96;
@@ -1656,9 +1662,11 @@ scrollbar.overlay-indicator:not(.dragging):not(.hovering) {
     border-style: none;
     background-color: transparent; }
   scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical slider {
+    min-width: 4px;
     margin-top: 2px;
     margin-bottom: 2px; }
   scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal slider {
+    min-height: 4px;
     margin-left: 2px;
     margin-right: 2px; }
 
@@ -1682,32 +1690,29 @@ scrollbar slider {
   border-radius: 100px;
   margin: 3px; }
 
-scrollbar.fine-tune slider {
+scrollbar.vertical.fine-tune slider {
+  min-width: 4px;
   margin: 4px; }
 
 scrollbar.vertical slider {
-  margin-left: 4px; }
-  scrollbar.vertical slider:dir(rtl) {
-    margin-left: 3px;
-    margin-right: 4px; }
+  min-height: 42px;
+  min-width: 6px;
+  margin: 3px; }
 
-scrollbar.vertical.fine-tune .slider {
-  margin-left: 5px; }
-  scrollbar.vertical.fine-tune .slider:dir(rtl) {
-    margin-left: 4px;
-    margin-right: 5px; }
-
-scrollbar.vertical trough {
+scrollbar.vertical trough:dir(ltr) {
   border-left-style: solid; }
-  scrollbar.vertical trough:dir(rtl) {
-    border-left-style: none;
-    border-right-style: solid; }
 
-scrollbar.horizontal slider {
-  margin-top: 4px; }
+scrollbar.vertical trough:dir(rtl) {
+  border-right-style: solid; }
 
 scrollbar.horizontal.fine-tune slider {
-  margin-top: 5px; }
+  min-height: 4px;
+  margin: 4px; }
+
+scrollbar.horizontal slider {
+  min-height: 6px;
+  min-width: 42px;
+  margin-top: 3px; }
 
 scrollbar.horizontal trough {
   border-top-style: solid; }
@@ -1918,19 +1923,37 @@ checkbutton check {
     margin: 0; }
 
 scale {
-  -GtkScale-slider-length: 15;
-  -GtkRange-slider-width: 15;
-  -GtkRange-trough-border: 0;
-  outline-offset: -1px;
-  -gtk-outline-radius: 2px; }
+  min-height: 9px;
+  min-width: 9px;
+  padding: 5px; }
   scale marks {
-    color: alpha(currentColor,0.7); }
-  scale.fine-tune trough, scale.fine-tune fill, scale.fine-tune highlight {
-    border-radius: 5px;
-    margin: 3px; }
+    color: alpha(currentColor,0.3); }
+    scale marks.top {
+      margin-bottom: -4px; }
+    scale marks.bottom {
+      margin-top: -4px; }
+    scale marks.left {
+      margin-right: -4px; }
+    scale marks.right {
+      margin-left: -4px; }
+  scale.horizontal mark indicator {
+    min-height: 3px;
+    min-width: 1px; }
+  scale.vertical mark indicator {
+    min-height: 1px;
+    min-width: 3px; }
+  scale.fine-tune {
+    padding: 3px; }
+    scale.fine-tune trough, scale.fine-tune fill, scale.fine-tune highlight {
+      border-radius: 5px; }
+    scale.fine-tune slider {
+      margin: -4px; }
   scale trough, scale fill, scale highlight {
     border-radius: 2.5px; }
   scale slider {
+    min-width: 15px;
+    min-height: 15px;
+    margin: -6px;
     background-clip: border-box;
     background-image: linear-gradient(to bottom, #fbfbfc);
     border: 1px solid rgba(123, 142, 186, 0.5);
@@ -1970,6 +1993,8 @@ scale {
         background-image: linear-gradient(to bottom, #b1cff2);
         border-color: #b1cff2; }
   scale trough {
+    outline-offset: 2px;
+    -gtk-outline-radius: 2px;
     margin: 5px;
     border: none;
     background-image: linear-gradient(to bottom, #cfd6e6); }
