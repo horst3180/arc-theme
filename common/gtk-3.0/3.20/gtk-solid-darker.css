@@ -738,10 +738,9 @@ spinbutton button:active {
 spinbutton:disabled {
   color: rgba(92, 97, 108, 0.55); }
 
-spinbutton:not(.vertical) button, spinbutton:not(.vertical) entry {
-  padding-top: 0;
-  padding-bottom: 0;
-  min-height: 0; }
+spinbutton:not(.vertical):dir(ltr) entry,
+spinbutton:not(.vertical):dir(rtl) button.up {
+  border-radius: 3px 0 0 3px; }
 
 spinbutton:not(.vertical) > button + button {
   border-left-style: none; }
@@ -751,6 +750,7 @@ spinbutton:not(.vertical) > button:hover + button {
   box-shadow: inset 1px 0 #cfd6e6; }
 
 spinbutton:not(.vertical) > button:first-child:hover:not(:active),
+spinbutton:not(.vertical) > button.up:dir(rtl):hover:not(:active),
 spinbutton:not(.vertical) > entry + button:not(:active):hover {
   box-shadow: none; }
 
@@ -761,6 +761,9 @@ spinbutton.vertical button, spinbutton.vertical entry {
   padding-left: 4px;
   padding-right: 4px;
   min-width: 0; }
+
+spinbutton.vertical button.up {
+  border-radius: 3px 3px 0 0; }
 
 spinbutton.vertical > entry:focus + button {
   border-top-color: #5294E2; }

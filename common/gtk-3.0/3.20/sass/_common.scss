@@ -743,19 +743,18 @@ spinbutton {
   &:disabled { color: $insensitive_fg_color; }
 
   &:not(.vertical) {
-    button, entry {
-      padding-top: 0;
-      padding-bottom: 0;
-      min-height: 0;
+    button, entry { @extend %linked; }
 
-      @extend %linked;
-    }
+    &:dir(ltr) entry,
+    &:dir(rtl) button.up { border-radius: 3px 0 0 3px; }
+
     > button + button { border-left-style: none; }
 
     > button:hover:not(:active),
     > button:hover + button { box-shadow: inset 1px 0 $button_border; }
 
     > button:first-child:hover:not(:active),
+    > button.up:dir(rtl):hover:not(:active),
     > entry + button:not(:active):hover { box-shadow: none; }
 
     > entry:focus + button { border-left-color: if($variant=='light', $selected_bg_color, $entry_border); }
@@ -768,6 +767,9 @@ spinbutton {
 
       @extend %linked_vertical;
     }
+
+    button.up { border-radius: 3px 3px 0 0; }
+
     > entry:focus + button { border-top-color: if($variant=='light', $selected_bg_color, $entry_border); }
   }
 }
