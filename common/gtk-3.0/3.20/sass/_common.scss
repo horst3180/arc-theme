@@ -77,7 +77,7 @@ textview text {
   selection:hover {
     @extend %selected_items;
   }
-  &.dim-label { 
+  &.dim-label {
     color: transparentize($text_color, 0.45);
 
     selection, selection:focus {
@@ -85,6 +85,10 @@ textview text {
       text-shadow: none;
     }
   }
+}
+
+textview { // This will get overridden by .view, needed by gedit line numbers
+  background-color: mix($bg_color, $base_color, 50%);
 }
 
 iconview {
@@ -114,7 +118,7 @@ flowbox {
     &:selected {
       outline-offset: -2px;
 
-      @extend %selected_items
+      @extend %selected_items;
     }
   }
 }
@@ -146,18 +150,14 @@ assistant {
     &:dir(ltr) { border-right: 1px solid $borders_color; }
     &:dir(rtl) { border-left: 1px solid $borders_color; }
   }
+
   &.csd .sidebar { border-top-style: none; }
-  .sidebar label {
-    padding: 6px 12px;
-  }
+  .sidebar label { padding: 6px 12px; }
+
   .sidebar label.highlight {
     background-color: $selected_bg_color;
     color: $selected_fg_color;
   }
-}
-
-textview { // This will get overridden by .view, needed by gedit line numbers
-  background-color: mix($bg_color, $base_color, 50%);
 }
 
 %osd, .osd {
@@ -433,27 +433,12 @@ button {
   }
 
   &.text-button.image-button {
-    // those buttons needs uneven horizontal padding, we want the icon side
-    // to have the image-button padding, while the text side the text-button
-    // one, so we're adding the missing padding to the label depending on
-    // its position inside the button
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 8px;
+    padding-right: 8px;
 
     label {
-      &:first-child {
-        padding-left: 12px;
-        padding-right: 0;
-      }
-      &:last-child {
-        padding-left: 0;
-        padding-right: 12px;
-      }
-    }
-
-    image {
-      padding-left: 6px;
-      padding-right: 6px;
+      padding-left: 8px;
+      padding-right: 8px;
     }
   }
 
@@ -728,6 +713,7 @@ modelbutton.flat arrow {
 button:link, button:visited {
   @extend %undecorated_button;
   @extend *:link;
+
   &:hover, &:active, &:checked {
     @extend %undecorated_button;
   }
@@ -1345,7 +1331,7 @@ treeview.view {
   &:selected {
     border-radius: 0;
     border-left-color: mix($selected_fg_color, $selected_bg_color, 50%);
-    border-top-color: transparentize($fg_color, 0.9);   // doesn't work unfortunatelly
+    border-top-color: transparentize($fg_color, 0.9);   // doesn't work unfortunately
 
     @extend %selected_items;
   }
@@ -1357,7 +1343,10 @@ treeview.view {
     }
   }
 
-  &.separator { min-height: 2px; }
+  &.separator {
+    min-height: 2px;
+    color: transparentize(black, 0.9);
+  }
 
   &.dnd {
     border-style: solid none;
@@ -1367,6 +1356,7 @@ treeview.view {
 
   &.expander {
     -gtk-icon-source: -gtk-icontheme('pan-end-symbolic');
+
     &:dir(rtl) { -gtk-icon-source: -gtk-icontheme('pan-end-symbolic-rtl'); }
 
     color: mix($fg_color, $base_color, 50%);
@@ -1378,9 +1368,7 @@ treeview.view {
       &:hover { color: $selected_fg_color; }
     }
 
-    &:checked {
-      -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
-    }
+    &:checked { -gtk-icon-source: -gtk-icontheme('pan-down-symbolic'); }
   }
 
   &.progressbar { // progress bar in treeviews
@@ -1466,7 +1454,7 @@ menubar,
     //background-color: opacify($header_bg_backdrop, 1);
   }
 
-  & > menuitem {
+  > menuitem {
     padding: 6px 8px;
     border: solid transparent;
     border-width: 0;
@@ -1504,8 +1492,9 @@ menu,
   }
 
   menuitem {
-    padding: 4px;
+    min-height: 16px;
     min-width: 40px;
+    padding: 4px;
     border: solid transparent;
     border-width: 1px 0 1px 0;
     &:hover {
@@ -1592,9 +1581,11 @@ popover.background {
     border-style: none;
     background-color: transparent;
   }
-  &.osd, &.magnifier { @extend %osd; }
 
-  &.touch-selection { @extend .context-menu }
+  &, .csd & {
+    &.osd, &.magnifier { @extend %osd; }
+    &.touch-selection { @extend .context-menu }
+  }
 }
 
 //touch selection handlebars for the Popover.osd above
@@ -1955,6 +1946,7 @@ checkbutton, radiobutton {
     &.text-button {
     padding: 1px 2px 4px;
     outline-offset: 0;
+
     &:disabled,
     &:disabled:active,
     &:disabled:indeterminate {
@@ -2162,7 +2154,6 @@ progressbar {
 // Level Bar
 //
 levelbar {
-
   block {
     min-width: 32px;
     min-height: 1px;
@@ -2277,13 +2268,12 @@ separator {
 list {
   background-color: $base_color;
   border-color: $borders_color;
+
+  row { padding: 2px; }
 }
 
-row { padding: 2px; }
-
 row.activatable {
-
-  &.has-open-popup, // this is for indicathing which row generated a popover see https://bugzilla.gnome.org/show_bug.cgi?id=754411
+  &.has-open-popup,
   &:hover { background-color: if($variant == 'light', transparentize(black, 0.95), transparentize(white, 0.97)); }
 
   &:active { color: $fg_color; }
@@ -2308,7 +2298,7 @@ row:selected {
 }
 
 // transition
-row, row.activatable {
+row {
   transition: all 150ms $ease-out-quad;
   &:hover { transition: none; }
 }
@@ -2350,6 +2340,7 @@ expander {
     min-width: 16px;
     min-height: 16px;
     -gtk-icon-source: -gtk-icontheme('pan-end-symbolic');
+
     &:dir(rtl) { -gtk-icon-source: -gtk-icontheme('pan-end-symbolic-rtl'); }
     &:hover { color: lighten($fg_color,30%); } //only lightens the arrow
     &:checked { -gtk-icon-source: -gtk-icontheme('pan-down-symbolic'); }
@@ -2458,6 +2449,7 @@ filechooser {
 stacksidebar {
   row {
     padding: 10px 4px;
+
     > label {
       padding-left: 6px;
       padding-right: 6px;
