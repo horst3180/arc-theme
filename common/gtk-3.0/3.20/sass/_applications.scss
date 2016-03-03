@@ -110,11 +110,14 @@
   &:selected, &:selected:focus { color: mix($selected_fg_color, $selected_bg_color, 80%); }
 }
 
-.nautilus-window .search-bar {
-  padding: 5px;
-  box-shadow: none;
+.nautilus-window searchbar {
+  // Workaround for https://bugzilla.gnome.org/show_bug.cgi?id=724096
+  border-color: transparent;
+  box-shadow: inset 0 -1px $borders_color;
+}
+
+.nautilus-window notebook > stack:not(:only-child) searchbar {
   background-color: $base_color;
-  border-bottom: 1px solid $borders_color;
 }
 
 .nautilus-window notebook {

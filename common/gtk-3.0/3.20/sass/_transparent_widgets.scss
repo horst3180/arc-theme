@@ -54,12 +54,6 @@
 
     &:not(:hover):not(:active) > image { opacity: 0.5 };
   }
-
-  searchbar {
-    // Workaround for https://bugzilla.gnome.org/show_bug.cgi?id=724096
-    border-color: transparent;
-    box-shadow: inset 0 -1px $borders_color;
-  }
 }
 
 

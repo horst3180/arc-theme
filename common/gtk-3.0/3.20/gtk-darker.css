@@ -2762,11 +2762,12 @@ popover.background label.nautilus-canvas-item.separator, headerbar .nautilus-can
   .nautilus-list-dim-label:selected:focus {
     color: #dceaf9; }
 
-.nautilus-window .search-bar {
-  padding: 5px;
-  box-shadow: none;
-  background-color: #ffffff;
-  border-bottom: 1px solid #dcdfe3; }
+.nautilus-window searchbar {
+  border-color: transparent;
+  box-shadow: inset 0 -1px #dcdfe3; }
+
+.nautilus-window notebook > stack:not(:only-child) searchbar {
+  background-color: #ffffff; }
 
 .nautilus-window notebook {
   background-color: #ffffff; }
@@ -3512,10 +3513,6 @@ GtkListBox .h4 {
     background-color: #5294E2; }
   .nautilus-window button.sidebar-button:not(:hover):not(:active) > image {
     opacity: 0.5; }
-
-.nautilus-window searchbar {
-  border-color: transparent;
-  box-shadow: inset 0 -1px #dcdfe3; }
 
 .gedit-bottom-panel-paned {
   background-color: #ffffff; }
