@@ -782,7 +782,7 @@ combobox {
     }
   }
 
-  .linked > & > box > button.combo {
+  .linked:not(.vertical) > & > box > button.combo {
     // the combobox is a composite widget so the way we do button linking doesn't
     // work, special case needed.
     &:dir(ltr),
