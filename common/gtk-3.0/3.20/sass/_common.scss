@@ -566,7 +566,7 @@ toolbar.inline-toolbar toolbutton {
       > entry#{$e_type}:focus:not(:only-child) {
         + entry,
         + button,
-        + combobox > button.combo { border-#{$_border}-color: if($var=='light', $e_color, $e_border); }
+        + combobox > box > button.combo { border-#{$_border}-color: if($var=='light', $e_color, $e_border); }
       }
     }
     > button:checked + entry { border-#{$_border}-color: if($var=='light', $selected_bg_color, $e_border); }
@@ -782,21 +782,21 @@ combobox {
     }
   }
 
-  .linked > & > button.combo {
+  .linked > & > box > button.combo {
     // the combobox is a composite widget so the way we do button linking doesn't
     // work, special case needed.
     &:dir(ltr),
     &:dir(rtl) { @extend %linked_middle; } // specificity bump
   }
 
-  .linked:not(.vertical) > &:first-child > button.combo { @extend %linked:first-child; }
-  .linked:not(.vertical) > &:last-child > button.combo { @extend %linked:last-child; }
-  .linked:not(.vertical) > &:only-child > button.combo { @extend %linked:only-child; }
+  .linked:not(.vertical) > &:first-child > box > button.combo { @extend %linked:first-child; }
+  .linked:not(.vertical) > &:last-child > box > button.combo { @extend %linked:last-child; }
+  .linked:not(.vertical) > &:only-child > box > button.combo { @extend %linked:only-child; }
 
-  .linked.vertical > & > button.combo { @extend %linked_vertical_middle; }
-  .linked.vertical > &:first-child > button.combo { @extend %linked_vertical:first-child; }
-  .linked.vertical > &:last-child > button.combo { @extend %linked_vertical:last-child; }
-  .linked.vertical > &:only-child > button.combo { @extend %linked_vertical:only-child; }
+  .linked.vertical > & > box > button.combo { @extend %linked_vertical_middle; }
+  .linked.vertical > &:first-child > box > button.combo { @extend %linked_vertical:first-child; }
+  .linked.vertical > &:last-child > box > button.combo { @extend %linked_vertical:last-child; }
+  .linked.vertical > &:only-child > box > button.combo { @extend %linked_vertical:only-child; }
 }
 
 //
