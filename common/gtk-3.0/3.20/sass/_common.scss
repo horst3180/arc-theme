@@ -1968,26 +1968,34 @@ checkbutton check {
 // GtkScale
 //
 scale {
+  $_marks_length: 3px;
+  $_marks_margin: -4px;
+
   min-height: 9px;
   min-width: 9px;
   padding: 5px;
 
   marks {
-    color: gtkalpha(currentColor, 0.3);
+    color: gtkalpha(currentColor, 0.4);
 
-    &.top { margin-bottom: -4px; }
-    &.bottom { margin-top: -4px; }
-    &.left { margin-right: -4px; }
-    &.right { margin-left: -4px; }
+    @each $marks_pos, $marks_margin in (top, bottom),
+                                       (bottom, top),
+                                       (left, right),
+                                       (right, left) {
+      &.#{$marks_pos} {
+        margin-#{$marks_margin}: $_marks_margin;
+        margin-#{$marks_pos}: -$_marks_margin;
+      }
+    }
   }
 
-  &.horizontal mark indicator {
-    min-height: 3px;
+  &.horizontal indicator {
+    min-height: $_marks_length;
     min-width: 1px;
   }
-  &.vertical mark indicator {
+  &.vertical indicator {
     min-height: 1px;
-    min-width: 3px;
+    min-width: $_marks_length;
   }
 
   &.fine-tune {

@@ -1926,19 +1926,23 @@ scale {
   min-width: 9px;
   padding: 5px; }
   scale marks {
-    color: alpha(currentColor,0.3); }
+    color: alpha(currentColor,0.4); }
     scale marks.top {
-      margin-bottom: -4px; }
+      margin-bottom: -4px;
+      margin-top: 4px; }
     scale marks.bottom {
-      margin-top: -4px; }
+      margin-top: -4px;
+      margin-bottom: 4px; }
     scale marks.left {
-      margin-right: -4px; }
+      margin-right: -4px;
+      margin-left: 4px; }
     scale marks.right {
-      margin-left: -4px; }
-  scale.horizontal mark indicator {
+      margin-left: -4px;
+      margin-right: 4px; }
+  scale.horizontal indicator {
     min-height: 3px;
     min-width: 1px; }
-  scale.vertical mark indicator {
+  scale.vertical indicator {
     min-height: 1px;
     min-width: 3px; }
   scale.fine-tune {
