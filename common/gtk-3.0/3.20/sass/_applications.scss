@@ -117,6 +117,10 @@
   border-bottom: 1px solid $borders_color;
 }
 
+.nautilus-window notebook {
+  background-color: $base_color;
+}
+
 button.nautilus-circular-button.image-button {
   border-radius: 50%;
   -gtk-outline-radius: 50%;
