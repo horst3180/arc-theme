@@ -975,8 +975,8 @@ headerbar {
   .csd &.default-decoration,             // needed under wayland, since all gtk3 windows are csd windows
   &.default-decoration:backdrop,
   .csd &.default-decoration:backdrop {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    min-height: 28px;
+    padding: 0 3px;
     background-color: opacify($header_bg, 1);
     border-bottom-width: 0;
 
@@ -2885,6 +2885,8 @@ headerbar,
   &.default-decoration button.titlebutton { // no vertical padding for ssd buttons
     padding: 0 4px;                        // already handled by the titlebar-padding
     min-width: 0;
+    min-height: 0;
+    margin: 0;
   }
 
   button.titlebutton {

@@ -896,8 +896,8 @@ headerbar {
   headerbar.default-decoration,
   .csd headerbar.default-decoration, headerbar.default-decoration:backdrop,
   .csd headerbar.default-decoration:backdrop {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    min-height: 28px;
+    padding: 0 3px;
     background-color: #2f343f;
     border-bottom-width: 0; }
     .maximized headerbar.default-decoration, .maximized
@@ -2649,7 +2649,9 @@ decoration {
 headerbar.default-decoration button.titlebutton,
 .titlebar.default-decoration button.titlebutton {
   padding: 0 4px;
-  min-width: 0; }
+  min-width: 0;
+  min-height: 0;
+  margin: 0; }
 
 headerbar button.titlebutton,
 .titlebar button.titlebutton {
