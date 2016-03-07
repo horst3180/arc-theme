@@ -1966,22 +1966,38 @@ checkbutton check {
 //
 scale {
   $_marks_length: 3px;
-  $_marks_margin: -4px;
+  $_marks_margin: -2px;
 
   min-height: 9px;
   min-width: 9px;
   padding: 5px;
 
+  value { color: gtkalpha(currentColor, 0.4); }
+
   marks {
     color: gtkalpha(currentColor, 0.4);
 
-    @each $marks_pos, $marks_margin in (top, bottom),
-                                       (bottom, top),
-                                       (left, right),
-                                       (right, left) {
-      &.#{$marks_pos} {
+    @each $marks_class, $marks_pos, $marks_margin in (top, top, bottom),
+                                                     (bottom, bottom, top),
+                                                     (top, left, right),
+                                                     (bottom, right, left) {
+      &.#{$marks_class} {
         margin-#{$marks_margin}: $_marks_margin;
         margin-#{$marks_pos}: -$_marks_margin;
+      }
+    }
+  }
+
+  &.fine-tune marks {
+    color: gtkalpha(currentColor, 0.4);
+
+    @each $marks_class, $marks_pos, $marks_margin in (top, top, bottom),
+                                                     (bottom, bottom, top),
+                                                     (top, left, right),
+                                                     (bottom, right, left) {
+      &.#{$marks_class} {
+        margin-#{$marks_margin}: $_marks_margin - 2px;
+        margin-#{$marks_pos}: -$_marks_margin + 2px;
       }
     }
   }

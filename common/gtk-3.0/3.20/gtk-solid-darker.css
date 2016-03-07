@@ -1920,18 +1920,34 @@ scale {
   min-height: 9px;
   min-width: 9px;
   padding: 5px; }
+  scale value {
+    color: alpha(currentColor,0.4); }
   scale marks {
     color: alpha(currentColor,0.4); }
     scale marks.top {
+      margin-bottom: -2px;
+      margin-top: 2px; }
+    scale marks.bottom {
+      margin-top: -2px;
+      margin-bottom: 2px; }
+    scale marks.top {
+      margin-right: -2px;
+      margin-left: 2px; }
+    scale marks.bottom {
+      margin-left: -2px;
+      margin-right: 2px; }
+  scale.fine-tune marks {
+    color: alpha(currentColor,0.4); }
+    scale.fine-tune marks.top {
       margin-bottom: -4px;
       margin-top: 4px; }
-    scale marks.bottom {
+    scale.fine-tune marks.bottom {
       margin-top: -4px;
       margin-bottom: 4px; }
-    scale marks.left {
+    scale.fine-tune marks.top {
       margin-right: -4px;
       margin-left: 4px; }
-    scale marks.right {
+    scale.fine-tune marks.bottom {
       margin-left: -4px;
       margin-right: 4px; }
   scale.horizontal indicator {
