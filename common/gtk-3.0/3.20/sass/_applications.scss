@@ -33,28 +33,6 @@
 //}
 
 //
-// Evolution
-//
-// needed for webkit/GtkStyle/Evolution compatibility
-//GtkHTML {
-//  background-color: $base_color;
-//  color: $text_color;
-//
-//  &:active {
-//    color: $selected_fg_color;
-//    background-color: $selected_bg_color;
-//  }
-//}
-
-//
-// Sushi
-//
-// used by gnome-font-viewer and sushi
-//SushiFontWidget {
-//  padding: 6px 12px;
-//}
-
-//
 // GNOME Terminal
 //
 //TerminalWindow {
@@ -116,11 +94,8 @@
   box-shadow: inset 0 -1px $borders_color;
 }
 
+.nautilus-window notebook,
 .nautilus-window notebook > stack:not(:only-child) searchbar {
-  background-color: $base_color;
-}
-
-.nautilus-window notebook {
   background-color: $base_color;
 }
 
@@ -205,8 +180,6 @@ $disk_space_free: darken($bg_color, 3%);
 //
 // Gedit
 //
-//.gedit-headerbar-paned { color: $header_border; }
-
 .open-document-selector-treeview.view {
   padding: 3px 6px 3px 6px;
   border-color: $base_color;  // disable borders, making them transparent doesn't work for some reason
@@ -269,35 +242,12 @@ $disk_space_free: darken($bg_color, 3%);
   color: $fg_color;
 }
 
-//.gedit-document-panel-placeholder-row {
-//}
-
-//GeditStatusbar {
-//  border-top: 1px solid $borders_color;
-//  background-color: $bg_color;
-//}
-//
-//GeditStatusMenuButton.button.flat,
-//GeditStatusMenuButton:hover.button.flat,
-//GeditStatusMenuButton:checked.button.flat {
-//  border-bottom-style: none;
-//  border-radius: 0;
-//}
-
-.gedit-search-slider { @extend %search_slider }
-
-//GeditFileBrowserWidget toolbar {
-//  border-bottom: 1px solid $borders_color;
-//}
-
-.gedit-search-entry-occurrences-tag {
-  color: transparentize($fg_color, 0.4);
-  border: none;
-  margin: 2px;
-  padding: 2px;
+.gedit-side-panel-paned statusbar {
+  border-top: 1px solid $borders_color;
+  background-color: $bg_color;
 }
 
-%search_slider {
+.gedit-search-slider {
   background-color: lighten($bg_color, 2%);
   padding: 6px;
   border-color: $borders_color;
@@ -306,137 +256,16 @@ $disk_space_free: darken($bg_color, 3%);
   border-style: solid;
 }
 
-//
-// Gnome Builder
-//
-GbWorkbench .floating-bar { color: $fg_color; }
-
-GbSearchBox.linked:not(.vertical) {
-
-  > button.popup:last-child:dir(ltr),
-  > button.popup:first-child:dir(rtl) {
-    padding: 0 10px;
-
-    @include entry(header-normal);
-
-    &:hover { @include entry(header-focus); }
-    &:active, &:checked { @include entry(header-focus); }
-    &:disabled { @include entry(header-insensitive); }
-  }
-
-  > button.popup:last-child:dir(ltr),
-  > button.popup:last-child:dir(ltr):hover,
-  > button.popup:last-child:dir(ltr):active,
-  > button.popup:last-child:dir(ltr):checked {
-    border-left-style: none;
-    border-radius: 0 3px 3px 0;
-    -gtk-outline-radius: 0 1px 1px 0;
-  }
-
-  > button.popup:last-child:dir(rtl),
-  > button.popup:last-child:dir(rtl):hover,
-  > button.popup:last-child:dir(rtl):active,
-  > button.popup:last-child:dir(rtl):checked {
-    border-right-style: none;
-    border-radius: 3px 0 0 3px;
-    -gtk-outline-radius: 1px 0 0 1px;
-  }
-}
-
-// Preference page language style
-GbPreferencesPageLanguage  {
-  entry { border-radius: 3px 3px 0 0; }
-  .frame { border-top-width: 0 }
-}
-
-// Editor tweak widget
-GbEditorTweakWidget {
-  .linked.vertical > entry { border-bottom-style: solid; }
-  scrolledwindow { border-top: none; }
-}
-
-// View stack styling
-GbViewStack box.header.notebook {
-  border-bottom: 1px solid $borders_color;
-}
-
-GbViewStack.focused box.header.notebook,
-#project_sidebar_header.focused {
-  background-color: $base_color;
-}
-
-GbEditorWorkspace > paned > box > box.header.notebook {
-  border-bottom: 1px solid $borders_color;
-}
-
-GbNewProjectDialog button.file.linked-on-right button {
-  border-radius: 3px 0 0 3px;
-}
-
-// Workspace pane header styling
-GbWorkspacePane box.header.notebook {
-  border-bottom: 1px solid $borders_color;
-}
-
-GbWorkspacePane:not(.focused) box.header.notebook {
-  background-color: $bg_color;
-}
-
-// Adjust devehlp and symbol panel styling
-DhSidebar entry.search,
-SymbolTree entry.search {
-  border-left: none;
-  border-right: none;
-  border-top: none;
-  border-radius: 0px;
-}
-
-// Command Bar styling
-entry.gb-command-bar-entry.flat,
-entry.gb-command-bar-entry.flat:focus {
-  font-family: Monospace;
-  color: $osd_fg_color;
-  background-image: none;
-  background-color: opacify($osd_bg_color, 1);
-  padding: 6px 6px 6px 6px;
+.gedit-search-entry-occurrences-tag {
+  color: transparentize($fg_color, 0.4);
   border: none;
-
-  &:selected,
-  &:selected:focus {
-    @extend %selected_items;
-  }
+  margin: 2px;
+  padding: 2px;
 }
 
-GbTerminalView {
-  background-color: $base_color;
-  color: $fg_color;
-}
-
-GbSourceStyleSchemeWidget GtkSourceView {
-  font-family: Monospace;
-}
-
-scrolledwindow.gb-linked-scroller {
-  border-top: none;
-}
-
-// Disable various animatinos that are enabled by default and really annoying
-// to the overall flow of Builder.
-GbSearchDisplayGroup list row
-GbDocumentStack button {
-  transition: none;
-}
-
-GbViewStack box.header.notebook,
-GbEditorWorkspace > paned > box > box.header.notebook {
-  border-bottom: 1px solid $borders_color;
-}
-
-GbViewStack.focused box.header.notebook {
-  background-color: $base_color;
-
- button.dim-label { opacity: 1; }
-}
+//GeditFileBrowserWidget toolbar {
+//  border-bottom: 1px solid $borders_color;
+//}
 
 //
 // Epiphany
@@ -501,19 +330,6 @@ button.documents-favorite:active:hover {
   border-width: 3px 3px 6px 4px;
   border-image: url("assets/thumbnail-frame.png") 3 3 6 4;
 }
-
-//
-// Totem
-//
-//TotemGrilo.vertical GdMainView.frame {
-//  border-width: 0;
-//}
-
-//
-// Synapse
-//
-//SynapseGuiSelectionContainer *:selected,
-//SynapseGuiViewVirgilio *:selected { background-color: $selected_bg_color; }
 
 //
 // Transmission

@@ -91,9 +91,6 @@
 //NemoWindow.background > GtkGrid > paned > separator,
 //MarlinViewWindow.background > GtkBox > paned > separator { background-color: $dark_sidebar_border }
 
-// Fix Nautilus transparency issues
-//.nautilus-window NautilusWindowSlot { background-color: $base_color; }
-
 //GtkFileChooserDialog {
 //
 //  &.background.csd, &.background { background-color: $dark_sidebar_bg }
@@ -127,13 +124,6 @@
 //}
 
 // Gedit
-//GeditWindow.background {
-//  &.csd { background-color: transparent; }
-//
-//  .gedit-side-panel-paned .pane-separator { background-color: $dark_sidebar_border; }
-//  .gedit-bottom-panel-paned .pane-separator { background-color: $borders_color; }
-//}
-
 .gedit-bottom-panel-paned { background-color: $base_color; }
 
 .gedit-document-panel {

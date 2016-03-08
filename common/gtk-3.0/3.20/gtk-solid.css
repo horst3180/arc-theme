@@ -2757,7 +2757,7 @@ label selection,
 label selection:focus,
 label selection:hover, menuitem.button.flat:active, menuitem.button.flat:selected,
 modelbutton.flat:active,
-modelbutton.flat:selected, treeview.view:selected, row:selected, .sidebar:selected, .sidebar .view:selected, entry.gb-command-bar-entry.flat:selected, entry.gb-command-bar-entry.flat:selected:focus, .nautilus-window placessidebar.sidebar row.activatable:selected, .nautilus-window placessidebar.sidebar row.activatable:selected:hover, .nautilus-window placessidebar.sidebar row.activatable:active:hover {
+modelbutton.flat:selected, treeview.view:selected, row:selected, .sidebar:selected, .sidebar .view:selected, .nautilus-window placessidebar.sidebar row.activatable:selected, .nautilus-window placessidebar.sidebar row.activatable:selected:hover, .nautilus-window placessidebar.sidebar row.activatable:active:hover {
   background-image: none;
   background-color: #5294E2;
   color: #ffffff;
@@ -2787,10 +2787,8 @@ popover.background label.nautilus-canvas-item.separator, headerbar .nautilus-can
   border-color: transparent;
   box-shadow: inset 0 -1px #dcdfe3; }
 
+.nautilus-window notebook,
 .nautilus-window notebook > stack:not(:only-child) searchbar {
-  background-color: #ffffff; }
-
-.nautilus-window notebook {
   background-color: #ffffff; }
 
 button.nautilus-circular-button.image-button {
@@ -2866,11 +2864,9 @@ button.nautilus-circular-button.image-button {
   background-color: #d9dde0;
   color: #5c616c; }
 
-.gedit-search-entry-occurrences-tag {
-  color: rgba(92, 97, 108, 0.6);
-  border: none;
-  margin: 2px;
-  padding: 2px; }
+.gedit-side-panel-paned statusbar {
+  border-top: 1px solid #dcdfe3;
+  background-color: #F5F6F7; }
 
 .gedit-search-slider {
   background-color: #fbfbfc;
@@ -2880,121 +2876,11 @@ button.nautilus-circular-button.image-button {
   border-width: 0 1px 1px 1px;
   border-style: solid; }
 
-GbWorkbench .floating-bar {
-  color: #5c616c; }
-
-GbSearchBox.linked:not(.vertical) > button.popup:last-child:dir(ltr),
-GbSearchBox.linked:not(.vertical) > button.popup:first-child:dir(rtl) {
-  padding: 0 10px;
-  color: rgba(82, 93, 118, 0.8);
-  border-color: rgba(82, 93, 118, 0.1);
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.9));
-  background-color: transparent; }
-  GbSearchBox.linked:not(.vertical) > button.popup:last-child:dir(ltr) image, GbSearchBox.linked:not(.vertical) > button.popup:last-child:dir(ltr) image:hover,
-  GbSearchBox.linked:not(.vertical) > button.popup:first-child:dir(rtl) image,
-  GbSearchBox.linked:not(.vertical) > button.popup:first-child:dir(rtl) image:hover {
-    color: inherit; }
-  GbSearchBox.linked:not(.vertical) > button.popup:last-child:dir(ltr):hover,
-  GbSearchBox.linked:not(.vertical) > button.popup:first-child:dir(rtl):hover {
-    color: #ffffff;
-    border-color: #5294E2;
-    background-image: linear-gradient(to bottom, #5294E2); }
-  GbSearchBox.linked:not(.vertical) > button.popup:last-child:dir(ltr):active, GbSearchBox.linked:not(.vertical) > button.popup:last-child:dir(ltr):checked,
-  GbSearchBox.linked:not(.vertical) > button.popup:first-child:dir(rtl):active,
-  GbSearchBox.linked:not(.vertical) > button.popup:first-child:dir(rtl):checked {
-    color: #ffffff;
-    border-color: #5294E2;
-    background-image: linear-gradient(to bottom, #5294E2); }
-  GbSearchBox.linked:not(.vertical) > button.popup:last-child:dir(ltr):disabled,
-  GbSearchBox.linked:not(.vertical) > button.popup:first-child:dir(rtl):disabled {
-    color: rgba(82, 93, 118, 0.35);
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.75)); }
-
-GbSearchBox.linked:not(.vertical) > button.popup:last-child:dir(ltr),
-GbSearchBox.linked:not(.vertical) > button.popup:last-child:dir(ltr):hover,
-GbSearchBox.linked:not(.vertical) > button.popup:last-child:dir(ltr):active,
-GbSearchBox.linked:not(.vertical) > button.popup:last-child:dir(ltr):checked {
-  border-left-style: none;
-  border-radius: 0 3px 3px 0;
-  -gtk-outline-radius: 0 1px 1px 0; }
-
-GbSearchBox.linked:not(.vertical) > button.popup:last-child:dir(rtl),
-GbSearchBox.linked:not(.vertical) > button.popup:last-child:dir(rtl):hover,
-GbSearchBox.linked:not(.vertical) > button.popup:last-child:dir(rtl):active,
-GbSearchBox.linked:not(.vertical) > button.popup:last-child:dir(rtl):checked {
-  border-right-style: none;
-  border-radius: 3px 0 0 3px;
-  -gtk-outline-radius: 1px 0 0 1px; }
-
-GbPreferencesPageLanguage entry {
-  border-radius: 3px 3px 0 0; }
-
-GbPreferencesPageLanguage .frame {
-  border-top-width: 0; }
-
-GbEditorTweakWidget .linked.vertical > entry {
-  border-bottom-style: solid; }
-
-GbEditorTweakWidget scrolledwindow, GbEditorTweakWidget placessidebar {
-  border-top: none; }
-
-GbViewStack box.header.notebook {
-  border-bottom: 1px solid #dcdfe3; }
-
-GbViewStack.focused box.header.notebook,
-#project_sidebar_header.focused {
-  background-color: #ffffff; }
-
-GbEditorWorkspace > paned > box > box.header.notebook {
-  border-bottom: 1px solid #dcdfe3; }
-
-GbNewProjectDialog button.file.linked-on-right button {
-  border-radius: 3px 0 0 3px; }
-
-GbWorkspacePane box.header.notebook {
-  border-bottom: 1px solid #dcdfe3; }
-
-GbWorkspacePane:not(.focused) box.header.notebook {
-  background-color: #F5F6F7; }
-
-DhSidebar entry.search,
-SymbolTree entry.search {
-  border-left: none;
-  border-right: none;
-  border-top: none;
-  border-radius: 0px; }
-
-entry.gb-command-bar-entry.flat,
-entry.gb-command-bar-entry.flat:focus {
-  font-family: Monospace;
-  color: #BAC3CF;
-  background-image: none;
-  background-color: #353945;
-  padding: 6px 6px 6px 6px;
-  border: none; }
-
-GbTerminalView {
-  background-color: #ffffff;
-  color: #5c616c; }
-
-GbSourceStyleSchemeWidget GtkSourceView {
-  font-family: Monospace; }
-
-scrolledwindow.gb-linked-scroller, placessidebar.gb-linked-scroller {
-  border-top: none; }
-
-GbSearchDisplayGroup list row
-GbDocumentStack button {
-  transition: none; }
-
-GbViewStack box.header.notebook,
-GbEditorWorkspace > paned > box > box.header.notebook {
-  border-bottom: 1px solid #dcdfe3; }
-
-GbViewStack.focused box.header.notebook {
-  background-color: #ffffff; }
-  GbViewStack.focused box.header.notebook button.dim-label, GbViewStack.focused box.header.notebook headerbar button.subtitle, headerbar GbViewStack.focused box.header.notebook button.subtitle {
-    opacity: 1; }
+.gedit-search-entry-occurrences-tag {
+  color: rgba(92, 97, 108, 0.6);
+  border: none;
+  margin: 2px;
+  padding: 2px; }
 
 button.documents-load-more {
   border-width: 1px 0 0;
