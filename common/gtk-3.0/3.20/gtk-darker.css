@@ -190,6 +190,8 @@ entry {
     color: #ffffff;
     border-color: #F27835;
     background-image: linear-gradient(to bottom, #f7ae86); }
+    entry.warning image {
+      color: #ffffff; }
     entry.warning:focus {
       color: #ffffff;
       background-image: linear-gradient(to bottom, #F27835);
@@ -201,6 +203,8 @@ entry {
     color: #ffffff;
     border-color: #FC4138;
     background-image: linear-gradient(to bottom, #fd8d88); }
+    entry.error image {
+      color: #ffffff; }
     entry.error:focus {
       color: #ffffff;
       background-image: linear-gradient(to bottom, #FC4138);
