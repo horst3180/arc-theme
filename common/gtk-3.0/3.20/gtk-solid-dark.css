@@ -2785,8 +2785,10 @@ popover.background label.nautilus-canvas-item.separator, headerbar .nautilus-can
     color: #dceaf9; }
 
 .nautilus-window searchbar {
-  border-color: transparent;
-  box-shadow: inset 0 -1px #2b2e39; }
+  border-top: 1px solid #2b2e39; }
+
+.nautilus-window .searchbar-container {
+  margin-top: -1px; }
 
 .nautilus-window notebook,
 .nautilus-window notebook > stack:not(:only-child) searchbar {
