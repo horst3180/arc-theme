@@ -147,8 +147,6 @@ assistant {
   .sidebar {
     background-color: $base_color;
     border-top: 1px solid $borders_color;
-    &:dir(ltr) { border-right: 1px solid $borders_color; }
-    &:dir(rtl) { border-left: 1px solid $borders_color; }
   }
 
   &.csd .sidebar { border-top-style: none; }
@@ -2241,7 +2239,7 @@ printdialog {
 //
 // Frames
 //
-frame border,
+frame > border,
 .frame {
   margin: 0;
   padding: 0;
@@ -2467,15 +2465,41 @@ filechooser {
 //
 // Sidebar
 //
-.sidebar, .sidebar .view {
-  border: none;
+.sidebar {
+  border-style: none;
   background-color: lighten($bg_color, 2%);
+
+  @at-root %sidebar_left,
+  &:dir(ltr),
+  &.left,
+  &.left:dir(rtl) {
+    border-right: 1px solid $borders_color;
+    border-left-style: none;
+  }
+
+  @at-root %sidebar_right,
+  &:dir(rtl),
+  &.left {
+    border-left: 1px solid $borders_color;
+    border-right-style: none;
+  }
 
   &:selected { @extend %selected_items; }
   separator { @extend separator; }
+
+  paned & { &.left, &.right, &.left:dir(rtl), &:dir(rtl), &:dir(ltr), & { border-style: none; }}
 }
 
 stacksidebar {
+  &.sidebar {
+    &:dir(ltr) list,
+    &.left list,
+    &.left:dir(rtl) list { @extend %sidebar_left; }
+
+    &:dir(rtl) list,
+    &.right list { @extend %sidebar_right; }
+  }
+
   row {
     padding: 10px 4px;
 

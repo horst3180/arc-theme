@@ -93,10 +93,6 @@ popover.background label.separator, headerbar .subtitle {
 assistant .sidebar {
   background-color: #404552;
   border-top: 1px solid #2b2e39; }
-  assistant .sidebar:dir(ltr) {
-    border-right: 1px solid #2b2e39; }
-  assistant .sidebar:dir(rtl) {
-    border-left: 1px solid #2b2e39; }
 
 assistant.csd .sidebar {
   border-top-style: none; }
@@ -245,7 +241,7 @@ button {
   outline-color: rgba(211, 218, 227, 0.3);
   border-color: #2b2e39;
   background-color: #444a58; }
-  button separator, button .sidebar separator, .sidebar button separator, button .sidebar .view separator, .sidebar .view button separator {
+  button separator, button .sidebar separator, .sidebar button separator {
     margin: 4px 1px; }
   button.flat, button.sidebar-button {
     border-color: transparent;
@@ -781,11 +777,11 @@ toolbar, .inline-toolbar {
   -GtkWidget-window-dragging: true;
   padding: 4px;
   background-color: #383C4A; }
-  toolbar separator, .inline-toolbar separator, toolbar .sidebar separator, .sidebar toolbar separator, toolbar .sidebar .view separator, .sidebar .view toolbar separator, .inline-toolbar .sidebar .view separator, .sidebar .view .inline-toolbar separator {
+  toolbar separator, .inline-toolbar separator, toolbar .sidebar separator, .sidebar toolbar separator {
     background: none; }
-  toolbar.horizontal separator, .horizontal.inline-toolbar separator, toolbar.horizontal .sidebar .view separator, .sidebar .view toolbar.horizontal separator {
+  toolbar.horizontal separator, .horizontal.inline-toolbar separator {
     margin: 0 6px; }
-  toolbar.vertical separator, .vertical.inline-toolbar separator, toolbar.vertical .sidebar .view separator, .sidebar .view toolbar.vertical separator {
+  toolbar.vertical separator, .vertical.inline-toolbar separator {
     margin: 6px 0; }
   .osd toolbar, .osd .inline-toolbar, toolbar.osd, .osd.inline-toolbar {
     padding: 7px;
@@ -933,10 +929,10 @@ headerbar {
     padding: 0;
     border: none;
     background: none; }
-  .titlebar separator, .titlebar .sidebar .view separator, .sidebar .view .titlebar separator {
+  .titlebar separator {
     background-color: #262a33; }
 
-paned.titlebar separator, paned.titlebar .sidebar .view separator, .sidebar .view paned.titlebar separator {
+paned.titlebar separator {
   background-color: transparent; }
 
 paned.titlebar > headerbar:not(:only-child):not(:first-child):not(:last-child) {
@@ -948,11 +944,11 @@ paned.titlebar > headerbar:first-child {
 paned.titlebar > headerbar:last-child {
   border-top-left-radius: 0; }
 
-headerbar entry, headerbar button, headerbar separator, headerbar .sidebar separator, .sidebar headerbar separator, headerbar .sidebar .view separator, .sidebar .view headerbar separator {
+headerbar entry, headerbar button, headerbar separator, headerbar .sidebar separator, .sidebar headerbar separator {
   margin-top: 6px;
   margin-bottom: 6px; }
 
-.primary-toolbar separator, .primary-toolbar .sidebar .view separator, .sidebar .view .primary-toolbar separator, headerbar separator.titlebutton, headerbar .sidebar .view separator.titlebutton, .sidebar .view headerbar separator.titlebutton {
+.primary-toolbar separator, headerbar separator.titlebutton {
   min-width: 1px;
   min-height: 1px;
   background: none;
@@ -1413,12 +1409,8 @@ menu,
     padding: 4px 0px;
     border-radius: 2px;
     border: none; }
-  menu separator, menu .sidebar separator, .sidebar menu separator, menu .sidebar .view separator, .sidebar .view menu separator,
+  menu separator, menu .sidebar separator, .sidebar menu separator,
   .csd menu separator,
-  .csd menu .sidebar .view separator, .sidebar .view
-  .csd menu separator,
-  .menu separator,
-  .menu .sidebar .view separator, .sidebar .view
   .menu separator,
   .csd
   .menu separator {
@@ -1495,9 +1487,7 @@ popover.background {
   popover.background,
   popover.background {
     border: 1px solid #20222a; }
-  popover separator, popover .sidebar separator, .sidebar popover separator, popover .sidebar .view separator, .sidebar .view popover separator,
-  popover.background separator,
-  popover.background .sidebar .view separator, .sidebar .view
+  popover separator, popover .sidebar separator, .sidebar popover separator,
   popover.background separator {
     background-color: #383C4A; }
   popover > list,
@@ -2126,14 +2116,14 @@ printdialog paper {
 printdialog .dialog-action-box {
   margin: 12px; }
 
-frame border,
+frame > border,
 .frame {
   margin: 0;
   padding: 0;
   border-radius: 0;
   border: 1px solid #2b2e39;
   padding: 0; }
-  frame border.flat,
+  frame > border.flat,
   .frame.flat {
     border-style: none; }
 
@@ -2223,7 +2213,7 @@ scrolledwindow junction, placessidebar junction {
   scrolledwindow junction:dir(rtl), placessidebar junction:dir(rtl) {
     border-image-slice: 0 1 0 0; }
 
-separator, .sidebar separator, .sidebar .view separator {
+separator, .sidebar separator {
   background-color: rgba(0, 0, 0, 0.1);
   min-width: 1px;
   min-height: 1px; }
@@ -2367,9 +2357,20 @@ messagedialog.csd .dialog-action-area button:only-child {
 filechooser #pathbarbox {
   border-bottom: 1px solid rgba(43, 46, 57, 0.5); }
 
-.sidebar, .sidebar .view {
-  border: none;
+.sidebar {
+  border-style: none;
   background-color: #3c4150; }
+  stacksidebar.sidebar:dir(ltr) list,
+  stacksidebar.sidebar.left list,
+  stacksidebar.sidebar.left:dir(rtl) list, .sidebar:dir(ltr), .sidebar.left, .sidebar.left:dir(rtl) {
+    border-right: 1px solid #2b2e39;
+    border-left-style: none; }
+  stacksidebar.sidebar:dir(rtl) list,
+  stacksidebar.sidebar.right list, .sidebar:dir(rtl), .sidebar.left {
+    border-left: 1px solid #2b2e39;
+    border-right-style: none; }
+  paned .sidebar.left, paned .sidebar.right, paned .sidebar.left:dir(rtl), paned .sidebar:dir(rtl), paned .sidebar:dir(ltr), paned .sidebar {
+    border-style: none; }
 
 stacksidebar row {
   padding: 10px 4px; }
@@ -2419,7 +2420,7 @@ placesview .server-list-button:checked > image {
   transition: 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -gtk-icon-transform: rotate(-0.5turn); }
 
-paned > separator, .sidebar paned > separator, .sidebar .view paned > separator {
+paned > separator, .sidebar paned > separator {
   min-width: 1px;
   min-height: 1px;
   -gtk-icon-source: none;
@@ -2427,9 +2428,9 @@ paned > separator, .sidebar paned > separator, .sidebar .view paned > separator 
   background-color: transparent;
   background-image: linear-gradient(to top, #2b2e39);
   background-size: 1px 1px; }
-  paned > separator:selected, .sidebar paned > separator:selected, .sidebar .view paned > separator:selected {
+  paned > separator:selected, .sidebar paned > separator:selected {
     background-image: linear-gradient(to top, #5294E2); }
-  paned > separator.wide, .sidebar paned > separator.wide, .sidebar .view paned > separator.wide {
+  paned > separator.wide, .sidebar paned > separator.wide {
     margin: 0;
     padding: 0;
     min-width: 5px;
@@ -2437,26 +2438,26 @@ paned > separator, .sidebar paned > separator, .sidebar .view paned > separator 
     background-image: linear-gradient(to top, #2b2e39), linear-gradient(to top, #2b2e39);
     background-size: 1px 1px, 1px 1px; }
 
-paned.horizontal > separator, .sidebar paned.horizontal > separator, .sidebar .view paned.horizontal > separator {
+paned.horizontal > separator, .sidebar paned.horizontal > separator {
   background-repeat: repeat-y; }
-  paned.horizontal > separator:dir(ltr), .sidebar paned.horizontal > separator:dir(ltr), .sidebar .view paned.horizontal > separator:dir(ltr) {
+  paned.horizontal > separator:dir(ltr), .sidebar paned.horizontal > separator:dir(ltr) {
     margin: 0 -8px 0 0;
     padding: 0 8px 0 0;
     background-position: left; }
-  paned.horizontal > separator:dir(rtl), .sidebar paned.horizontal > separator:dir(rtl), .sidebar .view paned.horizontal > separator:dir(rtl) {
+  paned.horizontal > separator:dir(rtl), .sidebar paned.horizontal > separator:dir(rtl) {
     margin: 0 0 0 -8px;
     padding: 0 0 0 8px;
     background-position: right; }
-  paned.horizontal > separator.wide, .sidebar paned.horizontal > separator.wide, .sidebar .view paned.horizontal > separator.wide {
+  paned.horizontal > separator.wide, .sidebar paned.horizontal > separator.wide {
     background-repeat: repeat-y, repeat-y;
     background-position: left, right; }
 
-paned.vertical > separator, .sidebar paned.vertical > separator, .sidebar .view paned.vertical > separator {
+paned.vertical > separator, .sidebar paned.vertical > separator {
   margin: 0 0 -8px 0;
   padding: 0 0 8px 0;
   background-repeat: repeat-x;
   background-position: top; }
-  paned.vertical > separator.wide, .sidebar paned.vertical > separator.wide, .sidebar .view paned.vertical > separator.wide {
+  paned.vertical > separator.wide, .sidebar paned.vertical > separator.wide {
     background-repeat: repeat-x, repeat-x;
     background-position: bottom, top; }
 
@@ -2762,7 +2763,7 @@ label selection,
 label selection:focus,
 label selection:hover, menuitem.button.flat:active, menuitem.button.flat:selected,
 modelbutton.flat:active,
-modelbutton.flat:selected, treeview.view:selected, row:selected, .sidebar:selected, .sidebar .view:selected, .nautilus-window placessidebar.sidebar row.activatable:selected, .nautilus-window placessidebar.sidebar row.activatable:selected:hover, .nautilus-window placessidebar.sidebar row.activatable:active:hover {
+modelbutton.flat:selected, treeview.view:selected, row:selected, .sidebar:selected, .nautilus-window placessidebar.sidebar row.activatable:selected, .nautilus-window placessidebar.sidebar row.activatable:selected:hover, .nautilus-window placessidebar.sidebar row.activatable:active:hover {
   background-image: none;
   background-color: #5294E2;
   color: #ffffff;
@@ -3382,11 +3383,11 @@ GtkListBox .h4 {
   border-bottom-width: 0;
   font: bold; }
 
-.nautilus-window paned > separator, .nautilus-window .sidebar paned > separator, .nautilus-window .sidebar .view paned > separator, .sidebar .view .nautilus-window paned > separator {
+.nautilus-window paned > separator, .nautilus-window .sidebar paned > separator {
   background: #2a2d37; }
-  .nautilus-window paned > separator:dir(ltr), .nautilus-window .sidebar paned > separator:dir(ltr), .nautilus-window .sidebar .view paned > separator:dir(ltr), .sidebar .view .nautilus-window paned > separator:dir(ltr) {
+  .nautilus-window paned > separator:dir(ltr), .nautilus-window .sidebar paned > separator:dir(ltr) {
     margin-left: -1px; }
-  .nautilus-window paned > separator:dir(rtl), .nautilus-window .sidebar paned > separator:dir(rtl), .nautilus-window .sidebar .view paned > separator:dir(rtl), .sidebar .view .nautilus-window paned > separator:dir(rtl) {
+  .nautilus-window paned > separator:dir(rtl), .nautilus-window .sidebar paned > separator:dir(rtl) {
     margin-right: -1px; }
 
 .nautilus-window.csd.background, .nautilus-window placessidebar list {
