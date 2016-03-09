@@ -1302,16 +1302,22 @@ headerbar {
 // Pathbars
 //
 .path-bar button {
-
-  &:only-child {
-    padding-left: 10px;
-    padding-right: 10px;
+  &.text-button, &.image-button, & {
+    padding-left: 6px;
+    padding-right: 6px;
   }
 
-  // the following is for spacing the icon and the label inside the home button
-  label:last-child { padding-left: 4px; }
-  label:first-child { padding-right: 4px; }
-  label:only-child, label { padding-right: 0; padding-left: 0; }
+  &.text-button.image-button label { padding-left: 0; padding-right: 0; }
+
+  &.text-button.image-button, & {
+    label:last-child { padding-right: 10px; }
+    label:first-child { padding-left: 10px; }
+  }
+
+  image {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
 }
 
 //

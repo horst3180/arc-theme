@@ -1273,19 +1273,23 @@ headerbar entry, headerbar button, headerbar separator, headerbar .sidebar separ
   .primary-toolbar scale trough:disabled, headerbar scale trough:disabled {
     background-image: linear-gradient(to bottom, rgba(21, 23, 28, 0.3)); }
 
-.path-bar button:only-child {
-  padding-left: 10px;
+.path-bar button.text-button, .path-bar button.image-button, .path-bar button {
+  padding-left: 6px;
+  padding-right: 6px; }
+
+.path-bar button.text-button.image-button label {
+  padding-left: 0;
+  padding-right: 0; }
+
+.path-bar button.text-button.image-button label:last-child, .path-bar button label:last-child {
   padding-right: 10px; }
 
-.path-bar button label:last-child {
-  padding-left: 4px; }
+.path-bar button.text-button.image-button label:first-child, .path-bar button label:first-child {
+  padding-left: 10px; }
 
-.path-bar button label:first-child {
+.path-bar button image {
+  padding-left: 4px;
   padding-right: 4px; }
-
-.path-bar button label:only-child, .path-bar button label {
-  padding-right: 0;
-  padding-left: 0; }
 
 treeview.view {
   -GtkTreeView-grid-line-width: 1;
