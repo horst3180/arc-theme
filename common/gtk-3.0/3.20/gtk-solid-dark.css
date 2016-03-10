@@ -2476,32 +2476,32 @@ infobar {
   background-color: #5294E2;
   color: #ffffff; }
 
-row:selected button, infobar button {
+row:selected button, infobar button, .floating-bar button {
   color: #ffffff;
   outline-color: rgba(255, 255, 255, 0.3);
   background-color: rgba(255, 255, 255, 0);
   border-color: rgba(255, 255, 255, 0.5); }
-  row:selected button.flat, row:selected button.sidebar-button, infobar button.flat, infobar button.sidebar-button {
+  row:selected button.flat, row:selected button.sidebar-button, infobar button.flat, infobar button.sidebar-button, .floating-bar button.flat, .floating-bar button.sidebar-button {
     border-color: transparent;
     background-color: transparent;
     background-image: none;
     color: #ffffff;
     background-color: rgba(255, 255, 255, 0); }
-  row:selected button:hover, infobar button:hover {
+  row:selected button:hover, infobar button:hover, .floating-bar button:hover {
     color: #ffffff;
     outline-color: rgba(255, 255, 255, 0.3);
     background-color: rgba(255, 255, 255, 0.2);
     border-color: rgba(255, 255, 255, 0.8); }
-  row:selected button:active, infobar button:active, row:selected button:active:hover, infobar button:active:hover, row:selected button:checked, infobar button:checked {
+  row:selected button:active, infobar button:active, .floating-bar button:active, row:selected button:active:hover, infobar button:active:hover, .floating-bar button:active:hover, row:selected button:checked, infobar button:checked, .floating-bar button:checked {
     color: #5294E2;
     outline-color: rgba(82, 148, 226, 0.3);
     background-color: #ffffff;
     border-color: #ffffff; }
-  row:selected button:disabled, infobar button:disabled {
+  row:selected button:disabled, infobar button:disabled, .floating-bar button:disabled {
     color: rgba(255, 255, 255, 0.4);
     background-color: rgba(255, 255, 255, 0);
     border-color: rgba(255, 255, 255, 0.2); }
-    row:selected button:disabled:active, infobar button:disabled:active, row:selected button:disabled:checked, infobar button:disabled:checked {
+    row:selected button:disabled:active, infobar button:disabled:active, .floating-bar button:disabled:active, row:selected button:disabled:checked, infobar button:disabled:checked, .floating-bar button:disabled:checked {
       color: rgba(82, 148, 226, 0.4);
       background-color: rgba(255, 255, 255, 0.2);
       border-color: rgba(255, 255, 255, 0.2); }
@@ -2956,20 +2956,18 @@ button.documents-favorite:active:hover {
       background-color: #1b1d23; }
 
 .floating-bar {
+  padding: 1px;
   background-color: #5294E2;
-  color: #ffffff; }
-  .floating-bar.top {
-    border-radius: 0 0 2px 2px; }
-  .floating-bar.right {
-    border-radius: 2px 0 0 2px; }
-  .floating-bar.bottom {
-    border-radius: 2px 2px 0 0; }
-  .floating-bar.left {
-    border-radius: 0 2px 2px 0; }
+  color: #ffffff;
+  border-radius: 2px 2px 0 0; }
+  .floating-bar.bottom.left {
+    border-top-left-radius: 0; }
+  .floating-bar.bottom.right {
+    border-top-right-radius: 0; }
   .floating-bar button {
-    background-color: transparent;
-    box-shadow: none;
-    border: none; }
+    border: none;
+    border-radius: 0;
+    min-height: 0; }
 
 .marlin-pathbar.pathbar {
   border-radius: 3px;

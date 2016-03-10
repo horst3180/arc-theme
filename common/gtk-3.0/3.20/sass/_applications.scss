@@ -426,18 +426,20 @@ button.documents-favorite:active:hover {
 // Floating Bar
 //
 .floating-bar {
+  padding: 1px;
   background-color: $selected_bg_color;
   color: $selected_fg_color;
+  border-radius: 2px 2px 0 0;
 
-  &.top { border-radius: 0 0 2px 2px; }
-  &.right { border-radius: 2px 0 0 2px; }
-  &.bottom { border-radius: 2px 2px 0 0; }
-  &.left { border-radius: 0 2px 2px 0; }
+  &.bottom.left { border-top-left-radius: 0; }
+  &.bottom.right { border-top-right-radius: 0; }
 
   button {
-    background-color: transparent;
-    box-shadow: none;
     border: none;
+    border-radius: 0;
+    min-height: 0;
+
+    @extend %selected-button;
   }
 }
 
