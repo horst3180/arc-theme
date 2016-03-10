@@ -300,8 +300,8 @@ button.documents-favorite:active:hover {
 }
 
 .documents-entry-tag {
-  background-color: $selected_bg_color;
   color: $selected_fg_color;
+  background: $selected_bg_color;
   border-radius: 2px;
   border-width: 0;
   margin: 2px;
@@ -309,11 +309,11 @@ button.documents-favorite:active:hover {
 
   &:hover {
     color: $selected_fg_color;
-    background-color: lighten($selected_bg_color, 4%);
+    background: lighten($selected_bg_color, 4%);
   }
   &:active {
     color: $selected_fg_color;
-    background-color: darken($selected_bg_color, 4%);
+    background: darken($selected_bg_color, 4%);
   }
 
   toolbar .linked & button {

@@ -2911,18 +2911,18 @@ button.documents-favorite:active:hover {
   color: #a9caf1; }
 
 .documents-entry-tag {
-  background-color: #5294E2;
   color: #ffffff;
+  background: #5294E2;
   border-radius: 2px;
   border-width: 0;
   margin: 2px;
   padding: 4px; }
   .documents-entry-tag:hover {
     color: #ffffff;
-    background-color: #639fe5; }
+    background: #639fe5; }
   .documents-entry-tag:active {
     color: #ffffff;
-    background-color: #4189df; }
+    background: #4189df; }
   toolbar .linked .documents-entry-tag button, .inline-toolbar .linked .documents-entry-tag button {
     background: none;
     border: none;
