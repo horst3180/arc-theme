@@ -675,10 +675,10 @@ modelbutton.flat, button:link, button:visited, button:link:hover, button:link:ac
 menuitem.button.flat,
 modelbutton.flat {
   transition: none;
-  min-height: 22px;
+  min-height: 24px;
   padding-left: 8px;
   padding-right: 8px;
-  outline-offset: -2px;
+  outline-offset: -3px;
   border-radius: 2px; }
   menuitem.button.flat:hover,
   modelbutton.flat:hover {
@@ -1900,8 +1900,12 @@ infobar radio:checked:disabled {
   background-color: transparent; }
 
 checkbutton.text-button, radiobutton.text-button {
-  padding: 1px 2px 4px;
+  padding: 2px 0;
   outline-offset: 0; }
+  checkbutton.text-button label:not(:only-child):first-child, radiobutton.text-button label:not(:only-child):first-child {
+    margin-left: 4px; }
+  checkbutton.text-button label:not(:only-child):last-child, radiobutton.text-button label:not(:only-child):last-child {
+    margin-right: 4px; }
   checkbutton.text-button:disabled, checkbutton.text-button:disabled:active, checkbutton.text-button:disabled:indeterminate, radiobutton.text-button:disabled, radiobutton.text-button:disabled:active, radiobutton.text-button:disabled:indeterminate {
     color: rgba(92, 97, 108, 0.55); }
 

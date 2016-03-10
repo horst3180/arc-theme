@@ -662,10 +662,10 @@ toolbar.inline-toolbar toolbutton {
 menuitem.button.flat,
 modelbutton.flat {
   transition: none;
-  min-height: 22px;
+  min-height: 24px;
   padding-left: 8px;
   padding-right: 8px;
-  outline-offset: -2px;
+  outline-offset: -3px;
   border-radius: 2px;
 
   @extend %undecorated_button;
@@ -1947,8 +1947,13 @@ switch {
 checkbutton, radiobutton {
     // this is for a nice focus on check and radios text
     &.text-button {
-    padding: 1px 2px 4px;
+    padding: 2px 0;
     outline-offset: 0;
+
+  label:not(:only-child) {
+    &:first-child { margin-left: 4px; }
+    &:last-child { margin-right: 4px; }
+  }
 
     &:disabled,
     &:disabled:active,
