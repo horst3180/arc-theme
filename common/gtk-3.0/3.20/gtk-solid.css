@@ -937,11 +937,11 @@ paned.titlebar separator {
 paned.titlebar > headerbar:not(:only-child):not(:first-child):not(:last-child) {
   border-radius: 0; }
 
-paned.titlebar > headerbar:first-child {
-  border-top-right-radius: 0; }
-
-paned.titlebar > headerbar:last-child {
+paned.titlebar > headerbar ~ headerbar {
   border-top-left-radius: 0; }
+
+paned.titlebar > headerbar:first-child:dir(ltr) {
+  border-top-right-radius: 0; }
 
 headerbar entry, headerbar button, headerbar separator, headerbar .sidebar separator, .sidebar headerbar separator {
   margin-top: 6px;
@@ -2776,6 +2776,9 @@ modelbutton.flat:selected, treeview.view:selected, row:selected, .sidebar:select
   color: #ffffff;
   outline-color: rgba(255, 255, 255, 0.3); }
 
+.gedit-bottom-panel-paned notebook > header.top > tabs > tab:checked {
+  box-shadow: inset 0 -1px #dcdfe3; }
+
 .nautilus-canvas-item {
   border-radius: 2px; }
 
@@ -2860,33 +2863,30 @@ popover.background label.nautilus-canvas-item.separator, headerbar .nautilus-can
     color: rgba(255, 255, 255, 0.9); }
 
 .gedit-document-panel row button {
+  min-width: 22px;
+  min-height: 22px;
+  padding: 0;
   color: transparent;
-  background-image: none;
-  background-color: transparent;
+  background: none;
   border: none;
-  box-shadow: none;
-  padding: 4px; }
+  box-shadow: none; }
   .gedit-document-panel row button image {
     color: inherit; }
 
-.gedit-document-panel .prelight-row button {
+.gedit-document-panel row:hover:not(:selected) button {
   color: #92959d; }
+  .gedit-document-panel row:hover:not(:selected) button:hover {
+    color: #ff4d4d; }
+  .gedit-document-panel row:hover:not(:selected) button:active {
+    color: #5c616c; }
 
-.gedit-document-panel row button:hover,
-.gedit-document-panel .prelight-row button:hover {
-  color: #ff4d4d; }
-
-.gedit-document-panel .prelight-row:selected button:hover {
+.gedit-document-panel row:hover:selected button:hover {
   color: #ff6666;
-  background-image: none;
-  background-color: transparent;
+  background: none;
   border: none;
   box-shadow: none; }
-  .gedit-document-panel .prelight-row:selected button:hover:active {
+  .gedit-document-panel row:hover:selected button:hover:active {
     color: #ffffff; }
-
-.gedit-document-panel .prelight-row button:active {
-  color: #5c616c; }
 
 .gedit-document-panel-dragged-row {
   border: 1px solid #dcdfe3;
@@ -3456,29 +3456,20 @@ GtkListBox .h4 {
   .maximized .gedit-document-panel {
     background-color: #353945; }
   .gedit-document-panel row {
-    color: #BAC3CF; }
-  .gedit-document-panel row {
-    background-color: rgba(186, 195, 207, 0);
-    border: solid rgba(186, 195, 207, 0);
-    border-width: 3px 2px 3px 2px; }
-  .gedit-document-panel row:hover {
-    border: solid rgba(186, 195, 207, 0.15);
-    border-width: 3px 2px 3px 2px;
-    background-color: rgba(186, 195, 207, 0.15); }
-  .gedit-document-panel row:active {
-    color: #ffffff;
-    background-color: #5294E2;
-    border: solid #5294E2;
-    border-width: 3px 2px 3px 2px; }
-    .gedit-document-panel row:active button {
-      color: #ffffff; }
-  .gedit-document-panel row:selected, .gedit-document-panel row:selected:hover {
-    color: #ffffff;
-    background-color: #5294E2;
-    border: solid #5294E2;
-    border-width: 3px 2px 3px 2px; }
-  .gedit-document-panel .prelight-row button:active {
-    color: #BAC3CF; }
+    color: #BAC3CF;
+    background-color: rgba(186, 195, 207, 0); }
+    .gedit-document-panel row:hover {
+      background-color: rgba(186, 195, 207, 0.15); }
+    .gedit-document-panel row:active {
+      color: #ffffff;
+      background-color: #5294E2; }
+      .gedit-document-panel row:active button {
+        color: #ffffff; }
+    .gedit-document-panel row:selected, .gedit-document-panel row:selected:hover {
+      color: #ffffff;
+      background-color: #5294E2; }
+    .gedit-document-panel row:hover:not(:selected) button:active {
+      color: #BAC3CF; }
 
 .nautilus-window placessidebar.sidebar scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider {
   background-color: #e7eaee;

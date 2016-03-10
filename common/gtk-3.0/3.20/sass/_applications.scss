@@ -1,22 +1,14 @@
 //
 // Tab overrides
 //
-//GeditNotebook.notebook,
+.gedit-bottom-panel-paned notebook {
 //ScratchMainWindow .notebook,
 //EphyNotebook.notebook,
 //MidoriNotebook .notebook,
 //TerminalWindow .notebook,
 //PantheonTerminalPantheonTerminalWindow .notebook {
-//
-//  header.top tab {
-//    &:active {
-//      box-shadow: inset 0 1px $borders_color,
-//                  inset 0 -1px $borders_color,
-//                  inset 1px 0 $borders_color,
-//                  inset -1px 0 $borders_color;
-//    }
-//  }
-//}
+  > header.top > tabs > tab:checked { box-shadow: inset 0 -1px $borders_color; }
+}
 
 //TerminalWindow .notebook,
 //PantheonTerminalPantheonTerminalWindow .notebook {
@@ -220,31 +212,32 @@ $disk_space_free: darken($bg_color, 3%);
 .gedit-document-panel {
 
   row button {
+    min-width: 22px;
+    min-height: 22px;
+    padding: 0;
+
     color: transparent;
-    background-image: none;
-    background-color: transparent;
+    background: none;
     border: none;
     box-shadow: none;
-    padding: 4px;
-    & image { color: inherit; }
+
+    image { color: inherit; }
   }
-  .prelight-row button {
+
+  row:hover:not(:selected) button {
     color: mix($bg_color, $fg_color, 35%);
+
+    &:hover { color: lighten(red, 15%); }
+    &:active { color: $fg_color; }
   }
-  row button:hover,
-  .prelight-row button:hover {
-    color: lighten(red, 15%);
-  }
-  .prelight-row:selected button:hover {
+
+  row:hover:selected button:hover {
     color: lighten(red, 20%);
-    background-image: none;
-    background-color: transparent;
+    background: none;
     border: none;
     box-shadow: none;
+
     &:active { color: $selected_fg_color; }
-  }
-  .prelight-row button:active {
-    color: $fg_color;
   }
 }
 
@@ -274,10 +267,6 @@ $disk_space_free: darken($bg_color, 3%);
   margin: 2px;
   padding: 2px;
 }
-
-//GeditFileBrowserWidget toolbar {
-//  border-bottom: 1px solid $borders_color;
-//}
 
 //
 // Epiphany

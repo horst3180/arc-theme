@@ -131,63 +131,28 @@
 
   .maximized & { background-color: opacify($dark_sidebar_bg, 1); }
 
-  row { color: $dark_sidebar_fg; }
-
   row {
-    background-color: transparentize($dark_sidebar_fg, 1);
-    border: solid transparentize($dark_sidebar_fg, 1);
-    border-width: 3px 2px 3px 2px;
-  }
-  row:hover {
-    border: solid transparentize($dark_sidebar_fg, 0.85);
-    border-width: 3px 2px 3px 2px;
-    background-color: transparentize($dark_sidebar_fg, 0.85);
-  }
-  row:active {
-    color: $selected_fg_color;
-    background-color: $selected_bg_color;
-    border: solid $selected_bg_color;
-    border-width: 3px 2px 3px 2px;
-
-    button { color: $selected_fg_color; }
-  }
-  row:selected, row:selected:hover {
-    color: $selected_fg_color;
-    background-color: $selected_bg_color;
-    border: solid $selected_bg_color;
-    border-width: 3px 2px 3px 2px;
-  }
-  .prelight-row button:active {
     color: $dark_sidebar_fg;
+    background-color: transparentize($dark_sidebar_fg, 1);
+
+    &:hover {
+      background-color: transparentize($dark_sidebar_fg, 0.85);
+    }
+    &:active {
+      color: $selected_fg_color;
+      background-color: $selected_bg_color;
+
+      button { color: $selected_fg_color; }
+    }
+    &:selected, &:selected:hover {
+      color: $selected_fg_color;
+      background-color: $selected_bg_color;
+    }
+    &:hover:not(:selected) button:active {
+      color: $dark_sidebar_fg;
+    }
   }
 }
-
-//GeditFileBrowserWidget {
-//  background-color: $dark_sidebar_bg;
-//
-//  .maximized & { background-color: opacify($dark_sidebar_bg, 1); }
-//
-//  scrollbar { @extend %dark_sidebar_scrollbar; }
-//
-//  .horizontal {
-//    background-color: transparent;
-//    border-color: darken($dark_sidebar_bg, 7%);
-//
-//    button { @extend %dark_sidebar_button; }
-//    combobox { color: $dark_sidebar_fg; }
-//  }
-//}
-
-//GeditWindow.background.csd GeditFileBrowserView.view {
-//
-//  background-color: transparent;
-//  color: $dark_sidebar_fg;
-//
-//  &.expander {
-//    color: $dark_sidebar_fg;
-//    &:hover { color: $selected_bg_color; }
-//  }
-//}
 
 %dark_sidebar_button {
   @include button(osd);
