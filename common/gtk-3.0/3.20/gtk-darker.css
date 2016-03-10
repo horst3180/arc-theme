@@ -2611,14 +2611,14 @@ popover.background.touch-selection, .csd popover.background.touch-selection {
 .monospace {
   font: Monospace; }
 
-button.circular,
+button.circular, button.nautilus-circular-button.image-button,
 button.circular-button {
   padding: 0;
   min-width: 26px;
   min-height: 26px;
   border-radius: 50%;
   -gtk-outline-radius: 50%; }
-  button.circular label,
+  button.circular label, button.nautilus-circular-button.image-button label,
   button.circular-button label {
     padding: 0; }
 
@@ -2635,7 +2635,7 @@ button.circular-button {
 stackswitcher button.text-button {
   min-width: 80px; }
 
-stackswitcher button.circular {
+stackswitcher button.circular, stackswitcher button.nautilus-circular-button.image-button {
   min-width: 0; }
 
 *:drop(active):focus,
@@ -2802,11 +2802,6 @@ popover.background label.nautilus-canvas-item.separator, headerbar .nautilus-can
 .nautilus-window notebook > stack:not(:only-child) searchbar {
   background-color: #ffffff; }
 
-button.nautilus-circular-button.image-button {
-  border-radius: 50%;
-  -gtk-outline-radius: 50%;
-  padding: 8px; }
-
 .disk-space-display {
   border-style: solid;
   border-width: 1px; }
@@ -2822,6 +2817,25 @@ button.nautilus-circular-button.image-button {
 
 .nautilus-list-view .view {
   border-bottom: 1px solid #dcdfe3; }
+
+@keyframes needs_attention_keyframes {
+  0% {
+    color: rgba(207, 218, 231, 0.8);
+    outline-color: rgba(207, 218, 231, 0.1);
+    border-color: rgba(21, 23, 28, 0.37);
+    background-color: rgba(95, 105, 127, 0.37); }
+  100% {
+    color: #ffffff;
+    outline-color: rgba(255, 255, 255, 0.3);
+    border-color: transparent;
+    background-color: #5294E2; } }
+
+.nautilus-operations-button-needs-attention {
+  animation: needs_attention_keyframes 2s ease-in-out; }
+
+.nautilus-operations-button-needs-attention-multiple {
+  animation: needs_attention_keyframes 3s ease-in-out;
+  animation-iteration-count: 3; }
 
 .open-document-selector-treeview.view {
   padding: 3px 6px 3px 6px;
@@ -3415,19 +3429,19 @@ GtkListBox .h4 {
 .nautilus-window.maximized placessidebar.sidebar {
   background-color: #353945; }
 
-.nautilus-window button.sidebar-button {
+.nautilus-window row:not(:selected) button.sidebar-button {
   color: #BAC3CF; }
-  .nautilus-window button.sidebar-button:hover {
+  .nautilus-window row:not(:selected) button.sidebar-button:hover {
     color: #BAC3CF;
     outline-color: rgba(186, 195, 207, 0.3);
     border-color: rgba(26, 28, 34, 0.35);
     background-color: rgba(119, 127, 151, 0.45); }
-  .nautilus-window button.sidebar-button:active {
+  .nautilus-window row:not(:selected) button.sidebar-button:active {
     color: #ffffff;
     outline-color: rgba(255, 255, 255, 0.3);
     border-color: #5294E2;
     background-color: #5294E2; }
-  .nautilus-window button.sidebar-button:not(:hover):not(:active) > image {
+  .nautilus-window row:not(:selected) button.sidebar-button:not(:hover):not(:active) > image {
     opacity: 0.5; }
 
 .gedit-bottom-panel-paned {

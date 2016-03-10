@@ -46,7 +46,7 @@
 
   &.maximized placessidebar.sidebar { background-color: opacify($dark_sidebar_bg, 1); }
 
-  button.sidebar-button {
+  row:not(:selected) button.sidebar-button {
     color: $dark_sidebar_fg;
 
     &:hover { @include button(osd-hover); }

@@ -101,9 +101,7 @@
 }
 
 button.nautilus-circular-button.image-button {
-  border-radius: 50%;
-  -gtk-outline-radius: 50%;
-  padding: 8px;
+  @extend button.circular;
 }
 
 $disk_space_unknown: transparentize($fg_color, 0.5);
@@ -130,6 +128,19 @@ $disk_space_free: darken($bg_color, 3%);
 
 // View
 .nautilus-list-view .view { border-bottom: 1px solid $borders_color; }
+
+@keyframes needs_attention_keyframes {
+    0% { @include button(header-hover); }
+    100% { @include button(header-active) }
+}
+
+.nautilus-operations-button-needs-attention {
+  animation: needs_attention_keyframes 2s ease-in-out;
+}
+.nautilus-operations-button-needs-attention-multiple {
+  animation: needs_attention_keyframes 3s ease-in-out;
+  animation-iteration-count: 3;
+}
 
 //
 // Nemo
