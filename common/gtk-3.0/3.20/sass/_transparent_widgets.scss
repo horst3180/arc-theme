@@ -31,6 +31,7 @@
 
       .sidebar-icon { color: transparentize($dark_sidebar_fg, 0.4); }
 
+      &.has-open-popup,
       &:hover { background-color: transparentize($dark_sidebar_fg, 0.85); }
 
       &:selected, &:selected:hover, &:active:hover {

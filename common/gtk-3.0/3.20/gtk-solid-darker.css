@@ -940,7 +940,7 @@ paned.titlebar > headerbar:not(:only-child):not(:first-child):not(:last-child) {
 paned.titlebar > headerbar ~ headerbar {
   border-top-left-radius: 0; }
 
-paned.titlebar > headerbar:first-child:dir(ltr) {
+paned.titlebar > headerbar:first-child {
   border-top-right-radius: 0; }
 
 headerbar entry, headerbar button, headerbar separator, headerbar .sidebar separator, .sidebar headerbar separator {
@@ -3419,7 +3419,7 @@ GtkListBox .h4 {
     color: #BAC3CF; }
     .nautilus-window placessidebar.sidebar row.activatable .sidebar-icon {
       color: rgba(186, 195, 207, 0.6); }
-    .nautilus-window placessidebar.sidebar row.activatable:hover {
+    .nautilus-window placessidebar.sidebar row.activatable.has-open-popup, .nautilus-window placessidebar.sidebar row.activatable:hover {
       background-color: rgba(186, 195, 207, 0.15); }
     .nautilus-window placessidebar.sidebar row.activatable:selected .sidebar-icon, .nautilus-window placessidebar.sidebar row.activatable:selected:hover .sidebar-icon, .nautilus-window placessidebar.sidebar row.activatable:active:hover .sidebar-icon {
       color: inherit; }
