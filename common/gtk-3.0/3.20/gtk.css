@@ -2515,10 +2515,11 @@ tooltip {
   tooltip.background {
     background-color: rgba(53, 57, 69, 0.95);
     background-clip: padding-box; }
+    tooltip.background label {
+      padding: 4px; }
   tooltip decoration {
     background-color: transparent; }
   tooltip * {
-    padding: 4px;
     background-color: transparent;
     color: #BAC3CF; }
 

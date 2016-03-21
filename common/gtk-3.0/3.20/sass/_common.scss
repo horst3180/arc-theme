@@ -2700,6 +2700,8 @@ tooltip {
     // see https://bugzilla.gnome.org/show_bug.cgi?id=736155 for details.
     background-color: $osd_bg_color;
     background-clip: padding-box;
+
+    label { padding: 4px; }
   }
 
   border-radius: 2px;
@@ -2708,7 +2710,6 @@ tooltip {
   decoration { background-color: transparent; }
 
   * { //Yeah this is ugly
-    padding: 4px;
     background-color: transparent;
     color: $osd_fg_color; // just to be sure
   }
