@@ -2602,10 +2602,9 @@ paned {
     &:selected { background-image: linear-gradient(to top, $selected_bg_color); }
 
     &.wide {
-      margin: 0;
-      padding: 0;
       min-width: 5px;
       min-height: 5px;
+      background-color: $bg_color;
       background-image: linear-gradient(to top, $borders_color), linear-gradient(to top, $borders_color);
       background-size: 1px 1px, 1px 1px;
     }
@@ -2625,6 +2624,8 @@ paned {
     }
 
     &.wide {
+      margin: 0;
+      padding: 0;
       background-repeat: repeat-y, repeat-y;
       background-position: left, right;
     }
@@ -2637,6 +2638,8 @@ paned {
     background-position: top;
 
     &.wide {
+      margin: 0;
+      padding: 0;
       background-repeat: repeat-x, repeat-x;
       background-position: bottom, top;
     }

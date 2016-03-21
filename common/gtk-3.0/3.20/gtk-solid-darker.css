@@ -2440,10 +2440,9 @@ paned > separator, .sidebar paned > separator {
   paned > separator:selected, .sidebar paned > separator:selected {
     background-image: linear-gradient(to top, #5294E2); }
   paned > separator.wide, .sidebar paned > separator.wide {
-    margin: 0;
-    padding: 0;
     min-width: 5px;
     min-height: 5px;
+    background-color: #F5F6F7;
     background-image: linear-gradient(to top, #dcdfe3), linear-gradient(to top, #dcdfe3);
     background-size: 1px 1px, 1px 1px; }
 
@@ -2458,6 +2457,8 @@ paned.horizontal > separator, .sidebar paned.horizontal > separator {
     padding: 0 0 0 8px;
     background-position: right; }
   paned.horizontal > separator.wide, .sidebar paned.horizontal > separator.wide {
+    margin: 0;
+    padding: 0;
     background-repeat: repeat-y, repeat-y;
     background-position: left, right; }
 
@@ -2467,6 +2468,8 @@ paned.vertical > separator, .sidebar paned.vertical > separator {
   background-repeat: repeat-x;
   background-position: top; }
   paned.vertical > separator.wide, .sidebar paned.vertical > separator.wide {
+    margin: 0;
+    padding: 0;
     background-repeat: repeat-x, repeat-x;
     background-position: bottom, top; }
 
