@@ -468,14 +468,16 @@ button {
       padding-right: 2px;
     }
 
-    &.needs-attention > label,
-    &.needs-attention > image { @extend %needs_attention; }
-    &.needs-attention:active > label,
-    &.needs-attention:active > image,
-    &.needs-attention:checked > label,
-    &.needs-attention:checked > image {
-      animation: none;
-      background-image: none;
+    &.needs-attention {
+
+      > label, > image { @extend %needs_attention; }
+
+      &:active, &:checked {
+        > label, > image {
+          animation: none;
+          background-image: none;
+        }
+      }
     }
   }
 
@@ -2529,7 +2531,7 @@ stacksidebar {
 
 placessidebar {
 
-  @extend scrolledwindow;
+  > viewport.frame { border-style: none; }
 
   list { background-color: transparent; }
 

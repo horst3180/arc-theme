@@ -449,21 +449,16 @@ button {
     .stack-switcher > button.image-button {
       padding-left: 2px;
       padding-right: 2px; }
-    .stack-switcher > button.needs-attention:active > label,
-    .stack-switcher > button.needs-attention:active > image,
-    .stack-switcher > button.needs-attention:checked > label,
-    .stack-switcher > button.needs-attention:checked > image {
+    .stack-switcher > button.needs-attention:active > label, .stack-switcher > button.needs-attention:active > image, .stack-switcher > button.needs-attention:checked > label, .stack-switcher > button.needs-attention:checked > image {
       animation: none;
       background-image: none; }
-  .stack-switcher > button.needs-attention > label,
-  .stack-switcher > button.needs-attention > image, button stacksidebar row.needs-attention > label, stacksidebar button row.needs-attention > label {
+  .stack-switcher > button.needs-attention > label, .stack-switcher > button.needs-attention > image, button stacksidebar row.needs-attention > label, stacksidebar button row.needs-attention > label {
     animation: needs_attention 150ms ease-in;
     background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(#5294E2), to(transparent));
     background-size: 6px 6px, 6px 6px;
     background-repeat: no-repeat;
     background-position: right 3px, right 4px; }
-    .stack-switcher > button.needs-attention > label:dir(rtl),
-    .stack-switcher > button.needs-attention > image:dir(rtl), button stacksidebar row.needs-attention > label:dir(rtl), stacksidebar button row.needs-attention > label:dir(rtl) {
+    .stack-switcher > button.needs-attention > label:dir(rtl), .stack-switcher > button.needs-attention > image:dir(rtl), button stacksidebar row.needs-attention > label:dir(rtl), stacksidebar button row.needs-attention > label:dir(rtl) {
       background-position: left 3px, left 4px; }
   .inline-toolbar button, .inline-toolbar button:backdrop {
     border-radius: 2px;
@@ -2137,10 +2132,10 @@ frame > border,
   .frame.flat {
     border-style: none; }
 
-scrolledwindow viewport.frame, placessidebar viewport.frame {
+scrolledwindow viewport.frame {
   border-style: none; }
 
-scrolledwindow overshoot.top, placessidebar overshoot.top {
+scrolledwindow overshoot.top {
   background-image: -gtk-gradient(radial, center top, 0, center top, 0.6, from(rgba(82, 148, 226, 0.2)), to(rgba(82, 148, 226, 0)));
   background-size: 100% 60%;
   background-repeat: no-repeat;
@@ -2149,7 +2144,7 @@ scrolledwindow overshoot.top, placessidebar overshoot.top {
   border: none;
   box-shadow: none; }
 
-scrolledwindow overshoot.bottom, placessidebar overshoot.bottom {
+scrolledwindow overshoot.bottom {
   background-image: -gtk-gradient(radial, center bottom, 0, center bottom, 0.6, from(rgba(82, 148, 226, 0.2)), to(rgba(82, 148, 226, 0)));
   background-size: 100% 60%;
   background-repeat: no-repeat;
@@ -2158,7 +2153,7 @@ scrolledwindow overshoot.bottom, placessidebar overshoot.bottom {
   border: none;
   box-shadow: none; }
 
-scrolledwindow overshoot.left, placessidebar overshoot.left {
+scrolledwindow overshoot.left {
   background-image: -gtk-gradient(radial, left center, 0, left center, 0.6, from(rgba(82, 148, 226, 0.2)), to(rgba(82, 148, 226, 0)));
   background-size: 60% 100%;
   background-repeat: no-repeat;
@@ -2167,7 +2162,7 @@ scrolledwindow overshoot.left, placessidebar overshoot.left {
   border: none;
   box-shadow: none; }
 
-scrolledwindow overshoot.right, placessidebar overshoot.right {
+scrolledwindow overshoot.right {
   background-image: -gtk-gradient(radial, right center, 0, right center, 0.6, from(rgba(82, 148, 226, 0.2)), to(rgba(82, 148, 226, 0)));
   background-size: 60% 100%;
   background-repeat: no-repeat;
@@ -2176,7 +2171,7 @@ scrolledwindow overshoot.right, placessidebar overshoot.right {
   border: none;
   box-shadow: none; }
 
-scrolledwindow undershoot.top, placessidebar undershoot.top {
+scrolledwindow undershoot.top {
   background-color: transparent;
   background-image: linear-gradient(to left, rgba(255, 255, 255, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%);
   padding-top: 1px;
@@ -2186,7 +2181,7 @@ scrolledwindow undershoot.top, placessidebar undershoot.top {
   background-position: center top;
   border: none; }
 
-scrolledwindow undershoot.bottom, placessidebar undershoot.bottom {
+scrolledwindow undershoot.bottom {
   background-color: transparent;
   background-image: linear-gradient(to left, rgba(255, 255, 255, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%);
   padding-bottom: 1px;
@@ -2196,7 +2191,7 @@ scrolledwindow undershoot.bottom, placessidebar undershoot.bottom {
   background-position: center bottom;
   border: none; }
 
-scrolledwindow undershoot.left, placessidebar undershoot.left {
+scrolledwindow undershoot.left {
   background-color: transparent;
   background-image: linear-gradient(to top, rgba(255, 255, 255, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%);
   padding-left: 1px;
@@ -2206,7 +2201,7 @@ scrolledwindow undershoot.left, placessidebar undershoot.left {
   background-position: left center;
   border: none; }
 
-scrolledwindow undershoot.right, placessidebar undershoot.right {
+scrolledwindow undershoot.right {
   background-color: transparent;
   background-image: linear-gradient(to top, rgba(255, 255, 255, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%);
   padding-right: 1px;
@@ -2216,11 +2211,11 @@ scrolledwindow undershoot.right, placessidebar undershoot.right {
   background-position: right center;
   border: none; }
 
-scrolledwindow junction, placessidebar junction {
+scrolledwindow junction {
   border-color: transparent;
   border-image: linear-gradient(to bottom, #dcdfe3 1px, transparent 1px) 0 0 0 1/0 1px stretch;
   background-color: #fcfcfc; }
-  scrolledwindow junction:dir(rtl), placessidebar junction:dir(rtl) {
+  scrolledwindow junction:dir(rtl) {
     border-image-slice: 0 1 0 0; }
 
 separator, .sidebar separator {
@@ -2389,6 +2384,9 @@ stacksidebar row {
     padding-right: 6px; }
   stacksidebar row.needs-attention > label {
     background-size: 6px 6px, 0 0; }
+
+placessidebar > viewport.frame {
+  border-style: none; }
 
 placessidebar list {
   background-color: transparent; }
