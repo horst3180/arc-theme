@@ -362,8 +362,9 @@ button {
     border-color: darken($osd_bg_color, 8%);
 
     &.image-button {
-      min-height: 48px;
-      min-width: 48px;
+      padding: 0;
+      min-height: 36px;
+      min-width: 36px;
     }
 
     &:hover { color: $selected_bg_color; }

@@ -295,8 +295,9 @@ button {
     background-color: rgba(53, 57, 69, 0.95);
     border-color: rgba(35, 38, 46, 0.95); }
     button.osd.image-button {
-      min-height: 48px;
-      min-width: 48px; }
+      padding: 0;
+      min-height: 36px;
+      min-width: 36px; }
     button.osd:hover {
       color: #5294E2; }
     button.osd:active, button.osd:checked {
