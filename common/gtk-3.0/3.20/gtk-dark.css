@@ -733,6 +733,9 @@ spinbutton button:active {
 spinbutton:disabled {
   color: rgba(211, 218, 227, 0.45); }
 
+spinbutton:not(.vertical) entry {
+  min-width: 28px; }
+
 spinbutton:not(.vertical):dir(ltr) entry,
 spinbutton:not(.vertical):dir(rtl) button.up {
   border-radius: 3px 0 0 3px; }

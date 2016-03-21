@@ -729,6 +729,8 @@ spinbutton {
   &:disabled { color: $insensitive_fg_color; }
 
   &:not(.vertical) {
+    entry { min-width: 28px; }
+
     button, entry { @extend %linked; }
 
     &:dir(ltr) entry,
