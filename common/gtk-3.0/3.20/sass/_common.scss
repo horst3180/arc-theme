@@ -1623,7 +1623,7 @@ notebook {
   }
 
   > header {
-    padding: 3px;
+    padding: 2px;
     background-color: $bg_color;
 
     &.top {    box-shadow: inset  0  -1px $borders_color; }
@@ -1638,8 +1638,8 @@ notebook {
 
         > tabs > tab {
           padding: 2px 10px;
-          min-width: 22px;
-          min-height: 22px;
+          min-width: 20px;
+          min-height: 20px;
 
           outline-offset: -4px;
 
@@ -1704,7 +1704,7 @@ notebook {
       }
       // close button
       button.flat {
-        min-height: 18px;
+        min-height: 22px;
         min-width: 16px;
         padding: 0;
         color: mix($bg_color, $fg_color, 35%);

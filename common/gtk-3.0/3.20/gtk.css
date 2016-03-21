@@ -1528,7 +1528,7 @@ notebook {
   notebook > stack:not(:only-child) {
     background-color: #ffffff; }
   notebook > header {
-    padding: 3px;
+    padding: 2px;
     background-color: #F5F6F7; }
     notebook > header.top {
       box-shadow: inset 0 -1px #dcdfe3; }
@@ -1542,8 +1542,8 @@ notebook {
       padding-bottom: 0; }
       notebook > header.top > tabs > tab {
         padding: 2px 10px;
-        min-width: 22px;
-        min-height: 22px;
+        min-width: 20px;
+        min-height: 20px;
         outline-offset: -4px;
         border: 1px solid transparent;
         border-bottom: none;
@@ -1553,8 +1553,8 @@ notebook {
       padding-top: 0; }
       notebook > header.bottom > tabs > tab {
         padding: 2px 10px;
-        min-width: 22px;
-        min-height: 22px;
+        min-width: 20px;
+        min-height: 20px;
         outline-offset: -4px;
         border: 1px solid transparent;
         border-top: none;
@@ -1564,8 +1564,8 @@ notebook {
       padding-left: 0; }
       notebook > header.right > tabs > tab {
         padding: 2px 10px;
-        min-width: 22px;
-        min-height: 22px;
+        min-width: 20px;
+        min-height: 20px;
         outline-offset: -4px;
         border: 1px solid transparent;
         border-left: none;
@@ -1575,8 +1575,8 @@ notebook {
       padding-right: 0; }
       notebook > header.left > tabs > tab {
         padding: 2px 10px;
-        min-width: 22px;
-        min-height: 22px;
+        min-width: 20px;
+        min-height: 20px;
         outline-offset: -4px;
         border: 1px solid transparent;
         border-right: none;
@@ -1619,7 +1619,7 @@ notebook {
         background-color: #ffffff;
         border-color: #dcdfe3; }
       notebook > header > tabs > tab button.flat, notebook > header > tabs > tab button.sidebar-button {
-        min-height: 18px;
+        min-height: 22px;
         min-width: 16px;
         padding: 0;
         color: #92959d; }
