@@ -1286,6 +1286,10 @@ headerbar entry, headerbar button, headerbar separator, headerbar .sidebar separ
 .path-bar button.text-button.image-button label:first-child, .path-bar button label:first-child {
   padding-left: 10px; }
 
+.path-bar button.slider-button {
+  padding-left: 2px;
+  padding-right: 2px; }
+
 .path-bar button image {
   padding-left: 4px;
   padding-right: 4px; }

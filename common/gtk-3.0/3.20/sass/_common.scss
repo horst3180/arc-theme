@@ -1315,6 +1315,11 @@ headerbar {
     label:first-child { padding-left: 10px; }
   }
 
+  &.slider-button {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
   image {
     padding-left: 4px;
     padding-right: 4px;
