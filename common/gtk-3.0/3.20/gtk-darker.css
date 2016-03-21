@@ -2594,6 +2594,9 @@ button.color {
     margin: 4px;
     border-radius: 0; }
 
+colorchooser .popover.osd {
+  border-radius: 3px; }
+
 .content-view {
   background-color: #ffffff; }
   .content-view:hover {
