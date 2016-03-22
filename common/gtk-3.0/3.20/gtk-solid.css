@@ -187,7 +187,7 @@ entry {
       color: #FC4138; }
   entry:drop(active):focus, entry:drop(active) {
     border-color: #4e9a06;
-    box-shadow: inset 0 0 0 1px #4e9a06; }
+    box-shadow: none; }
   .osd entry {
     color: #BAC3CF;
     border-color: rgba(26, 28, 34, 0.4);
@@ -296,7 +296,7 @@ button {
   button:drop(active), combobox:drop(active) button.combo {
     color: #4e9a06;
     border-color: #4e9a06;
-    box-shadow: inset 0 0 0 1px #4e9a06; }
+    box-shadow: none; }
   button.osd {
     color: #BAC3CF;
     outline-color: rgba(186, 195, 207, 0.3);
@@ -509,6 +509,15 @@ button {
 .linked:not(.vertical):not(.path-bar) > entry:focus:not(:only-child) + combobox > box > button.combo {
   border-left-color: #5294E2; }
 
+.linked:not(.vertical):not(.path-bar) > entry + entry:drop(active):not(:last-child),
+.linked:not(.vertical):not(.path-bar) > entry + entry:drop(active):last-child {
+  border-left-color: #4e9a06; }
+
+.linked:not(.vertical):not(.path-bar) > entry:drop(active):not(:only-child) + entry,
+.linked:not(.vertical):not(.path-bar) > entry:drop(active):not(:only-child) + button,
+.linked:not(.vertical):not(.path-bar) > entry:drop(active):not(:only-child) + combobox > box > button.combo {
+  border-left-color: #4e9a06; }
+
 .linked:not(.vertical):not(.path-bar) > entry + entry.warning:focus:not(:last-child),
 .linked:not(.vertical):not(.path-bar) > entry + entry.warning:focus:last-child {
   border-left-color: #F27835; }
@@ -576,6 +585,15 @@ button {
 .linked.vertical > entry:focus:not(:only-child) + button,
 .linked.vertical > entry:focus:not(:only-child) + combobox > box > button.combo {
   border-top-color: #5294E2; }
+
+.linked.vertical > entry + entry:drop(active):not(:last-child),
+.linked.vertical > entry + entry:drop(active):last-child {
+  border-top-color: #4e9a06; }
+
+.linked.vertical > entry:drop(active):not(:only-child) + entry,
+.linked.vertical > entry:drop(active):not(:only-child) + button,
+.linked.vertical > entry:drop(active):not(:only-child) + combobox > box > button.combo {
+  border-top-color: #4e9a06; }
 
 .linked.vertical > entry + entry.warning:focus:not(:last-child),
 .linked.vertical > entry + entry.warning:focus:last-child {
@@ -726,6 +744,9 @@ modelbutton.flat arrow.right {
 button:link > label, button:visited > label {
   text-decoration-line: underline; }
 
+spinbutton:drop(active) {
+  box-shadow: none; }
+
 spinbutton button:active {
   color: #ffffff; }
 
@@ -754,6 +775,9 @@ spinbutton:not(.vertical) > entry + button:not(:active):hover {
 spinbutton:not(.vertical) > entry:focus + button {
   border-left-color: #5294E2; }
 
+spinbutton:not(.vertical) > entry:drop(active) + button {
+  border-left-color: #4e9a06; }
+
 spinbutton.vertical button, spinbutton.vertical entry {
   padding-left: 4px;
   padding-right: 4px;
@@ -764,6 +788,9 @@ spinbutton.vertical button.up {
 
 spinbutton.vertical > entry:focus + button {
   border-top-color: #5294E2; }
+
+spinbutton.vertical > entry:drop(active) + button {
+  border-top-color: #4e9a06; }
 
 combobox button.combo {
   min-width: 0;
@@ -1097,6 +1124,12 @@ headerbar entry, headerbar button, headerbar separator {
 
 .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry:focus:not(:only-child) + entry, headerbar .linked:not(.vertical):not(.path-bar) > entry:focus:not(:only-child) + entry, .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry:focus:not(:only-child) + button, headerbar .linked:not(.vertical):not(.path-bar) > entry:focus:not(:only-child) + button, .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry:focus:not(:only-child) + combobox > box > button.combo, headerbar .linked:not(.vertical):not(.path-bar) > entry:focus:not(:only-child) + combobox > box > button.combo {
   border-left-color: #5294E2; }
+
+.primary-toolbar .linked:not(.vertical):not(.path-bar) > entry + entry:drop(active):not(:last-child), headerbar .linked:not(.vertical):not(.path-bar) > entry + entry:drop(active):not(:last-child), .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry + entry:drop(active):last-child, headerbar .linked:not(.vertical):not(.path-bar) > entry + entry:drop(active):last-child {
+  border-left-color: #4e9a06; }
+
+.primary-toolbar .linked:not(.vertical):not(.path-bar) > entry:drop(active):not(:only-child) + entry, headerbar .linked:not(.vertical):not(.path-bar) > entry:drop(active):not(:only-child) + entry, .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry:drop(active):not(:only-child) + button, headerbar .linked:not(.vertical):not(.path-bar) > entry:drop(active):not(:only-child) + button, .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry:drop(active):not(:only-child) + combobox > box > button.combo, headerbar .linked:not(.vertical):not(.path-bar) > entry:drop(active):not(:only-child) + combobox > box > button.combo {
+  border-left-color: #4e9a06; }
 
 .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry + entry.warning:focus:not(:last-child), headerbar .linked:not(.vertical):not(.path-bar) > entry + entry.warning:focus:not(:last-child), .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry + entry.warning:focus:last-child, headerbar .linked:not(.vertical):not(.path-bar) > entry + entry.warning:focus:last-child {
   border-left-color: #F27835; }
@@ -2720,7 +2753,6 @@ stackswitcher button.circular, stackswitcher button.nautilus-circular-button.ima
 
 *:drop(active):focus,
 *:drop(active) {
-  border-color: #4e9a06;
   box-shadow: inset 0 0 0 1px #4e9a06; }
 
 decoration {
