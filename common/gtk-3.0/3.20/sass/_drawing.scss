@@ -1,18 +1,5 @@
 // Drawing mixins
 
-// generic drawing of more complex things
-
-@mixin _shadows($shadow1, $shadow2:none, $shadow3:none, $shadow4:none) {
-//
-// Helper function to stack up to 4 box-shadows;
-//
-
-  @if $shadow4!=none { box-shadow: $shadow1, $shadow2, $shadow3, $shadow4; }
-  @else if $shadow3!=none { box-shadow: $shadow1, $shadow2, $shadow3; }
-  @else if $shadow2!=none { box-shadow: $shadow1, $shadow2; }
-  @else { box-shadow: $shadow1; }
-}
-
 // Entries
 
 @mixin entry($t) {
@@ -163,24 +150,22 @@
   //
   // insensitive button
   //
-    color: $insensitive_fg_color;
+    label, & { color: $insensitive_fg_color; }
+
     border-color: transparentize($button_border, 0.45);
     background-color: transparentize($button_bg, 0.45);
-
-    > label { color: inherit; }
   }
 
   @else if $t==insensitive-active {
   //
   // insensitive pushed button
   //
-    color: transparentize($selected_fg_color, 0.2);
+    label, & { color: transparentize($selected_fg_color, 0.2); }
+
     border-color: transparentize($selected_bg_color, 0.25);
     background-color: transparentize($selected_bg_color, 0.25);
 
     opacity: 0.6;
-
-    > label { color: inherit; }
   }
 
   @if $t==header-normal {
@@ -218,11 +203,10 @@
   //
   // insensitive header-bar button
   //
-    color: transparentize($header_fg, 0.45);
+    label, & { color: transparentize($header_fg, 0.45); }
+
     background-color: transparentize($header_bg, 1);
     border-color: transparentize($header_bg, 1);
-
-    > label { color: inherit; }
   }
 
   @else if $t==header-insensitive-active {
