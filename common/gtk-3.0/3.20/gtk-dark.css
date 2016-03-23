@@ -819,6 +819,14 @@ toolbar, .inline-toolbar {
     background-color: rgba(53, 57, 69, 0.85); }
     toolbar.osd.left, .osd.left.inline-toolbar, toolbar.osd.right, .osd.right.inline-toolbar, toolbar.osd.top, .osd.top.inline-toolbar, toolbar.osd.bottom, .osd.bottom.inline-toolbar {
       border-radius: 0; }
+    toolbar.osd.top, .osd.top.inline-toolbar {
+      border-width: 0 0 1px 0; }
+    toolbar.osd.bottom, .osd.bottom.inline-toolbar {
+      border-width: 1px 0 0 0; }
+    toolbar.osd.left, .osd.left.inline-toolbar {
+      border-width: 0 1px 0 0; }
+    toolbar.osd.right, .osd.right.inline-toolbar {
+      border-width: 0 0 0 1px; }
   toolbar:not(.inline-toolbar):not(.osd) switch, .inline-toolbar:not(.inline-toolbar):not(.osd) switch,
   toolbar:not(.inline-toolbar):not(.osd) scale, .inline-toolbar:not(.inline-toolbar):not(.osd) scale,
   toolbar:not(.inline-toolbar):not(.osd) entry, .inline-toolbar:not(.inline-toolbar):not(.osd) entry,

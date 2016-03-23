@@ -858,6 +858,11 @@ toolbar {
     &.right,
     &.top,
     &.bottom { border-radius: 0; } // positional classes for `attached` osd toolbars
+
+    &.top { border-width: 0 0 1px 0; }
+    &.bottom { border-width: 1px 0 0 0; }
+    &.left { border-width: 0 1px 0 0; }
+    &.right { border-width: 0 0 0 1px; }
   }
 
   &:not(.inline-toolbar):not(.osd) {
