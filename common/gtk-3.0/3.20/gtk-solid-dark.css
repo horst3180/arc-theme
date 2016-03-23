@@ -3125,14 +3125,15 @@ button.documents-favorite:active:hover {
   .xfce4-panel.panel button.flat, .xfce4-panel.panel button.sidebar-button {
     color: #BAC3CF;
     background-color: rgba(43, 46, 55, 0);
-    border-radius: 0; }
+    border-radius: 0;
+    border: none; }
     .xfce4-panel.panel button.flat:hover, .xfce4-panel.panel button.sidebar-button:hover {
       border: none;
       background-color: #414654; }
     .xfce4-panel.panel button.flat:active, .xfce4-panel.panel button.sidebar-button:active, .xfce4-panel.panel button.flat:checked, .xfce4-panel.panel button.sidebar-button:checked {
-      color: #5294E2;
+      color: #ffffff;
       border: none;
-      background-color: #1b1d23; }
+      background-color: #5294E2; }
 
 .floating-bar {
   padding: 1px;
