@@ -21,26 +21,39 @@
 
     background-color: $dark_sidebar_bg;
 
-    row.sidebar-new-bookmark-row {
-      &, image { color: $selected_bg_color; }
-    }
-
     row {
       border: none;
       color: $dark_sidebar_fg;
 
-      &:not(:selected):not(:disabled):not(:active):not(.sidebar-new-bookmark-row) {
-        .sidebar-icon { color: transparentize($dark_sidebar_fg, 0.4); }
-      }
+      .sidebar-icon { color: transparentize($dark_sidebar_fg, 0.4); }
 
       &.has-open-popup,
       &:hover { background-color: transparentize($dark_sidebar_fg, 0.85); }
+
       &:disabled {
         &, label, image { color: transparentize($dark_sidebar_fg, 0.6); }
       }
 
+      &:selected.has-open-popup,
       &:selected, &:selected:hover, &:active:hover {
         @extend %selected_items;
+
+        .sidebar-icon { color: inherit; }
+      }
+
+      &.sidebar-new-bookmark-row {
+        color: $selected_bg_color;
+
+        .sidebar-icon { color: inherit; }
+      }
+
+      &:drop(active):not(:disabled) {
+        &, label, .sidebar-icon { color: $drop_target_color; }
+
+        &:selected {
+          &, label, .sidebar-icon { color: $selected_fg_color; }
+          background-color: $drop_target_color;
+        }
       }
     }
 

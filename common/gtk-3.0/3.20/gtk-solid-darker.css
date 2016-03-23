@@ -1327,7 +1327,7 @@ headerbar entry, headerbar button, headerbar separator {
 .path-bar button.text-button.image-button label:first-child, .path-bar button label:first-child {
   padding-left: 10px; }
 
-.path-bar button.slider-button {
+.path-bar button.slider-button, .path-bar button:not(.image-button):not(.text-button) {
   padding-left: 1px;
   padding-right: 1px; }
 
@@ -2471,11 +2471,13 @@ placessidebar row {
   placessidebar row.sidebar-new-bookmark-row {
     color: #5294E2; }
   placessidebar row:drop(active):not(:disabled) {
-    color: #4e9a06;
     box-shadow: inset 0 1px #4e9a06, inset 0 -1px #4e9a06; }
+    placessidebar row:drop(active):not(:disabled), placessidebar row:drop(active):not(:disabled) label, placessidebar row:drop(active):not(:disabled) image {
+      color: #4e9a06; }
     placessidebar row:drop(active):not(:disabled):selected {
-      color: #ffffff;
       background-color: #4e9a06; }
+      placessidebar row:drop(active):not(:disabled):selected, placessidebar row:drop(active):not(:disabled):selected label, placessidebar row:drop(active):not(:disabled):selected image {
+        color: #ffffff; }
 
 placesview .server-list-button > image {
   -gtk-icon-transform: rotate(0turn); }
@@ -2868,7 +2870,7 @@ textview text:selected:focus, .view text selection:focus, iconview text selectio
 textview text selection:focus,
 textview text selection, flowbox flowboxchild:selected, entry selection:focus, entry selection, menuitem.button.flat:active, menuitem.button.flat:selected,
 modelbutton.flat:active,
-modelbutton.flat:selected, treeview.view:selected, treeview.view:selected:focus, row:selected, .nautilus-window placessidebar.sidebar row:selected, .nautilus-window placessidebar.sidebar row:selected:hover, .nautilus-window placessidebar.sidebar row:active:hover {
+modelbutton.flat:selected, treeview.view:selected, treeview.view:selected:focus, row:selected, .nautilus-window placessidebar.sidebar row.has-open-popup:selected, .nautilus-window placessidebar.sidebar row:selected, .nautilus-window placessidebar.sidebar row:selected:hover, .nautilus-window placessidebar.sidebar row:active:hover {
   background-color: #5294E2; }
   row:selected label, label:selected, .view:selected, iconview:selected, .view:selected:focus, iconview:selected:focus, .view text:selected, iconview text:selected,
   textview text:selected, iconview text:selected:focus,
@@ -2876,7 +2878,7 @@ modelbutton.flat:selected, treeview.view:selected, treeview.view:selected:focus,
   textview text selection:focus,
   textview text selection, flowbox flowboxchild:selected, entry selection:focus, entry selection, menuitem.button.flat:active, menuitem.button.flat:selected,
   modelbutton.flat:active,
-  modelbutton.flat:selected, treeview.view:selected, treeview.view:selected:focus, row:selected, .nautilus-window placessidebar.sidebar row:selected, .nautilus-window placessidebar.sidebar row:selected:hover, .nautilus-window placessidebar.sidebar row:active:hover {
+  modelbutton.flat:selected, treeview.view:selected, treeview.view:selected:focus, row:selected, .nautilus-window placessidebar.sidebar row.has-open-popup:selected, .nautilus-window placessidebar.sidebar row:selected, .nautilus-window placessidebar.sidebar row:selected:hover, .nautilus-window placessidebar.sidebar row:active:hover {
     color: #ffffff;
     outline-color: rgba(255, 255, 255, 0.3); }
     row:selected label:disabled, label:disabled:selected, .view:disabled:selected, iconview:disabled:selected, iconview:disabled:selected:focus, .view text:disabled:selected, iconview text:disabled:selected,
@@ -3526,17 +3528,27 @@ GtkListBox .h4 {
 
 .nautilus-window placessidebar.sidebar {
   background-color: #353945; }
-  .nautilus-window placessidebar.sidebar row.sidebar-new-bookmark-row, .nautilus-window placessidebar.sidebar row.sidebar-new-bookmark-row image {
-    color: #5294E2; }
   .nautilus-window placessidebar.sidebar row {
     border: none;
     color: #BAC3CF; }
-    .nautilus-window placessidebar.sidebar row:not(:selected):not(:disabled):not(:active):not(.sidebar-new-bookmark-row) .sidebar-icon {
+    .nautilus-window placessidebar.sidebar row .sidebar-icon {
       color: rgba(186, 195, 207, 0.6); }
     .nautilus-window placessidebar.sidebar row.has-open-popup, .nautilus-window placessidebar.sidebar row:hover {
       background-color: rgba(186, 195, 207, 0.15); }
     .nautilus-window placessidebar.sidebar row:disabled, .nautilus-window placessidebar.sidebar row:disabled label, .nautilus-window placessidebar.sidebar row:disabled image {
       color: rgba(186, 195, 207, 0.4); }
+    .nautilus-window placessidebar.sidebar row:selected.has-open-popup .sidebar-icon, .nautilus-window placessidebar.sidebar row:selected .sidebar-icon, .nautilus-window placessidebar.sidebar row:selected:hover .sidebar-icon, .nautilus-window placessidebar.sidebar row:active:hover .sidebar-icon {
+      color: inherit; }
+    .nautilus-window placessidebar.sidebar row.sidebar-new-bookmark-row {
+      color: #5294E2; }
+      .nautilus-window placessidebar.sidebar row.sidebar-new-bookmark-row .sidebar-icon {
+        color: inherit; }
+    .nautilus-window placessidebar.sidebar row:drop(active):not(:disabled), .nautilus-window placessidebar.sidebar row:drop(active):not(:disabled) label, .nautilus-window placessidebar.sidebar row:drop(active):not(:disabled) .sidebar-icon {
+      color: #4e9a06; }
+    .nautilus-window placessidebar.sidebar row:drop(active):not(:disabled):selected {
+      background-color: #4e9a06; }
+      .nautilus-window placessidebar.sidebar row:drop(active):not(:disabled):selected, .nautilus-window placessidebar.sidebar row:drop(active):not(:disabled):selected label, .nautilus-window placessidebar.sidebar row:drop(active):not(:disabled):selected .sidebar-icon {
+        color: #ffffff; }
   .nautilus-window placessidebar.sidebar separator {
     background-color: transparent; }
 
