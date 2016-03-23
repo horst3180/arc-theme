@@ -1,18 +1,19 @@
 //NemoWindow GtkEventBox { background-color: $bg_color; } // fixes nemo statusbar
 
-//GtkFileChooserDialog,
 //NemoWindow,
 .nautilus-window {
   paned > separator {
-    background: $dark_sidebar_border;
+    background-image: linear-gradient(to top, $dark_sidebar_border);
 
     &:dir(ltr) { margin-left: -1px; }
     &:dir(rtl) { margin-right: -1px; }
   }
 }
 
+filechooser paned > separator { background-image: linear-gradient(to top, $dark_sidebar_border); }
+
 // Dark transparent sidebars
-//GtkFileChooserDialog,
+filechooser,
 .nautilus-window {
 
   &.csd.background, placessidebar list { background-color: transparent; }
@@ -109,37 +110,21 @@
 //NemoWindow.background > GtkGrid > paned > separator,
 //MarlinViewWindow.background > GtkBox > paned > separator { background-color: $dark_sidebar_border }
 
-//GtkFileChooserDialog {
-//
-//  &.background.csd, &.background { background-color: $dark_sidebar_bg }
-//  scrolledwindow.sidebar { background-color: transparent }
-//
-//  // Yeah, this is ugly, but prevents a transparent background in the image preview box
-//  paned > .vertical > .horizontal { background-color: $bg_color; }
-//
-//  // fix for non gnome environments
-//  .dialog-action-box { background-color: $bg_color }
-//
-//  .dialog-vbox > .frame {
-//    color: $dark_sidebar_fg;
-//    border-color: transparent;
-//  }
-//  GtkFileChooserWidget > actionbar > revealer > .action-bar.frame {
-//    background-color: transparent;
-//    border-color: if($variant =='light', darken($dark_sidebar_bg, 7%), darken($dark_sidebar_bg, 15%));
-//  }
-//
-//  GtkFileChooserWidget > actionbar > revealer > .action-bar.frame,
-//  .dialog-vbox > .frame {
-//
-//    button { @extend %dark_sidebar_button; }
-//    entry { @extend %dark_sidebar_entry; }
-//
-//    @extend %osd_check_radio;
-//
-//    label, combobox { color: $dark_sidebar_fg; }
-//  }
-//}
+filechooser {
+
+  actionbar {
+    color: $dark_sidebar_fg;
+    background-color: $dark_sidebar_bg;
+    border-color: if($variant =='light', darken($dark_sidebar_bg, 7%), darken($dark_sidebar_bg, 15%));
+
+    button { @extend %dark_sidebar_button; }
+    entry { @extend %dark_sidebar_entry; }
+
+    @extend %osd_check_radio;
+
+    label, combobox { color: $dark_sidebar_fg; }
+  }
+}
 
 // Gedit
 .gedit-bottom-panel-paned { background-color: $base_color; }

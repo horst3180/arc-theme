@@ -1825,6 +1825,9 @@ check,
 treeview.check {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked.png"), url("assets/checkbox-unchecked@2.png")); }
 
+filechooser actionbar check {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-dark.png"), url("assets/checkbox-unchecked-dark@2.png")); }
+
 .view check:selected, iconview check:selected,
 treeview.check:selected,
 row:selected check,
@@ -1834,6 +1837,9 @@ infobar check {
 check:disabled,
 treeview.check:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-insensitive.png"), url("assets/checkbox-unchecked-insensitive@2.png")); }
+
+filechooser actionbar check:disabled {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-insensitive-dark.png"), url("assets/checkbox-unchecked-insensitive-dark@2.png")); }
 
 .view check:disabled:selected, iconview check:disabled:selected,
 treeview.check:disabled:selected,
@@ -1845,6 +1851,9 @@ check:indeterminate,
 treeview.check:indeterminate {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed.png"), url("assets/checkbox-mixed@2.png")); }
 
+filechooser actionbar check:indeterminate {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-dark.png"), url("assets/checkbox-mixed-dark@2.png")); }
+
 .view check:indeterminate:selected, iconview check:indeterminate:selected,
 treeview.check:indeterminate:selected,
 row:selected check:indeterminate,
@@ -1854,6 +1863,9 @@ infobar check:indeterminate {
 check:indeterminate:disabled,
 treeview.check:indeterminate:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-insensitive.png"), url("assets/checkbox-mixed-insensitive@2.png")); }
+
+filechooser actionbar check:indeterminate:disabled {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-insensitive-dark.png"), url("assets/checkbox-mixed-insensitive-dark@2.png")); }
 
 .view check:indeterminate:disabled:selected, iconview check:indeterminate:disabled:selected,
 treeview.check:indeterminate:disabled:selected,
@@ -1865,6 +1877,9 @@ check:checked,
 treeview.check:checked {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked.png"), url("assets/checkbox-checked@2.png")); }
 
+filechooser actionbar check:checked {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-dark.png"), url("assets/checkbox-checked-dark@2.png")); }
+
 .view check:checked:selected, iconview check:checked:selected,
 treeview.check:checked:selected,
 row:selected check:checked,
@@ -1874,6 +1889,9 @@ infobar check:checked {
 check:checked:disabled,
 treeview.check:checked:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-insensitive.png"), url("assets/checkbox-checked-insensitive@2.png")); }
+
+filechooser actionbar check:checked:disabled {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-insensitive-dark.png"), url("assets/checkbox-checked-insensitive-dark@2.png")); }
 
 .view check:checked:disabled:selected, iconview check:checked:disabled:selected,
 treeview.check:checked:disabled:selected,
@@ -1885,6 +1903,9 @@ radio,
 treeview.radio {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked.png"), url("assets/radio-unchecked@2.png")); }
 
+filechooser actionbar radio {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-dark.png"), url("assets/radio-unchecked-dark@2.png")); }
+
 .view radio:selected, iconview radio:selected,
 treeview.radio:selected,
 row:selected radio,
@@ -1894,6 +1915,9 @@ infobar radio {
 radio:disabled,
 treeview.radio:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-insensitive.png"), url("assets/radio-unchecked-insensitive@2.png")); }
+
+filechooser actionbar radio:disabled {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-insensitive-dark.png"), url("assets/radio-unchecked-insensitive-dark@2.png")); }
 
 .view radio:disabled:selected, iconview radio:disabled:selected,
 treeview.radio:disabled:selected,
@@ -1905,6 +1929,9 @@ radio:indeterminate,
 treeview.radio:indeterminate {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed.png"), url("assets/radio-mixed@2.png")); }
 
+filechooser actionbar radio:indeterminate {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-dark.png"), url("assets/radio-mixed-dark@2.png")); }
+
 .view radio:indeterminate:selected, iconview radio:indeterminate:selected,
 treeview.radio:indeterminate:selected,
 row:selected radio:indeterminate,
@@ -1914,6 +1941,9 @@ infobar radio:indeterminate {
 radio:indeterminate:disabled,
 treeview.radio:indeterminate:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-insensitive.png"), url("assets/radio-mixed-insensitive@2.png")); }
+
+filechooser actionbar radio:indeterminate:disabled {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-insensitive-dark.png"), url("assets/radio-mixed-insensitive-dark@2.png")); }
 
 .view radio:indeterminate:disabled:selected, iconview radio:indeterminate:disabled:selected,
 treeview.radio:indeterminate:disabled:selected,
@@ -1925,6 +1955,9 @@ radio:checked,
 treeview.radio:checked {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-checked.png"), url("assets/radio-checked@2.png")); }
 
+filechooser actionbar radio:checked {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-dark.png"), url("assets/radio-checked-dark@2.png")); }
+
 .view radio:checked:selected, iconview radio:checked:selected,
 treeview.radio:checked:selected,
 row:selected radio:checked,
@@ -1934,6 +1967,9 @@ infobar radio:checked {
 radio:checked:disabled,
 treeview.radio:checked:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-insensitive.png"), url("assets/radio-checked-insensitive@2.png")); }
+
+filechooser actionbar radio:checked:disabled {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-insensitive-dark.png"), url("assets/radio-checked-insensitive-dark@2.png")); }
 
 .view radio:checked:disabled:selected, iconview radio:checked:disabled:selected,
 treeview.radio:checked:disabled:selected,
@@ -2873,7 +2909,11 @@ textview text selection, flowbox flowboxchild:selected, entry selection:focus, e
 modelbutton.flat:active,
 modelbutton.flat:active arrow,
 modelbutton.flat:selected,
-modelbutton.flat:selected arrow, treeview.view:selected, treeview.view:selected:focus, row:selected, .nautilus-window placessidebar.sidebar row.has-open-popup:selected, .nautilus-window placessidebar.sidebar row:selected, .nautilus-window placessidebar.sidebar row:selected:hover, .nautilus-window placessidebar.sidebar row:active:hover {
+modelbutton.flat:selected arrow, treeview.view:selected, treeview.view:selected:focus, row:selected, filechooser placessidebar.sidebar row.has-open-popup:selected, filechooser placessidebar.sidebar row:selected, filechooser placessidebar.sidebar row:selected:hover, filechooser placessidebar.sidebar row:active:hover,
+.nautilus-window placessidebar.sidebar row.has-open-popup:selected,
+.nautilus-window placessidebar.sidebar row:selected,
+.nautilus-window placessidebar.sidebar row:selected:hover,
+.nautilus-window placessidebar.sidebar row:active:hover {
   background-color: #5294E2; }
   row:selected label, label:selected, .view:selected, iconview:selected, .view:selected:focus, iconview:selected:focus, .view text:selected, iconview text:selected,
   textview text:selected, iconview text:selected:focus,
@@ -2883,7 +2923,11 @@ modelbutton.flat:selected arrow, treeview.view:selected, treeview.view:selected:
   modelbutton.flat:active,
   modelbutton.flat:active arrow,
   modelbutton.flat:selected,
-  modelbutton.flat:selected arrow, treeview.view:selected, treeview.view:selected:focus, row:selected, .nautilus-window placessidebar.sidebar row.has-open-popup:selected, .nautilus-window placessidebar.sidebar row:selected, .nautilus-window placessidebar.sidebar row:selected:hover, .nautilus-window placessidebar.sidebar row:active:hover {
+  modelbutton.flat:selected arrow, treeview.view:selected, treeview.view:selected:focus, row:selected, filechooser placessidebar.sidebar row.has-open-popup:selected, filechooser placessidebar.sidebar row:selected, filechooser placessidebar.sidebar row:selected:hover, filechooser placessidebar.sidebar row:active:hover,
+  .nautilus-window placessidebar.sidebar row.has-open-popup:selected,
+  .nautilus-window placessidebar.sidebar row:selected,
+  .nautilus-window placessidebar.sidebar row:selected:hover,
+  .nautilus-window placessidebar.sidebar row:active:hover {
     color: #ffffff;
     outline-color: rgba(255, 255, 255, 0.3); }
     row:selected label:disabled, label:disabled:selected, .view:disabled:selected, iconview:disabled:selected, iconview:disabled:selected:focus, .view text:disabled:selected, iconview text:disabled:selected,
@@ -2892,7 +2936,9 @@ modelbutton.flat:selected arrow, treeview.view:selected, treeview.view:selected:
     modelbutton.flat:disabled:active,
     modelbutton.flat:active arrow:disabled,
     modelbutton.flat:disabled:selected,
-    modelbutton.flat:selected arrow:disabled, treeview.view:disabled:selected:focus, row:disabled:selected, .nautilus-window placessidebar.sidebar row:disabled:selected, .nautilus-window placessidebar.sidebar row:disabled:active:hover {
+    modelbutton.flat:selected arrow:disabled, treeview.view:disabled:selected:focus, row:disabled:selected, filechooser placessidebar.sidebar row:disabled:selected, filechooser placessidebar.sidebar row:disabled:active:hover,
+    .nautilus-window placessidebar.sidebar row:disabled:selected,
+    .nautilus-window placessidebar.sidebar row:disabled:active:hover {
       color: #a9caf1; }
 
 .gedit-bottom-panel-paned notebook > header.top > tabs > tab:checked {
@@ -3524,58 +3570,97 @@ GtkListBox .h4 {
   font: bold; }
 
 .nautilus-window paned > separator {
-  background: #353945; }
+  background-image: linear-gradient(to top, #353945); }
   .nautilus-window paned > separator:dir(ltr) {
     margin-left: -1px; }
   .nautilus-window paned > separator:dir(rtl) {
     margin-right: -1px; }
 
-.nautilus-window.csd.background, .nautilus-window placessidebar list {
+filechooser paned > separator {
+  background-image: linear-gradient(to top, #353945); }
+
+filechooser.csd.background, filechooser placessidebar list,
+.nautilus-window.csd.background,
+.nautilus-window placessidebar list {
   background-color: transparent; }
 
+filechooser placessidebar.sidebar,
 .nautilus-window placessidebar.sidebar {
   background-color: #353945; }
+  filechooser placessidebar.sidebar row,
   .nautilus-window placessidebar.sidebar row {
     border: none;
     color: #BAC3CF; }
+    filechooser placessidebar.sidebar row .sidebar-icon,
     .nautilus-window placessidebar.sidebar row .sidebar-icon {
       color: rgba(186, 195, 207, 0.6); }
-    .nautilus-window placessidebar.sidebar row.has-open-popup, .nautilus-window placessidebar.sidebar row:hover {
+    filechooser placessidebar.sidebar row.has-open-popup, filechooser placessidebar.sidebar row:hover,
+    .nautilus-window placessidebar.sidebar row.has-open-popup,
+    .nautilus-window placessidebar.sidebar row:hover {
       background-color: rgba(186, 195, 207, 0.15); }
-    .nautilus-window placessidebar.sidebar row:disabled, .nautilus-window placessidebar.sidebar row:disabled label, .nautilus-window placessidebar.sidebar row:disabled image {
+    filechooser placessidebar.sidebar row:disabled, filechooser placessidebar.sidebar row:disabled label, filechooser placessidebar.sidebar row:disabled image,
+    .nautilus-window placessidebar.sidebar row:disabled,
+    .nautilus-window placessidebar.sidebar row:disabled label,
+    .nautilus-window placessidebar.sidebar row:disabled image {
       color: rgba(186, 195, 207, 0.4); }
-    .nautilus-window placessidebar.sidebar row:selected.has-open-popup .sidebar-icon, .nautilus-window placessidebar.sidebar row:selected .sidebar-icon, .nautilus-window placessidebar.sidebar row:selected:hover .sidebar-icon, .nautilus-window placessidebar.sidebar row:active:hover .sidebar-icon {
+    filechooser placessidebar.sidebar row:selected.has-open-popup .sidebar-icon, filechooser placessidebar.sidebar row:selected .sidebar-icon, filechooser placessidebar.sidebar row:selected:hover .sidebar-icon, filechooser placessidebar.sidebar row:active:hover .sidebar-icon,
+    .nautilus-window placessidebar.sidebar row:selected.has-open-popup .sidebar-icon,
+    .nautilus-window placessidebar.sidebar row:selected .sidebar-icon,
+    .nautilus-window placessidebar.sidebar row:selected:hover .sidebar-icon,
+    .nautilus-window placessidebar.sidebar row:active:hover .sidebar-icon {
       color: inherit; }
+    filechooser placessidebar.sidebar row.sidebar-new-bookmark-row,
     .nautilus-window placessidebar.sidebar row.sidebar-new-bookmark-row {
       color: #5294E2; }
+      filechooser placessidebar.sidebar row.sidebar-new-bookmark-row .sidebar-icon,
       .nautilus-window placessidebar.sidebar row.sidebar-new-bookmark-row .sidebar-icon {
         color: inherit; }
-    .nautilus-window placessidebar.sidebar row:drop(active):not(:disabled), .nautilus-window placessidebar.sidebar row:drop(active):not(:disabled) label, .nautilus-window placessidebar.sidebar row:drop(active):not(:disabled) .sidebar-icon {
+    filechooser placessidebar.sidebar row:drop(active):not(:disabled), filechooser placessidebar.sidebar row:drop(active):not(:disabled) label, filechooser placessidebar.sidebar row:drop(active):not(:disabled) .sidebar-icon,
+    .nautilus-window placessidebar.sidebar row:drop(active):not(:disabled),
+    .nautilus-window placessidebar.sidebar row:drop(active):not(:disabled) label,
+    .nautilus-window placessidebar.sidebar row:drop(active):not(:disabled) .sidebar-icon {
       color: #F08437; }
+    filechooser placessidebar.sidebar row:drop(active):not(:disabled):selected,
     .nautilus-window placessidebar.sidebar row:drop(active):not(:disabled):selected {
       background-color: #F08437; }
-      .nautilus-window placessidebar.sidebar row:drop(active):not(:disabled):selected, .nautilus-window placessidebar.sidebar row:drop(active):not(:disabled):selected label, .nautilus-window placessidebar.sidebar row:drop(active):not(:disabled):selected .sidebar-icon {
+      filechooser placessidebar.sidebar row:drop(active):not(:disabled):selected, filechooser placessidebar.sidebar row:drop(active):not(:disabled):selected label, filechooser placessidebar.sidebar row:drop(active):not(:disabled):selected .sidebar-icon,
+      .nautilus-window placessidebar.sidebar row:drop(active):not(:disabled):selected,
+      .nautilus-window placessidebar.sidebar row:drop(active):not(:disabled):selected label,
+      .nautilus-window placessidebar.sidebar row:drop(active):not(:disabled):selected .sidebar-icon {
         color: #ffffff; }
+  filechooser placessidebar.sidebar separator,
   .nautilus-window placessidebar.sidebar separator {
     background-color: transparent; }
 
+filechooser.maximized placessidebar.sidebar,
 .nautilus-window.maximized placessidebar.sidebar {
   background-color: #353945; }
 
+filechooser row:not(:selected) button.sidebar-button,
 .nautilus-window row:not(:selected) button.sidebar-button {
   color: #BAC3CF; }
+  filechooser row:not(:selected) button.sidebar-button:hover,
   .nautilus-window row:not(:selected) button.sidebar-button:hover {
     color: #BAC3CF;
     outline-color: rgba(186, 195, 207, 0.3);
     border-color: rgba(26, 28, 34, 0.4);
     background-color: rgba(119, 127, 151, 0.5); }
+  filechooser row:not(:selected) button.sidebar-button:active,
   .nautilus-window row:not(:selected) button.sidebar-button:active {
     color: #ffffff;
     outline-color: rgba(255, 255, 255, 0.3);
     border-color: #5294E2;
     background-color: #5294E2; }
+  filechooser row:not(:selected) button.sidebar-button:not(:hover):not(:active) > image,
   .nautilus-window row:not(:selected) button.sidebar-button:not(:hover):not(:active) > image {
     opacity: 0.5; }
+
+filechooser actionbar {
+  color: #BAC3CF;
+  background-color: #353945;
+  border-color: #252831; }
+  filechooser actionbar label, filechooser actionbar combobox {
+    color: #BAC3CF; }
 
 .gedit-bottom-panel-paned {
   background-color: #ffffff; }
@@ -3600,19 +3685,60 @@ GtkListBox .h4 {
     .gedit-document-panel row:hover:not(:selected) button:active {
       color: #BAC3CF; }
 
+filechooser actionbar button {
+  color: #BAC3CF;
+  outline-color: rgba(186, 195, 207, 0.3);
+  border-color: rgba(26, 28, 34, 0.4);
+  background-color: rgba(102, 109, 132, 0.4); }
+  filechooser actionbar button:hover {
+    color: #BAC3CF;
+    outline-color: rgba(186, 195, 207, 0.3);
+    border-color: rgba(26, 28, 34, 0.4);
+    background-color: rgba(119, 127, 151, 0.5); }
+  filechooser actionbar button:active, filechooser actionbar button:checked {
+    color: #ffffff;
+    outline-color: rgba(255, 255, 255, 0.3);
+    border-color: rgba(26, 28, 34, 0.4);
+    background-color: #5294E2; }
+  filechooser actionbar button:disabled {
+    color: #5d626e;
+    border-color: rgba(26, 28, 34, 0.4);
+    background-color: rgba(102, 109, 132, 0.25); }
+
+filechooser actionbar entry {
+  color: #BAC3CF;
+  border-color: rgba(26, 28, 34, 0.4);
+  background-image: linear-gradient(to bottom, rgba(102, 109, 132, 0.4));
+  background-color: transparent; }
+  filechooser actionbar entry image, filechooser actionbar entry image:hover {
+    color: inherit; }
+  filechooser actionbar entry:focus {
+    color: #ffffff;
+    border-color: rgba(26, 28, 34, 0.4);
+    background-image: linear-gradient(to bottom, #5294E2); }
+  filechooser actionbar entry:disabled {
+    color: rgba(186, 195, 207, 0.55);
+    background-image: linear-gradient(to bottom, rgba(102, 109, 132, 0.25)); }
+
+filechooser placessidebar.sidebar scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider,
 .nautilus-window placessidebar.sidebar scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider {
   background-color: #e7eaee;
   border: 1px solid rgba(0, 0, 0, 0.3); }
 
+filechooser placessidebar.sidebar scrollbar slider,
 .nautilus-window placessidebar.sidebar scrollbar slider {
   background-color: rgba(231, 234, 238, 0.7); }
+  filechooser placessidebar.sidebar scrollbar slider:hover,
   .nautilus-window placessidebar.sidebar scrollbar slider:hover {
     background-color: #f6f7f9; }
+  filechooser placessidebar.sidebar scrollbar slider:hover:active,
   .nautilus-window placessidebar.sidebar scrollbar slider:hover:active {
     background-color: #5294E2; }
+  filechooser placessidebar.sidebar scrollbar slider:disabled,
   .nautilus-window placessidebar.sidebar scrollbar slider:disabled {
     background-color: transparent; }
 
+filechooser placessidebar.sidebar scrollbar trough,
 .nautilus-window placessidebar.sidebar scrollbar trough {
   background-color: rgba(0, 0, 0, 0.2);
   border: none; }
