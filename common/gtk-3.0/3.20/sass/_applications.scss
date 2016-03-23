@@ -426,7 +426,7 @@ button.documents-favorite:active:hover {
 //
 // Floating Bar
 //
-.floating-bar {
+.nautilus-window .floating-bar {
   padding: 1px;
   background-color: $selected_bg_color;
   color: $selected_fg_color;

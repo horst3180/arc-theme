@@ -2589,7 +2589,7 @@ infobar {
 row:selected button, .info button,
 .question button,
 .warning button,
-.error button, .floating-bar button {
+.error button, .nautilus-window .floating-bar button {
   color: #ffffff;
   outline-color: rgba(255, 255, 255, 0.3);
   background-color: rgba(255, 255, 255, 0);
@@ -2600,7 +2600,7 @@ row:selected button, .info button,
   .warning button.flat,
   .warning button.sidebar-button,
   .error button.flat,
-  .error button.sidebar-button, .floating-bar button.flat, .floating-bar button.sidebar-button {
+  .error button.sidebar-button, .nautilus-window .floating-bar button.flat, .nautilus-window .floating-bar button.sidebar-button {
     border-color: transparent;
     background-color: transparent;
     background-image: none;
@@ -2609,7 +2609,7 @@ row:selected button, .info button,
   row:selected button:hover, .info button:hover,
   .question button:hover,
   .warning button:hover,
-  .error button:hover, .floating-bar button:hover {
+  .error button:hover, .nautilus-window .floating-bar button:hover {
     color: #ffffff;
     outline-color: rgba(255, 255, 255, 0.3);
     background-color: rgba(255, 255, 255, 0.2);
@@ -2617,13 +2617,13 @@ row:selected button, .info button,
   row:selected button:active, .info button:active,
   .question button:active,
   .warning button:active,
-  .error button:active, .floating-bar button:active, row:selected button:active:hover, .info button:active:hover,
+  .error button:active, .nautilus-window .floating-bar button:active, row:selected button:active:hover, .info button:active:hover,
   .question button:active:hover,
   .warning button:active:hover,
-  .error button:active:hover, .floating-bar button:active:hover, row:selected button:checked, .info button:checked,
+  .error button:active:hover, .nautilus-window .floating-bar button:active:hover, row:selected button:checked, .info button:checked,
   .question button:checked,
   .warning button:checked,
-  .error button:checked, .floating-bar button:checked {
+  .error button:checked, .nautilus-window .floating-bar button:checked {
     color: #5294E2;
     outline-color: rgba(82, 148, 226, 0.3);
     background-color: #ffffff;
@@ -2631,17 +2631,17 @@ row:selected button, .info button,
   row:selected button:disabled, .info button:disabled,
   .question button:disabled,
   .warning button:disabled,
-  .error button:disabled, .floating-bar button:disabled {
+  .error button:disabled, .nautilus-window .floating-bar button:disabled {
     color: rgba(255, 255, 255, 0.4);
     background-color: rgba(255, 255, 255, 0);
     border-color: rgba(255, 255, 255, 0.2); }
     row:selected button:disabled:active, .info button:disabled:active,
     .question button:disabled:active,
     .warning button:disabled:active,
-    .error button:disabled:active, .floating-bar button:disabled:active, row:selected button:disabled:checked, .info button:disabled:checked,
+    .error button:disabled:active, .nautilus-window .floating-bar button:disabled:active, row:selected button:disabled:checked, .info button:disabled:checked,
     .question button:disabled:checked,
     .warning button:disabled:checked,
-    .error button:disabled:checked, .floating-bar button:disabled:checked {
+    .error button:disabled:checked, .nautilus-window .floating-bar button:disabled:checked {
       color: rgba(82, 148, 226, 0.4);
       background-color: rgba(255, 255, 255, 0.2);
       border-color: rgba(255, 255, 255, 0.2); }
@@ -3135,16 +3135,16 @@ button.documents-favorite:active:hover {
       border: none;
       background-color: #5294E2; }
 
-.floating-bar {
+.nautilus-window .floating-bar {
   padding: 1px;
   background-color: #5294E2;
   color: #ffffff;
   border-radius: 2px 2px 0 0; }
-  .floating-bar.bottom.left {
+  .nautilus-window .floating-bar.bottom.left {
     border-top-left-radius: 0; }
-  .floating-bar.bottom.right {
+  .nautilus-window .floating-bar.bottom.right {
     border-top-right-radius: 0; }
-  .floating-bar button {
+  .nautilus-window .floating-bar button {
     border: none;
     border-radius: 0;
     min-height: 0; }
