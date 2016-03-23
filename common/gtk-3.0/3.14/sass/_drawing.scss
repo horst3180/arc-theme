@@ -1,18 +1,5 @@
 // Drawing mixins
 
-// generic drawing of more complex things
-
-@mixin _shadows($shadow1, $shadow2:none, $shadow3:none, $shadow4:none) {
-//
-// Helper function to stack up to 4 box-shadows;
-//
-
-  @if $shadow4!=none { box-shadow: $shadow1, $shadow2, $shadow3, $shadow4; }
-  @else if $shadow3!=none { box-shadow: $shadow1, $shadow2, $shadow3; }
-  @else if $shadow2!=none { box-shadow: $shadow1, $shadow2; }
-  @else { box-shadow: $shadow1; }
-}
-
 // Entries
 
 @mixin entry($t) {

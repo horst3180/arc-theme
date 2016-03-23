@@ -503,6 +503,61 @@ StScrollBar {
 }
 
 //
+// Audio selection dialog
+//
+.audio-device-selection-dialog { spacing: 30px; }
+
+.audio-selection {
+
+  &-content {
+    spacing: 20px;
+    padding: 24px;
+  }
+
+  &-title {
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &-box { spacing: 20px; }
+
+  &-device {
+    border: 1px solid $borders_color;
+    border-radius: 3px;
+
+    &:active,&:hover,&:focus {
+      background-color: $selected_bg_color;
+      border-color: $selected_bg_color;
+    }
+  }
+
+  &-device-box {
+    padding: 20px;
+    spacing: 20px;
+  }
+
+  &-device-icon { icon-size: 64px; }
+  
+}
+
+//
+// Geolocation Dialog
+//
+.geolocation-dialog {
+  spacing: 30px;
+
+  &-main-layout { spacing: 12px; }
+  &-content { spacing: 20px; }
+  &-icon { icon-size: 48px; }
+  &-title { font-weight: bold; }
+
+  &-reason {
+    color: $fg_color;
+    font-weight: bold;
+  }
+}
+
+//
 // Network Agent Dialog
 //
 .network-dialog-secret-table {
@@ -519,7 +574,7 @@ StScrollBar {
 // Popvers/Menus
 //
 .popup-menu {
-  min-width: 200px;
+  min-width: 15em;
   color: $fg_color;
   border-image: url("#{$asset_path}/menu/menu.svg") 9 9 9 9;
 
@@ -869,6 +924,11 @@ StScrollBar {
     spacing: 2px;
   }
 
+  // spacing between power icon and (optional) percentage label
+  .power-status.panel-status-indicators-box {
+    spacing: 0;
+  }
+
   .screencast-indicator { color: $error_color; }
 
   .clock-display > * > *:last-child {
@@ -927,7 +987,7 @@ StScrollBar {
 }
 
 .aggregate-menu {
-  width: 280px;
+  min-width: 21em;
   .popup-menu-icon { padding: 0 4px; }
 }
 
@@ -1131,11 +1191,22 @@ StScrollBar {
   opacity: 1;
 }
 
+.calendar-week-number {
+  font-size: 70%;
+  font-weight: bold;
+  width: 2.3em; height: 1.8em;
+  border-radius: 2px;
+  padding: 0.5em 0 0;
+  margin: 6px;
+  background-color: transparentize($fg_color,0.7);
+  color: $bg_color;
+}
+
 //
 // Message list
 //
 .message-list {
-  width: 420px;
+  width: 31.5em;
 
   &-sections { spacing: 1.5em; }
 
@@ -1213,6 +1284,30 @@ StScrollBar {
   &-content {
     padding: 8px;
     font-size: 1em;
+  }
+}
+
+.message-media-control {
+  padding: 6px;
+  color: $insensitive_fg_color;
+
+  &:last-child:ltr { padding-right: 18px; }
+  &:last-child:rtl { padding-left: 18px; }
+
+  &:hover { color: $fg_color; }
+  &:active { color: $selected_bg_color; }
+}
+
+.media-message-cover-icon {
+  icon-size: 32px;
+
+  &.fallback {
+    color: $insensitive_fg_color;
+    background-color: $bg_color;
+    border-radius: 2px;
+    icon-size: 16px;
+    padding: 8px;
+    border: 1px solid $borders_color;
   }
 }
 

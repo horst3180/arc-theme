@@ -19,7 +19,7 @@ Arc is a flat theme with transparent elements for GTK 3, GTK 2 and Gnome-Shell w
 
 ### Requirements
 
-* Gnome/GTK 3.14, 3.16 or 3.18
+* Gnome/GTK 3.14, 3.16, 3.18 or 3.20
 * The `gnome-themes-standard` package
 * The murrine engine. This has different names depending on your distro.
   * `gtk-engine-murrine` (Arch Linux)
@@ -109,7 +109,7 @@ Other options to pass to autogen.sh are
     --disable-xfwm             disable XFWM support
     --disable-xfce-notify      disable XFCE Notify support
 
-    --with-gnome=<version>     build the theme for a specific Gnome version (3.14, 3.16, 3.18)
+    --with-gnome=<version>     build the theme for a specific Gnome version (3.14, 3.16, 3.18, 3.20)
                                Note: Normally the correct version is detected automatically and this
                                option should not be needed.
 

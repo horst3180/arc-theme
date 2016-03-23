@@ -379,6 +379,48 @@ StScrollBar {
   width: 48px;
   height: 48px; }
 
+.audio-device-selection-dialog {
+  spacing: 30px; }
+
+.audio-selection-content {
+  spacing: 20px;
+  padding: 24px; }
+
+.audio-selection-title {
+  font-weight: bold;
+  text-align: center; }
+
+.audio-selection-box {
+  spacing: 20px; }
+
+.audio-selection-device {
+  border: 1px solid #dcdfe3;
+  border-radius: 3px; }
+  .audio-selection-device:active, .audio-selection-device:hover, .audio-selection-device:focus {
+    background-color: #5294E2;
+    border-color: #5294E2; }
+
+.audio-selection-device-box {
+  padding: 20px;
+  spacing: 20px; }
+
+.audio-selection-device-icon {
+  icon-size: 64px; }
+
+.geolocation-dialog {
+  spacing: 30px; }
+  .geolocation-dialog-main-layout {
+    spacing: 12px; }
+  .geolocation-dialog-content {
+    spacing: 20px; }
+  .geolocation-dialog-icon {
+    icon-size: 48px; }
+  .geolocation-dialog-title {
+    font-weight: bold; }
+  .geolocation-dialog-reason {
+    color: #5c616c;
+    font-weight: bold; }
+
 .network-dialog-secret-table {
   spacing-rows: 15px;
   spacing-columns: 1em; }
@@ -388,7 +430,7 @@ StScrollBar {
   spacing-columns: 1em; }
 
 .popup-menu {
-  min-width: 200px;
+  min-width: 15em;
   color: #5c616c;
   border-image: url("light-assets/menu/menu.svg") 9 9 9 9; }
   .popup-menu .popup-sub-menu {
@@ -644,6 +686,8 @@ StScrollBar {
   #panel .panel-status-indicators-box,
   #panel .panel-status-menu-box {
     spacing: 2px; }
+  #panel .power-status.panel-status-indicators-box {
+    spacing: 0; }
   #panel .screencast-indicator {
     color: #FC4138; }
   #panel .clock-display > * > *:last-child {
@@ -689,7 +733,7 @@ StScrollBar {
     color: transparent; }
 
 .aggregate-menu {
-  width: 280px; }
+  min-width: 21em; }
   .aggregate-menu .popup-menu-icon {
     padding: 0 4px; }
 
@@ -872,8 +916,19 @@ StScrollBar {
   color: rgba(92, 97, 108, 0.3);
   opacity: 1; }
 
+.calendar-week-number {
+  font-size: 70%;
+  font-weight: bold;
+  width: 2.3em;
+  height: 1.8em;
+  border-radius: 2px;
+  padding: 0.5em 0 0;
+  margin: 6px;
+  background-color: rgba(92, 97, 108, 0.3);
+  color: #F5F6F7; }
+
 .message-list {
-  width: 420px; }
+  width: 31.5em; }
   .message-list-sections {
     spacing: 1.5em; }
   .message-list-section, .message-list-section-list {
@@ -931,6 +986,28 @@ StScrollBar {
   .message-content {
     padding: 8px;
     font-size: 1em; }
+
+.message-media-control {
+  padding: 6px;
+  color: rgba(92, 97, 108, 0.55); }
+  .message-media-control:last-child:ltr {
+    padding-right: 18px; }
+  .message-media-control:last-child:rtl {
+    padding-left: 18px; }
+  .message-media-control:hover {
+    color: #5c616c; }
+  .message-media-control:active {
+    color: #5294E2; }
+
+.media-message-cover-icon {
+  icon-size: 32px; }
+  .media-message-cover-icon.fallback {
+    color: rgba(92, 97, 108, 0.55);
+    background-color: #F5F6F7;
+    border-radius: 2px;
+    icon-size: 16px;
+    padding: 8px;
+    border: 1px solid #dcdfe3; }
 
 .ripple-box {
   width: 52px;
