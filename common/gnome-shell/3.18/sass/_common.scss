@@ -503,6 +503,70 @@ StScrollBar {
 }
 
 //
+// Audio selection dialog
+//
+.audio-device-selection-dialog {
+  spacing: 30px;
+}
+
+.audio-selection-content {
+  spacing: 20px;
+  padding: 24px;
+}
+
+.audio-selection-title {
+  font-weight: bold;
+  text-align: center;
+}
+
+.audio-selection-box {
+  spacing: 20px;
+}
+
+.audio-selection-device {
+  border: 1px solid red;
+  border-radius: 12px;
+  &:active,&:hover,&:focus { background-color: $selected_bg_color; }
+}
+
+.audio-selection-device-box {
+  padding: 20px;
+  spacing: 20px;
+}
+
+.audio-selection-device-icon {
+  icon-size: 64px;
+}
+
+//
+// Geolocation Dialog
+//
+.geolocation-dialog {
+  spacing: 30px;
+}
+
+.geolocation-dialog-main-layout {
+  spacing: 12px;
+}
+
+.geolocation-dialog-content {
+  spacing: 20px;
+}
+
+.geolocation-dialog-icon {
+  icon-size: 48px;
+}
+
+.geolocation-dialog-title {
+  font-weight: bold;
+}
+
+.geolocation-dialog-reason {
+  color: darken($fg_color,40%);
+  font-weight: bold;
+}
+
+//
 // Network Agent Dialog
 //
 .network-dialog-secret-table {
@@ -519,7 +583,7 @@ StScrollBar {
 // Popvers/Menus
 //
 .popup-menu {
-  min-width: 200px;
+  min-width: 15em;
   color: $fg_color;
   border-image: url("#{$asset_path}/menu/menu.svg") 9 9 9 9;
 
@@ -869,6 +933,11 @@ StScrollBar {
     spacing: 2px;
   }
 
+  // spacing between power icon and (optional) percentage label
+  .power-status.panel-status-indicators-box {
+    spacing: 0;
+  }
+
   .screencast-indicator { color: $error_color; }
 
   .clock-display > * > *:last-child {
@@ -927,7 +996,7 @@ StScrollBar {
 }
 
 .aggregate-menu {
-  width: 280px;
+  min-width: 21em;
   .popup-menu-icon { padding: 0 4px; }
 }
 
@@ -1131,11 +1200,22 @@ StScrollBar {
   opacity: 1;
 }
 
+.calendar-week-number {
+  font-size: 70%;
+  font-weight: bold;
+  width: 2.3em; height: 1.8em;
+  border-radius: 2px;
+  padding: 0.5em 0 0;
+  margin: 6px;
+  background-color: transparentize($fg_color,0.7);
+  color: $bg_color;
+}
+
 //
 // Message list
 //
 .message-list {
-  width: 420px;
+  width: 31.5em;
 
   &-sections { spacing: 1.5em; }
 
@@ -1213,6 +1293,25 @@ StScrollBar {
   &-content {
     padding: 8px;
     font-size: 1em;
+  }
+}
+
+.message-media-control {
+  padding: 6px;
+
+  &:last-child:ltr { padding-right: 18px; }
+  &:last-child:rtl { padding-left: 18px; }
+}
+
+.media-message-cover-icon {
+  icon-size: 32px;
+  &.fallback {
+    color: lighten($bg_color,10%);
+    background-color: $bg_color;
+    border-radius: 2px;
+    icon-size: 16px;
+    padding: 8px;
+    border: 1px solid $borders_color;
   }
 }
 
