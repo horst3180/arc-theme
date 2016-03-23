@@ -261,6 +261,13 @@ entry {
     @include entry(osd);
     &:focus { @include entry(osd-focus); }
     &:disabled { @include entry(osd-insensitive); }
+
+    selection {
+      &:focus, & {
+        color: $selected_bg_color;
+        background-color: $selected_fg_color;
+      }
+    }
   }
 
   progress {
@@ -775,6 +782,17 @@ spinbutton {
     > entry:focus + button { border-left-color: if($variant=='light', $selected_bg_color, $entry_border); }
 
     > entry:drop(active) + button { border-left-color: $drop_target_color; }
+
+    .osd & {
+      > button:hover:not(:active),
+      > button:hover + button { box-shadow: inset 1px 0 $osd_button_border; }
+
+      > button:first-child:hover:not(:active),
+      > button.up:dir(rtl):hover:not(:active),
+      > entry + button:not(:active):hover { box-shadow: none; }
+
+      > entry:focus + button { border-left-color: $osd_button_border; }
+    }
   }
   &.vertical {
     button, entry {
@@ -1977,6 +1995,7 @@ switch {
                                     url("assets/#{$a}#{$as}#{$asset_suffix}@2.png"));
     }
 
+    .osd,
     %osd_check_radio {
       #{$w}#{$s} {
         -gtk-icon-source: -gtk-scaled(url("assets/#{$a}#{$as}-dark.png"),

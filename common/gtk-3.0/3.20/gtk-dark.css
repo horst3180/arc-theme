@@ -203,6 +203,9 @@ entry {
     .osd entry:disabled {
       color: rgba(186, 195, 207, 0.55);
       background-image: linear-gradient(to bottom, rgba(102, 109, 132, 0.2)); }
+    .osd entry selection:focus, .osd entry selection {
+      color: #5294E2;
+      background-color: #ffffff; }
   entry progress {
     margin: 0 -6px;
     border-radius: 0;
@@ -775,6 +778,18 @@ spinbutton:not(.vertical) > entry:focus + button {
 
 spinbutton:not(.vertical) > entry:drop(active) + button {
   border-left-color: #F08437; }
+
+.osd spinbutton:not(.vertical) > button:hover:not(:active),
+.osd spinbutton:not(.vertical) > button:hover + button {
+  box-shadow: inset 1px 0 rgba(26, 28, 34, 0.35); }
+
+.osd spinbutton:not(.vertical) > button:first-child:hover:not(:active),
+.osd spinbutton:not(.vertical) > button.up:dir(rtl):hover:not(:active),
+.osd spinbutton:not(.vertical) > entry + button:not(:active):hover {
+  box-shadow: none; }
+
+.osd spinbutton:not(.vertical) > entry:focus + button {
+  border-left-color: rgba(26, 28, 34, 0.35); }
 
 spinbutton.vertical button, spinbutton.vertical entry {
   padding-left: 4px;
@@ -1830,7 +1845,7 @@ check,
 treeview.check {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-dark.png"), url("assets/checkbox-unchecked-dark@2.png")); }
 
-filechooser actionbar check {
+.osd check, filechooser actionbar check {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-dark.png"), url("assets/checkbox-unchecked-dark@2.png")); }
 
 .view check:selected, iconview check:selected,
@@ -1843,7 +1858,7 @@ check:disabled,
 treeview.check:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-insensitive-dark.png"), url("assets/checkbox-unchecked-insensitive-dark@2.png")); }
 
-filechooser actionbar check:disabled {
+.osd check:disabled, filechooser actionbar check:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-insensitive-dark.png"), url("assets/checkbox-unchecked-insensitive-dark@2.png")); }
 
 .view check:disabled:selected, iconview check:disabled:selected,
@@ -1856,7 +1871,7 @@ check:indeterminate,
 treeview.check:indeterminate {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-dark.png"), url("assets/checkbox-mixed-dark@2.png")); }
 
-filechooser actionbar check:indeterminate {
+.osd check:indeterminate, filechooser actionbar check:indeterminate {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-dark.png"), url("assets/checkbox-mixed-dark@2.png")); }
 
 .view check:indeterminate:selected, iconview check:indeterminate:selected,
@@ -1869,7 +1884,7 @@ check:indeterminate:disabled,
 treeview.check:indeterminate:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-insensitive-dark.png"), url("assets/checkbox-mixed-insensitive-dark@2.png")); }
 
-filechooser actionbar check:indeterminate:disabled {
+.osd check:indeterminate:disabled, filechooser actionbar check:indeterminate:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-insensitive-dark.png"), url("assets/checkbox-mixed-insensitive-dark@2.png")); }
 
 .view check:indeterminate:disabled:selected, iconview check:indeterminate:disabled:selected,
@@ -1882,7 +1897,7 @@ check:checked,
 treeview.check:checked {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-dark.png"), url("assets/checkbox-checked-dark@2.png")); }
 
-filechooser actionbar check:checked {
+.osd check:checked, filechooser actionbar check:checked {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-dark.png"), url("assets/checkbox-checked-dark@2.png")); }
 
 .view check:checked:selected, iconview check:checked:selected,
@@ -1895,7 +1910,7 @@ check:checked:disabled,
 treeview.check:checked:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-insensitive-dark.png"), url("assets/checkbox-checked-insensitive-dark@2.png")); }
 
-filechooser actionbar check:checked:disabled {
+.osd check:checked:disabled, filechooser actionbar check:checked:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-insensitive-dark.png"), url("assets/checkbox-checked-insensitive-dark@2.png")); }
 
 .view check:checked:disabled:selected, iconview check:checked:disabled:selected,
@@ -1908,7 +1923,7 @@ radio,
 treeview.radio {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-dark.png"), url("assets/radio-unchecked-dark@2.png")); }
 
-filechooser actionbar radio {
+.osd radio, filechooser actionbar radio {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-dark.png"), url("assets/radio-unchecked-dark@2.png")); }
 
 .view radio:selected, iconview radio:selected,
@@ -1921,7 +1936,7 @@ radio:disabled,
 treeview.radio:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-insensitive-dark.png"), url("assets/radio-unchecked-insensitive-dark@2.png")); }
 
-filechooser actionbar radio:disabled {
+.osd radio:disabled, filechooser actionbar radio:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-insensitive-dark.png"), url("assets/radio-unchecked-insensitive-dark@2.png")); }
 
 .view radio:disabled:selected, iconview radio:disabled:selected,
@@ -1934,7 +1949,7 @@ radio:indeterminate,
 treeview.radio:indeterminate {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-dark.png"), url("assets/radio-mixed-dark@2.png")); }
 
-filechooser actionbar radio:indeterminate {
+.osd radio:indeterminate, filechooser actionbar radio:indeterminate {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-dark.png"), url("assets/radio-mixed-dark@2.png")); }
 
 .view radio:indeterminate:selected, iconview radio:indeterminate:selected,
@@ -1947,7 +1962,7 @@ radio:indeterminate:disabled,
 treeview.radio:indeterminate:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-insensitive-dark.png"), url("assets/radio-mixed-insensitive-dark@2.png")); }
 
-filechooser actionbar radio:indeterminate:disabled {
+.osd radio:indeterminate:disabled, filechooser actionbar radio:indeterminate:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-insensitive-dark.png"), url("assets/radio-mixed-insensitive-dark@2.png")); }
 
 .view radio:indeterminate:disabled:selected, iconview radio:indeterminate:disabled:selected,
@@ -1960,7 +1975,7 @@ radio:checked,
 treeview.radio:checked {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-dark.png"), url("assets/radio-checked-dark@2.png")); }
 
-filechooser actionbar radio:checked {
+.osd radio:checked, filechooser actionbar radio:checked {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-dark.png"), url("assets/radio-checked-dark@2.png")); }
 
 .view radio:checked:selected, iconview radio:checked:selected,
@@ -1973,7 +1988,7 @@ radio:checked:disabled,
 treeview.radio:checked:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-insensitive-dark.png"), url("assets/radio-checked-insensitive-dark@2.png")); }
 
-filechooser actionbar radio:checked:disabled {
+.osd radio:checked:disabled, filechooser actionbar radio:checked:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-insensitive-dark.png"), url("assets/radio-checked-insensitive-dark@2.png")); }
 
 .view radio:checked:disabled:selected, iconview radio:checked:disabled:selected,
