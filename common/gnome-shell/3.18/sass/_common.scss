@@ -1289,15 +1289,20 @@ StScrollBar {
 
 .message-media-control {
   padding: 6px;
+  color: $insensitive_fg_color;
 
   &:last-child:ltr { padding-right: 18px; }
   &:last-child:rtl { padding-left: 18px; }
+
+  &:hover { color: $fg_color; }
+  &:active { color: $selected_bg_color; }
 }
 
 .media-message-cover-icon {
   icon-size: 32px;
+
   &.fallback {
-    color: lighten($bg_color,10%);
+    color: $insensitive_fg_color;
     background-color: $bg_color;
     border-radius: 2px;
     icon-size: 16px;

@@ -695,7 +695,7 @@ modelbutton.flat {
   @extend %undecorated_button;
 
   &:hover { background-color: if($variant=='light', mix($fg_color,$bg_color,5%), mix($fg_color,$bg_color,10%)); }
-  &:active, &:selected { @extend %selected_items; }
+  &:active, &:selected { &, arrow { @extend %selected_items; } }
   &:checked { color: $fg_color; }
 
   // FIXME: temporary workaround
@@ -707,8 +707,6 @@ modelbutton.flat {
 }
 
 modelbutton.flat arrow {
-  & { background: none; }
-
   &.left { -gtk-icon-source: -gtk-icontheme("pan-start-symbolic"); }
   &.right { -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
 }
@@ -1444,18 +1442,18 @@ treeview.view {
     &:checked { -gtk-icon-source: -gtk-icontheme('pan-down-symbolic'); }
   }
 
-  &.progressbar { // progress bar in treeviews
+  &.progressbar, &.progressbar:focus { // progress bar in treeviews
     color: $selected_fg_color;
     border-radius: 3px;
     background-image: linear-gradient(to bottom, $selected_bg_color);
 
-    &:selected {
+    &:selected, &:selected:focus {
       color: $selected_bg_color;
       box-shadow: none;
       background-image: linear-gradient(to bottom, $selected_fg_color);
     }
   }
-  &.trough, &.trough:selected { // progress bar trough in treeviews
+  &.trough, &.trough:selected, &.trough:selected:focus { // progress bar trough in treeviews
     color: $fg_color;
     background-image: linear-gradient(to bottom, $button_border);
     border-radius: 3px;

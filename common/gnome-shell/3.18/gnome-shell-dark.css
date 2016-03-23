@@ -988,16 +988,21 @@ StScrollBar {
     font-size: 1em; }
 
 .message-media-control {
-  padding: 6px; }
+  padding: 6px;
+  color: rgba(211, 218, 227, 0.45); }
   .message-media-control:last-child:ltr {
     padding-right: 18px; }
   .message-media-control:last-child:rtl {
     padding-left: 18px; }
+  .message-media-control:hover {
+    color: #D3DAE3; }
+  .message-media-control:active {
+    color: #5294E2; }
 
 .media-message-cover-icon {
   icon-size: 32px; }
   .media-message-cover-icon.fallback {
-    color: #4e5467;
+    color: rgba(211, 218, 227, 0.45);
     background-color: #383C4A;
     border-radius: 2px;
     icon-size: 16px;

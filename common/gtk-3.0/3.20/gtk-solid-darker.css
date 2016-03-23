@@ -703,9 +703,6 @@ modelbutton.flat {
   modelbutton.flat radio:first-child {
     margin-right: 8px; }
 
-modelbutton.flat arrow {
-  background: none; }
-
 modelbutton.flat arrow.left {
   -gtk-icon-source: -gtk-icontheme("pan-start-symbolic"); }
 
@@ -1375,15 +1372,15 @@ treeview.view {
         color: #ffffff; }
     treeview.view.expander:checked {
       -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
-  treeview.view.progressbar {
+  treeview.view.progressbar, treeview.view.progressbar:focus {
     color: #ffffff;
     border-radius: 3px;
     background-image: linear-gradient(to bottom, #5294E2); }
-    treeview.view.progressbar:selected {
+    treeview.view.progressbar:selected, treeview.view.progressbar:selected:focus, treeview.view.progressbar:focus:selected, treeview.view.progressbar:focus:selected:focus {
       color: #5294E2;
       box-shadow: none;
       background-image: linear-gradient(to bottom, #ffffff); }
-  treeview.view.trough, treeview.view.trough:selected {
+  treeview.view.trough, treeview.view.trough:selected, treeview.view.trough:selected:focus {
     color: #5c616c;
     background-image: linear-gradient(to bottom, #cfd6e6);
     border-radius: 3px;
@@ -2868,24 +2865,30 @@ headerbar button.titlebutton,
 textview text:selected, iconview text:selected:focus,
 textview text:selected:focus, .view text selection:focus, iconview text selection:focus, .view text selection, iconview text selection,
 textview text selection:focus,
-textview text selection, flowbox flowboxchild:selected, entry selection:focus, entry selection, menuitem.button.flat:active, menuitem.button.flat:selected,
+textview text selection, flowbox flowboxchild:selected, entry selection:focus, entry selection, menuitem.button.flat:active, menuitem.button.flat:active arrow, menuitem.button.flat:selected, menuitem.button.flat:selected arrow,
 modelbutton.flat:active,
-modelbutton.flat:selected, treeview.view:selected, treeview.view:selected:focus, row:selected, .nautilus-window placessidebar.sidebar row.has-open-popup:selected, .nautilus-window placessidebar.sidebar row:selected, .nautilus-window placessidebar.sidebar row:selected:hover, .nautilus-window placessidebar.sidebar row:active:hover {
+modelbutton.flat:active arrow,
+modelbutton.flat:selected,
+modelbutton.flat:selected arrow, treeview.view:selected, treeview.view:selected:focus, row:selected, .nautilus-window placessidebar.sidebar row.has-open-popup:selected, .nautilus-window placessidebar.sidebar row:selected, .nautilus-window placessidebar.sidebar row:selected:hover, .nautilus-window placessidebar.sidebar row:active:hover {
   background-color: #5294E2; }
   row:selected label, label:selected, .view:selected, iconview:selected, .view:selected:focus, iconview:selected:focus, .view text:selected, iconview text:selected,
   textview text:selected, iconview text:selected:focus,
   textview text:selected:focus, .view text selection:focus, iconview text selection:focus, .view text selection, iconview text selection,
   textview text selection:focus,
-  textview text selection, flowbox flowboxchild:selected, entry selection:focus, entry selection, menuitem.button.flat:active, menuitem.button.flat:selected,
+  textview text selection, flowbox flowboxchild:selected, entry selection:focus, entry selection, menuitem.button.flat:active, menuitem.button.flat:active arrow, menuitem.button.flat:selected, menuitem.button.flat:selected arrow,
   modelbutton.flat:active,
-  modelbutton.flat:selected, treeview.view:selected, treeview.view:selected:focus, row:selected, .nautilus-window placessidebar.sidebar row.has-open-popup:selected, .nautilus-window placessidebar.sidebar row:selected, .nautilus-window placessidebar.sidebar row:selected:hover, .nautilus-window placessidebar.sidebar row:active:hover {
+  modelbutton.flat:active arrow,
+  modelbutton.flat:selected,
+  modelbutton.flat:selected arrow, treeview.view:selected, treeview.view:selected:focus, row:selected, .nautilus-window placessidebar.sidebar row.has-open-popup:selected, .nautilus-window placessidebar.sidebar row:selected, .nautilus-window placessidebar.sidebar row:selected:hover, .nautilus-window placessidebar.sidebar row:active:hover {
     color: #ffffff;
     outline-color: rgba(255, 255, 255, 0.3); }
     row:selected label:disabled, label:disabled:selected, .view:disabled:selected, iconview:disabled:selected, iconview:disabled:selected:focus, .view text:disabled:selected, iconview text:disabled:selected,
     textview text:disabled:selected, iconview text selection:disabled:focus, .view text selection:disabled, iconview text selection:disabled,
-    textview text selection:disabled, flowbox flowboxchild:disabled:selected, label:disabled selection, entry selection:disabled, menuitem.button.flat:disabled:active, menuitem.button.flat:disabled:selected,
+    textview text selection:disabled, flowbox flowboxchild:disabled:selected, label:disabled selection, entry selection:disabled, menuitem.button.flat:disabled:active, menuitem.button.flat:active arrow:disabled, menuitem.button.flat:disabled:selected, menuitem.button.flat:selected arrow:disabled,
     modelbutton.flat:disabled:active,
-    modelbutton.flat:disabled:selected, treeview.view:disabled:selected:focus, row:disabled:selected, .nautilus-window placessidebar.sidebar row:disabled:selected, .nautilus-window placessidebar.sidebar row:disabled:active:hover {
+    modelbutton.flat:active arrow:disabled,
+    modelbutton.flat:disabled:selected,
+    modelbutton.flat:selected arrow:disabled, treeview.view:disabled:selected:focus, row:disabled:selected, .nautilus-window placessidebar.sidebar row:disabled:selected, .nautilus-window placessidebar.sidebar row:disabled:active:hover {
       color: #a9caf1; }
 
 .gedit-bottom-panel-paned notebook > header.top > tabs > tab:checked {
