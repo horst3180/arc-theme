@@ -24,7 +24,7 @@ $success_color: #73d216;
 $destructive_color: #F04A50;
 $suggested_color: #4DADD4;
 
-$drop_target_color: #4e9a06;
+$drop_target_color: #F08437;
 
 //insensitive state derived colors
 $insensitive_fg_color: if($variant == 'light', transparentize($fg_color, 0.45), transparentize($fg_color, 0.55));
