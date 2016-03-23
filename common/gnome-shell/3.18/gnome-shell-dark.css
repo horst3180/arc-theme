@@ -394,10 +394,11 @@ StScrollBar {
   spacing: 20px; }
 
 .audio-selection-device {
-  border: 1px solid red;
-  border-radius: 12px; }
+  border: 1px solid #2b2e39;
+  border-radius: 3px; }
   .audio-selection-device:active, .audio-selection-device:hover, .audio-selection-device:focus {
-    background-color: #5294E2; }
+    background-color: #5294E2;
+    border-color: #5294E2; }
 
 .audio-selection-device-box {
   padding: 20px;
@@ -408,22 +409,17 @@ StScrollBar {
 
 .geolocation-dialog {
   spacing: 30px; }
-
-.geolocation-dialog-main-layout {
-  spacing: 12px; }
-
-.geolocation-dialog-content {
-  spacing: 20px; }
-
-.geolocation-dialog-icon {
-  icon-size: 48px; }
-
-.geolocation-dialog-title {
-  font-weight: bold; }
-
-.geolocation-dialog-reason {
-  color: #5b728f;
-  font-weight: bold; }
+  .geolocation-dialog-main-layout {
+    spacing: 12px; }
+  .geolocation-dialog-content {
+    spacing: 20px; }
+  .geolocation-dialog-icon {
+    icon-size: 48px; }
+  .geolocation-dialog-title {
+    font-weight: bold; }
+  .geolocation-dialog-reason {
+    color: #D3DAE3;
+    font-weight: bold; }
 
 .network-dialog-secret-table {
   spacing-rows: 15px;

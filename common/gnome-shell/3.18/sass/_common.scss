@@ -505,37 +505,39 @@ StScrollBar {
 //
 // Audio selection dialog
 //
-.audio-device-selection-dialog {
-  spacing: 30px;
-}
+.audio-device-selection-dialog { spacing: 30px; }
 
-.audio-selection-content {
-  spacing: 20px;
-  padding: 24px;
-}
+.audio-selection {
 
-.audio-selection-title {
-  font-weight: bold;
-  text-align: center;
-}
+  &-content {
+    spacing: 20px;
+    padding: 24px;
+  }
 
-.audio-selection-box {
-  spacing: 20px;
-}
+  &-title {
+    font-weight: bold;
+    text-align: center;
+  }
 
-.audio-selection-device {
-  border: 1px solid red;
-  border-radius: 12px;
-  &:active,&:hover,&:focus { background-color: $selected_bg_color; }
-}
+  &-box { spacing: 20px; }
 
-.audio-selection-device-box {
-  padding: 20px;
-  spacing: 20px;
-}
+  &-device {
+    border: 1px solid $borders_color;
+    border-radius: 3px;
 
-.audio-selection-device-icon {
-  icon-size: 64px;
+    &:active,&:hover,&:focus {
+      background-color: $selected_bg_color;
+      border-color: $selected_bg_color;
+    }
+  }
+
+  &-device-box {
+    padding: 20px;
+    spacing: 20px;
+  }
+
+  &-device-icon { icon-size: 64px; }
+  
 }
 
 //
@@ -543,27 +545,16 @@ StScrollBar {
 //
 .geolocation-dialog {
   spacing: 30px;
-}
 
-.geolocation-dialog-main-layout {
-  spacing: 12px;
-}
+  &-main-layout { spacing: 12px; }
+  &-content { spacing: 20px; }
+  &-icon { icon-size: 48px; }
+  &-title { font-weight: bold; }
 
-.geolocation-dialog-content {
-  spacing: 20px;
-}
-
-.geolocation-dialog-icon {
-  icon-size: 48px;
-}
-
-.geolocation-dialog-title {
-  font-weight: bold;
-}
-
-.geolocation-dialog-reason {
-  color: darken($fg_color,40%);
-  font-weight: bold;
+  &-reason {
+    color: $fg_color;
+    font-weight: bold;
+  }
 }
 
 //
