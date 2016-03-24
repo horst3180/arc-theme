@@ -1525,9 +1525,11 @@ menu,
       min-height: 16px;
       min-width: 16px; }
       menuitem check:dir(ltr), menuitem radio:dir(ltr) {
-        margin-right: 7px; }
+        margin-right: 6px;
+        margin-left: 2px; }
       menuitem check:dir(rtl), menuitem radio:dir(rtl) {
-        margin-left: 7px; }
+        margin-left: 6px;
+        margin-right: 2px; }
   menu arrow,
   .menu arrow {
     border-style: none;

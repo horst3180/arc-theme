@@ -1621,8 +1621,8 @@ menu,
       check, radio {
         min-height: 16px;
         min-width: 16px;
-        &:dir(ltr) { margin-right: 7px; }
-        &:dir(rtl) { margin-left: 7px; }
+        &:dir(ltr) { margin-right: 6px; margin-left: 2px; }
+        &:dir(rtl) { margin-left: 6px; margin-right: 2px; }
       }
     }
   }
