@@ -2686,6 +2686,9 @@ TerminalWindow .notebook .active-page .button:hover, TerminalWindow .notebook .p
 TerminalWindow .notebook .active-page .button:active, TerminalWindow .notebook .prelight-page .button:active {
   color: #5294E2; }
 
+EelEditableLabel.entry {
+  transition: none; }
+
 .nautilus-canvas-item {
   border-radius: 2px; }
 
@@ -2739,9 +2742,6 @@ NautilusQueryEditor .search-bar.toolbar, NautilusQueryEditor .search-bar.inline-
 
 NautilusListView .view {
   border-bottom: 1px solid #dcdfe3; }
-
-NemoWindow EelEditableLabel.entry {
-  transition: none; }
 
 NemoWindow .sidebar .frame {
   border-width: 0; }

@@ -90,6 +90,8 @@ TerminalWindow {
 //
 // Nautilus
 //
+EelEditableLabel.entry { transition: none; }  // Workaround for invisible text in rename entry
+
 .nautilus-canvas-item {
   border-radius: 2px;
 }
@@ -163,8 +165,6 @@ NautilusListView .view { border-bottom: 1px solid $borders_color; }
 .nemo-desktop.nemo-canvas-item { @extend .nautilus-desktop.nautilus-canvas-item; }
 
 NemoWindow {
-
-  EelEditableLabel.entry { transition: none; }  // Workaround for invisible text in rename entry
 
   .sidebar .frame { border-width: 0; }
 
