@@ -892,6 +892,8 @@ toolbar {
       margin-right: 1px;
       margin-bottom: 1px;
     }
+    .linked > button,
+    .linked > entry { margin-right:0; }
   }
 }
 

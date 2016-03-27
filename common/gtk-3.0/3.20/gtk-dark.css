@@ -849,6 +849,9 @@ toolbar, .inline-toolbar {
   toolbar:not(.inline-toolbar):not(.osd) button, .inline-toolbar:not(.inline-toolbar):not(.osd) button {
     margin-right: 1px;
     margin-bottom: 1px; }
+  toolbar:not(.inline-toolbar):not(.osd) .linked > button, .inline-toolbar:not(.inline-toolbar):not(.osd) .linked > button,
+  toolbar:not(.inline-toolbar):not(.osd) .linked > entry, .inline-toolbar:not(.inline-toolbar):not(.osd) .linked > entry {
+    margin-right: 0; }
 
 .primary-toolbar {
   color: rgba(207, 218, 231, 0.8);
