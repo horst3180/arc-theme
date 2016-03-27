@@ -22,7 +22,7 @@ filechooser,
 
     background-color: $dark_sidebar_bg;
 
-    row {
+    row.sidebar-row {
       border: none;
       color: $dark_sidebar_fg;
 
@@ -40,6 +40,15 @@ filechooser,
         @extend %selected_items;
 
         .sidebar-icon { color: inherit; }
+      }
+
+      &:not(:selected) button.sidebar-button {
+        color: $dark_sidebar_fg;
+
+        &:hover { @include button(osd-hover); }
+        &:active { @include button(active); }
+
+        &:not(:hover):not(:active) > image { opacity: 0.5 };
       }
 
       &.sidebar-new-bookmark-row {
@@ -64,15 +73,6 @@ filechooser,
   }
 
   &.maximized placessidebar.sidebar { background-color: opacify($dark_sidebar_bg, 1); }
-
-  row:not(:selected) button.sidebar-button {
-    color: $dark_sidebar_fg;
-
-    &:hover { @include button(osd-hover); }
-    &:active { @include button(active); }
-
-    &:not(:hover):not(:active) > image { opacity: 0.5 };
-  }
 }
 
 
