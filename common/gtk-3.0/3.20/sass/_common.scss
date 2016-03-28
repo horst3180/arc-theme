@@ -1957,9 +1957,9 @@ switch {
 }
 
 @each $k,$l in ('',''),
-               (':active','-active'),
+               (':checked','-active'),
                (':disabled','-insensitive'),
-               (':active:disabled','-active-insensitive') {
+               (':checked:disabled','-active-insensitive') {
 
   // load switch troughs from .png files in assets directory
 

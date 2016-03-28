@@ -1812,15 +1812,15 @@ headerbar switch,
 .primary-toolbar switch {
   background-image: -gtk-scaled(url("assets/switch-header-dark.png"), url("assets/switch-header-dark@2.png")); }
 
-switch:active {
+switch:checked {
   background-image: -gtk-scaled(url("assets/switch-active.png"), url("assets/switch-active@2.png")); }
 
-row:selected switch:active,
-infobar switch:active {
+row:selected switch:checked,
+infobar switch:checked {
   background-image: -gtk-scaled(url("assets/switch-active-selected.png"), url("assets/switch-active-selected@2.png")); }
 
-headerbar switch:active,
-.primary-toolbar switch:active {
+headerbar switch:checked,
+.primary-toolbar switch:checked {
   background-image: -gtk-scaled(url("assets/switch-active-header-dark.png"), url("assets/switch-active-header-dark@2.png")); }
 
 switch:disabled {
@@ -1834,15 +1834,15 @@ headerbar switch:disabled,
 .primary-toolbar switch:disabled {
   background-image: -gtk-scaled(url("assets/switch-insensitive-header-dark.png"), url("assets/switch-insensitive-header-dark@2.png")); }
 
-switch:active:disabled {
+switch:checked:disabled {
   background-image: -gtk-scaled(url("assets/switch-active-insensitive.png"), url("assets/switch-active-insensitive@2.png")); }
 
-row:selected switch:active:disabled,
-infobar switch:active:disabled {
+row:selected switch:checked:disabled,
+infobar switch:checked:disabled {
   background-image: -gtk-scaled(url("assets/switch-active-insensitive-selected.png"), url("assets/switch-active-insensitive-selected@2.png")); }
 
-headerbar switch:active:disabled,
-.primary-toolbar switch:active:disabled {
+headerbar switch:checked:disabled,
+.primary-toolbar switch:checked:disabled {
   background-image: -gtk-scaled(url("assets/switch-active-insensitive-header-dark.png"), url("assets/switch-active-insensitive-header-dark@2.png")); }
 
 check,
