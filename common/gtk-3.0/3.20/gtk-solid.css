@@ -674,8 +674,7 @@ toolbar.inline-toolbar toolbutton > button.flat, .inline-toolbar toolbutton > bu
   border-style: solid; }
 
 menuitem.button.flat,
-modelbutton.flat, button:link, button:visited, button:link:hover, button:link:active, button:link:checked, button:visited:hover, button:visited:active, button:visited:checked, menu arrow,
-.menu arrow, notebook > header > tabs > tab button.flat:hover, notebook > header > tabs > tab button.sidebar-button:hover, notebook > header > tabs > tab button.flat:active, notebook > header > tabs > tab button.sidebar-button:active, notebook > header > tabs > tab button.flat:active:hover, notebook > header > tabs > tab button.sidebar-button:active:hover, .app-notification button.flat, .app-notification button.sidebar-button, .app-notification button.flat:disabled, .app-notification button.sidebar-button:disabled {
+modelbutton.flat, button:link, button:visited, button:link:hover, button:link:active, button:link:checked, button:visited:hover, button:visited:active, button:visited:checked, notebook > header > tabs > tab button.flat:hover, notebook > header > tabs > tab button.sidebar-button:hover, notebook > header > tabs > tab button.flat:active, notebook > header > tabs > tab button.sidebar-button:active, notebook > header > tabs > tab button.flat:active:hover, notebook > header > tabs > tab button.sidebar-button:active:hover, .app-notification button.flat, .app-notification button.sidebar-button, .app-notification button.flat:disabled, .app-notification button.sidebar-button:disabled {
   border-color: transparent;
   background-color: transparent;
   background-image: none;
@@ -1544,25 +1543,31 @@ menu,
       menuitem check:dir(rtl), menuitem radio:dir(rtl) {
         margin-left: 6px;
         margin-right: 2px; }
-  menu arrow,
-  .menu arrow {
-    border-style: none;
-    border-radius: 0;
+  menu > arrow,
+  .menu > arrow {
+    border-color: transparent;
+    background-color: transparent;
+    background-image: none;
     min-width: 16px;
-    min-height: 16px; }
-    menu arrow.top,
-    .menu arrow.top {
-      -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
-      border-bottom: 1px solid #efeff0; }
-    menu arrow.bottom,
-    .menu arrow.bottom {
-      -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
-      border-top: 1px solid #efeff0; }
-    menu arrow:hover,
-    .menu arrow:hover {
+    min-height: 16px;
+    padding: 4px;
+    background-color: #ffffff;
+    border-radius: 0; }
+    menu > arrow.top,
+    .menu > arrow.top {
+      margin-top: -6px;
+      border-bottom: 1px solid #efeff0;
+      -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
+    menu > arrow.bottom,
+    .menu > arrow.bottom {
+      margin-bottom: -6px;
+      border-top: 1px solid #efeff0;
+      -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
+    menu > arrow:hover,
+    .menu > arrow:hover {
       background-color: #efeff0; }
-    menu arrow:disabled,
-    .menu arrow:disabled {
+    menu > arrow:disabled,
+    .menu > arrow:disabled {
       color: transparent;
       background-color: transparent;
       border-color: transparent; }
