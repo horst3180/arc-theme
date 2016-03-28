@@ -1020,6 +1020,7 @@ headerbar:last-child, headerbar:last-child:backdrop {
   .tiled headerbar:last-child:backdrop {
     border-radius: 0; }
 
+window > .titlebar:not(headerbar), window > .titlebar:not(headerbar):backdrop,
 window.csd > .titlebar:not(headerbar),
 window.csd > .titlebar:not(headerbar):backdrop {
   padding: 0;
@@ -1030,7 +1031,7 @@ window.csd > .titlebar:not(headerbar):backdrop {
   box-shadow: none; }
 
 .titlebar:not(headerbar) > separator {
-  background: #262a33; }
+  background-image: linear-gradient(to top, #262a33); }
 
 .primary-toolbar separator, headerbar separator.titlebutton, .titlebar:not(headerbar) separator.titlebutton {
   min-width: 1px;

@@ -1105,17 +1105,19 @@ headerbar {
 
 // Fixes split headerbars too
 .titlebar:not(headerbar) {
-  window.csd > &,
-  window.csd > &:backdrop {
-    padding: 0;
-    background-color: transparent;
-    background-image: none;
-    border-style: none;
-    border-color: transparent;
-    box-shadow: none;
+  window > &,
+  window.csd > & {
+    &, &:backdrop {
+      padding: 0;
+      background-color: transparent;
+      background-image: none;
+      border-style: none;
+      border-color: transparent;
+      box-shadow: none;
+    }
   }
 
-  > separator { background: $header_border; }
+  > separator { background-image: linear-gradient(to top, $header_border); }
 
   @extend %titlebar;
 }
