@@ -1073,6 +1073,11 @@ headerbar,
 }
 
 headerbar {
+  entry, button, separator {
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
+
   separator:first-child + &,
   &:first-child { &, &:backdrop { border-top-left-radius: $_header_radius; }}
 
@@ -1096,16 +1101,10 @@ headerbar {
   @extend %titlebar;
 }
 
-headerbar,
-%titlebar {
+headerbar {
   separator.titlebutton { @extend %header_separator; }
 
   @extend %header_widgets;
-
-  entry, button, separator {
-    margin-top: 6px;
-    margin-bottom: 6px;
-  }
 }
 
 %header_separator {
