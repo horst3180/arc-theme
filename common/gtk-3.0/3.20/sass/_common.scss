@@ -2479,7 +2479,11 @@ calendar {
 //
 messagedialog { // Message Dialog styling
 
-  .titlebar { background-color: $header_bg; border-bottom: 1px solid darken($header_bg, 7%) }
+  .titlebar {
+    min-height: 20px;
+    background-color: $header_bg;
+    border-bottom: 1px solid darken($header_bg, 7%);
+  }
 
   .dialog-action-area button { padding: 8px; min-height: 0; }
 

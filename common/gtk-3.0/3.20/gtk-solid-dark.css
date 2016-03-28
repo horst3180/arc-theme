@@ -2451,6 +2451,7 @@ calendar {
     color: #D3DAE3; }
 
 messagedialog .titlebar {
+  min-height: 20px;
   background-color: #2f343f;
   border-bottom: 1px solid #20232b; }
 
