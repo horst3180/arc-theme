@@ -1066,6 +1066,10 @@ headerbar,
 
     .maximized & { background-color: opacify($header_bg, 1); }
   }
+
+  separator.titlebutton { @extend %header_separator; }
+
+  @extend %header_widgets;
 }
 
 .titlebar {
@@ -1078,16 +1082,31 @@ headerbar {
     margin-bottom: 6px;
   }
 
+  // Fixes split headerbars
   separator:first-child + &,
-  &:first-child { &, &:backdrop { border-top-left-radius: $_header_radius; }}
+  &:first-child {
+    &, &:backdrop {
+      border-top-left-radius: $_header_radius;
 
-  &:last-child { &, &:backdrop { border-top-right-radius: $_header_radius; }}
+      .maximized &,
+      .tiled & { border-radius: 0; }
+    }
+  }
+
+  &:last-child {
+    &, &:backdrop {
+      border-top-right-radius: $_header_radius;
+
+      .maximized &,
+      .tiled & { border-radius: 0; }
+    }
+  }
 }
 
+// Fixes split headerbars too
 .titlebar:not(headerbar) {
   window.csd > &,
   window.csd > &:backdrop {
-    // in csd we assume every titlebar is a headerbar so reset anything, this is needed for split toolbars cases
     padding: 0;
     background-color: transparent;
     background-image: none;
@@ -1099,12 +1118,6 @@ headerbar {
   > separator { background: $header_border; }
 
   @extend %titlebar;
-}
-
-headerbar {
-  separator.titlebutton { @extend %header_separator; }
-
-  @extend %header_widgets;
 }
 
 %header_separator {
