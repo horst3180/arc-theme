@@ -31,12 +31,12 @@ Arc is a flat theme with transparent elements for GTK 3, GTK 2 and Gnome-Shell w
 Main distributions that meet these requirements are
 
 * Arch Linux and Arch Linux based distros
-* Ubuntu 15.04 and 15.10 (**Ubuntu 14.04 and 14.10 are not supported**)
+* Ubuntu 15.04, 15.10 and 16.04 (**Ubuntu 14.04 and 14.10 are not supported**)
 * elementary OS Freya
-* Debian Jessie, Testing or Unstable
+* Debian 8, Testing or Unstable
 * Gentoo
-* Fedora 21, 22 and 23
-* openSUSE 13.2 and Tumbleweed
+* Fedora 21 - 24
+* openSUSE 13.2, Leap 42.1 and Tumbleweed
 
 Derivatives of these distributions should work, as well.
 
