@@ -1816,21 +1816,19 @@ scrollbar.horizontal trough {
 
 switch {
   font: 1;
-  outline-color: transparent; }
+  outline-color: transparent;
+  min-width: 52px;
+  min-height: 24px;
+  margin: 0 -10px;
+  background-size: 52px 24px;
+  background-repeat: no-repeat;
+  background-position: center center; }
   switch, switch slider {
-    background-size: 52px 24px;
-    background-repeat: no-repeat;
-    background-position: right center;
     color: transparent;
     border-color: transparent;
     border-image: none;
     border-style: none;
     box-shadow: none; }
-    switch:dir(rtl), switch slider:dir(rtl) {
-      background-position: left center; }
-  switch slider {
-    min-width: 52px;
-    min-height: 24px; }
 
 switch {
   background-image: -gtk-scaled(url("assets/switch.png"), url("assets/switch@2.png")); }
