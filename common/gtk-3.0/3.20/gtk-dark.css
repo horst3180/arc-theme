@@ -918,35 +918,6 @@ headerbar,
     .selection-mode.titlebar:backdrop:not(headerbar) {
       background-color: rgba(82, 148, 226, 0.95);
       color: rgba(255, 255, 255, 0.6); }
-    headerbar.selection-mode button, .selection-mode.titlebar:not(headerbar) button {
-      color: #ffffff;
-      outline-color: rgba(255, 255, 255, 0.3);
-      background-color: rgba(255, 255, 255, 0);
-      border-color: rgba(255, 255, 255, 0); }
-      headerbar.selection-mode button.flat, headerbar.selection-mode button.sidebar-button, .selection-mode.titlebar:not(headerbar) button.flat, .selection-mode.titlebar:not(headerbar) button.sidebar-button {
-        border-color: transparent;
-        background-color: transparent;
-        background-image: none;
-        color: #ffffff;
-        background-color: rgba(255, 255, 255, 0); }
-      headerbar.selection-mode button:hover, .selection-mode.titlebar:not(headerbar) button:hover {
-        color: #ffffff;
-        outline-color: rgba(255, 255, 255, 0.3);
-        background-color: rgba(255, 255, 255, 0.05);
-        border-color: rgba(255, 255, 255, 0.5); }
-      headerbar.selection-mode button:active, headerbar.selection-mode button:checked, .selection-mode.titlebar:not(headerbar) button:active, .selection-mode.titlebar:not(headerbar) button:checked {
-        color: rgba(82, 148, 226, 0.95);
-        outline-color: rgba(82, 148, 226, 0.25);
-        background-color: #ffffff;
-        border-color: #ffffff; }
-      headerbar.selection-mode button:disabled, .selection-mode.titlebar:not(headerbar) button:disabled {
-        color: rgba(255, 255, 255, 0.4);
-        background-color: rgba(255, 255, 255, 0);
-        border-color: rgba(255, 255, 255, 0); }
-        headerbar.selection-mode button:disabled:active, headerbar.selection-mode button:disabled:checked, .selection-mode.titlebar:not(headerbar) button:disabled:active, .selection-mode.titlebar:not(headerbar) button:disabled:checked {
-          color: rgba(82, 148, 226, 0.35);
-          background-color: rgba(255, 255, 255, 0.15);
-          border-color: rgba(255, 255, 255, 0.15); }
     headerbar.selection-mode .selection-menu, .selection-mode.titlebar:not(headerbar) .selection-menu {
       box-shadow: none;
       padding-left: 10px;
@@ -1114,6 +1085,13 @@ window.csd > .titlebar:not(headerbar):backdrop {
     color: rgba(255, 255, 255, 0.75);
     border-color: rgba(82, 148, 226, 0.65);
     background-color: rgba(82, 148, 226, 0.65); }
+
+.selection-mode.primary-toolbar button, headerbar.selection-mode button, .selection-mode.titlebar:not(headerbar) button, .selection-mode.primary-toolbar button.flat, headerbar.selection-mode button.flat, .selection-mode.titlebar:not(headerbar) button.flat, .selection-mode.primary-toolbar button.sidebar-button, headerbar.selection-mode button.sidebar-button, .selection-mode.titlebar:not(headerbar) button.sidebar-button {
+  border-color: transparent;
+  background-color: transparent;
+  background-image: none;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0); }
 
 .primary-toolbar .linked:not(.vertical):not(.path-bar):not(.stack-switcher) button:not(:last-child):not(:only-child), headerbar .linked:not(.vertical):not(.path-bar):not(.stack-switcher) button:not(:last-child):not(:only-child), .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar):not(.stack-switcher) button:not(:last-child):not(:only-child) {
   margin-right: 1px; }
@@ -2644,7 +2622,7 @@ infobar {
     color: #5294E2;
     background-color: #ffffff; }
 
-row:selected button, .info button,
+.selection-mode.primary-toolbar button:hover, headerbar.selection-mode button:hover, .selection-mode.titlebar:not(headerbar) button:hover, row:selected button, .info button,
 .question button,
 .warning button,
 .error button, .nautilus-window .floating-bar button {
@@ -2652,57 +2630,82 @@ row:selected button, .info button,
   outline-color: rgba(255, 255, 255, 0.3);
   background-color: rgba(255, 255, 255, 0);
   border-color: rgba(255, 255, 255, 0.5); }
-  row:selected button.flat, row:selected button.sidebar-button, .info button.flat, .info button.sidebar-button,
-  .question button.flat,
-  .question button.sidebar-button,
-  .warning button.flat,
-  .warning button.sidebar-button,
-  .error button.flat,
-  .error button.sidebar-button, .nautilus-window .floating-bar button.flat, .nautilus-window .floating-bar button.sidebar-button {
-    border-color: transparent;
-    background-color: transparent;
-    background-image: none;
-    color: #ffffff;
-    background-color: rgba(255, 255, 255, 0); }
-  row:selected button:hover, .info button:hover,
-  .question button:hover,
-  .warning button:hover,
-  .error button:hover, .nautilus-window .floating-bar button:hover {
-    color: #ffffff;
-    outline-color: rgba(255, 255, 255, 0.3);
-    background-color: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.8); }
-  row:selected button:active, .info button:active,
-  .question button:active,
-  .warning button:active,
-  .error button:active, .nautilus-window .floating-bar button:active, row:selected button:active:hover, .info button:active:hover,
-  .question button:active:hover,
-  .warning button:active:hover,
-  .error button:active:hover, .nautilus-window .floating-bar button:active:hover, row:selected button:checked, .info button:checked,
-  .question button:checked,
-  .warning button:checked,
-  .error button:checked, .nautilus-window .floating-bar button:checked {
-    color: #5294E2;
-    outline-color: rgba(82, 148, 226, 0.3);
-    background-color: #ffffff;
-    border-color: #ffffff; }
+
+row:selected button.flat, row:selected button.sidebar-button, .info button.flat, .info button.sidebar-button,
+.question button.flat,
+.question button.sidebar-button,
+.warning button.flat,
+.warning button.sidebar-button,
+.error button.flat,
+.error button.sidebar-button, .nautilus-window .floating-bar button.flat, .nautilus-window .floating-bar button.sidebar-button {
+  border-color: transparent;
+  background-color: transparent;
+  background-image: none;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0); }
+  .selection-mode.primary-toolbar button:disabled, headerbar.selection-mode button:disabled, .selection-mode.titlebar:not(headerbar) button:disabled, row:selected button.flat:disabled, row:selected button.sidebar-button:disabled, .info button.flat:disabled, .info button.sidebar-button:disabled,
+  .question button.flat:disabled,
+  .question button.sidebar-button:disabled,
+  .warning button.flat:disabled,
+  .warning button.sidebar-button:disabled,
+  .error button.flat:disabled,
+  .error button.sidebar-button:disabled, .nautilus-window .floating-bar button.flat:disabled, .nautilus-window .floating-bar button.sidebar-button:disabled, .selection-mode.primary-toolbar button:disabled label, headerbar.selection-mode button:disabled label, .selection-mode.titlebar:not(headerbar) button:disabled label, row:selected button.flat:disabled label, row:selected button.sidebar-button:disabled label, .info button.flat:disabled label, .info button.sidebar-button:disabled label,
+  .question button.flat:disabled label,
+  .question button.sidebar-button:disabled label,
+  .warning button.flat:disabled label,
+  .warning button.sidebar-button:disabled label,
+  .error button.flat:disabled label,
+  .error button.sidebar-button:disabled label, .nautilus-window .floating-bar button.flat:disabled label, .nautilus-window .floating-bar button.sidebar-button:disabled label {
+    color: rgba(255, 255, 255, 0.4); }
+
+row:selected button:hover, .info button:hover,
+.question button:hover,
+.warning button:hover,
+.error button:hover, .nautilus-window .floating-bar button:hover {
+  color: #ffffff;
+  outline-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.8); }
+
+.selection-mode.primary-toolbar button:active, headerbar.selection-mode button:active, .selection-mode.titlebar:not(headerbar) button:active, .selection-mode.primary-toolbar button:checked, headerbar.selection-mode button:checked, .selection-mode.titlebar:not(headerbar) button:checked, row:selected button:active, .info button:active,
+.question button:active,
+.warning button:active,
+.error button:active, .nautilus-window .floating-bar button:active, .selection-mode.primary-toolbar button:hover:active, headerbar.selection-mode button:hover:active, .selection-mode.titlebar:not(headerbar) button:hover:active, .selection-mode.primary-toolbar button:hover:checked, headerbar.selection-mode button:hover:checked, .selection-mode.titlebar:not(headerbar) button:hover:checked, row:selected button:active:hover, .info button:active:hover,
+.question button:active:hover,
+.warning button:active:hover,
+.error button:active:hover, .nautilus-window .floating-bar button:active:hover, row:selected button:checked, .info button:checked,
+.question button:checked,
+.warning button:checked,
+.error button:checked, .nautilus-window .floating-bar button:checked {
+  color: #5294E2;
+  outline-color: rgba(82, 148, 226, 0.3);
+  background-color: #ffffff;
+  border-color: #ffffff; }
+
+row:selected button:disabled, .info button:disabled,
+.question button:disabled,
+.warning button:disabled,
+.error button:disabled, .nautilus-window .floating-bar button:disabled {
+  background-color: rgba(255, 255, 255, 0);
+  border-color: rgba(255, 255, 255, 0.4); }
   row:selected button:disabled, .info button:disabled,
   .question button:disabled,
   .warning button:disabled,
-  .error button:disabled, .nautilus-window .floating-bar button:disabled {
-    color: rgba(255, 255, 255, 0.4);
-    background-color: rgba(255, 255, 255, 0);
-    border-color: rgba(255, 255, 255, 0.2); }
-    row:selected button:disabled:active, .info button:disabled:active,
-    .question button:disabled:active,
-    .warning button:disabled:active,
-    .error button:disabled:active, .nautilus-window .floating-bar button:disabled:active, row:selected button:disabled:checked, .info button:disabled:checked,
-    .question button:disabled:checked,
-    .warning button:disabled:checked,
-    .error button:disabled:checked, .nautilus-window .floating-bar button:disabled:checked {
-      color: rgba(82, 148, 226, 0.4);
-      background-color: rgba(255, 255, 255, 0.2);
-      border-color: rgba(255, 255, 255, 0.2); }
+  .error button:disabled, .nautilus-window .floating-bar button:disabled, row:selected button:disabled label, .info button:disabled label,
+  .question button:disabled label,
+  .warning button:disabled label,
+  .error button:disabled label, .nautilus-window .floating-bar button:disabled label {
+    color: rgba(255, 255, 255, 0.5); }
+  .selection-mode.primary-toolbar button:disabled:active, headerbar.selection-mode button:disabled:active, .selection-mode.titlebar:not(headerbar) button:disabled:active, .selection-mode.primary-toolbar button:disabled:checked, headerbar.selection-mode button:disabled:checked, .selection-mode.titlebar:not(headerbar) button:disabled:checked, row:selected button:disabled:active, .info button:disabled:active,
+  .question button:disabled:active,
+  .warning button:disabled:active,
+  .error button:disabled:active, .nautilus-window .floating-bar button:disabled:active, .selection-mode.primary-toolbar button:disabled:checked, headerbar.selection-mode button:disabled:checked, .selection-mode.titlebar:not(headerbar) button:disabled:checked, .selection-mode.primary-toolbar button:disabled:active, headerbar.selection-mode button:disabled:active, .selection-mode.titlebar:not(headerbar) button:disabled:active, row:selected button:disabled:checked, .info button:disabled:checked,
+  .question button:disabled:checked,
+  .warning button:disabled:checked,
+  .error button:disabled:checked, .nautilus-window .floating-bar button:disabled:checked {
+    color: #5294E2;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-color: rgba(255, 255, 255, 0.4); }
 
 tooltip {
   border-radius: 2px;

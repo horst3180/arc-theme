@@ -994,42 +994,6 @@ headerbar,
 
     .subtitle:link { @extend *:link:selected;  }
 
-    button {
-      color: $selected_fg_color;
-      outline-color: transparentize($selected_fg_color, 0.7);
-      background-color: transparentize($selected_fg_color, 1);
-      border-color: transparentize($selected_fg_color, 1);
-
-      &.flat {
-        @include button(undecorated);
-        color: $selected_fg_color;
-        background-color: transparentize($selected_fg_color, 1);
-      }
-      &:hover {
-        color: $selected_fg_color;
-        outline-color: transparentize($selected_fg_color, 0.7);
-        background-color: transparentize($selected_fg_color, 0.95);
-        border-color: transparentize($selected_fg_color, 0.5);
-      }
-      &:active, &:checked {
-        color: $selection_mode_bg;
-        outline-color: transparentize($selection_mode_bg, 0.7);
-        background-color: $selected_fg_color;
-        border-color: $selected_fg_color;
-      }
-      &:disabled {
-        color: transparentize($selected_fg_color, 0.6);
-        background-color: transparentize($selected_fg_color, 1);
-        border-color: transparentize($selected_fg_color, 1);
-
-        &:active, &:checked {
-          color: transparentize($selection_mode_bg, 0.6);
-          background-color: transparentize($selected_fg_color, 0.85);
-          border-color: transparentize($selected_fg_color, 0.85);
-        }
-      }
-    }
-
     .selection-menu {
       box-shadow: none;
       padding-left: 10px;
@@ -1195,6 +1159,23 @@ headerbar {
     }
     &:disabled { @include button(header-insensitive); }
     &:disabled:active, &:disabled:checked { @include button(header-insensitive-active); }
+  }
+
+  &.selection-mode button {
+
+    &, &.flat {
+      @include button(undecorated);
+      color: $selected_fg_color;
+      background-color: transparentize($selected_fg_color, 1);
+    }
+    &:hover { @extend %normal_selected_button; }
+    &:active, &:checked { @extend %selected-button:active; }
+
+    &:disabled {
+      @extend %selected-button.flat:disabled;
+
+      &:checked, &:active { @extend %selected-button:disabled:checked; }
+    }
   }
 
   // Linking stuff
@@ -2765,15 +2746,22 @@ infobar { border-style: none; }
 // Buttons on selected backgrounds
 //
 %selected-button {
-  color: $selected_fg_color;
-  outline-color: transparentize($selected_fg_color, 0.7);
-  background-color: transparentize($selected_fg_color, 1);
-  border-color: transparentize($selected_fg_color, 0.5);
+
+  @at-root %normal_selected_button, & {
+    color: $selected_fg_color;
+    outline-color: transparentize($selected_fg_color, 0.7);
+    background-color: transparentize($selected_fg_color, 1);
+    border-color: transparentize($selected_fg_color, 0.5);
+  }
 
   &.flat {
     @include button(undecorated);
     color: $selected_fg_color;
     background-color: transparentize($selected_fg_color, 1);
+
+    &:disabled {
+      &, label { color: transparentize($selected_fg_color, 0.6); }
+    }
   }
   &:hover {
     color: $selected_fg_color;
@@ -2788,14 +2776,14 @@ infobar { border-style: none; }
     border-color: $selected_fg_color;
   }
   &:disabled {
-    color: transparentize($selected_fg_color, 0.6);
+    &, label { color: transparentize($selected_fg_color, 0.5); }
     background-color: transparentize($selected_fg_color, 1);
-    border-color: transparentize($selected_fg_color, 0.8);
+    border-color: transparentize($selected_fg_color, 0.6);
 
     &:active, &:checked {
-      color: transparentize($selected_bg_color, 0.6);
-      background-color: transparentize($selected_fg_color, 0.8);
-      border-color: transparentize($selected_fg_color, 0.8);
+      color: $selected_bg_color;
+      background-color: transparentize($selected_fg_color, 0.5);
+      border-color: transparentize($selected_fg_color, 0.6);
     }
   }
 }
