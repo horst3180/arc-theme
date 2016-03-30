@@ -991,10 +991,8 @@ window > .titlebar:not(headerbar), window > .titlebar:not(headerbar):backdrop,
 window.csd > .titlebar:not(headerbar),
 window.csd > .titlebar:not(headerbar):backdrop {
   padding: 0;
-  background-color: transparent;
-  background-image: none;
-  border-style: none;
-  border-color: transparent;
+  background: none;
+  border: none;
   box-shadow: none; }
 
 .titlebar:not(headerbar) > separator {
@@ -3136,9 +3134,13 @@ popover.background label.nautilus-canvas-item.separator, headerbar .nautilus-can
 .gb-search-entry-occurrences-tag {
   background: none; }
 
-workbench stack.titlebar {
+workbench.csd > stack.titlebar:not(headerbar) {
   padding: 0;
-  border: none; }
+  background: none;
+  border: none;
+  box-shadow: none; }
+  workbench.csd > stack.titlebar:not(headerbar) headerbar, workbench.csd > stack.titlebar:not(headerbar) headerbar:first-child, workbench.csd > stack.titlebar:not(headerbar) headerbar:last-child {
+    border-radius: 3px 3px 0 0; }
 
 editortweak .linked > entry.search:focus + .gb-linked-scroller {
   border-top-color: #5294E2; }

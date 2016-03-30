@@ -273,9 +273,17 @@ $disk_space_free: darken($bg_color, 3%);
 //
 .gb-search-entry-occurrences-tag { background: none; }
 
-workbench stack.titlebar {
+workbench.csd > stack.titlebar:not(headerbar) {
   padding: 0;
+  background: none;
   border: none;
+  box-shadow: none;
+
+  headerbar {
+    &,
+    &:first-child,
+    &:last-child { border-radius: $_header_radius $_header_radius 0 0; }
+  }
 }
 
 editortweak .linked > entry.search:focus + .gb-linked-scroller { border-top-color: $selected_bg_color; }
