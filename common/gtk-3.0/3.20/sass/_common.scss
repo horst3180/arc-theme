@@ -1198,6 +1198,9 @@ headerbar {
   }
 
   // Linking stuff
+  .linked:not(.vertical):not(.path-bar):not(.stack-switcher) {
+    button:not(:last-child):not(:only-child) { margin-right: 1px; }
+  }
 
   // Reset buttons
   .linked:not(.vertical):not(.path-bar) > button,
