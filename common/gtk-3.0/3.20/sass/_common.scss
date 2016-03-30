@@ -1923,21 +1923,23 @@ scrollbar {
 //
 switch {
   font: 1;
-  outline-color: transparent;
 
   min-width: 52px;
   min-height: 24px;
-  margin: 0 -10px;
 
   background-size: 52px 24px;
   background-repeat: no-repeat;
   background-position: center center;
 
+  slider {
+    min-width: 1px;
+    min-height: 1px;
+  }
+
   &, slider {
+    outline-color: transparent;
     color: transparent;
-    border-color: transparent;
-    border-image: none;
-    border-style: none;
+    border: none;
     box-shadow: none;
   }
 }
