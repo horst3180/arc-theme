@@ -2124,10 +2124,18 @@ scale {
     }
     //OSD sliders
     .osd & {
-      background-image: linear-gradient(to bottom, $osd_bg_color);
+      min-width: 11px;
+      min-height: 11px;
+      margin: -4px;
+
+      background-image: linear-gradient(to bottom, $selected_bg_color);
       border-color: $selected_bg_color;
 
-      &:hover { background-image: linear-gradient(to bottom, $selected_bg_color); }
+      &:hover {
+        background-image: linear-gradient(to bottom, lighten($selected_bg_color, 10%));
+        border-color: lighten($selected_bg_color, 10%)
+;
+      }
       &:active {
         background-image: linear-gradient(to bottom, darken($selected_bg_color, 10%));
         border-color: darken($selected_bg_color, 10%);

@@ -2100,10 +2100,14 @@ scale {
       background-image: linear-gradient(to bottom, #5294E2);
       border-color: #5294E2; }
     .osd scale slider {
-      background-image: linear-gradient(to bottom, rgba(53, 57, 69, 0.95));
+      min-width: 11px;
+      min-height: 11px;
+      margin: -4px;
+      background-image: linear-gradient(to bottom, #5294E2);
       border-color: #5294E2; }
       .osd scale slider:hover {
-        background-image: linear-gradient(to bottom, #5294E2); }
+        background-image: linear-gradient(to bottom, #7eafe9);
+        border-color: #7eafe9; }
       .osd scale slider:active {
         background-image: linear-gradient(to bottom, #2679db);
         border-color: #2679db; }
