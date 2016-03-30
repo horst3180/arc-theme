@@ -269,6 +269,88 @@ $disk_space_free: darken($bg_color, 3%);
 }
 
 //
+// Gnome Builder
+//
+.gb-search-entry-occurrences-tag { background: none; }
+
+workbench stack.titlebar {
+  padding: 0;
+  border: none;
+}
+
+layouttab {
+  background-color: $base_color;
+}
+
+layout {
+  border: 1px solid $borders_color;
+  -PnlDockBin-handle-size: 1;
+}
+
+eggsearchbar box.search-bar {
+  border-bottom: 1px solid $borders_color;
+}
+
+perspectiveswitcher {
+  background: $bg_color;
+
+  button {
+
+  }
+}
+
+pillbox {
+  color: $selected_fg_color;
+  background-color: $selected_bg_color;
+  border-radius: 3px;
+}
+
+tabstrip {
+  padding: 0 6px;
+
+  background-color: $bg_color;
+  border-bottom: 1px solid $borders_color;
+
+  tab {
+    min-height: 28px;
+    border: solid transparent;
+    border-width: 0 1px;
+
+    label { opacity: 0.5; }
+    &:checked, &:hover { label { opacity: 1; }}
+
+    &:checked {
+      border-color: $borders_color;
+      background-color: $base_color;
+    }
+  }
+}
+
+dockbin {
+  border: 1px solid $borders_color;
+  -PnlDockBin-handle-size: 1;
+}
+
+dockpaned {
+  border: 1px solid $borders_color;
+}
+
+dockoverlayedge {
+  background-color: $bg_color;
+
+  tabstrip {
+    padding: 0;
+    border: none;
+  }
+
+  &.left-edge tab:checked,
+  &.right-edge tab:checked {
+    border-width: 1px 0;
+  }
+}
+
+
+//
 // Epiphany
 //
 //EphyWindow .floating-bar { // Epiphany overrides the floating-bar style, so reset it

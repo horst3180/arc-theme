@@ -3130,6 +3130,63 @@ popover.background label.nautilus-canvas-item.separator, headerbar .nautilus-can
   margin: 2px;
   padding: 2px; }
 
+.gb-search-entry-occurrences-tag {
+  background: none; }
+
+workbench stack.titlebar {
+  padding: 0;
+  border: none; }
+
+layouttab {
+  background-color: #ffffff; }
+
+layout {
+  border: 1px solid #dcdfe3;
+  -PnlDockBin-handle-size: 1; }
+
+eggsearchbar box.search-bar {
+  border-bottom: 1px solid #dcdfe3; }
+
+perspectiveswitcher {
+  background: #F5F6F7; }
+
+pillbox {
+  color: #ffffff;
+  background-color: #5294E2;
+  border-radius: 3px; }
+
+tabstrip {
+  padding: 0 6px;
+  background-color: #F5F6F7;
+  border-bottom: 1px solid #dcdfe3; }
+  tabstrip tab {
+    min-height: 28px;
+    border: solid transparent;
+    border-width: 0 1px; }
+    tabstrip tab label {
+      opacity: 0.5; }
+    tabstrip tab:checked label, tabstrip tab:hover label {
+      opacity: 1; }
+    tabstrip tab:checked {
+      border-color: #dcdfe3;
+      background-color: #ffffff; }
+
+dockbin {
+  border: 1px solid #dcdfe3;
+  -PnlDockBin-handle-size: 1; }
+
+dockpaned {
+  border: 1px solid #dcdfe3; }
+
+dockoverlayedge {
+  background-color: #F5F6F7; }
+  dockoverlayedge tabstrip {
+    padding: 0;
+    border: none; }
+  dockoverlayedge.left-edge tab:checked,
+  dockoverlayedge.right-edge tab:checked {
+    border-width: 1px 0; }
+
 button.documents-load-more {
   border-width: 1px 0 0;
   border-radius: 0; }
