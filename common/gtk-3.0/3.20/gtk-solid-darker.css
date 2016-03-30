@@ -734,7 +734,7 @@ modelbutton.flat arrow.right {
   .warning button:visited,
   .error *:link,
   .error button:link,
-  .error button:visited, *:link:selected, button:selected:link, button:selected:visited, headerbar.selection-mode .subtitle:link, headerbar.titlebar.selection-mode .subtitle:link, .selection-mode.titlebar:not(headerbar) .subtitle:link,
+  .error button:visited, *:link:selected, button:selected:link, button:selected:visited, headerbar.selection-mode .subtitle:link, .selection-mode.titlebar:not(headerbar) .subtitle:link,
   *:selected *:link,
   *:selected button:link,
   *:selected button:visited {
@@ -907,58 +907,55 @@ headerbar,
     font-size: smaller;
     padding-left: 12px;
     padding-right: 12px; }
-  headerbar.selection-mode, headerbar.titlebar.selection-mode,
-  .selection-mode.titlebar:not(headerbar),
-  .titlebar.selection-mode:not(headerbar) {
+  headerbar.selection-mode,
+  .selection-mode.titlebar:not(headerbar) {
     color: #ffffff;
     background-color: #5294E2;
     border-color: #4189df;
     box-shadow: none; }
-    headerbar.selection-mode:backdrop, headerbar.titlebar.selection-mode:backdrop,
-    .selection-mode.titlebar:backdrop:not(headerbar),
-    .titlebar.selection-mode:backdrop:not(headerbar) {
+    headerbar.selection-mode:backdrop,
+    .selection-mode.titlebar:backdrop:not(headerbar) {
       background-color: #5294E2;
       color: rgba(255, 255, 255, 0.6); }
-    headerbar.selection-mode button, headerbar.titlebar.selection-mode button, .selection-mode.titlebar:not(headerbar) button, .titlebar.selection-mode:not(headerbar) button {
+    headerbar.selection-mode button, .selection-mode.titlebar:not(headerbar) button {
       color: #ffffff;
       outline-color: rgba(255, 255, 255, 0.3);
       background-color: rgba(255, 255, 255, 0);
       border-color: rgba(255, 255, 255, 0); }
-      headerbar.selection-mode button.flat, headerbar.selection-mode button.sidebar-button, headerbar.titlebar.selection-mode button.flat, headerbar.titlebar.selection-mode button.sidebar-button, .selection-mode.titlebar:not(headerbar) button.flat, .selection-mode.titlebar:not(headerbar) button.sidebar-button, .titlebar.selection-mode:not(headerbar) button.flat, .titlebar.selection-mode:not(headerbar) button.sidebar-button {
+      headerbar.selection-mode button.flat, headerbar.selection-mode button.sidebar-button, .selection-mode.titlebar:not(headerbar) button.flat, .selection-mode.titlebar:not(headerbar) button.sidebar-button {
         border-color: transparent;
         background-color: transparent;
         background-image: none;
         color: #ffffff;
         background-color: rgba(255, 255, 255, 0); }
-      headerbar.selection-mode button:hover, headerbar.titlebar.selection-mode button:hover, .selection-mode.titlebar:not(headerbar) button:hover, .titlebar.selection-mode:not(headerbar) button:hover {
+      headerbar.selection-mode button:hover, .selection-mode.titlebar:not(headerbar) button:hover {
         color: #ffffff;
         outline-color: rgba(255, 255, 255, 0.3);
         background-color: rgba(255, 255, 255, 0.05);
         border-color: rgba(255, 255, 255, 0.5); }
-      headerbar.selection-mode button:active, headerbar.selection-mode button:checked, headerbar.titlebar.selection-mode button:active, headerbar.titlebar.selection-mode button:checked, .selection-mode.titlebar:not(headerbar) button:active, .selection-mode.titlebar:not(headerbar) button:checked, .titlebar.selection-mode:not(headerbar) button:active, .titlebar.selection-mode:not(headerbar) button:checked {
+      headerbar.selection-mode button:active, headerbar.selection-mode button:checked, .selection-mode.titlebar:not(headerbar) button:active, .selection-mode.titlebar:not(headerbar) button:checked {
         color: #5294E2;
         outline-color: rgba(82, 148, 226, 0.3);
         background-color: #ffffff;
         border-color: #ffffff; }
-      headerbar.selection-mode button:disabled, headerbar.titlebar.selection-mode button:disabled, .selection-mode.titlebar:not(headerbar) button:disabled, .titlebar.selection-mode:not(headerbar) button:disabled {
+      headerbar.selection-mode button:disabled, .selection-mode.titlebar:not(headerbar) button:disabled {
         color: rgba(255, 255, 255, 0.4);
         background-color: rgba(255, 255, 255, 0);
         border-color: rgba(255, 255, 255, 0); }
-        headerbar.selection-mode button:disabled:active, headerbar.selection-mode button:disabled:checked, headerbar.titlebar.selection-mode button:disabled:active, headerbar.titlebar.selection-mode button:disabled:checked, .selection-mode.titlebar:not(headerbar) button:disabled:active, .selection-mode.titlebar:not(headerbar) button:disabled:checked, .titlebar.selection-mode:not(headerbar) button:disabled:active, .titlebar.selection-mode:not(headerbar) button:disabled:checked {
+        headerbar.selection-mode button:disabled:active, headerbar.selection-mode button:disabled:checked, .selection-mode.titlebar:not(headerbar) button:disabled:active, .selection-mode.titlebar:not(headerbar) button:disabled:checked {
           color: rgba(82, 148, 226, 0.4);
           background-color: rgba(255, 255, 255, 0.15);
           border-color: rgba(255, 255, 255, 0.15); }
-    headerbar.selection-mode .selection-menu, headerbar.titlebar.selection-mode .selection-menu, .selection-mode.titlebar:not(headerbar) .selection-menu, .titlebar.selection-mode:not(headerbar) .selection-menu {
+    headerbar.selection-mode .selection-menu, .selection-mode.titlebar:not(headerbar) .selection-menu {
       box-shadow: none;
       padding-left: 10px;
       padding-right: 10px; }
-      headerbar.selection-mode .selection-menu GtkArrow, headerbar.titlebar.selection-mode .selection-menu GtkArrow, .selection-mode.titlebar:not(headerbar) .selection-menu GtkArrow, .titlebar.selection-mode:not(headerbar) .selection-menu GtkArrow {
+      headerbar.selection-mode .selection-menu GtkArrow, .selection-mode.titlebar:not(headerbar) .selection-menu GtkArrow {
         -GtkArrow-arrow-scaling: 1; }
-      headerbar.selection-mode .selection-menu .arrow, headerbar.titlebar.selection-mode .selection-menu .arrow, .selection-mode.titlebar:not(headerbar) .selection-menu .arrow, .titlebar.selection-mode:not(headerbar) .selection-menu .arrow {
+      headerbar.selection-mode .selection-menu .arrow, .selection-mode.titlebar:not(headerbar) .selection-menu .arrow {
         -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
-    .maximized headerbar.selection-mode, .maximized headerbar.titlebar.selection-mode,
-    .maximized .selection-mode.titlebar:not(headerbar),
-    .maximized .titlebar.selection-mode:not(headerbar) {
+    .maximized headerbar.selection-mode,
+    .maximized .selection-mode.titlebar:not(headerbar) {
       background-color: #5294e2; }
   .tiled headerbar, .tiled headerbar:backdrop,
   .maximized headerbar, .maximized headerbar:backdrop,

@@ -981,8 +981,7 @@ headerbar,
   }
 
   // Selectionmode
-  &.selection-mode,
-  &.titlebar.selection-mode {
+  &.selection-mode {
     color: $selected_fg_color;
     background-color: $selection_mode_bg;
     border-color: darken($selection_mode_bg, 4%);
