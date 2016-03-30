@@ -81,6 +81,7 @@ stage {
 StEntry {
   padding: 7px;
   caret-size: 1px;
+  caret-color: $fg_color;
   selection-background-color: $selected_bg_color;
   selected-color: $selected_fg_color;
   transition-duration: 300ms;
@@ -2302,11 +2303,17 @@ $legacy_icon_size: 24px;
 .lg-dialog {
 
   StEntry {
+    caret-color: $selected_fg_color;
     selection-background-color: $selected_bg_color;
     selected-color: $selected_fg_color;
 
     @include entry(osd);
-    &:focus { @include entry(osd-focus); }
+    &:focus {
+      @include entry(osd-focus);
+
+      selection-background-color: $selected_fg_color;
+      selected-color: $selected_bg_color;
+    }
   }
   .shell-link {
     color: $link_color;

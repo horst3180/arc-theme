@@ -69,6 +69,7 @@ stage {
 StEntry {
   padding: 7px;
   caret-size: 1px;
+  caret-color: #5c616c;
   selection-background-color: #5294E2;
   selected-color: #ffffff;
   transition-duration: 300ms;
@@ -1919,6 +1920,7 @@ StScrollBar {
     spacing: 4px; }
 
 .lg-dialog StEntry {
+  caret-color: #ffffff;
   selection-background-color: #5294E2;
   selected-color: #ffffff;
   color: #BAC3CF;
@@ -1929,7 +1931,9 @@ StScrollBar {
     color: #ffffff;
     background-color: #5294E2;
     border: 1px solid rgba(26, 28, 34, 0.35);
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05); }
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    selection-background-color: #ffffff;
+    selected-color: #5294E2; }
 
 .lg-dialog .shell-link {
   color: #2679db; }
