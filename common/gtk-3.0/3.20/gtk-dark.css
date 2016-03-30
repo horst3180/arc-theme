@@ -3559,16 +3559,16 @@ GtkListBox .h4 {
   color: #BAC3CF;
   font: bold;
   box-shadow: inset 0 -1px rgba(27, 29, 35, 0.95); }
-  #panel_window .menubar,
-  #panel_window .menubar > .menuitem {
+  #panel_window menubar,
+  #panel_window menubar > menuitem {
     background-color: transparent;
     color: #BAC3CF;
     font: bold; }
-  #panel_window .menubar .menuitem:disabled {
+  #panel_window menubar menuitem:disabled {
     color: rgba(186, 195, 207, 0.5); }
-    #panel_window .menubar .menuitem:disabled label {
+    #panel_window menubar menuitem:disabled label {
       color: inherit; }
-  #panel_window .menubar .menu .menuitem {
+  #panel_window menubar menu > menuitem {
     font: normal; }
 
 #login_window,
@@ -3642,7 +3642,7 @@ GtkListBox .h4 {
 #login_window #user_combobox {
   color: #D3DAE3;
   font: 13px; }
-  #login_window #user_combobox .menu {
+  #login_window #user_combobox menu {
     font: normal; }
 
 #user_image {

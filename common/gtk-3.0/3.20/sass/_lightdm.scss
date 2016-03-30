@@ -6,19 +6,19 @@
   box-shadow: inset 0 -1px darken($panel_bg, 7%);
 
   // the menubars/menus of the panel, i.e. indicators
-  .menubar,
-  .menubar > .menuitem {
+  menubar,
+  menubar > menuitem {
     background-color: transparent;
     color: $panel_fg;
     font: bold;
   }
 
-  .menubar .menuitem:disabled {
+  menubar menuitem:disabled {
     color: transparentize($panel_fg, 0.5);
 
     label { color: inherit; }
   }
-  .menubar .menu .menuitem { font: normal; }
+  menubar menu > menuitem { font: normal; }
 }
 
 // the login window
@@ -74,8 +74,7 @@
   color: $fg_color;
   font: 13px;
 
-  .menu { font: normal; }
-  .arrow {}
+  menu { font: normal; }
 }
 
 // the user's avatar box
@@ -83,9 +82,6 @@
   padding: 3px;
   border-radius: 2px;
 }
-
-// the border around the user's avatar box
-#user_image_border {}
 
 // the shutdown button
 #shutdown_button.button {
