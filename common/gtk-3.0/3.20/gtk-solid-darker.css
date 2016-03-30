@@ -840,15 +840,15 @@ toolbar, .inline-toolbar {
       border-width: 0 1px 0 0; }
     toolbar.osd.right, .osd.right.inline-toolbar {
       border-width: 0 0 0 1px; }
-  toolbar:not(.inline-toolbar):not(.osd) switch, .inline-toolbar:not(.inline-toolbar):not(.osd) switch,
-  toolbar:not(.inline-toolbar):not(.osd) scale, .inline-toolbar:not(.inline-toolbar):not(.osd) scale,
-  toolbar:not(.inline-toolbar):not(.osd) entry, .inline-toolbar:not(.inline-toolbar):not(.osd) entry,
-  toolbar:not(.inline-toolbar):not(.osd) spinbutton, .inline-toolbar:not(.inline-toolbar):not(.osd) spinbutton,
-  toolbar:not(.inline-toolbar):not(.osd) button, .inline-toolbar:not(.inline-toolbar):not(.osd) button {
+  toolbar:not(.inline-toolbar) switch, .inline-toolbar:not(.inline-toolbar) switch,
+  toolbar:not(.inline-toolbar) scale, .inline-toolbar:not(.inline-toolbar) scale,
+  toolbar:not(.inline-toolbar) entry, .inline-toolbar:not(.inline-toolbar) entry,
+  toolbar:not(.inline-toolbar) spinbutton, .inline-toolbar:not(.inline-toolbar) spinbutton,
+  toolbar:not(.inline-toolbar) button, .inline-toolbar:not(.inline-toolbar) button {
     margin-right: 1px;
     margin-bottom: 1px; }
-  toolbar:not(.inline-toolbar):not(.osd) .linked > button, .inline-toolbar:not(.inline-toolbar):not(.osd) .linked > button,
-  toolbar:not(.inline-toolbar):not(.osd) .linked > entry, .inline-toolbar:not(.inline-toolbar):not(.osd) .linked > entry {
+  toolbar:not(.inline-toolbar) .linked > button, .inline-toolbar:not(.inline-toolbar) .linked > button,
+  toolbar:not(.inline-toolbar) .linked > entry, .inline-toolbar:not(.inline-toolbar) .linked > entry {
     margin-right: 0; }
 
 .primary-toolbar {

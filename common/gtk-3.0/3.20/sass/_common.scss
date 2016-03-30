@@ -883,7 +883,7 @@ toolbar {
     &.right { border-width: 0 0 0 1px; }
   }
 
-  &:not(.inline-toolbar):not(.osd) {
+  &:not(.inline-toolbar) {
     switch,
     scale,
     entry,
