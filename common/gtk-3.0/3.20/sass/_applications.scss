@@ -278,6 +278,8 @@ workbench stack.titlebar {
   border: none;
 }
 
+editortweak .linked > entry.search:focus + .gb-linked-scroller { border-top-color: $selected_bg_color; }
+
 layouttab {
   background-color: $base_color;
 }
@@ -289,14 +291,6 @@ layout {
 
 eggsearchbar box.search-bar {
   border-bottom: 1px solid $borders_color;
-}
-
-perspectiveswitcher {
-  background: $bg_color;
-
-  button {
-
-  }
 }
 
 pillbox {

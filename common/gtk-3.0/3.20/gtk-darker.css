@@ -3134,6 +3134,9 @@ workbench stack.titlebar {
   padding: 0;
   border: none; }
 
+editortweak .linked > entry.search:focus + .gb-linked-scroller {
+  border-top-color: #5294E2; }
+
 layouttab {
   background-color: #ffffff; }
 
@@ -3143,9 +3146,6 @@ layout {
 
 eggsearchbar box.search-bar {
   border-bottom: 1px solid #dcdfe3; }
-
-perspectiveswitcher {
-  background: #F5F6F7; }
 
 pillbox {
   color: #ffffff;
