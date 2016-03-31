@@ -1367,6 +1367,8 @@ treeview.view {
   -GtkTreeView-expander-size: 16;
   border-left-color: rgba(92, 97, 108, 0.15);
   border-top-color: rgba(0, 0, 0, 0.1); }
+  treeview.view acceleditor > label {
+    background-color: #5294E2; }
   treeview.view:selected, treeview.view:selected:focus {
     border-radius: 0;
     border-left-color: #a9caf1;

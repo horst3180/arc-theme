@@ -1399,6 +1399,8 @@ treeview.view {
 
   rubberband { @extend rubberband; }                    // to avoid borders being overridden by the previously set props
 
+  acceleditor > label { background-color: $selected_bg_color; }
+
   &:selected {
     &, &:focus {
       border-radius: 0;
