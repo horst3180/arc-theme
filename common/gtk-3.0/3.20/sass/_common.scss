@@ -1031,8 +1031,6 @@ headerbar,
   }
 
   separator.titlebutton { @extend %header_separator; }
-
-  @extend %header_widgets;
 }
 
 .titlebar {
@@ -1040,6 +1038,8 @@ headerbar,
 }
 
 headerbar {
+  @extend %header_widgets;
+
   entry, button, separator {
     margin-top: 6px;
     margin-bottom: 6px;
