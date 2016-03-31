@@ -1490,6 +1490,20 @@ StScrollBar {
   }
 }
 
+#dashtodockContainer {
+  .app-well-app-running-dot {
+    background: none;
+    width: 28px;
+    height: 4px;
+  }
+
+  @each $var in 1, 2, 3, 4 {
+    .running#{$var} .app-well-app-running-dot {
+      background-image: url("common-assets/dash/running#{$var}.svg");
+    }
+  }
+}
+
 .show-apps {
 
   .overview-icon {
