@@ -499,6 +499,9 @@ button.documents-favorite:active:hover {
 .xfce4-panel.panel {
   background-color: $panel_bg;
 
+  text-shadow: none;
+  -gtk-icon-shadow: none;
+
   button.flat {
     color: $panel_fg;
     background-color: transparentize($panel_bg, 1);

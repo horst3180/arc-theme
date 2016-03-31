@@ -3262,7 +3262,9 @@ button.documents-favorite:active:hover {
   border-color: transparent; }
 
 .xfce4-panel.panel {
-  background-color: rgba(43, 46, 55, 0.95); }
+  background-color: rgba(43, 46, 55, 0.95);
+  text-shadow: none;
+  -gtk-icon-shadow: none; }
   .xfce4-panel.panel button.flat, .xfce4-panel.panel button.sidebar-button {
     color: #BAC3CF;
     background-color: rgba(43, 46, 55, 0);
