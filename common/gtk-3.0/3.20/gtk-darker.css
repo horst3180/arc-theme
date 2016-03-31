@@ -895,6 +895,7 @@ headerbar,
     border-color: rgba(38, 42, 51, 0.97); }
   headerbar:backdrop,
   .titlebar:backdrop:not(headerbar) {
+    transition: 200ms ease-out;
     color: rgba(207, 218, 231, 0.5);
     background-color: #323843; }
     .csd headerbar:backdrop,
@@ -2857,7 +2858,8 @@ decoration {
   box-shadow: 0 0 0 1px rgba(32, 35, 43, 0.97), 0 8px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 10px; }
   decoration:backdrop {
-    box-shadow: 0 0 0 1px rgba(32, 35, 43, 0.87), 0 8px 8px 0 transparent, 0 5px 5px 0 rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 0 0 1px rgba(32, 35, 43, 0.87), 0 8px 8px 0 transparent, 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+    transition: 200ms ease-out; }
   .fullscreen decoration,
   .tiled decoration {
     border-radius: 0; }

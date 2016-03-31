@@ -3,6 +3,7 @@
 }
 
 $ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$backdrop_transition: 200ms ease-out;
 $asset_suffix: if($variant=='dark', '-dark', ''); // use dark assets in dark variant
 $darker_asset_suffix: if($darker=='true', '-dark', $asset_suffix);
 
@@ -962,6 +963,8 @@ headerbar,
   }
 
   &:backdrop {
+    transition: $backdrop_transition;
+
     color: transparentize($header_fg, 0.3);
     background-color: opacify($header_bg_backdrop, 1);
 
@@ -3007,6 +3010,8 @@ decoration {
     box-shadow: 0 0 0 1px if($darker=='true' or $variant == 'dark', transparentize(darken($header_bg, 7%), 0.1), $_wm_border),
                 0 8px 8px 0 transparent,
                 0 5px 5px 0 if($variant == 'light', opacify($_wm_border, 0.1), transparentize($_wm_border, 0.2));
+
+    transition: $backdrop_transition;
   }
   .fullscreen &,
   .tiled & {
