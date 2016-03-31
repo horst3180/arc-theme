@@ -3198,6 +3198,9 @@ dockoverlayedge {
   dockoverlayedge.right-edge tab:checked {
     border-width: 1px 0; }
 
+.documents-scrolledwin.frame {
+  border-width: 0; }
+
 button.documents-load-more {
   border-width: 1px 0 0;
   border-radius: 0; }
@@ -3207,7 +3210,7 @@ button.documents-load-more {
   color: #ffffff;
   border-radius: 2px; }
 
-.documents-collection-icon {
+.documents-collection-icon, .photos-collection-icon {
   background-color: rgba(92, 97, 108, 0.3);
   border-radius: 2px; }
 
@@ -3215,31 +3218,32 @@ button.documents-favorite:active,
 button.documents-favorite:active:hover {
   color: #a9caf1; }
 
-.documents-entry-tag {
+.documents-entry-tag, .photos-entry-tag {
   color: #ffffff;
   background: #5294E2;
   border-radius: 2px;
   border-width: 0;
   margin: 2px;
   padding: 4px; }
-  .documents-entry-tag:hover {
+  .documents-entry-tag:hover, .photos-entry-tag:hover {
     color: #ffffff;
     background: #639fe5; }
-  .documents-entry-tag:active {
+  .documents-entry-tag:active, .photos-entry-tag:active {
     color: #ffffff;
     background: #4189df; }
-  toolbar .linked .documents-entry-tag button, .inline-toolbar .linked .documents-entry-tag button {
-    background: none;
-    border: none;
-    box-shadow: none;
-    -gtk-icon-shadow: none; }
-    toolbar .linked .documents-entry-tag button:hover, .inline-toolbar .linked .documents-entry-tag button:hover {
-      color: rgba(255, 255, 255, 0.7); }
 
 .content-view.document-page {
   border-style: solid;
   border-width: 3px 3px 6px 4px;
   border-image: url("assets/thumbnail-frame.png") 3 3 6 4; }
+
+.photos-fade-in {
+  opacity: 1.0;
+  transition: opacity 0.2s ease-out; }
+
+.photos-fade-out {
+  opacity: 0.0;
+  transition: opacity 0.2s ease-out; }
 
 .tr-workarea undershoot,
 .tr-workarea overshoot {

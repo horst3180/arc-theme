@@ -362,6 +362,8 @@ dockoverlayedge {
 //
 // Gnome Documents
 //
+.documents-scrolledwin.frame { border-width: 0; }
+
 button.documents-load-more {
   border-width: 1px 0 0;
   border-radius: 0;
@@ -399,21 +401,29 @@ button.documents-favorite:active:hover {
     color: $selected_fg_color;
     background: darken($selected_bg_color, 4%);
   }
-
-  toolbar .linked & button {
-    background: none;
-    border: none;
-    box-shadow: none;
-    -gtk-icon-shadow: none;
-
-    &:hover { color: transparentize($selected_fg_color, 0.3) }
-  }
 }
 
 .content-view.document-page {
   border-style: solid;
   border-width: 3px 3px 6px 4px;
   border-image: url("assets/thumbnail-frame.png") 3 3 6 4;
+}
+
+//
+// Gnome Photos
+//
+.photos-entry-tag { @extend .documents-entry-tag; }
+
+.photos-collection-icon { @extend .documents-collection-icon; }
+
+.photos-fade-in {
+    opacity: 1.0;
+    transition: opacity 0.2s ease-out;
+}
+
+.photos-fade-out {
+    opacity: 0.0;
+    transition: opacity 0.2s ease-out;
 }
 
 //
