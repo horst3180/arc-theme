@@ -645,11 +645,11 @@ toolbar.inline-toolbar toolbutton > button.flat, .inline-toolbar toolbutton > bu
   border-radius: 0;
   border-right-style: none; }
 
-.linked:not(.vertical) > entry:first-child, .inline-toolbar button:first-child, .linked:not(.vertical) > button:first-child, toolbar.inline-toolbar toolbutton:first-child > button.flat, .inline-toolbar toolbutton:first-child > button.flat, toolbar.inline-toolbar toolbutton:first-child > button.sidebar-button, .inline-toolbar toolbutton:first-child > button.sidebar-button, spinbutton:not(.vertical) button:first-child, spinbutton:not(.vertical) entry:first-child, combobox.linked button:nth-child(2):dir(rtl), .linked:not(.vertical) > combobox:first-child > box > button.combo, .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:first-child, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:first-child, .primary-toolbar .linked:not(.vertical).path-bar > button:first-child, headerbar .linked:not(.vertical).path-bar > button:first-child {
+.linked:not(.vertical) > entry:first-child, .inline-toolbar button:first-child, .linked:not(.vertical) > button:first-child, toolbar.inline-toolbar toolbutton:first-child > button.flat, .inline-toolbar toolbutton:first-child > button.flat, toolbar.inline-toolbar toolbutton:first-child > button.sidebar-button, .inline-toolbar toolbutton:first-child > button.sidebar-button, spinbutton:not(.vertical) button:first-child, spinbutton:not(.vertical) entry:first-child, .linked:not(.vertical) > combobox:first-child > box > button.combo, .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:first-child, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:first-child, .primary-toolbar .linked:not(.vertical).path-bar > button:first-child, headerbar .linked:not(.vertical).path-bar > button:first-child {
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px; }
 
-.linked:not(.vertical) > entry:last-child, .inline-toolbar button:last-child, .linked:not(.vertical) > button:last-child, toolbar.inline-toolbar toolbutton:last-child > button.flat, .inline-toolbar toolbutton:last-child > button.flat, toolbar.inline-toolbar toolbutton:last-child > button.sidebar-button, .inline-toolbar toolbutton:last-child > button.sidebar-button, spinbutton:not(.vertical) button:last-child, spinbutton:not(.vertical) entry:last-child, combobox.linked button:nth-child(2):dir(ltr), .linked:not(.vertical) > combobox:last-child > box > button.combo, .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:last-child, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:last-child, .primary-toolbar .linked:not(.vertical).path-bar > button:last-child, headerbar .linked:not(.vertical).path-bar > button:last-child {
+.linked:not(.vertical) > entry:last-child, .inline-toolbar button:last-child, .linked:not(.vertical) > button:last-child, toolbar.inline-toolbar toolbutton:last-child > button.flat, .inline-toolbar toolbutton:last-child > button.flat, toolbar.inline-toolbar toolbutton:last-child > button.sidebar-button, .inline-toolbar toolbutton:last-child > button.sidebar-button, spinbutton:not(.vertical) button:last-child, spinbutton:not(.vertical) entry:last-child, .linked:not(.vertical) > combobox:last-child > box > button.combo, .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:last-child, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:last-child, .primary-toolbar .linked:not(.vertical).path-bar > button:last-child, headerbar .linked:not(.vertical).path-bar > button:last-child {
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
   border-right-style: solid; }
@@ -1276,41 +1276,41 @@ window.csd > .titlebar:not(headerbar):backdrop {
 .primary-toolbar combobox:disabled, headerbar combobox:disabled {
   color: rgba(82, 93, 118, 0.2); }
 
-.primary-toolbar combobox.linked button, headerbar combobox.linked button {
+.primary-toolbar combobox > .linked > button.combo, headerbar combobox > .linked > button.combo {
   color: rgba(82, 93, 118, 0.8);
   border-color: rgba(82, 93, 118, 0.1);
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.9));
   background-color: transparent; }
-  .primary-toolbar combobox.linked button image, headerbar combobox.linked button image, .primary-toolbar combobox.linked button image:hover, headerbar combobox.linked button image:hover {
+  .primary-toolbar combobox > .linked > button.combo image, headerbar combobox > .linked > button.combo image, .primary-toolbar combobox > .linked > button.combo image:hover, headerbar combobox > .linked > button.combo image:hover {
     color: inherit; }
-  .primary-toolbar combobox.linked button:hover, headerbar combobox.linked button:hover {
+  .primary-toolbar combobox > .linked > button.combo:hover, headerbar combobox > .linked > button.combo:hover {
     color: #ffffff;
     border-color: #5294E2;
     background-image: linear-gradient(to bottom, #5294E2);
     box-shadow: none; }
-  .primary-toolbar combobox.linked button:disabled, headerbar combobox.linked button:disabled {
+  .primary-toolbar combobox > .linked > button.combo:disabled, headerbar combobox > .linked > button.combo:disabled {
     color: rgba(82, 93, 118, 0.35);
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.75)); }
 
-.primary-toolbar combobox.linked entry:dir(ltr), headerbar combobox.linked entry:dir(ltr) {
+.primary-toolbar combobox > .linked > entry.combo:dir(ltr), headerbar combobox > .linked > entry.combo:dir(ltr) {
   border-right-style: none; }
-  .primary-toolbar combobox.linked entry:dir(ltr):focus, headerbar combobox.linked entry:dir(ltr):focus {
+  .primary-toolbar combobox > .linked > entry.combo:dir(ltr):focus, headerbar combobox > .linked > entry.combo:dir(ltr):focus {
     box-shadow: none; }
-  .primary-toolbar combobox.linked entry:dir(ltr):focus, headerbar combobox.linked entry:dir(ltr):focus {
+  .primary-toolbar combobox > .linked > entry.combo:dir(ltr):focus, headerbar combobox > .linked > entry.combo:dir(ltr):focus {
     box-shadow: 1px 0 #5294E2; }
 
-.primary-toolbar combobox.linked entry:dir(rtl), headerbar combobox.linked entry:dir(rtl) {
+.primary-toolbar combobox > .linked > entry.combo:dir(rtl), headerbar combobox > .linked > entry.combo:dir(rtl) {
   border-left-style: none; }
-  .primary-toolbar combobox.linked entry:dir(rtl):focus, headerbar combobox.linked entry:dir(rtl):focus {
+  .primary-toolbar combobox > .linked > entry.combo:dir(rtl):focus, headerbar combobox > .linked > entry.combo:dir(rtl):focus {
     box-shadow: none; }
-  .primary-toolbar combobox.linked entry:dir(rtl):focus, headerbar combobox.linked entry:dir(rtl):focus {
+  .primary-toolbar combobox > .linked > entry.combo:dir(rtl):focus, headerbar combobox > .linked > entry.combo:dir(rtl):focus {
     box-shadow: -1px 0 #5294E2; }
 
-.primary-toolbar combobox.linked button.combo:dir(ltr), headerbar combobox.linked button.combo:dir(ltr), .primary-toolbar combobox.linked button.combo:dir(ltr):hover, headerbar combobox.linked button.combo:dir(ltr):hover, .primary-toolbar combobox.linked button.combo:dir(ltr):active, headerbar combobox.linked button.combo:dir(ltr):active, .primary-toolbar combobox.linked button.combo:dir(ltr):checked, headerbar combobox.linked button.combo:dir(ltr):checked, .primary-toolbar combobox.linked button.combo:dir(ltr):disabled, headerbar combobox.linked button.combo:dir(ltr):disabled {
+.primary-toolbar combobox > .linked > button.combo:dir(ltr), headerbar combobox > .linked > button.combo:dir(ltr), .primary-toolbar combobox > .linked > button.combo:dir(ltr):hover, headerbar combobox > .linked > button.combo:dir(ltr):hover, .primary-toolbar combobox > .linked > button.combo:dir(ltr):active, headerbar combobox > .linked > button.combo:dir(ltr):active, .primary-toolbar combobox > .linked > button.combo:dir(ltr):checked, headerbar combobox > .linked > button.combo:dir(ltr):checked, .primary-toolbar combobox > .linked > button.combo:dir(ltr):disabled, headerbar combobox > .linked > button.combo:dir(ltr):disabled {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
-.primary-toolbar combobox.linked button.combo:dir(rtl), headerbar combobox.linked button.combo:dir(rtl), .primary-toolbar combobox.linked button.combo:dir(rtl):hover, headerbar combobox.linked button.combo:dir(rtl):hover, .primary-toolbar combobox.linked button.combo:dir(rtl):active, headerbar combobox.linked button.combo:dir(rtl):active, .primary-toolbar combobox.linked button.combo:dir(rtl):checked, headerbar combobox.linked button.combo:dir(rtl):checked, .primary-toolbar combobox.linked button.combo:dir(rtl):disabled, headerbar combobox.linked button.combo:dir(rtl):disabled {
+.primary-toolbar combobox > .linked > button.combo:dir(rtl), headerbar combobox > .linked > button.combo:dir(rtl), .primary-toolbar combobox > .linked > button.combo:dir(rtl):hover, headerbar combobox > .linked > button.combo:dir(rtl):hover, .primary-toolbar combobox > .linked > button.combo:dir(rtl):active, headerbar combobox > .linked > button.combo:dir(rtl):active, .primary-toolbar combobox > .linked > button.combo:dir(rtl):checked, headerbar combobox > .linked > button.combo:dir(rtl):checked, .primary-toolbar combobox > .linked > button.combo:dir(rtl):disabled, headerbar combobox > .linked > button.combo:dir(rtl):disabled {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 

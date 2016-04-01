@@ -839,13 +839,6 @@ combobox {
 
   &:drop(active) button.combo { @extend button:drop(active); }
 
-  &.linked {
-    button:nth-child(2) {
-      &:dir(ltr) { @extend %linked:last-child; }
-      &:dir(rtl) { @extend %linked:first-child; }
-    }
-  }
-
   .linked:not(.vertical) > & > box > button.combo {
     // the combobox is a composite widget so the way we do button linking doesn't
     // work, special case needed.
@@ -1190,18 +1183,18 @@ headerbar {
   }
 
   // Linking stuff
+
+  // Disconnect linked buttons
   .linked:not(.vertical):not(.path-bar):not(.stack-switcher) {
     button:not(:last-child):not(:only-child) { margin-right: 1px; }
   }
 
   // Reset buttons
-  .linked:not(.vertical):not(.path-bar) > button,
-  .linked:not(.vertical):not(.path-bar) > button:hover,
-  .linked:not(.vertical):not(.path-bar) > button:active,
-  .linked:not(.vertical):not(.path-bar) > button:checked,
-  .linked:not(.vertical):not(.path-bar) > button:disabled {
-    border-radius: 3px;
-    border-style: solid;
+  .linked:not(.vertical):not(.path-bar) > button {
+    &, &:hover, &:active, &:checked, &:disabled {
+      border-radius: 3px;
+      border-style: solid;
+    }
   }
   .linked:not(.vertical):not(.path-bar), .linked:not(.vertical).path-bar {
     > button:hover:not(:checked):not(:active):not(:only-child),
@@ -1288,13 +1281,14 @@ headerbar {
   combobox {
     &:disabled { color: transparentize($header_fg, 0.6); }
 
-    &.linked button {
+    > .linked > button.combo {
       @include entry(header-normal);
 
       &:hover { @include entry(header-focus); box-shadow: none; }
       &:disabled { @include entry(header-insensitive); }
     }
-    &.linked entry {
+
+    > .linked > entry.combo {
       &:dir(ltr) {
         border-right-style: none;
 
@@ -1308,7 +1302,7 @@ headerbar {
         @if $variant=='light' and $darker=='false' { &:focus { box-shadow: -1px 0 $selected_bg_color; } }
       }
     }
-    &.linked button.combo {
+    > .linked > button.combo {
       &:dir(ltr) {
         &, &:hover, &:active, &:checked, &:disabled {
           border-top-left-radius: 0;
