@@ -409,6 +409,8 @@ button {
         padding-right: 8px;
       }
     }
+
+    &.popup { padding-right: 8px; padding-left: 8px; }
   }
 
   &:drop(active) {

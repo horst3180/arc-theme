@@ -302,6 +302,9 @@ button {
     button.text-button.image-button label:only-child {
       padding-left: 8px;
       padding-right: 8px; }
+    button.text-button.image-button.popup {
+      padding-right: 8px;
+      padding-left: 8px; }
   button:drop(active), combobox:drop(active) button.combo {
     color: #F08437;
     border-color: #F08437;
