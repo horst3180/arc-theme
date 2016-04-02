@@ -1330,22 +1330,22 @@ window.csd > .titlebar:not(headerbar):backdrop {
   opacity: 0.75; }
 
 .primary-toolbar scale slider, headerbar scale slider {
-  background-image: linear-gradient(to bottom, #fbfbfc);
+  background-color: #fbfbfc;
   border-color: rgba(82, 93, 118, 0.3); }
   .primary-toolbar scale slider:hover, headerbar scale slider:hover {
-    background-image: linear-gradient(to bottom, white);
+    background-color: white;
     border-color: rgba(82, 93, 118, 0.3); }
   .primary-toolbar scale slider:active, headerbar scale slider:active {
-    background-image: linear-gradient(to bottom, #5294E2);
+    background-color: #5294E2;
     border-color: #5294E2; }
   .primary-toolbar scale slider:disabled, headerbar scale slider:disabled {
-    background-image: linear-gradient(to bottom, #f5f5f7);
+    background-color: #f5f5f7;
     border-color: rgba(82, 93, 118, 0.3); }
 
 .primary-toolbar scale trough, headerbar scale trough {
-  background-image: linear-gradient(to bottom, rgba(82, 93, 118, 0.15)); }
+  background-color: rgba(82, 93, 118, 0.15); }
   .primary-toolbar scale trough:disabled, headerbar scale trough:disabled {
-    background-image: linear-gradient(to bottom, rgba(82, 93, 118, 0.1)); }
+    background-color: rgba(82, 93, 118, 0.1); }
 
 .path-bar button.text-button, .path-bar button.image-button, .path-bar button {
   padding-left: 6px;
@@ -2049,132 +2049,152 @@ radio {
     margin: 0; }
 
 scale {
-  min-height: 9px;
-  min-width: 9px;
-  padding: 5px; }
+  min-height: 10px;
+  min-width: 10px; }
+  scale.horizontal {
+    padding: 6px 0; }
+    scale.horizontal trough {
+      padding: 0 7px; }
+    scale.horizontal highlight, scale.horizontal fill {
+      margin: 0 -7px; }
+  scale.vertical {
+    padding: 0 6px; }
+    scale.vertical trough {
+      padding: 7px 0; }
+    scale.vertical highlight, scale.vertical fill {
+      margin: -7px 0; }
+  scale slider {
+    min-height: 15px;
+    min-width: 15px;
+    margin: -6px; }
+  scale.fine-tune.horizontal {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    min-height: 15px; }
+  scale.fine-tune.vertical {
+    padding-left: 4px;
+    padding-right: 4px;
+    min-width: 15px; }
+  scale.fine-tune slider {
+    margin: -4px; }
+  scale.fine-tune fill,
+  scale.fine-tune highlight,
+  scale.fine-tune trough {
+    border-radius: 5px;
+    -gtk-outline-radius: 7px; }
+  scale trough {
+    outline-offset: 2px;
+    -gtk-outline-radius: 4.5px;
+    border-radius: 2.5px;
+    background-color: #cfd6e6; }
+    scale trough:disabled {
+      background-color: rgba(207, 214, 230, 0.55); }
+    .osd scale trough {
+      background-color: #454a59; }
+      .osd scale trough highlight {
+        background-color: #5294E2; }
+    row:selected scale trough,
+    infobar scale trough {
+      background-color: rgba(0, 0, 0, 0.2); }
+      row:selected scale trough highlight,
+      infobar scale trough highlight {
+        background-color: #ffffff; }
+        row:selected scale trough highlight:disabled,
+        infobar scale trough highlight:disabled {
+          background-color: #b1cff2; }
+      row:selected scale trough:disabled,
+      infobar scale trough:disabled {
+        background-color: rgba(0, 0, 0, 0.1); }
+  scale highlight {
+    border-radius: 2.5px;
+    background-color: #5294E2; }
+    scale highlight:disabled {
+      background-color: rgba(82, 148, 226, 0.55); }
+  scale fill {
+    border-radius: 2.5px;
+    background-color: rgba(82, 148, 226, 0.5); }
+    scale fill:disabled {
+      background-color: transparent; }
+  scale slider {
+    background-color: #fbfbfc;
+    border: 1px solid rgba(123, 142, 186, 0.5);
+    border-radius: 100%;
+    transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition-property: background, border; }
+    scale slider:hover {
+      background-color: white; }
+    scale slider:active {
+      background-clip: border-box;
+      background-color: #5294E2;
+      border-color: #5294E2; }
+    scale slider:disabled {
+      background-color: #fbfbfb;
+      border-color: rgba(123, 142, 186, 0.3); }
+    row:selected scale slider,
+    infobar scale slider {
+      background-clip: border-box;
+      background-color: #ffffff;
+      border-color: #ffffff; }
+      row:selected scale slider:hover,
+      infobar scale slider:hover {
+        background-color: #e5effb;
+        border-color: #e5effb; }
+      row:selected scale slider:active,
+      infobar scale slider:active {
+        background-color: #a9caf1;
+        border-color: #a9caf1; }
+      row:selected scale slider:disabled,
+      infobar scale slider:disabled {
+        background-color: #b1cff2;
+        border-color: #b1cff2; }
+    .osd scale slider {
+      background-clip: border-box;
+      background-color: #5294E2;
+      border-color: #5294E2; }
+      .osd scale slider:hover {
+        background-color: #7eafe9;
+        border-color: #7eafe9; }
+      .osd scale slider:active {
+        background-color: #2679db;
+        border-color: #2679db; }
   scale value {
     color: alpha(currentColor,0.4); }
   scale marks {
     color: alpha(currentColor,0.4); }
     scale marks.top {
-      margin-bottom: -2px;
-      margin-top: 2px; }
+      margin-bottom: 1px;
+      margin-top: -4px; }
     scale marks.bottom {
-      margin-top: -2px;
-      margin-bottom: 2px; }
+      margin-top: 1px;
+      margin-bottom: -4px; }
     scale marks.top {
-      margin-right: -2px;
-      margin-left: 2px; }
+      margin-right: 1px;
+      margin-left: -4px; }
     scale marks.bottom {
-      margin-left: -2px;
-      margin-right: 2px; }
-  scale.fine-tune marks {
-    color: alpha(currentColor,0.4); }
-    scale.fine-tune marks.top {
-      margin-bottom: -4px;
-      margin-top: 4px; }
-    scale.fine-tune marks.bottom {
-      margin-top: -4px;
-      margin-bottom: 4px; }
-    scale.fine-tune marks.top {
-      margin-right: -4px;
-      margin-left: 4px; }
-    scale.fine-tune marks.bottom {
-      margin-left: -4px;
-      margin-right: 4px; }
+      margin-left: 1px;
+      margin-right: -4px; }
+  scale.fine-tune marks.top {
+    margin-bottom: 0px;
+    margin-top: -2px; }
+  scale.fine-tune marks.bottom {
+    margin-top: 0px;
+    margin-bottom: -2px; }
+  scale.fine-tune marks.top {
+    margin-right: 0px;
+    margin-left: -2px; }
+  scale.fine-tune marks.bottom {
+    margin-left: 0px;
+    margin-right: -2px; }
   scale.horizontal indicator {
     min-height: 3px;
     min-width: 1px; }
+  scale.horizontal.fine-tune indicator {
+    min-height: 2px; }
   scale.vertical indicator {
     min-height: 1px;
     min-width: 3px; }
-  scale.fine-tune {
-    padding: 3px; }
-    scale.fine-tune trough, scale.fine-tune fill, scale.fine-tune highlight {
-      border-radius: 5px; }
-    scale.fine-tune slider {
-      margin: -4px; }
-  scale trough, scale fill, scale highlight {
-    border-radius: 2.5px; }
-  scale slider {
-    min-width: 15px;
-    min-height: 15px;
-    margin: -6px;
-    background-clip: border-box;
-    background-image: linear-gradient(to bottom, #fbfbfc);
-    border: 1px solid rgba(123, 142, 186, 0.5);
-    border-radius: 50%;
-    box-shadow: none; }
-    scale slider:hover {
-      background-image: linear-gradient(to bottom, white);
-      border-color: rgba(123, 142, 186, 0.5); }
-    scale slider:disabled {
-      background-image: linear-gradient(to bottom, #fbfbfb);
-      border-color: rgba(123, 142, 186, 0.3); }
-    scale slider:active {
-      background-image: linear-gradient(to bottom, #5294E2);
-      border-color: #5294E2; }
-    .osd scale slider {
-      min-width: 11px;
-      min-height: 11px;
-      margin: -4px;
-      background-image: linear-gradient(to bottom, #5294E2);
-      border-color: #5294E2; }
-      .osd scale slider:hover {
-        background-image: linear-gradient(to bottom, #7eafe9);
-        border-color: #7eafe9; }
-      .osd scale slider:active {
-        background-image: linear-gradient(to bottom, #2679db);
-        border-color: #2679db; }
-    row:selected scale slider,
-    infobar scale slider {
-      background-image: linear-gradient(to bottom, #ffffff);
-      border-color: #ffffff; }
-      row:selected scale slider:hover,
-      infobar scale slider:hover {
-        background-image: linear-gradient(to bottom, #e5effb);
-        border-color: #e5effb; }
-      row:selected scale slider:active,
-      infobar scale slider:active {
-        background-image: linear-gradient(to bottom, #a9caf1);
-        border-color: #a9caf1; }
-      row:selected scale slider:disabled,
-      infobar scale slider:disabled {
-        background-image: linear-gradient(to bottom, #b1cff2);
-        border-color: #b1cff2; }
-  scale trough {
-    outline-offset: 2px;
-    -gtk-outline-radius: 2px;
-    margin: 5px;
-    border: none;
-    background-image: linear-gradient(to bottom, #cfd6e6); }
-    scale trough highlight {
-      background-image: linear-gradient(to bottom, #5294E2); }
-      scale trough highlight:disabled {
-        background-image: linear-gradient(to bottom, rgba(82, 148, 226, 0.55)); }
-    scale trough fill {
-      background: none;
-      background-color: rgba(82, 148, 226, 0.5); }
-    scale trough:disabled {
-      background-image: linear-gradient(to bottom, rgba(207, 214, 230, 0.55)); }
-    .osd scale trough {
-      background-image: linear-gradient(to bottom, #454a59);
-      outline-color: rgba(186, 195, 207, 0.2); }
-      .osd scale trough highlight {
-        background-image: none;
-        background-image: linear-gradient(to bottom, #5294E2); }
-    row:selected scale trough,
-    infobar scale trough {
-      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2)); }
-      row:selected scale trough highlight,
-      infobar scale trough highlight {
-        background-image: linear-gradient(to bottom, #ffffff); }
-        row:selected scale trough highlight:disabled,
-        infobar scale trough highlight:disabled {
-          background-image: linear-gradient(to bottom, #b1cff2); }
-      row:selected scale trough:disabled,
-      infobar scale trough:disabled {
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1)); }
+  scale.vertical.fine-tune indicator {
+    min-width: 2px; }
 
 progressbar {
   padding: 0;

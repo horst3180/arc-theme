@@ -323,12 +323,11 @@ $_dot_color: $selected_bg_color;
   }
 }
 
+  $button_transition: all 200ms $ease-out-quad;
 button {
-  $_button_transition: all 200ms $ease-out-quad;
-
   min-height: 22px;
   min-width: 20px;
-  transition: $_button_transition;
+  transition: $button_transition;
   border: 1px solid;
   border-radius: 3px;
   padding: 2px 6px;
@@ -346,10 +345,10 @@ button {
     transition: none;
 
     &:hover {
-      transition: $_button_transition;
+      transition: $button_transition;
       transition-duration: 350ms;
 
-      &:active { transition: $_button_transition; }
+      &:active { transition: $button_transition; }
     }
   }
 
@@ -1341,26 +1340,26 @@ headerbar {
       $_slider_border: if($variant=='light' and $darker=='false', opacify($header_button_border, 0.2), opacify($header_button_border, 0.3));
       $_slider_bg: if($variant=='light' and $darker=='false', opacify($header_button_bg,1), lighten(opacify($header_bg,1), 10%));
 
-      background-image: linear-gradient(to bottom, $_slider_bg);
+      background-color: $_slider_bg;
       border-color: $_slider_border;
 
       &:hover {
-        background-image: linear-gradient(to bottom, lighten($_slider_bg, 5%));
+        background-color: lighten($_slider_bg, 5%);
         border-color: $_slider_border;
       }
       &:active {
-        background-image: linear-gradient(to bottom, $selected_bg_color);
+        background-color: $selected_bg_color;
         border-color: $selected_bg_color;
       }
       &:disabled {
-        background-image: linear-gradient(to bottom, mix($_slider_bg, $header_bg, 70%));
+        background-color: mix($_slider_bg, $header_bg, 70%);
         border-color: $_slider_border;
       }
     }
     trough {
-      background-image: linear-gradient(to bottom, $_trough_bg);
+      background-color: $_trough_bg;
 
-      &:disabled { background-image: linear-gradient(to bottom, if($variant=='light' and $darker=='false', transparentize($_trough_bg, 0.05), transparentize($_trough_bg, 0.1))); }
+      &:disabled { background-color: if($variant=='light' and $darker=='false', transparentize($_trough_bg, 0.05), transparentize($_trough_bg, 0.1)); }
     }
   }
 }
@@ -2052,11 +2051,176 @@ radio {
 //
 scale {
   $_marks_length: 3px;
-  $_marks_margin: -2px;
+  $_marks_distance: 1px;
 
-  min-height: 9px;
-  min-width: 9px;
-  padding: 5px;
+  min-height: 10px;
+  min-width: 10px;
+
+  &.horizontal {
+    padding: 6px 0;
+
+    trough { padding: 0 7px; }
+    highlight, fill { margin: 0 -7px; }
+  }
+  &.vertical {
+    padding: 0 6px;
+
+    trough { padding: 7px 0; }
+    highlight, fill { margin: -7px 0; }
+  }
+
+  // The slider is inside the trough, negative margin to make it bigger
+  slider {
+    min-height: 15px;
+    min-width: 15px;
+    margin: -6px;
+  }
+
+  // Click-and-hold the slider to activate
+  &.fine-tune {
+    &.horizontal {
+      padding-top: 4px;
+      padding-bottom: 4px;
+      min-height: 15px;
+    }
+
+    &.vertical {
+      padding-left: 4px;
+      padding-right: 4px;
+      min-width: 15px;
+    }
+
+    // Make the trough grow in fine-tune mode
+    slider { margin: -4px; }
+
+    fill,
+    highlight,
+    trough {
+      border-radius: 5px;
+      -gtk-outline-radius: 7px;
+    }
+  }
+
+  // Trough
+  trough {
+    $_scale_trough_bg: if($variant == 'light', $button_border, darken($bg_color, 5%));
+
+    outline-offset: 2px;
+    -gtk-outline-radius: 4.5px;
+
+    border-radius: 2.5px;
+    background-color: $_scale_trough_bg;
+
+    &:disabled { background-color: transparentize($_scale_trough_bg, 0.45); }
+
+    //OSD troughs
+    .osd & {
+      background-color: lighten($osd_bg_color, 7%);
+
+      highlight {
+        background-color: $selected_bg_color;
+
+        &:disabled {  }
+      }
+
+      &:disabled {  }
+    }
+
+    // Troughs in selected list-rows and infobars
+    row:selected &,
+    infobar & {
+      background-color: transparentize(black, 0.8);
+
+      highlight {
+        background-color: $selected_fg_color;
+
+        &:disabled { background-color: mix($selected_fg_color, $selected_bg_color, 55%); }
+      }
+
+      &:disabled { background-color: transparentize(black, 0.9); }
+    }
+  }
+
+  // The colored part of trough
+  highlight {
+    border-radius: 2.5px;
+    background-color: $selected_bg_color;
+
+    &:disabled { background-color: transparentize($selected_bg_color, 0.45); }
+  }
+
+  // this is another differently styled part of the trough, the most relevant use case is for example
+  // in media player to indicate how much video stream as been cached
+  fill {
+    border-radius: 2.5px;
+    background-color: transparentize($selected_bg_color, 0.5);
+
+    &:disabled { background-color: transparent; }
+  }
+
+  slider {
+    $_slider_border: if($variant=='light', transparentize(darken($button_border,25%), 0.5), darken($button_border,2%));
+
+    background-color: $button_bg;
+    border: 1px solid $_slider_border;
+    border-radius: 100%;
+
+    transition: $button_transition;
+    transition-property: background, border;
+
+    &:hover { background-color: lighten($button_bg, 5%); }
+
+    &:active {
+      background-clip: border-box;
+      background-color: $selected_bg_color;
+      border-color: $selected_bg_color;
+    }
+
+    &:disabled {
+      background-color: mix($entry_bg, $bg_color, 55%);
+      border-color: transparentize($_slider_border, 0.2);
+    }
+
+    // Selected list-row and infobar sliders
+    row:selected &,
+    infobar & {
+      background-clip: border-box;
+      background-color: $selected_fg_color;
+      border-color: $selected_fg_color;
+
+      &:hover {
+        background-color: mix($selected_fg_color, $selected_bg_color, 85%);
+        border-color: mix($selected_fg_color, $selected_bg_color, 85%);
+      }
+      &:active {
+        background-color: mix($selected_fg_color, $selected_bg_color, 50%);
+        border-color: mix($selected_fg_color, $selected_bg_color, 50%);
+      }
+      &:disabled{
+        background-color: mix($selected_fg_color, $selected_bg_color, 55%);
+        border-color: mix($selected_fg_color, $selected_bg_color, 55%);
+      }
+    }
+
+    // OSD sliders
+    .osd & {
+      background-clip: border-box;
+      background-color: $selected_bg_color;
+      border-color: $selected_bg_color;
+
+      &:hover {
+        background-color: lighten($selected_bg_color, 10%);
+        border-color: lighten($selected_bg_color, 10%)
+      }
+
+      &:active {
+        background-color: darken($selected_bg_color, 10%);
+        border-color: darken($selected_bg_color, 10%);
+      }
+
+      &:disabled {  }
+    }
+  }
 
   value { color: gtkalpha(currentColor, 0.4); }
 
@@ -2068,158 +2232,41 @@ scale {
                                                      (top, left, right),
                                                      (bottom, right, left) {
       &.#{$marks_class} {
-        margin-#{$marks_margin}: $_marks_margin;
-        margin-#{$marks_pos}: -$_marks_margin;
+        margin-#{$marks_margin}: $_marks_distance;
+        margin-#{$marks_pos}: -($_marks_distance + $_marks_length);
       }
     }
   }
 
   &.fine-tune marks {
-    color: gtkalpha(currentColor, 0.4);
-
     @each $marks_class, $marks_pos, $marks_margin in (top, top, bottom),
                                                      (bottom, bottom, top),
                                                      (top, left, right),
                                                      (bottom, right, left) {
       &.#{$marks_class} {
-        margin-#{$marks_margin}: $_marks_margin - 2px;
-        margin-#{$marks_pos}: -$_marks_margin + 2px;
+        margin-#{$marks_margin}: ($_marks_distance - 1px);
+        margin-#{$marks_pos}: -($_marks_distance + $_marks_length - 2px);
       }
     }
   }
+  &.horizontal {
+    indicator {
+      min-height: $_marks_length;
+      min-width: 1px;
+    }
 
-  &.horizontal indicator {
-    min-height: $_marks_length;
-    min-width: 1px;
+    &.fine-tune indicator { min-height: ($_marks_length - 1px); }
   }
-  &.vertical indicator {
-    min-height: 1px;
-    min-width: $_marks_length;
-  }
-
-  &.fine-tune {
-    padding: 3px;
-
-    trough, fill, highlight { border-radius: 5px; }
-
-    slider { margin: -4px; }
-  }
-
-  trough, fill, highlight {
-    border-radius: 2.5px;
-  }
-
-  slider {
-    $_slider_border: if($variant=='light', transparentize(darken($button_border,25%), 0.5), darken($button_border,2%));
-
-    min-width: 15px;
-    min-height: 15px;
-    margin: -6px;
-    background-clip: border-box;
-    background-image: linear-gradient(to bottom, $button_bg);
-    border: 1px solid $_slider_border;
-    border-radius: 50%;
-    box-shadow: none;
-
-    &:hover {
-    background-image: linear-gradient(to bottom, lighten($button_bg, 5%));
-    border-color: $_slider_border;
-    }
-    &:disabled {
-      background-image: linear-gradient(to bottom, mix($entry_bg, $bg_color, 55%));
-      border-color: transparentize($_slider_border, 0.2);
-    }
-    &:active {
-      background-image: linear-gradient(to bottom, $selected_bg_color);
-      border-color: $selected_bg_color;
-    }
-    //OSD sliders
-    .osd & {
-      min-width: 11px;
-      min-height: 11px;
-      margin: -4px;
-
-      background-image: linear-gradient(to bottom, $selected_bg_color);
-      border-color: $selected_bg_color;
-
-      &:hover {
-        background-image: linear-gradient(to bottom, lighten($selected_bg_color, 10%));
-        border-color: lighten($selected_bg_color, 10%)
-;
-      }
-      &:active {
-        background-image: linear-gradient(to bottom, darken($selected_bg_color, 10%));
-        border-color: darken($selected_bg_color, 10%);
-      }
-    }
-    //selected list-row and infobar sliders
-    row:selected &,
-    infobar & {
-      background-image: linear-gradient(to bottom, $selected_fg_color);
-      border-color: $selected_fg_color;
-
-      &:hover {
-        background-image: linear-gradient(to bottom, mix($selected_fg_color, $selected_bg_color, 85%));
-        border-color: mix($selected_fg_color, $selected_bg_color, 85%);
-      }
-      &:active {
-        background-image: linear-gradient(to bottom, mix($selected_fg_color, $selected_bg_color, 50%));
-        border-color: mix($selected_fg_color, $selected_bg_color, 50%);
-      }
-      &:disabled{
-        background-image: linear-gradient(to bottom, mix($selected_fg_color, $selected_bg_color, 55%));
-        border-color: mix($selected_fg_color, $selected_bg_color, 55%);
-      }
-    }
-  }
-  trough {
-    $_scale_trough_bg: if($variant == 'light', $button_border, darken($bg_color, 5%));
-
-    outline-offset: 2px;
-    -gtk-outline-radius: 2px;
-    margin: 5px;
-    border: none;
-    background-image: linear-gradient(to bottom, $_scale_trough_bg);
-    highlight {
-      background-image: linear-gradient(to bottom, $selected_bg_color);
-
-      &:disabled {
-        background-image: linear-gradient(to bottom, transparentize($selected_bg_color, 0.45));
-      }
-    }
-    fill {
-      background: none;
-      background-color: transparentize($selected_bg_color, 0.5);
-    }
-    &:disabled {
-      background-image: linear-gradient(to bottom, transparentize($_scale_trough_bg, 0.45));
+  &.vertical {
+    indicator {
+      min-height: 1px;
+      min-width: $_marks_length;
     }
 
-    //OSD troughs
-    .osd & {
-      background-image: linear-gradient(to bottom, lighten($osd_bg_color, 7%));
-      outline-color: transparentize($osd_fg_color, 0.8);
-
-      highlight {
-        background-image: none;
-        background-image: linear-gradient(to bottom, $selected_bg_color);
-      }
-      &:disabled {  }
-    }
-    // troughs in selected list-rows and infobars
-    row:selected &,
-    infobar & {
-      background-image: linear-gradient(to bottom, transparentize(black, 0.8));
-
-      highlight {
-        background-image: linear-gradient(to bottom, $selected_fg_color);
-
-        &:disabled { background-image: linear-gradient(to bottom, mix($selected_fg_color, $selected_bg_color, 55%)); }
-      }
-      &:disabled { background-image: linear-gradient(to bottom, transparentize(black, 0.9)); }
-    }
+    &.fine-tune indicator { min-width: ($_marks_length - 1px); }
   }
 }
+
 
 //
 // Progress bars
