@@ -264,7 +264,7 @@ StScrollBar {
   .popup-menu .popup-menu-content {
     padding: 1em 0em 1em 0em; }
   .popup-menu .popup-menu-item {
-    padding: 0.4em 1.75em;
+    padding: .4em 1.75em;
     spacing: 1em; }
     .popup-menu .popup-menu-item:active {
       color: #D3DAE3;
@@ -514,7 +514,7 @@ StScrollBar {
   color: #888; }
 
 .calendar {
-  padding: 0.4em 1.75em;
+  padding: .4em 1.75em;
   spacing-rows: 0px;
   spacing-columns: 0px; }
 
@@ -555,7 +555,7 @@ StScrollBar {
       background-image: url("common-assets/misc/calendar-arrow-left.svg"); }
 
 .datemenu-date-label {
-  padding: 0.4em 1.75em;
+  padding: .4em 1.75em;
   font-weight: bold;
   text-align: center;
   color: #D3DAE3;
@@ -900,8 +900,7 @@ StScrollBar {
 .menu-categories-box {
   padding: 10px 30px 10px 30px; }
 
-.menu-applications-inner-box,
-.menu-applications-outer-box {
+.menu-applications-inner-box, .menu-applications-outer-box {
   padding: 10px 10px 0 10px; }
 
 .menu-application-button {
@@ -1019,17 +1018,11 @@ StScrollBar {
   color: rgba(255, 255, 255, 0.6); }
   .window-list-item-box:hover {
     color: #ffffff; }
-  .window-list-item-box:active,
-  .window-list-item-box:checked,
-  .window-list-item-box:focus {
+  .window-list-item-box:active, .window-list-item-box:checked, .window-list-item-box:focus {
     color: #ffffff; }
-    .panel-bottom .window-list-item-box:active,
-    .panel-bottom .window-list-item-box:checked,
-    .panel-bottom .window-list-item-box:focus {
+    .panel-bottom .window-list-item-box:active, .panel-bottom .window-list-item-box:checked, .panel-bottom .window-list-item-box:focus {
       border-image: url("common-assets/panel/window-list-active-bottom.svg") 3 3 1 3; }
-    .panel-top .window-list-item-box:active,
-    .panel-top .window-list-item-box:checked,
-    .panel-top .window-list-item-box:focus {
+    .panel-top .window-list-item-box:active, .panel-top .window-list-item-box:checked, .panel-top .window-list-item-box:focus {
       border-image: url("common-assets/panel/window-list-active-top.svg") 3 3 3 1; }
 
 .window-list-item-demands-attention {
@@ -1074,7 +1067,7 @@ StScrollBar {
   width: 140px; }
 
 .sound-volume-menu-item {
-  padding: 0.4em 1.75em; }
+  padding: .4em 1.75em; }
   .sound-volume-menu-item StIcon {
     icon-size: 1.14em;
     padding-left: 8px;
@@ -1289,7 +1282,7 @@ StScrollBar {
   font-size: 48pt; }
 
 .notification-applet-padding {
-  padding: 0.5em 1em; }
+  padding: .5em 1em; }
 
 .notification-applet-container {
   max-height: 100px; }
