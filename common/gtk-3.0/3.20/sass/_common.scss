@@ -2053,20 +2053,18 @@ scale {
   $_marks_length: 3px;
   $_marks_distance: 1px;
 
-  min-height: 10px;
-  min-width: 10px;
+  min-height: 15px;
+  min-width: 15px;
+  padding: 3px;
 
   &.horizontal {
-    padding: 6px 0;
-
-    trough { padding: 0 7px; }
-    highlight, fill { margin: 0 -7px; }
+    trough { padding: 0 4px; }
+    highlight, fill { margin: 0 -4px; }
   }
-  &.vertical {
-    padding: 0 6px;
 
-    trough { padding: 7px 0; }
-    highlight, fill { margin: -7px 0; }
+  &.vertical {
+    trough { padding: 4px 0; }
+    highlight, fill { margin: -4px 0; }
   }
 
   // The slider is inside the trough, negative margin to make it bigger
@@ -2078,18 +2076,6 @@ scale {
 
   // Click-and-hold the slider to activate
   &.fine-tune {
-    &.horizontal {
-      padding-top: 4px;
-      padding-bottom: 4px;
-      min-height: 15px;
-    }
-
-    &.vertical {
-      padding-left: 4px;
-      padding-right: 4px;
-      min-width: 15px;
-    }
-
     // Make the trough grow in fine-tune mode
     slider { margin: -4px; }
 

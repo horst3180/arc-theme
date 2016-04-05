@@ -2045,32 +2045,21 @@ radio {
     margin: 0; }
 
 scale {
-  min-height: 10px;
-  min-width: 10px; }
-  scale.horizontal {
-    padding: 6px 0; }
-    scale.horizontal trough {
-      padding: 0 7px; }
-    scale.horizontal highlight, scale.horizontal fill {
-      margin: 0 -7px; }
-  scale.vertical {
-    padding: 0 6px; }
-    scale.vertical trough {
-      padding: 7px 0; }
-    scale.vertical highlight, scale.vertical fill {
-      margin: -7px 0; }
+  min-height: 15px;
+  min-width: 15px;
+  padding: 3px; }
+  scale.horizontal trough {
+    padding: 0 4px; }
+  scale.horizontal highlight, scale.horizontal fill {
+    margin: 0 -4px; }
+  scale.vertical trough {
+    padding: 4px 0; }
+  scale.vertical highlight, scale.vertical fill {
+    margin: -4px 0; }
   scale slider {
     min-height: 15px;
     min-width: 15px;
     margin: -6px; }
-  scale.fine-tune.horizontal {
-    padding-top: 4px;
-    padding-bottom: 4px;
-    min-height: 15px; }
-  scale.fine-tune.vertical {
-    padding-left: 4px;
-    padding-right: 4px;
-    min-width: 15px; }
   scale.fine-tune slider {
     margin: -4px; }
   scale.fine-tune fill,
