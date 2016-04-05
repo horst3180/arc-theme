@@ -87,6 +87,32 @@ textview {
   }
 }
 
+textview border {
+  background-color: mix($bg_color, $base_color, 50%);
+  background-image: image(transparentize(black, 0.8)); // HACK: the border node just draws background so,
+  background-repeat: no-repeat;                        // using a background-image to draw the border
+
+  &.bottom {
+    background-size: 100% 1px;
+    background-position: top;
+  }
+
+  &.top {
+    background-size: 100% 1px;
+    background-position: bottom;
+  }
+
+  &.left {
+    background-size: 1px 100%;
+    background-position: right;
+  }
+
+  &.right {
+    background-size: 1px 100%;
+    background-position: left;
+  }
+}
+
 iconview { @extend .view; }
 
 rubberband,
