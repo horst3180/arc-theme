@@ -2340,7 +2340,7 @@ GtkVolumeButton.button {
   background-color: transparent;
   background-image: none;
   background-color: rgba(47, 52, 63, 0);
-  border-width: rgba(47, 52, 63, 0);
+  border-color: rgba(47, 52, 63, 0);
   color: transparent;
   background-position: center;
   background-repeat: no-repeat; }
