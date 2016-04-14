@@ -555,12 +555,13 @@ $_dot_color: $selected_bg_color;
         + GtkComboBoxText > .the-button-in-the-combobox { border-#{$_border}-color: if($var=='light', $e_color, $e_border); }
       }
     }
+    > .button:active + .entry,
     > .button:checked + .entry { border-#{$_border}-color: if($var=='light', $selected_bg_color, $e_border); }
   }
   @if $button_rules=='true' {
     $_uncolored_button: '.button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action)';
 
-    > button + button { border-#{$_border}-style: none; }
+    > .button + .button { border-#{$_border}-style: none; }
 
     > #{$_uncolored_button}:hover:not(:only-child),
     > #{$_uncolored_button}:hover + #{$_uncolored_button} { box-shadow: inset if($vert=='false', 1px 0, 0 1px) $b_border; }
@@ -1166,7 +1167,7 @@ GtkComboBox {
 
   // Reset buttons
   .linked:not(.vertical):not(.path-bar) > .button {
-    &, &:hover, &:active, &:checked, &:disabled {
+    &, &:hover, &:active, &:checked, &:insensitive {
       border-radius: 3px;
       border-style: solid;
     }
