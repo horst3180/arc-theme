@@ -1762,85 +1762,122 @@ notebook {
   -GtkScrollbar-has-backward-stepper: false;
   -GtkScrollbar-has-forward-stepper: false; }
 
-scrollbar button {
+scrollbar button,
+.scrollbar button {
   border: none; }
 
-scrollbar.vertical button.down {
+scrollbar.vertical button.down,
+.scrollbar.vertical button.down {
   -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
 
-scrollbar.vertical button.up {
+scrollbar.vertical button.up,
+.scrollbar.vertical button.up {
   -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
 
-scrollbar.horizontal button.down {
+scrollbar.horizontal button.down,
+.scrollbar.horizontal button.down {
   -gtk-icon-source: -gtk-icontheme("pan-right-symbolic"); }
 
-scrollbar.horizontal button.up {
+scrollbar.horizontal button.up,
+.scrollbar.horizontal button.up {
   -gtk-icon-source: -gtk-icontheme("pan-left-symbolic"); }
 
-scrollbar.overlay-indicator:not(.dragging):not(.hovering) {
+scrollbar.overlay-indicator:not(.dragging):not(.hovering),
+.scrollbar.overlay-indicator:not(.dragging):not(.hovering) {
   opacity: 0.4; }
-  scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider {
+  scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider,
+  .scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider {
     margin: 0;
     background-color: #a5abb5;
     border: 1px solid rgba(0, 0, 0, 0.3);
     background-clip: padding-box; }
-  scrollbar.overlay-indicator:not(.dragging):not(.hovering) trough {
+  scrollbar.overlay-indicator:not(.dragging):not(.hovering) trough,
+  .scrollbar.overlay-indicator:not(.dragging):not(.hovering) trough {
     border-style: none;
     background-color: transparent; }
-  scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical slider {
+  scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical slider,
+  .scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical slider {
     min-width: 4px;
     margin-top: 2px;
     margin-bottom: 2px; }
-  scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal slider {
+  scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal slider,
+  .scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal slider {
     min-height: 4px;
     margin-left: 2px;
     margin-right: 2px; }
 
-scrollbar.overlay-indicator.dragging, scrollbar.overlay-indicator.hovering {
+scrollbar.overlay-indicator.dragging, scrollbar.overlay-indicator.hovering,
+.scrollbar.overlay-indicator.dragging,
+.scrollbar.overlay-indicator.hovering {
   opacity: 0.99; }
 
-scrollbar trough {
+scrollbar trough,
+.scrollbar trough {
   background-color: #3e434f;
   border: 1px none #2b2e39; }
 
-scrollbar slider {
+scrollbar slider,
+scrollbar .slider,
+.scrollbar slider,
+.scrollbar .slider {
   background-color: #767b87; }
-  scrollbar slider:hover {
+  scrollbar slider:hover,
+  scrollbar .slider:hover,
+  .scrollbar slider:hover,
+  .scrollbar .slider:hover {
     background-color: #676b78; }
-  scrollbar slider:hover:active {
+  scrollbar slider:hover:active,
+  scrollbar .slider:hover:active,
+  .scrollbar slider:hover:active,
+  .scrollbar .slider:hover:active {
     background-color: #5294E2; }
-  scrollbar slider:disabled {
+  scrollbar slider:disabled,
+  scrollbar .slider:disabled,
+  .scrollbar slider:disabled,
+  .scrollbar .slider:disabled {
     background-color: transparent; }
 
-scrollbar slider {
+scrollbar slider,
+scrollbar .slider,
+.scrollbar slider,
+.scrollbar .slider {
   border-radius: 100px;
   margin: 3px; }
 
-scrollbar.vertical.fine-tune slider {
+scrollbar.vertical.fine-tune slider,
+.scrollbar.vertical.fine-tune slider {
   min-width: 4px;
   margin: 4px; }
 
-scrollbar.vertical slider {
+scrollbar.vertical slider,
+.scrollbar.vertical slider {
   min-height: 42px;
   min-width: 6px;
   margin: 3px; }
 
-scrollbar.vertical trough:dir(ltr) {
+scrollbar.vertical trough:dir(ltr),
+.scrollbar.vertical trough:dir(ltr) {
   border-left-style: solid; }
 
-scrollbar.vertical trough:dir(rtl) {
+scrollbar.vertical trough:dir(rtl),
+.scrollbar.vertical trough:dir(rtl) {
   border-right-style: solid; }
 
-scrollbar.horizontal.fine-tune slider {
+scrollbar.horizontal.fine-tune slider,
+.scrollbar.horizontal.fine-tune slider {
   min-height: 4px;
   margin: 4px; }
 
-scrollbar.horizontal slider {
+scrollbar.horizontal slider,
+scrollbar.horizontal .slider,
+.scrollbar.horizontal slider,
+.scrollbar.horizontal .slider {
   min-height: 6px;
   min-width: 42px;
   margin-top: 3px; }
 
-scrollbar.horizontal trough {
+scrollbar.horizontal trough,
+.scrollbar.horizontal trough {
   border-top-style: solid; }
 
 switch {
