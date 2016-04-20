@@ -3809,10 +3809,6 @@ GtkListBox .h4 {
 
 .nautilus-window paned > separator {
   background-image: linear-gradient(to top, #2a2d37); }
-  .nautilus-window paned > separator:dir(ltr) {
-    margin-left: -1px; }
-  .nautilus-window paned > separator:dir(rtl) {
-    margin-right: -1px; }
 
 filechooser paned > separator {
   background-image: linear-gradient(to top, #2a2d37); }
@@ -3901,6 +3897,10 @@ filechooser.maximized placessidebar.sidebar,
     .nemo-window .sidebar .view.cell:selected, .nemo-window .sidebar iconview.cell:selected, .nemo-window .sidebar row.cell:selected {
       background-color: #5294E2;
       color: #ffffff; }
+    .nemo-window .sidebar .view.expander, .nemo-window .sidebar iconview.expander, .nemo-window .sidebar row.expander {
+      color: #787e8a; }
+      .nemo-window .sidebar .view.expander:hover, .nemo-window .sidebar iconview.expander:hover, .nemo-window .sidebar row.expander:hover {
+        color: #BAC3CF; }
   .nemo-window .sidebar separator {
     background-color: transparent; }
 

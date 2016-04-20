@@ -5,8 +5,10 @@
   paned > separator {
     background-image: linear-gradient(to top, $dark_sidebar_border);
 
-    &:dir(ltr) { margin-left: -1px; }
-    &:dir(rtl) { margin-right: -1px; }
+    @if $variant=='light' {
+      &:dir(ltr) { margin-left: -1px; }
+      &:dir(rtl) { margin-right: -1px; }
+    }
   }
 }
 
@@ -75,7 +77,6 @@ filechooser,
   &.maximized placessidebar.sidebar { background-color: opacify($dark_sidebar_bg, 1); }
 }
 
-
 .nemo-window {
   .sidebar {
     color: $dark_sidebar_fg;
@@ -88,6 +89,12 @@ filechooser,
       &.cell:selected {
         background-color: $selected_bg_color;
         color: $selected_fg_color;
+      }
+
+      &.expander {
+        color: mix($dark_sidebar_fg, $dark_sidebar_bg, 50%);
+
+        &:hover { color: $dark_sidebar_fg; }
       }
     }
 
