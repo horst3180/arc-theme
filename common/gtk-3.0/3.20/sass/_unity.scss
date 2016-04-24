@@ -109,17 +109,17 @@ UnityPanelWidget,
 .lightdm.button,
 .lightdm.button:hover,
 .lightdm.button:active,
-.lightdm.button:active:focused,
+.lightdm.button:active:focus,
 .lightdm.entry,
 .lightdm.entry:hover,
 .lightdm.entry:active,
-.lightdm.entry:active:focused {
+.lightdm.entry:active:focus {
   background-image: none;
   border-image: none;
 }
 
-.lightdm.button:focused,
-.lightdm.entry:focused {
+.lightdm.button:focus,
+.lightdm.entry:focus {
   border-color: transparentize(white, 0.9);
   border-width: 1px;
   border-style: solid;
