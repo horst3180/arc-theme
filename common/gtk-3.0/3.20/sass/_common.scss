@@ -1735,7 +1735,12 @@ notebook {
     border: 1px solid $borders_color;
 
     > header {
-      margin: -1px;  // ugly hack to hide the borders around the header
+      // ugly hack to hide the borders around the header
+      margin: -1px;
+      &.top { margin-bottom: 0; }
+      &.bottom { margin-top: 0; }
+      &.left { margin-right: 0; }
+      &.right { margin-left: 0; }
 
       &.top, &.bottom { padding-left: 0; padding-right: 0; }
       &.left, &.right { padding-top: 0; padding-bottom: 0; }
