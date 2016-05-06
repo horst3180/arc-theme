@@ -11,11 +11,11 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
-   width="52"
-   height="52"
+   width="104.00001"
+   height="104"
    id="svg2"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="corner-ripple-rtl.svg">
+   sodipodi:docname="corner-ripple.svg">
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -27,7 +27,16 @@
      inkscape:pageshadow="2"
      inkscape:window-width="640"
      inkscape:window-height="480"
-     id="namedview955" />
+     id="namedview955"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="2.3864854"
+     inkscape:cx="-38.639816"
+     inkscape:cy="27.143174"
+     inkscape:current-layer="svg2" />
   <defs
      id="defs4">
     <linearGradient
@@ -59,17 +68,18 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
-     transform="translate(0,-1000.3622)"
+     transform="translate(4.9999999e-6,-948.3622)"
      id="layer1">
     <path
-       d="M 52,0 A 52,52 0 1 1 -52,0 52,52 0 1 1 52,0 z"
+       d="M 52,0 A 52,52 0 1 1 -52,0 52,52 0 1 1 52,0 Z"
        transform="translate(52,1000.3622)"
        id="path2991"
-       style="fill:url(#radialGradient3863);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+       style="fill:url(#radialGradient3863);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:connector-curvature="0" />
   </g>
 </svg>

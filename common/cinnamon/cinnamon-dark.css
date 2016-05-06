@@ -699,12 +699,10 @@ StScrollBar {
   width: 60px; }
 
 .ripple-box {
-  width: 52px;
-  height: 52px;
-  background-image: url("common-assets/misc/corner-ripple-ltr.svg");
+  width: 104px;
+  height: 104px;
+  background-image: url("common-assets/misc/corner-ripple.svg");
   background-size: contain; }
-  .ripple-box:rtl {
-    background-image: url("common-assets/misc/corner-ripple-rtl.svg"); }
 
 .lightbox {
   background-color: rgba(0, 0, 0, 0.4); }
