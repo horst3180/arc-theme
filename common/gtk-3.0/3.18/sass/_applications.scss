@@ -185,7 +185,6 @@ NemoWindow {
   .primary-toolbar NemoPathBar.linked:not(.vertical):not(.path-bar) > .button:checked,
   .primary-toolbar NemoPathBar.linked:not(.vertical):not(.path-bar) > .button:insensitive {
     @extend %linked;
-    @extend %linked_button;
   }
 
   .primary-toolbar NemoPathBar.linked:not(.vertical):not(.path-bar) {

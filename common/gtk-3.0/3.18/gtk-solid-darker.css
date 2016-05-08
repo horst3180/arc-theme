@@ -624,8 +624,9 @@ GtkSearchEntry.entry {
 NemoWindow .primary-toolbar NemoPathBar.linked:not(.vertical):not(.path-bar) > .button:hover,
 NemoWindow .primary-toolbar NemoPathBar.linked:not(.vertical):not(.path-bar) > .button:active,
 NemoWindow .primary-toolbar NemoPathBar.linked:not(.vertical):not(.path-bar) > .button:checked,
-NemoWindow .primary-toolbar NemoPathBar.linked:not(.vertical):not(.path-bar) > .button:insensitive, .linked > GtkComboBox > .the-button-in-the-combobox:dir(ltr),
-.linked > GtkComboBoxText > .the-button-in-the-combobox:dir(ltr) {
+NemoWindow .primary-toolbar NemoPathBar.linked:not(.vertical):not(.path-bar) > .button:insensitive, .linked > GtkComboBox > .the-button-in-the-combobox:dir(ltr), .linked > GtkComboBox > .the-button-in-the-combobox:dir(rtl),
+.linked > GtkComboBoxText > .the-button-in-the-combobox:dir(ltr),
+.linked > GtkComboBoxText > .the-button-in-the-combobox:dir(rtl) {
   border-radius: 0;
   border-right-style: none; }
 
@@ -2606,7 +2607,8 @@ GtkVolumeButton.button {
   .titlebar .button.titlebutton.minimize:active {
     background-image: -gtk-scaled(url("assets/titlebutton-minimize-active-dark.png"), url("assets/titlebutton-minimize-active-dark@2.png")); }
 
-.view:selected, .view:selected:focus, .view:selected:hover, .label:selected, .label:selected:focus, .label:selected:hover, .grid-child:selected, .menuitem.button.flat:active, .menuitem.sidebar-button.button:active, .menuitem.button.flat:selected, .menuitem.sidebar-button.button:selected, .list-row:selected, .sidebar:selected, .sidebar .view:selected, GtkPlacesSidebar.sidebar .list-row.activatable:selected, GtkEntry.gb-command-bar-entry.entry.flat:selected, GtkEntry.gb-command-bar-entry.entry.flat:selected:focus, GtkFileChooserDialog GtkPlacesSidebar.sidebar .list-row.activatable:selected, GtkFileChooserDialog GtkPlacesSidebar.sidebar .list-row.activatable:selected:hover, GtkFileChooserDialog GtkPlacesSidebar.sidebar .has-open-popup:selected, GtkFileChooserDialog GtkPlacesSidebar.sidebar .list-row.activatable:active:hover, GtkFileChooserDialog GtkPlacesSidebar.sidebar .has-open-popup:active,
+.view:selected, .view:selected:focus, .view:selected:hover, .label:selected, .label:selected:focus, .label:selected:hover, .grid-child:selected, .menuitem.button.flat:active, .menuitem.sidebar-button.button:active, .menuitem.button.flat:selected, .menuitem.sidebar-button.button:selected, .list-row:selected, .sidebar:selected, .sidebar .view:selected, GtkPlacesSidebar.sidebar .list-row.activatable:selected, GtkEntry.gb-command-bar-entry.entry.flat:selected,
+GtkEntry.gb-command-bar-entry.entry.flat:focus:selected, GtkFileChooserDialog GtkPlacesSidebar.sidebar .list-row.activatable:selected, GtkFileChooserDialog GtkPlacesSidebar.sidebar .list-row.activatable:selected:hover, GtkFileChooserDialog GtkPlacesSidebar.sidebar .has-open-popup:selected, GtkFileChooserDialog GtkPlacesSidebar.sidebar .list-row.activatable:active:hover, GtkFileChooserDialog GtkPlacesSidebar.sidebar .has-open-popup:active,
 NautilusWindow GtkPlacesSidebar.sidebar .list-row.activatable:selected,
 NautilusWindow GtkPlacesSidebar.sidebar .list-row.activatable:selected:hover,
 NautilusWindow GtkPlacesSidebar.sidebar .has-open-popup:selected,
@@ -3986,7 +3988,7 @@ MarlinViewWindow .source-list.sidebar.view .scrollbar .slider, GeditFileBrowserW
 @define-color selected_bg_color #5294E2;
 @define-color selected_fg_color #ffffff;
 @define-color insensitive_bg_color #fbfbfc;
-@define-color insensitive_fg_color alpha(#5c616c,0.5);
+@define-color insensitive_fg_color alpha(#5c616c, 0.5);
 @define-color insensitive_base_color #ffffff;
 @define-color theme_unfocused_fg_color #5c616c;
 @define-color theme_unfocused_text_color #5c616c;
@@ -3999,12 +4001,12 @@ MarlinViewWindow .source-list.sidebar.view .scrollbar .slider, GeditFileBrowserW
 @define-color success_color #73d216;
 @define-color placeholder_text_color #A8A8A8;
 @define-color content_view_bg #ffffff;
-@define-color wm_title alpha(#cfdae7,0.8);
-@define-color wm_unfocused_title alpha(#cfdae7,0.5);
+@define-color wm_title alpha(#cfdae7, 0.8);
+@define-color wm_unfocused_title alpha(#cfdae7, 0.5);
 @define-color wm_bg #2f343f;
 @define-color wm_bg_unfocused #323843;
 @define-color wm_highlight #363b48;
-@define-color wm_shadow alpha(black,0.35);
+@define-color wm_shadow alpha(black, 0.35);
 @define-color wm_button_close_bg #cc575d;
 @define-color wm_button_close_hover_bg #d7787d;
 @define-color wm_button_close_active_bg #be3841;

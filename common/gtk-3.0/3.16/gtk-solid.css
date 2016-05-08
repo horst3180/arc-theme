@@ -549,7 +549,7 @@ GtkSearchEntry.entry {
   .inline-toolbar.toolbar GtkToolButton > .button.flat:dir(rtl), .inline-toolbar GtkToolButton > .button.flat:dir(rtl), .inline-toolbar.toolbar GtkToolButton:dir(rtl) > .button.flat, .inline-toolbar GtkToolButton:dir(rtl) > .button.flat, .osd .button:dir(rtl):hover, .osd .button:dir(rtl):active, .osd .button:dir(rtl):checked, .osd .button:dir(rtl):insensitive, .inline-toolbar .button:dir(rtl), .inline-toolbar .button:dir(rtl):backdrop, .linked > .button:dir(rtl),
   .linked > .button:dir(rtl):hover,
   .linked > .button:dir(rtl):active,
-  .linked > .button:dir(rtl):checked, GtkComboBox.combobox-entry .entry:dir(rtl), GtkComboBox.combobox-entry .button:dir(rtl), .primary-toolbar .linked.stack-switcher > .button:dir(rtl), .header-bar .linked.stack-switcher > .button:dir(rtl), .primary-toolbar .linked.path-bar > .button:dir(rtl), .header-bar .linked.path-bar > .button:dir(rtl), NemoWindow .primary-toolbar NemoPathBar.linked > .button:dir(rtl), .linked > GtkComboBox > .button:dir(ltr) {
+  .linked > .button:dir(rtl):checked, GtkComboBox.combobox-entry .entry:dir(rtl), GtkComboBox.combobox-entry .button:dir(rtl), .primary-toolbar .linked.stack-switcher > .button:dir(rtl), .header-bar .linked.stack-switcher > .button:dir(rtl), .primary-toolbar .linked.path-bar > .button:dir(rtl), .header-bar .linked.path-bar > .button:dir(rtl), NemoWindow .primary-toolbar NemoPathBar.linked > .button:dir(rtl), .linked > GtkComboBox > .button:dir(rtl) {
     border-radius: 0; }
 
 .osd .button:first-child:hover, .osd .button:first-child:active, .osd .button:first-child:checked, .osd .button:first-child:insensitive, .inline-toolbar .button:first-child, .linked > .button:first-child, .inline-toolbar.toolbar GtkToolButton:first-child > .button.flat, .inline-toolbar GtkToolButton:first-child > .button.flat, GtkComboBox.combobox-entry .entry:first-child, GtkComboBox.combobox-entry .button:first-child, .linked > GtkComboBox:first-child > .button, .primary-toolbar .linked.stack-switcher > .button:first-child, .header-bar .linked.stack-switcher > .button:first-child, .primary-toolbar .linked.path-bar > .button:first-child, .header-bar .linked.path-bar > .button:first-child, NemoWindow .primary-toolbar NemoPathBar.linked > .button:first-child {
@@ -2490,7 +2490,8 @@ GtkVolumeButton.button {
   .titlebar .button.titlebutton.minimize:active {
     background-image: -gtk-scaled(url("assets/titlebutton-minimize-active.png"), url("assets/titlebutton-minimize-active@2.png")); }
 
-.view:selected, .view:selected:focus, .view:selected:hover, .label:selected, .label:selected:focus, .label:selected:hover, .grid-child:selected, .menuitem.button.flat:active, .menuitem.button.flat:selected, .list-row:selected, GtkEntry.gb-command-bar-entry.entry.flat:selected, GtkEntry.gb-command-bar-entry.entry.flat:selected:focus {
+.view:selected, .view:selected:focus, .view:selected:hover, .label:selected, .label:selected:focus, .label:selected:hover, .grid-child:selected, .menuitem.button.flat:active, .menuitem.button.flat:selected, .list-row:selected, GtkEntry.gb-command-bar-entry.entry.flat:selected,
+GtkEntry.gb-command-bar-entry.entry.flat:focus:selected {
   background-image: none;
   background-color: #5294E2;
   color: #ffffff;
@@ -3831,7 +3832,7 @@ MarlinViewWindow .source-list.sidebar.view .scrollbar .slider, GeditFileBrowserW
 @define-color selected_bg_color #5294E2;
 @define-color selected_fg_color #ffffff;
 @define-color insensitive_bg_color #fbfbfc;
-@define-color insensitive_fg_color alpha(#5c616c,0.5);
+@define-color insensitive_fg_color alpha(#5c616c, 0.5);
 @define-color insensitive_base_color #ffffff;
 @define-color theme_unfocused_fg_color #5c616c;
 @define-color theme_unfocused_text_color #5c616c;
@@ -3844,12 +3845,12 @@ MarlinViewWindow .source-list.sidebar.view .scrollbar .slider, GeditFileBrowserW
 @define-color success_color #73d216;
 @define-color placeholder_text_color #A8A8A8;
 @define-color content_view_bg #ffffff;
-@define-color wm_title alpha(#525d76,0.8);
-@define-color wm_unfocused_title alpha(#525d76,0.5);
+@define-color wm_title alpha(#525d76, 0.8);
+@define-color wm_unfocused_title alpha(#525d76, 0.5);
 @define-color wm_bg #e7e8eb;
 @define-color wm_bg_unfocused #eff0f2;
 @define-color wm_highlight #eff0f2;
-@define-color wm_shadow alpha(black,0.35);
+@define-color wm_shadow alpha(black, 0.35);
 @define-color wm_button_close_bg #f46067;
 @define-color wm_button_close_hover_bg #f68086;
 @define-color wm_button_close_active_bg #f13039;
