@@ -274,13 +274,13 @@ pillbox {
   border-radius: 3px;
 }
 
-tabstrip {
+docktabstrip {
   padding: 0 6px;
 
   background-color: $bg_color;
   border-bottom: 1px solid $borders_color;
 
-  tab {
+  docktab {
     min-height: 28px;
     border: solid transparent;
     border-width: 0 1px;
@@ -307,7 +307,7 @@ dockpaned {
 dockoverlayedge {
   background-color: $bg_color;
 
-  tabstrip {
+  docktabstrip {
     padding: 0;
     border: none;
   }

@@ -257,7 +257,9 @@ entry {
 
   // error and warning style
   @each $e_type, $e_color in (warning, $warning_color),
-                             (error, $error_color) {
+                             (error, $error_color),
+                              // entry.search-missing for Gnome-Builder
+                             (search-missing, $error_color) {
     &.#{$e_type} {
       color: $selected_fg_color;
       border-color: if($variant=='light', $e_color, $entry_border);

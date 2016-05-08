@@ -202,6 +202,19 @@ entry {
     entry.error selection, entry.error selection:focus {
       background-color: #ffffff;
       color: #FC4138; }
+  entry.search-missing {
+    color: #ffffff;
+    border-color: #FC4138;
+    background-image: linear-gradient(to bottom, #fd8d88); }
+    entry.search-missing image {
+      color: #ffffff; }
+    entry.search-missing:focus {
+      color: #ffffff;
+      background-image: linear-gradient(to bottom, #FC4138);
+      box-shadow: none; }
+    entry.search-missing selection, entry.search-missing selection:focus {
+      background-color: #ffffff;
+      color: #FC4138; }
   entry:drop(active):focus, entry:drop(active) {
     border-color: #F08437;
     box-shadow: none; }
@@ -3345,19 +3358,19 @@ pillbox {
   background-color: #5294E2;
   border-radius: 3px; }
 
-tabstrip {
+docktabstrip {
   padding: 0 6px;
   background-color: #F5F6F7;
   border-bottom: 1px solid #dcdfe3; }
-  tabstrip tab {
+  docktabstrip docktab {
     min-height: 28px;
     border: solid transparent;
     border-width: 0 1px; }
-    tabstrip tab label {
+    docktabstrip docktab label {
       opacity: 0.5; }
-    tabstrip tab:checked label, tabstrip tab:hover label {
+    docktabstrip docktab:checked label, docktabstrip docktab:hover label {
       opacity: 1; }
-    tabstrip tab:checked {
+    docktabstrip docktab:checked {
       border-color: #dcdfe3;
       background-color: #ffffff; }
 
@@ -3370,7 +3383,7 @@ dockpaned {
 
 dockoverlayedge {
   background-color: #F5F6F7; }
-  dockoverlayedge tabstrip {
+  dockoverlayedge docktabstrip {
     padding: 0;
     border: none; }
   dockoverlayedge.left-edge tab:checked,
