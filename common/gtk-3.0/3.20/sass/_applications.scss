@@ -1,62 +1,37 @@
 //
 // Tab overrides
 //
-.gedit-bottom-panel-paned notebook {
-//ScratchMainWindow .notebook,
-//EphyNotebook.notebook,
-//MidoriNotebook .notebook,
-//TerminalWindow .notebook,
-//PantheonTerminalPantheonTerminalWindow .notebook {
+.gedit-bottom-panel-paned notebook,
+terminal-window notebook {
   > header.top > tabs > tab:checked { box-shadow: inset 0 -1px $borders_color; }
 }
-
-//TerminalWindow .notebook,
-//PantheonTerminalPantheonTerminalWindow .notebook {
-
-//  &.header.top {
-//    box-shadow: inset 0  1px opacify($header_border, 1),
-//                inset 0 -1px $borders_color;
-//
-//    tab {
-//      padding-top: 7px;
-//      border-top-width: 3px;
-//    }
-//  }
-//}
 
 //
 // GNOME Terminal
 //
-//TerminalWindow {
-//  .background {
-//    background-color: transparent;
-//  }
-//
-//  scrollbar {
-//    &.vertical slider { margin-left: 3px; }
-//
-//    trough { border-width: 0; }
-//  }
-//
-//  .notebook {
-//    tab button {
-//      color: mix($bg_color, $fg_color, 35%);
-//
-//      &:hover {
-//        color: $fg_color;
-//        border-color: $button_border;
-//        background-color: $button_bg;
-//      }
-//    }
-//    tab:active, tab:hover {
-//      button {
-//        @extend %undecorated_button;
-//        &:hover { color: lighten(red, 15%); @extend %undecorated_button;}
-//        &:active { color: $selected_bg_color; @extend %undecorated_button;}
-//      }
-//    }
-//  }
-//}
+terminal-window {
+
+  scrollbar {
+    &.vertical slider { margin-left: 3px; }
+
+    trough { border-width: 0; }
+  }
+
+  notebook {
+    > header.top {
+      padding-top: 3px;
+
+      box-shadow: inset 0  1px opacify($header_border, 1),
+                  inset 0 -1px $borders_color;
+
+      button {
+        padding: 0;
+        min-width: 24px;
+        min-height: 24px;
+      }
+    }
+  }
+}
 
 //
 // Nautilus

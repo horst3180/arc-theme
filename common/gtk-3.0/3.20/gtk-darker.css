@@ -3123,8 +3123,23 @@ modelbutton.flat:selected arrow, treeview.view:selected, treeview.view:selected:
     .nautilus-window placessidebar.sidebar row.sidebar-row:disabled:active:hover {
       color: #a9caf1; }
 
-.gedit-bottom-panel-paned notebook > header.top > tabs > tab:checked {
+.gedit-bottom-panel-paned notebook > header.top > tabs > tab:checked,
+terminal-window notebook > header.top > tabs > tab:checked {
   box-shadow: inset 0 -1px #dcdfe3; }
+
+terminal-window scrollbar.vertical slider {
+  margin-left: 3px; }
+
+terminal-window scrollbar trough {
+  border-width: 0; }
+
+terminal-window notebook > header.top {
+  padding-top: 3px;
+  box-shadow: inset 0 1px #262a33, inset 0 -1px #dcdfe3; }
+  terminal-window notebook > header.top button {
+    padding: 0;
+    min-width: 24px;
+    min-height: 24px; }
 
 .nautilus-canvas-item {
   border-radius: 2px; }
