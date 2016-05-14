@@ -2593,7 +2593,7 @@ GtkInfoBar {
   &.background {
     // background-color needs to be set this way otherwise it gets drawn twice
     // see https://bugzilla.gnome.org/show_bug.cgi?id=736155 for details.
-    background-color: $osd_bg_color;
+    background-color: lighten($osd_bg_color, 10%);
     background-clip: padding-box;
   }
 
@@ -2780,7 +2780,7 @@ GtkVolumeButton.button { padding: 8px; }
     }
     &.tooltip {
       border-radius: 2px;
-      box-shadow: 0 1px 3px 1px $_wm_border;
+      box-shadow: 0 1px 3px 1px if($variant == 'light', $_wm_border, transparentize($_wm_border, 0.3));
     }
     &.message-dialog { border-radius: 3px; }
   }

@@ -2208,7 +2208,7 @@ GtkInfoBar {
   color: #BAC3CF;
   border-radius: 2px; }
   .tooltip.background {
-    background-color: rgba(53, 57, 69, 0.95);
+    background-color: rgba(75, 81, 98, 0.95);
     background-clip: padding-box; }
   .tooltip.window-frame.csd {
     background-color: transparent; }
@@ -2397,7 +2397,7 @@ GtkVolumeButton.button {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.45), 0 0 0 1px #22242d; }
   .window-frame.csd.tooltip {
     border-radius: 2px;
-    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.55); }
+    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.25); }
   .window-frame.csd.message-dialog {
     border-radius: 3px; }
   .window-frame.solid-csd {

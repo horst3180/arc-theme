@@ -2793,7 +2793,7 @@ tooltip {
   border-radius: 2px;
   box-shadow: none; }
   tooltip.background {
-    background-color: #353945;
+    background-color: #4b5162;
     background-clip: padding-box; }
     tooltip.background label {
       padding: 4px; }
