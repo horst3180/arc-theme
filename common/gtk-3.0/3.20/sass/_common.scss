@@ -1866,15 +1866,23 @@ notebook {
 //
 $_scrollbar_bg_color: darken($base_color, 1%);
 
-scrollbar,
-.scrollbar {
+scrollbar {
+  $_slider_min_length: 40px;
+
+  // disable steppers
   @at-root * {
     -GtkScrollbar-has-backward-stepper: false;
     -GtkScrollbar-has-forward-stepper: false;
   }
 
-  $_slider_margin: 3px;
-  $_slider_fine_tune_margin: 4px;
+  background-color: $_scrollbar_bg_color;
+  transition: 300ms $ease-out-quad;
+
+  // scrollbar border
+  &.top { border-bottom: 1px solid $borders_color; }
+  &.bottom { border-top: 1px solid $borders_color; }
+  &.left { border-right: 1px solid $borders_color; }
+  &.right { border-left: 1px solid $borders_color; }
 
   button { border: none; }
 
@@ -1888,32 +1896,55 @@ scrollbar,
     &.up { -gtk-icon-source: -gtk-icontheme('pan-left-symbolic'); }
   }
 
+  // slider
+  slider {
+    min-width: 6px;
+    min-height: 6px;
+    margin: -1px;
+    border: 4px solid transparent;
+    border-radius: 8px;
+    background-clip: padding-box;
+    background-color: mix($fg_color, $bg_color, 40%);
+
+    &:hover { background-color: mix($fg_color, $bg_color, 30%); }
+
+    &:hover:active { background-color: $selected_bg_color;}
+
+    &:disabled { background-color: transparent; }
+  }
+
+  &.fine-tune {
+    slider {
+      min-width: 4px;
+      min-height: 4px;
+    }
+
+    &.horizontal slider { border-width: 5px 4px; }
+    &.vertical slider { border-width: 4px 5px; }
+  }
+
   &.overlay-indicator {
-    &:not(.dragging):not(.hovering) { // Overlay scrolling indicator
+    &:not(.dragging):not(.hovering) {
       opacity: 0.4;
+      border-color: transparent;
+      background-color: transparent;
 
       slider {
         margin: 0;
+        min-width: 4px;
+        min-height: 4px;
         background-color: mix($fg_color, $bg_color, 70%);
         border: 1px solid if($variant == 'light', transparentize(white, 0.4), transparentize(black, 0.7));
-        background-clip: padding-box;
-      }
-
-      trough {
-        border-style: none;
-        background-color: transparent;
-      }
-
-      &.vertical slider {
-        min-width: 4px;
-        margin-top: $_slider_margin - 1px;
-        margin-bottom: $_slider_margin - 1px;
       }
 
       &.horizontal slider {
-        min-height: 4px;
-        margin-left: $_slider_margin - 1px;
-        margin-right: $_slider_margin - 1px;
+        margin: 0 2px;
+        min-width: $_slider_min_length;
+      }
+
+      &.vertical slider {
+        margin: 2px 0;
+        min-height: $_slider_min_length;
       }
     }
 
@@ -1921,68 +1952,8 @@ scrollbar,
     &.hovering { opacity: 0.99; }
   }
 
-  // trough coloring
-  trough {
-    background-color: $_scrollbar_bg_color;
-    border: 1px none $borders_color;
-  }
-
-  // slider coloring
-  slider,
-  .slider {
-    background-color: mix($fg_color, $bg_color, 40%);
-
-    &:hover { background-color: mix($fg_color, $bg_color, 30%); }
-
-    &:hover:active { background-color: $selected_bg_color;}
-
-    &:disabled {
-      background-color: transparent;
-    }
-  }
-
-  // sizing
-  slider,
-  .slider {
-    border-radius: 100px;
-    margin: $_slider_margin;
-  }
-
-  &.vertical {
-
-    &.fine-tune slider {
-      min-width: 4px;
-      margin: $_slider_fine_tune_margin;
-    }
-
-    slider {
-      min-height: 42px;
-      min-width: 6px;
-      margin: $_slider_margin;
-    }
-
-    trough {
-      &:dir(ltr) { border-left-style: solid; }
-      &:dir(rtl) { border-right-style: solid; }
-    }
-  }
-
-  &.horizontal {
-
-    &.fine-tune slider {
-      min-height: 4px;
-      margin: $_slider_fine_tune_margin;
-    }
-
-    slider,
-    .slider {
-      min-height: 6px;
-      min-width: 42px;
-      margin-top: $_slider_margin;
-    }
-
-    trough { border-top-style: solid; }
-  }
+  &.horizontal slider { min-width: $_slider_min_length; }
+  &.vertical slider { min-height: $_slider_min_length; }
 }
 
 //

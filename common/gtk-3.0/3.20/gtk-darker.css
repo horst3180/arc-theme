@@ -1778,127 +1778,73 @@ notebook {
         notebook > header > tabs > tab button.flat:active, notebook > header > tabs > tab button.sidebar-button:active, notebook > header > tabs > tab button.flat:active:hover, notebook > header > tabs > tab button.sidebar-button:active:hover {
           color: #5294E2; }
 
-* {
-  -GtkScrollbar-has-backward-stepper: false;
-  -GtkScrollbar-has-forward-stepper: false; }
-
-scrollbar button,
-.scrollbar button {
-  border: none; }
-
-scrollbar.vertical button.down,
-.scrollbar.vertical button.down {
-  -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
-
-scrollbar.vertical button.up,
-.scrollbar.vertical button.up {
-  -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
-
-scrollbar.horizontal button.down,
-.scrollbar.horizontal button.down {
-  -gtk-icon-source: -gtk-icontheme("pan-right-symbolic"); }
-
-scrollbar.horizontal button.up,
-.scrollbar.horizontal button.up {
-  -gtk-icon-source: -gtk-icontheme("pan-left-symbolic"); }
-
-scrollbar.overlay-indicator:not(.dragging):not(.hovering),
-.scrollbar.overlay-indicator:not(.dragging):not(.hovering) {
-  opacity: 0.4; }
-  scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider,
-  .scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider {
-    margin: 0;
-    background-color: #8a8e96;
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    background-clip: padding-box; }
-  scrollbar.overlay-indicator:not(.dragging):not(.hovering) trough,
-  .scrollbar.overlay-indicator:not(.dragging):not(.hovering) trough {
-    border-style: none;
-    background-color: transparent; }
-  scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical slider,
-  .scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical slider {
-    min-width: 4px;
-    margin-top: 2px;
-    margin-bottom: 2px; }
-  scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal slider,
-  .scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal slider {
-    min-height: 4px;
-    margin-left: 2px;
-    margin-right: 2px; }
-
-scrollbar.overlay-indicator.dragging, scrollbar.overlay-indicator.hovering,
-.scrollbar.overlay-indicator.dragging,
-.scrollbar.overlay-indicator.hovering {
-  opacity: 0.99; }
-
-scrollbar trough,
-.scrollbar trough {
+scrollbar {
   background-color: #fcfcfc;
-  border: 1px none #dcdfe3; }
-
-scrollbar slider,
-scrollbar .slider,
-.scrollbar slider,
-.scrollbar .slider {
-  background-color: #b8babf; }
-  scrollbar slider:hover,
-  scrollbar .slider:hover,
-  .scrollbar slider:hover,
-  .scrollbar .slider:hover {
-    background-color: #c7c9cd; }
-  scrollbar slider:hover:active,
-  scrollbar .slider:hover:active,
-  .scrollbar slider:hover:active,
-  .scrollbar .slider:hover:active {
-    background-color: #5294E2; }
-  scrollbar slider:disabled,
-  scrollbar .slider:disabled,
-  .scrollbar slider:disabled,
-  .scrollbar .slider:disabled {
+  transition: 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+  * {
+    -GtkScrollbar-has-backward-stepper: false;
+    -GtkScrollbar-has-forward-stepper: false; }
+  scrollbar.top {
+    border-bottom: 1px solid #dcdfe3; }
+  scrollbar.bottom {
+    border-top: 1px solid #dcdfe3; }
+  scrollbar.left {
+    border-right: 1px solid #dcdfe3; }
+  scrollbar.right {
+    border-left: 1px solid #dcdfe3; }
+  scrollbar button {
+    border: none; }
+  scrollbar.vertical button.down {
+    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
+  scrollbar.vertical button.up {
+    -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
+  scrollbar.horizontal button.down {
+    -gtk-icon-source: -gtk-icontheme("pan-right-symbolic"); }
+  scrollbar.horizontal button.up {
+    -gtk-icon-source: -gtk-icontheme("pan-left-symbolic"); }
+  scrollbar slider {
+    min-width: 6px;
+    min-height: 6px;
+    margin: -1px;
+    border: 4px solid transparent;
+    border-radius: 8px;
+    background-clip: padding-box;
+    background-color: #b8babf; }
+    scrollbar slider:hover {
+      background-color: #c7c9cd; }
+    scrollbar slider:hover:active {
+      background-color: #5294E2; }
+    scrollbar slider:disabled {
+      background-color: transparent; }
+  scrollbar.fine-tune slider {
+    min-width: 4px;
+    min-height: 4px; }
+  scrollbar.fine-tune.horizontal slider {
+    border-width: 5px 4px; }
+  scrollbar.fine-tune.vertical slider {
+    border-width: 4px 5px; }
+  scrollbar.overlay-indicator:not(.dragging):not(.hovering) {
+    opacity: 0.4;
+    border-color: transparent;
     background-color: transparent; }
-
-scrollbar slider,
-scrollbar .slider,
-.scrollbar slider,
-.scrollbar .slider {
-  border-radius: 100px;
-  margin: 3px; }
-
-scrollbar.vertical.fine-tune slider,
-.scrollbar.vertical.fine-tune slider {
-  min-width: 4px;
-  margin: 4px; }
-
-scrollbar.vertical slider,
-.scrollbar.vertical slider {
-  min-height: 42px;
-  min-width: 6px;
-  margin: 3px; }
-
-scrollbar.vertical trough:dir(ltr),
-.scrollbar.vertical trough:dir(ltr) {
-  border-left-style: solid; }
-
-scrollbar.vertical trough:dir(rtl),
-.scrollbar.vertical trough:dir(rtl) {
-  border-right-style: solid; }
-
-scrollbar.horizontal.fine-tune slider,
-.scrollbar.horizontal.fine-tune slider {
-  min-height: 4px;
-  margin: 4px; }
-
-scrollbar.horizontal slider,
-scrollbar.horizontal .slider,
-.scrollbar.horizontal slider,
-.scrollbar.horizontal .slider {
-  min-height: 6px;
-  min-width: 42px;
-  margin-top: 3px; }
-
-scrollbar.horizontal trough,
-.scrollbar.horizontal trough {
-  border-top-style: solid; }
+    scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider {
+      margin: 0;
+      min-width: 4px;
+      min-height: 4px;
+      background-color: #8a8e96;
+      border: 1px solid rgba(255, 255, 255, 0.6); }
+    scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal slider {
+      margin: 0 2px;
+      min-width: 40px; }
+    scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical slider {
+      margin: 2px 0;
+      min-height: 40px; }
+  scrollbar.overlay-indicator.dragging, scrollbar.overlay-indicator.hovering {
+    opacity: 0.99; }
+  scrollbar.horizontal slider {
+    min-width: 40px; }
+  scrollbar.vertical slider {
+    min-height: 40px; }
 
 switch {
   font: 1;
@@ -3139,12 +3085,6 @@ modelbutton.flat:selected arrow, treeview.view:selected, treeview.view:selected:
 .gedit-bottom-panel-paned notebook > header.top > tabs > tab:checked,
 terminal-window notebook > header.top > tabs > tab:checked {
   box-shadow: inset 0 -1px #dcdfe3; }
-
-terminal-window scrollbar.vertical slider {
-  margin-left: 3px; }
-
-terminal-window scrollbar trough {
-  border-width: 0; }
 
 terminal-window notebook > header.top {
   padding-top: 3px;

@@ -11,12 +11,6 @@ terminal-window notebook {
 //
 terminal-window {
 
-  scrollbar {
-    &.vertical slider { margin-left: 3px; }
-
-    trough { border-width: 0; }
-  }
-
   notebook {
     > header.top {
       padding-top: 3px;
