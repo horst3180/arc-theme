@@ -3107,13 +3107,14 @@ terminal-window notebook > header.top {
 .nautilus-canvas-item {
   border-radius: 2px; }
 
-.nautilus-desktop.nautilus-canvas-item, .nemo-desktop.nemo-canvas-item {
+.nautilus-desktop.nautilus-canvas-item, .nemo-desktop.nemo-canvas-item, .caja-desktop {
   color: #ffffff;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.6); }
-  .nautilus-desktop.nautilus-canvas-item:active, .nemo-desktop.nemo-canvas-item:active {
+  .nautilus-desktop.nautilus-canvas-item:active, .nemo-desktop.nemo-canvas-item:active, .caja-desktop:active {
     color: #5c616c; }
-  .nautilus-desktop.nautilus-canvas-item:selected, .nemo-desktop.nemo-canvas-item:selected {
-    color: #ffffff; }
+  .nautilus-desktop.nautilus-canvas-item:selected, .nemo-desktop.nemo-canvas-item:selected, .caja-desktop:selected {
+    color: #ffffff;
+    text-shadow: none; }
 
 .nautilus-canvas-item.dim-label, label.nautilus-canvas-item.separator,
 popover.background label.nautilus-canvas-item.separator, headerbar .nautilus-canvas-item.subtitle, .titlebar:not(headerbar) .nautilus-canvas-item.subtitle,

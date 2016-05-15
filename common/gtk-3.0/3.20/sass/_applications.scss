@@ -39,7 +39,11 @@ terminal-window {
   text-shadow: 1px 1px transparentize(black, 0.4);
 
   &:active { color: $fg_color; }
-  &:selected { color: $selected_fg_color; }
+
+  &:selected {
+    color: $selected_fg_color;
+    text-shadow: none;
+  }
 }
 
 .nautilus-canvas-item.dim-label,
@@ -141,6 +145,14 @@ $disk_space_free: darken($bg_color, 3%);
     @include pathbar_linking_rules($sep_color:$header_button_border);
   }
 }
+
+//
+// Caja
+//
+.caja-desktop { @extend .nautilus-desktop.nautilus-canvas-item; }
+
+.caja-side-pane scrolledwindow.frame,
+.caja-notebook scrolledwindow.frame { border-width: 1px 0; }
 
 //
 // Gedit
