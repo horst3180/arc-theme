@@ -589,6 +589,9 @@ ClockBox {
 .xfce4-panel.panel {
   background-color: $panel_bg;
 
+  text-shadow: none;
+  icon-shadow: none;
+
   .button.flat {
     color: $panel_fg;
     background-color: transparentize($panel_bg, 1);

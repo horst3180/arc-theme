@@ -3088,7 +3088,9 @@ ClockBox {
   color: #BAC3CF; }
 
 .xfce4-panel.panel {
-  background-color: rgba(43, 46, 55, 0.95); }
+  background-color: rgba(43, 46, 55, 0.95);
+  text-shadow: none;
+  icon-shadow: none; }
   .xfce4-panel.panel .button.flat, .xfce4-panel.panel .sidebar-button.button {
     color: #BAC3CF;
     background-color: rgba(43, 46, 55, 0);
