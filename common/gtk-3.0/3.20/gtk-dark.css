@@ -3211,6 +3211,10 @@ popover.background label.nautilus-canvas-item.separator, headerbar .nautilus-can
 .nemo-window .primary-toolbar widget.raised.linked:not(.vertical):not(.path-bar) > button:hover:not(:checked):not(:active):not(:only-child):last-child:hover {
   box-shadow: inset 1px 0 rgba(21, 23, 28, 0.37); }
 
+.caja-side-pane .frame,
+.caja-notebook .frame {
+  border-width: 1px 0; }
+
 .open-document-selector-treeview.view, iconview.open-document-selector-treeview {
   padding: 3px 6px 3px 6px;
   border-color: #404552; }
