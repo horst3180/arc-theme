@@ -151,8 +151,9 @@ $disk_space_free: darken($bg_color, 3%);
 //
 .caja-desktop { @extend .nautilus-desktop.nautilus-canvas-item; }
 
-.caja-side-pane .frame,
-.caja-notebook .frame { border-width: 1px 0; }
+.caja-notebook { border-top: 1px solid $borders_color; }
+.caja-side-pane .frame { border-width: 1px 0 0; }
+.caja-notebook .frame { border-width: 0 0 1px; }
 
 //
 // Gedit

@@ -3209,9 +3209,14 @@ popover.background label.nautilus-canvas-item.separator, headerbar .nautilus-can
 .nemo-window .primary-toolbar widget.raised.linked:not(.vertical):not(.path-bar) > button:hover:not(:checked):not(:active):not(:only-child):last-child:hover {
   box-shadow: inset 1px 0 rgba(21, 23, 28, 0.37); }
 
-.caja-side-pane .frame,
+.caja-notebook {
+  border-top: 1px solid #dcdfe3; }
+
+.caja-side-pane .frame {
+  border-width: 1px 0 0; }
+
 .caja-notebook .frame {
-  border-width: 1px 0; }
+  border-width: 0 0 1px; }
 
 .open-document-selector-treeview.view, iconview.open-document-selector-treeview {
   padding: 3px 6px 3px 6px;
@@ -4080,6 +4085,23 @@ filechooser.maximized placessidebar.sidebar,
   .nemo-window .sidebar separator {
     background-color: transparent; }
 
+.caja-side-pane,
+.caja-side-pane > notebook > stack > widget > box,
+.caja-side-pane text,
+.caja-side-pane treeview {
+  color: #BAC3CF;
+  caret-color: #BAC3CF;
+  background-color: #353945; }
+
+.caja-side-pane > box button:not(:active):not(:checked) {
+  color: #BAC3CF; }
+
+.caja-side-pane .frame {
+  border-color: #2a2d37; }
+
+.caja-side-pane junction {
+  background-color: rgba(42, 45, 55, 0.95); }
+
 filechooser actionbar {
   color: #BAC3CF;
   background-color: rgba(53, 57, 69, 0.95);
@@ -4115,7 +4137,7 @@ filechooser actionbar button {
   outline-color: rgba(186, 195, 207, 0.3);
   border-color: rgba(26, 28, 34, 0.35);
   background-color: rgba(102, 109, 132, 0.35); }
-  filechooser actionbar button:hover {
+  .caja-side-pane > box button:hover:not(:active), filechooser actionbar button:hover {
     color: #BAC3CF;
     outline-color: rgba(186, 195, 207, 0.3);
     border-color: rgba(26, 28, 34, 0.35);
@@ -4145,28 +4167,28 @@ filechooser actionbar entry {
     color: rgba(186, 195, 207, 0.55);
     background-image: linear-gradient(to bottom, rgba(102, 109, 132, 0.2)); }
 
-filechooser placessidebar.sidebar scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider,
-.nautilus-window placessidebar.sidebar scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider, .nemo-window .sidebar scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider {
-  background-color: #e7eaee;
-  border: 1px solid rgba(0, 0, 0, 0.3); }
-
-filechooser placessidebar.sidebar scrollbar slider,
-.nautilus-window placessidebar.sidebar scrollbar slider, .nemo-window .sidebar scrollbar slider {
-  background-color: rgba(231, 234, 238, 0.7); }
-  filechooser placessidebar.sidebar scrollbar slider:hover,
-  .nautilus-window placessidebar.sidebar scrollbar slider:hover, .nemo-window .sidebar scrollbar slider:hover {
-    background-color: #f6f7f9; }
-  filechooser placessidebar.sidebar scrollbar slider:hover:active,
-  .nautilus-window placessidebar.sidebar scrollbar slider:hover:active, .nemo-window .sidebar scrollbar slider:hover:active {
-    background-color: #5294E2; }
-  filechooser placessidebar.sidebar scrollbar slider:disabled,
-  .nautilus-window placessidebar.sidebar scrollbar slider:disabled, .nemo-window .sidebar scrollbar slider:disabled {
-    background-color: transparent; }
-
-filechooser placessidebar.sidebar scrollbar trough,
-.nautilus-window placessidebar.sidebar scrollbar trough, .nemo-window .sidebar scrollbar trough {
-  background-color: rgba(0, 0, 0, 0.2);
-  border: none; }
+filechooser placessidebar.sidebar scrollbar,
+.nautilus-window placessidebar.sidebar scrollbar, .nemo-window .sidebar scrollbar, .caja-side-pane scrollbar {
+  border-color: rgba(42, 45, 55, 0.95); }
+  filechooser placessidebar.sidebar scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider,
+  .nautilus-window placessidebar.sidebar scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider, .nemo-window .sidebar scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider, .caja-side-pane scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider {
+    background-color: #e7eaee;
+    border: 1px solid rgba(0, 0, 0, 0.3); }
+  filechooser placessidebar.sidebar scrollbar slider,
+  .nautilus-window placessidebar.sidebar scrollbar slider, .nemo-window .sidebar scrollbar slider, .caja-side-pane scrollbar slider {
+    background-color: rgba(231, 234, 238, 0.7); }
+    filechooser placessidebar.sidebar scrollbar slider:hover,
+    .nautilus-window placessidebar.sidebar scrollbar slider:hover, .nemo-window .sidebar scrollbar slider:hover, .caja-side-pane scrollbar slider:hover {
+      background-color: #f6f7f9; }
+    filechooser placessidebar.sidebar scrollbar slider:hover:active,
+    .nautilus-window placessidebar.sidebar scrollbar slider:hover:active, .nemo-window .sidebar scrollbar slider:hover:active, .caja-side-pane scrollbar slider:hover:active {
+      background-color: #5294E2; }
+    filechooser placessidebar.sidebar scrollbar slider:disabled,
+    .nautilus-window placessidebar.sidebar scrollbar slider:disabled, .nemo-window .sidebar scrollbar slider:disabled, .caja-side-pane scrollbar slider:disabled {
+      background-color: transparent; }
+  filechooser placessidebar.sidebar scrollbar trough,
+  .nautilus-window placessidebar.sidebar scrollbar trough, .nemo-window .sidebar scrollbar trough, .caja-side-pane scrollbar trough {
+    background-color: rgba(42, 45, 55, 0.95); }
 
 @define-color theme_fg_color #5c616c;
 @define-color theme_text_color #5c616c;

@@ -104,6 +104,28 @@ filechooser,
   }
 }
 
+.caja-side-pane {
+
+  &,
+  > notebook > stack > widget > box,
+  text,
+  treeview {
+    color: $dark_sidebar_fg;
+    caret-color: $dark_sidebar_fg;
+    background-color: opacify($dark_sidebar_bg, 1);
+  }
+
+  > box button {
+    &:not(:active):not(:checked) { color: $dark_sidebar_fg; }
+    &:hover:not(:active) { @extend %dark_sidebar_button:hover; }
+  }
+
+  .frame { border-color: darken(opacify($dark_sidebar_bg, 1), 5%); }
+
+  scrollbar { @extend %dark_sidebar_scrollbar; }
+  junction { background-color: darken($dark_sidebar_bg, 5%); }
+}
+
 filechooser {
 
   actionbar {
@@ -168,6 +190,8 @@ filechooser {
 
 %dark_sidebar_scrollbar {
 
+  border-color: darken($dark_sidebar_bg, 5%);
+
   &.overlay-indicator:not(.dragging):not(.hovering) slider {
     background-color: lighten($dark_sidebar_fg, 15%);
     border: 1px solid transparentize(black, 0.7);
@@ -184,7 +208,6 @@ filechooser {
     }
   }
   trough {
-    background-color: transparentize(black, 0.8);
-    border: none;
+    background-color: darken($dark_sidebar_bg, 5%);
   }
 }
