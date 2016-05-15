@@ -1540,6 +1540,12 @@ menu,
   .menu separator {
     margin: 2px 0;
     background-color: #383C4A; }
+  menu .separator,
+  .csd menu .separator,
+  .menu .separator,
+  .csd
+  .menu .separator {
+    color: #383C4A; }
   menu menuitem,
   .menu menuitem {
     min-height: 16px;

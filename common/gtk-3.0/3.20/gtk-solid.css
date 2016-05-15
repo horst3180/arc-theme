@@ -1543,6 +1543,12 @@ menu,
   .menu separator {
     margin: 2px 0;
     background-color: #ffffff; }
+  menu .separator,
+  .csd menu .separator,
+  .menu .separator,
+  .csd
+  .menu .separator {
+    color: #ffffff; }
   menu menuitem,
   .menu menuitem {
     min-height: 16px;
