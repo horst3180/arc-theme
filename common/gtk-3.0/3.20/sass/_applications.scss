@@ -396,65 +396,46 @@ button.documents-favorite:active:hover {
 }
 
 //
-// Fallback Mode/Budgie Panel
+// Mate/Gnome Flashback Panel
 //
-//.gnome-panel-menu-bar,
-//PanelApplet > menubar,
-//PanelToplevel,
-//PanelWidget,
-//PanelAppletFrame,
-//PanelApplet {
-//  color: $panel_fg;
-//  background-image: linear-gradient(to bottom, $panel_bg);
-//}
-//
-//PanelApplet button, PanelApplet button:backdrop {
-//  padding: 4px;
-//  border: 2px solid transparent;
-//  border-radius: 0;
-//  background-image: none;
-//  background-color: transparent;
-//  color: $panel_fg;
-//}
-//
-//PanelApplet button:hover {
-//  color: lighten($panel_fg, 10%);
-//  background-color: transparentize(black, 0.83);
-//  border-color: transparentize(black, 0.83);
-//}
-//
-//PanelApplet button:active, PanelApplet button:active:backdrop,
-//PanelApplet button:checked, PanelApplet button:checked:backdrop {
-//  background-clip: padding-box;
-//  color: $selected_fg_color;
-//  background-color: transparentize(black, 0.75);
-//  border-radius: 0;
-//  border-color: transparentize(black, 0.75);
-//  box-shadow: inset 0 -2px $selected_bg_color;
-//}
-//
-//PanelApplet:hover {
-//  color: $selected_fg_color;
-//}
-//
-//PanelApplet:active,
-//PanelApplet:hover:active {
-//  color: $selected_bg_color;
-//}
-//
-//WnckPager {
-//  color: mix($panel_fg, black, 50%);
-//  &:selected { color: $selected_bg_color }
-//}
-//
-//NaTrayApplet {
-//  -NaTrayApplet-icon-padding: 12;
-//  -NaTrayApplet-icon-size: 16;
-//}
-//
-//ClockBox {
-//  color: $panel_fg;
-//}
+.gnome-panel-menu-bar,
+.mate-panel-menu-bar {
+
+  &, menubar { background-color: $panel_bg; }
+
+  menubar,
+  #PanelApplet label,
+  #PanelApplet image { color: $panel_fg; }
+
+  // Panel buttons
+  button:not(#tasklist-button) {
+    @extend %panelbutton;
+  }
+
+  button,
+  #tasklist-button {
+    label, image { color: inherit; }
+  }
+
+  .wnck-pager {
+    color: mix($panel_fg, black, 50%);
+    background-color: darken($panel_bg, 10%);
+
+    &:hover {
+      background-color: lighten($panel_bg, 5%);
+    }
+
+    &:selected {
+      color: lighten($selected_bg_color, 20%);
+      background-color: $selected_bg_color;
+    }
+  }
+
+  na-tray-applet {
+    -NaTrayApplet-icon-padding: 0;
+    -NaTrayApplet-icon-size: 16px;
+  }
+}
 
 // Xfce Panel
 .xfce4-panel.panel {
@@ -463,21 +444,41 @@ button.documents-favorite:active:hover {
   text-shadow: none;
   -gtk-icon-shadow: none;
 
-  button.flat {
-    color: $panel_fg;
-    background-color: transparentize($panel_bg, 1);
-    border-radius: 0;
-    border: none;
+  button.flat { @extend %panelbutton; }
+}
 
-    &:hover {
-      border: none;
-      background-color: lighten($panel_bg, 10%);
-    }
-    &:active, &:checked {
-      color: $selected_fg_color;
-      border: none;
-      background-color: $selected_bg_color;
-    }
+#tasklist-button {
+  color: transparentize($panel_fg, 0.2);
+  border-radius: 0;
+  border: none;
+  background-color: transparentize($panel_bg, 1);
+
+  &:hover {
+    color: lighten($panel_fg, 10%);
+    background-color: transparentize(black, 0.83);
+  }
+
+  &:checked {
+    color: $selected_fg_color;
+    background-color: transparentize(black, 0.75);
+    box-shadow: inset 0 -2px $selected_bg_color;
+  }
+}
+
+%panelbutton {
+  color: $panel_fg;
+  border-radius: 0;
+  border: none;
+  background-color: transparentize($panel_bg, 1);
+
+  &:hover {
+    border: none;
+    background-color: lighten($panel_bg, 10%);
+  }
+  &:active, &:checked {
+    color: $selected_fg_color;
+    border: none;
+    background-color: $selected_bg_color;
   }
 }
 
