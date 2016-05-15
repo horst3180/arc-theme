@@ -159,6 +159,7 @@ widget_class "*Notif*Brasero*"                        style "theme-panel"
 widget "*Xfce*Panel*"                                 style "theme-panel"
 class "*Xfce*Panel*"                                  style "theme-panel"
 widget "*WnckPager*"                                  style "workspace-switcher"
+widget "*TopMenu*"                                    style "theme-panel"
 
 # Fix gtk-entries in the panel
 widget "*bookmark*GtkEntry"                           style "panel-entry" # fixes smartbookmark-plugin
