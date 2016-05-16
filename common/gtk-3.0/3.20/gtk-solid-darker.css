@@ -1539,11 +1539,11 @@ menu,
   .menu separator {
     margin: 2px 0;
     background-color: #ffffff; }
-  menu .separator,
-  .csd menu .separator,
-  .menu .separator,
+  menu .separator:not(label),
+  .csd menu .separator:not(label),
+  .menu .separator:not(label),
   .csd
-  .menu .separator {
+  .menu .separator:not(label) {
     color: #ffffff; }
   menu menuitem,
   .menu menuitem {

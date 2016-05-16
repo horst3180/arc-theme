@@ -1616,8 +1616,9 @@ menu,
   }
 
   // Firefox workaround
-  .separator,
-  .csd & .separator { color: $_menu_bg; }
+  .separator:not(label),
+  .csd & .separator:not(label) { color: $_menu_bg; }
+  // Firefox workaround end
 
   menuitem {
     min-height: 16px;
