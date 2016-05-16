@@ -91,9 +91,6 @@ $disk_space_free: darken($bg_color, 3%);
   }
 }
 
-// View
-.nautilus-list-view .view { border-bottom: 1px solid $borders_color; }
-
 @keyframes needs_attention_keyframes {
     0% { @include button(header-hover); }
     100% { @include button(header-active) }

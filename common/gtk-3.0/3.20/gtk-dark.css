@@ -3145,9 +3145,6 @@ popover.background label.nautilus-canvas-item.separator, headerbar .nautilus-can
     background-color: #313541;
     border-color: #1b1d24; }
 
-.nautilus-list-view .view, .nautilus-list-view iconview {
-  border-bottom: 1px solid #2b2e39; }
-
 @keyframes needs_attention_keyframes {
   0% {
     color: rgba(207, 218, 231, 0.8);

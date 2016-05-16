@@ -2745,9 +2745,6 @@ NautilusQueryEditor .search-bar.toolbar, NautilusQueryEditor .search-bar.inline-
     background-color: #313541;
     border-color: #1b1d24; }
 
-NautilusListView .view {
-  border-bottom: 1px solid #2b2e39; }
-
 NemoWindow .sidebar .frame {
   border-width: 0; }
 
