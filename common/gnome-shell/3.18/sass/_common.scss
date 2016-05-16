@@ -1989,6 +1989,11 @@ $legacy_icon_size: 24px;
   & StButton { width: $legacy_icon_size; height: $legacy_icon_size }
 }
 
+.masterslider.smaller .masterlabel,
+.masterslider.smaller .slider {
+  min-width: 155px;
+}
+
 // Magnifier
 
 .magnifier-zoom-region {

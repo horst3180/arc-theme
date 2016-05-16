@@ -1600,6 +1600,10 @@ StScrollBar {
     width: 24px;
     height: 24px; }
 
+.masterslider.smaller .masterlabel,
+.masterslider.smaller .slider {
+  min-width: 155px; }
+
 .magnifier-zoom-region {
   border: 2px solid #5294E2; }
   .magnifier-zoom-region.full-screen {
