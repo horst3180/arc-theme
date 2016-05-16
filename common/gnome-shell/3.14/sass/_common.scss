@@ -1773,18 +1773,25 @@ StScrollBar {
 //
 // Workspace pager
 //
-.workspace-thumbnails { //container ala dash
-  visible-width: 40px; //amount visible before hover
-  spacing: 11px;
-  padding: 12px;
+.workspace-thumbnails,
+.workspace-thumbnails-left {
+  &, &:rtl {
+    visible-width: 40px;  //amount visible before hover
+    spacing: 11px;
+    padding: 12px;
+  }
+}
+
+.workspace-thumbnails,
+.workspace-thumbnails-left:rtl {
   padding-right: 7px;
   border-image: url("common-assets/dash/dash-right.svg") 9 9 9 9;
+}
 
-  &:rtl {
-    padding: 12px;
-    padding-left: 7px;
-    border-image: url("common-assets/dash/dash-left.svg") 9 9 9 9;
-  }
+.workspace-thumbnails:rtl,
+.workspace-thumbnails-left {
+  padding-left: 7px;
+  border-image: url("common-assets/dash/dash-left.svg") 9 9 9 9;
 }
 
 .workspace-thumbnail-indicator {

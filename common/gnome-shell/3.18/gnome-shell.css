@@ -1416,16 +1416,22 @@ StScrollBar {
   padding: 10px 8px 5px 8px;
   spacing: 4px; }
 
-.workspace-thumbnails {
+.workspace-thumbnails, .workspace-thumbnails:rtl,
+.workspace-thumbnails-left,
+.workspace-thumbnails-left:rtl {
   visible-width: 40px;
   spacing: 11px;
-  padding: 12px;
+  padding: 12px; }
+
+.workspace-thumbnails,
+.workspace-thumbnails-left:rtl {
   padding-right: 7px;
   border-image: url("common-assets/dash/dash-right.svg") 9 9 9 9; }
-  .workspace-thumbnails:rtl {
-    padding: 12px;
-    padding-left: 7px;
-    border-image: url("common-assets/dash/dash-left.svg") 9 9 9 9; }
+
+.workspace-thumbnails:rtl,
+.workspace-thumbnails-left {
+  padding-left: 7px;
+  border-image: url("common-assets/dash/dash-left.svg") 9 9 9 9; }
 
 .workspace-thumbnail-indicator {
   border: 4px solid rgba(82, 148, 226, 0.8);
