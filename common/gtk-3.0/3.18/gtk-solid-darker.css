@@ -1370,7 +1370,7 @@ column-header .button, column-header .button:hover, column-header .button:active
   .menubar:backdrop {
     color: rgba(207, 218, 231, 0.5); }
   .menubar > .menuitem {
-    padding: 6px 8px;
+    padding: 4px 8px;
     border: solid transparent;
     border-width: 0; }
     .menubar > .menuitem:hover {
