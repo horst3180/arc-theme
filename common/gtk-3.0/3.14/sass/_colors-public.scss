@@ -29,6 +29,7 @@
 @define-color error_color #{"" + $error_color};
 @define-color success_color #{"" + $success_color};
 @define-color placeholder_text_color #{#A8A8A8};
+@define-color link_color #{"" + $link_color};
 
 //WM
 $wm_highlight: lighten(opacify($header_bg, 1), 3%);
