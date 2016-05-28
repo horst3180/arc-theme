@@ -2785,7 +2785,7 @@ NemoWindow .primary-toolbar NemoPathBar.linked:not(.vertical):not(.path-bar) > .
   padding: 3px 6px 3px 6px;
   border-color: #ffffff; }
   .open-document-selector-treeview.view:prelight {
-    background-color: rgba(0, 0, 0, 0.05); }
+    background-color: #f4f4f5; }
     .open-document-selector-treeview.view:prelight:selected {
       color: #ffffff;
       background-color: #5294E2; }

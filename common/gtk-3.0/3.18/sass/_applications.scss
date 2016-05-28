@@ -210,7 +210,7 @@ NemoWindow {
   border-color: $base_color;  // disable borders, making them transparent doesn't work for some reason
 
   &:prelight {
-    background-color: transparentize(black, 0.95);
+    background-color: mix($fg_color, $base_color, 7%);
 
     &:selected {
       color: $selected_fg_color;

@@ -2652,7 +2652,7 @@ NemoWindow .primary-toolbar NemoPathBar.linked > .button {
   padding: 3px 6px 3px 6px;
   border-color: #404552; }
   .open-document-selector-treeview.view:prelight {
-    background-color: rgba(0, 0, 0, 0.05); }
+    background-color: #4a4f5c; }
     .open-document-selector-treeview.view:prelight:selected {
       color: #ffffff;
       background-color: #5294E2; }
