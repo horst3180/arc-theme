@@ -55,21 +55,7 @@ textview text {
     border-radius: 2px; }
 
 textview border {
-  background-color: #3c414e;
-  background-image: image(rgba(0, 0, 0, 0.2));
-  background-repeat: no-repeat; }
-  textview border.bottom {
-    background-size: 100% 1px;
-    background-position: top; }
-  textview border.top {
-    background-size: 100% 1px;
-    background-position: bottom; }
-  textview border.left {
-    background-size: 1px 100%;
-    background-position: right; }
-  textview border.right {
-    background-size: 1px 100%;
-    background-position: left; }
+  background-color: #3c414e; }
 
 rubberband, flowbox rubberband, treeview.view rubberband, .content-view rubberband,
 .rubberband {
