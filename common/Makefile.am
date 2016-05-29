@@ -247,12 +247,6 @@ endif # ENABLE_DARK
 endif # ENABLE_UNITY
 
 
-if ENABLE_XFCE_NOTIFY
-	$(MKDIR_P) $(ithemedir)
-	cp -R $(srcdir)/xfce-notify-4.0 $(ithemedir)
-endif # ENABLE_XFCE_NOTIFY
-
-
 if ENABLE_XFWM
 
 if ENABLE_LIGHT
@@ -288,7 +282,6 @@ EXTRA_DIST = $(srcdir)/cinnamon \
 	     $(srcdir)/gtk-3.0 \
 	     $(srcdir)/metacity-1 \
 	     $(srcdir)/unity \
-	     $(srcdir)/xfce-notify-4.0 \
 	     $(srcdir)/xfwm4 \
 	     $(srcdir)/xfwm4-dark \
 	     $(srcdir)/index.theme \
