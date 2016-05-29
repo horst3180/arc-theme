@@ -105,17 +105,6 @@ style "window-buttons" = "theme-panel" {
   bg[ACTIVE] = @selected_bg_color
   bg[PRELIGHT] = shade(1.1,@selected_bg_color)
   bg[SELECTED] = @selected_bg_color
-
-  engine "murrine" {
-    reliefstyle = 0
-    glazestyle = 0
-    glow_shade = 1.0
-    highlight_shade = 1.0
-    roundness = 0
-    gradient_shades = {1.0,1.0,1.0,1.0}
-    textstyle = 0
-    contrast = 0.0
-  }
 }
 
 style "indicator" = "theme-panel" {
@@ -123,7 +112,7 @@ style "indicator" = "theme-panel" {
   ythickness = 0
 }
 
-widget "*tasklist*"                                   style "panelbuttons"
+widget "*tasklist*"                                   style "window-buttons"
 widget_class "*Xfce*Panel*.GtkToggleButton"           style "panelbuttons"
 widget_class "*Xfce*NetkTasklist*GtkToggleButton"     style "panelbuttons"
 widget_class "*PanelToplevel*Button"                  style "panelbuttons"
