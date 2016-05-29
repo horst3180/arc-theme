@@ -164,19 +164,24 @@ StScrollBar {
 //
 .slider {
   -slider-height: 4px;
-  -slider-background-color: $button_border !important;                   //background of the trough
-  -slider-border-color: transparentize(black, 1) !important;             //trough border color
-  -slider-active-background-color: $selected_bg_color !important;        //active trough fill
-  -slider-active-border-color: transparentize(black, 1) !important;      //active trough border
+  -slider-background-color: $button_border;                   //background of the trough
+  -slider-border-color: transparentize(black, 1);             //trough border color
+  -slider-active-background-color: $selected_bg_color;        //active trough fill
+  -slider-active-border-color: transparentize(black, 1);      //active trough border
   -slider-border-width: 0;
   -slider-handle-radius: 4px;
-  -slider-handle-border-color: transparent !important;
-  -slider-handle-border-width: 0 !important;
+  -slider-handle-border-color: transparent;
+  -slider-handle-border-width: 0;
   height: 18px;
   border: 0 solid transparent;
   border-right-width: 1px;
   border-left-width: 5px;
   color: transparent;
+
+  .popup-menu-item:active & {
+    -slider-background-color: transparentize(black, 0.8);
+    -slider-active-background-color: $selected_fg_color;
+  }
 }
 
 //
@@ -206,11 +211,14 @@ StScrollBar {
   width: 50px;
   height: 20px;
   background-size: contain;
+  background-image: url("#{$asset_path}/switch/switch-off.svg");
 
-  &-us, &-intl {
-    background-image: url("#{$asset_path}/switch/switch-off.svg");
+  &:checked { background-image: url("#{$asset_path}/switch/switch-on.svg"); }
 
-    &:checked { background-image: url("#{$asset_path}/switch/switch-on.svg"); }
+  .popup-menu-item:active & {
+    background-image: url("common-assets/switch/switch-off-selected.svg");
+
+    &:checked { background-image: url("common-assets/switch/switch-on-selected.svg"); }
   }
 }
 
@@ -553,7 +561,7 @@ StScrollBar {
   }
 
   .popup-submenu-menu-item:open {
-    color: $fg_color !important;
+    color: $fg_color;
     background: none !important;
     box-shadow: none;
     border-image: url("#{$asset_path}/menu/submenu-open.svg") 9 9 9 9;
@@ -567,13 +575,13 @@ StScrollBar {
     &:rtl { padding: .4em 0em .4em 3em; }
 
     &:active, &.selected {
-      color: $fg_color !important;
+      color: $selected_fg_color;
       background-color: transparent;
-      border-image: url("#{$asset_path}/menu/menu-hover.svg") 9 9 1 1;
+      border-image: url("common-assets/menu/menu-hover.svg") 9 9 1 1;
     }
 
     &:insensitive {
-      color: transparentize($fg_color, 0.5) !important;
+      color: transparentize($fg_color, 0.5);
       background: none;
     }
   }
@@ -583,7 +591,15 @@ StScrollBar {
 
     &:insensitive { color: $insensitive_fg_color; }
   }
-  .popup-status-menu-item, .popup-subtitle-menu-item { color: $fg_color !important; }
+  
+  .popup-status-menu-item,
+  .popup-subtitle-menu-item { color: $fg_color; }
+
+  .popup-menu-item:active {
+    .popup-status-menu-item,
+    .popup-subtitle-menu-item { color: $selected_fg_color; }
+  }
+
   &.panel-menu {
     -boxpointer-gap: 0px;
     margin-bottom: 1.75em;
@@ -623,7 +639,7 @@ StScrollBar {
   background-color: transparent;
   background-gradient-direction: none !important;
   border: none;
-	border-image: url("common-assets/menu/menu-separator.svg") 1 1 1 1;
+  border-image: url("common-assets/menu/menu-separator.svg") 1 1 1 1;
 }
 
 // Background menu
@@ -939,7 +955,7 @@ StScrollBar {
 
 .system-switch-user-submenu-icon {
   icon-size: 24px;
-  border: 1px solid transparentize($fg_color,0.6);
+  border: 1px solid transparentize(black, 0.8);
 }
 
 #appMenu {
@@ -954,7 +970,10 @@ StScrollBar {
   width: 360px;
   .popup-menu-icon {
     padding: 0 4px;
-    color: $fg_color !important;
+    color: $fg_color;
+  }
+  .popup-menu-item:active .popup-menu-icon {
+    color: $selected_fg_color;
   }
 }
 

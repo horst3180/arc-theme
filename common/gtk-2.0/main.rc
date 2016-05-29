@@ -708,7 +708,7 @@ style "menu_framed_box" {
 style "menu_item"
 {
   xthickness = 2
-  ythickness = 4
+  ythickness = 5
 
   # HACK: Gtk doesn't actually read this value
   # while rendering the menu items, but Libreoffice
@@ -720,10 +720,11 @@ style "menu_item"
   # See https://bugs.freedesktop.org/show_bug.cgi?id=38038
   bg[SELECTED] = @selected_fg_color
 
-	fg[NORMAL] = @fg_color
-	fg[SELECTED] = @fg_color
+  fg[NORMAL] = @fg_color
+  fg[SELECTED] = @selected_fg_color
 
-  text[PRELIGHT] = @fg_color
+  fg[PRELIGHT] = @selected_fg_color
+  text[PRELIGHT] = @selected_fg_color
 
   engine "pixmap" {
 
@@ -733,6 +734,28 @@ style "menu_item"
       file = "assets/menuitem.png"
       border = { 1, 0, 1, 0 }
       stretch = TRUE
+    }
+
+    # Fix invisible scale trough on selected menuitems
+
+    image {
+      function = BOX
+      detail = "trough-lower"
+      file = "assets/trough-horizontal.png"
+      border = { 8, 8, 0, 0 }
+      stretch = TRUE
+      orientation = HORIZONTAL
+    }
+
+    image {
+      function = SLIDER
+      state = PRELIGHT
+      file = "assets/null.png"
+      border = { 0, 0, 0, 0 }
+      stretch = TRUE
+      overlay_file = "assets/slider.png"
+      overlay_stretch = FALSE
+      orientation = HORIZONTAL
     }
 
     # Check Buttons
@@ -751,7 +774,7 @@ style "menu_item"
       recolorable = TRUE
       state = PRELIGHT
       shadow = OUT
-      overlay_file = "assets/menu-checkbox-unchecked.png"
+      overlay_file = "assets/menu-checkbox-unchecked-selected.png"
       overlay_stretch = FALSE
     }
 
@@ -787,7 +810,7 @@ style "menu_item"
       recolorable = TRUE
       state = PRELIGHT
       shadow = IN
-      overlay_file = "assets/menu-checkbox-checked.png"
+      overlay_file = "assets/menu-checkbox-checked-selected.png"
       overlay_stretch = FALSE
     }
 
@@ -823,7 +846,7 @@ style "menu_item"
       function = OPTION
       state = PRELIGHT
       shadow = OUT
-      overlay_file = "assets/menu-radio-unchecked.png"
+      overlay_file = "assets/menu-radio-unchecked-selected.png"
       overlay_stretch = FALSE
     }
 
@@ -855,7 +878,7 @@ style "menu_item"
       function = OPTION
       state = PRELIGHT
       shadow = IN
-      overlay_file = "assets/menu-radio-checked.png"
+      overlay_file = "assets/menu-radio-checked-selected.png"
       overlay_stretch = FALSE
     }
 

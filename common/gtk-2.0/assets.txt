@@ -31,12 +31,16 @@ radio-checked-insensitive
 radio-unchecked
 radio-unchecked-insensitive
 menu-checkbox-checked
+menu-checkbox-checked-selected
 menu-checkbox-checked-insensitive
 menu-checkbox-unchecked
+menu-checkbox-unchecked-selected
 menu-checkbox-unchecked-insensitive
 menu-radio-checked
+menu-radio-checked-selected
 menu-radio-checked-insensitive
 menu-radio-unchecked
+menu-radio-unchecked-selected
 menu-radio-unchecked-insensitive
 entry-border-bg-solid
 entry-border-active-bg-solid

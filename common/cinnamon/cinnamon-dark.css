@@ -171,6 +171,10 @@ StScrollBar {
   border-right-width: 1px;
   border-left-width: 5px;
   color: transparent; }
+  .popup-menu-item:active .popup-slider-menu-item, .popup-menu-item:active
+  .slider {
+    -slider-background-color: rgba(0, 0, 0, 0.2);
+    -slider-active-background-color: #ffffff; }
 
 .check-box CinnamonGenericContainer {
   spacing: .2em;
@@ -221,11 +225,14 @@ StScrollBar {
 .toggle-switch {
   width: 50px;
   height: 20px;
-  background-size: contain; }
-  .toggle-switch-us, .toggle-switch-intl {
-    background-image: url("dark-assets/switch/switch-off.svg"); }
-    .toggle-switch-us:checked, .toggle-switch-intl:checked {
-      background-image: url("dark-assets/switch/switch-on.svg"); }
+  background-size: contain;
+  background-image: url("dark-assets/switch/switch-off.svg"); }
+  .toggle-switch:checked {
+    background-image: url("dark-assets/switch/switch-on.svg"); }
+  .popup-menu-item:active .toggle-switch {
+    background-image: url("common-assets/switch/switch-off-selected.svg"); }
+    .popup-menu-item:active .toggle-switch:checked {
+      background-image: url("common-assets/switch/switch-on-selected.svg"); }
 
 .cinnamon-link {
   color: #a9caf1;
@@ -267,9 +274,9 @@ StScrollBar {
     padding: .4em 1.75em;
     spacing: 1em; }
     .popup-menu .popup-menu-item:active {
-      color: #D3DAE3;
+      color: #ffffff;
       background-color: transparent;
-      border-image: url("dark-assets/menu/menu-hover.svg") 9 9 1 1; }
+      border-image: url("common-assets/menu/menu-hover.svg") 9 9 1 1; }
     .popup-menu .popup-menu-item:insensitive {
       color: rgba(211, 218, 227, 0.5);
       background: none; }
@@ -277,6 +284,8 @@ StScrollBar {
     color: #D3DAE3; }
     .popup-menu .popup-inactive-menu-item:insensitive {
       color: rgba(211, 218, 227, 0.45); }
+  .popup-menu .popup-menu-item:active .popup-inactive-menu-item {
+    color: #ffffff; }
   .popup-menu-icon {
     icon-size: 16px; }
 

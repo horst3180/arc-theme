@@ -1599,14 +1599,10 @@ menu,
   menuitem {
     min-height: 16px;
     min-width: 40px;
-    padding: 4px;
-    border: solid transparent;
-    border-width: 1px 0 1px 0;
+    padding: 5px;
     &:hover {
-      color: $fg_color;
-      background-color: if($variant == 'light', transparentize(black, 0.96), transparentize(white, 0.95));
-      border: solid if($variant == 'light', transparentize(black, 0.92), transparentize(white, 0.93));
-      border-width: 1px 0 1px 0;
+      color: $selected_fg_color;
+      background-color: $selected_bg_color;
     }
     &:disabled {
       color: $insensitive_fg_color;
@@ -2015,6 +2011,7 @@ switch {
     // the borders of checks and radios are
     // too similar in luminosity to the selected background color, hence
     // we need special casing.
+    menuitem #{$w}#{$s}:hover,
     .view #{$w}#{$s}:selected,
     treeview.#{$w}#{$s}:selected,
     row:selected #{$w}#{$s},
@@ -2125,6 +2122,7 @@ scale {
     }
 
     // Troughs in selected list-rows and infobars
+    menuitem:hover &,
     row:selected &,
     infobar & {
       background-color: transparentize(black, 0.8);
@@ -2180,6 +2178,7 @@ scale {
     }
 
     // Selected list-row and infobar sliders
+    menuitem:hover &,
     row:selected &,
     infobar & {
       background-clip: border-box;

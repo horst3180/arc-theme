@@ -149,6 +149,11 @@ StScrollBar {
   border-right-width: 1px;
   border-left-width: 5px;
   color: transparent;
+
+  .popup-menu-item.selected & {
+    -slider-background-color: transparentize(black, 0.8);
+    -slider-active-background-color: $selected_fg_color;
+  }
 }
 
 //
@@ -178,11 +183,14 @@ StScrollBar {
   width: 50px;
   height: 20px;
   background-size: contain;
+  background-image: url("#{$asset_path}/switch/switch-off.svg");
 
-  &-us, &-intl {
-    background-image: url("#{$asset_path}/switch/switch-off.svg");
+  &:checked { background-image: url("#{$asset_path}/switch/switch-on.svg"); }
 
-    &:checked { background-image: url("#{$asset_path}/switch/switch-on.svg"); }
+  .popup-menu-item.selected & {
+    background-image: url("common-assets/switch/switch-off-selected.svg");
+
+    &:checked { background-image: url("common-assets/switch/switch-on-selected.svg"); }
   }
 }
 
@@ -601,9 +609,9 @@ StScrollBar {
     }
 
     &:active, &.selected {
-      color: $fg_color;
+      color: $selected_fg_color;
       background-color: transparent;
-      border-image: url("#{$asset_path}/menu/menu-hover.svg") 9 9 1 1;
+      border-image: url("common-assets/menu/menu-hover.svg") 9 9 1 1;
     }
 
     &:insensitive {
@@ -651,10 +659,10 @@ StScrollBar {
 .popup-separator-menu-item {
   //-margin-horizontal: 24px;
   height: 2px; //not really the whole box
-  margin: 10px 0px;
+  margin: 10px 0;
   background-color: transparent;
   border: none;
-	border-image: url("common-assets/menu/menu-separator.svg") 1 1 1 1;
+  border-image: url("common-assets/menu/menu-separator.svg") 1 1 1 1;
 }
 
 // Background menu

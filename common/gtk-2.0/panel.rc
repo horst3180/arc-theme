@@ -4,8 +4,8 @@ style "theme-panel" {
   ythickness = 0
 
   bg[NORMAL] = "#2B2E37"
-  bg[ACTIVE] = shade(1.45, "#2B2E37")
-  bg[PRELIGHT] = shade(0.9, @selected_bg_color)
+  bg[ACTIVE] = @selected_bg_color
+  bg[PRELIGHT] = "#3f4453"
   bg[SELECTED] = @selected_bg_color
 
   fg[NORMAL] = "#BAC3CF"
@@ -93,13 +93,13 @@ style "workspace-switcher" = "theme-panel" {
   bg[SELECTED] = @selected_bg_color
 }
 
-style "window-buttons" = "theme-panel"
-{
+style "window-buttons" = "theme-panel" {
+
   xthickness = 3
   ythickness = 3
 
-  bg[ACTIVE] = shade(0.75, @selected_bg_color)
-  bg[PRELIGHT] = shade(0.9, @selected_bg_color)
+  bg[ACTIVE] = @selected_bg_color
+  bg[PRELIGHT] = shade(1.1,@selected_bg_color)
   bg[SELECTED] = @selected_bg_color
 
   engine "murrine" {
@@ -160,6 +160,7 @@ widget "*Xfce*Panel*"                                 style "theme-panel"
 class "*Xfce*Panel*"                                  style "theme-panel"
 widget "*WnckPager*"                                  style "workspace-switcher"
 widget "*TopMenu*"                                    style "theme-panel"
+widget "*XfceTasklist*"                               style "window-buttons"
 
 # Fix gtk-entries in the panel
 widget "*bookmark*GtkEntry"                           style "panel-entry" # fixes smartbookmark-plugin
@@ -173,4 +174,3 @@ widget "*PanelApplet*"                                style "theme-panel-text"
 # Override general panel-style with specific plugin-styles
 widget "*indicator-applet*"                           style "indicator"
 widget "*indicator-button*"                           style "indicator"
-widget "*XfceTasklist*"                               style "window-buttons"

@@ -184,19 +184,22 @@ StScrollBar {
 
 .slider {
   -slider-height: 4px;
-  -slider-background-color: #2b2e39 !important;
-  -slider-border-color: transparent !important;
-  -slider-active-background-color: #5294E2 !important;
-  -slider-active-border-color: transparent !important;
+  -slider-background-color: #2b2e39;
+  -slider-border-color: transparent;
+  -slider-active-background-color: #5294E2;
+  -slider-active-border-color: transparent;
   -slider-border-width: 0;
   -slider-handle-radius: 4px;
-  -slider-handle-border-color: transparent !important;
-  -slider-handle-border-width: 0 !important;
+  -slider-handle-border-color: transparent;
+  -slider-handle-border-width: 0;
   height: 18px;
   border: 0 solid transparent;
   border-right-width: 1px;
   border-left-width: 5px;
   color: transparent; }
+  .popup-menu-item:active .slider {
+    -slider-background-color: rgba(0, 0, 0, 0.2);
+    -slider-active-background-color: #ffffff; }
 
 .check-box StBoxLayout {
   spacing: .8em; }
@@ -218,11 +221,14 @@ StScrollBar {
 .toggle-switch {
   width: 50px;
   height: 20px;
-  background-size: contain; }
-  .toggle-switch-us, .toggle-switch-intl {
-    background-image: url("dark-assets/switch/switch-off.svg"); }
-    .toggle-switch-us:checked, .toggle-switch-intl:checked {
-      background-image: url("dark-assets/switch/switch-on.svg"); }
+  background-size: contain;
+  background-image: url("dark-assets/switch/switch-off.svg"); }
+  .toggle-switch:checked {
+    background-image: url("dark-assets/switch/switch-on.svg"); }
+  .popup-menu-item:active .toggle-switch {
+    background-image: url("common-assets/switch/switch-off-selected.svg"); }
+    .popup-menu-item:active .toggle-switch:checked {
+      background-image: url("common-assets/switch/switch-on-selected.svg"); }
 
 .shell-link {
   color: #a9caf1; }
@@ -453,7 +459,7 @@ StScrollBar {
     background-gradient-direction: none !important;
     border-image: url("dark-assets/menu/submenu.svg") 9 9 9 9; }
   .popup-menu .popup-submenu-menu-item:open {
-    color: #D3DAE3 !important;
+    color: #D3DAE3;
     background: none !important;
     box-shadow: none;
     border-image: url("dark-assets/menu/submenu-open.svg") 9 9 9 9; }
@@ -466,18 +472,22 @@ StScrollBar {
     .popup-menu .popup-menu-item:rtl {
       padding: .4em 0em .4em 3em; }
     .popup-menu .popup-menu-item:active, .popup-menu .popup-menu-item.selected {
-      color: #D3DAE3 !important;
+      color: #ffffff;
       background-color: transparent;
-      border-image: url("dark-assets/menu/menu-hover.svg") 9 9 1 1; }
+      border-image: url("common-assets/menu/menu-hover.svg") 9 9 1 1; }
     .popup-menu .popup-menu-item:insensitive {
-      color: rgba(211, 218, 227, 0.5) !important;
+      color: rgba(211, 218, 227, 0.5);
       background: none; }
   .popup-menu .popup-inactive-menu-item {
     color: #D3DAE3; }
     .popup-menu .popup-inactive-menu-item:insensitive {
       color: rgba(211, 218, 227, 0.45); }
-  .popup-menu .popup-status-menu-item, .popup-menu .popup-subtitle-menu-item {
-    color: #D3DAE3 !important; }
+  .popup-menu .popup-status-menu-item,
+  .popup-menu .popup-subtitle-menu-item {
+    color: #D3DAE3; }
+  .popup-menu .popup-menu-item:active .popup-status-menu-item,
+  .popup-menu .popup-menu-item:active .popup-subtitle-menu-item {
+    color: #ffffff; }
   .popup-menu.panel-menu {
     -boxpointer-gap: 0px;
     margin-bottom: 1.75em; }
@@ -741,7 +751,7 @@ StScrollBar {
 
 .system-switch-user-submenu-icon {
   icon-size: 24px;
-  border: 1px solid rgba(211, 218, 227, 0.4); }
+  border: 1px solid rgba(0, 0, 0, 0.2); }
 
 #appMenu {
   spinner-image: url("common-assets/misc/process-working.svg");
@@ -754,7 +764,9 @@ StScrollBar {
   width: 360px; }
   .aggregate-menu .popup-menu-icon {
     padding: 0 4px;
-    color: #D3DAE3 !important; }
+    color: #D3DAE3; }
+  .aggregate-menu .popup-menu-item:active .popup-menu-icon {
+    color: #ffffff; }
 
 .system-menu-action {
   padding: 13px;

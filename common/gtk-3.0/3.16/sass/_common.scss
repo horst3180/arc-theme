@@ -1572,10 +1572,8 @@ column-header.button.dnd { // for treeview-like derive widgets
   .menuitem {
     padding: 5px;
     &:hover {
-      color: $fg_color;
-      background-color: if($variant == 'light', transparentize(black, 0.96), transparentize(white, 0.95));
-      border: solid if($variant == 'light', transparentize(black, 0.92), transparentize(white, 0.93));
-      border-width: 1px 0 1px 0;
+      color: $selected_fg_color;
+      background-color: $selected_bg_color;
     }
     &:insensitive {
       color: $insensitive_fg_color;
@@ -2010,6 +2008,7 @@ GtkSwitch {
     // the borders of checks and radios are
     // too similar in luminosity to the selected background color, hence
     // we need special casing.
+    .menu .menuitem.#{$w}#{$s}:hover,
     GtkTreeView.view.#{$w}#{$s}:selected,
     .list-row:selected .#{$w}#{$s},
     GtkInfoBar .#{$w}#{$s} {
@@ -2089,6 +2088,7 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
       }
     }
     //selected list-row and infobar sliders
+    .menuitem:hover &,
     .list-row:selected &,
     GtkInfoBar & {
       background-image: linear-gradient(to bottom, $selected_fg_color);
@@ -2137,6 +2137,7 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
       &:insensitive {  }
     }
     // troughs in selected list-rows and infobars
+    .menuitem:hover &,
     .list-row:selected &,
     GtkInfoBar & {
       background-image: linear-gradient(to bottom, transparentize(black, 0.8));

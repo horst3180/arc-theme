@@ -1536,15 +1536,11 @@ menu,
   .menu menuitem {
     min-height: 16px;
     min-width: 40px;
-    padding: 4px;
-    border: solid transparent;
-    border-width: 1px 0 1px 0; }
+    padding: 5px; }
     menu menuitem:hover,
     .menu menuitem:hover {
-      color: #D3DAE3;
-      background-color: rgba(255, 255, 255, 0.05);
-      border: solid rgba(255, 255, 255, 0.07);
-      border-width: 1px 0 1px 0; }
+      color: #ffffff;
+      background-color: #5294E2; }
     menu menuitem:disabled,
     .menu menuitem:disabled {
       color: rgba(211, 218, 227, 0.45); }
@@ -1907,6 +1903,7 @@ treeview.check {
 .osd check, filechooser actionbar check {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-dark.png"), url("assets/checkbox-unchecked-dark@2.png")); }
 
+menuitem check:hover,
 .view check:selected, iconview check:selected,
 treeview.check:selected,
 row:selected check,
@@ -1921,6 +1918,7 @@ treeview.check:disabled {
 .osd check:disabled, filechooser actionbar check:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-insensitive-dark.png"), url("assets/checkbox-unchecked-insensitive-dark@2.png")); }
 
+menuitem check:disabled:hover,
 .view check:disabled:selected, iconview check:disabled:selected,
 treeview.check:disabled:selected,
 row:selected check:disabled,
@@ -1935,6 +1933,7 @@ treeview.check:indeterminate {
 .osd check:indeterminate, filechooser actionbar check:indeterminate {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-dark.png"), url("assets/checkbox-mixed-dark@2.png")); }
 
+menuitem check:indeterminate:hover,
 .view check:indeterminate:selected, iconview check:indeterminate:selected,
 treeview.check:indeterminate:selected,
 row:selected check:indeterminate,
@@ -1949,6 +1948,7 @@ treeview.check:indeterminate:disabled {
 .osd check:indeterminate:disabled, filechooser actionbar check:indeterminate:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-insensitive-dark.png"), url("assets/checkbox-mixed-insensitive-dark@2.png")); }
 
+menuitem check:indeterminate:disabled:hover,
 .view check:indeterminate:disabled:selected, iconview check:indeterminate:disabled:selected,
 treeview.check:indeterminate:disabled:selected,
 row:selected check:indeterminate:disabled,
@@ -1963,6 +1963,7 @@ treeview.check:checked {
 .osd check:checked, filechooser actionbar check:checked {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-dark.png"), url("assets/checkbox-checked-dark@2.png")); }
 
+menuitem check:checked:hover,
 .view check:checked:selected, iconview check:checked:selected,
 treeview.check:checked:selected,
 row:selected check:checked,
@@ -1977,6 +1978,7 @@ treeview.check:checked:disabled {
 .osd check:checked:disabled, filechooser actionbar check:checked:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-insensitive-dark.png"), url("assets/checkbox-checked-insensitive-dark@2.png")); }
 
+menuitem check:checked:disabled:hover,
 .view check:checked:disabled:selected, iconview check:checked:disabled:selected,
 treeview.check:checked:disabled:selected,
 row:selected check:checked:disabled,
@@ -1991,6 +1993,7 @@ treeview.radio {
 .osd radio, filechooser actionbar radio {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-dark.png"), url("assets/radio-unchecked-dark@2.png")); }
 
+menuitem radio:hover,
 .view radio:selected, iconview radio:selected,
 treeview.radio:selected,
 row:selected radio,
@@ -2005,6 +2008,7 @@ treeview.radio:disabled {
 .osd radio:disabled, filechooser actionbar radio:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-insensitive-dark.png"), url("assets/radio-unchecked-insensitive-dark@2.png")); }
 
+menuitem radio:disabled:hover,
 .view radio:disabled:selected, iconview radio:disabled:selected,
 treeview.radio:disabled:selected,
 row:selected radio:disabled,
@@ -2019,6 +2023,7 @@ treeview.radio:indeterminate {
 .osd radio:indeterminate, filechooser actionbar radio:indeterminate {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-dark.png"), url("assets/radio-mixed-dark@2.png")); }
 
+menuitem radio:indeterminate:hover,
 .view radio:indeterminate:selected, iconview radio:indeterminate:selected,
 treeview.radio:indeterminate:selected,
 row:selected radio:indeterminate,
@@ -2033,6 +2038,7 @@ treeview.radio:indeterminate:disabled {
 .osd radio:indeterminate:disabled, filechooser actionbar radio:indeterminate:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-insensitive-dark.png"), url("assets/radio-mixed-insensitive-dark@2.png")); }
 
+menuitem radio:indeterminate:disabled:hover,
 .view radio:indeterminate:disabled:selected, iconview radio:indeterminate:disabled:selected,
 treeview.radio:indeterminate:disabled:selected,
 row:selected radio:indeterminate:disabled,
@@ -2047,6 +2053,7 @@ treeview.radio:checked {
 .osd radio:checked, filechooser actionbar radio:checked {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-dark.png"), url("assets/radio-checked-dark@2.png")); }
 
+menuitem radio:checked:hover,
 .view radio:checked:selected, iconview radio:checked:selected,
 treeview.radio:checked:selected,
 row:selected radio:checked,
@@ -2061,6 +2068,7 @@ treeview.radio:checked:disabled {
 .osd radio:checked:disabled, filechooser actionbar radio:checked:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-insensitive-dark.png"), url("assets/radio-checked-insensitive-dark@2.png")); }
 
+menuitem radio:checked:disabled:hover,
 .view radio:checked:disabled:selected, iconview radio:checked:disabled:selected,
 treeview.radio:checked:disabled:selected,
 row:selected radio:checked:disabled,
@@ -2131,15 +2139,19 @@ scale {
       background-color: rgba(69, 74, 89, 0.95); }
       .osd scale trough highlight {
         background-color: #5294E2; }
+    menuitem:hover scale trough,
     row:selected scale trough,
     infobar scale trough {
       background-color: rgba(0, 0, 0, 0.2); }
+      menuitem:hover scale trough highlight,
       row:selected scale trough highlight,
       infobar scale trough highlight {
         background-color: #ffffff; }
+        menuitem:hover scale trough highlight:disabled,
         row:selected scale trough highlight:disabled,
         infobar scale trough highlight:disabled {
           background-color: #b1cff2; }
+      menuitem:hover scale trough:disabled,
       row:selected scale trough:disabled,
       infobar scale trough:disabled {
         background-color: rgba(0, 0, 0, 0.1); }
@@ -2168,19 +2180,23 @@ scale {
     scale slider:disabled {
       background-color: #3c414e;
       border-color: rgba(38, 41, 51, 0.8); }
+    menuitem:hover scale slider,
     row:selected scale slider,
     infobar scale slider {
       background-clip: border-box;
       background-color: #ffffff;
       border-color: #ffffff; }
+      menuitem:hover scale slider:hover,
       row:selected scale slider:hover,
       infobar scale slider:hover {
         background-color: #e5effb;
         border-color: #e5effb; }
+      menuitem:hover scale slider:active,
       row:selected scale slider:active,
       infobar scale slider:active {
         background-color: #a9caf1;
         border-color: #a9caf1; }
+      menuitem:hover scale slider:disabled,
       row:selected scale slider:disabled,
       infobar scale slider:disabled {
         background-color: #b1cff2;
