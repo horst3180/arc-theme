@@ -30,6 +30,10 @@ style "theme-panel" {
   }
 }
 
+style "theme-panel-progressbar" {
+  bg[ACTIVE] = "#1D1F26"
+}
+
 style "panelbar" {
 
   fg[NORMAL] = "#edf5fb"
@@ -158,6 +162,7 @@ widget_class "*Notif*Brasero*"                        style "theme-panel"
 # XFCE panel theming.
 widget "*Xfce*Panel*"                                 style "theme-panel"
 class "*Xfce*Panel*"                                  style "theme-panel"
+widget "*Xfce*Panel*GtkProgressBar"                   style "theme-panel-progressbar"
 widget "*WnckPager*"                                  style "workspace-switcher"
 widget "*TopMenu*"                                    style "theme-panel"
 widget "*XfceTasklist*"                               style "window-buttons"
