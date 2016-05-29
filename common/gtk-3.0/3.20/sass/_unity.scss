@@ -43,7 +43,7 @@ UnityDecoration {
 // Panel Style
 UnityPanelWidget,
 .unity-panel {
-  background-image: linear-gradient(to bottom, opacify($panel_bg, 1));
+  background-image: linear-gradient(to bottom, #2f343f);
   color: lighten($panel_fg, 20%);
   box-shadow: none;
 

@@ -3113,7 +3113,7 @@ UnityDecoration {
 
 UnityPanelWidget,
 .unity-panel {
-  background-image: linear-gradient(to bottom, #2b2e37);
+  background-image: linear-gradient(to bottom, #2f343f);
   color: #f6f7f9;
   box-shadow: none; }
   UnityPanelWidget:backdrop,
