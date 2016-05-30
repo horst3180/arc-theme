@@ -126,9 +126,9 @@ style "toolbar_button" {
 }
 
 style "toolbar_entry" {
-  xthickness = 6
 
-  base[NORMAL] = "#414857"
+  base[NORMAL] = "#404552"
+  base[ACTIVE] = "#404552"
   base[INSENSITIVE] = "#39404d"
 
   text[NORMAL] = "#afb8c5"
@@ -137,49 +137,29 @@ style "toolbar_entry" {
 
     image {
       function = SHADOW
-      detail = "entry"
       state = NORMAL
-      shadow = IN
-      file = "menubar-toolbar/toolbar-entry-border-bg-dark.png"
-      border = { 12, 12, 12, 12 }
+      detail = "entry"
+      file = "menubar-toolbar/entry-toolbar-dark.png"
+      border = {6, 6, 6, 6}
       stretch = TRUE
     }
 
     image {
       function = SHADOW
+      state = ACTIVE
       detail = "entry"
+      file = "menubar-toolbar/entry-active-toolbar-dark.png"
+      border = {6, 6, 6, 6}
+      stretch = TRUE
+    }
+
+    image {
+      function = SHADOW
       state = INSENSITIVE
-      shadow = IN
-      file = "menubar-toolbar/toolbar-entry-border-disabled-bg-dark.png"
-      border = { 12, 12, 12, 12 }
-      stretch = TRUE
-    }
-
-    image {
-      function = SHADOW
       detail = "entry"
-      state = ACTIVE
-      file = "menubar-toolbar/toolbar-entry-border-active-bg-dark.png"
-      border = { 12, 12, 12, 12 }
+      file = "menubar-toolbar/entry-disabled-toolbar-dark.png"
+      border = {6, 6, 6, 6}
       stretch = TRUE
-    }
-
-    image {
-      function = FLAT_BOX
-      detail = "entry_bg"
-      state = NORMAL
-      overlay_file = "assets/null.png"
-      overlay_border = { 0, 0, 0, 0 }
-      overlay_stretch = TRUE
-    }
-
-    image {
-      function = FLAT_BOX
-      detail = "entry_bg"
-      state = ACTIVE
-      overlay_file = "assets/null.png"
-      overlay_border = { 0, 0, 0, 0 }
-      overlay_stretch = TRUE
     }
   }
 }

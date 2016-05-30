@@ -981,109 +981,69 @@ style "entry" {
   ythickness = 4
 
   base[NORMAL] = @base_color
+  base[ACTIVE] = @base_color
   base[INSENSITIVE] = @insensitive_bg_color
 
   engine "pixmap" {
 
     image {
       function = SHADOW
-      detail = "entry"
       state = NORMAL
-      shadow = IN
-      file = "assets/entry-border-bg.png"
-      border = { 12, 12, 12, 12 }
+      detail = "entry"
+      file = "assets/entry-bg.png"
+      border = {6, 6, 6, 6}
       stretch = TRUE
     }
 
     image {
       function = SHADOW
+      state = ACTIVE
       detail = "entry"
+      file = "assets/entry-active-bg.png"
+      border = {6, 6, 6, 6}
+      stretch = TRUE
+    }
+
+    image {
+      function = SHADOW
       state = INSENSITIVE
-      shadow = IN
-      file = "assets/entry-border-disabled-bg.png"
-      border = { 12, 12, 12, 12 }
-      stretch = TRUE
-    }
-
-    image {
-      function = SHADOW
       detail = "entry"
-      state = ACTIVE
-      file = "assets/entry-border-active-bg.png"
-      border = { 12, 12, 12, 12 }
+      file = "assets/entry-disabled-bg.png"
+      border = {6, 6, 6, 6}
       stretch = TRUE
-    }
-
-    image {
-      function = FLAT_BOX
-      detail = "entry_bg"
-      state = NORMAL
-      overlay_file = "assets/null.png"
-      overlay_border = { 0, 0, 0, 0 }
-      overlay_stretch = TRUE
-    }
-
-    image {
-      function = FLAT_BOX
-      detail = "entry_bg"
-      state = ACTIVE
-      overlay_file = "assets/null.png"
-      overlay_border = { 0, 0, 0, 0 }
-      overlay_stretch = TRUE
     }
   }
 }
 
 style "notebook_entry" {
-  xthickness = 6
 
   engine "pixmap" {
 
     image {
       function = SHADOW
-      detail = "entry"
       state = NORMAL
-      shadow = IN
-      file = "assets/notebook-entry-border-bg.png"
-      border = { 12, 12, 12, 12 }
+      detail = "entry"
+      file = "assets/entry-notebook.png"
+      border = {6, 6, 6, 6}
       stretch = TRUE
     }
 
     image {
       function = SHADOW
+      state = ACTIVE
       detail = "entry"
+      file = "assets/entry-active-notebook.png"
+      border = {6, 6, 6, 6}
+      stretch = TRUE
+    }
+
+    image {
+      function = SHADOW
       state = INSENSITIVE
-      shadow = IN
-      file = "assets/notebook-entry-border-disabled-bg.png"
-      border = { 12, 12, 12, 12 }
-      stretch = TRUE
-    }
-
-    image {
-      function = SHADOW
       detail = "entry"
-      state = ACTIVE
-      file = "assets/notebook-entry-border-active-bg.png"
-      border = { 12, 12, 12, 12 }
+      file = "assets/entry-disabled-notebook.png"
+      border = {6, 6, 6, 6}
       stretch = TRUE
-    }
-
-    image {
-      function = FLAT_BOX
-      detail = "entry_bg"
-      state = NORMAL
-      overlay_file = "assets/null.png"
-      overlay_border = { 0, 0, 0, 0 }
-      overlay_stretch = TRUE
-    }
-
-    image {
-      function = FLAT_BOX
-      detail = "entry_bg"
-      state = ACTIVE
-      overlay_file = "assets/null.png"
-      overlay_border = { 0, 0, 0, 0 }
-      overlay_stretch = TRUE
     }
   }
 }
@@ -1625,92 +1585,6 @@ style "gimp_spin_scale" {
       detail = "spinbutton_down"
       overlay_file = "assets/arrow-down-small-insens.png"
       overlay_stretch = FALSE
-    }
-  }
-}
-
-style "libreoffice_entry" {
-
-  engine "pixmap" {
-
-    image {
-      function = FLAT_BOX
-      detail = "entry_bg"
-      state = NORMAL
-      overlay_file = "assets/entry-border-fill.png"
-      overlay_border = { 0, 0, 0, 0 }
-      overlay_stretch = TRUE
-    }
-
-    image {
-      function = FLAT_BOX
-      detail = "entry_bg"
-      state = ACTIVE
-      overlay_file = "assets/entry-border-fill.png"
-      overlay_border = { 0, 0, 0, 0 }
-      overlay_stretch = TRUE
-    }
-
-    image {
-      function = SHADOW
-      detail = "entry"
-      state = NORMAL
-      shadow = IN
-      file = "assets/entry-border-bg-solid.png"
-      border = { 12, 12, 12, 12 }
-      stretch = TRUE
-    }
-
-    image {
-      function = SHADOW
-      detail = "entry"
-      state = ACTIVE
-      file = "assets/entry-border-active-bg-solid.png"
-      border = { 12, 12, 12, 12 }
-      stretch = TRUE
-    }
-  }
-}
-
-style "standalone_entry" {
-
-  engine "pixmap" {
-
-    image {
-      function = FLAT_BOX
-      detail = "entry_bg"
-      state = NORMAL
-      file = "assets/entry-border-fill.png"
-      stretch = TRUE
-      border = { 0, 0, 0, 0 }
-    }
-
-    image {
-      function = FLAT_BOX
-      detail = "entry_bg"
-      state = ACTIVE
-      file = "assets/entry-border-fill.png"
-      stretch = TRUE
-      border = { 0, 0, 0, 0 }
-    }
-
-    image {
-      function = SHADOW
-      detail = "entry"
-      state = NORMAL
-      shadow = IN
-      file = "assets/entry-border-bg-solid.png"
-      border = { 12, 12, 12, 12 }
-      stretch = TRUE
-    }
-
-    image {
-      function = SHADOW
-      detail = "entry"
-      state = ACTIVE
-      file = "assets/entry-border-active-bg-solid.png"
-      border = { 12, 12, 12, 12 }
-      stretch = TRUE
     }
   }
 }
@@ -2434,10 +2308,6 @@ widget_class "*<GimpToolbox>*<GtkFrame>"                            style "gimp_
 widget_class "*Chrom*Button*"                                       style "button"
 widget_class "*<GtkCustomMenu>*<GtkCustomMenuItem>*"                style "chrome_menu_item"
 
-# We use this weird selector to target an offscreen entry as created
-# by Chrome/Chromium to derive the style for its toolbar
-widget_class "<GtkEntry>"                                           style "standalone_entry"
-
 # Eclipse/SWT
 widget "gtk-tooltips*"                                              style "eclipse-tooltips"
 widget "*swt-toolbar-flat"                                          style "null"
@@ -2445,10 +2315,6 @@ widget "*swt-toolbar-flat"                                          style "null"
 # Openoffice, Libreoffice
 class "GtkWindow"                                                   style "toplevel_hack"
 widget "*openoffice-toplevel*"                                      style "ooo_stepper_hack"
-widget "*openoffice-toplevel*GtkEntry"                              style "libreoffice_entry"
-widget "*openoffice-toplevel*GtkSpinButton"                         style "libreoffice_entry"
-widget "*libreoffice-toplevel*GtkEntry"                             style "libreoffice_entry"
-widget "*libreoffice-toplevel*GtkSpinButton"                        style "libreoffice_entry"
 
 # Xfce
 widget_class "*XfdesktopIconView*"                                  style "xfdesktop-icon-view"

@@ -25,3 +25,52 @@ widget_class "*ThunarWindow*.<GtkScrolledWindow>"       style "thunar-frame"
 widget_class "*ThunarShortcutsView*"                    style "dark-sidebar"
 widget_class "*ThunarTreeView*"                         style "dark-sidebar"
 widget_class "*ThunarWindow*.<GtkHPaned>"               style "thunar-handle"
+
+#
+# Mousepad
+#
+
+style "entry_border" {
+
+  engine "pixmap" {
+
+    image {
+      function = SHADOW
+      detail = "entry"
+      state = NORMAL
+      shadow = IN
+      file = "assets/entry-border-bg.png"
+      border = { 12, 12, 12, 12 }
+      stretch = TRUE
+    }
+
+    image {
+      function = SHADOW
+      detail = "entry"
+      state = ACTIVE
+      file = "assets/entry-border-active-bg.png"
+      border = { 12, 12, 12, 12 }
+      stretch = TRUE
+    }
+
+    image {
+      function = FLAT_BOX
+      detail = "entry_bg"
+      state = NORMAL
+      overlay_file = "assets/null.png"
+      overlay_border = { 0, 0, 0, 0 }
+      overlay_stretch = TRUE
+    }
+
+    image {
+      function = FLAT_BOX
+      detail = "entry_bg"
+      state = ACTIVE
+      overlay_file = "assets/null.png"
+      overlay_border = { 0, 0, 0, 0 }
+      overlay_stretch = TRUE
+    }
+  }
+}
+
+widget_class "*MousepadSearchBar*.<GtkEntry>"    style "entry_border"
