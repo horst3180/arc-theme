@@ -97,22 +97,12 @@ style "workspace-switcher" = "theme-panel" {
   bg[SELECTED] = @selected_bg_color
 }
 
-style "window-buttons" = "theme-panel" {
-
-  xthickness = 3
-  ythickness = 3
-
-  bg[ACTIVE] = @selected_bg_color
-  bg[PRELIGHT] = shade(1.1,@selected_bg_color)
-  bg[SELECTED] = @selected_bg_color
-}
-
 style "indicator" = "theme-panel" {
   xthickness = 0
   ythickness = 0
 }
 
-widget "*tasklist*"                                   style "window-buttons"
+widget "*tasklist*"                                   style "panelbuttons"
 widget_class "*Xfce*Panel*.GtkToggleButton"           style "panelbuttons"
 widget_class "*Xfce*NetkTasklist*GtkToggleButton"     style "panelbuttons"
 widget_class "*PanelToplevel*Button"                  style "panelbuttons"
@@ -154,7 +144,7 @@ class "*Xfce*Panel*"                                  style "theme-panel"
 widget "*Xfce*Panel*GtkProgressBar"                   style "theme-panel-progressbar"
 widget "*WnckPager*"                                  style "workspace-switcher"
 widget "*TopMenu*"                                    style "theme-panel"
-widget "*XfceTasklist*"                               style "window-buttons"
+widget "*XfceTasklist*"                               style "panelbuttons"
 
 # Fix gtk-entries in the panel
 widget "*bookmark*GtkEntry"                           style "panel-entry" # fixes smartbookmark-plugin
