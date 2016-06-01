@@ -2007,7 +2007,7 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
       }
     }
     //selected list-row and infobar sliders
-    .menuitem:hover &,
+    .menu .menuitem:hover &,
     .list-row:selected &,
     GtkInfoBar & {
       background-image: linear-gradient(to bottom, $selected_fg_color);
@@ -2056,7 +2056,7 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
       &:insensitive {  }
     }
     // troughs in selected list-rows and infobars
-    .menuitem:hover &,
+    .menu .menuitem:hover &,
     .list-row:selected &,
     GtkInfoBar & {
       background-image: linear-gradient(to bottom, transparentize(black, 0.8));
