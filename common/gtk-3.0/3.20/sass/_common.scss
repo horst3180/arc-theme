@@ -1970,6 +1970,7 @@ switch {
     background-image: -gtk-scaled(url("assets/switch#{$l}#{$asset_suffix}.png"),url("assets/switch#{$l}#{$asset_suffix}@2.png"));
   }
 
+  menuitem:hover switch#{$k},
   row:selected switch#{$k},
   infobar switch#{$k} {
     background-image: -gtk-scaled(url("assets/switch#{$l}-selected.png"),url("assets/switch#{$l}-selected@2.png"));

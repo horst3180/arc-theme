@@ -1609,6 +1609,7 @@ GtkSwitch {
 GtkSwitch.trough {
   background-image: -gtk-scaled(url("assets/switch-dark.png"), url("assets/switch-dark@2.png")); }
 
+.menu .menuitem:hover GtkSwitch.trough,
 .list-row:selected GtkSwitch.trough,
 GtkInfoBar GtkSwitch.trough {
   background-image: -gtk-scaled(url("assets/switch-selected.png"), url("assets/switch-selected@2.png")); }
@@ -1620,6 +1621,7 @@ GtkInfoBar GtkSwitch.trough {
 GtkSwitch.trough:active {
   background-image: -gtk-scaled(url("assets/switch-active-dark.png"), url("assets/switch-active-dark@2.png")); }
 
+.menu .menuitem:hover GtkSwitch.trough:active,
 .list-row:selected GtkSwitch.trough:active,
 GtkInfoBar GtkSwitch.trough:active {
   background-image: -gtk-scaled(url("assets/switch-active-selected.png"), url("assets/switch-active-selected@2.png")); }
@@ -1631,6 +1633,7 @@ GtkInfoBar GtkSwitch.trough:active {
 GtkSwitch.trough:insensitive {
   background-image: -gtk-scaled(url("assets/switch-insensitive-dark.png"), url("assets/switch-insensitive-dark@2.png")); }
 
+.menu .menuitem:hover GtkSwitch.trough:insensitive,
 .list-row:selected GtkSwitch.trough:insensitive,
 GtkInfoBar GtkSwitch.trough:insensitive {
   background-image: -gtk-scaled(url("assets/switch-insensitive-selected.png"), url("assets/switch-insensitive-selected@2.png")); }
@@ -1642,6 +1645,7 @@ GtkInfoBar GtkSwitch.trough:insensitive {
 GtkSwitch.trough:active:insensitive {
   background-image: -gtk-scaled(url("assets/switch-active-insensitive-dark.png"), url("assets/switch-active-insensitive-dark@2.png")); }
 
+.menu .menuitem:hover GtkSwitch.trough:active:insensitive,
 .list-row:selected GtkSwitch.trough:active:insensitive,
 GtkInfoBar GtkSwitch.trough:active:insensitive {
   background-image: -gtk-scaled(url("assets/switch-active-insensitive-selected.png"), url("assets/switch-active-insensitive-selected@2.png")); }

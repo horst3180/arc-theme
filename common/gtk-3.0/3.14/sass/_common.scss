@@ -1888,6 +1888,7 @@ GtkSwitch {
     background-image: -gtk-scaled(url("assets/switch#{$l}#{$asset_suffix}.png"),url("assets/switch#{$l}#{$asset_suffix}@2.png"));
   }
 
+  .menu .menuitem:hover GtkSwitch.trough#{$k},
   .list-row:selected GtkSwitch.trough#{$k},
   GtkInfoBar GtkSwitch.trough#{$k} {
     background-image: -gtk-scaled(url("assets/switch#{$l}-selected.png"),url("assets/switch#{$l}-selected@2.png"));
