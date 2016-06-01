@@ -27,29 +27,30 @@ widget_class "*ThunarTreeView*"                         style "dark-sidebar"
 widget_class "*ThunarWindow*.<GtkHPaned>"               style "thunar-handle"
 
 #
-# Mousepad
+# Workaround for colored entries
 #
-
 style "entry_border" {
+
+  xthickness = 7
+  ythickness = 5
 
   engine "pixmap" {
 
     image {
       function = SHADOW
-      detail = "entry"
       state = NORMAL
-      shadow = IN
+      detail = "entry"
       file = "assets/entry-border-bg.png"
-      border = { 12, 12, 12, 12 }
+      border = {6, 6, 6, 6}
       stretch = TRUE
     }
 
     image {
       function = SHADOW
-      detail = "entry"
       state = ACTIVE
+      detail = "entry"
       file = "assets/entry-border-active-bg.png"
-      border = { 12, 12, 12, 12 }
+      border = {6, 6, 6, 6}
       stretch = TRUE
     }
 
@@ -73,4 +74,8 @@ style "entry_border" {
   }
 }
 
+# Mousepad search entry
 widget_class "*MousepadSearchBar*.<GtkEntry>"    style "entry_border"
+
+# Hexchat input box
+class "SexySpellEntry"                           style:highest "entry_border"

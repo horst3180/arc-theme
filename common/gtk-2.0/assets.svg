@@ -565,9 +565,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="4"
-     inkscape:cx="70.918098"
-     inkscape:cy="184.39866"
+     inkscape:zoom="11.313708"
+     inkscape:cx="-25.898322"
+     inkscape:cy="369.44312"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -5591,10 +5591,15 @@
        transform="translate(-1,31.999997)">
       <path
          inkscape:connector-curvature="0"
+         style="display:inline;opacity:1;fill:#f5f6f7;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="m -4,-280.63782 0,26 1,0 1,0 24,0 1,0 1,0 0,-26 -1,0 -1,0 -24,0 -1,0 -1,0 z m 2,2 24,0 0,22 -24,0 0,-22 z"
+         id="rect5006-1" />
+      <path
+         inkscape:connector-curvature="0"
          style="opacity:1;fill:#f5f6f7;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          d="m 110,66 0,24 26,0 0,-24 -26,0 z m 3.5,1 1,0 17,0 1,0 c 1.385,0 2.5,1.115 2.5,2.5 l 0,17 c 0,1.385 -1.115,2.5 -2.5,2.5 l -1,0 -17,0 -1,0 c -1.385,0 -2.5,-1.115 -2.5,-2.5 l 0,-17 c 0,-1.385 1.115,-2.5 2.5,-2.5 z"
-         transform="translate(-113,-345.63782)"
-         id="rect9321-3-7" />
+         id="rect9321-3-7"
+         transform="translate(-113,-345.63782)" />
       <rect
          rx="3.0000002"
          inkscape:transform-center-y="0.42353254"
@@ -5612,6 +5617,11 @@
        id="entry-border-active-bg"
        inkscape:label="#g9350"
        transform="translate(-1,31.999997)">
+      <path
+         inkscape:connector-curvature="0"
+         style="display:inline;opacity:1;fill:#f5f6f7;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 30,-280.63782 0,26 1,0 1,0 24,0 1,0 1,0 0,-26 -1,0 -1,0 -24,0 -1,0 -1,0 z m 2,2 24,0 0,22 -24,0 0,-22 z"
+         id="rect5006-1-1-1" />
       <path
          inkscape:connector-curvature="0"
          style="display:inline;opacity:1;fill:#f5f6f7;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
