@@ -980,10 +980,6 @@ style "entry" {
   xthickness = 6
   ythickness = 4
 
-  base[NORMAL] = @base_color
-  base[ACTIVE] = @base_color
-  base[INSENSITIVE] = @insensitive_bg_color
-
   engine "pixmap" {
 
     image {
@@ -1011,6 +1007,26 @@ style "entry" {
       file = "assets/entry-disabled-bg.png"
       border = {6, 6, 6, 6}
       stretch = TRUE
+    }
+
+    image {
+      function = FLAT_BOX
+      state    = ACTIVE
+      detail   = "entry_bg"
+      file     = "assets/entry-background.png"
+    }
+
+    image {
+      function = FLAT_BOX
+      state    = INSENSITIVE
+      detail   = "entry_bg"
+      file     = "assets/entry-background-disabled.png"
+    }
+
+    image {
+      function = FLAT_BOX
+      detail   = "entry_bg"
+      file     = "assets/entry-background.png"
     }
   }
 }

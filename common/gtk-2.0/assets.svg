@@ -565,9 +565,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.313708"
-     inkscape:cx="-25.898322"
-     inkscape:cy="369.44312"
+     inkscape:zoom="7.9999996"
+     inkscape:cx="68.971701"
+     inkscape:cy="353.39299"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -5640,5 +5640,25 @@
          id="rect7903-7-3-7-7"
          style="display:inline;opacity:1;fill:none;fill-opacity:1;stroke:#5294e2;stroke-width:0.99999994;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     </g>
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="entry-background"
+       width="6"
+       height="18"
+       x="67"
+       y="-245.63782"
+       rx="2.7755599e-17"
+       ry="2.7755599e-17"
+       inkscape:label="#rect5008" />
+    <rect
+       style="display:inline;opacity:1;fill:#fbfcfc;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="entry-background-disabled"
+       width="6"
+       height="18"
+       x="80"
+       y="-245.63782"
+       rx="2.7755599e-17"
+       ry="2.7755599e-17"
+       inkscape:label="#rect5008-1" />
   </g>
 </svg>

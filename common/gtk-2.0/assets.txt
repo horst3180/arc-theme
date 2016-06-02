@@ -42,6 +42,8 @@ menu-radio-checked-insensitive
 menu-radio-unchecked
 menu-radio-unchecked-selected
 menu-radio-unchecked-insensitive
+entry-background
+entry-background-disabled
 entry-border-bg
 entry-border-active-bg
 entry-bg
