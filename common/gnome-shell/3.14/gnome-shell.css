@@ -517,7 +517,7 @@ StScrollBar {
 .popup-separator-menu-item {
   -gradient-height: 0px;
   height: 2px;
-  margin: 10px 0px;
+  margin: 0;
   background-color: transparent;
   background-gradient-direction: none !important;
   border: none;

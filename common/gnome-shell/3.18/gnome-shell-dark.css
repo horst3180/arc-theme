@@ -495,7 +495,7 @@ StScrollBar {
 
 .popup-separator-menu-item {
   height: 2px;
-  margin: 10px 0;
+  margin: 0;
   background-color: transparent;
   border: none;
   border-image: url("common-assets/menu/menu-separator.svg") 1 1 1 1; }
