@@ -36,6 +36,7 @@ UnityDecoration {
   }
   &.left, &.right, &.bottom,
   &.left:backdrop, &.right:backdrop, &.bottom:backdrop {
+    background-color: transparent;
     background-image: linear-gradient(to bottom, if($darker=='true' or $variant == 'dark', darken($header_bg, 7%), transparentize(black, 0.9)));
   }
 }
