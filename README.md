@@ -129,6 +129,9 @@ from the same directory as this README resides in, or
 #### Arc Firefox theme
 A theme for Firefox is available at https://github.com/horst3180/arc-firefox-theme
 
+#### Arc icon theme
+The Arc icon theme is available at https://github.com/horst3180/arc-icon-theme
+
 #### Chrome/Chromium theme
 To install the Chrome/Chromium theme go to the `extra/Chrome` folder and drag and drop the arc-theme.crx or arc-dark-theme.crx file into the Chrome/Chromium window. The source of the Chrome themes is located in the source "Chrome/arc-theme" folder.
 
