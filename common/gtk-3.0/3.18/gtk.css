@@ -3728,6 +3728,25 @@ NautilusWindow GtkPlacesSidebar.sidebar {
     NautilusWindow GtkPlacesSidebar.sidebar .list-row.activatable:active:hover .sidebar-icon,
     NautilusWindow GtkPlacesSidebar.sidebar .has-open-popup:active .sidebar-icon {
       color: inherit; }
+  GtkFileChooserDialog GtkPlacesSidebar.sidebar .sidebar-button.button,
+  NautilusWindow GtkPlacesSidebar.sidebar .sidebar-button.button {
+    color: #BAC3CF; }
+    GtkFileChooserDialog GtkPlacesSidebar.sidebar .sidebar-button.button:hover,
+    NautilusWindow GtkPlacesSidebar.sidebar .sidebar-button.button:hover {
+      color: #BAC3CF;
+      outline-color: rgba(186, 195, 207, 0.3);
+      border-color: rgba(26, 28, 34, 0.35);
+      background-color: rgba(119, 127, 151, 0.45); }
+    GtkFileChooserDialog GtkPlacesSidebar.sidebar .sidebar-button.button:active,
+    NautilusWindow GtkPlacesSidebar.sidebar .sidebar-button.button:active {
+      background-clip: padding-box;
+      color: #ffffff;
+      outline-color: rgba(255, 255, 255, 0.3);
+      border-color: rgba(26, 28, 34, 0.35);
+      background-color: #5294E2; }
+    GtkFileChooserDialog GtkPlacesSidebar.sidebar .sidebar-button.button:not(:hover):not(:active) > GtkImage,
+    NautilusWindow GtkPlacesSidebar.sidebar .sidebar-button.button:not(:hover):not(:active) > GtkImage {
+      opacity: 0.5; }
   GtkFileChooserDialog GtkPlacesSidebar.sidebar .separator, GtkFileChooserDialog GtkPlacesSidebar.sidebar .view.separator,
   NautilusWindow GtkPlacesSidebar.sidebar .separator,
   NautilusWindow GtkPlacesSidebar.sidebar .view.separator {
@@ -3736,25 +3755,6 @@ NautilusWindow GtkPlacesSidebar.sidebar {
 GtkFileChooserDialog.maximized GtkPlacesSidebar.sidebar,
 NautilusWindow.maximized GtkPlacesSidebar.sidebar {
   background-color: #353945; }
-
-GtkFileChooserDialog .sidebar-button.button,
-NautilusWindow .sidebar-button.button {
-  color: #BAC3CF; }
-  GtkFileChooserDialog .sidebar-button.button:hover,
-  NautilusWindow .sidebar-button.button:hover {
-    color: #BAC3CF;
-    outline-color: rgba(186, 195, 207, 0.3);
-    border-color: rgba(26, 28, 34, 0.35);
-    background-color: rgba(119, 127, 151, 0.45); }
-  GtkFileChooserDialog .sidebar-button.button:active,
-  NautilusWindow .sidebar-button.button:active {
-    color: #ffffff;
-    outline-color: rgba(255, 255, 255, 0.3);
-    border-color: rgba(26, 28, 34, 0.35);
-    background-color: #5294E2; }
-  GtkFileChooserDialog .sidebar-button.button:not(:hover):not(:active) > GtkImage,
-  NautilusWindow .sidebar-button.button:not(:hover):not(:active) > GtkImage {
-    opacity: 0.5; }
 
 NemoWindow.csd.background,
 NemoWindow .source-list, NemoWindow .source-list.view, NemoWindow .source-list.view:prelight,

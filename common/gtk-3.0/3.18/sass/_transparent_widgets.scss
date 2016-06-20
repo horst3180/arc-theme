@@ -47,21 +47,24 @@ NautilusWindow {
       }
     }
 
+    .sidebar-button.button {
+      color: $dark_sidebar_fg;
+
+      &:hover { @include button(osd-hover); }
+      &:active {
+        background-clip: padding-box;
+        @include button(osd-active);
+      }
+
+      &:not(:hover):not(:active) > GtkImage { opacity: 0.5 };
+    }
+
     .separator { color: transparent; }
 
     .scrollbar { @extend %dark_sidebar_scrollbar }
   }
 
   &.maximized GtkPlacesSidebar.sidebar { background-color: opacify($dark_sidebar_bg, 1); }
-
-  .sidebar-button.button {
-    color: $dark_sidebar_fg;
-
-    &:hover { @include button(osd-hover); }
-    &:active { @include button(osd-active); }
-
-    &:not(:hover):not(:active) > GtkImage { opacity: 0.5 };
-  }
 }
 
 
