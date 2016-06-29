@@ -2870,6 +2870,9 @@ GeditStatusMenuButton.sidebar-button.button:checked {
 GeditFileBrowserWidget .toolbar, GeditFileBrowserWidget .inline-toolbar {
   border-bottom: 1px solid #dcdfe3; }
 
+.gedit-map-frame {
+  border-color: rgba(0, 0, 0, 0.3); }
+
 .gedit-search-entry-occurrences-tag {
   color: rgba(92, 97, 108, 0.6);
   border: none;

@@ -239,6 +239,16 @@ $disk_space_free: darken($bg_color, 3%);
   padding: 2px;
 }
 
+.gedit-map-frame {
+  border {
+    @if $variant=='light' { border-color: transparentize(black, 0.7); }
+    border-width: 0;
+
+    &:dir(ltr) { border-left-width: 1px; }
+    &:dir(rtl) { border-right-width: 1px; }
+  }
+}
+
 //
 // Gnome Builder
 //

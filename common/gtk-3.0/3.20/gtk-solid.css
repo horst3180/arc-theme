@@ -3292,6 +3292,14 @@ popover.background label.nautilus-canvas-item.separator, headerbar .nautilus-can
   margin: 2px;
   padding: 2px; }
 
+.gedit-map-frame border {
+  border-color: rgba(0, 0, 0, 0.3);
+  border-width: 0; }
+  .gedit-map-frame border:dir(ltr) {
+    border-left-width: 1px; }
+  .gedit-map-frame border:dir(rtl) {
+    border-right-width: 1px; }
+
 .gb-search-entry-occurrences-tag {
   background: none; }
 

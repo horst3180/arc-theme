@@ -282,11 +282,14 @@ GeditStatusMenuButton:checked.button.flat {
   border-radius: 0;
 }
 
-
 GeditViewFrame .gedit-search-slider { @extend %search_slider }
 
 GeditFileBrowserWidget .toolbar {
   border-bottom: 1px solid $borders_color;
+}
+
+.gedit-map-frame {
+  @if $variant=='light' { border-color: transparentize(black, 0.7); }
 }
 
 .gedit-search-entry-occurrences-tag {
