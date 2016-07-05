@@ -4128,6 +4128,12 @@ filechooser actionbar {
 .gedit-bottom-panel-paned {
   background-color: #ffffff; }
 
+.gedit-side-panel-paned > separator {
+  background-image: linear-gradient(to top, #353945); }
+
+.gedit-bottom-panel-paned > separator {
+  background-image: linear-gradient(to top, #dcdfe3); }
+
 .gedit-document-panel {
   background-color: #353945; }
   .maximized .gedit-document-panel {

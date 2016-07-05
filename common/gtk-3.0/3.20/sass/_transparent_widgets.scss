@@ -145,6 +145,9 @@ filechooser {
 // Gedit
 .gedit-bottom-panel-paned { background-color: $base_color; }
 
+.gedit-side-panel-paned > separator { background-image: linear-gradient(to top, $dark_sidebar_border); }
+.gedit-bottom-panel-paned > separator { background-image: linear-gradient(to top, $borders_color); }
+
 .gedit-document-panel {
   background-color: $dark_sidebar_bg;
 
