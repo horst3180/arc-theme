@@ -2194,20 +2194,19 @@ style "eclipse-tooltips" {
 style "xfdesktop-icon-view" {
   XfdesktopIconView::label-alpha = 0
   XfdesktopIconView::selected-label-alpha = 100
-  XfdesktopIconVIew::ellipsize-icon-labels = 1
-
-  base[NORMAL] = @selected_bg_color
-  base[SELECTED] = @selected_bg_color
-  base[ACTIVE] = @selected_bg_color
+  XfdesktopIconView::shadow-x-offset = 0
+  XfdesktopIconView::shadow-y-offset = 1
+  XfdesktopIconView::selected-shadow-x-offset = 0
+  XfdesktopIconView::selected-shadow-y-offset = 1
+  XfdesktopIconView::shadow-color = "#000000"
+  XfdesktopIconView::selected-shadow-color = "#000000"
+  XfdesktopIconView::shadow-blur-radius = 2
+  XfdesktopIconView::cell-spacing = 2
+  XfdesktopIconView::cell-padding = 6
+  XfdesktopIconView::cell-text-width-proportion = 1.9
 
   fg[NORMAL] = @selected_fg_color
-  fg[SELECTED] = @selected_fg_color
   fg[ACTIVE] = @selected_fg_color
-
-  engine "murrine" {
-    textstyle = 5
-    text_shade = 0.05
-  }
 }
 
 style "xfwm-tabwin" {
