@@ -157,6 +157,9 @@ If you get artifacts like black or invisible backgrounds under Unity, disable ov
 ### Bug reporting
 If you find a bug, please report it at https://github.com/horst3180/arc-theme/issues
 
+### License
+Arc is available under the terms the GPL-3.0. See `COPYING` for details.
+
 ### Full Preview
 ![A full screenshot of the Arc theme](http://i.imgur.com/tD1OBQ3.png)
 <sub>Screenshot Details: Icons: [Arc](https://github.com/horst3180/arc-icon-theme) | Launcher Icons based on [White Pixel Icons](http://darkdawg.deviantart.com/art/White-Pixel-Icons-252310560) | [Wallpaper](https://pixabay.com/photo-869593/) | Font: Futura Bk bt</sub>
