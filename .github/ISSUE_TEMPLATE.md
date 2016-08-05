@@ -15,6 +15,8 @@
 
 ### Checks
 
+*Put a "x" in the space between braces.*
+
 - [ ] I ***really*** read the list above.
   - [ ] I checked if my issue isn't duplicated.
 - [ ] I read the README.
@@ -22,9 +24,9 @@
 - [ ] I installed/built the package *specifically* for the GTK **AND** distribution version that I'm using.
 - [ ] I re-login to my user session.
 
-*Put a "x" in the space between braces.*
-
 ### Details
+
+*Don't put "latest" in "version" items.*
 
 - Distribution (with version):
   - Base distribution (with version)**\*1**:
@@ -37,7 +39,5 @@
   - [ ] Package.
   - [ ] Source.
   - Other:
-
-*Don't put "latest" in "version" items.*
 
 **\*1**: If not, just put "independent".
