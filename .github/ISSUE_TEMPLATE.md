@@ -26,12 +26,15 @@
 
 ### Details
 
-- Distribution:
-- Desktop environment:
-- GTK+ 3 version:
+- Distribution (with version):
+- Desktop environment (with version):
 - Arc version/commit:
+- GTK+ 3 version:
+  - Murrine engine version:
+  - `gnome-themes-standard` version:
 - Installation method:
   - [ ] Package.
   - [ ] Source.
+  - Other:
 
 *Don't put "latest" in "version" items.*
