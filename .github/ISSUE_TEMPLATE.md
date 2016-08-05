@@ -27,6 +27,7 @@
 ### Details
 
 - Distribution (with version):
+  - Base distribution (with version)**\*1**:
 - Desktop environment (with version):
 - Arc version/commit:
 - GTK+ 3 version:
@@ -38,3 +39,5 @@
   - Other:
 
 *Don't put "latest" in "version" items.*
+
+**\*1**: If not, just put "independent".
