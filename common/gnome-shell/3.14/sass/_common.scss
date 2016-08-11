@@ -169,7 +169,7 @@ StScrollBar {
   -slider-active-background-color: $selected_bg_color;        //active trough fill
   -slider-active-border-color: transparentize(black, 1);      //active trough border
   -slider-border-width: 0;
-  -slider-handle-radius: 4px;
+  -slider-handle-radius: 0px;
   -slider-handle-border-color: transparent;
   -slider-handle-border-width: 0;
   height: 18px;
