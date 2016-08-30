@@ -16,7 +16,6 @@
     color: $text_color;
     border-color: $entry_border;
     background-color: $entry_bg;
-    background-image: linear-gradient(to bottom, $entry_bg);
   }
 
   @if $t==focus {
@@ -26,7 +25,6 @@
     color: $text_color;
     border-color: if($variant=='light', $selected_bg_color, $button_border);
     background-color: $entry_bg;
-    background-image: linear-gradient(to bottom, $entry_bg);
 
     @if $variant == 'dark' {
       box-shadow: inset 1px 0 $selected_bg_color,
@@ -43,7 +41,6 @@
     color: $insensitive_fg_color;
     border-color: transparentize($entry_border, 0.45);
     background-color: transparentize($entry_bg, 0.45);
-    background-image: linear-gradient(to bottom, transparentize($entry_bg, 0.45));
   }
 
   @if $t==header-normal {
@@ -53,8 +50,7 @@
 
     color: $header_fg;
     border-color: $header_entry_border;
-    background-image: linear-gradient(to bottom, $header_entry_bg);
-    background-color: transparent;
+    background-color: $header_entry_bg;
 
     image, image:hover { color: inherit; }
   }
@@ -65,7 +61,7 @@
   //
     color: $selected_fg_color;
     border-color: if($darker=='false' and $variant=='light', $selected_bg_color, transparent);
-    background-image: linear-gradient(to bottom, $selected_bg_color);
+    background-color: $selected_bg_color;
   }
 
   @if $t==header-insensitive {
@@ -73,7 +69,7 @@
   // insensitive header-bar entry
   //
     color: transparentize($header_fg, 0.45);
-    background-image: linear-gradient(to bottom, transparentize($header_entry_bg, 0.15));
+    background-color: transparentize($header_entry_bg, 0.15);
   }
 
   @else if $t==osd {
@@ -82,8 +78,7 @@
   //
     color: $osd_fg_color;
     border-color: $osd_entry_border;
-    background-image: linear-gradient(to bottom, $osd_entry_bg);
-    background-color: transparent;
+    background-color: $osd_entry_bg;
 
     image, image:hover { color: inherit; }
   }
@@ -94,7 +89,7 @@
   //
     color: $selected_fg_color;
     border-color: $osd_entry_border;
-    background-image: linear-gradient(to bottom, $selected_bg_color);
+    background-color: $selected_bg_color;
   }
 
   @else if $t==osd-insensitive {
@@ -102,7 +97,7 @@
   // insensitive osd entry
   //
     color: transparentize($osd_fg_color, 0.45);
-    background-image: linear-gradient(to bottom, transparentize($osd_entry_bg, 0.15));
+    background-color: transparentize($osd_entry_bg, 0.15);
   }
 }
 

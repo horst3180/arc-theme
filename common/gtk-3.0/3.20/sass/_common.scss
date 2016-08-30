@@ -239,13 +239,13 @@ entry {
     &.#{$e_type} {
       color: $e_fg_color;
       border-color: if($variant=='light', $e_color, $entry_border);
-      background-image: linear-gradient(to bottom, mix($e_color, $base_color, 60%));
+      background-color: mix($e_color, $base_color, 60%);
 
       image { color: $e_fg_color; }
 
       &:focus {
         color: $e_fg_color;
-        background-image: linear-gradient(to bottom, $e_color);
+        background-color: $e_color;
         box-shadow: none;
       }
       selection, selection:focus {
@@ -1147,11 +1147,11 @@ headerbar {
       &.#{$e_type} {
         color: $e_fg_color;
         border-color: if($darker=='false' and $variant=='light', $e_color, $header_entry_border);
-        background-image: linear-gradient(to bottom, mix($e_color, $header_bg, 60%));
+        background-color: mix($e_color, $header_bg, 60%);
 
         &:focus {
           color: $e_fg_color;
-          background-image: linear-gradient(to bottom, $e_color);
+          background-color: $e_color;
         }
         selection, selection:focus {
           background-color: $e_fg_color;
