@@ -250,15 +250,27 @@ endif # ENABLE_UNITY
 if ENABLE_XFWM
 
 if ENABLE_LIGHT
-	cp -R $(srcdir)/xfwm4 $(ithemedir)
+	$(MKDIR_P) $(ithemedir)/xfwm4
+
+	cd $(srcdir)/xfwm4 && \
+		cp -R assets/*.png $(ithemedir)/xfwm4 && \
+		cp themerc $(ithemedir)/xfwm4/themerc
 endif # ENABLE_LIGHT
 
 if ENABLE_DARKER
-	cp -R $(srcdir)/xfwm4-dark $(ithemedarkerdir)/xfwm4
+	$(MKDIR_P) $(ithemedarkerdir)/xfwm4
+
+	cd $(srcdir)/xfwm4 && \
+		cp -R assets-dark/*.png $(ithemedarkerdir)/xfwm4 && \
+		cp themerc-dark $(ithemedarkerdir)/xfwm4/themerc
 endif # ENABLE_DARKER
 
 if ENABLE_DARK
-	cp -R $(srcdir)/xfwm4-dark $(ithemedarkdir)/xfwm4
+	$(MKDIR_P) $(ithemedarkdir)/xfwm4
+
+	cd $(srcdir)/xfwm4 && \
+		cp -R assets-dark/*.png $(ithemedarkdir)/xfwm4 && \
+		cp themerc-dark $(ithemedarkdir)/xfwm4/themerc
 endif # ENABLE_DARK
 
 endif # ENABLE_XFWM
@@ -283,7 +295,6 @@ EXTRA_DIST = $(srcdir)/cinnamon \
 	     $(srcdir)/metacity-1 \
 	     $(srcdir)/unity \
 	     $(srcdir)/xfwm4 \
-	     $(srcdir)/xfwm4-dark \
 	     $(srcdir)/index.theme \
 	     $(srcdir)/index.theme-darker \
 	     $(srcdir)/index.theme-dark
