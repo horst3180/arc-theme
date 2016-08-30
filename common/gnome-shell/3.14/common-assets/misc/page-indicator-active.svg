@@ -2,11 +2,13 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="18"
@@ -16,7 +18,25 @@
    inkscape:version="0.91 r13725"
    sodipodi:docname="page-indicator-active.svg">
   <defs
-     id="defs5268" />
+     id="defs5268">
+    <linearGradient
+       id="selected_bg_color"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#5294e2;stop-opacity:1;"
+         offset="0"
+         id="stop4137" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#selected_bg_color"
+       id="linearGradient4139"
+       x1="9"
+       y1="3"
+       x2="9"
+       y2="11"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
   <sodipodi:namedview
      id="base"
      pagecolor="#cacaca"
@@ -25,8 +45,8 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="16"
-     inkscape:cx="0.44498099"
-     inkscape:cy="7.5490324"
+     inkscape:cx="-10.742519"
+     inkscape:cy="7.4240324"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:grid-bbox="true"
@@ -58,7 +78,7 @@
      inkscape:groupmode="layer"
      transform="translate(0,2)">
     <circle
-       style="opacity:1;fill:#5294e2;fill-opacity:1;stroke:none;stroke-opacity:0.70588235"
+       style="opacity:1;fill:url(#linearGradient4139);fill-opacity:1;stroke:none;stroke-opacity:0.70588235"
        id="path4136"
        cx="9"
        cy="7"

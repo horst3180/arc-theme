@@ -2,6 +2,7 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -41,9 +42,9 @@
      inkscape:window-height="604"
      id="namedview4173"
      showgrid="true"
-     inkscape:zoom="32.539233"
-     inkscape:cx="4.868656"
-     inkscape:cy="11.433325"
+     inkscape:zoom="16.269617"
+     inkscape:cx="3.8757831"
+     inkscape:cy="6.3385392"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
@@ -58,6 +59,14 @@
   </sodipodi:namedview>
   <defs
      id="defs7357">
+    <linearGradient
+       id="selected_bg_color"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#5294e2;stop-opacity:1;"
+         offset="0"
+         id="stop4177" />
+    </linearGradient>
     <radialGradient
        xlink:href="#linearGradient36429"
        id="radialGradient7461"
@@ -110,6 +119,15 @@
        gradientUnits="userSpaceOnUse"
        id="radialGradient7488"
        xlink:href="#linearGradient36471" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#selected_bg_color"
+       id="linearGradient4179"
+       x1="16.551009"
+       y1="162.13155"
+       x2="16.551009"
+       y2="172"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <g
      id="layer1"
@@ -119,11 +137,21 @@
        id="g30864"
        transform="translate(255.223,70.118091)">
       <rect
-         style="opacity:1;fill:#2f7fdc;fill-opacity:1;stroke:none"
-         id="rect4145"
+         rx="1.2335529"
+         style="display:inline;opacity:1;fill:url(#linearGradient4179);fill-opacity:1;stroke:none"
+         id="rect4145-3"
          width="8.6348982"
          height="9.8684559"
-         x="12.233559"
+         x="12.23356"
+         y="162.13155"
+         ry="1.2335529" />
+      <rect
+         rx="1.2335529"
+         style="display:inline;opacity:1;fill:#000000;fill-opacity:0.17647059;stroke:none"
+         id="rect4145-3-8"
+         width="8.6348982"
+         height="9.8684559"
+         x="12.23356"
          y="162.13155"
          ry="1.2335529" />
     </g>

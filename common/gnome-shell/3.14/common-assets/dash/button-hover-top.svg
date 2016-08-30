@@ -2,6 +2,7 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -42,8 +43,8 @@
      id="namedview4173"
      showgrid="true"
      inkscape:zoom="23.008712"
-     inkscape:cx="-1.3250204"
-     inkscape:cy="6.23352"
+     inkscape:cx="8.2148443"
+     inkscape:cy="9.6235403"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
@@ -110,6 +111,24 @@
        gradientUnits="userSpaceOnUse"
        id="radialGradient7488"
        xlink:href="#linearGradient36471" />
+    <linearGradient
+       gradientTransform="translate(151.13154,-183.00001)"
+       inkscape:collect="always"
+       xlink:href="#selected_bg_color"
+       id="linearGradient4149"
+       x1="16.551008"
+       y1="162.13155"
+       x2="16.551008"
+       y2="172"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       id="selected_bg_color"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#5294e2;stop-opacity:1;"
+         offset="0"
+         id="stop4147" />
+    </linearGradient>
   </defs>
   <g
      id="layer1"
@@ -119,13 +138,14 @@
        id="g30864"
        transform="translate(255.223,70.118091)">
       <rect
-         style="opacity:1;fill:#5294e2;fill-opacity:1;stroke:none"
-         id="rect4145"
+         rx="1.2335529"
+         style="display:inline;opacity:1;fill:url(#linearGradient4149);fill-opacity:1;stroke:none"
+         id="rect4145-6"
          width="8.6348982"
          height="9.8684559"
          x="163.3651"
          y="-20.868458"
-         ry="1.2335573"
+         ry="1.2335529"
          transform="matrix(0,1,-1,0,0,0)" />
     </g>
   </g>

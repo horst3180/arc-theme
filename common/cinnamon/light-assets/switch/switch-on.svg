@@ -2,11 +2,13 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="50"
@@ -17,6 +19,22 @@
    sodipodi:docname="switch-on.svg">
   <defs
      id="defs7541">
+    <linearGradient
+       id="selected_fg_color"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop4181" />
+    </linearGradient>
+    <linearGradient
+       id="selected_bg_color"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#5294e2;stop-opacity:1;"
+         offset="0"
+         id="stop4166" />
+    </linearGradient>
     <linearGradient
        id="linearGradient4695-1-4-3-5-0-6">
       <stop
@@ -91,6 +109,42 @@
          offset="1"
          style="stop-color:#ffffff;stop-opacity:1;" />
     </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#selected_bg_color"
+       id="linearGradient4168"
+       x1="26"
+       y1="1031.3622"
+       x2="26"
+       y2="1051.3622"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#selected_fg_color"
+       id="linearGradient4183"
+       x1="980.04999"
+       y1="-456.09485"
+       x2="980.04999"
+       y2="-454.09487"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#selected_fg_color"
+       id="linearGradient4185"
+       x1="981.54999"
+       y1="-462.09485"
+       x2="981.54999"
+       y2="-454.09487"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#selected_fg_color"
+       id="linearGradient4187"
+       x1="41"
+       y1="1032.3622"
+       x2="41"
+       y2="1050.3622"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -99,10 +153,10 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="32.998318"
-     inkscape:cx="6.3160735"
-     inkscape:cy="9.1853829"
-     inkscape:current-layer="layer1"
+     inkscape:zoom="8.2495795"
+     inkscape:cx="1.2517535"
+     inkscape:cy="0.45938131"
+     inkscape:current-layer="switch-active-2"
      showgrid="true"
      inkscape:grid-bbox="true"
      inkscape:document-units="px"
@@ -140,7 +194,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -175,7 +229,7 @@
                x="0"
                y="1029.3622" />
             <rect
-               style="fill:#5294e2;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               style="fill:url(#linearGradient4168);fill-opacity:1;fill-rule:nonzero;stroke:none"
                id="rect2987-0-8"
                width="50"
                height="20"
@@ -184,7 +238,7 @@
                ry="11"
                rx="11" />
             <circle
-               style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               style="fill:url(#linearGradient4187);fill-opacity:1;fill-rule:nonzero;stroke:none"
                id="path3759-0"
                cx="41"
                cy="1041.3622"
@@ -204,7 +258,7 @@
            height="1.9999826"
            width="5"
            id="rect3977-39-2"
-           style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none" />
+           style="display:inline;opacity:1;fill:url(#linearGradient4183);fill-opacity:1;stroke:none" />
         <rect
            transform="matrix(0.70710678,0.70710678,-0.70710678,0.70710678,0,0)"
            ry="0"
@@ -213,7 +267,7 @@
            height="7.9999828"
            width="2"
            id="rect3979-7-0"
-           style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none" />
+           style="display:inline;opacity:1;fill:url(#linearGradient4185);fill-opacity:1;stroke:none" />
       </g>
     </g>
   </g>

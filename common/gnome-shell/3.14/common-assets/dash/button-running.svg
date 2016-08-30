@@ -2,6 +2,7 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -42,8 +43,8 @@
      id="namedview4173"
      showgrid="true"
      inkscape:zoom="23.008712"
-     inkscape:cx="4.4119369"
-     inkscape:cy="6.5812144"
+     inkscape:cx="3.5861627"
+     inkscape:cy="9.9712347"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
@@ -58,6 +59,14 @@
   </sodipodi:namedview>
   <defs
      id="defs7357">
+    <linearGradient
+       id="selected_bg_color"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#5294e2;stop-opacity:1;"
+         offset="0"
+         id="stop4147" />
+    </linearGradient>
     <radialGradient
        xlink:href="#linearGradient36429"
        id="radialGradient7461"
@@ -110,6 +119,15 @@
        gradientUnits="userSpaceOnUse"
        id="radialGradient7488"
        xlink:href="#linearGradient36471" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#selected_bg_color"
+       id="linearGradient4149"
+       x1="167.06577"
+       y1="-12.233559"
+       x2="167.06577"
+       y2="-11.000002"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <g
      id="layer1"
@@ -119,7 +137,7 @@
        id="g30864"
        transform="translate(255.223,70.118091)">
       <rect
-         style="opacity:1;fill:#5294e2;fill-opacity:1;stroke:none"
+         style="opacity:1;fill:url(#linearGradient4149);fill-opacity:1;stroke:none"
          id="rect4147"
          width="4.9342208"
          height="1.233557"

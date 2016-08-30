@@ -2,11 +2,13 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    sodipodi:docname="calendar-arrow-left-hover.svg"
@@ -33,8 +35,8 @@
      bordercolor="#666666"
      borderopacity="1"
      inkscape:current-layer="layer12"
-     inkscape:cx="14.072123"
-     inkscape:cy="8.0207106"
+     inkscape:cx="6.1613659"
+     inkscape:cy="7.9323223"
      gridtolerance="10"
      inkscape:guide-bbox="true"
      guidetolerance="10"
@@ -92,7 +94,25 @@
   <title
      id="title9167">Gnome Symbolic Icon Theme</title>
   <defs
-     id="defs7386" />
+     id="defs7386">
+    <linearGradient
+       id="selected_bg_color"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#5294e2;stop-opacity:1;"
+         offset="0"
+         id="stop4147" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#selected_bg_color"
+       id="linearGradient4149"
+       x1="108.00018"
+       y1="751"
+       x2="108.00018"
+       y2="758.99959"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
   <g
      inkscape:groupmode="layer"
      id="layer9"
@@ -144,7 +164,7 @@
      style="display:inline"
      transform="translate(-100.0002,-747)">
     <path
-       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:Sans;-inkscape-font-specification:Sans;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:start;display:inline;overflow:visible;visibility:visible;fill:#5294e2;fill-opacity:1;stroke:none;stroke-width:2;marker:none;enable-background:accumulate"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:Sans;-inkscape-font-specification:Sans;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:start;display:inline;overflow:visible;visibility:visible;fill:url(#linearGradient4149);fill-opacity:1;stroke:none;stroke-width:2;marker:none;enable-background:accumulate"
        d="m 109.82336,751.00006 a 0.67182557,0.66502524 0 0 0 -0.10367,0.009 0.67182557,0.66502524 0 0 0 -0.39887,0.18702 l -3.35878,3.32479 -0.46184,0.47795 0.46184,0.47792 3.35878,3.32481 a 0.68281953,0.67590797 0 0 0 0.698,0.16363 c 0.0374,0.0143 0.0779,0.0233 0.1207,0.0233 0.18608,0 0.33589,-0.14829 0.33589,-0.33248 0,-0.0423 -0.009,-0.0823 -0.0236,-0.11948 a 0.68281953,0.67590797 0 0 0 -0.16531,-0.69094 l -2.876,-2.84689 2.87597,-2.84686 a 0.67182557,0.66502524 0 0 0 0.17056,-0.72082 c 0.008,-0.0292 0.0185,-0.058 0.0185,-0.0896 0,-0.18421 -0.14978,-0.33249 -0.33587,-0.33249 -0.0395,0 -0.0765,0.01 -0.11152,0.022 A 0.67182557,0.66502524 0 0 0 109.82334,751 Z"
        id="path6040"
        inkscape:connector-curvature="0" />

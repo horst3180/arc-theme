@@ -2,11 +2,13 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    inkscape:export-ydpi="90.000000"
@@ -30,8 +32,8 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="19.769527"
-     inkscape:cx="7.1711103"
-     inkscape:cy="3.7516472"
+     inkscape:cx="10.256667"
+     inkscape:cy="-0.39615057"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:grid-bbox="true"
@@ -74,7 +76,25 @@
        snapvisiblegridlinesonly="true" />
   </sodipodi:namedview>
   <defs
-     id="defs3" />
+     id="defs3">
+    <linearGradient
+       id="selected_bg_color"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#5294e2;stop-opacity:1;"
+         offset="0"
+         id="stop4140" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#selected_bg_color"
+       id="linearGradient4142"
+       x1="5"
+       y1="298"
+       x2="5"
+       y2="300"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
   <metadata
      id="metadata4">
     <rdf:RDF>
@@ -132,7 +152,7 @@
      id="layer1"
      transform="translate(0,-296)">
     <rect
-       style="opacity:1;fill:#5294e2;fill-opacity:1;stroke:none"
+       style="opacity:1;fill:url(#linearGradient4142);fill-opacity:1;stroke:none"
        id="rect4270-9"
        width="4"
        height="2"
@@ -144,9 +164,9 @@
        height="2"
        width="4"
        id="rect4202"
-       style="opacity:1;fill:#5294e2;fill-opacity:1;stroke:none" />
+       style="opacity:1;fill:url(#selected_bg_color);fill-opacity:1;stroke:none" />
     <rect
-       style="opacity:1;fill:#5294e2;fill-opacity:1;stroke:none"
+       style="opacity:1;fill:url(#selected_bg_color);fill-opacity:1;stroke:none"
        id="rect4208"
        width="4"
        height="2"
@@ -158,6 +178,6 @@
        height="2"
        width="4"
        id="rect4214"
-       style="opacity:1;fill:#5294e2;fill-opacity:1;stroke:none" />
+       style="opacity:1;fill:url(#selected_bg_color);fill-opacity:1;stroke:none" />
   </g>
 </svg>

@@ -2,11 +2,13 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    sodipodi:docname="calendar-arrow-right-hover.svg"
@@ -33,8 +35,8 @@
      bordercolor="#666666"
      borderopacity="1"
      inkscape:current-layer="layer12"
-     inkscape:cx="3.892693"
-     inkscape:cy="8.8200689"
+     inkscape:cx="-7.294807"
+     inkscape:cy="8.6950689"
      gridtolerance="10"
      inkscape:guide-bbox="true"
      guidetolerance="10"
@@ -91,7 +93,26 @@
   <title
      id="title9167">Gnome Symbolic Icon Theme</title>
   <defs
-     id="defs7386" />
+     id="defs7386">
+    <linearGradient
+       id="selected_bg_color"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#5294e2;stop-opacity:1;"
+         offset="0"
+         id="stop4149" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#selected_bg_color"
+       id="linearGradient4151"
+       x1="328.68296"
+       y1="748.97592"
+       x2="328.68296"
+       y2="761.01651"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-321.0002,-747)" />
+  </defs>
   <g
      inkscape:groupmode="layer"
      id="layer9"
@@ -143,29 +164,9 @@
      style="display:inline"
      transform="translate(-321.0002,-747)">
     <path
-       inkscape:connector-curvature="0"
-       d="m 325.78125,749 a 1.0001,1.0001 0 0 0 -0.5,1.71875 L 329.5625,755 l -4.28125,4.28125 a 1.016466,1.016466 0 1 0 1.4375,1.4375 l 5,-5 0.6875,-0.71875 -0.6875,-0.71875 -5,-5 A 1.0001,1.0001 0 0 0 325.78125,749 z"
-       id="path8460"
-       style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#5294e2;fill-opacity:1;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans" />
-    <rect
-       height="1"
-       id="rect8464"
-       rx="0"
-       ry="1"
-       style="fill:#5294e2;fill-opacity:1;stroke:none"
-       transform="scale(-1,1)"
-       width="1"
-       x="-326.00021"
-       y="749" />
-    <rect
-       height="1"
-       id="rect8468"
-       rx="0"
-       ry="1"
-       style="fill:#5294e2;fill-opacity:1;stroke:none"
-       transform="scale(-1,1)"
-       width="1"
-       x="-326.00021"
-       y="760" />
+       style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:url(#linearGradient4151);fill-opacity:1;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
+       d="M 5.0019531 1.9765625 A 1.0001 1.0001 0 0 0 4.78125 2 A 1.0001 1.0001 0 0 0 4.6582031 2.03125 C 4.6079631 2.0143799 4.5560659 2 4.5 2 C 4.223 2 4 2.223 4 2.5 C 4 2.5456784 4.0140203 2.5869226 4.0253906 2.6289062 A 1.0001 1.0001 0 0 0 4.28125 3.71875 L 8.5625 8 L 4.28125 12.28125 A 1.016466 1.016466 0 0 0 4.0351562 13.320312 C 4.0136534 13.376215 4 13.436343 4 13.5 C 4 13.777 4.223 14 4.5 14 C 4.5636567 14 4.6237855 13.986347 4.6796875 13.964844 A 1.016466 1.016466 0 0 0 5.71875 13.71875 L 10.71875 8.71875 L 11.40625 8 L 10.71875 7.28125 L 5.71875 2.28125 A 1.0001 1.0001 0 0 0 5.0019531 1.9765625 z "
+       transform="translate(321.0002,747)"
+       id="path8460" />
   </g>
 </svg>

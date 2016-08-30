@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="150"
@@ -39,8 +41,8 @@
      id="namedview14"
      showgrid="true"
      inkscape:zoom="1.1125147"
-     inkscape:cx="-43.492975"
-     inkscape:cy="93.596539"
+     inkscape:cx="-204.38973"
+     inkscape:cy="91.79881"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="1"
@@ -51,6 +53,14 @@
   </sodipodi:namedview>
   <defs
      id="defs4">
+    <linearGradient
+       id="selected_bg_color"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#5294e2;stop-opacity:1;"
+         offset="0"
+         id="stop4138" />
+    </linearGradient>
     <clipPath
        id="clipPath6">
       <rect
@@ -64,9 +74,18 @@
          rx="42"
          id="rect8" />
     </clipPath>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#selected_bg_color"
+       id="linearGradient4140"
+       x1="75"
+       y1="1"
+       x2="75"
+       y2="148"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <rect
-     style="fill:#5294e2;fill-opacity:1;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none"
+     style="fill:url(#linearGradient4140);fill-opacity:1;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none"
      id="rect2995"
      width="148"
      height="147"

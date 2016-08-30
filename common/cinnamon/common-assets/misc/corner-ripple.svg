@@ -34,8 +34,8 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:zoom="2.3864854"
-     inkscape:cx="-38.639816"
-     inkscape:cy="27.143174"
+     inkscape:cx="54.174496"
+     inkscape:cy="43.066171"
      inkscape:current-layer="svg2" />
   <defs
      id="defs4">
@@ -68,7 +68,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
