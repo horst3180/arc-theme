@@ -30,6 +30,7 @@ $font-family: Futura Bk bt, Cantarell, Sans-Serif;
 $_bubble_bg_color: opacify($osd_bg_color,0.25);
 $_bubble_fg_color: $osd_fg_color;
 $_bubble_borders_color: transparentize($osd_fg_color,0.8);
+$_shell_fg_color: white;
 
 stage {
   font-family: $font-family;
@@ -338,17 +339,17 @@ StScrollBar {
 
   // Shutdown Button
   .button:last-child {
-    color: $selected_fg_color;
+    color: $destructive_fg_color;
     background-color: $destructive_color;
     border-color: $destructive_color;
 
     &:hover {
-      color: $selected_fg_color;
+      color: $destructive_fg_color;
       background-color: lighten($destructive_color, 9%);
       border-color: lighten($destructive_color, 9%);
     }
     &:active {
-      color: $selected_fg_color;
+      color: $destructive_fg_color;
       background-color: darken($destructive_color, 5%);
       border-color: darken($destructive_color, 5%);
     }
@@ -618,7 +619,7 @@ StScrollBar {
   min-width: 64px;
   min-height: 64px;
 
-  color: $selected_fg_color;
+  color: $_shell_fg_color;
   background: none;
   border: none;
   border-radius: 5px;
@@ -698,7 +699,7 @@ StScrollBar {
   color: $osd_fg_color;
 
   &:highlighted {
-    color: $selected_fg_color;
+    color: $_shell_fg_color;
   }
 }
 
@@ -776,6 +777,8 @@ StScrollBar {
 // Top Bar
 //
 #panel {
+  $_panel_fg_color: $_shell_fg_color;
+
   font-weight: bold;
   height: 2.1em;
   min-height: 27px;
@@ -821,7 +824,7 @@ StScrollBar {
     -natural-hpadding: 10px;
     -minimum-hpadding: 6px;
     font-weight: bold;
-    color: $selected_fg_color;
+    color: $_panel_fg_color;
     transition-duration: 100ms;
     border-bottom-width: 1px;
     border-color: transparent;
@@ -834,7 +837,7 @@ StScrollBar {
     }
 
     &:hover {
-      color: $selected_fg_color;
+      color: $_panel_fg_color;
       background-color: transparentize(black, 0.83);
       border-bottom-width: 1px;
       border-color: transparent;
@@ -1396,9 +1399,9 @@ StScrollBar {
 
 .list-search-result-content { spacing: 12px; padding: 12px; }
 
-.list-search-result-title { font-size: 1.5em; color: $selected_fg_color; }
+.list-search-result-title { font-size: 1.5em; color: $_shell_fg_color; }
 
-.list-search-result-description { color: darken($selected_fg_color, 20%); }
+.list-search-result-description { color: darken($_shell_fg_color, 20%); }
 
 .search-provider-icon { padding: 15px; }
 .search-provider-icon-more {
@@ -1454,7 +1457,7 @@ StScrollBar {
 .dash-label {
   border-radius: 3px;
   padding: 4px 12px;
-  color: $selected_fg_color;
+  color: $_shell_fg_color;
   background-color: transparentize(black, 0.3);
   text-align: center;
   -x-offset: 3px;
@@ -1618,7 +1621,7 @@ StScrollBar {
 }
 
 %icon_tile {
-  color: $selected_fg_color;
+  color: $_shell_fg_color;
   border-radius: 2px;
   padding: 6px;
   border: 1px solid transparent;
@@ -1641,6 +1644,7 @@ StScrollBar {
   }
 
   &:active > .overview-icon, &:checked > .overview-icon {
+    color: $selected_fg_color;
     background-color: $selected_bg_color;
     box-shadow: none;
   }
@@ -2191,7 +2195,7 @@ $legacy_icon_size: 24px;
     padding-right: .3em;
 
     &:hover {
-      color: $selected_fg_color;
+      color: $_shell_fg_color;
       text-shadow: black 0px 2px 2px;
     }
     &:selected {

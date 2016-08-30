@@ -1,3 +1,5 @@
+gtk-color-scheme = "selected_bg_color:#5294E2\nselected_fg_color:#ffffff"
+
 style "notify-window" {
   XfceNotifyWindow::summary-bold = 1
   XfceNotifyWindow::border-color = "#17191F"
@@ -12,11 +14,11 @@ style "notify-window" {
 style "notify-button" {
   bg[NORMAL] = "#434652"
   bg[PRELIGHT] = "#5C6070"
-  bg[ACTIVE] = "#5294E2"
+  bg[ACTIVE] = @selected_bg_color
 
   fg[NORMAL] = "#BAC3CF"
   fg[PRELIGHT] = "#BAC3CF"
-  fg[ACTIVE] = "#ffffff"
+  fg[ACTIVE] = @selected_fg_color
 
   engine "murrine" {
     gradient_shades = { 1.0, 1.0, 1.0, 1.0 }
@@ -27,7 +29,7 @@ style "notify-button" {
 }
 
 style "notify-text" {
-  GtkWidget::link-color = "#5294E2"
+  GtkWidget::link-color = @selected_bg_color
 
   fg[NORMAL] = "#BAC3CF"
   fg[PRELIGHT] = "#BAC3CF"
@@ -49,9 +51,9 @@ style "notify-progressbar" {
   ythickness   = 0
 
   fg[PRELIGHT] = "#000000"
-  bg[NORMAL]   = "#5294E2"
+  bg[NORMAL]   = @selected_bg_color
   bg[ACTIVE] = "#1D1F26"
-  bg[SELECTED] = "#5294E2"
+  bg[SELECTED] = @selected_bg_color
 
   engine "murrine" {
     gradient_shades = { 1.0, 1.0, 1.0, 1.0 }

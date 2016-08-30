@@ -232,24 +232,24 @@ entry {
   selection { &:focus, & { @extend %selected_items; }}
 
   // error and warning style
-  @each $e_type, $e_color in (warning, $warning_color),
-                             (error, $error_color),
-                              // entry.search-missing for Gnome-Builder
-                             (search-missing, $error_color) {
+  @each $e_type, $e_color, $e_fg_color in (warning, $warning_color, $warning_fg_color),
+                                          (error, $error_color, $error_fg_color),
+                                          // entry.search-missing for Gnome-Builder
+                                          (search-missing, $error_color, $error_fg_color) {
     &.#{$e_type} {
-      color: $selected_fg_color;
+      color: $e_fg_color;
       border-color: if($variant=='light', $e_color, $entry_border);
       background-image: linear-gradient(to bottom, mix($e_color, $base_color, 60%));
 
-      image { color: $selected_fg_color; }
+      image { color: $e_fg_color; }
 
       &:focus {
-        color: $selected_fg_color;
+        color: $e_fg_color;
         background-image: linear-gradient(to bottom, $e_color);
         box-shadow: none;
       }
       selection, selection:focus {
-        background-color: $selected_fg_color;
+        background-color: $e_fg_color;
         color: $e_color;
       }
     }
@@ -466,10 +466,10 @@ button {
   .osd .linked:not(.vertical):not(.path-bar) > &:hover:not(:checked):not(:active) + &:not(:checked):not(:active) { box-shadow: none; }
 
   // Suggested and Destructive Action buttons
-  @each $b_type, $b_color in (suggested-action, $suggested_color),
-                             (destructive-action, $destructive_color) {
+  @each $b_type, $b_color, $b_fg in (suggested-action, $suggested_color, $suggested_fg_color),
+                                    (destructive-action, $destructive_color, $destructive_fg_color) {
     &.#{$b_type} {
-      @include button(suggested_destructive, $b_color);
+      @include button(suggested_destructive, $b_color, $b_fg);
 
       &.flat {
         @include button(undecorated);
@@ -477,10 +477,10 @@ button {
         outline-color: transparentize($b_color, 0.7);
       }
       &:hover {
-        @include button(suggested_destructive, lighten($b_color, 10%));
+        @include button(suggested_destructive, lighten($b_color, 10%), $b_fg);
       }
       &:active, &:checked {
-        @include button(suggested_destructive, darken($b_color, 10%));
+        @include button(suggested_destructive, darken($b_color, 10%), $b_fg);
       }
       &.flat:disabled {
         @include button(undecorated);
@@ -1000,14 +1000,14 @@ headerbar,
 
   // Selectionmode
   &.selection-mode {
-    color: $selected_fg_color;
+    color: $selection_mode_fg;
     background-color: $selection_mode_bg;
     border-color: darken($selection_mode_bg, 4%);
     box-shadow: none;
 
     &:backdrop {
       background-color: $selection_mode_bg;
-      color: transparentize($selected_fg_color, 0.4);
+      color: transparentize($selection_mode_fg, 0.4);
     }
 
     .subtitle:link { @extend *:link:selected;  }
@@ -1142,19 +1142,19 @@ headerbar {
       background-color: transparent;
     }
 
-    @each $e_type, $e_color in (warning, $warning_color),
-                               (error, $error_color) {
+    @each $e_type, $e_color, $e_fg_color in (warning, $warning_color, $warning_fg_color),
+                                            (error, $error_color, $error_fg_color) {
       &.#{$e_type} {
-        color: $selected_fg_color;
+        color: $e_fg_color;
         border-color: if($darker=='false' and $variant=='light', $e_color, $header_entry_border);
         background-image: linear-gradient(to bottom, mix($e_color, $header_bg, 60%));
 
         &:focus {
-          color: $selected_fg_color;
+          color: $e_fg_color;
           background-image: linear-gradient(to bottom, $e_color);
         }
         selection, selection:focus {
-          background-color: $selected_fg_color;
+          background-color: $e_fg_color;
           color: $e_color;
         }
       }
@@ -1181,8 +1181,8 @@ headerbar {
 
     &, &.flat {
       @include button(undecorated);
-      color: $selected_fg_color;
-      background-color: transparentize($selected_fg_color, 1);
+      color: $selection_mode_fg;
+      background-color: transparentize($selection_mode_fg, 1);
     }
     &:hover { @extend %normal_selected_button; }
     &:active, &:checked { @extend %selected-button:active; }
@@ -1241,10 +1241,10 @@ headerbar {
   }
 
   // Headerbar Suggested and Destructive Action buttons
-  @each $b_type, $b_color in (suggested-action, $suggested_color),
-                             (destructive-action, $destructive_color) {
+  @each $b_type, $b_color, $b_fg in (suggested-action, $suggested_color, $suggested_fg_color),
+                                    (destructive-action, $destructive_color, $destructive_fg_color) {
     button.#{$b_type} {
-      @include button(suggested_destructive, $b_color);
+      @include button(suggested_destructive, $b_color, $b_fg);
 
       &.flat {
         @include button(undecorated);
@@ -1252,10 +1252,10 @@ headerbar {
         outline-color: transparentize($b_color, 0.7);
       }
       &:hover {
-        @include button(suggested_destructive, lighten($b_color, 10%));
+        @include button(suggested_destructive, lighten($b_color, 10%), $b_fg);
       }
       &:active, &:checked {
-        @include button(suggested_destructive, darken($b_color, 10%));
+        @include button(suggested_destructive, darken($b_color, 10%), $b_fg);
       }
       &.flat:disabled,
       &:disabled { @include button(header-insensitive); }
