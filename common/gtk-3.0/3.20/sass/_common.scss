@@ -1096,7 +1096,7 @@ headerbar {
     }
   }
 
-  > separator { background-image: linear-gradient(to top, $header_border); }
+  > separator { background-image: _solid($header_border); }
 
   @extend %titlebar;
 }
@@ -1474,17 +1474,17 @@ treeview.view {
   &.progressbar, &.progressbar:focus { // progress bar in treeviews
     color: $selected_fg_color;
     border-radius: 3px;
-    background-image: linear-gradient(to bottom, $selected_bg_color);
+    background-color: $selected_bg_color;
 
     &:selected, &:selected:focus {
       color: $selected_bg_color;
       box-shadow: none;
-      background-image: linear-gradient(to bottom, $selected_fg_color);
+      background-color: $selected_fg_color;
     }
   }
   &.trough, &.trough:selected, &.trough:selected:focus { // progress bar trough in treeviews
     color: $fg_color;
-    background-image: linear-gradient(to bottom, $button_border);
+    background-color: $button_border;
     border-radius: 3px;
     border-width: 0;
   }
@@ -1937,7 +1937,7 @@ scrollbar {
 // Switches
 //
 switch {
-  font: 1;
+  font-size: 1px;
 
   min-width: 52px;
   min-height: 24px;
@@ -2681,7 +2681,7 @@ placessidebar {
     &.sidebar-placeholder-row {
       padding: 0 8px;
       min-height: 2px;
-      background-image: linear-gradient(to top, $drop_target_color);
+      background-image: _solid($drop_target_color);
       background-clip: content-box;
     }
 
@@ -2731,16 +2731,16 @@ paned {
     -gtk-icon-source: none;
     border-style: none;
     background-color: transparent;
-    background-image: linear-gradient(to top, $borders_color);
+    background-image: _solid($borders_color);
     background-size: 1px 1px;
 
-    &:selected { background-image: linear-gradient(to top, $selected_bg_color); }
+    &:selected { background-image: _solid($selected_bg_color); }
 
     &.wide {
       min-width: 5px;
       min-height: 5px;
       background-color: $bg_color;
-      background-image: linear-gradient(to top, $borders_color), linear-gradient(to top, $borders_color);
+      background-image: _solid($borders_color), _solid($borders_color);
       background-size: 1px 1px, 1px 1px;
     }
   }
@@ -2997,7 +2997,7 @@ colorchooser .popover.osd { border-radius: 3px; }
 
 // Decouple the font of context menus from their entry/textview
 .context-menu { font: initial; }
-.monospace { font: Monospace; }
+.monospace { font-family: Monospace; }
 
 //
 // Shortcuts Help

@@ -572,7 +572,7 @@ button.documents-favorite:active:hover {
     border: 1px solid rgba(0, 0, 0, 0.35);
     border-radius: 3px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    background-image: linear-gradient(to bottom, white);
+    background-image: _solid(white);
     background-color: transparent;
 
   .title, .label {

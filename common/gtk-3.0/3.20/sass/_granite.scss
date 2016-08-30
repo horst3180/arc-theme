@@ -151,7 +151,7 @@ GraniteWidgetsWelcome {
 
 GraniteWidgetsWelcome label {
   color: mix($fg_color, $bg_color, 50%);
-  font: open sans 11;
+  font-size: 11px;
   text-shadow: none;
 }
 
@@ -182,7 +182,7 @@ GraniteWidgetsPopOver {
 }
 
 .popover_bg {
-  background-image: linear-gradient(to bottom, $base_color);
+  background-image: _solid($base_color);
   border: 1px solid transparentize(black, 0.7);
 }
 
@@ -199,9 +199,9 @@ GraniteWidgetsXsEntry entry { padding: 4px; }
 //
 // Text Styles
 //
-.h1 { font: open sans 24px; }
-.h2 { font: open sans light 18px; }
-.h3 { font: open sans 11px; }
+.h1 { font-size: 24px; }
+.h2 { font-size: 18px; }
+.h3 { font-size: 11px; }
 .h4,
 .category-label {
     color: mix($bg_color, $text_color, 30%);

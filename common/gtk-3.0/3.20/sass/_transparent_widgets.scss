@@ -3,7 +3,7 @@
 //.nemo-window,
 .nautilus-window {
   paned > separator {
-    background-image: linear-gradient(to top, $dark_sidebar_border);
+    background-image: _solid($dark_sidebar_border);
 
     @if $variant=='light' {
       &:dir(ltr) { margin-left: -1px; }
@@ -12,7 +12,7 @@
   }
 }
 
-filechooser paned > separator { background-image: linear-gradient(to top, $dark_sidebar_border); }
+filechooser paned > separator { background-image: _solid($dark_sidebar_border); }
 
 // Dark transparent sidebars
 filechooser,
@@ -145,8 +145,8 @@ filechooser {
 // Gedit
 .gedit-bottom-panel-paned { background-color: $base_color; }
 
-.gedit-side-panel-paned > separator { background-image: linear-gradient(to top, $dark_sidebar_border); }
-.gedit-bottom-panel-paned > separator { background-image: linear-gradient(to top, $borders_color); }
+.gedit-side-panel-paned > separator { background-image: _solid($dark_sidebar_border); }
+.gedit-bottom-panel-paned > separator { background-image: _solid($borders_color); }
 
 .gedit-document-panel {
   background-color: $dark_sidebar_bg;

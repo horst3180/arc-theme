@@ -1,5 +1,10 @@
 // Drawing mixins
 
+// Solid color image
+@function _solid($c) {
+  @return linear-gradient(to bottom, $c, $c);
+}
+
 // Entries
 
 @mixin entry($t) {
