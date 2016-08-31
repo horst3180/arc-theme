@@ -2509,28 +2509,25 @@ calendar {
   padding: 2px;
 
   &:selected {
-    background-color: $selected_bg_color;
-    color: $selected_fg_color;
+    @extend %selected_items;
     border-radius: 1.5px;
   }
+
   &.header {
     color: $fg_color;
     border: none;
-    border-radius: 0;
   }
-  &.button, &.button:focus {
-    color: transparentize($fg_color,0.55);
-    @include button(undecorated);
 
-    &:hover {
-      color: $fg_color;
-    }
-    &:disabled {
-      color: $insensitive_fg_color;
-      background-color: transparent;
-      background-image: none;
-    }
+  &.button {
+    @extend %undecorated_button;
+
+    color: transparentize($fg_color,0.55);
+
+    &:hover { color: $fg_color; }
+
+    &:disabled { color: $insensitive_fg_color; }
   }
+
   &:indeterminate { color: gtkalpha(currentColor,0.55); }
   &.highlight { color: $fg_color; }
 }
