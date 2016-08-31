@@ -480,6 +480,8 @@ button {
     background-position: right 3px, right 2px; }
     .stack-switcher > button.needs-attention > label:dir(rtl), .stack-switcher > button.needs-attention > image:dir(rtl), button stacksidebar row.needs-attention > label:dir(rtl), stacksidebar button row.needs-attention > label:dir(rtl) {
       background-position: left 3px, left 2px; }
+  button.font separator, button.file separator {
+    background-color: transparent; }
   .inline-toolbar button, .inline-toolbar button:backdrop {
     border-radius: 2px;
     border-width: 1px; }
