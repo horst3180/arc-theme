@@ -26,7 +26,7 @@ $darker_asset_suffix: if($darker=='true', '-dark', $asset_suffix);
   -GtkDialog-action-area-border: 0;
 
   // We use the outline properties to signal the focus properties
-  outline-color: transparentize($fg_color, 0.7);
+  outline-color: gtkalpha(currentColor, 0.3);
   outline-style: dashed;
   outline-offset: -3px;
   outline-width: 1px;
@@ -163,7 +163,6 @@ textview { // This will get overridden by .view, needed by gedit line numbers
   border: none;
   background-color: $osd_bg_color;
   background-clip: padding-box;
-  outline-color: transparentize($osd_fg_color, 0.7);
   box-shadow: none;
 }
 
@@ -425,7 +424,6 @@ button {
   // big standalone buttons like in Documents pager
   &.osd {
     color: $osd_fg_color;
-    outline-color: transparentize($osd_fg_color, 0.7);
     background-color: $osd_bg_color;
     border-color: darken($osd_bg_color, 8%);
 
@@ -474,7 +472,6 @@ button {
       &.flat {
         @include button(undecorated);
         color: $b_color;
-        outline-color: transparentize($b_color, 0.7);
       }
       &:hover {
         @include button(suggested_destructive, lighten($b_color, 10%), $b_fg);
@@ -1253,7 +1250,6 @@ headerbar {
       &.flat {
         @include button(undecorated);
         color: $b_color;
-        outline-color: transparentize($b_color, 0.7);
       }
       &:hover {
         @include button(suggested_destructive, lighten($b_color, 10%), $b_fg);
@@ -2817,7 +2813,6 @@ infobar { border-style: none; }
 
   @at-root %normal_selected_button, & {
     color: $selected_fg_color;
-    outline-color: transparentize($selected_fg_color, 0.7);
     background-color: transparentize($selected_fg_color, 1);
     border-color: transparentize($selected_fg_color, 0.5);
   }
@@ -2833,13 +2828,11 @@ infobar { border-style: none; }
   }
   &:hover {
     color: $selected_fg_color;
-    outline-color: transparentize($selected_fg_color, 0.7);
     background-color: transparentize($selected_fg_color, 0.8);
     border-color: transparentize($selected_fg_color, 0.2);
   }
   &:active, &:active:hover, &:checked {
     color: $selected_bg_color;
-    outline-color: transparentize($selected_bg_color, 0.7);
     background-color: $selected_fg_color;
     border-color: $selected_fg_color;
   }
@@ -3155,7 +3148,6 @@ headerbar,
 
   @at-root %nobg_selected_items, & {
     color: $selected_fg_color;
-    outline-color: transparentize($selected_fg_color, 0.7);
 
     &:disabled { color: mix($selected_fg_color, $selected_bg_color, 50%); }
   }
