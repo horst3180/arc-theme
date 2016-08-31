@@ -2781,27 +2781,27 @@ paned {
 //
 // GtkInfoBar
 //
-infobar { border-style: none; }
+infobar {
+  border-style: none;
 
-.info,
-.question,
-.warning,
-.error {
-  background-color: $selected_bg_color;
-  color: $selected_fg_color;
+  &.info,
+  &.question,
+  &.warning,
+  &.error {
+    background-color: $selected_bg_color;
+    color: $selected_fg_color;
+    caret-color: currentColor;
 
-  button { @extend %selected-button }
+    button { @extend %selected-button }
 
-  label:selected {
-    &:focus, &:hover, & {
+    selection {
       color: $selected_bg_color;
       background-color: $selected_fg_color;
     }
+
+    *:link { @extend %link_selected; }
   }
-
-  *:link { @extend %link_selected; }
 }
-
 
 //
 // Buttons on selected backgrounds

@@ -736,16 +736,7 @@ modelbutton.flat arrow.right {
     color: #2679db; }
     *:selected *:link:active, *:selected button:active:link, *:selected button:active:visited {
       color: #dceaf9; }
-  .info *:link, .info button:link, .info button:visited,
-  .question *:link,
-  .question button:link,
-  .question button:visited,
-  .warning *:link,
-  .warning button:link,
-  .warning button:visited,
-  .error *:link,
-  .error button:link,
-  .error button:visited, *:link:selected, button:selected:link, button:selected:visited, headerbar.selection-mode .subtitle:link, .selection-mode.titlebar:not(headerbar) .subtitle:link,
+  infobar.info *:link, infobar.info button:link, infobar.info button:visited, infobar.question *:link, infobar.question button:link, infobar.question button:visited, infobar.warning *:link, infobar.warning button:link, infobar.warning button:visited, infobar.error *:link, infobar.error button:link, infobar.error button:visited, *:link:selected, button:selected:link, button:selected:visited, headerbar.selection-mode .subtitle:link, .selection-mode.titlebar:not(headerbar) .subtitle:link,
   *:selected *:link,
   *:selected button:link,
   *:selected button:visited {
@@ -2644,104 +2635,44 @@ paned.vertical > separator {
 
 infobar {
   border-style: none; }
+  infobar.info, infobar.question, infobar.warning, infobar.error {
+    background-color: #5294e2;
+    color: #ffffff;
+    caret-color: currentColor; }
+    infobar.info selection, infobar.question selection, infobar.warning selection, infobar.error selection {
+      color: #5294e2;
+      background-color: #ffffff; }
 
-.info,
-.question,
-.warning,
-.error {
-  background-color: #5294e2;
-  color: #ffffff; }
-  .info label:selected:focus, .info label:selected:hover, .info label:selected,
-  .question label:selected:focus,
-  .question label:selected:hover,
-  .question label:selected,
-  .warning label:selected:focus,
-  .warning label:selected:hover,
-  .warning label:selected,
-  .error label:selected:focus,
-  .error label:selected:hover,
-  .error label:selected {
-    color: #5294e2;
-    background-color: #ffffff; }
-
-.selection-mode.primary-toolbar button:hover, headerbar.selection-mode button:hover, row:selected button, .info button,
-.question button,
-.warning button,
-.error button, .nautilus-window .floating-bar button {
+.selection-mode.primary-toolbar button:hover, headerbar.selection-mode button:hover, row:selected button, infobar.info button, infobar.question button, infobar.warning button, infobar.error button, .nautilus-window .floating-bar button {
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0);
   border-color: rgba(255, 255, 255, 0.5); }
 
-row:selected button.flat, row:selected button.sidebar-button, .info button.flat, .info button.sidebar-button,
-.question button.flat,
-.question button.sidebar-button,
-.warning button.flat,
-.warning button.sidebar-button,
-.error button.flat,
-.error button.sidebar-button, .nautilus-window .floating-bar button.flat, .nautilus-window .floating-bar button.sidebar-button {
+row:selected button.flat, row:selected button.sidebar-button, infobar.info button.flat, infobar.info button.sidebar-button, infobar.question button.flat, infobar.question button.sidebar-button, infobar.warning button.flat, infobar.warning button.sidebar-button, infobar.error button.flat, infobar.error button.sidebar-button, .nautilus-window .floating-bar button.flat, .nautilus-window .floating-bar button.sidebar-button {
   border-color: transparent;
   background-color: transparent;
   background-image: none;
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0); }
-  .selection-mode.primary-toolbar button:disabled, headerbar.selection-mode button:disabled, row:selected button.flat:disabled, row:selected button.sidebar-button:disabled, .info button.flat:disabled, .info button.sidebar-button:disabled,
-  .question button.flat:disabled,
-  .question button.sidebar-button:disabled,
-  .warning button.flat:disabled,
-  .warning button.sidebar-button:disabled,
-  .error button.flat:disabled,
-  .error button.sidebar-button:disabled, .nautilus-window .floating-bar button.flat:disabled, .nautilus-window .floating-bar button.sidebar-button:disabled, .selection-mode.primary-toolbar button:disabled label, headerbar.selection-mode button:disabled label, row:selected button.flat:disabled label, row:selected button.sidebar-button:disabled label, .info button.flat:disabled label, .info button.sidebar-button:disabled label,
-  .question button.flat:disabled label,
-  .question button.sidebar-button:disabled label,
-  .warning button.flat:disabled label,
-  .warning button.sidebar-button:disabled label,
-  .error button.flat:disabled label,
-  .error button.sidebar-button:disabled label, .nautilus-window .floating-bar button.flat:disabled label, .nautilus-window .floating-bar button.sidebar-button:disabled label {
+  .selection-mode.primary-toolbar button:disabled, headerbar.selection-mode button:disabled, row:selected button.flat:disabled, row:selected button.sidebar-button:disabled, infobar.info button.flat:disabled, infobar.info button.sidebar-button:disabled, infobar.question button.flat:disabled, infobar.question button.sidebar-button:disabled, infobar.warning button.flat:disabled, infobar.warning button.sidebar-button:disabled, infobar.error button.flat:disabled, infobar.error button.sidebar-button:disabled, .nautilus-window .floating-bar button.flat:disabled, .nautilus-window .floating-bar button.sidebar-button:disabled, .selection-mode.primary-toolbar button:disabled label, headerbar.selection-mode button:disabled label, row:selected button.flat:disabled label, row:selected button.sidebar-button:disabled label, infobar.info button.flat:disabled label, infobar.info button.sidebar-button:disabled label, infobar.question button.flat:disabled label, infobar.question button.sidebar-button:disabled label, infobar.warning button.flat:disabled label, infobar.warning button.sidebar-button:disabled label, infobar.error button.flat:disabled label, infobar.error button.sidebar-button:disabled label, .nautilus-window .floating-bar button.flat:disabled label, .nautilus-window .floating-bar button.sidebar-button:disabled label {
     color: rgba(255, 255, 255, 0.4); }
 
-row:selected button:hover, .info button:hover,
-.question button:hover,
-.warning button:hover,
-.error button:hover, .nautilus-window .floating-bar button:hover {
+row:selected button:hover, infobar.info button:hover, infobar.question button:hover, infobar.warning button:hover, infobar.error button:hover, .nautilus-window .floating-bar button:hover {
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.2);
   border-color: rgba(255, 255, 255, 0.8); }
 
-.selection-mode.primary-toolbar button:active, headerbar.selection-mode button:active, .selection-mode.primary-toolbar button:checked, headerbar.selection-mode button:checked, row:selected button:active, .info button:active,
-.question button:active,
-.warning button:active,
-.error button:active, .nautilus-window .floating-bar button:active, .selection-mode.primary-toolbar button:hover:active, headerbar.selection-mode button:hover:active, .selection-mode.primary-toolbar button:hover:checked, headerbar.selection-mode button:hover:checked, row:selected button:active:hover, .info button:active:hover,
-.question button:active:hover,
-.warning button:active:hover,
-.error button:active:hover, .nautilus-window .floating-bar button:active:hover, row:selected button:checked, .info button:checked,
-.question button:checked,
-.warning button:checked,
-.error button:checked, .nautilus-window .floating-bar button:checked {
+.selection-mode.primary-toolbar button:active, headerbar.selection-mode button:active, .selection-mode.primary-toolbar button:checked, headerbar.selection-mode button:checked, row:selected button:active, infobar.info button:active, infobar.question button:active, infobar.warning button:active, infobar.error button:active, .nautilus-window .floating-bar button:active, .selection-mode.primary-toolbar button:hover:active, headerbar.selection-mode button:hover:active, .selection-mode.primary-toolbar button:hover:checked, headerbar.selection-mode button:hover:checked, row:selected button:active:hover, infobar.info button:active:hover, infobar.question button:active:hover, infobar.warning button:active:hover, infobar.error button:active:hover, .nautilus-window .floating-bar button:active:hover, row:selected button:checked, infobar.info button:checked, infobar.question button:checked, infobar.warning button:checked, infobar.error button:checked, .nautilus-window .floating-bar button:checked {
   color: #5294e2;
   background-color: #ffffff;
   border-color: #ffffff; }
 
-row:selected button:disabled, .info button:disabled,
-.question button:disabled,
-.warning button:disabled,
-.error button:disabled, .nautilus-window .floating-bar button:disabled {
+row:selected button:disabled, infobar.info button:disabled, infobar.question button:disabled, infobar.warning button:disabled, infobar.error button:disabled, .nautilus-window .floating-bar button:disabled {
   background-color: rgba(255, 255, 255, 0);
   border-color: rgba(255, 255, 255, 0.4); }
-  row:selected button:disabled, .info button:disabled,
-  .question button:disabled,
-  .warning button:disabled,
-  .error button:disabled, .nautilus-window .floating-bar button:disabled, row:selected button:disabled label, .info button:disabled label,
-  .question button:disabled label,
-  .warning button:disabled label,
-  .error button:disabled label, .nautilus-window .floating-bar button:disabled label {
+  row:selected button:disabled, infobar.info button:disabled, infobar.question button:disabled, infobar.warning button:disabled, infobar.error button:disabled, .nautilus-window .floating-bar button:disabled, row:selected button:disabled label, infobar.info button:disabled label, infobar.question button:disabled label, infobar.warning button:disabled label, infobar.error button:disabled label, .nautilus-window .floating-bar button:disabled label {
     color: rgba(255, 255, 255, 0.5); }
-  .selection-mode.primary-toolbar button:disabled:active, headerbar.selection-mode button:disabled:active, .selection-mode.primary-toolbar button:disabled:checked, headerbar.selection-mode button:disabled:checked, row:selected button:disabled:active, .info button:disabled:active,
-  .question button:disabled:active,
-  .warning button:disabled:active,
-  .error button:disabled:active, .nautilus-window .floating-bar button:disabled:active, .selection-mode.primary-toolbar button:disabled:checked, headerbar.selection-mode button:disabled:checked, .selection-mode.primary-toolbar button:disabled:active, headerbar.selection-mode button:disabled:active, row:selected button:disabled:checked, .info button:disabled:checked,
-  .question button:disabled:checked,
-  .warning button:disabled:checked,
-  .error button:disabled:checked, .nautilus-window .floating-bar button:disabled:checked {
+  .selection-mode.primary-toolbar button:disabled:active, headerbar.selection-mode button:disabled:active, .selection-mode.primary-toolbar button:disabled:checked, headerbar.selection-mode button:disabled:checked, row:selected button:disabled:active, infobar.info button:disabled:active, infobar.question button:disabled:active, infobar.warning button:disabled:active, infobar.error button:disabled:active, .nautilus-window .floating-bar button:disabled:active, .selection-mode.primary-toolbar button:disabled:checked, headerbar.selection-mode button:disabled:checked, .selection-mode.primary-toolbar button:disabled:active, headerbar.selection-mode button:disabled:active, row:selected button:disabled:checked, infobar.info button:disabled:checked, infobar.question button:disabled:checked, infobar.warning button:disabled:checked, infobar.error button:disabled:checked, .nautilus-window .floating-bar button:disabled:checked {
     color: #5294e2;
     background-color: rgba(255, 255, 255, 0.5);
     border-color: rgba(255, 255, 255, 0.4); }
