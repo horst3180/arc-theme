@@ -104,6 +104,21 @@ $disk_space_free: darken($bg_color, 3%);
   animation-iteration-count: 3;
 }
 
+// Batch renaming dialog
+.conflict-row.activatable {
+  &, &:active {
+    color: $error_fg_color;
+    background-color: $error_color;
+  }
+
+  &:hover { background-color: lighten($error_color, 10%); }
+
+  &:selected {
+    color: $selected_fg_color;
+    background-color: $selected_bg_color;
+  }
+}
+
 //
 // Nemo
 //

@@ -3164,6 +3164,17 @@ popover.background label.nautilus-canvas-item.separator, headerbar .nautilus-can
   animation: needs_attention_keyframes 3s ease-in-out;
   animation-iteration-count: 3; }
 
+.conflict-row.activatable, .conflict-row.activatable:active {
+  color: white;
+  background-color: #FC4138; }
+
+.conflict-row.activatable:hover {
+  background-color: #fd716a; }
+
+.conflict-row.activatable:selected {
+  color: #ffffff;
+  background-color: #5294e2; }
+
 .nemo-window .nemo-places-sidebar.frame {
   border-width: 0; }
 
