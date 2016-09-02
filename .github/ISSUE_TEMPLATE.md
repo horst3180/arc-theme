@@ -1,6 +1,6 @@
-# READ CAREFULLY BEFORE POSTING
+# READ CAREFULLY BEFORE SUBMITTING
 
-**This list was created for avoiding duplicated issues, if your issue isn't listed, you should remove the list and continue.**
+**This list is for avoiding duplicated issues, if your issue isn't listed, you should remove this and continue.**
 
 - The theme doesn't work in a distribution that have a GTK+ 3 version lower than 3.14.
   - Arc only supports versions since 3.14, you should update to latest versions.
