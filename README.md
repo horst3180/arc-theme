@@ -70,6 +70,10 @@ Arch Linux users can install the theme from the AUR
 
 **Note:** If you're having trouble with the AUR packages please email the package maintainer at zach@zach-adams.com before creating an issue.
 
+--
+
+Gentoo/Funtoo users can install `x11-themes/arc-theme` from the [Scriptkitties Overlay][sk-overlay].
+
 #### Manual Installation
 
 To build the theme you'll need 
@@ -163,3 +167,6 @@ Arc is available under the terms the GPL-3.0. See `COPYING` for details.
 ### Full Preview
 ![A full screenshot of the Arc theme](http://i.imgur.com/tD1OBQ3.png)
 <sub>Screenshot Details: Icons: [Arc](https://github.com/horst3180/arc-icon-theme) | Launcher Icons based on [White Pixel Icons](http://darkdawg.deviantart.com/art/White-Pixel-Icons-252310560) | [Wallpaper](https://pixabay.com/photo-869593/) | Font: Futura Bk bt</sub>
+
+
+[sk-overlay]: https://c.darenet.org/scriptkitties/overlay
