@@ -626,12 +626,23 @@ toolbar.inline-toolbar toolbutton {
     > #{$_uncolored_button}:hover:not(:only-child),
     > #{$_uncolored_button}:hover + #{$_uncolored_button} { box-shadow: inset if($vert=='false', 1px 0, 0 1px) $b_border; }
 
-    > #{$_uncolored_button}:first-child:hover,
+    > #{$_uncolored_button}:disabled:not(:only-child),
+    > #{$_uncolored_button}:disabled + #{$_uncolored_button}:not(:hover) { box-shadow: inset if($vert=='false', 1px 0, 0 1px) transparentize($b_border, 0.5); }
+
     > button:active + #{$_uncolored_button}:hover,
     > button:checked + #{$_uncolored_button}:hover,
     > button.suggested-action + #{$_uncolored_button}:hover,
     > button.destructive-action + #{$_uncolored_button}:hover,
-    > entry + #{$_uncolored_button}:hover:not(:only-child) { box-shadow: none; }
+    > entry + #{$_uncolored_button}:hover:not(:only-child),
+
+    > #{$_uncolored_button}:first-child:disabled,
+    > #{$_uncolored_button}:disabled + #{$_uncolored_button}:disabled,
+    > #{$_uncolored_button}:first-child:hover,
+    > button:active + #{$_uncolored_button}:disabled,
+    > button:checked + #{$_uncolored_button}:disabled,
+    > button.suggested-action + #{$_uncolored_button}:disabled,
+    > button.destructive-action + #{$_uncolored_button}:disabled,
+    > entry + #{$_uncolored_button}:disabled:not(:only-child), { box-shadow: none; }
   }
 }
 
@@ -640,15 +651,15 @@ toolbar.inline-toolbar toolbutton {
 
     > button + button { border-left-style: none; }
 
-    > button:hover:not(:checked):not(:active):not(:only-child) {
+    > button:hover:not(:checked):not(:active):not(:only-child):not(:first-child):not(:last-child) {
 
       &:hover {
         box-shadow: inset  1px 0 $sep_color,
                     inset -1px 0 $sep_color;
       }
-      &:first-child:hover { box-shadow: inset -1px 0 $sep_color; }
-      &:last-child:hover { box-shadow: inset 1px 0 $sep_color; }
     }
+    button:nth-child(2):not(:active):not(:checked) { box-shadow: inset 1px 0 $sep_color; }
+    button:nth-last-child(2):not(:active):not(:checked) { box-shadow: inset -1px 0 $sep_color; }
 }
 
 // Apply the rules defined above
@@ -1210,7 +1221,9 @@ headerbar {
     $_uncolored_button: 'button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action)';
 
     > #{$_uncolored_button}:hover:not(:only-child),
-    > #{$_uncolored_button}:hover + #{$_uncolored_button} { box-shadow: none; }
+    > #{$_uncolored_button}:hover + #{$_uncolored_button},
+    > #{$_uncolored_button}:disabled:not(:only-child),
+    > #{$_uncolored_button}:disabled + #{$_uncolored_button}:not(:hover) { box-shadow: none; }
   }
 
   // special case for path-bars and stack-switchers

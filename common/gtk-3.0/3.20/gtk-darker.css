@@ -550,25 +550,36 @@ button {
 .linked:not(.vertical):not(.path-bar) > button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):hover + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action) {
   box-shadow: inset 1px 0 #cfd6e6; }
 
-.linked:not(.vertical):not(.path-bar) > button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):first-child:hover,
+.linked:not(.vertical):not(.path-bar) > button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):disabled:not(:only-child),
+.linked:not(.vertical):not(.path-bar) > button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):disabled + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):not(:hover) {
+  box-shadow: inset 1px 0 rgba(207, 214, 230, 0.5); }
+
 .linked:not(.vertical):not(.path-bar) > button:active + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):hover,
 .linked:not(.vertical):not(.path-bar) > button:checked + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):hover,
 .linked:not(.vertical):not(.path-bar) > button.suggested-action + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):hover,
 .linked:not(.vertical):not(.path-bar) > button.destructive-action + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):hover,
-.linked:not(.vertical):not(.path-bar) > entry + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):hover:not(:only-child) {
+.linked:not(.vertical):not(.path-bar) > entry + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):hover:not(:only-child),
+.linked:not(.vertical):not(.path-bar) > button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):first-child:disabled,
+.linked:not(.vertical):not(.path-bar) > button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):disabled + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):disabled,
+.linked:not(.vertical):not(.path-bar) > button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):first-child:hover,
+.linked:not(.vertical):not(.path-bar) > button:active + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):disabled,
+.linked:not(.vertical):not(.path-bar) > button:checked + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):disabled,
+.linked:not(.vertical):not(.path-bar) > button.suggested-action + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):disabled,
+.linked:not(.vertical):not(.path-bar) > button.destructive-action + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):disabled,
+.linked:not(.vertical):not(.path-bar) > entry + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):disabled:not(:only-child) {
   box-shadow: none; }
 
 .linked:not(.vertical).path-bar > button + button {
   border-left-style: none; }
 
-.linked:not(.vertical).path-bar > button:hover:not(:checked):not(:active):not(:only-child):hover {
+.linked:not(.vertical).path-bar > button:hover:not(:checked):not(:active):not(:only-child):not(:first-child):not(:last-child):hover {
   box-shadow: inset 1px 0 rgba(207, 214, 230, 0.4), inset -1px 0 rgba(207, 214, 230, 0.4); }
 
-.linked:not(.vertical).path-bar > button:hover:not(:checked):not(:active):not(:only-child):first-child:hover {
-  box-shadow: inset -1px 0 rgba(207, 214, 230, 0.4); }
-
-.linked:not(.vertical).path-bar > button:hover:not(:checked):not(:active):not(:only-child):last-child:hover {
+.linked:not(.vertical).path-bar button:nth-child(2):not(:active):not(:checked) {
   box-shadow: inset 1px 0 rgba(207, 214, 230, 0.4); }
+
+.linked:not(.vertical).path-bar button:nth-last-child(2):not(:active):not(:checked) {
+  box-shadow: inset -1px 0 rgba(207, 214, 230, 0.4); }
 
 .linked.vertical > entry + entry {
   border-top-color: rgba(207, 214, 230, 0.3); }
@@ -632,12 +643,23 @@ button {
 .linked.vertical > button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):hover + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action) {
   box-shadow: inset 0 1px #cfd6e6; }
 
-.linked.vertical > button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):first-child:hover,
+.linked.vertical > button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):disabled:not(:only-child),
+.linked.vertical > button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):disabled + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):not(:hover) {
+  box-shadow: inset 0 1px rgba(207, 214, 230, 0.5); }
+
 .linked.vertical > button:active + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):hover,
 .linked.vertical > button:checked + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):hover,
 .linked.vertical > button.suggested-action + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):hover,
 .linked.vertical > button.destructive-action + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):hover,
-.linked.vertical > entry + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):hover:not(:only-child) {
+.linked.vertical > entry + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):hover:not(:only-child),
+.linked.vertical > button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):first-child:disabled,
+.linked.vertical > button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):disabled + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):disabled,
+.linked.vertical > button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):first-child:hover,
+.linked.vertical > button:active + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):disabled,
+.linked.vertical > button:checked + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):disabled,
+.linked.vertical > button.suggested-action + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):disabled,
+.linked.vertical > button.destructive-action + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):disabled,
+.linked.vertical > entry + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):disabled:not(:only-child) {
   box-shadow: none; }
 
 toolbar.inline-toolbar toolbutton > button.flat, .inline-toolbar toolbutton > button.flat, toolbar.inline-toolbar toolbutton > button.sidebar-button, .inline-toolbar toolbutton > button.sidebar-button, .linked:not(.vertical) > entry,
@@ -1094,7 +1116,7 @@ window.csd > .titlebar:not(headerbar):backdrop {
   border-radius: 3px;
   border-style: solid; }
 
-.primary-toolbar .linked:not(.vertical):not(.path-bar) > button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):hover:not(:only-child), headerbar .linked:not(.vertical):not(.path-bar) > button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):hover:not(:only-child), .primary-toolbar .linked:not(.vertical):not(.path-bar) > button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):hover + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action), headerbar .linked:not(.vertical):not(.path-bar) > button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):hover + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action) {
+.primary-toolbar .linked:not(.vertical):not(.path-bar) > button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):hover:not(:only-child), headerbar .linked:not(.vertical):not(.path-bar) > button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):hover:not(:only-child), .primary-toolbar .linked:not(.vertical):not(.path-bar) > button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):hover + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action), headerbar .linked:not(.vertical):not(.path-bar) > button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):hover + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action), .primary-toolbar .linked:not(.vertical):not(.path-bar) > button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):disabled:not(:only-child), headerbar .linked:not(.vertical):not(.path-bar) > button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):disabled:not(:only-child), .primary-toolbar .linked:not(.vertical):not(.path-bar) > button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):disabled + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):not(:hover), headerbar .linked:not(.vertical):not(.path-bar) > button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):disabled + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):not(:hover) {
   box-shadow: none; }
 
 .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button, .primary-toolbar .linked:not(.vertical).path-bar > button, headerbar .linked:not(.vertical).path-bar > button {
@@ -1113,14 +1135,14 @@ window.csd > .titlebar:not(headerbar):backdrop {
 .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button + button, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button + button, .primary-toolbar .linked:not(.vertical).path-bar > button + button, headerbar .linked:not(.vertical).path-bar > button + button {
   border-left-style: none; }
 
-.primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:hover:not(:checked):not(:active):not(:only-child):hover, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:hover:not(:checked):not(:active):not(:only-child):hover, .primary-toolbar .linked:not(.vertical).path-bar > button:hover:not(:checked):not(:active):not(:only-child):hover, headerbar .linked:not(.vertical).path-bar > button:hover:not(:checked):not(:active):not(:only-child):hover {
+.primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:hover:not(:checked):not(:active):not(:only-child):not(:first-child):not(:last-child):hover, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:hover:not(:checked):not(:active):not(:only-child):not(:first-child):not(:last-child):hover, .primary-toolbar .linked:not(.vertical).path-bar > button:hover:not(:checked):not(:active):not(:only-child):not(:first-child):not(:last-child):hover, headerbar .linked:not(.vertical).path-bar > button:hover:not(:checked):not(:active):not(:only-child):not(:first-child):not(:last-child):hover {
   box-shadow: inset 1px 0 rgba(21, 23, 28, 0.37), inset -1px 0 rgba(21, 23, 28, 0.37); }
 
-.primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:hover:not(:checked):not(:active):not(:only-child):first-child:hover, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:hover:not(:checked):not(:active):not(:only-child):first-child:hover, .primary-toolbar .linked:not(.vertical).path-bar > button:hover:not(:checked):not(:active):not(:only-child):first-child:hover, headerbar .linked:not(.vertical).path-bar > button:hover:not(:checked):not(:active):not(:only-child):first-child:hover {
-  box-shadow: inset -1px 0 rgba(21, 23, 28, 0.37); }
-
-.primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:hover:not(:checked):not(:active):not(:only-child):last-child:hover, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:hover:not(:checked):not(:active):not(:only-child):last-child:hover, .primary-toolbar .linked:not(.vertical).path-bar > button:hover:not(:checked):not(:active):not(:only-child):last-child:hover, headerbar .linked:not(.vertical).path-bar > button:hover:not(:checked):not(:active):not(:only-child):last-child:hover {
+.primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher button:nth-child(2):not(:active):not(:checked), headerbar .linked:not(.vertical):not(.path-bar).stack-switcher button:nth-child(2):not(:active):not(:checked), .primary-toolbar .linked:not(.vertical).path-bar button:nth-child(2):not(:active):not(:checked), headerbar .linked:not(.vertical).path-bar button:nth-child(2):not(:active):not(:checked) {
   box-shadow: inset 1px 0 rgba(21, 23, 28, 0.37); }
+
+.primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher button:nth-last-child(2):not(:active):not(:checked), headerbar .linked:not(.vertical):not(.path-bar).stack-switcher button:nth-last-child(2):not(:active):not(:checked), .primary-toolbar .linked:not(.vertical).path-bar button:nth-last-child(2):not(:active):not(:checked), headerbar .linked:not(.vertical).path-bar button:nth-last-child(2):not(:active):not(:checked) {
+  box-shadow: inset -1px 0 rgba(21, 23, 28, 0.37); }
 
 .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry + entry, headerbar .linked:not(.vertical):not(.path-bar) > entry + entry {
   border-left-color: rgba(21, 23, 28, 0); }
@@ -3079,14 +3101,14 @@ popover.background label.nautilus-canvas-item.separator, headerbar .nautilus-can
 .nemo-window .primary-toolbar widget.raised.linked:not(.vertical):not(.path-bar) > button + button {
   border-left-style: none; }
 
-.nemo-window .primary-toolbar widget.raised.linked:not(.vertical):not(.path-bar) > button:hover:not(:checked):not(:active):not(:only-child):hover {
+.nemo-window .primary-toolbar widget.raised.linked:not(.vertical):not(.path-bar) > button:hover:not(:checked):not(:active):not(:only-child):not(:first-child):not(:last-child):hover {
   box-shadow: inset 1px 0 rgba(21, 23, 28, 0.37), inset -1px 0 rgba(21, 23, 28, 0.37); }
 
-.nemo-window .primary-toolbar widget.raised.linked:not(.vertical):not(.path-bar) > button:hover:not(:checked):not(:active):not(:only-child):first-child:hover {
-  box-shadow: inset -1px 0 rgba(21, 23, 28, 0.37); }
-
-.nemo-window .primary-toolbar widget.raised.linked:not(.vertical):not(.path-bar) > button:hover:not(:checked):not(:active):not(:only-child):last-child:hover {
+.nemo-window .primary-toolbar widget.raised.linked:not(.vertical):not(.path-bar) button:nth-child(2):not(:active):not(:checked) {
   box-shadow: inset 1px 0 rgba(21, 23, 28, 0.37); }
+
+.nemo-window .primary-toolbar widget.raised.linked:not(.vertical):not(.path-bar) button:nth-last-child(2):not(:active):not(:checked) {
+  box-shadow: inset -1px 0 rgba(21, 23, 28, 0.37); }
 
 .caja-notebook {
   border-top: 1px solid #dcdfe3; }
