@@ -434,7 +434,8 @@ button.documents-favorite:active:hover {
 // Mate/Gnome Flashback Panel
 //
 .gnome-panel-menu-bar,
-.mate-panel-menu-bar {
+.mate-panel-menu-bar,
+panel-toplevel.background {
 
   &, menubar { background-color: $panel_bg; }
 
