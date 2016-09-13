@@ -1242,6 +1242,11 @@ headerbar {
 
     @include pathbar_linking_rules($sep_color:$header_button_border);
   }
+  .linked:not(.vertical):not(.path-bar).stack-switcher {
+    button:nth-child(2):not(:active):not(:checked),
+    button:nth-last-child(2):not(:active):not(:checked) { box-shadow: none; }
+  }
+
   // use linking rules for entries only
   .linked:not(.vertical):not(.path-bar) {
     @include linking_rules( $a:0.5,

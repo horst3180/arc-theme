@@ -1145,6 +1145,9 @@ window.csd > .titlebar:not(headerbar):backdrop {
 .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher button:nth-last-child(2):not(:active):not(:checked), headerbar .linked:not(.vertical):not(.path-bar).stack-switcher button:nth-last-child(2):not(:active):not(:checked), .primary-toolbar .linked:not(.vertical).path-bar button:nth-last-child(2):not(:active):not(:checked), headerbar .linked:not(.vertical).path-bar button:nth-last-child(2):not(:active):not(:checked) {
   box-shadow: inset -1px 0 rgba(21, 23, 28, 0.37); }
 
+.primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher button:nth-child(2):not(:active):not(:checked), headerbar .linked:not(.vertical):not(.path-bar).stack-switcher button:nth-child(2):not(:active):not(:checked), .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher button:nth-last-child(2):not(:active):not(:checked), headerbar .linked:not(.vertical):not(.path-bar).stack-switcher button:nth-last-child(2):not(:active):not(:checked) {
+  box-shadow: none; }
+
 .primary-toolbar .linked:not(.vertical):not(.path-bar) > entry + entry, headerbar .linked:not(.vertical):not(.path-bar) > entry + entry {
   border-left-color: rgba(21, 23, 28, 0); }
 
