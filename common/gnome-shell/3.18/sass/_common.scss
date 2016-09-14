@@ -732,6 +732,7 @@ StScrollBar {
   .item-box {
     padding: 8px;
     border-radius: 2px;
+    border: 1px solid transparent;
 
     &:outlined {
       padding: 8px;

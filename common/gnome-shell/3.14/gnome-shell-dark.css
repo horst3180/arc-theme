@@ -572,7 +572,8 @@ StScrollBar {
     spacing: 8px; }
   .switcher-list .item-box {
     padding: 8px;
-    border-radius: 2px; }
+    border-radius: 2px;
+    border: 1px solid transparent; }
     .switcher-list .item-box:outlined {
       padding: 8px;
       border: 1px solid #5294e2; }
