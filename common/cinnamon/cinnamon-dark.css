@@ -249,42 +249,43 @@ StScrollBar {
   font-weight: normal;
   text-align: center; }
 
-.popup-menu {
+.popup-menu,
+.popup-combo-menu {
   color: white;
   min-width: 200px;
   color: #D3DAE3;
   border-image: url("dark-assets/menu/menu.svg") 9 9 9 9; }
   .popup-menu-arrow {
     icon-size: 16px; }
-  .popup-menu .popup-sub-menu {
+  .popup-menu .popup-sub-menu, .popup-combo-menu .popup-sub-menu {
     background-gradient-direction: none;
     box-shadow: none;
     border-image: url("dark-assets/menu/submenu.svg") 9 9 9 9; }
-    .popup-menu .popup-sub-menu .popup-menu-item:ltr {
+    .popup-menu .popup-sub-menu .popup-menu-item:ltr, .popup-combo-menu .popup-sub-menu .popup-menu-item:ltr {
       padding-right: 0em; }
-    .popup-menu .popup-sub-menu .popup-menu-item:rtl {
+    .popup-menu .popup-sub-menu .popup-menu-item:rtl, .popup-combo-menu .popup-sub-menu .popup-menu-item:rtl {
       padding-left: 0em; }
-    .popup-menu .popup-sub-menu StScrollBar {
+    .popup-menu .popup-sub-menu StScrollBar, .popup-combo-menu .popup-sub-menu StScrollBar {
       padding: 4px; }
-      .popup-menu .popup-sub-menu StScrollBar StBin#trough, .popup-menu .popup-sub-menu StScrollBar StBin#vhandle {
+      .popup-menu .popup-sub-menu StScrollBar StBin#trough, .popup-menu .popup-sub-menu StScrollBar StBin#vhandle, .popup-combo-menu .popup-sub-menu StScrollBar StBin#trough, .popup-combo-menu .popup-sub-menu StScrollBar StBin#vhandle {
         border-width: 0; }
-  .popup-menu .popup-menu-content {
+  .popup-menu .popup-menu-content, .popup-combo-menu .popup-menu-content {
     padding: 1em 0em 1em 0em; }
-  .popup-menu .popup-menu-item {
+  .popup-menu .popup-menu-item, .popup-combo-menu .popup-menu-item {
     padding: .4em 1.75em;
     spacing: 1em; }
-    .popup-menu .popup-menu-item:active {
+    .popup-menu .popup-menu-item:active, .popup-combo-menu .popup-menu-item:active {
       color: #ffffff;
       background-color: transparent;
       border-image: url("common-assets/menu/menu-hover.svg") 9 9 1 1; }
-    .popup-menu .popup-menu-item:insensitive {
+    .popup-menu .popup-menu-item:insensitive, .popup-combo-menu .popup-menu-item:insensitive {
       color: rgba(211, 218, 227, 0.5);
       background: none; }
-  .popup-menu .popup-inactive-menu-item {
+  .popup-menu .popup-inactive-menu-item, .popup-combo-menu .popup-inactive-menu-item {
     color: #D3DAE3; }
-    .popup-menu .popup-inactive-menu-item:insensitive {
+    .popup-menu .popup-inactive-menu-item:insensitive, .popup-combo-menu .popup-inactive-menu-item:insensitive {
       color: rgba(211, 218, 227, 0.45); }
-  .popup-menu .popup-menu-item:active .popup-inactive-menu-item {
+  .popup-menu .popup-menu-item:active .popup-inactive-menu-item, .popup-combo-menu .popup-menu-item:active .popup-inactive-menu-item {
     color: #ffffff; }
   .popup-menu-icon {
     icon-size: 16px; }
@@ -297,13 +298,8 @@ StScrollBar {
   -arrow-base: 0;
   -arrow-rise: 0; }
 
-/*Don't know what this does*/
 .popup-combo-menu {
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 1em 0em;
-  color: red;
-  border: 1px solid rgba(0, 0, 0, 0.6);
-  border-radius: 3px; }
+  padding: 10px 1px; }
 
 .popup-combobox-item {
   spacing: 1em; }

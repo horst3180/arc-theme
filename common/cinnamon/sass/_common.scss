@@ -267,7 +267,8 @@ StScrollBar {
 //
 // Popvers/Menus
 //
-.popup-menu {
+.popup-menu,
+%menu {
   color: white;
   min-width: 200px;
   color: $fg_color;
@@ -325,13 +326,9 @@ StScrollBar {
   -arrow-rise: 0;
 }
 
-/*Don't know what this does*/
 .popup-combo-menu {
-  background-color: rgba(0,0,0,0.4);
-  padding: 1em 0em;
-  color: red;
-  border: 1px solid rgba(0,0,0,0.6);
-  border-radius: 3px;
+  @extend %menu;
+  padding: 10px 1px;
 }
 .popup-image-menu-item {}
 
