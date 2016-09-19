@@ -2245,9 +2245,14 @@ style "chrome_menu_item" {
 }
 
 # Text Style
-style "text" {
+style "text" = "default" {
   engine "murrine" { textstyle = 0 }
 }
+
+style "menu_text" = "menu_item" {
+  engine "murrine" { textstyle = 0 }
+}
+
 
 style "null" {
 
@@ -2337,7 +2342,8 @@ widget "xfwm4-tabwin*"                                              style "xfwm-
 widget "xfwm4-tabwin*GtkButton*"                                    style "xfwm-tabwin-button"
 
 # Fixes ugly text shadows for insensitive text
-widget_class "*<GtkLabel>"                                          style "text" 
+widget_class "*<GtkLabel>"                                          style "text"
+widget_class "*<GtkMenu>*<GtkLabel>"                                style "menu_text" 
 widget_class "*<GtkComboBox>*<GtkCellLayout>"                       style "text"
 widget_class "*<GtkNotebook>*<GtkLabel>"                            style "text"
 widget_class "*<GtkNotebook>*<GtkCellLayout>"                       style "text"
