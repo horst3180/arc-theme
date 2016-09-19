@@ -2689,23 +2689,14 @@ TerminalWindow .notebook tab.reorderable-page.top.active-page,
 TerminalWindow .notebook tab.reorderable-page.top.active-page:hover,
 TerminalWindow .notebook tab.top:active,
 TerminalWindow .notebook tab.top.active-page,
-TerminalWindow .notebook tab.top.active-page:hover,
-PantheonTerminalPantheonTerminalWindow .notebook tab.reorderable-page.top:active,
-PantheonTerminalPantheonTerminalWindow .notebook tab.reorderable-page.top.active-page,
-PantheonTerminalPantheonTerminalWindow .notebook tab.reorderable-page.top.active-page:hover,
-PantheonTerminalPantheonTerminalWindow .notebook tab.top:active,
-PantheonTerminalPantheonTerminalWindow .notebook tab.top.active-page,
-PantheonTerminalPantheonTerminalWindow .notebook tab.top.active-page:hover {
+TerminalWindow .notebook tab.top.active-page:hover {
   box-shadow: inset 0 1px #dcdfe3, inset 0 -1px #dcdfe3, inset 1px 0 #dcdfe3, inset -1px 0 #dcdfe3; }
 
-TerminalWindow .notebook tab.reorderable-page.top, TerminalWindow .notebook tab.top,
-PantheonTerminalPantheonTerminalWindow .notebook tab.reorderable-page.top,
-PantheonTerminalPantheonTerminalWindow .notebook tab.top {
+TerminalWindow .notebook tab.reorderable-page.top, TerminalWindow .notebook tab.top {
   padding-top: 7px;
   border-top-width: 3px; }
 
-TerminalWindow .notebook.header.top,
-PantheonTerminalPantheonTerminalWindow .notebook.header.top {
+TerminalWindow .notebook.header.top {
   box-shadow: inset 0 1px #262a33, inset 0 -1px #dcdfe3; }
 
 GtkHTML {

@@ -5,8 +5,7 @@ GeditNotebook.notebook,
 ScratchMainWindow .notebook,
 EphyNotebook.notebook,
 MidoriNotebook .notebook,
-TerminalWindow .notebook,
-PantheonTerminalPantheonTerminalWindow .notebook {
+TerminalWindow .notebook {
 
   tab.reorderable-page.top, tab.top {
     &:active, &.active-page, &.active-page:hover {
@@ -18,8 +17,7 @@ PantheonTerminalPantheonTerminalWindow .notebook {
   }
 }
 
-TerminalWindow .notebook,
-PantheonTerminalPantheonTerminalWindow .notebook {
+TerminalWindow .notebook {
 
   tab.reorderable-page.top, tab.top {
     padding-top: 7px;
