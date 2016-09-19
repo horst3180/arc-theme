@@ -3309,57 +3309,42 @@ button.documents-favorite:active:hover {
 .tr-workarea overshoot {
   border-color: transparent; }
 
-.gnome-panel-menu-bar, .gnome-panel-menu-bar menubar,
 .mate-panel-menu-bar,
-.mate-panel-menu-bar menubar,
-panel-toplevel.background,
-panel-toplevel.background menubar {
+panel-toplevel.background {
   background-color: rgba(43, 46, 55, 0.95); }
-
-.gnome-panel-menu-bar menubar,
-.gnome-panel-menu-bar #PanelApplet label,
-.gnome-panel-menu-bar #PanelApplet image,
-.mate-panel-menu-bar menubar,
-.mate-panel-menu-bar #PanelApplet label,
-.mate-panel-menu-bar #PanelApplet image,
-panel-toplevel.background menubar,
-panel-toplevel.background #PanelApplet label,
-panel-toplevel.background #PanelApplet image {
-  color: #BAC3CF; }
-
-.gnome-panel-menu-bar button label, .gnome-panel-menu-bar button image,
-.gnome-panel-menu-bar #tasklist-button label,
-.gnome-panel-menu-bar #tasklist-button image,
-.mate-panel-menu-bar button label,
-.mate-panel-menu-bar button image,
-.mate-panel-menu-bar #tasklist-button label,
-.mate-panel-menu-bar #tasklist-button image,
-panel-toplevel.background button label,
-panel-toplevel.background button image,
-panel-toplevel.background #tasklist-button label,
-panel-toplevel.background #tasklist-button image {
-  color: inherit; }
-
-.gnome-panel-menu-bar .wnck-pager,
-.mate-panel-menu-bar .wnck-pager,
-panel-toplevel.background .wnck-pager {
-  color: #5d6268;
-  background-color: rgba(20, 22, 27, 0.95); }
-  .gnome-panel-menu-bar .wnck-pager:hover,
-  .mate-panel-menu-bar .wnck-pager:hover,
-  panel-toplevel.background .wnck-pager:hover {
-    background-color: rgba(54, 58, 70, 0.95); }
-  .gnome-panel-menu-bar .wnck-pager:selected,
-  .mate-panel-menu-bar .wnck-pager:selected,
-  panel-toplevel.background .wnck-pager:selected {
-    color: #a9caf1;
-    background-color: #5294e2; }
-
-.gnome-panel-menu-bar na-tray-applet,
-.mate-panel-menu-bar na-tray-applet,
-panel-toplevel.background na-tray-applet {
-  -NaTrayApplet-icon-padding: 0;
-  -NaTrayApplet-icon-size: 16px; }
+  .mate-panel-menu-bar menubar,
+  panel-toplevel.background menubar {
+    background: none; }
+  .mate-panel-menu-bar menubar,
+  .mate-panel-menu-bar #PanelApplet label,
+  .mate-panel-menu-bar #PanelApplet image,
+  panel-toplevel.background menubar,
+  panel-toplevel.background #PanelApplet label,
+  panel-toplevel.background #PanelApplet image {
+    color: #BAC3CF; }
+  .mate-panel-menu-bar button label, .mate-panel-menu-bar button image,
+  .mate-panel-menu-bar #tasklist-button label,
+  .mate-panel-menu-bar #tasklist-button image,
+  panel-toplevel.background button label,
+  panel-toplevel.background button image,
+  panel-toplevel.background #tasklist-button label,
+  panel-toplevel.background #tasklist-button image {
+    color: inherit; }
+  .mate-panel-menu-bar .wnck-pager,
+  panel-toplevel.background .wnck-pager {
+    color: #5d6268;
+    background-color: rgba(20, 22, 27, 0.95); }
+    .mate-panel-menu-bar .wnck-pager:hover,
+    panel-toplevel.background .wnck-pager:hover {
+      background-color: rgba(54, 58, 70, 0.95); }
+    .mate-panel-menu-bar .wnck-pager:selected,
+    panel-toplevel.background .wnck-pager:selected {
+      color: #a9caf1;
+      background-color: #5294e2; }
+  .mate-panel-menu-bar na-tray-applet,
+  panel-toplevel.background na-tray-applet {
+    -NaTrayApplet-icon-padding: 0;
+    -NaTrayApplet-icon-size: 16px; }
 
 .xfce4-panel.panel {
   background-color: rgba(43, 46, 55, 0.95);
@@ -3379,22 +3364,18 @@ panel-toplevel.background na-tray-applet {
     background-color: rgba(0, 0, 0, 0.25);
     box-shadow: inset 0 -2px #5294e2; }
 
-.gnome-panel-menu-bar button:not(#tasklist-button),
 .mate-panel-menu-bar button:not(#tasklist-button),
 panel-toplevel.background button:not(#tasklist-button), .xfce4-panel.panel button.flat, .xfce4-panel.panel button.sidebar-button {
   color: #BAC3CF;
   border-radius: 0;
   border: none;
   background-color: rgba(43, 46, 55, 0); }
-  .gnome-panel-menu-bar button:hover:not(#tasklist-button),
   .mate-panel-menu-bar button:hover:not(#tasklist-button),
   panel-toplevel.background button:hover:not(#tasklist-button), .xfce4-panel.panel button.flat:hover, .xfce4-panel.panel button.sidebar-button:hover {
     border: none;
     background-color: rgba(65, 70, 84, 0.95); }
-  .gnome-panel-menu-bar button:active:not(#tasklist-button),
   .mate-panel-menu-bar button:active:not(#tasklist-button),
-  panel-toplevel.background button:active:not(#tasklist-button), .xfce4-panel.panel button.flat:active, .xfce4-panel.panel button.sidebar-button:active, .gnome-panel-menu-bar button:checked:not(#tasklist-button),
-  .mate-panel-menu-bar button:checked:not(#tasklist-button),
+  panel-toplevel.background button:active:not(#tasklist-button), .xfce4-panel.panel button.flat:active, .xfce4-panel.panel button.sidebar-button:active, .mate-panel-menu-bar button:checked:not(#tasklist-button),
   panel-toplevel.background button:checked:not(#tasklist-button), .xfce4-panel.panel button.flat:checked, .xfce4-panel.panel button.sidebar-button:checked {
     color: #ffffff;
     border: none;
