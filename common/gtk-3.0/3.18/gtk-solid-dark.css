@@ -3203,6 +3203,9 @@ MarlinViewWindow FMListView, MarlinViewWindow FMColumnView {
   font-weight: bold;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
   icon-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
+  .panel .maximized {
+    background-color: #2b2e37;
+    box-shadow: inset 0 -1px #1b1d23; }
   .panel-shadow {
     background-image: none;
     background-color: transparent; }
@@ -3237,6 +3240,10 @@ MarlinViewWindow FMListView, MarlinViewWindow FMColumnView {
   .composited-indicator > .popup > .menu {
     padding-top: 8px;
     padding-bottom: 8px; }
+  .color-light .composited-indicator {
+    color: rgba(0, 0, 0, 0.65);
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.3), 0 1px 0 rgba(255, 255, 255, 0.25);
+    icon-shadow: 0 0 2px rgba(255, 255, 255, 0.3), 0 1px 0 rgba(255, 255, 255, 0.25); }
 
 .panel-app-button > GtkWidget > GtkWidget:first-child {
   padding: 0 2px 0 4px; }
