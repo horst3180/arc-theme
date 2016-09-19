@@ -3232,6 +3232,7 @@ MarlinViewWindow FMListView, MarlinViewWindow FMColumnView {
 
 WingpanelWidgetsIndicatorPopover.popover {
   padding: 0;
+  font: initial;
   text-shadow: none;
   icon-shadow: none; }
   WingpanelWidgetsIndicatorPopover.popover .menuitem {
