@@ -20,6 +20,13 @@
   <defs
      id="defs9894">
     <linearGradient
+       id="linearGradient5078">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop5080" />
+    </linearGradient>
+    <linearGradient
        id="linearGradient5015">
       <stop
          style="stop-color:#ffffff;stop-opacity:1;"
@@ -695,6 +702,45 @@
        x2="188.98808"
        y2="758.40625"
        gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#selected_bg_color"
+       id="linearGradient5082"
+       x1="51.5"
+       y1="-278.63782"
+       x2="51.5"
+       y2="-256.63782"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       gradientTransform="translate(0,-2.6171875e-6)"
+       inkscape:collect="always"
+       xlink:href="#selected_bg_color"
+       id="linearGradient5082-2"
+       x1="51.5"
+       y1="-278.63782"
+       x2="51.5"
+       y2="-256.63782"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       gradientTransform="translate(-103,-5.234375e-6)"
+       inkscape:collect="always"
+       xlink:href="#selected_bg_color"
+       id="linearGradient5082-9"
+       x1="51.5"
+       y1="-278.63782"
+       x2="51.5"
+       y2="-256.63782"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       gradientTransform="translate(-103,-5.2171875e-6)"
+       inkscape:collect="always"
+       xlink:href="#selected_bg_color"
+       id="linearGradient5082-0"
+       x1="51.5"
+       y1="-278.63782"
+       x2="51.5"
+       y2="-256.63782"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -703,9 +749,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.828427"
-     inkscape:cx="32.627303"
-     inkscape:cy="64.353214"
+     inkscape:zoom="11.313708"
+     inkscape:cx="37.403863"
+     inkscape:cy="228.51884"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -2135,6 +2181,13 @@
          y="-278.63782"
          rx="2.5"
          ry="2.5" />
+      <rect
+         y="-278.63782"
+         x="17"
+         height="22"
+         width="1"
+         id="rect4699"
+         style="display:inline;opacity:0.15;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     </g>
     <g
        style="display:inline"
@@ -2171,6 +2224,13 @@
          width="24"
          id="rect7903-7-3-1"
          style="display:inline;opacity:1;fill:none;fill-opacity:1;stroke:url(#linearGradient5029);stroke-width:0.99999994;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         y="-278.63782"
+         x="51"
+         height="22"
+         width="1"
+         id="rect4699-6"
+         style="display:inline;opacity:1;fill:url(#linearGradient5082);fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     </g>
     <g
        style="display:inline"
@@ -2210,6 +2270,13 @@
            rx="3"
            ry="3" />
       </g>
+      <rect
+         y="-278.63782"
+         x="85"
+         height="22"
+         width="1"
+         id="rect4699-7"
+         style="display:inline;opacity:0.15;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     </g>
     <g
        style="display:inline"
@@ -2246,6 +2313,13 @@
          y="-278.63782"
          rx="2.5"
          ry="2.5" />
+      <rect
+         y="-278.63782"
+         x="17"
+         height="22"
+         width="1"
+         id="rect4699-3"
+         style="display:inline;opacity:0.15;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     </g>
     <g
        style="display:inline"
@@ -2282,6 +2356,13 @@
          y="-278.63782"
          rx="2.5"
          ry="2.5" />
+      <rect
+         y="-278.63782"
+         x="51"
+         height="22"
+         width="1"
+         id="rect4699-6-0"
+         style="display:inline;opacity:1;fill:url(#linearGradient5082-2);fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     </g>
     <g
        style="display:inline"
@@ -2321,6 +2402,13 @@
            rx="3"
            ry="3" />
       </g>
+      <rect
+         y="-278.63782"
+         x="85"
+         height="22"
+         width="1"
+         id="rect4699-1"
+         style="display:inline;opacity:0.15;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     </g>
     <g
        style="display:inline"
@@ -2361,13 +2449,6 @@
            x="-3"
            y="-279.63782" />
       </g>
-      <rect
-         y="-188.63782"
-         x="-16"
-         height="22"
-         width="1"
-         id="rect4699"
-         style="opacity:0.2;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     </g>
     <g
        style="display:inline"
@@ -2408,13 +2489,6 @@
            x="65"
            y="-279.63782" />
       </g>
-      <rect
-         style="display:inline;opacity:0.13;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         id="rect4699-1"
-         width="1"
-         height="22"
-         x="52"
-         y="-188.63782" />
     </g>
     <g
        style="display:inline"
@@ -2501,6 +2575,14 @@
          rx="2.5"
          ry="2.5"
          transform="scale(-1,1)" />
+      <rect
+         y="-278.63782"
+         x="-18"
+         height="22"
+         width="1"
+         id="rect4699-35"
+         style="display:inline;opacity:0.15;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         transform="scale(-1,1)" />
     </g>
     <g
        style="display:inline"
@@ -2538,6 +2620,14 @@
          y="-278.63782"
          rx="2.5"
          ry="2.5"
+         transform="scale(-1,1)" />
+      <rect
+         y="-278.63782"
+         x="-52"
+         height="22"
+         width="1"
+         id="rect4699-6-6"
+         style="display:inline;opacity:1;fill:url(#linearGradient5082-9);fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          transform="scale(-1,1)" />
     </g>
     <g
@@ -2579,6 +2669,14 @@
            rx="3"
            ry="3" />
       </g>
+      <rect
+         y="-278.63782"
+         x="-86"
+         height="22"
+         width="1"
+         id="rect4699-5"
+         style="display:inline;opacity:0.15;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         transform="scale(-1,1)" />
     </g>
     <g
        style="display:inline"
@@ -2617,6 +2715,14 @@
          rx="2.5"
          ry="2.5"
          transform="scale(-1,1)" />
+      <rect
+         y="-278.63782"
+         x="-18"
+         height="22"
+         width="1"
+         id="rect4699-62"
+         style="display:inline;opacity:0.15;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         transform="scale(-1,1)" />
     </g>
     <g
        style="display:inline"
@@ -2654,6 +2760,14 @@
          y="-278.63782"
          rx="2.5"
          ry="2.5"
+         transform="scale(-1,1)" />
+      <rect
+         y="-278.63782"
+         x="-52"
+         height="22"
+         width="1"
+         id="rect4699-6-2"
+         style="display:inline;opacity:1;fill:url(#linearGradient5082-0);fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          transform="scale(-1,1)" />
     </g>
     <g
@@ -2695,6 +2809,14 @@
            rx="3"
            ry="3" />
       </g>
+      <rect
+         y="-278.63782"
+         x="-86"
+         height="22"
+         width="1"
+         id="rect4699-9"
+         style="display:inline;opacity:0.15;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         transform="scale(-1,1)" />
     </g>
     <g
        style="display:inline"
@@ -2735,13 +2857,6 @@
            x="-3"
            y="-279.63782" />
       </g>
-      <rect
-         y="-188.63782"
-         x="-16"
-         height="22"
-         width="1"
-         id="rect4699-86"
-         style="opacity:0.2;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     </g>
     <g
        style="display:inline"
@@ -2782,13 +2897,6 @@
            x="65"
            y="-279.63782" />
       </g>
-      <rect
-         style="display:inline;opacity:0.13;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         id="rect4699-1-6"
-         width="1"
-         height="22"
-         x="52"
-         y="-188.63782" />
     </g>
     <g
        style="display:inline"
