@@ -3309,42 +3309,44 @@ button.documents-favorite:active:hover {
 .tr-workarea overshoot {
   border-color: transparent; }
 
-.mate-panel-menu-bar,
-panel-toplevel.background {
+.mate-panel-menu-bar, .mate-panel-menu-bar menubar,
+panel-toplevel.background,
+panel-toplevel.background menubar {
   background-color: #2b2e37; }
-  .mate-panel-menu-bar menubar,
-  panel-toplevel.background menubar {
-    background: none; }
-  .mate-panel-menu-bar menubar,
-  .mate-panel-menu-bar #PanelApplet label,
-  .mate-panel-menu-bar #PanelApplet image,
-  panel-toplevel.background menubar,
-  panel-toplevel.background #PanelApplet label,
-  panel-toplevel.background #PanelApplet image {
-    color: #BAC3CF; }
-  .mate-panel-menu-bar button label, .mate-panel-menu-bar button image,
-  .mate-panel-menu-bar #tasklist-button label,
-  .mate-panel-menu-bar #tasklist-button image,
-  panel-toplevel.background button label,
-  panel-toplevel.background button image,
-  panel-toplevel.background #tasklist-button label,
-  panel-toplevel.background #tasklist-button image {
-    color: inherit; }
-  .mate-panel-menu-bar .wnck-pager,
-  panel-toplevel.background .wnck-pager {
-    color: #5d6268;
-    background-color: #14161b; }
-    .mate-panel-menu-bar .wnck-pager:hover,
-    panel-toplevel.background .wnck-pager:hover {
-      background-color: #363a46; }
-    .mate-panel-menu-bar .wnck-pager:selected,
-    panel-toplevel.background .wnck-pager:selected {
-      color: #a9caf1;
-      background-color: #5294e2; }
-  .mate-panel-menu-bar na-tray-applet,
-  panel-toplevel.background na-tray-applet {
-    -NaTrayApplet-icon-padding: 0;
-    -NaTrayApplet-icon-size: 16px; }
+
+.mate-panel-menu-bar menubar,
+.mate-panel-menu-bar #PanelApplet label,
+.mate-panel-menu-bar #PanelApplet image,
+panel-toplevel.background menubar,
+panel-toplevel.background #PanelApplet label,
+panel-toplevel.background #PanelApplet image {
+  color: #BAC3CF; }
+
+.mate-panel-menu-bar button label, .mate-panel-menu-bar button image,
+.mate-panel-menu-bar #tasklist-button label,
+.mate-panel-menu-bar #tasklist-button image,
+panel-toplevel.background button label,
+panel-toplevel.background button image,
+panel-toplevel.background #tasklist-button label,
+panel-toplevel.background #tasklist-button image {
+  color: inherit; }
+
+.mate-panel-menu-bar .wnck-pager,
+panel-toplevel.background .wnck-pager {
+  color: #5d6268;
+  background-color: #14161b; }
+  .mate-panel-menu-bar .wnck-pager:hover,
+  panel-toplevel.background .wnck-pager:hover {
+    background-color: #363a46; }
+  .mate-panel-menu-bar .wnck-pager:selected,
+  panel-toplevel.background .wnck-pager:selected {
+    color: #a9caf1;
+    background-color: #5294e2; }
+
+.mate-panel-menu-bar na-tray-applet,
+panel-toplevel.background na-tray-applet {
+  -NaTrayApplet-icon-padding: 0;
+  -NaTrayApplet-icon-size: 16px; }
 
 .xfce4-panel.panel {
   background-color: #2b2e37;
@@ -3380,6 +3382,12 @@ panel-toplevel.background button:not(#tasklist-button), .xfce4-panel.panel butto
     color: #ffffff;
     border: none;
     background-color: #5294e2; }
+    .mate-panel-menu-bar button:active:not(#tasklist-button) label,
+    panel-toplevel.background button:active:not(#tasklist-button) label, .xfce4-panel.panel button.flat:active label, .xfce4-panel.panel button.sidebar-button:active label, .mate-panel-menu-bar button:active:not(#tasklist-button) image,
+    panel-toplevel.background button:active:not(#tasklist-button) image, .xfce4-panel.panel button.flat:active image, .xfce4-panel.panel button.sidebar-button:active image, .mate-panel-menu-bar button:checked:not(#tasklist-button) label,
+    panel-toplevel.background button:checked:not(#tasklist-button) label, .xfce4-panel.panel button.flat:checked label, .xfce4-panel.panel button.sidebar-button:checked label, .mate-panel-menu-bar button:checked:not(#tasklist-button) image,
+    panel-toplevel.background button:checked:not(#tasklist-button) image, .xfce4-panel.panel button.flat:checked image, .xfce4-panel.panel button.sidebar-button:checked image {
+      color: inherit; }
 
 .nautilus-window .floating-bar {
   padding: 1px;

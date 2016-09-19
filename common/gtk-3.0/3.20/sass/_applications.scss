@@ -436,9 +436,7 @@ button.documents-favorite:active:hover {
 .mate-panel-menu-bar,
 panel-toplevel.background {
 
-  background-color: $panel_bg;
-
-  menubar { background: none; }
+  &, menubar { background-color: opacify($panel_bg, 1); }
 
   menubar,
   #PanelApplet label,
@@ -516,6 +514,8 @@ panel-toplevel.background {
     color: $selected_fg_color;
     border: none;
     background-color: $selected_bg_color;
+
+    label, image { color: inherit; }
   }
 }
 
