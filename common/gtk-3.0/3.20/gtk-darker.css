@@ -2993,10 +2993,12 @@ modelbutton.flat:selected arrow, treeview.view:selected, treeview.view:selected:
 terminal-window notebook > header.top > tabs > tab:checked {
   box-shadow: inset 0 -1px #dcdfe3; }
 
-terminal-window notebook > header.top {
+terminal-window notebook > header.top,
+.mate-terminal notebook > header.top {
   padding-top: 3px;
   box-shadow: inset 0 1px #262a33, inset 0 -1px #dcdfe3; }
-  terminal-window notebook > header.top button {
+  terminal-window notebook > header.top button,
+  .mate-terminal notebook > header.top button {
     padding: 0;
     min-width: 24px;
     min-height: 24px; }
@@ -3196,6 +3198,19 @@ popover.background label.nautilus-canvas-item.separator, headerbar .nautilus-can
     border-left-width: 1px; }
   .gedit-map-frame border:dir(rtl) {
     border-right-width: 1px; }
+
+.pluma-window statusbar frame > border {
+  border: none; }
+
+.pluma-window notebook > stack scrolledwindow {
+  border-width: 0 0 1px 0; }
+
+#pluma-status-combo-button {
+  min-height: 0;
+  padding: 0;
+  border-top: none;
+  border-bottom: none;
+  border-radius: 0; }
 
 .gb-search-entry-occurrences-tag {
   background: none; }

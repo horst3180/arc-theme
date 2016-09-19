@@ -7,9 +7,10 @@ terminal-window notebook {
 }
 
 //
-// GNOME Terminal
+// GNOME Terminal, MATE Terminal
 //
-terminal-window {
+terminal-window,
+.mate-terminal {
 
   notebook {
     > header.top {
@@ -262,6 +263,23 @@ $disk_space_free: darken($bg_color, 3%);
     &:dir(ltr) { border-left-width: 1px; }
     &:dir(rtl) { border-right-width: 1px; }
   }
+}
+
+//
+// Pluma
+//
+
+.pluma-window statusbar frame > border { border: none; }
+
+.pluma-window notebook > stack scrolledwindow { border-width: 0 0 1px 0; }
+
+#pluma-status-combo-button {
+  min-height: 0;
+  padding: 0;
+
+  border-top: none;
+  border-bottom: none;
+  border-radius: 0;
 }
 
 //
