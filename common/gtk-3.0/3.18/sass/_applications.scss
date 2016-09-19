@@ -773,6 +773,8 @@ WingpanelWidgetsIndicatorPopover.popover {
   text-shadow: none;
   icon-shadow: none;
 
+  .sidebar { background: none; }
+
   .menuitem {
     padding: 5px;
     outline-color: transparent;

@@ -3257,6 +3257,8 @@ WingpanelWidgetsIndicatorPopover.popover {
   font: initial;
   text-shadow: none;
   icon-shadow: none; }
+  WingpanelWidgetsIndicatorPopover.popover .sidebar {
+    background: none; }
   WingpanelWidgetsIndicatorPopover.popover .menuitem {
     padding: 5px;
     outline-color: transparent;
