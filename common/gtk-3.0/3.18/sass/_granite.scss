@@ -143,6 +143,13 @@ GraniteWidgetsStaticNotebook .frame {
 }
 
 //
+// Notebook
+//
+.dynamic-notebook .notebook tab {
+  .button > GtkImage { padding: 0; }
+}
+
+//
 // Welcome
 //
 GraniteWidgetsWelcome {

@@ -3514,6 +3514,9 @@ GraniteWidgetsStaticNotebook .frame {
 .source-list.category-expander:checked {
   -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
 
+.dynamic-notebook .notebook tab .button > GtkImage {
+  padding: 0; }
+
 GraniteWidgetsWelcome {
   background-color: #ffffff; }
 
