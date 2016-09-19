@@ -1916,6 +1916,7 @@ GtkSwitch {
     background-image: -gtk-scaled(url("assets/switch#{$l}#{$asset_suffix}.png"),url("assets/switch#{$l}#{$asset_suffix}@2.png"));
   }
 
+  WingpanelWidgetsIndicatorPopover.popover .menuitem:hover GtkSwitch.trough#{$k},
   .menu .menuitem:hover GtkSwitch.trough#{$k},
   .list-row:selected GtkSwitch.trough#{$k},
   GtkInfoBar GtkSwitch.trough#{$k} {
@@ -1955,6 +1956,7 @@ GtkSwitch {
     // the borders of checks and radios are
     // too similar in luminosity to the selected background color, hence
     // we need special casing.
+    WingpanelWidgetsIndicatorPopover.popover .menuitem:hover .#{$w}#{$s},
     .menu .menuitem.#{$w}#{$s}:hover,
     GtkTreeView.view.#{$w}#{$s}:selected,
     .list-row:selected .#{$w}#{$s},
@@ -2036,6 +2038,7 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
       }
     }
     //selected list-row and infobar sliders
+    WingpanelWidgetsIndicatorPopover.popover .menuitem:hover &,
     .menu .menuitem:hover &,
     .list-row:selected &,
     GtkInfoBar & {
@@ -2085,6 +2088,7 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
       &:insensitive {  }
     }
     // troughs in selected list-rows and infobars
+    WingpanelWidgetsIndicatorPopover.popover .menuitem:hover &,
     .menu .menuitem:hover &,
     .list-row:selected &,
     GtkInfoBar & {

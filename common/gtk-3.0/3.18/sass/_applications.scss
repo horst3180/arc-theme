@@ -768,15 +768,12 @@ WingpanelWidgetsIndicatorPopover.popover {
     outline-color: transparent;
     text-shadow: none;
     icon-shadow: none;
-    border: solid transparent;
-    border-width: 1px 0;
 
     GtkLabel, GtkImage { padding: 0 3px; }
 
     &:hover, &:active {
-      background-color: if($variant == 'light', transparentize(black, 0.96), transparentize(white, 0.95));
-      border: solid if($variant == 'light', transparentize(black, 0.92), transparentize(white, 0.93));
-      border-width: 1px 0;
+      color: $selected_fg_color;
+      background-color: $selected_bg_color;
     }
     *:insensitive { color: $insensitive_fg_color; }
   }
