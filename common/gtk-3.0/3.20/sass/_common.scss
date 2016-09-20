@@ -363,7 +363,7 @@ button {
     background-clip: if($variant=='light', border-box, padding-box);
     transition-duration: 50ms;
 
-    label:disabled { color: inherit; opacity: 0.6; }
+    &:not(:disabled) label:disabled { color: inherit; opacity: 0.6; }
   }
 
   //Webkitgtk workaround start
@@ -808,6 +808,9 @@ spinbutton {
 
     > button:hover:not(:active),
     > button:hover + button { box-shadow: inset 1px 0 $button_border; }
+
+    > button:disabled + button:not(:disabled):not(:active):not(:checked):not(:hover),
+    > button:not(:disabled):not(:active):not(:checked):not(:hover) + button:disabled { box-shadow: inset 1px 0 transparentize($button_border, 0.5); }
 
     > button:first-child:hover:not(:active),
     > button.up:dir(rtl):hover:not(:active),
@@ -1301,6 +1304,9 @@ headerbar {
 
     > button:hover:not(:active),
     > button:hover + button { box-shadow: inset 1px 0 $header_button_border; }
+
+    > button:disabled + button:not(:disabled):not(:active):not(:checked):not(:hover),
+    > button:not(:disabled):not(:active):not(:checked):not(:hover) + button:disabled { box-shadow: inset 1px 0 $header_button_border; }
 
     > button:first-child:hover:not(:active),
     > entry + button:not(:active):hover { box-shadow: none; }

@@ -248,7 +248,7 @@ GtkSearchEntry.entry {
     border-color: #5294e2;
     background-color: #5294e2;
     transition-duration: 50ms; }
-    .button:active .label:insensitive, .button:checked .label:insensitive {
+    .button:active:not(:insensitive) .label:insensitive, .button:checked:not(:insensitive) .label:insensitive {
       color: inherit;
       opacity: 0.6; }
   .button:active {

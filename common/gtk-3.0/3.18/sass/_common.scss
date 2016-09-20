@@ -328,7 +328,7 @@ $_dot_color: $selected_bg_color;
     @include button(active);
     transition-duration: 50ms;
 
-    .label:insensitive { color: inherit; opacity: 0.6; }
+    &:not(:insensitive) .label:insensitive { color: inherit; opacity: 0.6; }
   }
 
   //Webkitgtk workaround start
