@@ -1417,11 +1417,16 @@ treeview.view {
       color: #5294e2;
       box-shadow: none;
       background-color: #ffffff; }
-  treeview.view.trough, treeview.view.trough:selected, treeview.view.trough:selected:focus {
+  treeview.view.trough {
     color: #D3DAE3;
     background-color: #2b2e39;
     border-radius: 3px;
     border-width: 0; }
+    treeview.view.trough:selected, treeview.view.trough:selected:focus {
+      color: #ffffff;
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 3px;
+      border-width: 0; }
   treeview.view header button {
     min-height: 0;
     min-width: 0;

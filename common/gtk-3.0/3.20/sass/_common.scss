@@ -1500,11 +1500,18 @@ treeview.view {
       background-color: $selected_fg_color;
     }
   }
-  &.trough, &.trough:selected, &.trough:selected:focus { // progress bar trough in treeviews
+  &.trough { // progress bar trough in treeviews
     color: $fg_color;
     background-color: $button_border;
     border-radius: 3px;
     border-width: 0;
+
+    &:selected, &:selected:focus {
+      color: $selected_fg_color;
+      background-color: transparentize(black, 0.8);
+      border-radius: 3px;
+      border-width: 0;
+    }
   }
 
   header {
