@@ -449,6 +449,56 @@ button.documents-favorite:active:hover {
 }
 
 //
+// Gnome Flashback
+//
+#gf-bubble,
+#gf-osd-window,
+#gf-input-source-popup,
+#gf-candidate-popup {
+  &, &.solid {
+    color: lighten($osd_fg_color, 7%);
+    background-color: $osd_bg_color;
+    border: 1px solid darken($osd_bg_color, 8%);
+    border-radius: 2px;
+  }
+
+  levelbar {
+    block {
+      &.low, &.high, &.full {
+        background-color: $selected_bg_color;
+        border-color: $selected_bg_color;
+      }
+      &.empty { background-color: darken($osd_bg_color, 5%); }
+    }
+    trough { background: none; }
+  }
+
+  // FIXME still needs button styling
+}
+
+#gf-input-source {
+  min-height: 32px;
+  min-width: 40px;
+
+  &:selected {
+    color: $selected_fg_color;
+    background-color: $selected_bg_color;
+    border-radius: 2px;
+  }
+}
+
+gf-candidate-box {
+  label { padding: 3px; }
+
+  &:hover,
+  &:selected {
+    color: $selected_fg_color;
+    background-color: $selected_bg_color;
+    border-radius: 2px;
+  }
+}
+
+//
 // Mate/Gnome Flashback Panel
 //
 .mate-panel-menu-bar,

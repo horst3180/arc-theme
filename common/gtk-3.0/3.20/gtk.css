@@ -3343,6 +3343,59 @@ button.documents-favorite:active:hover {
 .tr-workarea overshoot {
   border-color: transparent; }
 
+#gf-bubble, #gf-bubble.solid,
+#gf-osd-window,
+#gf-osd-window.solid,
+#gf-input-source-popup,
+#gf-input-source-popup.solid,
+#gf-candidate-popup,
+#gf-candidate-popup.solid {
+  color: #cfd5de;
+  background-color: rgba(53, 57, 69, 0.95);
+  border: 1px solid rgba(35, 38, 46, 0.95);
+  border-radius: 2px; }
+
+#gf-bubble levelbar block.low, #gf-bubble levelbar block.high, #gf-bubble levelbar block.full,
+#gf-osd-window levelbar block.low,
+#gf-osd-window levelbar block.high,
+#gf-osd-window levelbar block.full,
+#gf-input-source-popup levelbar block.low,
+#gf-input-source-popup levelbar block.high,
+#gf-input-source-popup levelbar block.full,
+#gf-candidate-popup levelbar block.low,
+#gf-candidate-popup levelbar block.high,
+#gf-candidate-popup levelbar block.full {
+  background-color: #5294e2;
+  border-color: #5294e2; }
+
+#gf-bubble levelbar block.empty,
+#gf-osd-window levelbar block.empty,
+#gf-input-source-popup levelbar block.empty,
+#gf-candidate-popup levelbar block.empty {
+  background-color: rgba(42, 45, 55, 0.95); }
+
+#gf-bubble levelbar trough,
+#gf-osd-window levelbar trough,
+#gf-input-source-popup levelbar trough,
+#gf-candidate-popup levelbar trough {
+  background: none; }
+
+#gf-input-source {
+  min-height: 32px;
+  min-width: 40px; }
+  #gf-input-source:selected {
+    color: #ffffff;
+    background-color: #5294e2;
+    border-radius: 2px; }
+
+gf-candidate-box label {
+  padding: 3px; }
+
+gf-candidate-box:hover, gf-candidate-box:selected {
+  color: #ffffff;
+  background-color: #5294e2;
+  border-radius: 2px; }
+
 .mate-panel-menu-bar, .mate-panel-menu-bar menubar,
 panel-toplevel.background,
 panel-toplevel.background menubar {
