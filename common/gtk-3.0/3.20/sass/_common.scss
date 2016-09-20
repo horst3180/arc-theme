@@ -362,6 +362,8 @@ button {
 
     background-clip: if($variant=='light', border-box, padding-box);
     transition-duration: 50ms;
+
+    label:disabled { color: inherit; opacity: 0.6; }
   }
 
   //Webkitgtk workaround start

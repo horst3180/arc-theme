@@ -384,6 +384,8 @@ $_dot_color: $selected_bg_color;
     background-clip: if($variant=='light', border-box, padding-box);
     @include button(active);
     transition-duration: 50ms;
+
+    .label:insensitive { color: inherit; opacity: 0.6; }
   }
 
   //Webkitgtk workaround start

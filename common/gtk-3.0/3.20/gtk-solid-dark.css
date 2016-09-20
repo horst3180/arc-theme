@@ -271,6 +271,9 @@ button {
     background-color: #5294e2;
     background-clip: padding-box;
     transition-duration: 50ms; }
+    button:active label:disabled, button:checked label:disabled {
+      color: inherit;
+      opacity: 0.6; }
   button:active {
     color: #D3DAE3; }
   button:active:hover, button:checked {
