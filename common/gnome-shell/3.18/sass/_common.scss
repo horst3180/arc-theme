@@ -547,7 +547,37 @@ StScrollBar {
   }
 
   &-device-icon { icon-size: 64px; }
-  
+}
+
+//
+// Access Dialog
+//
+.access-dialog {
+  spacing: 30px;
+
+  &-main-layout {
+    padding: 12px 20px 0;
+    spacing: 12px;
+  }
+
+  &-content {
+    max-width: 28em;
+    spacing: 20px;
+  }
+
+  &-icon {
+    min-width: 48px;
+    icon-size: 48px;
+  }
+
+  &-title {
+    font-weight: bold;
+  }
+
+  &-subtitle {
+    color: $fg_color;
+    font-weight: bold;
+  }
 }
 
 //
@@ -701,6 +731,10 @@ StScrollBar {
     border-radius: 2px;
     color: $selected_bg_color;
   }
+  .level-bar {
+    background-color: $selected_bg_color;
+    border-radius: 2px;
+  }
 }
 
 .resize-popup {
@@ -776,6 +810,11 @@ StScrollBar {
   width: 96px;
   height: 96px;
 }
+
+//
+//Window Cycler
+//
+.cycler-highlight { border: 5px solid $selected_bg_color; }
 
 //
 // Workspace Switcher
@@ -1153,7 +1192,7 @@ StScrollBar {
 
   &:hover, &:focus { background-color: transparentize(black, 0.9); }
 
-  &:active {
+  &:active, &:selected {
     color: $fg_color;
     background-color: transparentize(black, 0.85);
     border-width: 0; //avoid jumparound due to today
