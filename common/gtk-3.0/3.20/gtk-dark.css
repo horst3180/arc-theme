@@ -3393,6 +3393,19 @@ gf-candidate-box:hover, gf-candidate-box:selected {
   background-color: #5294e2;
   border-radius: 2px; }
 
+MsdOsdWindow.background.osd {
+  border-radius: 2px;
+  border: 1px solid rgba(35, 38, 46, 0.95); }
+  MsdOsdWindow.background.osd .progressbar {
+    background-color: #5294e2;
+    border: none;
+    border-color: red;
+    border-radius: 5px; }
+  MsdOsdWindow.background.osd .trough {
+    background-color: rgba(42, 45, 55, 0.95);
+    border: none;
+    border-radius: 5px; }
+
 .mate-panel-menu-bar, .mate-panel-menu-bar menubar,
 panel-toplevel.background,
 panel-toplevel.background menubar {
