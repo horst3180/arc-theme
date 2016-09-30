@@ -319,6 +319,8 @@ pillbox {
   color: $selected_fg_color;
   background-color: $selected_bg_color;
   border-radius: 3px;
+
+  &:disabled label { color: transparentize($selected_fg_color, 0.5) }
 }
 
 docktabstrip {
@@ -365,6 +367,58 @@ dockoverlayedge {
   }
 }
 
+popover.messagepopover {
+  &.background { padding: 0; }
+
+  .popover-content-area { margin: 16px; }
+  .popover-action-area {
+    margin: 8px;
+
+    button:not(:first-child):not(:last-child) { margin: 0 4px; }
+  }
+}
+
+popover.popover-selector {
+  padding: 0;
+
+  list {
+    row { padding: 5px 0; }
+    row image { margin-left: 3px; margin-right: 10px; }
+  }
+}
+
+entry.search.preferences-search {
+  border: none;
+  border-right: 1px solid $borders_color;
+  border-bottom: 1px solid $borders_color;
+  border-radius: 0;
+}
+
+preferences stacksidebar.sidebar {
+  background-color: $base_color;
+
+  list separator { background-color: transparent; }
+}
+
+devhelppanel entry:focus,
+symboltreepanel entry:focus {
+  border-color: $borders_color
+}
+
+button.run-arrow-button {
+  min-width: 12px;
+}
+
+omnibar.linked > entry:not(:only-child) { border-style: solid; border-radius: 3px; margin-left: 1px; margin-right: 1px; }
+
+gstyleslidein {
+  #scale_box,
+  #strings_controls,
+  #palette_controls,
+  #components_controls {
+    button.toggle:checked { color: $fg_color; }
+  }
+}
 
 //
 // Epiphany

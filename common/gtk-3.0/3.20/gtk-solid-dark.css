@@ -3256,6 +3256,8 @@ pillbox {
   color: #ffffff;
   background-color: #5294e2;
   border-radius: 3px; }
+  pillbox:disabled label {
+    color: rgba(255, 255, 255, 0.5); }
 
 docktabstrip {
   padding: 0 6px;
@@ -3288,6 +3290,55 @@ dockoverlayedge {
   dockoverlayedge.left-edge tab:checked,
   dockoverlayedge.right-edge tab:checked {
     border-width: 1px 0; }
+
+popover.messagepopover.background {
+  padding: 0; }
+
+popover.messagepopover .popover-content-area {
+  margin: 16px; }
+
+popover.messagepopover .popover-action-area {
+  margin: 8px; }
+  popover.messagepopover .popover-action-area button:not(:first-child):not(:last-child) {
+    margin: 0 4px; }
+
+popover.popover-selector {
+  padding: 0; }
+  popover.popover-selector list row {
+    padding: 5px 0; }
+  popover.popover-selector list row image {
+    margin-left: 3px;
+    margin-right: 10px; }
+
+entry.search.preferences-search {
+  border: none;
+  border-right: 1px solid #2b2e39;
+  border-bottom: 1px solid #2b2e39;
+  border-radius: 0; }
+
+preferences stacksidebar.sidebar {
+  background-color: #404552; }
+  preferences stacksidebar.sidebar list separator {
+    background-color: transparent; }
+
+devhelppanel entry:focus,
+symboltreepanel entry:focus {
+  border-color: #2b2e39; }
+
+button.run-arrow-button {
+  min-width: 12px; }
+
+omnibar.linked > entry:not(:only-child) {
+  border-style: solid;
+  border-radius: 3px;
+  margin-left: 1px;
+  margin-right: 1px; }
+
+gstyleslidein #scale_box button.toggle:checked,
+gstyleslidein #strings_controls button.toggle:checked,
+gstyleslidein #palette_controls button.toggle:checked,
+gstyleslidein #components_controls button.toggle:checked {
+  color: #D3DAE3; }
 
 .documents-scrolledwin.frame {
   border-width: 0; }
