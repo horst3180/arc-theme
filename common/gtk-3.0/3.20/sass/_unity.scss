@@ -17,7 +17,7 @@ UnityDecoration {
   -UnityDecoration-title-fade: 35px;
   -UnityDecoration-title-alignment: 0.0;
 
-  &.top {
+  .top {
     border: 1px solid if($darker=='true' or $variant == 'dark', darken($header_bg, 7%), transparentize(black, 0.9));
     border-bottom-width: 0;
     border-radius: 4px 4px 0 0;
@@ -34,8 +34,8 @@ UnityDecoration {
       color: transparentize($header_fg, 0.3);
     }
   }
-  &.left, &.right, &.bottom,
-  &.left:backdrop, &.right:backdrop, &.bottom:backdrop {
+  .left, .right, .bottom,
+  .left:backdrop, .right:backdrop, .bottom:backdrop {
     background-color: transparent;
     background-image: _solid(if($darker=='true' or $variant == 'dark', darken($header_bg, 7%), transparentize(black, 0.9)));
   }
