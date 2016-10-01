@@ -651,17 +651,17 @@ toolbar.inline-toolbar toolbutton {
 // special case, because path-bars are bugged
 @mixin pathbar_linking_rules($sep_color:if($variant=='light', transparentize($button_border, 0.6), transparentize($button_border, 0.5))) {
 
-    > button + button { border-left-style: none; }
+  > button + button { border-left-style: none; }
 
-    > button:hover:not(:checked):not(:active):not(:only-child):not(:first-child):not(:last-child) {
+  > button:hover:not(:checked):not(:active):not(:only-child) {
 
-      &:hover {
-        box-shadow: inset  1px 0 $sep_color,
-                    inset -1px 0 $sep_color;
-      }
+    &:hover {
+      box-shadow: inset  1px 0 $sep_color,
+                  inset -1px 0 $sep_color;
     }
-    button:nth-child(2):not(:active):not(:checked) { box-shadow: inset 1px 0 $sep_color; }
-    button:nth-last-child(2):not(:active):not(:checked) { box-shadow: inset -1px 0 $sep_color; }
+    &:first-child:hover { box-shadow: inset -1px 0 $sep_color; }
+    &:last-child:hover { box-shadow: inset 1px 0 $sep_color; }
+  }
 }
 
 // Apply the rules defined above
@@ -1244,12 +1244,7 @@ headerbar {
 
       &, &:hover, &:active, &:checked, &:disabled { @extend %linked; }
     }
-
     @include pathbar_linking_rules($sep_color:$header_button_border);
-  }
-  .linked:not(.vertical):not(.path-bar).stack-switcher {
-    button:nth-child(2):not(:active):not(:checked),
-    button:nth-last-child(2):not(:active):not(:checked) { box-shadow: none; }
   }
 
   // use linking rules for entries only
