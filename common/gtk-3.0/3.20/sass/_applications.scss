@@ -285,6 +285,8 @@ $disk_space_free: darken($bg_color, 3%);
 //
 // Gnome Builder
 //
+// TODO: Merge this with the upstream stylesheet
+
 .gb-search-entry-occurrences-tag { background: none; }
 
 workbench.csd > stack.titlebar:not(headerbar) {
@@ -395,7 +397,7 @@ entry.search.preferences-search {
 }
 
 preferences stacksidebar.sidebar {
-  background-color: $base_color;
+  list { background-image: _solid($base_color); }
 
   list separator { background-color: transparent; }
 }
@@ -418,6 +420,11 @@ gstyleslidein {
   #components_controls {
     button.toggle:checked { color: $fg_color; }
   }
+}
+
+configurationview {
+  entry.flat { background: none; }
+  list { border-width: 0; }
 }
 
 //

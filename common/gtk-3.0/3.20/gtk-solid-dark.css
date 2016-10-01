@@ -3316,10 +3316,11 @@ entry.search.preferences-search {
   border-bottom: 1px solid #2b2e39;
   border-radius: 0; }
 
-preferences stacksidebar.sidebar {
-  background-color: #404552; }
-  preferences stacksidebar.sidebar list separator {
-    background-color: transparent; }
+preferences stacksidebar.sidebar list {
+  background-image: linear-gradient(to bottom, #404552, #404552); }
+
+preferences stacksidebar.sidebar list separator {
+  background-color: transparent; }
 
 devhelppanel entry:focus,
 symboltreepanel entry:focus {
@@ -3339,6 +3340,12 @@ gstyleslidein #strings_controls button.toggle:checked,
 gstyleslidein #palette_controls button.toggle:checked,
 gstyleslidein #components_controls button.toggle:checked {
   color: #D3DAE3; }
+
+configurationview entry.flat {
+  background: none; }
+
+configurationview list {
+  border-width: 0; }
 
 .documents-scrolledwin.frame {
   border-width: 0; }
