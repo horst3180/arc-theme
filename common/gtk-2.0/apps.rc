@@ -77,7 +77,10 @@ style "entry_border" {
 }
 
 # Mousepad search entry
-widget_class "*MousepadSearchBar*.<GtkEntry>"    style "entry_border"
+widget_class "*MousepadSearchBar*.<GtkEntry>"      style "entry_border"
+
+# Mousepad find and replace
+widget_class "*MousepadReplaceDialog*.<GtkEntry>"  style "entry_border"
 
 # Hexchat input box
-class "SexySpellEntry"                           style:highest "entry_border"
+class "SexySpellEntry"                             style:highest "entry_border"
