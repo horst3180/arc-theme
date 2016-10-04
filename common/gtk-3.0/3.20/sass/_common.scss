@@ -927,7 +927,7 @@ toolbar {
   }
 }
 
-.primary-toolbar {
+.primary-toolbar:not(.libreoffice-toolbar) {  // LO messes up the toolbar styling, so exclude LO toolbars
   color: $header_fg;
   background-color: opacify($header_bg, 1);
   box-shadow: none;
