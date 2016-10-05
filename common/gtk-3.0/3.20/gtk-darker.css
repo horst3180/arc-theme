@@ -1054,6 +1054,7 @@ window.csd > .titlebar:not(headerbar):backdrop {
       color: #ffffff; }
   .primary-toolbar:not(.libreoffice-toolbar) entry:disabled, headerbar entry:disabled {
     color: rgba(207, 218, 231, 0.35);
+    border-color: rgba(21, 23, 28, 0.37);
     background-color: rgba(95, 105, 127, 0.22); }
   .primary-toolbar:not(.libreoffice-toolbar) entry selection:focus, headerbar entry selection:focus {
     background-color: #ffffff;
@@ -1299,6 +1300,7 @@ window.csd > .titlebar:not(headerbar):backdrop {
     box-shadow: none; }
   .primary-toolbar:not(.libreoffice-toolbar) combobox > .linked > button.combo:disabled, headerbar combobox > .linked > button.combo:disabled {
     color: rgba(207, 218, 231, 0.35);
+    border-color: rgba(21, 23, 28, 0.37);
     background-color: rgba(95, 105, 127, 0.22); }
 
 .primary-toolbar:not(.libreoffice-toolbar) combobox > .linked > entry.combo:dir(ltr), headerbar combobox > .linked > entry.combo:dir(ltr) {
@@ -3569,6 +3571,7 @@ panel-toplevel.background button:not(#tasklist-button), .xfce4-panel.panel butto
     background-color: #5294e2; }
   .marlin-pathbar.pathbar:disabled {
     color: rgba(207, 218, 231, 0.35);
+    border-color: rgba(21, 23, 28, 0.37);
     background-color: rgba(95, 105, 127, 0.22); }
   .marlin-pathbar.pathbar:active, .marlin-pathbar.pathbar:checked {
     color: #5294e2; }

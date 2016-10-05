@@ -74,6 +74,7 @@
   // insensitive header-bar entry
   //
     color: transparentize($header_fg, 0.45);
+    border-color: $header_entry_border;
     background-color: transparentize($header_entry_bg, 0.15);
   }
 
