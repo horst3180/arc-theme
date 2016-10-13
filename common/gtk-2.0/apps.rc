@@ -76,11 +76,80 @@ style "entry_border" {
   }
 }
 
+style "combobox_entry_border" = "combobox_entry"
+{
+
+  engine "pixmap" {
+
+    image {
+      function = SHADOW
+      detail = "entry"
+      state = NORMAL
+      shadow = IN
+      file = "assets/combo-entry-border.png"
+      border = { 4, 4, 5, 4 }
+      stretch = TRUE
+      direction = LTR
+    }
+
+    image {
+      function = SHADOW
+      detail = "entry"
+      state = ACTIVE
+      file = "assets/combo-entry-border-focus.png"
+      border = { 4, 4, 5, 4 }
+      stretch = TRUE
+      direction = LTR
+    }
+
+    image {
+      function = SHADOW
+      detail = "entry"
+      state = NORMAL
+      shadow = IN
+      file = "assets/combo-entry-border-rtl.png"
+      border = { 4, 4, 5, 4 }
+      stretch = TRUE
+      direction = RTL
+    }
+
+    image {
+      function = SHADOW
+      detail = "entry"
+      state = ACTIVE
+      file = "assets/combo-entry-border-focus-rtl.png"
+      border = { 4, 4, 5, 4 }
+      stretch = TRUE
+      direction = RTL
+    }
+
+    image {
+      function = FLAT_BOX
+      state    = INSENSITIVE
+      detail   = "entry_bg"
+      file     = "assets/null.png"
+    }
+
+    image {
+      function = FLAT_BOX
+      detail   = "entry_bg"
+      file     = "assets/null.png"
+    }
+  }
+}
+
+
 # Mousepad search entry
-widget_class "*MousepadSearchBar*.<GtkEntry>"      style "entry_border"
+widget_class "*MousepadSearchBar*.<GtkEntry>"         style "entry_border"
 
 # Mousepad find and replace
-widget_class "*MousepadReplaceDialog*.<GtkEntry>"  style "entry_border"
+widget_class "*MousepadReplaceDialog*.<GtkEntry>"     style "entry_border"
 
 # Hexchat input box
-class "SexySpellEntry"                             style:highest "entry_border"
+class "SexySpellEntry"                                style:highest "entry_border"
+
+# Geany search entries
+widget "*GeanyToolbar.*geany-search-entry-no-match*"  style "entry_border"
+widget "*GeanyToolbar.*GtkEntry*"                     style "entry_border"
+
+widget "GeanyDialogSearch.*GtkComboBoxEntry*.*geany-search-entry-no-match*"  style "combobox_entry_border"
