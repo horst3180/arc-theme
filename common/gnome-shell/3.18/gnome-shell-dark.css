@@ -1214,16 +1214,14 @@ StScrollBar {
   color: #BAC3CF;
   background-color: rgba(53, 57, 69, 0.95);
   border-color: rgba(0, 0, 0, 0.4);
-  padding: 6px 1px 6px 0px;
+  padding: 4px 0;
   border-radius: 0 3px 3px 0; }
   #dash:rtl {
     border-radius: 3px 0 0 3px; }
   .right #dash, #dash:rtl {
-    padding: 6px 0px 6px 1px; }
-  .bottom #dash {
-    padding: 1px 6px 0px 6px; }
-  .top #dash {
-    padding: 0px 6px 1px 6px; }
+    padding: 4px 0; }
+  .top #dash, .bottom #dash {
+    padding: 0; }
   #dash .placeholder {
     background-image: url("common-assets/dash/dash-placeholder.svg");
     background-size: contain;
@@ -1232,14 +1230,11 @@ StScrollBar {
     width: 24px;
     height: 24px; }
 
-.dash-item-container > StWidget {
-  padding: 0px 4px 0px 5px; }
-  .right .dash-item-container > StWidget, .dash-item-container > StWidget:rtl {
-    padding: 0px 5px 0px 4px; }
-  .bottom .dash-item-container > StWidget {
-    padding: 4px 0px 5px 0px; }
-  .top .dash-item-container > StWidget {
-    padding: 5px 0px 4px 0px; }
+.dash-item-container > StWidget, .dash-item-container > StWidget:rtl, .right .dash-item-container > StWidget {
+  padding: 4px 8px; }
+
+.top .dash-item-container > StWidget, .bottom .dash-item-container > StWidget {
+  padding: 6px; }
 
 .dash-label {
   border-radius: 3px;
@@ -1251,12 +1246,6 @@ StScrollBar {
   .bottom .dash-label, .top .dash-label {
     -y-offset: 3px;
     -x-offset: 0; }
-
-#dash .app-well-app .overview-icon,
-.right #dash .app-well-app .overview-icon,
-.bottom #dash .app-well-app .overview-icon,
-.top #dash .app-well-app .overview-icon {
-  padding: 10px; }
 
 #dash .app-well-app:hover .overview-icon,
 .right #dash .app-well-app:hover .overview-icon,
@@ -1274,7 +1263,7 @@ StScrollBar {
 #dash .app-well-app-running-dot {
   width: 11px;
   height: 2px;
-  margin-bottom: 6px;
+  margin-bottom: 2px;
   background-color: #5294e2; }
 
 #dashtodockContainer .app-well-app-running-dot {
@@ -1295,7 +1284,6 @@ StScrollBar {
   background-image: url("common-assets/dash/running4.svg"); }
 
 .show-apps .overview-icon {
-  padding: 11px;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 2px;
   border: 0px solid; }

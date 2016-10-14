@@ -1583,21 +1583,16 @@ StScrollBar {
   color: $osd_fg_color;
   background-color: $dark_sidebar_bg;
   border-color: rgba(0,0,0,0.4);
-  padding: 6px 1px 6px 0px;
+  padding: 4px 0;
   border-radius: 0 3px 3px 0;
 
   &:rtl { border-radius: 3px 0 0 3px; }
 
   .right &,
-  &:rtl {
-    padding: 6px 0px 6px 1px;
-  }
-  .bottom & {
-    padding: 1px 6px 0px 6px;
-  }
-  .top & {
-    padding: 0px 6px 1px 6px;
-  }
+  &:rtl { padding: 4px 0; }
+
+  .top &, .bottom & { padding: 0; }
+
   .placeholder {
     background-image: url("common-assets/dash/dash-placeholder.svg");
     background-size: contain;
@@ -1611,11 +1606,10 @@ StScrollBar {
 }
 
 .dash-item-container > StWidget {
-  padding: 0px 4px 0px 5px;
 
-  .right &, &:rtl { padding: 0px 5px 0px 4px; }
-  .bottom & { padding: 4px 0px 5px 0px; }
-  .top & { padding: 5px 0px 4px 0px; }
+  &, &:rtl, .right & { padding: 4px 8px; }
+
+  .top &, .bottom & { padding: 6px; }
 }
 
 //osd tooltip
@@ -1636,13 +1630,6 @@ StScrollBar {
 // Dash Buttons
 #dash .app-well-app {
 
-  .overview-icon,
-  .right & .overview-icon,
-  .bottom & .overview-icon,
-  .top & .overview-icon {
-    padding: 10px;
-  }
-
   &:hover .overview-icon,
   .right &:hover .overview-icon,
   .bottom &:hover .overview-icon,
@@ -1661,7 +1648,7 @@ StScrollBar {
   &-running-dot {
     width: 11px;
     height: 2px;
-    margin-bottom: 6px;
+    margin-bottom: 2px;
     background-color: $selected_bg_color;
   }
 }
@@ -1683,7 +1670,6 @@ StScrollBar {
 .show-apps {
 
   .overview-icon {
-    padding: 11px;
     background-color: transparentize(black, 0.5);
     border-radius: 2px;
     border: 0px solid;
