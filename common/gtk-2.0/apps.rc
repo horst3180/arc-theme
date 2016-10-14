@@ -76,8 +76,7 @@ style "entry_border" {
   }
 }
 
-style "combobox_entry_border" = "combobox_entry"
-{
+style "combobox_entry_border" = "combobox_entry" {
 
   engine "pixmap" {
 
@@ -87,7 +86,7 @@ style "combobox_entry_border" = "combobox_entry"
       state = NORMAL
       shadow = IN
       file = "assets/combo-entry-border.png"
-      border = { 4, 4, 5, 4 }
+      border = { 4, 4, 12, 12 }
       stretch = TRUE
       direction = LTR
     }
@@ -97,7 +96,7 @@ style "combobox_entry_border" = "combobox_entry"
       detail = "entry"
       state = ACTIVE
       file = "assets/combo-entry-border-focus.png"
-      border = { 4, 4, 5, 4 }
+      border = { 4, 4, 12, 12 }
       stretch = TRUE
       direction = LTR
     }
@@ -108,7 +107,7 @@ style "combobox_entry_border" = "combobox_entry"
       state = NORMAL
       shadow = IN
       file = "assets/combo-entry-border-rtl.png"
-      border = { 4, 4, 5, 4 }
+      border = { 4, 4, 12, 12 }
       stretch = TRUE
       direction = RTL
     }
@@ -118,7 +117,7 @@ style "combobox_entry_border" = "combobox_entry"
       detail = "entry"
       state = ACTIVE
       file = "assets/combo-entry-border-focus-rtl.png"
-      border = { 4, 4, 5, 4 }
+      border = { 4, 4, 12, 12 }
       stretch = TRUE
       direction = RTL
     }
