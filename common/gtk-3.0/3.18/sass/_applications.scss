@@ -525,14 +525,14 @@ SynapseGuiViewVirgilio *:selected { background-color: $selected_bg_color; }
 //
 // Fallback Mode/Budgie Panel
 //
-.gnome-panel-menu-bar,
+.gnome-panel-menu-bar.menubar,
 PanelApplet > GtkMenuBar.menubar,
 PanelToplevel,
 PanelWidget,
 PanelAppletFrame,
 PanelApplet {
   color: $panel_fg;
-  background-image: linear-gradient(to bottom, $panel_bg);
+  background-color: opacify($panel_bg, 1);
 }
 
 PanelApplet .button, PanelApplet .button:backdrop {

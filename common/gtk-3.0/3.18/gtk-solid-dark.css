@@ -3076,14 +3076,14 @@ SynapseGuiViewVirgilio *:selected {
 .tr-workarea .overshoot {
   border-color: transparent; }
 
-.gnome-panel-menu-bar,
+.gnome-panel-menu-bar.menubar,
 PanelApplet > GtkMenuBar.menubar,
 PanelToplevel,
 PanelWidget,
 PanelAppletFrame,
 PanelApplet {
   color: #BAC3CF;
-  background-image: linear-gradient(to bottom, #2b2e37); }
+  background-color: #2b2e37; }
 
 PanelApplet .button, PanelApplet .button:backdrop {
   padding: 4px;
