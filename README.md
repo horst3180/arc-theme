@@ -62,11 +62,11 @@ http://software.opensuse.org/download.html?project=home%3AHorst3180&package=arc-
 
 --
 
-Arch Linux users can install the theme from the AUR
+Arch Linux users can install the official releases directly from pacman in the Community repo and development releases in the AUR 
 
-**Official Releases**: https://aur.archlinux.org/packages/gtk-theme-arc/  
+**Official Releases**: [arc-gtk-theme](https://www.archlinux.org/packages/community/any/arc-gtk-theme/)
 
-**Development Releases**: https://aur.archlinux.org/packages/gtk-theme-arc-git/  
+**Development Releases (AUR)**: [gtk-theme-arc-git](https://aur.archlinux.org/packages/gtk-theme-arc-git/)
 
 **Note:** If you're having trouble with the AUR packages please email the package maintainer at zach@zach-adams.com before creating an issue.
 
