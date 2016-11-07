@@ -23,16 +23,16 @@ Arc is a flat theme with transparent elements for GTK 3, GTK 2 and Gnome-Shell w
 |Distro|Package Name/Link|
 |:----:|:----:|
 | Arch Linux | `arc-gtk-theme`, [`arc-gtk-theme-git`](https://aur.archlinux.org/packages/gtk-theme-arc-git) (AUR) |
-| Debian 8 | [OBS Repo](http://software.opensuse.org/download.html?project=home%3AHorst3180&package=arc-theme) |
+| Debian 8 | [OBS Repo][obs-repo] |
 | Debian Testing/Unstable | `arc-theme` |
-| Fedora | [OBS Repo](http://software.opensuse.org/download.html?project=home%3AHorst3180&package=arc-theme) |
+| Fedora | [OBS Repo][obs-repo] |
 | Gentoo/Funtoo | `x11-themes/arc-theme` from the [Scriptkitties Overlay][sk-overlay] |
-| Open SUSE | [OBS Repo](http://software.opensuse.org/download.html?project=home%3AHorst3180&package=arc-theme) |
+| Open SUSE | [OBS Repo][obs-repo] |
 | Solus | `arc-gtk-theme` |
-| Ubuntu 15.04 - 16.04 | [OBS Repo](http://software.opensuse.org/download.html?project=home%3AHorst3180&package=arc-theme) |
+| Ubuntu 15.04 - 16.04 | [OBS Repo][obs-repo] |
 | Ubuntu 16.10 | `arc-theme` |
 
-**elementary OS Note:** elementary OS Freya users can install the package for Ubuntu 15.04, Loki user can install the package for Ubuntu 16.04.
+**elementary OS Note:** elementary OS Freya users can install the package for Ubuntu 15.04, Loki users can install the package for Ubuntu 16.04.
 
 **AUR Note:** If you're having trouble with the AUR packages please email the package maintainer at zach@zach-adams.com before creating an issue.
 
@@ -144,5 +144,5 @@ Arc is available under the terms of the GPL-3.0. See `COPYING` for details.
 ![A full screenshot of the Arc theme](http://i.imgur.com/tD1OBQ3.png)
 <sub>Screenshot Details: Icons: [Arc](https://github.com/horst3180/arc-icon-theme) | Launcher Icons based on [White Pixel Icons](http://darkdawg.deviantart.com/art/White-Pixel-Icons-252310560) | [Wallpaper](https://pixabay.com/photo-869593/) | Font: Futura Bk bt</sub>
 
-
+[obs-repo]: http://software.opensuse.org/download.html?project=home%3AHorst3180&package=arc-theme
 [sk-overlay]: https://c.darenet.org/scriptkitties/overlay
