@@ -502,6 +502,14 @@ button.documents-favorite:active:hover {
 }
 
 //
+// Gnome Tweak Tool
+//
+.tweak-categories,
+.tweak-category:not(:selected):not(:hover) {
+  background-image: _solid($base_color);
+}
+
+//
 // Transmission
 //
 .tr-workarea undershoot,
