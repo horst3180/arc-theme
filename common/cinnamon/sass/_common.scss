@@ -267,9 +267,9 @@ StScrollBar {
 //
 // Popvers/Menus
 //
+.menu,
 .popup-menu,
 %menu {
-  color: white;
   min-width: 200px;
   color: $fg_color;
   border-image: url("#{$asset_path}/menu/menu.svg") 9 9 9 9;
@@ -357,8 +357,13 @@ StScrollBar {
 //
 #panel {
   font-weight: bold;
-  height: 2.1em;
-  min-height: 27px;
+  height: 27px;
+  width: 32px;
+
+  &:highlight {
+    border-image: none;
+    background-color: transparentize($error_color, 0.5);
+  }
 
   &Left {
     spacing: 4px;
@@ -368,8 +373,15 @@ StScrollBar {
       background-gradient-start: rgba(255,0,0,0.05);
       background-gradient-end: rgba(255,0,0,0.2);
     }
-    &:ltr ·{ padding-right: 4px; }
-    &:rtl ·{ padding-left: 4px; }
+    &:ltr { padding-right: 4px; }
+    &:rtl { padding-left: 4px; }
+
+    &.vertical {
+      padding: 0;
+
+      &:ltr { padding-right: 0px; }
+      &:rtl { padding-left: 0px; }
+    }
   }
 
   &Right {
@@ -379,8 +391,15 @@ StScrollBar {
       background-gradient-start: rgba(0,0,255,0.05);
       background-gradient-end: rgba(0,0,255,0.2);
     }
-    &:ltr ·{ padding-left: 4px; spacing: 0px; }
-    &:rtl ·{ padding-right: 4px; spacing: 0px; }
+    &:ltr { padding-left: 4px; spacing: 0px; }
+    &:rtl { padding-right: 4px; spacing: 0px; }
+
+    &.vertical {
+      padding: 0;
+
+      &:ltr { padding-right: 0px; }
+      &:rtl { padding-left: 0px; }
+    }
   }
 
   &Center {
@@ -397,7 +416,7 @@ StScrollBar {
 .panel {
   $_panel_fg_color: $_shell_fg_color;
 
-  &-top, &-bottom {
+  &-top, &-bottom, &-left, &-right {
     color: $_panel_fg_color;
     font-size: 1em;
     padding: 0px;
@@ -405,9 +424,17 @@ StScrollBar {
 
   &-top { border-image: url('common-assets/panel/panel-top.svg') 1 1 1 1; }
   &-bottom { border-image: url('common-assets/panel/panel-bottom.svg') 1 1 1 1; }
+  &-left { border-image: url('common-assets/panel/panel-left.svg') 1 1 1 1; }
+  &-right { border-image: url('common-assets/panel/panel-right.svg') 1 1 1 1; }
+
+  &-dummy {
+    background-color: transparentize($error_color, 0.5);
+
+    &:entered { background-color: transparentize($error_color, 0.4); }
+  }
 
   &-status-button {
-    border-widht: 0;
+    border-width: 0;
     -natural-hpadding: 3px;
     -minimum-hpadding: 3px;
     font-weight: bold;
@@ -714,6 +741,11 @@ StScrollBar {
 .calendar-other-month-day {
   color: transparentize($fg_color, 0.7);
   opacity: 1;
+}
+
+.calendar-week-number {
+  color: transparentize($fg_color, 0.3);
+  font-size: 80%;
 }
 
 //
@@ -1226,6 +1258,13 @@ StScrollBar {
 
     .panel-bottom & { padding-top: 1px; }
     .panel-top & { padding-bottom: 1px; }
+
+    &.vertical {
+      spacing: 4px;
+      padding: 10px 0;
+    }
+
+    &:highlight { background-color: transparentize($error_color, 0.5); }
   }
 
   &-item-label {
@@ -1237,6 +1276,7 @@ StScrollBar {
   &-item-box {
     font-weight: bold;
     background-image: none;
+    padding-top: 0;
     padding-left: 8px;
     padding-right: 8px;
     transition-duration: 100;
@@ -1250,8 +1290,14 @@ StScrollBar {
       color: $_shell_fg_color;
 
       .panel-bottom & { border-image: url("common-assets/panel/window-list-active-bottom.svg") 3 3 1 3; }
-
       .panel-top & { border-image: url("common-assets/panel/window-list-active-top.svg") 3 3 3 1; }
+      .panel-left & { border-image: url("common-assets/panel/window-list-active-left.svg") 3 1 3 3; }
+      .panel-right & { border-image: url("common-assets/panel/window-list-active-right.svg") 1 3 3 3; }
+    }
+
+    &.right, &.left {
+      padding-left: 0px;
+      padding-right: 0px;
     }
   }
 
@@ -1445,6 +1491,10 @@ StScrollBar {
 //
 #panel-launchers-box {
   padding-left: 7px;
+
+  &.vertical {
+    padding: 2px 0;
+  }
 }
 
 .panel-launcher {
@@ -1488,9 +1538,19 @@ StScrollBar {
     text-shadow: none;
     transition-duration: 100;
 
+    &.vertical {
+      padding: 3px 0;
+    }
+
     &:hover {
       color: $selected_fg_color;
       background-color: $selected_bg_color;
+    }
+
+    &:highlight {
+      background-image: none;
+      border-image: none;
+      background-color: transparentize($error_color, 0.5);
     }
   }
 
@@ -1540,11 +1600,19 @@ StScrollBar {
 .desklet {
   color: $osd_fg_color;
 
+  &:highlight {
+    background-color: transparentize($error_color, 0.5);
+  }
+
   &-with-borders {
     border-image: url("common-assets/misc/bg.svg") 9 9 9 9;
     color: $osd_fg_color;
     padding: 12px;
     padding-bottom: 16px;
+
+    &:highlight {
+      background-color: transparentize($error_color, 0.5);
+    }
   }
   &-with-borders-and-header {
     border-image: url("common-assets/misc/desklet.svg") 9 9 9 9;
@@ -1554,6 +1622,10 @@ StScrollBar {
     border-radius-topright: 0;
     padding: 12px;
     padding-bottom: 17px;
+
+    &:highlight {
+      background-color: transparentize($error_color, 0.5);
+    }
   }
   &-header {
     border-image: url("common-assets/misc/desklet-header.svg") 9 9 9 9;
