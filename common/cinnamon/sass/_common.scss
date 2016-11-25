@@ -1497,7 +1497,8 @@ StScrollBar {
   }
 }
 
-.panel-launcher {
+.panel-launcher,
+.launcher {
   margin: 1px;
   padding: 1px;
   transition-duration: 200;
@@ -1508,6 +1509,8 @@ StScrollBar {
 
     .panel-bottom & { border-bottom-width: 1px; }
     .panel-top & { border-top-width: 1px; }
+    .panel-left & { border-left-width: 1px; padding-left: 0; }
+    .panel-right & { border-right-width: 1px; padding-right: 0; }
   }
 }
 

@@ -1282,17 +1282,29 @@ StScrollBar {
   #panel-launchers-box.vertical {
     padding: 2px 0; }
 
-.panel-launcher {
+.panel-launcher,
+.launcher {
   margin: 1px;
   padding: 1px;
   transition-duration: 200; }
-  .panel-launcher:hover {
+  .panel-launcher:hover,
+  .launcher:hover {
     background-gradient-direction: none;
     border: 0px solid #5294e2; }
-    .panel-bottom .panel-launcher:hover {
+    .panel-bottom .panel-launcher:hover, .panel-bottom
+    .launcher:hover {
       border-bottom-width: 1px; }
-    .panel-top .panel-launcher:hover {
+    .panel-top .panel-launcher:hover, .panel-top
+    .launcher:hover {
       border-top-width: 1px; }
+    .panel-left .panel-launcher:hover, .panel-left
+    .launcher:hover {
+      border-left-width: 1px;
+      padding-left: 0; }
+    .panel-right .panel-launcher:hover, .panel-right
+    .launcher:hover {
+      border-right-width: 1px;
+      padding-right: 0; }
 
 #overview-corner {
   background-image: url("common-assets/misc/overview.png"); }
