@@ -284,7 +284,6 @@ StScrollBar {
 .menu,
 .popup-menu,
 .popup-combo-menu {
-  min-width: 200px;
   color: #5c616c;
   border-image: url("light-assets/menu/menu.svg") 9 9 9 9; }
   .menu-arrow,
