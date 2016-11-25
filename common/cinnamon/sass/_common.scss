@@ -761,8 +761,9 @@ StScrollBar {
   width: 34em;
   color: $osd_fg_color;
 
+  .menu &,
   .popup-menu & {
-    color: $fg_color;
+    &, &.multi-line-notification { color: $fg_color; }
     border-image: url("#{$asset_path}/misc/message.svg") 9 9 9 9;
 
     .notification-button, .notification-icon-button {
