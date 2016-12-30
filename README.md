@@ -22,7 +22,7 @@ Arc is a flat theme with transparent elements for GTK 3, GTK 2 and Gnome-Shell w
 
 |Distro|Package Name/Link|
 |:----:|:----:|
-| Arch Linux | `arc-gtk-theme`, [`arc-gtk-theme-git`](https://aur.archlinux.org/packages/gtk-theme-arc-git) (AUR) |
+| Arch Linux | `arc-gtk-theme`, [`gtk-theme-arc-git`](https://aur.archlinux.org/packages/gtk-theme-arc-git) (AUR) |
 | Debian 8 | [OBS Repo][obs-repo] |
 | Debian Testing/Unstable | `arc-theme` |
 | Fedora | [OBS Repo][obs-repo] |
