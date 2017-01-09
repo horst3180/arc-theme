@@ -1,6 +1,6 @@
 # Arc Theme
 
-Arc is a flat theme with transparent elements for GTK 3, GTK 2 and Gnome-Shell which supports GTK 3 and GTK 2 based desktop environments like Gnome, Unity, Budgie, Pantheon, XFCE, Mate, etc.
+Arc is a flat theme with transparent elements for GTK 3, GTK 2 and GNOME Shell which supports GTK 3 and GTK 2 based desktop environments like GNOME, Unity, Budgie, Pantheon, Xfce, MATE, etc.
 
 ## Arc is available in three variants 
 
@@ -27,7 +27,7 @@ Arc is a flat theme with transparent elements for GTK 3, GTK 2 and Gnome-Shell w
 | Debian Testing/Unstable | `arc-theme` |
 | Fedora | [OBS Repo][obs-repo] |
 | Gentoo/Funtoo | `x11-themes/arc-theme` from the [Scriptkitties Overlay][sk-overlay] |
-| Open SUSE | [OBS Repo][obs-repo] |
+| openSUSE | [OBS Repo][obs-repo] |
 | Solus | `arc-gtk-theme` |
 | Ubuntu 15.04 - 16.04 | [OBS Repo][obs-repo] |
 | Ubuntu 16.10 | `arc-theme` |
@@ -52,7 +52,7 @@ To build the theme the follwing packages are required
 **Note:** If your distribution doesn't ship separate development packages you just need GTK 3 instead of the `-dev` packages.
 
 For the theme to function properly, install the following
-* Gnome Shell, GTK 3.14 - 3.22
+* GNOME Shell, GTK 3.14 - 3.22
 * The `gnome-themes-standard` package
 * The murrine engine. This has different names depending on your distro.
   * `gtk-engine-murrine` (Arch Linux)
@@ -88,11 +88,11 @@ Other options to pass to autogen.sh are
     --disable-unity            disable Unity support
     --disable-xfwm             disable XFWM support
 
-    --with-gnome=<version>     build the theme for a specific Gnome version (3.14, 3.16, 3.18, 3.20)
+    --with-gnome=<version>     build the theme for a specific GNOME version (3.14, 3.16, 3.18, 3.20)
                                Note: Normally the correct version is detected automatically and this
                                option should not be needed.
 
-After the installation is complete you can activate the theme with `gnome-tweak-tool` or a similar program by selecting `Arc`, `Arc-Darker` or `Arc-Dark` as Window/GTK+ theme and `Arc` or `Arc-Dark` as Gnome Shell/Cinnamon theme.
+After the installation is complete you can activate the theme with `gnome-tweak-tool` or a similar program by selecting `Arc`, `Arc-Darker` or `Arc-Dark` as Window/GTK+ theme and `Arc` or `Arc-Dark` as GNOME Shell/Cinnamon theme.
 
 ## Uninstall
 
@@ -124,8 +124,8 @@ The Arc Dark theme for the Ubuntu Software Center by [mervick](https://github.co
 
 ## Troubleshooting
 
-If you have Ubuntu with a newer GTK/Gnome version than the one included by default (i.e Ubuntu 14.04 with GTK 3.14 or Ubuntu 15.04 with GTK 3.16, etc.) the prebuilt packages won't work properly and you have to install the theme manually as described above.
-This is also true for other distros with a different GTK/Gnome version than the one included by default
+If you have Ubuntu with a newer GTK/GNOME version than the one included by default (i.e Ubuntu 14.04 with GTK 3.14 or Ubuntu 15.04 with GTK 3.16, etc.) the prebuilt packages won't work properly and you have to install the theme manually as described above.
+This is also true for other distros with a different GTK/GNOME version than the one included by default
 
 --
 
