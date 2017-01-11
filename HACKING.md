@@ -24,7 +24,7 @@ This theme uses node-sass/libsass to process the various .scss files. Never edit
 
 * `main.rc` contains the major part of the theme
 
-* `panel.rc` contains the panel styling for XFCE and Mate
+* `panel.rc` contains the panel styling for Xfce and MATE
 
 * `apps.rc` contains some application specific rules
 
