@@ -107,6 +107,9 @@ from the cloned git repository, or
 
 ## Extras
 
+### Arc KDE
+A port of Arc for the Plasma 5 desktop with a few additions and extras. Available [here](https://github.com/PapirusDevelopmentTeam/arc-kde).
+
 ### Arc Firefox theme
 A theme for Firefox is available at https://github.com/horst3180/arc-firefox-theme
 
