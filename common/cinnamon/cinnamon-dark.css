@@ -351,11 +351,11 @@ StScrollBar {
   spacing: 1em; }
 
 .popup-separator-menu-item {
-  height: 2px;
-  margin: 10px 0px;
-  background-color: transparent;
-  border: none;
-  border-image: url("common-assets/menu/menu-separator.svg") 1 1 1 1; }
+  -gradient-height: 2px;
+  -gradient-start: transparent;
+  -gradient-end: transparent;
+  -margin-horizontal: 1.5em;
+  height: 1em; }
 
 .popup-alternating-menu-item:alternate {
   font-weight: normal; }
