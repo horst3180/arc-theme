@@ -2832,8 +2832,9 @@ popover.background.touch-selection, .csd popover.background.touch-selection {
 button.circular, button.nautilus-circular-button.image-button,
 button.circular-button {
   padding: 0;
-  min-width: 26px;
-  min-height: 26px;
+  min-width: 16px;
+  min-height: 24px;
+  padding: 2px 6px;
   border-radius: 50%;
   -gtk-outline-radius: 50%; }
   button.circular label, button.nautilus-circular-button.image-button label,
