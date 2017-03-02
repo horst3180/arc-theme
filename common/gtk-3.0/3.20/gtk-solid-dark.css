@@ -3404,6 +3404,9 @@ button.documents-favorite:active:hover {
 .tr-workarea overshoot {
   border-color: transparent; }
 
+.atril-window .primary-toolbar toolbar, .atril-window .primary-toolbar .inline-toolbar {
+  background: none; }
+
 #gf-bubble, #gf-bubble.solid,
 #gf-osd-window,
 #gf-osd-window.solid,
