@@ -2326,9 +2326,11 @@ frame > border,
   padding: 0;
   border-radius: 0;
   border: 1px solid #2b2e39; }
-  frame > border.flat,
-  .frame.flat {
-    border-style: none; }
+
+frame.flat > border,
+frame > border.flat,
+.frame.flat {
+  border-style: none; }
 
 scrolledwindow viewport.frame {
   border-style: none; }
