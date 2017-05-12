@@ -1080,15 +1080,17 @@ StScrollBar {
 .datemenu-today-button,
 .datemenu-displays-box,
 .message-list-sections {
-  margin: 0 1.5em;
+  margin: 0 0.4em;
 }
 
-.datemenu-calendar-column { spacing: 0.5em; }
+.datemenu-calendar-column { spacing: 0.5em; border: none; }
 .datemenu-displays-section { padding-bottom: 3em; }
 
 .datemenu-today-button,
 .world-clocks-button,
-.message-list-section-title {
+.weather-button,
+.message-list-section-title,
+.events-section-title {
   border-radius: 3px;
   padding: .4em;
 }
@@ -1103,7 +1105,9 @@ StScrollBar {
 
 .datemenu-today-button,
 .world-clocks-button,
-.message-list-section-title {
+.weather-button,
+.message-list-section-title,
+.events-section-title {
   padding: 7px 10px 7px 10px;
   border: 1px solid transparentize($base_color, 1);
 
@@ -1119,17 +1123,24 @@ StScrollBar {
 }
 
 .world-clocks-header,
-.message-list-section-title {
+.weather-header,
+.message-list-section-title,
+.events-section-title {
   color: transparentize($fg_color, 0.6);
   font-weight: bold;
 }
 
-.world-clocks-button:active .world-clocks-header {
+.world-clocks-button:active .world-clocks-header,
+.weather-button:active .weather-header {
   color: $selected_fg_color;
 }
 
 .world-clocks-grid {
   spacing-rows: 0.4em;
+}
+
+.weather-box {
+  spacing: 0.4em;
 }
 
 .calendar-month-label {
@@ -1223,6 +1234,7 @@ StScrollBar {
 
 .calendar-today,
 .calendar-today:active,
+.calendar-today:selected,
 .calendar-today:focus,
 .calendar-today:hover {
   font-weight: bold;
@@ -1232,8 +1244,8 @@ StScrollBar {
 }
 
 .calendar-day-with-events {
-  color: $selected_bg_color;
   font-weight: bold;
+  background-image: url("common-assets/misc/calendar-today.svg");
 }
 
 .calendar-today.calendar-day-with-events { color: $selected_fg_color; }
@@ -1270,6 +1282,11 @@ StScrollBar {
   &-placeholder {
     StIcon { width: 0; height: 0; }
     StLabel { color: $insensitive_fg_color; }
+  }
+
+  &-clear-button.button {
+    margin: 1.5em 1.5em 0;
+    padding: 4px 12px;
   }
 
   &-section-close {
@@ -1315,25 +1332,37 @@ StScrollBar {
 
     &:rtl { padding: 8px 8px 8px 0px; }
 
-    > StIcon { icon-size: 32px; }
+    > StIcon {
+      //icon-size: 32px;
+      color: inherit;
+    }
   }
 
-  &-secondary-bin {
-    color: transparentize($fg_color, 0.6);
+  &-secondary-bin,
+  &-secondary-bin > .event-time {
+    color: transparentize($fg_color, 0.4);
+    font-size: 0.9em;
 
     &:ltr { padding-left: 8px; }
     &:rtl { padding-right: 8px; }
   }
 
+  &:active .message-secondary-bin,
+  &:active .message-secondary-bin > .event-time {
+    color: transparentize($selected_fg_color, 0.4);
+  }
+
   &-secondary-bin > StIcon { icon-size: 16px; }
 
   &-title {
+    color: inherit;
     font-weight: bold;
     font-size: 1em;
     padding: 2px 0 2px 0;
   }
 
   &-content {
+    color: inherit;
     padding: 8px;
     font-size: 1em;
   }
@@ -1341,13 +1370,18 @@ StScrollBar {
 
 .message-media-control {
   padding: 6px;
-  color: $insensitive_fg_color;
+  color: $fg_color;
 
   &:last-child:ltr { padding-right: 18px; }
   &:last-child:rtl { padding-left: 18px; }
 
-  &:hover { color: $fg_color; }
+  &:hover { color: transparentize($fg_color, 0.3); }
   &:active { color: $selected_bg_color; }
+  &:insensitive { color: $insensitive_fg_color; }
+}
+
+.message:active .message-media-control {
+  color: $selected_fg_color;
 }
 
 .media-message-cover-icon {

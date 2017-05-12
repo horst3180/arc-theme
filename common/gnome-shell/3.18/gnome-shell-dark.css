@@ -797,17 +797,20 @@ StScrollBar {
 .datemenu-today-button,
 .datemenu-displays-box,
 .message-list-sections {
-  margin: 0 1.5em; }
+  margin: 0 0.4em; }
 
 .datemenu-calendar-column {
-  spacing: 0.5em; }
+  spacing: 0.5em;
+  border: none; }
 
 .datemenu-displays-section {
   padding-bottom: 3em; }
 
 .datemenu-today-button,
 .world-clocks-button,
-.message-list-section-title {
+.weather-button,
+.message-list-section-title,
+.events-section-title {
   border-radius: 3px;
   padding: .4em; }
 
@@ -819,14 +822,20 @@ StScrollBar {
 
 .datemenu-today-button,
 .world-clocks-button,
-.message-list-section-title {
+.weather-button,
+.message-list-section-title,
+.events-section-title {
   padding: 7px 10px 7px 10px;
   border: 1px solid rgba(64, 69, 82, 0); }
   .datemenu-today-button:hover, .datemenu-today-button:focus,
   .world-clocks-button:hover,
   .world-clocks-button:focus,
+  .weather-button:hover,
+  .weather-button:focus,
   .message-list-section-title:hover,
-  .message-list-section-title:focus {
+  .message-list-section-title:focus,
+  .events-section-title:hover,
+  .events-section-title:focus {
     text-shadow: 0 1px rgba(64, 69, 82, 0);
     color: #D3DAE3;
     background-color: #505666;
@@ -834,7 +843,9 @@ StScrollBar {
     box-shadow: inset 0 1px rgba(80, 86, 102, 0.05); }
   .datemenu-today-button:active,
   .world-clocks-button:active,
-  .message-list-section-title:active {
+  .weather-button:active,
+  .message-list-section-title:active,
+  .events-section-title:active {
     text-shadow: 0 1px rgba(64, 69, 82, 0);
     color: #ffffff;
     background-color: #5294e2;
@@ -845,15 +856,21 @@ StScrollBar {
   font-size: 1.5em; }
 
 .world-clocks-header,
-.message-list-section-title {
+.weather-header,
+.message-list-section-title,
+.events-section-title {
   color: rgba(211, 218, 227, 0.4);
   font-weight: bold; }
 
-.world-clocks-button:active .world-clocks-header {
+.world-clocks-button:active .world-clocks-header,
+.weather-button:active .weather-header {
   color: #ffffff; }
 
 .world-clocks-grid {
   spacing-rows: 0.4em; }
+
+.weather-box {
+  spacing: 0.4em; }
 
 .calendar-month-label {
   color: #D3DAE3;
@@ -929,6 +946,7 @@ StScrollBar {
 
 .calendar-today,
 .calendar-today:active,
+.calendar-today:selected,
 .calendar-today:focus,
 .calendar-today:hover {
   font-weight: bold;
@@ -937,8 +955,8 @@ StScrollBar {
   border-width: 0; }
 
 .calendar-day-with-events {
-  color: #5294e2;
-  font-weight: bold; }
+  font-weight: bold;
+  background-image: url("common-assets/misc/calendar-today.svg"); }
 
 .calendar-today.calendar-day-with-events {
   color: #ffffff; }
@@ -971,6 +989,9 @@ StScrollBar {
     height: 0; }
   .message-list-placeholder StLabel {
     color: rgba(211, 218, 227, 0.45); }
+  .message-list-clear-button.button {
+    margin: 1.5em 1.5em 0;
+    padding: 4px 12px; }
   .message-list-section-close > StIcon {
     icon-size: 18px;
     border-radius: 0px;
@@ -1001,34 +1022,48 @@ StScrollBar {
     .message-icon-bin:rtl {
       padding: 8px 8px 8px 0px; }
     .message-icon-bin > StIcon {
-      icon-size: 32px; }
-  .message-secondary-bin {
-    color: rgba(211, 218, 227, 0.4); }
-    .message-secondary-bin:ltr {
+      color: inherit; }
+  .message-secondary-bin,
+  .message-secondary-bin > .event-time {
+    color: rgba(211, 218, 227, 0.6);
+    font-size: 0.9em; }
+    .message-secondary-bin:ltr,
+    .message-secondary-bin > .event-time:ltr {
       padding-left: 8px; }
-    .message-secondary-bin:rtl {
+    .message-secondary-bin:rtl,
+    .message-secondary-bin > .event-time:rtl {
       padding-right: 8px; }
+  .message:active .message-secondary-bin,
+  .message:active .message-secondary-bin > .event-time {
+    color: rgba(255, 255, 255, 0.6); }
   .message-secondary-bin > StIcon {
     icon-size: 16px; }
   .message-title {
+    color: inherit;
     font-weight: bold;
     font-size: 1em;
     padding: 2px 0 2px 0; }
   .message-content {
+    color: inherit;
     padding: 8px;
     font-size: 1em; }
 
 .message-media-control {
   padding: 6px;
-  color: rgba(211, 218, 227, 0.45); }
+  color: #D3DAE3; }
   .message-media-control:last-child:ltr {
     padding-right: 18px; }
   .message-media-control:last-child:rtl {
     padding-left: 18px; }
   .message-media-control:hover {
-    color: #D3DAE3; }
+    color: rgba(211, 218, 227, 0.7); }
   .message-media-control:active {
     color: #5294e2; }
+  .message-media-control:insensitive {
+    color: rgba(211, 218, 227, 0.45); }
+
+.message:active .message-media-control {
+  color: #ffffff; }
 
 .media-message-cover-icon {
   icon-size: 32px; }
